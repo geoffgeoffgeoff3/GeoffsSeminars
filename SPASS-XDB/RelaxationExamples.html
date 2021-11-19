@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE> SPASS Constraints - Relaxation Examples </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+SPASS Constraints - Relaxation Examples
+</H1>
+
+<H3> Preemptive Requests are Necessary </H3>
+
+<UL>
+<LI> <TT>p</TT>/1 and <TT>q</TT>/1 match only external<BR>
+     External specification requires grounded <TT>p</TT> requests<BR>
+<P>
+<LI> <TT>~p(X) | ~q(X)</TT> chosen<BR>
+     <TT>~p(X)</TT> selected<BR>
+     Cannot make <TT>p</TT>/1 request
+<P>
+<LI> Preemptive <TT>q</TT>/1 request necessary<BR>
+     Delivered <TT>q</TT>/1 facts resolve with <TT>~p(X) | ~q(X)</TT> to ground
+     <TT>~p(X)</TT><BR>
+     In order for that to happen ...<BR>
+<P>
+<LI> See "External <TT>ChosenClause</TT> may resolve with any <TT>WorkedOff</TT> literal"
+</UL>
+
+<A NAME="ExternalChosenClause">
+<H3> External <TT>ChosenClause</TT> may resolve with any <TT>WorkedOff</TT> literal </H3>
+<UL>
+<LI> See "Preemptive Requests are Necessary", then ...
+<P>
+<LI> <TT>p</TT>/1 and <TT>q</TT>/1 match only external<BR>
+     External specification requires grounded <TT>p</TT> requests<BR>
+     <TT>~p(X) | ~q(X)</TT> in <TT>WorkedOff</TT><BR>
+     <TT>~p(X)</TT> selected
+<P>
+<LI> External clause, e.g., <TT>q(a)</TT>, is delivered and chosen<BR>
+     <TT>q(a)</TT> must be allowed to resolve with <TT>~p(X) | ~q(X)</TT> 
+     to produce <TT>~p(a)</TT><BR>
+     <TT>~p(a)</TT> is chosen and selected<BR>
+     <TT>p</TT>/1 request can be made
+</UL>
+
+<A NAME="ExternalSelectedLiteral">
+<H3> Selected Literal Matching External Selects All Literals </H3>
+<UL>
+<LI> <TT>p</TT>/1 matches only external<BR>
+     <TT>r</TT>/1 matches internal<BR>
+     External specification requires grounded <TT>p</TT> requests<BR>
+<P>
+<LI> <TT>~p(X) | ~r(X)</TT> chosen<BR>
+     <TT>~p(X)</TT> selected<BR>
+     Cannot make <TT>p</TT>/1 request
+<P>
+<LI> Internal <TT>r</TT>/1 fact, e.g., <TT>r(b)</TT> must be allowed to
+     resolve with <TT>~p(X) | ~r(X)</TT> to produce <TT>~p(b)</TT><BR>
+     <TT>~p(b)</TT> is chosen and selected<BR>
+     <TT>p</TT>/1 request can be made
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

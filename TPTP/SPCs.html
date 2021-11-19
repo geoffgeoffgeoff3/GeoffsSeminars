@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE> Specialist Problem Classes </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Specialist Problem Classes </H1>
+
+<IMG SRC="../Evaluate/SPCs.GIF" ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> <A HREF="../Evaluate/SPCs.html">Motivation</A> </H3>
+
+<H3> <A HREF="" onClick="hideshow('language');return false;">Language</A> </H3>
+     <SPAN ID="language" style="display:none">
+     <UL>
+     <LI> <TT>CNF</TT> - Clause Normal Form
+     <LI> <TT>FOF</TT> - First-Order Form
+     <LI> <TT>TF0</TT> - Typed First-order form Monomorphic
+     <LI> <TT>TF1</TT> - Typed First-order form Polymorphic
+     <LI> <TT>TFX</TT> - Typed First-order form eXtended
+     <LI> <TT>TH0</TT> - Typed Higher-order form Monomorphic
+     <LI> <TT>TH1</TT> - Typed Higher-order form Polymorphic
+     </UL>
+     </SPAN>
+
+<H3> <A HREF="" onClick="hideshow('szs');return false;">SZS Status</A> </H3>
+     <SPAN ID="szs" style="display:none">
+     <UL>
+     <LI> <TT>THM</TT> - THeoreM
+     <LI> <TT>CAX</TT> - Contradictory AXioms
+     <LI> <TT>CSA</TT> - CounterSAtisfiable
+     <LI> <TT>UNS</TT> - UNSatisfiable
+     <LI> <TT>SAT</TT> - SATisfiable
+     <LI> <TT>OPN</TT> - OPeN
+     <LI> <TT>UNK</TT> - UNKown
+     </UL>
+     </SPAN>
+
+<H3> <A HREF="" onClick="hideshow('syntax');return false;">Syntax</A> </H3>
+     <SPAN ID="syntax" style="display:none">
+     <UL>
+     <LI> <TT>PRP</TT> - PRoPositional
+     <LI> <TT>EPR</TT> - Effectively PRopositional
+     <LI> <TT>RFO</TT> - Real First-Order
+     <LI> <TT>NEQ</TT> - No EQuality
+     <LI> <TT>EQU</TT> - With EQUality
+          <UL>
+          <LI> <TT>SEQ</TT> - Some EQuality
+          <LI> <TT>PEQ</TT> - Pure EQuality
+          </UL>
+     <LI> <TT>NAR</TT> - No ARithmetic
+     <LI> <TT>ARI</TT> - ARIthmetic
+     <LI> <TT>HRN</TT> - HoRN
+     <LI> <TT>NHN</TT> - Non-HorN
+     </UL>
+     </SPAN>
+
+<H3> Current SPCs </H3>
+<UL>
+<LI> 225 in use (127 empty)
+<LI> Largest <TT>FOF_THM_RFO_SEQ</TT> - 5349 problems
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

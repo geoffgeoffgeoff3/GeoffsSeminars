@@ -1,0 +1,847 @@
+% START OF SYSTEM OUTPUT
+
+--------------------------SPASS-START-----------------------------
+Input Problem:
+1[0:Inp] || $greatereq(U,1700) $lesseq(U,1750) print(printall(nl,nl,The composer is ,V, born in ,U,nl))* is_instance(V,Composer) is_birthdate(V,W,X,U)* -> .
+ This is a first-order Horn problem without equality.
+ Axiom clauses: 0 Conjecture clauses: 1
+ Inferences: IORe=1 IOFc=2 
+ Reductions: RFMRR=1 RBMRR=1 RObv=1 RUnC=1 RTaut=1 RFSub=1 RBSub=1 RCon=1 
+ Extras    : No Input Saturation, Precedence Selection, No Splitting, Full Reduction,  Ratio: 2147483646, FuncWeight: 1, VarWeight: 1, PrefCon: 1
+ Precedence: printall > nequal > div > id > xdb_ut > gdm_ut > regexp > look_different > s__instance > s__instance_ground > is_instance > is_instance_ground > s__representsInLanguage > s__capitalCity > capital_city > s__hasPopulation > s__birthdate > is_birthdate > s__familyName > is_familyName > s__givenName > is_givenName > s__hasWonPrize > has_WonPrize > s__weight > is_weight > mondial_country > mondial_city > s__mondial_city > mondial_countries_meet > s__mondial_countries_meet > birthPlace > movie_actor > lmdb_url > book > country_code > location > latlong > weather > with_weather > xchange > $is_int > $is_rat > $unequal > $less > $greatereq > $greater > $lesseq > $evaleq > twitteronly > twitter > printonly > print > english > yagosumo > number > dbpedia > linkedmdb > Composer > 1700 > 1750 > nl > The composer is  >  born in 
+ Ordering  : KBO
+Processed Problem:
+
+Worked Off Clauses:
+
+Usable Clauses:
+1[0:Inp] || print(printall(nl,nl,The composer is ,U, born in ,V,nl))* is_instance(U,Composer) $lesseq(V,1750) $greatereq(V,1700) is_birthdate(U,W,X,V)* -> .
+Using default external source printtty
+Using default external source yago_is_instance1
+Using default external source yago_is_instance2
+Using default external source yago_is_birthdate1
+Using default external source lesseq
+Using default external source greatereq
+Using translating external source xdb_ut
+
+xdb_utReceiving answer: fof(translated,answer,xdb_ut($fof(is_instance(U,Composer)),$fof(is_instance(english,english)),$fof(is_instance(english,english)),$fof(s__instance(U,s__Composer)),$fof(s__instance(yagosumo,yagosumo))),answer_to(xdb_ut_Q1,[])).
+xdb_ut_Q1Sending question: fof(yago_is_instance1_Q2,question,? [V1] : s__instance(V1,s__Composer),unknown,[xdb(limit,number(100))]).
+100Receiving answer: fof(s__instance,answer,s__instance(s__AmrDiab,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__Bjork,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__BjornUlvaeus,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__BennyAndersson,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__BillOddie,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__CharlesMingus,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__Enya,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__ETAHoffmann,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__EnnioMorricone,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__FrankZappa,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__GoranBregovi_U107_,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__GeorgeGershwin,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JoePass,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__KeithMoon,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__MilesDavis,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__Niccol_UF2_Paganini,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__OscarPeterson,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__RobertFripp,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__SchoollyD,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__StephenSondheim,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__TrevorJonesComposer,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__TerryRiley,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__TimCurry,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__Vangelis,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__WendyCarlos,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__YngwieMalmsteen,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__HerbieHancock,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__BixBeiderbecke,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__DukeEllington,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__Entity_UC1_storPiazzolla,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JeanMichelJarre,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__IrvingBerlin,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__AnthonyBurgess,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JeanSibelius,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__BillieHoliday,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__HenryMancini,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JohnCarpenter,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__RichardRodgers,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JohnColtrane,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__AndrewLloydWebber,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JeffBridges,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__NobuoUematsu,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__WCHandy,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__CarlPhilippEmanuelBach,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__HemantaKumarMukhopadhyay,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__GlennGould,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__CountBasie,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__EricDolphy,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__MarkMothersbaugh,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__GeorgeMartin,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JimmyWebb,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__TheloniousMonk,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JohnZorn,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__HenryCowell,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JoeCocker,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__SunRa,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__SidneyBechet,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__ClarenceWilliamsMusician,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__VanDykeParks,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__RaviShankar,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__PaulWhiteman,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JJJohnson,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__EubieBlake,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__CarlStalling,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__YoYoMa,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__HarryPartch,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__RichardCurtis,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__OrnetteColeman,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__EmileChristian,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JohnWilliams,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JohnWilliamsGuitarist,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__MichaelWSmith,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__ManosHadjidakis,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__HaddaBrooks,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__EllenTaaffeZwilich,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__MiltonBabbitt,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__HansZimmer,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__LionelBart,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__HughMasekela,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__MemphisMinnie,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__DexterGordon,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__LeoBrouwer,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__AyumiHamasaki,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__RogerWaters,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__BelaFleck,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__AbayQunanbayuli,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__CecilTaylor,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__GavinBryars,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__BurtBacharach,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__DaphneOram,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__DeliaDerbyshire,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__WilliamLloydWebber,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__ArtieShaw,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__MarcusMiller,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JohnBarryComposer,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__WesMontgomery,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__WillemMengelberg,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__WyntonMarsalis,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+yago_is_instance1_Q2Receiving answer: fof(s__instance,answer,s__instance(s__JackieMcLean,s__Composer),answer_to(yago_is_instance1_Q2,[])).
+
+yago_is_instance1_Q2Sending question: fof(xdb_ut_Q3,question,? [V1,V2] : xdb_ut($fof(s__instance(s__AmrDiab,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__AmrDiab,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Amr Diab,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q3,[])).
+xdb_ut_Q3Sending question: fof(xdb_ut_Q4,question,? [V1,V2] : xdb_ut($fof(s__instance(s__Bjork,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__Bjork,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Bjork,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q4,[])).
+xdb_ut_Q4Sending question: fof(xdb_ut_Q5,question,? [V1,V2] : xdb_ut($fof(s__instance(s__BjornUlvaeus,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__BjornUlvaeus,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Bjorn Ulvaeus,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q5,[])).
+xdb_ut_Q5Sending question: fof(xdb_ut_Q6,question,? [V1,V2] : xdb_ut($fof(s__instance(s__BennyAndersson,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__BennyAndersson,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Benny Andersson,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q6,[])).
+xdb_ut_Q6Sending question: fof(xdb_ut_Q7,question,? [V1,V2] : xdb_ut($fof(s__instance(s__BillOddie,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__BillOddie,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Bill Oddie,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q7,[])).
+xdb_ut_Q7Sending question: fof(xdb_ut_Q8,question,? [V1,V2] : xdb_ut($fof(s__instance(s__CharlesMingus,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__CharlesMingus,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Charles Mingus,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q8,[])).
+xdb_ut_Q8Sending question: fof(xdb_ut_Q9,question,? [V1,V2] : xdb_ut($fof(s__instance(s__Enya,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__Enya,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Enya,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q9,[])).
+
+xdb_ut_Q9Receiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__ETAHoffmann,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(ETA Hoffmann,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q10,[])).
+xdb_ut_Q10Sending question: fof(xdb_ut_Q11,question,? [V1,V2] : xdb_ut($fof(s__instance(s__EnnioMorricone,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__EnnioMorricone,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Ennio Morricone,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q11,[])).
+
+xdb_ut_Q11Receiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__FrankZappa,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Frank Zappa,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q12,[])).
+xdb_ut_Q12Sending question: fof(xdb_ut_Q13,question,? [V1,V2] : xdb_ut($fof(s__instance(s__GoranBregovi_U107_,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__GoranBregovi_U107_,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Goran Bregovi_U107_,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q13,[])).
+xdb_ut_Q13Sending question: fof(xdb_ut_Q14,question,? [V1,V2] : xdb_ut($fof(s__instance(s__GeorgeGershwin,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__GeorgeGershwin,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(George Gershwin,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q14,[])).
+xdb_ut_Q14Sending question: fof(xdb_ut_Q15,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JoePass,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JoePass,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Joe Pass,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q15,[])).
+xdb_ut_Q15Sending question: fof(xdb_ut_Q16,question,? [V1,V2] : xdb_ut($fof(s__instance(s__KeithMoon,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__KeithMoon,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Keith Moon,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q16,[])).
+xdb_ut_Q16Sending question: fof(xdb_ut_Q17,question,? [V1,V2] : xdb_ut($fof(s__instance(s__MilesDavis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__MilesDavis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Miles Davis,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q17,[])).
+xdb_ut_Q17Sending question: fof(xdb_ut_Q18,question,? [V1,V2] : xdb_ut($fof(s__instance(s__Niccol_UF2_Paganini,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__Niccol_UF2_Paganini,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Niccol_UF2_ Paganini,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q18,[])).
+xdb_ut_Q18Sending question: fof(xdb_ut_Q19,question,? [V1,V2] : xdb_ut($fof(s__instance(s__OscarPeterson,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__OscarPeterson,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Oscar Peterson,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q19,[])).
+xdb_ut_Q19Sending question: fof(xdb_ut_Q20,question,? [V1,V2] : xdb_ut($fof(s__instance(s__RobertFripp,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__RobertFripp,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Robert Fripp,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q20,[])).
+xdb_ut_Q20Sending question: fof(xdb_ut_Q21,question,? [V1,V2] : xdb_ut($fof(s__instance(s__SchoollyD,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__SchoollyD,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Schoolly D,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q21,[])).
+xdb_ut_Q21Sending question: fof(xdb_ut_Q22,question,? [V1,V2] : xdb_ut($fof(s__instance(s__StephenSondheim,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__StephenSondheim,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Stephen Sondheim,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q22,[])).
+xdb_ut_Q22Sending question: fof(xdb_ut_Q23,question,? [V1,V2] : xdb_ut($fof(s__instance(s__TrevorJonesComposer,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__TrevorJonesComposer,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Trevor Jones Composer,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q23,[])).
+xdb_ut_Q23Sending question: fof(xdb_ut_Q24,question,? [V1,V2] : xdb_ut($fof(s__instance(s__TerryRiley,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__TerryRiley,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Terry Riley,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q24,[])).
+xdb_ut_Q24Sending question: fof(xdb_ut_Q25,question,? [V1,V2] : xdb_ut($fof(s__instance(s__TimCurry,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__TimCurry,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Tim Curry,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q25,[])).
+xdb_ut_Q25Sending question: fof(xdb_ut_Q26,question,? [V1,V2] : xdb_ut($fof(s__instance(s__Vangelis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__Vangelis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Vangelis,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q26,[])).
+xdb_ut_Q26Sending question: fof(xdb_ut_Q27,question,? [V1,V2] : xdb_ut($fof(s__instance(s__WendyCarlos,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__WendyCarlos,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Wendy Carlos,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q27,[])).
+xdb_ut_Q27Sending question: fof(xdb_ut_Q28,question,? [V1,V2] : xdb_ut($fof(s__instance(s__YngwieMalmsteen,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__YngwieMalmsteen,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Yngwie Malmsteen,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q28,[])).
+xdb_ut_Q28Sending question: fof(xdb_ut_Q29,question,? [V1,V2] : xdb_ut($fof(s__instance(s__HerbieHancock,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__HerbieHancock,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Herbie Hancock,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q29,[])).
+xdb_ut_Q29Sending question: fof(xdb_ut_Q30,question,? [V1,V2] : xdb_ut($fof(s__instance(s__BixBeiderbecke,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__BixBeiderbecke,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Bix Beiderbecke,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q30,[])).
+xdb_ut_Q30Sending question: fof(xdb_ut_Q31,question,? [V1,V2] : xdb_ut($fof(s__instance(s__DukeEllington,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__DukeEllington,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Duke Ellington,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q31,[])).
+xdb_ut_Q31Sending question: fof(xdb_ut_Q32,question,? [V1,V2] : xdb_ut($fof(s__instance(s__Entity_UC1_storPiazzolla,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__Entity_UC1_storPiazzolla,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Entity_UC1_stor Piazzolla,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q32,[])).
+xdb_ut_Q32Sending question: fof(xdb_ut_Q33,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JeanMichelJarre,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JeanMichelJarre,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Jean Michel Jarre,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q33,[])).
+xdb_ut_Q33Sending question: fof(xdb_ut_Q34,question,? [V1,V2] : xdb_ut($fof(s__instance(s__IrvingBerlin,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__IrvingBerlin,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Irving Berlin,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q34,[])).
+xdb_ut_Q34Sending question: fof(xdb_ut_Q35,question,? [V1,V2] : xdb_ut($fof(s__instance(s__AnthonyBurgess,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__AnthonyBurgess,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Anthony Burgess,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q35,[])).
+xdb_ut_Q35Sending question: fof(xdb_ut_Q36,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JeanSibelius,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JeanSibelius,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Jean Sibelius,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q36,[])).
+xdb_ut_Q36Sending question: fof(xdb_ut_Q37,question,? [V1,V2] : xdb_ut($fof(s__instance(s__BillieHoliday,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__BillieHoliday,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Billie Holiday,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q37,[])).
+xdb_ut_Q37Sending question: fof(xdb_ut_Q38,question,? [V1,V2] : xdb_ut($fof(s__instance(s__HenryMancini,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__HenryMancini,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Henry Mancini,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q38,[])).
+xdb_ut_Q38Sending question: fof(xdb_ut_Q39,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JohnCarpenter,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JohnCarpenter,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(John Carpenter,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q39,[])).
+xdb_ut_Q39Sending question: fof(xdb_ut_Q40,question,? [V1,V2] : xdb_ut($fof(s__instance(s__RichardRodgers,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__RichardRodgers,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Richard Rodgers,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q40,[])).
+xdb_ut_Q40Sending question: fof(xdb_ut_Q41,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JohnColtrane,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JohnColtrane,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(John Coltrane,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q41,[])).
+xdb_ut_Q41Sending question: fof(xdb_ut_Q42,question,? [V1,V2] : xdb_ut($fof(s__instance(s__AndrewLloydWebber,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__AndrewLloydWebber,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Andrew Lloyd Webber,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q42,[])).
+xdb_ut_Q42Sending question: fof(xdb_ut_Q43,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JeffBridges,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JeffBridges,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Jeff Bridges,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q43,[])).
+xdb_ut_Q43Sending question: fof(xdb_ut_Q44,question,? [V1,V2] : xdb_ut($fof(s__instance(s__NobuoUematsu,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__NobuoUematsu,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Nobuo Uematsu,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q44,[])).
+xdb_ut_Q44Sending question: fof(xdb_ut_Q45,question,? [V1,V2] : xdb_ut($fof(s__instance(s__WCHandy,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__WCHandy,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(WC Handy,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q45,[])).
+xdb_ut_Q45Sending question: fof(xdb_ut_Q46,question,? [V1,V2] : xdb_ut($fof(s__instance(s__CarlPhilippEmanuelBach,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__CarlPhilippEmanuelBach,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Carl Philipp Emanuel Bach,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q46,[])).
+xdb_ut_Q46Sending question: fof(xdb_ut_Q47,question,? [V1,V2] : xdb_ut($fof(s__instance(s__HemantaKumarMukhopadhyay,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__HemantaKumarMukhopadhyay,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Hemanta Kumar Mukhopadhyay,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q47,[])).
+xdb_ut_Q47Sending question: fof(xdb_ut_Q48,question,? [V1,V2] : xdb_ut($fof(s__instance(s__GlennGould,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__GlennGould,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Glenn Gould,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q48,[])).
+xdb_ut_Q48Sending question: fof(xdb_ut_Q49,question,? [V1,V2] : xdb_ut($fof(s__instance(s__CountBasie,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__CountBasie,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Count Basie,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q49,[])).
+xdb_ut_Q49Sending question: fof(xdb_ut_Q50,question,? [V1,V2] : xdb_ut($fof(s__instance(s__EricDolphy,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__EricDolphy,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Eric Dolphy,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q50,[])).
+xdb_ut_Q50Sending question: fof(xdb_ut_Q51,question,? [V1,V2] : xdb_ut($fof(s__instance(s__MarkMothersbaugh,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__MarkMothersbaugh,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Mark Mothersbaugh,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q51,[])).
+xdb_ut_Q51Sending question: fof(xdb_ut_Q52,question,? [V1,V2] : xdb_ut($fof(s__instance(s__GeorgeMartin,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__GeorgeMartin,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(George Martin,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q52,[])).
+xdb_ut_Q52Sending question: fof(xdb_ut_Q53,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JimmyWebb,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JimmyWebb,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Jimmy Webb,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q53,[])).
+xdb_ut_Q53Sending question: fof(xdb_ut_Q54,question,? [V1,V2] : xdb_ut($fof(s__instance(s__TheloniousMonk,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__TheloniousMonk,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Thelonious Monk,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q54,[])).
+xdb_ut_Q54Sending question: fof(xdb_ut_Q55,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JohnZorn,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JohnZorn,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(John Zorn,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q55,[])).
+xdb_ut_Q55Sending question: fof(xdb_ut_Q56,question,? [V1,V2] : xdb_ut($fof(s__instance(s__HenryCowell,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__HenryCowell,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Henry Cowell,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q56,[])).
+xdb_ut_Q56Sending question: fof(xdb_ut_Q57,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JoeCocker,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JoeCocker,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Joe Cocker,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q57,[])).
+xdb_ut_Q57Sending question: fof(xdb_ut_Q58,question,? [V1,V2] : xdb_ut($fof(s__instance(s__SunRa,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__SunRa,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Sun Ra,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q58,[])).
+xdb_ut_Q58Sending question: fof(xdb_ut_Q59,question,? [V1,V2] : xdb_ut($fof(s__instance(s__SidneyBechet,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__SidneyBechet,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Sidney Bechet,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q59,[])).
+xdb_ut_Q59Sending question: fof(xdb_ut_Q60,question,? [V1,V2] : xdb_ut($fof(s__instance(s__ClarenceWilliamsMusician,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__ClarenceWilliamsMusician,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Clarence Williams Musician,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q60,[])).
+xdb_ut_Q60Sending question: fof(xdb_ut_Q61,question,? [V1,V2] : xdb_ut($fof(s__instance(s__VanDykeParks,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__VanDykeParks,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Van Dyke Parks,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q61,[])).
+xdb_ut_Q61Sending question: fof(xdb_ut_Q62,question,? [V1,V2] : xdb_ut($fof(s__instance(s__RaviShankar,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__RaviShankar,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Ravi Shankar,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q62,[])).
+xdb_ut_Q62Sending question: fof(xdb_ut_Q63,question,? [V1,V2] : xdb_ut($fof(s__instance(s__PaulWhiteman,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__PaulWhiteman,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Paul Whiteman,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q63,[])).
+xdb_ut_Q63Sending question: fof(xdb_ut_Q64,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JJJohnson,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JJJohnson,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(JJ Johnson,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q64,[])).
+xdb_ut_Q64Sending question: fof(xdb_ut_Q65,question,? [V1,V2] : xdb_ut($fof(s__instance(s__EubieBlake,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__EubieBlake,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Eubie Blake,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q65,[])).
+xdb_ut_Q65Sending question: fof(xdb_ut_Q66,question,? [V1,V2] : xdb_ut($fof(s__instance(s__CarlStalling,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__CarlStalling,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Carl Stalling,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q66,[])).
+xdb_ut_Q66Sending question: fof(xdb_ut_Q67,question,? [V1,V2] : xdb_ut($fof(s__instance(s__YoYoMa,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__YoYoMa,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Yo Yo Ma,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q67,[])).
+xdb_ut_Q67Sending question: fof(xdb_ut_Q68,question,? [V1,V2] : xdb_ut($fof(s__instance(s__HarryPartch,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__HarryPartch,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Harry Partch,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q68,[])).
+xdb_ut_Q68Sending question: fof(xdb_ut_Q69,question,? [V1,V2] : xdb_ut($fof(s__instance(s__RichardCurtis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__RichardCurtis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Richard Curtis,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q69,[])).
+xdb_ut_Q69Sending question: fof(xdb_ut_Q70,question,? [V1,V2] : xdb_ut($fof(s__instance(s__OrnetteColeman,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__OrnetteColeman,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Ornette Coleman,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q70,[])).
+xdb_ut_Q70Sending question: fof(xdb_ut_Q71,question,? [V1,V2] : xdb_ut($fof(s__instance(s__EmileChristian,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__EmileChristian,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Emile Christian,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q71,[])).
+xdb_ut_Q71Sending question: fof(xdb_ut_Q72,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JohnWilliams,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JohnWilliams,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(John Williams,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q72,[])).
+xdb_ut_Q72Sending question: fof(xdb_ut_Q73,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JohnWilliamsGuitarist,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JohnWilliamsGuitarist,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(John Williams Guitarist,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q73,[])).
+xdb_ut_Q73Sending question: fof(xdb_ut_Q74,question,? [V1,V2] : xdb_ut($fof(s__instance(s__MichaelWSmith,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__MichaelWSmith,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(MichaelW Smith,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q74,[])).
+xdb_ut_Q74Sending question: fof(xdb_ut_Q75,question,? [V1,V2] : xdb_ut($fof(s__instance(s__ManosHadjidakis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__ManosHadjidakis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Manos Hadjidakis,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q75,[])).
+xdb_ut_Q75Sending question: fof(xdb_ut_Q76,question,? [V1,V2] : xdb_ut($fof(s__instance(s__HaddaBrooks,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__HaddaBrooks,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Hadda Brooks,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q76,[])).
+xdb_ut_Q76Sending question: fof(xdb_ut_Q77,question,? [V1,V2] : xdb_ut($fof(s__instance(s__EllenTaaffeZwilich,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__EllenTaaffeZwilich,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Ellen Taaffe Zwilich,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q77,[])).
+xdb_ut_Q77Sending question: fof(xdb_ut_Q78,question,? [V1,V2] : xdb_ut($fof(s__instance(s__MiltonBabbitt,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__MiltonBabbitt,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Milton Babbitt,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q78,[])).
+xdb_ut_Q78Sending question: fof(xdb_ut_Q79,question,? [V1,V2] : xdb_ut($fof(s__instance(s__HansZimmer,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__HansZimmer,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Hans Zimmer,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q79,[])).
+xdb_ut_Q79Sending question: fof(xdb_ut_Q80,question,? [V1,V2] : xdb_ut($fof(s__instance(s__LionelBart,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__LionelBart,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Lionel Bart,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q80,[])).
+xdb_ut_Q80Sending question: fof(xdb_ut_Q81,question,? [V1,V2] : xdb_ut($fof(s__instance(s__HughMasekela,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__HughMasekela,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Hugh Masekela,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q81,[])).
+xdb_ut_Q81Sending question: fof(xdb_ut_Q82,question,? [V1,V2] : xdb_ut($fof(s__instance(s__MemphisMinnie,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__MemphisMinnie,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Memphis Minnie,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q82,[])).
+xdb_ut_Q82Sending question: fof(xdb_ut_Q83,question,? [V1,V2] : xdb_ut($fof(s__instance(s__DexterGordon,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__DexterGordon,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Dexter Gordon,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q83,[])).
+xdb_ut_Q83Sending question: fof(xdb_ut_Q84,question,? [V1,V2] : xdb_ut($fof(s__instance(s__LeoBrouwer,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__LeoBrouwer,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Leo Brouwer,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q84,[])).
+xdb_ut_Q84Sending question: fof(xdb_ut_Q85,question,? [V1,V2] : xdb_ut($fof(s__instance(s__AyumiHamasaki,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__AyumiHamasaki,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Ayumi Hamasaki,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q85,[])).
+xdb_ut_Q85Sending question: fof(xdb_ut_Q86,question,? [V1,V2] : xdb_ut($fof(s__instance(s__RogerWaters,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__RogerWaters,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Roger Waters,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q86,[])).
+xdb_ut_Q86Sending question: fof(xdb_ut_Q87,question,? [V1,V2] : xdb_ut($fof(s__instance(s__BelaFleck,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__BelaFleck,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Bela Fleck,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q87,[])).
+xdb_ut_Q87Sending question: fof(xdb_ut_Q88,question,? [V1,V2] : xdb_ut($fof(s__instance(s__AbayQunanbayuli,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__AbayQunanbayuli,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Abay Qunanbayuli,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q88,[])).
+xdb_ut_Q88Sending question: fof(xdb_ut_Q89,question,? [V1,V2] : xdb_ut($fof(s__instance(s__CecilTaylor,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__CecilTaylor,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Cecil Taylor,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q89,[])).
+xdb_ut_Q89Sending question: fof(xdb_ut_Q90,question,? [V1,V2] : xdb_ut($fof(s__instance(s__GavinBryars,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__GavinBryars,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Gavin Bryars,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q90,[])).
+xdb_ut_Q90Sending question: fof(xdb_ut_Q91,question,? [V1,V2] : xdb_ut($fof(s__instance(s__BurtBacharach,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__BurtBacharach,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Burt Bacharach,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q91,[])).
+xdb_ut_Q91Sending question: fof(xdb_ut_Q92,question,? [V1,V2] : xdb_ut($fof(s__instance(s__DaphneOram,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__DaphneOram,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Daphne Oram,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q92,[])).
+xdb_ut_Q92Sending question: fof(xdb_ut_Q93,question,? [V1,V2] : xdb_ut($fof(s__instance(s__DeliaDerbyshire,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__DeliaDerbyshire,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Delia Derbyshire,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q93,[])).
+xdb_ut_Q93Sending question: fof(xdb_ut_Q94,question,? [V1,V2] : xdb_ut($fof(s__instance(s__WilliamLloydWebber,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__WilliamLloydWebber,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(William Lloyd Webber,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q94,[])).
+xdb_ut_Q94Sending question: fof(xdb_ut_Q95,question,? [V1,V2] : xdb_ut($fof(s__instance(s__ArtieShaw,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__ArtieShaw,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Artie Shaw,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q95,[])).
+xdb_ut_Q95Sending question: fof(xdb_ut_Q96,question,? [V1,V2] : xdb_ut($fof(s__instance(s__MarcusMiller,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__MarcusMiller,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Marcus Miller,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q96,[])).
+xdb_ut_Q96Sending question: fof(xdb_ut_Q97,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JohnBarryComposer,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JohnBarryComposer,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(John Barry Composer,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q97,[])).
+xdb_ut_Q97Sending question: fof(xdb_ut_Q98,question,? [V1,V2] : xdb_ut($fof(s__instance(s__WesMontgomery,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__WesMontgomery,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Wes Montgomery,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q98,[])).
+xdb_ut_Q98Sending question: fof(xdb_ut_Q99,question,? [V1,V2] : xdb_ut($fof(s__instance(s__WillemMengelberg,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__WillemMengelberg,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Willem Mengelberg,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q99,[])).
+xdb_ut_Q99Sending question: fof(xdb_ut_Q100,question,? [V1,V2] : xdb_ut($fof(s__instance(s__WyntonMarsalis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__WyntonMarsalis,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Wynton Marsalis,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q100,[])).
+xdb_ut_Q100Sending question: fof(xdb_ut_Q101,question,? [V1,V2] : xdb_ut($fof(s__instance(s__JackieMcLean,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__JackieMcLean,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Jackie Mc Lean,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q101,[])).
+xdb_ut_Q101Sending question: fof(xdb_ut_Q102,question,? [V1,V2] : xdb_ut($fof(s__instance(s__DefJef,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),V1,V2,$fof(is_instance(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__instance(s__DefJef,s__Composer)),$fof(s__instance(yagosumo,yagosumo)),$fof(s__instance(yagosumo,yagosumo)),$fof(is_instance(Def Jef,Composer)),$fof(is_instance(english,english))),answer_to(xdb_ut_Q102,[])).
+xdb_ut_Q102Sending question: fof(xdb_ut_Q103,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Amr Diab',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Amr Diab,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__AmrDiab,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q103,[])).
+xdb_ut_Q103Sending question: fof(xdb_ut_Q104,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Bjork',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownSending question: fof(yago_is_birthdate1_Q112,question,? [V1,V2,V3] : s__birthdate(s__AmrDiab,V1,V2,V3),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Bjork,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__Bjork,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q104,[])).
+xdb_ut_Q104Sending question: fof(xdb_ut_Q105,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Bjorn Ulvaeus',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Bjorn Ulvaeus,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__BjornUlvaeus,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q105,[])).
+xdb_ut_Q105Sending question: fof(xdb_ut_Q106,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Benny Andersson',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Benny Andersson,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__BennyAndersson,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q106,[])).
+xdb_ut_Q106Sending question: fof(xdb_ut_Q107,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Bill Oddie',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Bill Oddie,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__BillOddie,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q107,[])).
+xdb_ut_Q107Sending question: fof(xdb_ut_Q108,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Charles Mingus',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Charles Mingus,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__CharlesMingus,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q108,[])).
+xdb_ut_Q108Sending question: fof(xdb_ut_Q109,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Enya',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Enya,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__Enya,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q109,[])).
+xdb_ut_Q109Sending question: fof(xdb_ut_Q110,question,? [V1,V2] : xdb_ut($fof(is_birthdate('ETA Hoffmann',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(ETA Hoffmann,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__ETAHoffmann,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q110,[])).
+xdb_ut_Q110Sending question: fof(xdb_ut_Q111,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Ennio Morricone',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Ennio Morricone,U,V,W)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__EnnioMorricone,U,V,W)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q111,[])).
+xdb_ut_Q111Sending question: fof(xdb_ut_Q121,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Frank Zappa',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Frank Zappa,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__FrankZappa,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q121,[])).
+xdb_ut_Q121Sending question: fof(xdb_ut_Q123,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Goran Bregovi_U107_',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Goran Bregovi_U107_,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__GoranBregovi_U107_,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q123,[])).
+xdb_ut_Q123Sending question: fof(xdb_ut_Q125,question,? [V1,V2] : xdb_ut($fof(is_birthdate('George Gershwin',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(George Gershwin,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__GeorgeGershwin,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q125,[])).
+xdb_ut_Q125Sending question: fof(xdb_ut_Q127,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Joe Pass',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Joe Pass,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JoePass,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q127,[])).
+xdb_ut_Q127Sending question: fof(xdb_ut_Q129,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Keith Moon',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Keith Moon,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__KeithMoon,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q129,[])).
+xdb_ut_Q129Sending question: fof(xdb_ut_Q131,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Miles Davis',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Miles Davis,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__MilesDavis,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q131,[])).
+xdb_ut_Q131Sending question: fof(xdb_ut_Q133,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Niccol_UF2_ Paganini',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Niccol_UF2_ Paganini,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__Niccol_UF2_Paganini,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q133,[])).
+xdb_ut_Q133Sending question: fof(xdb_ut_Q135,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Oscar Peterson',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Oscar Peterson,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__OscarPeterson,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q135,[])).
+xdb_ut_Q135Sending question: fof(xdb_ut_Q137,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Robert Fripp',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Robert Fripp,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__RobertFripp,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q137,[])).
+xdb_ut_Q137Sending question: fof(xdb_ut_Q139,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Schoolly D',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Schoolly D,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__SchoollyD,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q139,[])).
+xdb_ut_Q139Sending question: fof(xdb_ut_Q141,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Stephen Sondheim',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Stephen Sondheim,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__StephenSondheim,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q141,[])).
+xdb_ut_Q141Sending question: fof(xdb_ut_Q143,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Trevor Jones Composer',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Trevor Jones Composer,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__TrevorJonesComposer,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q143,[])).
+xdb_ut_Q143Sending question: fof(xdb_ut_Q145,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Terry Riley',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Terry Riley,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__TerryRiley,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q145,[])).
+xdb_ut_Q145Sending question: fof(xdb_ut_Q147,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Tim Curry',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Tim Curry,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__TimCurry,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q147,[])).
+xdb_ut_Q147Sending question: fof(xdb_ut_Q149,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Vangelis',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Vangelis,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__Vangelis,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q149,[])).
+xdb_ut_Q149Sending question: fof(xdb_ut_Q151,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Wendy Carlos',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Wendy Carlos,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__WendyCarlos,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q151,[])).
+xdb_ut_Q151Sending question: fof(xdb_ut_Q153,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Yngwie Malmsteen',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Yngwie Malmsteen,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__YngwieMalmsteen,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q153,[])).
+xdb_ut_Q153Sending question: fof(xdb_ut_Q155,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Herbie Hancock',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Herbie Hancock,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__HerbieHancock,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q155,[])).
+xdb_ut_Q155Sending question: fof(xdb_ut_Q157,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Bix Beiderbecke',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Bix Beiderbecke,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__BixBeiderbecke,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q157,[])).
+xdb_ut_Q157Sending question: fof(xdb_ut_Q159,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Duke Ellington',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Duke Ellington,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__DukeEllington,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q159,[])).
+xdb_ut_Q159Sending question: fof(xdb_ut_Q161,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Entity_UC1_stor Piazzolla',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Entity_UC1_stor Piazzolla,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__Entity_UC1_storPiazzolla,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q161,[])).
+xdb_ut_Q161Sending question: fof(xdb_ut_Q163,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Jean Michel Jarre',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Jean Michel Jarre,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JeanMichelJarre,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q163,[])).
+xdb_ut_Q163Sending question: fof(xdb_ut_Q165,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Irving Berlin',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Irving Berlin,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__IrvingBerlin,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q165,[])).
+xdb_ut_Q165Sending question: fof(xdb_ut_Q167,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Anthony Burgess',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Anthony Burgess,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__AnthonyBurgess,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q167,[])).
+xdb_ut_Q167Sending question: fof(xdb_ut_Q169,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Jean Sibelius',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Jean Sibelius,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JeanSibelius,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q169,[])).
+xdb_ut_Q169Sending question: fof(xdb_ut_Q171,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Billie Holiday',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Billie Holiday,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__BillieHoliday,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q171,[])).
+xdb_ut_Q171Sending question: fof(xdb_ut_Q173,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Henry Mancini',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Henry Mancini,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__HenryMancini,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q173,[])).
+xdb_ut_Q173Sending question: fof(xdb_ut_Q175,question,? [V1,V2] : xdb_ut($fof(is_birthdate('John Carpenter',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(John Carpenter,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JohnCarpenter,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q175,[])).
+xdb_ut_Q175Sending question: fof(xdb_ut_Q177,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Richard Rodgers',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Richard Rodgers,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__RichardRodgers,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q177,[])).
+xdb_ut_Q177Sending question: fof(xdb_ut_Q179,question,? [V1,V2] : xdb_ut($fof(is_birthdate('John Coltrane',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(John Coltrane,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JohnColtrane,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q179,[])).
+xdb_ut_Q179Sending question: fof(xdb_ut_Q181,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Andrew Lloyd Webber',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Andrew Lloyd Webber,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__AndrewLloydWebber,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q181,[])).
+xdb_ut_Q181Sending question: fof(xdb_ut_Q183,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Jeff Bridges',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Jeff Bridges,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JeffBridges,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q183,[])).
+xdb_ut_Q183Sending question: fof(xdb_ut_Q185,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Nobuo Uematsu',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Nobuo Uematsu,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__NobuoUematsu,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q185,[])).
+xdb_ut_Q185Sending question: fof(xdb_ut_Q187,question,? [V1,V2] : xdb_ut($fof(is_birthdate('WC Handy',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(WC Handy,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__WCHandy,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q187,[])).
+xdb_ut_Q187Sending question: fof(xdb_ut_Q189,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Carl Philipp Emanuel Bach',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Carl Philipp Emanuel Bach,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__CarlPhilippEmanuelBach,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q189,[])).
+xdb_ut_Q189Sending question: fof(xdb_ut_Q191,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Hemanta Kumar Mukhopadhyay',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Hemanta Kumar Mukhopadhyay,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__HemantaKumarMukhopadhyay,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q191,[])).
+xdb_ut_Q191Sending question: fof(xdb_ut_Q193,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Glenn Gould',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Glenn Gould,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__GlennGould,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q193,[])).
+xdb_ut_Q193Sending question: fof(xdb_ut_Q195,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Count Basie',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Count Basie,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__CountBasie,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q195,[])).
+xdb_ut_Q195Sending question: fof(xdb_ut_Q197,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Eric Dolphy',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Eric Dolphy,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__EricDolphy,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q197,[])).
+xdb_ut_Q197Sending question: fof(xdb_ut_Q199,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Mark Mothersbaugh',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Mark Mothersbaugh,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__MarkMothersbaugh,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q199,[])).
+xdb_ut_Q199Sending question: fof(xdb_ut_Q201,question,? [V1,V2] : xdb_ut($fof(is_birthdate('George Martin',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(George Martin,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__GeorgeMartin,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q201,[])).
+xdb_ut_Q201Sending question: fof(xdb_ut_Q203,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Jimmy Webb',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Jimmy Webb,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JimmyWebb,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q203,[])).
+xdb_ut_Q203Sending question: fof(xdb_ut_Q205,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Thelonious Monk',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Thelonious Monk,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__TheloniousMonk,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q205,[])).
+xdb_ut_Q205Sending question: fof(xdb_ut_Q207,question,? [V1,V2] : xdb_ut($fof(is_birthdate('John Zorn',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(John Zorn,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JohnZorn,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q207,[])).
+xdb_ut_Q207Sending question: fof(xdb_ut_Q209,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Henry Cowell',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Henry Cowell,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__HenryCowell,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q209,[])).
+xdb_ut_Q209Sending question: fof(xdb_ut_Q211,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Joe Cocker',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Joe Cocker,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JoeCocker,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q211,[])).
+xdb_ut_Q211Sending question: fof(xdb_ut_Q213,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Sun Ra',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Sun Ra,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__SunRa,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q213,[])).
+xdb_ut_Q213Sending question: fof(xdb_ut_Q215,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Sidney Bechet',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Sidney Bechet,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__SidneyBechet,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q215,[])).
+xdb_ut_Q215Sending question: fof(xdb_ut_Q217,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Clarence Williams Musician',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Clarence Williams Musician,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__ClarenceWilliamsMusician,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q217,[])).
+xdb_ut_Q217Sending question: fof(xdb_ut_Q219,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Van Dyke Parks',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Van Dyke Parks,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__VanDykeParks,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q219,[])).
+xdb_ut_Q219Sending question: fof(xdb_ut_Q221,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Ravi Shankar',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Ravi Shankar,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__RaviShankar,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q221,[])).
+xdb_ut_Q221Sending question: fof(xdb_ut_Q223,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Paul Whiteman',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Paul Whiteman,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__PaulWhiteman,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q223,[])).
+xdb_ut_Q223Sending question: fof(xdb_ut_Q225,question,? [V1,V2] : xdb_ut($fof(is_birthdate('JJ Johnson',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(JJ Johnson,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JJJohnson,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q225,[])).
+xdb_ut_Q225Sending question: fof(xdb_ut_Q227,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Eubie Blake',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Eubie Blake,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__EubieBlake,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q227,[])).
+xdb_ut_Q227Sending question: fof(xdb_ut_Q229,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Carl Stalling',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Carl Stalling,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__CarlStalling,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q229,[])).
+xdb_ut_Q229Sending question: fof(xdb_ut_Q231,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Yo Yo Ma',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Yo Yo Ma,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__YoYoMa,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q231,[])).
+xdb_ut_Q231Sending question: fof(xdb_ut_Q233,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Harry Partch',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Harry Partch,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__HarryPartch,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q233,[])).
+xdb_ut_Q233Sending question: fof(xdb_ut_Q235,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Richard Curtis',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Richard Curtis,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__RichardCurtis,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q235,[])).
+xdb_ut_Q235Sending question: fof(xdb_ut_Q237,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Ornette Coleman',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Ornette Coleman,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__OrnetteColeman,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q237,[])).
+xdb_ut_Q237Sending question: fof(xdb_ut_Q239,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Emile Christian',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Emile Christian,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__EmileChristian,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q239,[])).
+xdb_ut_Q239Sending question: fof(xdb_ut_Q241,question,? [V1,V2] : xdb_ut($fof(is_birthdate('John Williams',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(John Williams,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JohnWilliams,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q241,[])).
+xdb_ut_Q241Sending question: fof(xdb_ut_Q243,question,? [V1,V2] : xdb_ut($fof(is_birthdate('John Williams Guitarist',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(John Williams Guitarist,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JohnWilliamsGuitarist,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q243,[])).
+xdb_ut_Q243Sending question: fof(xdb_ut_Q245,question,? [V1,V2] : xdb_ut($fof(is_birthdate('MichaelW Smith',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(MichaelW Smith,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__MichaelWSmith,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q245,[])).
+xdb_ut_Q245Sending question: fof(xdb_ut_Q247,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Manos Hadjidakis',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Manos Hadjidakis,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__ManosHadjidakis,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q247,[])).
+xdb_ut_Q247Sending question: fof(xdb_ut_Q249,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Hadda Brooks',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Hadda Brooks,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__HaddaBrooks,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q249,[])).
+xdb_ut_Q249Sending question: fof(xdb_ut_Q251,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Ellen Taaffe Zwilich',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Ellen Taaffe Zwilich,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__EllenTaaffeZwilich,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q251,[])).
+xdb_ut_Q251Sending question: fof(xdb_ut_Q253,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Milton Babbitt',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Milton Babbitt,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__MiltonBabbitt,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q253,[])).
+xdb_ut_Q253Sending question: fof(xdb_ut_Q255,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Hans Zimmer',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Hans Zimmer,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__HansZimmer,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q255,[])).
+xdb_ut_Q255Sending question: fof(xdb_ut_Q257,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Lionel Bart',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Lionel Bart,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__LionelBart,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q257,[])).
+xdb_ut_Q257Sending question: fof(xdb_ut_Q259,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Hugh Masekela',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Hugh Masekela,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__HughMasekela,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q259,[])).
+xdb_ut_Q259Sending question: fof(xdb_ut_Q261,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Memphis Minnie',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Memphis Minnie,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__MemphisMinnie,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q261,[])).
+xdb_ut_Q261Sending question: fof(xdb_ut_Q263,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Dexter Gordon',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Dexter Gordon,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__DexterGordon,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q263,[])).
+xdb_ut_Q263Sending question: fof(xdb_ut_Q265,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Leo Brouwer',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Leo Brouwer,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__LeoBrouwer,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q265,[])).
+xdb_ut_Q265Sending question: fof(xdb_ut_Q267,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Ayumi Hamasaki',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Ayumi Hamasaki,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__AyumiHamasaki,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q267,[])).
+xdb_ut_Q267Sending question: fof(xdb_ut_Q269,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Roger Waters',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Roger Waters,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__RogerWaters,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q269,[])).
+xdb_ut_Q269Sending question: fof(xdb_ut_Q271,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Bela Fleck',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Bela Fleck,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__BelaFleck,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q271,[])).
+xdb_ut_Q271Sending question: fof(xdb_ut_Q273,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Abay Qunanbayuli',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Abay Qunanbayuli,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__AbayQunanbayuli,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q273,[])).
+xdb_ut_Q273Sending question: fof(xdb_ut_Q275,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Cecil Taylor',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Cecil Taylor,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__CecilTaylor,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q275,[])).
+xdb_ut_Q275Sending question: fof(xdb_ut_Q277,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Gavin Bryars',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Gavin Bryars,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__GavinBryars,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q277,[])).
+xdb_ut_Q277Sending question: fof(xdb_ut_Q279,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Burt Bacharach',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Burt Bacharach,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__BurtBacharach,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q279,[])).
+xdb_ut_Q279Sending question: fof(xdb_ut_Q281,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Daphne Oram',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Daphne Oram,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__DaphneOram,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q281,[])).
+xdb_ut_Q281Sending question: fof(xdb_ut_Q283,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Delia Derbyshire',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Delia Derbyshire,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__DeliaDerbyshire,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q283,[])).
+xdb_ut_Q283Sending question: fof(xdb_ut_Q285,question,? [V1,V2] : xdb_ut($fof(is_birthdate('William Lloyd Webber',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(William Lloyd Webber,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__WilliamLloydWebber,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q285,[])).
+xdb_ut_Q285Sending question: fof(xdb_ut_Q287,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Artie Shaw',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Artie Shaw,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__ArtieShaw,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q287,[])).
+xdb_ut_Q287Sending question: fof(xdb_ut_Q289,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Marcus Miller',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Marcus Miller,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__MarcusMiller,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q289,[])).
+xdb_ut_Q289Sending question: fof(xdb_ut_Q291,question,? [V1,V2] : xdb_ut($fof(is_birthdate('John Barry Composer',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(John Barry Composer,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JohnBarryComposer,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q291,[])).
+xdb_ut_Q291Sending question: fof(xdb_ut_Q293,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Wes Montgomery',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Wes Montgomery,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__WesMontgomery,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q293,[])).
+xdb_ut_Q293Sending question: fof(xdb_ut_Q295,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Willem Mengelberg',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Willem Mengelberg,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__WillemMengelberg,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q295,[])).
+xdb_ut_Q295Sending question: fof(xdb_ut_Q297,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Wynton Marsalis',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Wynton Marsalis,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__WyntonMarsalis,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q297,[])).
+xdb_ut_Q297Sending question: fof(xdb_ut_Q299,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Jackie Mc Lean',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Jackie Mc Lean,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__JackieMcLean,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q299,[])).
+xdb_ut_Q299Sending question: fof(xdb_ut_Q301,question,? [V1,V2] : xdb_ut($fof(is_birthdate('Def Jef',Y,Z,X1)),$fof(is_birthdate(english,number,number,number)),V1,V2,$fof(s__birthdate(yagosumo,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_birthdate(Def Jef,X,Y,Z)),$fof(is_birthdate(english,number,number,number)),$fof(is_birthdate(english,number,number,number)),$fof(s__birthdate(s__DefJef,X,Y,Z)),$fof(s__birthdate(yagosumo,number,number,number))),answer_to(xdb_ut_Q301,[])).
+xdb_ut_Q301Receiving answer: fof(s__birthdate,answer,s__birthdate(s__AmrDiab,11,10,1961),answer_to(yago_is_birthdate1_Q112,[])).
+yago_is_birthdate1_Q112Sending question: fof(yago_is_birthdate1_Q113,question,? [V1,V2,V3] : s__birthdate(s__Bjork,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q303,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__AmrDiab,11,10,1961)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__AmrDiab,11,10,1961)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Amr Diab,11,10,1961)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q303,[])).
+% 10 wall clock seconds gone, waiting for system output
+
+outputReceiving answer: fof(s__birthdate,answer,s__birthdate(s__Bjork,21,11,1965),answer_to(yago_is_birthdate1_Q113,[])).
+yago_is_birthdate1_Q113Sending question: fof(yago_is_birthdate1_Q114,question,? [V1,V2,V3] : s__birthdate(s__BjornUlvaeus,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q306,question,$lesseq(1961,1750),unknown,[]).
+unknownSending question: fof(xdb_ut_Q305,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__Bjork,21,11,1965)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__Bjork,21,11,1965)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Bjork,21,11,1965)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q305,[])).
+xdb_ut_Q305Sending question: fof(greatereq_Q307,question,$greatereq(1965,1700),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__BjornUlvaeus,24,4,1945),answer_to(yago_is_birthdate1_Q114,[])).
+yago_is_birthdate1_Q114Sending question: fof(yago_is_birthdate1_Q115,question,? [V1,V2,V3] : s__birthdate(s__BennyAndersson,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q309,question,$lesseq(1965,1750),unknown,[]).
+unknownSending question: fof(xdb_ut_Q308,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__BjornUlvaeus,24,4,1945)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__BjornUlvaeus,24,4,1945)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Bjorn Ulvaeus,24,4,1945)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q308,[])).
+xdb_ut_Q308Sending question: fof(greatereq_Q310,question,$greatereq(1945,1700),unknown,[]).
+
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__BennyAndersson,16,12,1946),answer_to(yago_is_birthdate1_Q115,[])).
+yago_is_birthdate1_Q115Sending question: fof(yago_is_birthdate1_Q116,question,? [V1,V2,V3] : s__birthdate(s__BillOddie,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q312,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__BennyAndersson,16,12,1946)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__BennyAndersson,16,12,1946)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Benny Andersson,16,12,1946)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q312,[])).
+xdb_ut_Q312Sending question: fof(greatereq_Q313,question,$greatereq(1946,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q314,question,$lesseq(1946,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__BillOddie,7,7,1941),answer_to(yago_is_birthdate1_Q116,[])).
+yago_is_birthdate1_Q116Sending question: fof(yago_is_birthdate1_Q117,question,? [V1,V2,V3] : s__birthdate(s__CharlesMingus,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q315,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__BillOddie,7,7,1941)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__BillOddie,7,7,1941)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Bill Oddie,7,7,1941)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q315,[])).
+xdb_ut_Q315Sending question: fof(greatereq_Q316,question,$greatereq(1941,1700),unknown,[]).
+
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__CharlesMingus,22,4,1922),answer_to(yago_is_birthdate1_Q117,[])).
+yago_is_birthdate1_Q117Sending question: fof(yago_is_birthdate1_Q118,question,? [V1,V2,V3] : s__birthdate(s__Enya,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q318,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__CharlesMingus,22,4,1922)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__CharlesMingus,22,4,1922)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Charles Mingus,22,4,1922)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q318,[])).
+xdb_ut_Q318Sending question: fof(greatereq_Q319,question,$greatereq(1922,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q320,question,$lesseq(1922,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__Enya,17,5,1961),answer_to(yago_is_birthdate1_Q118,[])).
+yago_is_birthdate1_Q118Sending question: fof(yago_is_birthdate1_Q119,question,? [V1,V2,V3] : s__birthdate(s__ETAHoffmann,V1,V2,V3),unknown,[]).
+
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__Enya,17,5,1961)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Enya,17,5,1961)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q321,[])).
+xdb_ut_Q321Receiving answer: fof(s__birthdate,answer,s__birthdate(s__ETAHoffmann,24,1,1776),answer_to(yago_is_birthdate1_Q119,[])).
+yago_is_birthdate1_Q119Sending question: fof(yago_is_birthdate1_Q120,question,? [V1,V2,V3] : s__birthdate(s__EnnioMorricone,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q322,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__ETAHoffmann,24,1,1776)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__ETAHoffmann,24,1,1776)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(ETA Hoffmann,24,1,1776)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q322,[])).
+xdb_ut_Q322Receiving answer: fof(s__birthdate,answer,s__birthdate(s__EnnioMorricone,10,11,1928),answer_to(yago_is_birthdate1_Q120,[])).
+yago_is_birthdate1_Q120Sending question: fof(yago_is_birthdate1_Q122,question,? [V1,V2,V3] : s__birthdate(s__FrankZappa,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q323,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__EnnioMorricone,10,11,1928)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownSending question: fof(greatereq_Q324,question,$greatereq(1776,1700),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__EnnioMorricone,10,11,1928)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Ennio Morricone,10,11,1928)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q323,[])).
+
+xdb_ut_Q323Receiving answer: fof(s__birthdate,answer,s__birthdate(s__FrankZappa,21,12,1940),answer_to(yago_is_birthdate1_Q122,[])).
+yago_is_birthdate1_Q122Sending question: fof(yago_is_birthdate1_Q124,question,? [V1,V2,V3] : s__birthdate(s__GoranBregovi_U107_,V1,V2,V3),unknown,[]).
+unknownSending question: fof(greatereq_Q326,question,$greatereq(1928,1700),unknown,[]).
+unknownSending question: fof(xdb_ut_Q327,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__FrankZappa,21,12,1940)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownSending question: fof(lesseq_Q328,question,$lesseq(1928,1750),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__FrankZappa,21,12,1940)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Frank Zappa,21,12,1940)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q327,[])).
+xdb_ut_Q327Sending question: fof(greatereq_Q329,question,$greatereq(1940,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q330,question,$lesseq(1940,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__GoranBregovi_U107_,22,3,1950),answer_to(yago_is_birthdate1_Q124,[])).
+yago_is_birthdate1_Q124Sending question: fof(yago_is_birthdate1_Q126,question,? [V1,V2,V3] : s__birthdate(s__GeorgeGershwin,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q331,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__GoranBregovi_U107_,22,3,1950)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__GoranBregovi_U107_,22,3,1950)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Goran Bregovi_U107_,22,3,1950)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q331,[])).
+xdb_ut_Q331Sending question: fof(greatereq_Q332,question,$greatereq(1950,1700),unknown,[]).
+% 10 wall clock seconds gone, waiting for system output
+
+outputReceiving answer: fof(s__birthdate,answer,s__birthdate(s__GeorgeGershwin,26,9,1898),answer_to(yago_is_birthdate1_Q126,[])).
+yago_is_birthdate1_Q126Sending question: fof(yago_is_birthdate1_Q128,question,? [V1,V2,V3] : s__birthdate(s__JoePass,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q334,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__GeorgeGershwin,26,9,1898)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__GeorgeGershwin,26,9,1898)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(George Gershwin,26,9,1898)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q334,[])).
+xdb_ut_Q334Sending question: fof(greatereq_Q335,question,$greatereq(1898,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q336,question,$lesseq(1898,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__JoePass,13,1,1929),answer_to(yago_is_birthdate1_Q128,[])).
+yago_is_birthdate1_Q128Sending question: fof(yago_is_birthdate1_Q130,question,? [V1,V2,V3] : s__birthdate(s__KeithMoon,V1,V2,V3),unknown,[]).
+
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__JoePass,13,1,1929)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Joe Pass,13,1,1929)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q337,[])).
+xdb_ut_Q337Receiving answer: fof(s__birthdate,answer,s__birthdate(s__KeithMoon,23,8,1946),answer_to(yago_is_birthdate1_Q130,[])).
+yago_is_birthdate1_Q130Sending question: fof(yago_is_birthdate1_Q132,question,? [V1,V2,V3] : s__birthdate(s__MilesDavis,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q338,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__KeithMoon,23,8,1946)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__KeithMoon,23,8,1946)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Keith Moon,23,8,1946)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q338,[])).
+xdb_ut_Q338Sending question: fof(greatereq_Q339,question,$greatereq(1929,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q340,question,$lesseq(1929,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__MilesDavis,26,5,1926),answer_to(yago_is_birthdate1_Q132,[])).
+yago_is_birthdate1_Q132Sending question: fof(yago_is_birthdate1_Q134,question,? [V1,V2,V3] : s__birthdate(s__Niccol_UF2_Paganini,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q341,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__MilesDavis,26,5,1926)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__MilesDavis,26,5,1926)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Miles Davis,26,5,1926)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q341,[])).
+xdb_ut_Q341Sending question: fof(greatereq_Q342,question,$greatereq(1926,1700),unknown,[]).
+
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__Niccol_UF2_Paganini,27,10,1782),answer_to(yago_is_birthdate1_Q134,[])).
+yago_is_birthdate1_Q134Sending question: fof(yago_is_birthdate1_Q136,question,? [V1,V2,V3] : s__birthdate(s__OscarPeterson,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q344,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__Niccol_UF2_Paganini,27,10,1782)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__Niccol_UF2_Paganini,27,10,1782)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Niccol_UF2_ Paganini,27,10,1782)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q344,[])).
+xdb_ut_Q344Sending question: fof(greatereq_Q345,question,$greatereq(1782,1700),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__OscarPeterson,15,8,1925),answer_to(yago_is_birthdate1_Q136,[])).
+yago_is_birthdate1_Q136Sending question: fof(yago_is_birthdate1_Q138,question,? [V1,V2,V3] : s__birthdate(s__RobertFripp,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q347,question,$lesseq(1782,1750),unknown,[]).
+unknownSending question: fof(xdb_ut_Q346,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__OscarPeterson,15,8,1925)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__OscarPeterson,15,8,1925)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Oscar Peterson,15,8,1925)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q346,[])).
+
+xdb_ut_Q346Receiving answer: fof(s__birthdate,answer,s__birthdate(s__RobertFripp,16,5,1946),answer_to(yago_is_birthdate1_Q138,[])).
+yago_is_birthdate1_Q138Sending question: fof(yago_is_birthdate1_Q140,question,? [V1,V2,V3] : s__birthdate(s__SchoollyD,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q350,question,$lesseq(1925,1750),unknown,[]).
+unknownSending question: fof(xdb_ut_Q349,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__RobertFripp,16,5,1946)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__RobertFripp,16,5,1946)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Robert Fripp,16,5,1946)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q349,[])).
+
+xdb_ut_Q349Receiving answer: fof(s__birthdate,answer,s__birthdate(s__StephenSondheim,22,3,1930),answer_to(yago_is_birthdate1_Q142,[])).
+yago_is_birthdate1_Q142Sending question: fof(yago_is_birthdate1_Q144,question,? [V1,V2,V3] : s__birthdate(s__TrevorJonesComposer,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q351,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__StephenSondheim,22,3,1930)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__StephenSondheim,22,3,1930)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Stephen Sondheim,22,3,1930)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q351,[])).
+xdb_ut_Q351Sending question: fof(greatereq_Q352,question,$greatereq(1930,1700),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__TrevorJonesComposer,23,3,1949),answer_to(yago_is_birthdate1_Q144,[])).
+yago_is_birthdate1_Q144Sending question: fof(yago_is_birthdate1_Q146,question,? [V1,V2,V3] : s__birthdate(s__TerryRiley,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q354,question,$lesseq(1930,1750),unknown,[]).
+% 10 wall clock seconds gone, waiting for system output
+
+outputReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__TrevorJonesComposer,23,3,1949)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Trevor Jones Composer,23,3,1949)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q353,[])).
+xdb_ut_Q353Receiving answer: fof(s__birthdate,answer,s__birthdate(s__TerryRiley,24,6,1935),answer_to(yago_is_birthdate1_Q146,[])).
+yago_is_birthdate1_Q146Sending question: fof(yago_is_birthdate1_Q148,question,? [V1,V2,V3] : s__birthdate(s__TimCurry,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q355,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__TerryRiley,24,6,1935)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownSending question: fof(greatereq_Q356,question,$greatereq(1949,1700),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__TerryRiley,24,6,1935)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Terry Riley,24,6,1935)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q355,[])).
+xdb_ut_Q355Receiving answer: fof(s__birthdate,answer,s__birthdate(s__TimCurry,19,4,1946),answer_to(yago_is_birthdate1_Q148,[])).
+yago_is_birthdate1_Q148Sending question: fof(yago_is_birthdate1_Q150,question,? [V1,V2,V3] : s__birthdate(s__Vangelis,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q358,question,$lesseq(1949,1750),unknown,[]).
+unknownSending question: fof(xdb_ut_Q357,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__TimCurry,19,4,1946)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownSending question: fof(greatereq_Q359,question,$greatereq(1935,1700),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__TimCurry,19,4,1946)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Tim Curry,19,4,1946)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q357,[])).
+
+xdb_ut_Q357Receiving answer: fof(s__birthdate,answer,s__birthdate(s__Vangelis,29,3,1943),answer_to(yago_is_birthdate1_Q150,[])).
+yago_is_birthdate1_Q150Sending question: fof(yago_is_birthdate1_Q152,question,? [V1,V2,V3] : s__birthdate(s__WendyCarlos,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q361,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__Vangelis,29,3,1943)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__Vangelis,29,3,1943)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Vangelis,29,3,1943)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q361,[])).
+xdb_ut_Q361Receiving answer: fof(s__birthdate,answer,s__birthdate(s__WendyCarlos,14,11,1939),answer_to(yago_is_birthdate1_Q152,[])).
+yago_is_birthdate1_Q152Sending question: fof(yago_is_birthdate1_Q154,question,? [V1,V2,V3] : s__birthdate(s__YngwieMalmsteen,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q362,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__WendyCarlos,14,11,1939)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownSending question: fof(greatereq_Q363,question,$greatereq(1943,1700),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__WendyCarlos,14,11,1939)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Wendy Carlos,14,11,1939)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q362,[])).
+
+xdb_ut_Q362Receiving answer: fof(s__birthdate,answer,s__birthdate(s__YngwieMalmsteen,30,6,1963),answer_to(yago_is_birthdate1_Q154,[])).
+yago_is_birthdate1_Q154Sending question: fof(yago_is_birthdate1_Q156,question,? [V1,V2,V3] : s__birthdate(s__HerbieHancock,V1,V2,V3),unknown,[]).
+unknownSending question: fof(greatereq_Q365,question,$greatereq(1939,1700),unknown,[]).
+unknownSending question: fof(xdb_ut_Q366,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__YngwieMalmsteen,30,6,1963)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownSending question: fof(lesseq_Q367,question,$lesseq(1939,1750),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__YngwieMalmsteen,30,6,1963)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Yngwie Malmsteen,30,6,1963)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q366,[])).
+xdb_ut_Q366Receiving answer: fof(s__birthdate,answer,s__birthdate(s__HerbieHancock,12,4,1940),answer_to(yago_is_birthdate1_Q156,[])).
+yago_is_birthdate1_Q156Sending question: fof(yago_is_birthdate1_Q158,question,? [V1,V2,V3] : s__birthdate(s__BixBeiderbecke,V1,V2,V3),unknown,[]).
+unknownSending question: fof(greatereq_Q368,question,$greatereq(1963,1700),unknown,[]).
+unknownSending question: fof(xdb_ut_Q369,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__HerbieHancock,12,4,1940)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownSending question: fof(lesseq_Q370,question,$lesseq(1963,1750),unknown,[]).
+
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__BixBeiderbecke,10,3,1903),answer_to(yago_is_birthdate1_Q158,[])).
+yago_is_birthdate1_Q158Sending question: fof(yago_is_birthdate1_Q160,question,? [V1,V2,V3] : s__birthdate(s__DukeEllington,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q371,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__BixBeiderbecke,10,3,1903)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__BixBeiderbecke,10,3,1903)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Bix Beiderbecke,10,3,1903)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q371,[])).
+xdb_ut_Q371Receiving answer: fof(s__birthdate,answer,s__birthdate(s__DukeEllington,29,4,1899),answer_to(yago_is_birthdate1_Q160,[])).
+yago_is_birthdate1_Q160Sending question: fof(yago_is_birthdate1_Q162,question,? [V1,V2,V3] : s__birthdate(s__Entity_UC1_storPiazzolla,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q372,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__DukeEllington,29,4,1899)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__DukeEllington,29,4,1899)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Duke Ellington,29,4,1899)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q372,[])).
+
+xdb_ut_Q372Receiving answer: fof(s__birthdate,answer,s__birthdate(s__Entity_UC1_storPiazzolla,11,3,1921),answer_to(yago_is_birthdate1_Q162,[])).
+yago_is_birthdate1_Q162Sending question: fof(yago_is_birthdate1_Q164,question,? [V1,V2,V3] : s__birthdate(s__JeanMichelJarre,V1,V2,V3),unknown,[]).
+unknownSending question: fof(greatereq_Q374,question,$greatereq(1899,1700),unknown,[]).
+unknownSending question: fof(xdb_ut_Q375,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__Entity_UC1_storPiazzolla,11,3,1921)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownSending question: fof(lesseq_Q376,question,$lesseq(1903,1750),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__Entity_UC1_storPiazzolla,11,3,1921)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Entity_UC1_stor Piazzolla,11,3,1921)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q375,[])).
+xdb_ut_Q375Sending question: fof(lesseq_Q377,question,$lesseq(1899,1750),unknown,[]).
+unknownSending question: fof(greatereq_Q378,question,$greatereq(1921,1700),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__JeanMichelJarre,24,8,1948),answer_to(yago_is_birthdate1_Q164,[])).
+yago_is_birthdate1_Q164Sending question: fof(yago_is_birthdate1_Q166,question,? [V1,V2,V3] : s__birthdate(s__IrvingBerlin,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q380,question,$lesseq(1921,1750),unknown,[]).
+unknownSending question: fof(xdb_ut_Q379,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__JeanMichelJarre,24,8,1948)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__JeanMichelJarre,24,8,1948)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Jean Michel Jarre,24,8,1948)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q379,[])).
+% 10 wall clock seconds gone, waiting for system output
+
+outputReceiving answer: fof(s__birthdate,answer,s__birthdate(s__IrvingBerlin,11,5,1888),answer_to(yago_is_birthdate1_Q166,[])).
+yago_is_birthdate1_Q166Sending question: fof(yago_is_birthdate1_Q168,question,? [V1,V2,V3] : s__birthdate(s__AnthonyBurgess,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q383,question,$lesseq(1948,1750),unknown,[]).
+unknownSending question: fof(xdb_ut_Q382,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__IrvingBerlin,11,5,1888)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__IrvingBerlin,11,5,1888)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Irving Berlin,11,5,1888)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q382,[])).
+xdb_ut_Q382Sending question: fof(greatereq_Q384,question,$greatereq(1888,1700),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__AnthonyBurgess,25,2,1917),answer_to(yago_is_birthdate1_Q168,[])).
+yago_is_birthdate1_Q168Sending question: fof(yago_is_birthdate1_Q170,question,? [V1,V2,V3] : s__birthdate(s__JeanSibelius,V1,V2,V3),unknown,[]).
+unknownSending question: fof(lesseq_Q386,question,$lesseq(1888,1750),unknown,[]).
+
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__AnthonyBurgess,25,2,1917)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Anthony Burgess,25,2,1917)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q385,[])).
+xdb_ut_Q385Receiving answer: fof(s__birthdate,answer,s__birthdate(s__JeanSibelius,8,12,1865),answer_to(yago_is_birthdate1_Q170,[])).
+yago_is_birthdate1_Q170Sending question: fof(yago_is_birthdate1_Q172,question,? [V1,V2,V3] : s__birthdate(s__BillieHoliday,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q387,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__JeanSibelius,8,12,1865)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__JeanSibelius,8,12,1865)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Jean Sibelius,8,12,1865)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q387,[])).
+xdb_ut_Q387Sending question: fof(greatereq_Q388,question,$greatereq(1917,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q389,question,$lesseq(1917,1750),unknown,[]).
+unknownSending question: fof(greatereq_Q390,question,$greatereq(1865,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q391,question,$lesseq(1865,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__BillieHoliday,7,4,1915),answer_to(yago_is_birthdate1_Q172,[])).
+yago_is_birthdate1_Q172Sending question: fof(yago_is_birthdate1_Q174,question,? [V1,V2,V3] : s__birthdate(s__HenryMancini,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q392,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__BillieHoliday,7,4,1915)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__BillieHoliday,7,4,1915)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Billie Holiday,7,4,1915)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q392,[])).
+xdb_ut_Q392Sending question: fof(greatereq_Q393,question,$greatereq(1915,1700),unknown,[]).
+
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__HenryMancini,16,4,1924),answer_to(yago_is_birthdate1_Q174,[])).
+yago_is_birthdate1_Q174Sending question: fof(yago_is_birthdate1_Q176,question,? [V1,V2,V3] : s__birthdate(s__JohnCarpenter,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q395,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__HenryMancini,16,4,1924)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__HenryMancini,16,4,1924)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Henry Mancini,16,4,1924)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q395,[])).
+xdb_ut_Q395Sending question: fof(greatereq_Q396,question,$greatereq(1924,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q397,question,$lesseq(1924,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__JohnCarpenter,16,1,1948),answer_to(yago_is_birthdate1_Q176,[])).
+yago_is_birthdate1_Q176Sending question: fof(yago_is_birthdate1_Q178,question,? [V1,V2,V3] : s__birthdate(s__RichardRodgers,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q398,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__JohnCarpenter,16,1,1948)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__RichardRodgers,28,6,1902),answer_to(yago_is_birthdate1_Q178,[])).
+yago_is_birthdate1_Q178Sending question: fof(yago_is_birthdate1_Q180,question,? [V1,V2,V3] : s__birthdate(s__JohnColtrane,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q399,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__RichardRodgers,28,6,1902)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__RichardRodgers,28,6,1902)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Richard Rodgers,28,6,1902)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q399,[])).
+xdb_ut_Q399Sending question: fof(greatereq_Q400,question,$greatereq(1902,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q401,question,$lesseq(1902,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__JohnColtrane,23,9,1926),answer_to(yago_is_birthdate1_Q180,[])).
+yago_is_birthdate1_Q180Sending question: fof(yago_is_birthdate1_Q182,question,? [V1,V2,V3] : s__birthdate(s__AndrewLloydWebber,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q402,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__JohnColtrane,23,9,1926)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__AndrewLloydWebber,22,3,1948),answer_to(yago_is_birthdate1_Q182,[])).
+yago_is_birthdate1_Q182Sending question: fof(yago_is_birthdate1_Q184,question,? [V1,V2,V3] : s__birthdate(s__JeffBridges,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q403,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__AndrewLloydWebber,22,3,1948)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__AndrewLloydWebber,22,3,1948)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Andrew Lloyd Webber,22,3,1948)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q403,[])).
+xdb_ut_Q403Receiving answer: fof(s__birthdate,answer,s__birthdate(s__JeffBridges,4,12,1949),answer_to(yago_is_birthdate1_Q184,[])).
+yago_is_birthdate1_Q184Sending question: fof(yago_is_birthdate1_Q186,question,? [V1,V2,V3] : s__birthdate(s__NobuoUematsu,V1,V2,V3),unknown,[]).
+% 10 wall clock seconds gone, waiting for system output
+
+outputReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__JeffBridges,4,12,1949)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Jeff Bridges,4,12,1949)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q404,[])).
+xdb_ut_Q404Receiving answer: fof(s__birthdate,answer,s__birthdate(s__NobuoUematsu,21,3,1959),answer_to(yago_is_birthdate1_Q186,[])).
+yago_is_birthdate1_Q186Sending question: fof(yago_is_birthdate1_Q188,question,? [V1,V2,V3] : s__birthdate(s__WCHandy,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q405,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__NobuoUematsu,21,3,1959)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__NobuoUematsu,21,3,1959)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Nobuo Uematsu,21,3,1959)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q405,[])).
+xdb_ut_Q405Sending question: fof(greatereq_Q406,question,$greatereq(1959,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q407,question,$lesseq(1959,1750),unknown,[]).
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__WCHandy,16,11,1873),answer_to(yago_is_birthdate1_Q188,[])).
+yago_is_birthdate1_Q188Sending question: fof(yago_is_birthdate1_Q190,question,? [V1,V2,V3] : s__birthdate(s__CarlPhilippEmanuelBach,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q408,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__WCHandy,16,11,1873)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__WCHandy,16,11,1873)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(WC Handy,16,11,1873)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q408,[])).
+xdb_ut_Q408Sending question: fof(greatereq_Q409,question,$greatereq(1873,1700),unknown,[]).
+
+unknownReceiving answer: fof(s__birthdate,answer,s__birthdate(s__CarlPhilippEmanuelBach,8,3,1714),answer_to(yago_is_birthdate1_Q190,[])).
+yago_is_birthdate1_Q190Sending question: fof(yago_is_birthdate1_Q192,question,? [V1,V2,V3] : s__birthdate(s__HemantaKumarMukhopadhyay,V1,V2,V3),unknown,[]).
+unknownSending question: fof(xdb_ut_Q411,question,? [V1,V2] : xdb_ut($fof(s__birthdate(s__CarlPhilippEmanuelBach,8,3,1714)),$fof(s__birthdate(yagosumo,number,number,number)),V1,V2,$fof(is_birthdate(english,number,number,number))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__birthdate(s__CarlPhilippEmanuelBach,8,3,1714)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(s__birthdate(yagosumo,number,number,number)),$fof(is_birthdate(Carl Philipp Emanuel Bach,8,3,1714)),$fof(is_birthdate(english,number,number,number))),answer_to(xdb_ut_Q411,[])).
+xdb_ut_Q411Sending question: fof(greatereq_Q412,question,$greatereq(1714,1700),unknown,[]).
+unknownSending question: fof(lesseq_Q413,question,$lesseq(1714,1750),unknown,[]).
+unknownSending question: fof(printtty_Q414,question,print(printall(nl,nl,'The composer is ','Carl Philipp Emanuel Bach',' born in ',1714,nl)),unknown,[]).% XDB print : 
+% XDB print : 
+% XDB print : 'The composer is ''Carl Philipp Emanuel Bach' born in 1714
+% XDB print : 
+printReceiving answer: fof(printed,answer,print(printall(nl,nl,The composer is ,Carl Philipp Emanuel Bach, born in ,1714,nl)),answer_to(printtty_Q414,[])).
+External connection statistics for 'xdb_ut':
+Number of requests queued: 244
+Number of questions asked: 244
+Number of axioms delivered: 244
+
+External connection statistics for 'printtty':
+Number of requests queued: 1
+Number of questions asked: 1
+Number of axioms delivered: 1
+
+External connection statistics for 'yago_is_instance1':
+Number of requests queued: 1
+Number of questions asked: 1
+Number of axioms delivered: 100
+
+External connection statistics for 'yago_is_birthdate1':
+Number of requests queued: 100
+Number of questions asked: 45
+Number of axioms delivered: 43
+
+External connection statistics for 'lesseq':
+Number of requests queued: 34
+Number of questions asked: 34
+Number of axioms delivered: 0
+
+External connection statistics for 'greatereq':
+Number of requests queued: 34
+Number of questions asked: 34
+Number of axioms delivered: 0
+
+External connection statistics totals:
+Number of requests queued: 414
+Number of questions asked: 359
+Number of axioms delivered: 388
+
+SPASS V 3.5a 
+SPASS beiseite: Proof found.
+Problem: /home/graph/tptp/Systems/SPASS-XDB---3.01X0.4/AllExternals.ax 
+SPASS derived 392 clauses, backtracked 0 clauses, performed -1 splits and kept 145 clauses.
+SPASS allocated 67351 KBytes.
+SPASS spent0:00:53.44 on the problem.
+the0:00:00.04 for the input.
+the0:00:00.02 for the FLOTTER CNF translation.
+CNF0:00:00.07 for inferences.
+for0:00:00.00 for the backtracking.
+the0:00:00.02 for the reduction.
+
+
+Here is a proof with depth 4, length 8 :
+1[0:Inp] || print(printall(nl,nl,The composer is ,U, born in ,V,nl))* is_instance(U,Composer)+ $lesseq(V,1750) $greatereq(V,1700) is_birthdate(U,W,X,V)* -> .
+73[0:Inp] ||  -> is_instance(Carl Philipp Emanuel Bach,Composer)*.
+198[0:Res:73.0,1.1] || print(printall(nl,nl,The composer is ,Carl Philipp Emanuel Bach, born in ,U,nl))* $lesseq(U,1750) $greatereq(U,1700) is_birthdate(Carl Philipp Emanuel Bach,V,W,U)*+ -> .
+530[0:Inp] ||  -> is_birthdate(Carl Philipp Emanuel Bach,8,3,1714)*.
+531[0:Res:530.0,198.3] || print(printall(nl,nl,The composer is ,Carl Philipp Emanuel Bach, born in ,1714,nl))* $lesseq(1714,1750) $greatereq(1714,1700)+ -> .
+533[0:ARw:531.0] || print(printall(nl,nl,The composer is ,Carl Philipp Emanuel Bach, born in ,1714,nl))*+ -> .
+535[0:Inp] ||  -> print(printall(nl,nl,The composer is ,Carl Philipp Emanuel Bach, born in ,1714,nl))*.
+536[0:Res:535.0,533.0] ||  -> .
+Formulae used in the proof : who
+
+--------------------------SPASS-STOP------------------------------
+SELF  time: 0.308952
+CHILD time: 4.716282
+
+% END OF SYSTEM OUTPUT
+% RESULT: SOT_c9FSOd - SPASS-XDB---3.01X0.4 says Theorem - CPU = 6.8 WC = 53.5  Derived = 392 Queued = 414 Asked = 359 Delivered = 388
+% OUTPUT: SOT_c9FSOd - SPASS-XDB---3.01X0.4 says Refutation - CPU = 6.8 WC = 53.5 
+

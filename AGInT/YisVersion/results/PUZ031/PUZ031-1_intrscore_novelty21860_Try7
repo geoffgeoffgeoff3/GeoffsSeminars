@@ -1,0 +1,179 @@
+cnf(c_0_306,conjecture-derived,
+        ( eats(X2,X1)
+        | eats(X1,X3)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ animal(X1)
+        | ~ animal(X3)
+        | ~ caterpillar(X3)
+        | ~ much_smaller(X3,X1)
+        | ~ grain(X4)
+        | ~ bird(X1) ),
+        inference(pm,[status(thm)],[c_0_292,c_0_16,theory(equality)]),
+        [interestingness(0.908012)]).
+ 
+cnf(c_0_261,conjecture-derived,
+        ( eats(X3,X1)
+        | eats(X1,X5)
+        | ~ animal(X3)
+        | ~ fox(X3)
+        | ~ animal(X1)
+        | ~ plant(X2)
+        | ~ much_smaller(X1,X3)
+        | ~ grain(X4)
+        | ~ animal(X5)
+        | ~ caterpillar(X5)
+        | ~ much_smaller(X5,X1) ),
+        inference(pm,[status(thm)],[c_0_234,c_0_41,theory(equality)]),
+        [interestingness(0.890123)]).
+ 
+cnf(c_0_297,conjecture-derived,
+        ( eats(X2,X1)
+        | eats(X1,X3)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ animal(X1)
+        | ~ plant(X4)
+        | ~ animal(X3)
+        | ~ caterpillar(X3)
+        | ~ much_smaller(X3,X1)
+        | ~ bird(X1) ),
+        inference(pm,[status(thm)],[c_0_275,c_0_16,theory(equality)]),
+        [interestingness(0.882322)]).
+ 
+cnf(c_0_278,conjecture-derived,
+        ( eats(X3,X1)
+        | eats(X1,X4)
+        | ~ animal(X3)
+        | ~ fox(X3)
+        | ~ animal(X1)
+        | ~ plant(X2)
+        | ~ much_smaller(X1,X3)
+        | ~ animal(X4)
+        | ~ bird(X4)
+        | ~ grain(X5)
+        | ~ much_smaller(X4,X1) ),
+        inference(pm,[status(thm)],[c_0_251,c_0_86,theory(equality)]),
+        [interestingness(0.881423)]).
+ 
+cnf(c_0_234,conjecture-derived,
+        ( eats(X2,X3)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ animal(X3)
+        | ~ plant(X4)
+        | ~ eats(X3,X4)
+        | ~ much_smaller(X3,X2)
+        | ~ grain(X1) ),
+        inference(pm,[status(thm)],[c_0_226,c_0_12,theory(equality)]),
+        [interestingness(0.861855)]).
+ 
+cnf(c_0_236,conjecture-derived,
+        ( eats(X2,X3)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ animal(X3)
+        | ~ plant(X4)
+        | ~ eats(X3,X4)
+        | ~ much_smaller(X3,X2)
+        | ~ snail(X1) ),
+        inference(pm,[status(thm)],[c_0_226,c_0_24,theory(equality)]),
+        [interestingness(0.809198)]).
+ 
+cnf(c_0_260,conjecture-derived,
+        ( eats(X3,X1)
+        | ~ animal(X3)
+        | ~ fox(X3)
+        | ~ animal(X1)
+        | ~ plant(X2)
+        | ~ much_smaller(X1,X3)
+        | ~ grain(X4)
+        | ~ animal(X2)
+        | ~ fox(X1)
+        | ~ bird(X2) ),
+        inference(pm,[status(thm)],[c_0_234,c_0_87,theory(equality)]),
+        [interestingness(0.787673)]).
+ 
+cnf(c_0_309,conjecture-derived,
+        ( eats(X3,X2)
+        | eats(X2,X1)
+        | ~ animal(X3)
+        | ~ fox(X3)
+        | ~ animal(X2)
+        | ~ much_smaller(X2,X3)
+        | ~ animal(X1)
+        | ~ caterpillar(X1)
+        | ~ grain(X4)
+        | ~ bird(X2) ),
+        inference(pm,[status(thm)],[c_0_292,c_0_14,theory(equality)]),
+        [interestingness(0.783012)]).
+ 
+cnf(c_0_238,conjecture-derived,
+        ( eats(X2,X1)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ plant(X3)
+        | ~ animal(X1)
+        | ~ plant(snail_food_of(X1))
+        | ~ much_smaller(X1,X2)
+        | ~ snail(X1) ),
+        inference(pm,[status(thm)],[c_0_226,c_0_25,theory(equality)]),
+        [interestingness(0.764432)]).
+ 
+cnf(c_0_235,conjecture-derived,
+        ( eats(X2,X3)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ animal(X3)
+        | ~ plant(X4)
+        | ~ eats(X3,X4)
+        | ~ much_smaller(X3,X2)
+        | ~ caterpillar(X1) ),
+        inference(pm,[status(thm)],[c_0_226,c_0_22,theory(equality)]),
+        [interestingness(0.753586)]).
+ 
+cnf(c_0_237,conjecture-derived,
+        ( eats(X2,X1)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ plant(X3)
+        | ~ animal(X1)
+        | ~ plant(caterpillar_food_of(X1))
+        | ~ much_smaller(X1,X2)
+        | ~ caterpillar(X1) ),
+        inference(pm,[status(thm)],[c_0_226,c_0_23,theory(equality)]),
+        [interestingness(0.727596)]).
+ 
+cnf(c_0_281,conjecture-derived,
+        ( eats(X2,X1)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ animal(X1)
+        | ~ plant(snail_food_of(X1))
+        | ~ snail(X1)
+        | ~ bird(X1) ),
+        inference(pm,[status(thm)],[c_0_267,c_0_16,theory(equality)]),
+        [interestingness(0.727148)]).
+ 
+cnf(c_0_283,conjecture-derived,
+        ( eats(X2,X1)
+        | ~ animal(X2)
+        | ~ fox(X2)
+        | ~ animal(X1)
+        | ~ plant(snail_food_of(X1))
+        | ~ snail(X1)
+        | ~ bird(X2) ),
+        inference(pm,[status(thm)],[c_0_267,c_0_15,theory(equality)]),
+        [interestingness(0.664648)]).
+ 
+cnf(c_0_273,conjecture-derived,
+        ( eats(X3,X1)
+        | ~ animal(X3)
+        | ~ fox(X3)
+        | ~ animal(X1)
+        | ~ plant(X2)
+        | ~ much_smaller(X1,X3)
+        | ~ bird(X1) ),
+        inference(pm,[status(thm)],[c_0_251,c_0_77,theory(equality)]),
+        [interestingness(0.650359)]).
+ 

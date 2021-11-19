@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE> Hill Climbing </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER>
+Hill Climbing
+</H1>
+
+<A HREF="ABSequenceJPG.html">
+<CENTER>
+<IMG SRC="ABSequence.jpg" ALIGN=RIGHT WIDTH=50%>
+</CENTER>
+</A>
+
+<H3> Algorithm </H3>
+<UL>
+<LI> Choose initial Target with largest <EM>C<SUB>sw</SUB><SUP>Inferred</SUP></EM>
+<LI> Repeatedly ...
+     <UL>
+     <LI> Try do a self-combining step, best-first
+     <LI> Otherwise try to do a non-self-combining step
+     <LI> Minimize <EM>C<SUB>sw</SUB><SUP>Leaves</SUP></EM>, then
+          <EM>C<SUB>sw</SUB><SUP>Inferred</SUP></EM>, then
+          <EM>C<SUB>sw</SUB><SUP>Inferences</SUP></EM>, hill climbing
+     </UL>
+</UL>
+
+<H3> Is the Combined Proof Different? </H3>
+<TABLE>
+<TR> <TH ALIGN=LEFT> Proof
+     <TD> <TT>&nbsp;&nbsp;
+     <TH> <EM>C<SUB>sw</SUB><SUP>Leaves</SUP></EM>
+     <TH> <EM>C<SUB>sw</SUB><SUP>Inferred</SUP></EM>
+     <TH> <EM>C<SUB>sw</SUB><SUP>Inferences</SUP></EM>
+<TR> <TD> Original&nbsp;A
+     <TD> <TT>&nbsp;&nbsp;
+     <TD> 1.0000
+     <TD> 0.8483
+     <TD> 0.5616
+<TR> <TD> Original&nbsp;B
+     <TD> <TT>&nbsp;&nbsp;
+     <TD> 1.0000
+     <TD> 0.8483
+     <TD> 0.5616
+<TR> <TD> Combined&nbsp;1
+     <TD> <TT>&nbsp;&nbsp;
+     <TD> 1.0000
+     <TD> 0.8736
+     <TD> 0.5616
+<TR> <TD> Combined&nbsp;2
+     <TD> <TT>&nbsp;&nbsp;
+     <TD> 0.6250
+     <TD> 0.6405
+     <TD> 0.4235
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

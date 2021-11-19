@@ -1,0 +1,24 @@
+%------------------------------------------------------------------------------
+thf(syrup_type,type,( syrup: $tType )).
+thf(beverage_type,type,( beverage: $tType )).
+thf(coffee_type,type,( coffee: beverage )).
+thf(mix_type,type,( mix: beverage > syrup > beverage )).
+thf(coffee_mixture_type,type,( coffee_mixture: syrup > beverage )).
+thf(hot_type,type,( hot: beverage > $o )).
+
+%----The mixture of coffee and something
+thf(coffee_mixture_definition,definition,
+    ( coffee_mixture = ( mix @ coffee ) )).
+
+%----Any coffee mixture is hot coffee
+thf(coffee_and_syrup_is_hot_coffee,axiom,(
+    ! [S: syrup] : ( ( (coffee_mixture @ S) = coffee )
+                   & ( hot @ ( coffee_mixture @ S ) )) )).
+
+%----There is some mixture of coffee and any syrup which is hot coffee
+thf(there_is_hot_coffee,conjecture,(
+    ? [SyrupMixer: syrup > beverage] :
+    ! [S: syrup] :
+    ? [B: beverage] :
+      ( ( B = ( SyrupMixer @ S ) ) & ( B = coffee ) & ( hot @ B ) ) )).
+%------------------------------------------------------------------------------

@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE> Event Calculus </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Event Calculus </H1>
+
+<IMG SRC="EventCalculus.GIF" BORDER=0 ALIGN=RIGHT WIDTH=30%>
+
+<H3> Structure </H3>
+<UL>
+<LI> A formalism for reasoning about actions over time
+<LI> <EM>Time</EM> is continuous
+<LI> <EM>Fluents</EM> take on different values in different situations
+<LI> <EM>Events</EM> initiate and terminate changes to fluents<BR>
+     <EM>Events</EM> release fluents from the commonsense law of inertia<BR>
+<LI> <EM>Discrete event calculus</EM> limits time to integer time points
+</UL>
+
+<H3> Language </H3>
+<UL>
+<LI> <TT>happens(E,T)</TT>: Event <TT>E</TT> occurs at timepoint <TT>T</TT>.
+<LI> <TT>holdsAt(F,T)</TT>: Fluent <TT>F</TT> is true at <TT>T</TT>.
+<LI> <TT>releasedAt(F,T)</TT>: <TT>F</TT> is released from the commonsense law of
+inertia at <TT>T</TT>.
+<LI> <TT>initiates(E,F,T)</TT>: 
+     If <TT>E</TT> occurs at <TT>T</TT>, then <TT>F</TT> is true and not
+     released at <TT>T+1</TT>.
+<LI> <TT>terminates(E,F,T)</TT>: 
+     If <TT>E</TT> occurs at <TT>T</TT>, then <TT>F</TT> is false and not
+     released at <TT>T+1</TT>.
+<LI> <TT>releases(E,F,T)</TT>: 
+     If <TT>E</TT> occurs at <TT>T</TT>, then <TT>F</TT> is released
+     at <TT>T+1</TT>.
+<LI> <TT>trajectory(F<SUB>1</SUB>,T<SUB>1</SUB>,F<SUB>2</SUB>,T<SUB>2</SUB>)</TT>: 
+     If <TT>F<SUB>1</SUB></TT> is initiated at 
+     <TT>T<SUB>1</SUB></TT>, and <TT>T<SUB>2</SUB></TT> &gt; 0,
+     then <TT>F<SUB>2</SUB></TT> is true at 
+     <TT>T<SUB>1</SUB>+T<SUB>2</SUB></TT>.
+<LI> <TT>antiTrajectory(F<SUB>1</SUB>,T<SUB>1</SUB>,F<SUB>2</SUB>,T<SUB>2</SUB>)</TT>:  
+     If <TT>F<SUB>1</SUB></TT> is terminated at 
+     <TT>T<SUB>1</SUB></TT>, and <TT>T<SUB>2</SUB></TT> &gt; 0,
+     then <TT>F<SUB>2</SUB></TT> is true at 
+     <TT>T<SUB>1</SUB>+T<SUB>2</SUB></TT>.
+
+</UL>
+
+<H3> Examples </H3>
+<UL>
+<LI> Axiom DEC1
+     <PRE>
+&forall;T<SUB>1</SUB>,F,T<SUB>2</SUB> (stoppedIn(T<SUB>1</SUB>,F,T<SUB>2</SUB>) 
+    &hArr; 
+&exist;E,T (T<SUB>1</SUB> < T < T<SUB>2</SUB> | happens(E,T) | terminates(E,F,T) ))
+</PRE>
+<LI> <PRE>
+&forall;T,H<SUB>1</SUB>,H<SUB>2</SUB> ((holdsAt(waterLevel(H<SUB>1</SUB>),T) & holdsAt(waterLevel(H<SUB>2</SUB>),T)) &rArr; H<SUB>1</SUB> = H<SUB>2</SUB>)
+</PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

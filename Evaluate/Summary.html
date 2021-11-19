@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<TITLE>Problem and System Ratings</TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'TPTPWithBiased.GIF';
+  images[1]     = new Image();
+  images[1].src = 'TPTPWithoutBiased.GIF';
+  images[2]     = new Image();
+  images[2].src = 'WithAllSets.GIF';
+  images[3]     = new Image();
+  images[3].src = 'WithSOTASets.GIF';
+  images[4]     = new Image();
+  images[4].src = 'ProbSOTA.GIF';
+  images[5]     = new Image();
+  images[5].src = 'ProblemsRated.GIF';
+  images[6]     = new Image();
+  images[6].src = 'DifficultProblems.GIF';
+  images[7]     = new Image();
+  images[7].src = 'SystemsRated.GIF';
+  images[8]     = new Image();
+  images[8].src = 'TPTPWithSPCs.GIF';
+  images[9]     = new Image();
+  images[9].src = 'WithSubsumed.GIF';
+  images[10]    = new Image();
+  images[10].src = 'FoodChn.GIF';
+  images[11]    = new Image();
+  images[11].src = 'RatingsDecline.jpg';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Problem and System Ratings </H1>
+
+<IMG NAME="image" SRC="TPTPWithBiased.GIF" ALIGN=RIGHT WIDTH=50%>
+
+<H3> Problems and Data </H3>
+<UL>
+<LI> Use <A HREF="../TPTP/Summary.html">TPTP problems</A>
+     <A HREF="" onClick="putImage(0);return false">
+     <IMG SRC="TPTPWithBiased.GIF" BORDER=0 WIDTH=20></A>
+<LI> Exclude <A HREF="../Evaluate/WhatCode.html">biased problems</A>
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="TPTPWithoutBiased.GIF" BORDER=0 WIDTH=20></A>
+<LI> Divide into <A HREF="SPCs.html">Specialist Problem Classes</A>
+     <A HREF="" onClick="putImage(8);return false">
+     <IMG SRC="TPTPWithSPCs.GIF" BORDER=0 WIDTH=20></A>
+<LI> Use <A HREF="../TSTP/Summary.html">TSTP data</A> within each class
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="WithAllSets.GIF" BORDER=0 WIDTH=20></A><BR>
+     (resource limits beyond the 
+     <A HREF="../Evaluate/PPP.html">systems' PPP</A>s)
+</UL>
+
+<H3> System Ranking by Subsumption </H3>
+<UL>
+<LI> Provides a <A HREF="SysSubs.html">partial ranking</A>
+     <A HREF="" onClick="putImage(10);return false">
+     <IMG SRC="FoodChn.GIF" BORDER=0 WIDTH=20></A>
+     (<A HREF="FOF_NKU_NUN_NEQ.sys.text">sample data</A>)
+<LI> Superset systems <EM>subsume</EM> subset systems 
+     <A HREF="" onClick="putImage(9);return false">
+     <IMG SRC="WithSubsumed.GIF" BORDER=0 WIDTH=20></A>
+<LI> <EM>SOTA contributors</EM> form a <A HREF="SOTA.html">SOTA system</A>
+     <A HREF="" onClick="putImage(3);return false">
+     <IMG SRC="WithSOTASets.GIF" BORDER=0 WIDTH=20></A>
+</UL>
+
+<H3> Problem Rating by SOTA </H3>
+<UL>
+<LI> Use SOTA contributors to avoid weak systems
+<!-- <LI> Include <EM>rating contributors</EM> if too few SOTA -->
+<LI> <A HREF="ProbSOTA.html">The fraction</A> of SOTA contributors that fail
+     <A HREF="" onClick="putImage(5);return false">
+     <IMG SRC="ProblemsRated.GIF" BORDER=0 WIDTH=20></A>
+     (<A HREF="FOF_NKU_NUN_NEQ.prob.text">sample data</A>)
+<LI> Discrete ratings: Easy - Difficult - Unsolved
+</UL>
+
+<H3> System Rating by SOTA </H3>
+<UL>
+<LI> Use difficult problems to differentiate between systems
+     <A HREF="" onClick="putImage(6);return false">
+     <IMG SRC="DifficultProblems.GIF" BORDER=0 WIDTH=20></A>
+<LI> <A HREF="SysSOTA.html">The fraction</A> of difficult problems solved
+     <A HREF="" onClick="putImage(7);return false">
+     <IMG SRC="SystemsRated.GIF" BORDER=0 WIDTH=20></A>
+     (<A HREF="FOF_NKU_NUN_NEQ.sys.text">sample data</A>)
+</UL>
+
+<H3> Evidence of Progress </H3>
+<UL>
+<LI> Declining problem ratings are evidence of progress
+     <A HREF="" onClick="putImage(11);return false">
+     <IMG SRC="RatingsDecline.jpg" BORDER=0 WIDTH=20></A>
+</UL>
+
+<H3> Reports available
+     <A HREF="http://www.tptp.org/cgi-bin/SystemOnTPTP">online</A>
+     at <TT>www.tptp.org/cgi-bin/SystemOnTPTP</TT>
+     </UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE> Inferred Formulae </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'InferredFormulae.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Derivation.jpg';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Inferred Formulae
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME=image SRC="InferredFormulae.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Comparing the Artifacts </H3>
+<UL>
+<LI> FOF in FOF-to-CNF not very interesting
+<LI> CNF leaves (sometimes that's all you get)
+     <UL> 
+     <LI> Smaller is often better
+     <LI> Larger is sometimes useful
+     <LI> Interesting for same FOF axioms
+     </UL>
+<LI> CNF in proof
+     <UL>
+     <LI> Interesting only for same FOF axioms
+     <LI> Subsets not interesting (see <A HREF="NoCounting.html">No Counting</A>)
+     <LI> Interesting for same CNF leaves
+     </UL>
+</UL>
+
+<H3> Comparing the Proofs </H3>
+<UL>
+<LI> Measure Jaccard distance between sets<BR>
+     (larger distance &equiv; more different proofs)
+<LI> CNF leaf subset (same FOF axioms)
+<LI> Same FOF axioms, CNF leaf intersection
+<LI> Same FOF axioms, CNF set intersection (same CNF leaves)
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

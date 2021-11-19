@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> Implementation </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Implementation </H1>
+
+<IMG SRC="Implementation.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+
+<H3> SRASS ... much more fun </H3>
+<UL>
+<LI> Implemented in C on top of the <TT>JJParser</TT> library
+<LI> Uses conventional automated reasoning systems for all tests
+     <UL>
+     <LI> Uses <TT>SystemOnTPTP</TT> to call component systems
+     </UL>
+<LI> Uses contextual indirect syntactic relevance ordering
+<LI> Parameterized for systems, features, and resource allocations
+</UL>
+
+<H3> Conventional Automated Reasoning Components </H3>
+<UL>
+<LI> A theorem prover to test for (counter)theoremhood and unsatisfiability
+<LI> A theorem prover to find proofs
+<LI> A finite model builder to build models and test for (counter)satisfiability
+<LI> A saturating system to further test for (counter)satisfiability
+<P>
+<LI> Evaluation with respect to a model done by ...
+     <UL>
+     <LI> Representing the model as a set of formulae 
+     <LI> <EM>Theorem</EM> axiom is <EM>true</EM>
+     <LI> <EM>Counter satisfiable</EM> axiom is <EM>not-true</EM>
+     <LI> <EM>Counter theorem</EM> axiom is <EM>false</EM>
+     <LI> Resource intensive, but uses automated reasoning :-)
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

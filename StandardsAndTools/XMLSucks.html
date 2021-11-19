@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<TITLE> XML Sucks </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> XML Sucks (for this application) </H1>
+
+<TABLE>
+<TR> <TD> <H3> XML </H3>
+     <TD> <H3> TPTP </H3>
+<TR VALIGN=TOP>
+     <TD> <SMALL><PRE>
+&lt;scl:formula  xmlns:scl="http://scluripart">
+  &lt;scl:quantifier scl:name="exists" 
+  scl:variable="x">
+     &lt;scl:connective scl:name="implies">
+        &lt;scl:predicate scl:name="p">
+            &lt;scl:term scl:name="x"/>
+            &lt;scl:term scl:name="1"/>
+        &lt;/scl:predicate>  
+        &lt;scl:predicate scl:name="equal">
+            &lt;scl:term scl:name="x"/>
+            &lt;scl:term scl:name="1"/>
+        &lt;/scl:predicate>        
+     &lt;/scl:connective>                      
+  &lt;/scl:quantifier>
+&lt;/scl:formula> </PRE></SMALL>
+     <TD> <PRE>
+fof(the_name,axiom,
+    ? [X] :
+      ( p(X,1)
+     => equal(X,1) ) ). </PRE>
+<TR VALIGN=TOP>
+     <TD> <H3> Pros </H3>
+          <UL>
+          <LI> Free parser with every language
+          <LI> Parsers build you a data structure
+          <LI> Extensible, without affecting tools
+          </UL>
+     <TD> <H3> Pros </H3>
+          <UL>
+          <LI> Human readable, writable, editable
+          <LI> Focussed, but extensible
+          <LI> Low storage overhead
+          </UL>
+<TR VALIGN=TOP>
+     <TD> <H3> Cons </H3>
+          <UL>
+          <LI> Requires special tools to read and write
+               <UL>
+               <LI> Cannot explicitly examine and edit
+               <LI> Tools hide bugs
+               <LI> Tools are not robust to bugs
+               </UL>
+          <LI> High storage overhead (without compression)
+          <LI> Not focussed on logic - too generic
+               <UL>
+               <LI> No semantic error checking
+               <LI> Non-specialized data structure
+               </UL>
+          </UL>
+     <TD> <H3> Cons </H3>
+          <UL>
+          <LI> Write your own parser 
+          <LI> Write your own printer
+          <LI> Build your own data structure
+          <LI> Too verbose (for some)
+          </UL>
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

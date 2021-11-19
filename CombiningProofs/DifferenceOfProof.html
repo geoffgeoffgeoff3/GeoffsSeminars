@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE> Difference of Proof </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'WeightedGraph.jpg';
+  images[1]     = new Image();
+  images[1].src = 'WeightedGraphP2P4P7.jpg';
+  images[2]     = new Image();
+  images[2].src = 'WeightedGraphP2P4P7P4.jpg';
+  images[3]     = new Image();
+  images[3].src = 'WeightedGraphP2P4P7P3.jpg';
+  images[4]     = new Image();
+  images[4].src = 'WeightedGraphP2P4P7P6.jpg';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Difference of Proof
+</H1>
+
+<IMG NAME=image SRC="WeightedGraphP2P4P7.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Set + Proof + Artifact = Difference </H3>
+<UL>
+<LI> Given set S of proofs
+<LI> And a proof P to be evaluated
+<LI> Choose a proof artifact &alpha;
+<LI> Compute <EM>C<SUB>sw</SUB><SUP>&alpha;</SUP>(S+P)</EM>
+</UL>
+
+<H3> Lower <EM>C<SUB>sw</SUB></EM> &equiv; Greater Diversity </H3>
+<UL>
+<LI> <A HREF="" onClick="putImage(1);return false">P2-P4-P7</A> = 0.39
+<P>
+<LI> <A HREF="" onClick="putImage(2);return false">P2-P4-P7 + P4</A> = 0.55
+<LI> <A HREF="" onClick="putImage(3);return false">P2-P4-P7 + P3</A> = 0.46
+<LI> <A HREF="" onClick="putImage(4);return false">P2-P4-P7 + P6</A> = 0.23
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE> Verifying Pseudo Split Formulae </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Verifying Pseudo Split Formulae </H1>
+
+<IMG SRC="PsSplitFormulae.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> Inference Rule </H3>
+<UL>
+<LI> Replaces <EM>L &#8744; R</EM> by 
+     {&nbsp;<EM>L &#8744; t</EM>, <EM>R &#8744; ~t</EM>&nbsp;}
+<LI> Effect is to add a definition
+     <EM>t &hArr; ~&forall;L</EM>
+</UL>
+
+<H3> Semantic Verification </H3>
+<UL>
+<LI> Discharge {<EM>&nbsp;L &#8744; t, R &#8744; ~t</EM>&nbsp;} |= <EM>L &#8744; R</EM>,
+     with relevance check
+<LI> Discharge {<EM>&nbsp;L &#8744; R, t &hArr; ~&forall;L</EM>} |= <EM>L &#8744; t</EM>
+<LI> Discharge {<EM>&nbsp;L &#8744; R, t &hArr; ~&forall;L</EM>} |= <EM>R &#8744; ~t</EM>
+</UL>
+
+<H3> Variants and Extensions </H3>
+<UL>
+<LI> Treated similarly
+</UL>
+
+<!--
+     <LI> <EM>L &#8744; t1</EM>, <EM>R &#8744; t2</EM>, and <EM>~t1 &#8744; ~t2</EM>
+<LI> E: <EM>{L &#8744; t1, R &#8744; t2, ~t1 &#8744; ~t2</EM> |= 
+     <EM>L &#8744; R</EM>, with relevance check
+-->
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

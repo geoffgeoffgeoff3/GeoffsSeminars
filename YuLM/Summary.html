@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<TITLE>Using Lemmas</TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'YiLT.GIF';
+  images[1]     = new Image();
+  images[1].src = 'YuLM.GIF';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Using Lemmas </H1>
+
+<IMG NAME="image" SRC="YiLT.GIF" ALIGN=RIGHT HEIGHT=50%>
+
+<H3> Background </H3>
+<UL>
+<LI> Many problems beyond the reach of (resource limited) ATP
+<LI> Prove and use intermediate lemmas
+<LI> Lemmas from humans or computers
+</UL>
+
+<H3> Iterative Lemma Usage </H3>
+<UL>
+<LI> <A HREF="YiLT.html">ILA</A>: 
+     As lemmas are proved, add to the axioms
+<LI> <A HREF="YiLT.html">ILR</A>: 
+     As lemmas are proved, replace the previous one
+<LI> <A HREF="YiLT.html">ILS</A>: 
+     Remove previous lemmas that are easily proved
+     <A HREF="" onMouseOver="putImage(0);return false">
+     <IMG SRC="YiLT.GIF" BORDER=0 WIDTH=10></A>
+<LI> Each lemma must be provable from axioms and preceding lemmas
+</UL>
+
+<H3> Recursive Lemma Usage </H3></A>
+<UL>
+<LI> Set the conjecture as the initial <EM>target</EM>
+     <A HREF="" onMouseOver="putImage(1);return false">
+     <IMG SRC="YuLM.GIF" BORDER=0 WIDTH=10></A>
+<LI> Use axioms and mimimal combinations of lemmas to prove the target
+<LI> <A HREF="YuLM.htmnl">Selection</A>: 
+     Greedily apply recursively to prove lemmas (and use relevance)
+<LI> <A HREF="YuLMPlus.html">Minimization</A>: 
+     Tolerant branch-and-bound, with iterative deepening
+</UL>
+
+<H3> Evaluation </H3>
+<UL>
+<LI> Tested on <A HREF="Testing.html">illustrative test problems</A>
+<LI> <A HREF="Results.html">Results</A> show efficacy of the various techniques
+<LI> High complexity and resource usage
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

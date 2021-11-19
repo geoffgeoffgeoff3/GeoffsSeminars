@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> Extended BNF </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Extended BNF </H1>
+
+<IMG SRC="ExtendedBNF.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+
+<H3> Syntactic Rules </H3>
+<UL>
+<LI> Use the standard <TT>::=</TT> separator
+<LI> E.g., <TT>&lt;source>      ::= &lt;general_term></TT>
+</UL>
+
+<H3> Semantic Rules </H3>
+<UL>
+<LI> Used when only a subset of the syntax makes semantic sense
+<LI> Use a <TT>:==</TT> separator
+<LI> E.g., <TT>&lt;source>      :== &lt;dag_source> | &lt;internal_source> | </TT>, etc.
+<LI> Extended to rules reachable from only such rules
+</UL>
+
+<H3> Token Rules </H3>
+<UL>
+<LI> Used for rules that produce tokens
+<LI> Use a <TT>::-</TT> separator
+<LI> E.g., <TT>&lt;lower_word>  ::- &lt;lower_alpha>&lt;alpha_numeric>*</TT>
+</UL>
+
+<H3> Character Macros </H3>
+<UL>
+<LI> Define character classes with regular expressions
+<LI> Use a <TT>:::</TT> separator
+<LI> E.g., <TT>&lt;lower_alpha> ::: [a-z]</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

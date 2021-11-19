@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE> Simple Implicit Execution </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Simple Implicit Execution
+</H1>
+
+<UL>
+<LI> Input axioms, store conjecture
+<LI> Implicit <TT>execute,self</TT>
+</UL>
+
+<PRE>
+    tpi(1,input,'Axioms/SYN001+1.ax'). %----Could use an include directive
+    fof(another,axiom,pp => qq).
+    fof(a,conjecture,qq).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

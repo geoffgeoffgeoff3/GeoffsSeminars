@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE> Complexity </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Complexity </H1>
+
+<IMG SRC="Spagetti.GIF" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Notion </H3>
+<UL>
+<LI> Effort required to understand
+<LI> Techniques
+     <UL>
+     <LI> Limit symbol use
+     <LI> Limit function nesting
+     </UL>
+<LI> Examples
+     <UL>
+     <LI> Comprehensible:
+          <PRE>! [X,Y] :
+  ( ( homomorphism(X)
+    & homomorphism(Y) )
+ => homomorphism(compose(X,Y)) ) </PRE>
+     <LI> Less comprehensible: 
+          <PRE>! [F,A] : 
+  ( maps(F,A,A)
+ => ( ( one_to_one(F,A,A)
+      & inverse_predicate(F,F,A,A) )
+  <=> identity(compose_function(F,F,A,A,A),A) ) ) </PRE>
+     </UL>
+</UL>
+
+<H3> Implementation </H3>
+<UL>
+<LI> Limit the combined number of predicate and function symbols
+<LI> Calls the JJParser API to get symbol information
+<LI> Low symbol count is good
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

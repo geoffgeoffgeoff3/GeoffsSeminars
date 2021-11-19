@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<TITLE> The Logic RM3 </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'LP.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Diamonds.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The Logic RM3 
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="LP.jpg" ALIGN=RIGHT WIDTH=20%>
+</A>
+
+<UL>
+<LI> A Dialethic Logic of Paradox (but better than LP)
+     <UL>
+     <LI> Three-valued logic - 
+              <EM>true</EM> (<B>T</B>)
+          and <EM>both</EM> (<B>B</B>)
+          and <EM>false</EM> (<B>F</B>) 
+     <LI> The designated values are 
+              <EM>true</EM> (<B>T</B>) 
+          and <EM>both</EM> (<B>B</B>)
+     </UL>
+<P>
+<P>
+<LI> Connectives - classical plus ...
+     <TABLE BORDER=0>
+     <TR> <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &psi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &not;&phi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&and;&psi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&or;&psi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&rarr;&psi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&harr;&psi;
+     <TR> <TD COLSPAN=8> <HR>
+     <TR> <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>F</B>
+     <TR> <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>F</B>
+     <TR> <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>B</B>
+     <TR> <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>F</B>
+     <TR> <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>F</B>
+     </TABLE>
+<P>
+<LI> Interpretation, models, and logical consequence as for 
+     <A HREF="../RM3/ClassicalFOL.html">classical FOL</A>
+     <UL>
+     <LI> Modus ponens works ... &phi;, &phi; &rarr; &psi; &#8872; &psi; ... but ...<BR>
+          Modus tollendo ponens fails ... &not;&phi;, &phi; &or; &psi; &#8877; &psi;
+     <LI> Some theorems of classical logic are not theorems of RM3
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

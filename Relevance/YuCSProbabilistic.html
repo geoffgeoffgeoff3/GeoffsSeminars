@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE> Probabilistic Ordering </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Probabilistic Ordering </H1>
+
+<IMG SRC="Orders.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> Intuition </H3>
+<UL>
+<LI> Relevance of a axiom is the probability that the axiom is 
+     necessary for a solution
+</UL>
+
+<H3> Definition </H3>
+<UL>
+<LI> Let <TT>C</TT> be the set of axioms in a given combination
+<LI> Let <TT>rel(F)</TT> be the relevance of formula <TT>F</TT>
+<LI> The probability of the combination containing the necessary axioms is
+     approximated by:
+     <PRE>
+&Pi;(rel(F)) * &Pi;(1-rel(F))
+F&isin;C         F&notin;C   </PRE>
+<LI> Use combinations in <EM>increasing</EM> order of probability
+     <UL>
+     <LI> If an attempt fails before it's time, 
+          <TT>TimePerAxiomReducedProblem</TT> is dynamically updated
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

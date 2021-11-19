@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<TITLE> Problem Ratings </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Ratings.jpg';
+  images[1]     = new Image();
+  images[1].src = 'RatingsDistribution.jpg';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Problem Ratings </H1>
+
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="Ratings.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Motivation </H3>
+<UL>
+<LI> <A HREF="../Evaluate/Require.html">What is Required?</A>
+<LI> <A HREF="../Evaluate/SysAims.html">Evaluating ATP Systems</A>
+<LI> <A HREF="../Evaluate/ProbAims.html">Evaluating ATP Problems</A>
+<LI> The <A HREF="../Evaluate/Summary.html">TPTP Rating Scheme</A>
+</UL>
+
+<H3> TPTP Problems </H3>
+<TABLE>
+<TR> <TD>
+     <TD> |
+     <TH ALIGN=CENTER> All
+     <TD ALIGN=CENTER> (%Lan,%Dif)
+     <TD> |
+     <TH ALIGN=CENTER COLSPAN=2> THF 
+     <TD> |
+     <TH ALIGN=CENTER COLSPAN=2> TFF
+     <TD> |
+     <TH ALIGN=CENTER COLSPAN=2> FOF
+     <TD> |
+     <TH ALIGN=CENTER COLSPAN=2> CNF
+<TR> <TH ALIGN=LEFT> Easy
+     <TD> |
+     <TD ALIGN=RIGHT> 5077
+     <TD> (22%,100%)
+     <TD> |
+     <TD ALIGN=RIGHT> 855
+     <TD> (22%,17%)
+     <TD> |
+     <TD ALIGN=RIGHT> 520
+     <TD ALIGN=RIGHT> (25%,10%)
+     <TD> |
+     <TD ALIGN=RIGHT> 1649
+     <TD> (19%,32%)
+     <TD> |
+     <TD ALIGN=RIGHT> 2053
+     <TD> (25%,40%)
+<TR> <TH ALIGN=LEFT> Difficult
+     <TD> |
+     <TD ALIGN=RIGHT> 13619
+     <TD> (60%,100%)
+     <TD> |
+     <TD ALIGN=RIGHT> 2346
+     <TD ALIGN=RIGHT> (61%,17%)
+     <TD> |
+     <TD ALIGN=RIGHT> 1182
+     <TD ALIGN=RIGHT> (54%,&nbsp;9%)
+     <TD> |
+     <TD ALIGN=RIGHT> 5682
+     <TD ALIGN=RIGHT> (66%,42%)
+     <TD> |
+     <TD ALIGN=RIGHT> 4463
+     <TD ALIGN=RIGHT> (55%,33%)
+<TR> <TH ALIGN=LEFT> Unsolved
+     <TD> |
+     <TD ALIGN=RIGHT> 3990
+     <TD ALIGN=RIGHT> (18%,100%)
+     <TD> |
+     <TD ALIGN=RIGHT> 653 
+     <TD ALIGN=RIGHT> (17%,17%)
+     <TD> |
+     <TD ALIGN=RIGHT> 436 
+     <TD ALIGN=RIGHT> (21%,11%)
+     <TD> |
+     <TD ALIGN=RIGHT> 1299 
+     <TD ALIGN=RIGHT> (15%,34%)
+     <TD> |
+     <TD ALIGN=RIGHT> 1602 
+     <TD ALIGN=RIGHT> (20%,42%)
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

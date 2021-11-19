@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE> Description Logic Form </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'XML.gif';
+  images[1]     = new Image();
+  images[1].src = 'DLF.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Description Logic Form </H1>
+
+<A HREF="" onClick="putImage();return false;">
+<IMG NAME="image" SRC="XML.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> The TPTP Infrastructure </H3>
+<UL>
+<LI> Data: <A HREF="../TPTP/Summary.html">TPTP Library</A>,
+     <A HREF="../TPTPLanguage/Summary.html">TPTP Language</A>,
+     <A HREF="../SZSOntologies/Summary.html">SZS Ontology</A>,
+     <A HREF="../TSTP/Summary.html">TSTP Library</A>
+<LI> Tools: <A HREF="../TPTP/TPTPNX.html">TPTP2X and TPTP4X</A>,
+     <A HREF="../TPTP/BNFBasedParsers.html">BNF-based Parsers</A>,
+     <A HREF="../SystemOnTPTP/Online/Summary.html">SystemOnTPTP</A>
+</UL>
+
+<H3> Adding Description Logic </H3>
+<UL>
+<LI> State-of-the-Art
+     <UL>
+     <LI> Data: Fragmented collections, XML-based languages, more (help!)
+     <LI> Tools: Protege-OWL API, Protege, more (help!)
+     </UL>
+<LI> TPTP DLF
+     <UL>
+     <LI> Data: As for existing TPTP logical forms
+     <LI> Tools: As for existing TPTP logical forms
+     </UL>
+<LI> First Steps
+     <UL>
+     <LI> DLF language (<A HREF="SYN000~1.p.html">click</A>)
+     <LI> Translate to DLF from collections, using Protege-API
+     <LI> Export RDF/XML from TPTP, using TPTP2X
+     </UL>
+</UL>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

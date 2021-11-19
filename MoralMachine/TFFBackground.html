@@ -1,0 +1,302 @@
+<HTML>
+<HEAD>
+<TITLE> Background Axioms </TITLE>
+</HEAD>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Background Axioms </H1>
+
+<PRE>
+tff(decision_type,type,(
+    decision: $tType )).
+
+tff(straight_type,type,(
+    straight: decision )).
+
+tff(swerve_type,type,(
+    swerve: decision )).
+
+%----The types of men (plain,large,elderly,doctor,executive,athlete,boy)
+tff(man_type,type,(
+    man: ( $int * $int * $int * $int * $int * $int * $int ) > $int )).
+
+%----The types of women (plain,large,elderly,doctor,executive,athlete,girl,pregnant)
+tff(woman_type,type,(
+    woman: ( $int * $int * $int * $int * $int * $int * $int * $int ) > $int )).
+
+%----The types of nosex (homeless,criminal,baby)
+tff(nosex_type,type,(
+    nosex: ( $int * $int * $int ) > $int )).
+
+%----The types of animal(dog,cat)
+tff(animal_type,type,(
+    animal: ( $int * $int ) > $int )).
+
+%----law_abiding_deaths takes in the numbers of human and animal law abiding deaths, and returns 
+%----the total number of law abiding deaths
+tff(law_abiding_deaths_type,type,(
+    law_abiding_deaths: ( $int * $int * $int * $int) > $int )).
+
+%----law_flouting_deaths takes in the numbers of human and animal law flouting deaths and returns 
+%----the total number of law flouting deaths
+tff(law_flouting_deaths_type,type,(
+    law_flouting_deaths: ( $int * $int * $int * $int) > $int )).
+
+%----law_abiding_human_deaths takes a decision and returns the number of lab abiding human deaths
+tff(law_abiding_human_deaths_type,type,(
+    law_abiding_human_deaths: decision > $int )).
+
+%----law_flouting_human_deaths takes a decision and returns the number of lab flouting human deaths
+tff(law_flouting_human_deaths_type,type,(
+    law_flouting_human_deaths: decision > $int )).
+
+%----pedestrian_human_deaths takes a decision and returns the number of pedestrian deaths
+tff(pedestrian_human_deaths_type,type,(
+    pedestrian_human_deaths: decision > $int )).
+
+%----passenger_deaths takes in the numbers of human and animal passengers and returns the total
+%----number of passenger deaths
+tff(passenger_deaths_type,type,(
+    passenger_deaths: ( $int * $int * $int * $int) > $int )).
+
+%----passenger_human_deaths takes in a decision and returns the number of passenger human deaths
+%of passenger human deaths
+tff(passenger_human_deaths_type,type,(
+    passenger_human_deaths: decision > $int )).
+
+tff(law_abiding_and_passenger_human_deaths_type,type,(
+    law_abiding_and_passenger_human_deaths: decision > $int )).
+
+tff(men_deaths_type,type,(
+    men_deaths: decision > $int )).
+
+tff(women_deaths_type,type,(
+    women_deaths: decision > $int )).
+
+tff(children_deaths_type,type,(
+    children_deaths: decision > $int )).
+
+tff(women_and_children_deaths_type,type,(
+    women_and_children_deaths: decision > $int )).
+
+%----total_human_deaths takes in a decision and returns the number of human deaths
+tff(total_human_deaths_type,type,(
+    total_human_deaths: decision > $int )).
+
+%----law_abiding_animal_deaths takes in a decision and returns the number of law abiding animal 
+%----deaths
+tff(law_abiding_animal_deaths_type,type,(
+    law_abiding_animal_deaths: decision > $int )).
+
+%----law_flouting_animal_deaths takes in a decision and returns the number of law flouting animal 
+%----deaths
+tff(law_flouting_animal_deaths_type,type,(
+    law_flouting_animal_deaths: decision > $int )).
+
+%----pedestrian_animal_deaths takes in a decision and returns the number of pedestrian animal 
+%----deaths
+tff(pedestrian_animal_deaths_type,type,(
+    pedestrian_animal_deaths: decision > $int )).
+
+%----passenger_animal_deaths takes in a decision and returns the number of passenger animal deaths
+tff(passenger_animal_deaths_type,type,(
+    passenger_animal_deaths: decision > $int )).
+
+tff(law_abiding_and_passenger_animal_deaths_type,type,(
+    law_abiding_and_passenger_animal_deaths: decision > $int )).
+
+%----total_animal_deaths takes in a decision and returns the total number of animal deaths
+tff(total_animal_deaths_type,type,(
+    total_animal_deaths: decision > $int )).
+
+tff(total_law_abiding_and_passenger_deaths_type,type,(
+    total_law_abiding_and_passenger_deaths: decision > $int )).
+
+tff(total_law_flouting_deaths_type,type,(
+    total_law_flouting_deaths: decision > $int )).
+
+%----total_deaths takes in a decision and returns the total deaths (all deaths regardless of 
+%----law abiding and law flouting or type)
+tff(total_deaths_type,type,(
+    total_deaths: decision > $int )).
+
+%----scenario type takes in the decision and the numbers of law abiding, law flouting, and 
+%----passenger deaths and returns a boolean 
+tff(scenario_type,type,(
+    scenario: ( decision * $int * $int * $int ) > $o )).
+
+%----take_decision takes in a decision argument and returns boolean (true if the decision is taken)
+tff(take_decision_type,type,(
+    take_decision: decision > $o )).
+
+%----Calculates the sum of each type of man
+tff(man_sum,axiom,(
+    ! [Plain:$int,Fat:$int,Old:$int,Doc:$int,Exec:$int,Athlete:$int,Boy:$int] :
+      man(Plain,Fat,Old,Doc,Exec,Athlete,Boy) = 
+      $sum(Plain,$sum(Fat,$sum(Old,$sum(Doc,$sum(Exec,$sum(Athlete,Boy)))))) )).
+
+%----Calculates the sum of each type of woman
+tff(woman_sum,axiom,(
+    ! [Plain:$int,Fat:$int,Old:$int,Doc:$int,Exec:$int,Athlete:$int,Girl:$int,Pregnant:$int] :
+      woman(Plain,Fat,Old,Doc,Exec,Athlete,Girl,Pregnant) = 
+      $sum(Plain,$sum(Fat,$sum(Old,$sum(Doc,$sum(Exec,$sum(Athlete,$sum(Girl,Pregnant))))))) )).
+
+%----Calculates the sum of each type of nosex
+tff(nosex_sum,axiom,(
+    ! [Homeless:$int,Criminal:$int,Baby:$int] :
+      nosex(Homeless,Criminal,Baby) = $sum(Homeless,$sum(Criminal,Baby)) )).
+
+%----Calculates the sum of each type of animal
+tff(animal_sum,axiom,(
+    ! [Dog:$int,Cat:$int] :
+      animal(Dog,Cat) = $sum(Dog,Cat) )).
+
+%----For all decisions, humans, animals, law flouting deaths, and passenger deaths, if the 
+%----scenario is true (decision + law abiding/flouting/passenger deaths), then the number of 
+%----law abiding human deaths for the decision equals Human.
+tff(law_abiding_human_deaths,axiom,(
+    ! [D:decision,Man:$int,Woman:$int,Nosex:$int,Animal:$int,LawFloutingDeaths:$int,PassengerDeaths:$int] :
+      ( scenario(D,law_abiding_deaths(Man,Woman,Nosex,Animal),LawFloutingDeaths,PassengerDeaths)
+     => law_abiding_human_deaths(D) = $sum($sum(Man,Woman),Nosex) ) )).
+
+tff(law_flouting_human_deaths,axiom,(
+    ! [D:decision,LawAbidingDeaths:$int,Man:$int,Woman:$int,Nosex:$int,Animal:$int,PassengerDeaths:$int] :
+      ( scenario(D,LawAbidingDeaths,law_flouting_deaths(Man,Woman,Nosex,Animal),PassengerDeaths)
+     => law_flouting_human_deaths(D) = $sum($sum(Man,Woman),Nosex) ) )).
+
+tff(pedestrian_human_deaths,axiom,(
+    ! [D:decision] :
+      pedestrian_human_deaths(D) = 
+      $sum(law_abiding_human_deaths(D),law_flouting_human_deaths(D)) )).
+
+tff(passenger_human_deaths,axiom,(
+    ! [D:decision,LawAbidingDeaths:$int,LawFloutingDeaths:$int,Man:$int,Woman:$int,Nosex:$int,Animal:$int] :
+      ( scenario(D,LawAbidingDeaths,LawFloutingDeaths,passenger_deaths(Man,Woman,Nosex,Animal))
+     => passenger_human_deaths(D) = $sum($sum(Man,Woman),Nosex) ) )).
+
+tff(law_abiding_and_passenger_human_deaths,axiom,(
+    ! [D:decision] :
+      law_abiding_and_passenger_human_deaths(D) = 
+      $sum(law_abiding_human_deaths(D),passenger_human_deaths(D)) )).
+
+tff(men_deaths,axiom,(
+    ! [D:decision,ManA:$int,WomanA:$int,NosexA:$int,AnimalA:$int,
+ManF:$int,WomanF:$int,NosexF:$int,AnimalF:$int,ManP:$int,WomanP:$int,NosexP:$int,AnimalP:$int] :
+      ( scenario(D,law_abiding_deaths(ManA,WomanA,NosexA,AnimalA),
+                   law_flouting_deaths(ManF,WomanF,NosexF,AnimalF),
+                   passenger_deaths(ManP,WomanP,NosexP,AnimalP))
+     => men_deaths(D) = $sum(ManA,$sum(ManF,ManP)) ) )).
+
+tff(women_deaths,axiom,(
+    ! [D:decision,ManA:$int,WomanA:$int,NosexA:$int,AnimalA:$int,
+ManF:$int,WomanF:$int,NosexF:$int,AnimalF:$int,ManP:$int,WomanP:$int,NosexP:$int,AnimalP:$int] :
+      ( scenario(D,law_abiding_deaths(ManA,WomanA,NosexA,AnimalA),
+                   law_flouting_deaths(ManF,WomanF,NosexF,AnimalF),
+                   passenger_deaths(ManP,WomanP,NosexP,AnimalP))
+     => women_deaths(D) = $sum(WomanA,$sum(WomanF,WomanP)) ) )).
+
+tff(children_deaths,axiom,(
+    ! [D:decision,
+PlainMA:$int,FatMA:$int,OldMA:$int,DocMA:$int,ExecMA:$int,AthleteMA:$int,BoyA:$int,
+PlainWA:$int,FatWA:$int,OldWA:$int,DocWA:$int,ExecWA:$int,AthleteWA:$int,GirlA:$int,PregnantWA:$int,
+HomelessA:$int,CriminalA:$int,BabyA:$int,AnimalA:$int,
+PlainMF:$int,FatMF:$int,OldMF:$int,DocMF:$int,ExecMF:$int,AthleteMF:$int,BoyF:$int,
+PlainWF:$int,FatWF:$int,OldWF:$int,DocWF:$int,ExecWF:$int,AthleteWF:$int,GirlF:$int,PregnantWF:$int,
+HomelessF:$int,CriminalF:$int,BabyF:$int,AnimalF:$int,
+PlainMP:$int,FatMP:$int,OldMP:$int,DocMP:$int,ExecMP:$int,AthleteMP:$int,BoyP:$int,
+PlainWP:$int,FatWP:$int,OldWP:$int,DocWP:$int,ExecWP:$int,AthleteWP:$int,GirlP:$int,PregnantWP:$int,
+HomelessP:$int,CriminalP:$int,BabyP:$int,AnimalP:$int] :
+      ( scenario(D,law_abiding_deaths(
+man(PlainMA,FatMA,OldMA,DocMA,ExecMA,AthleteMA,BoyA),
+woman(PlainWA,FatWA,OldWA,DocWA,ExecWA,AthleteWA,GirlA,PregnantWA),
+nosex(HomelessA,CriminalA,BabyA),AnimalA),
+                   law_flouting_deaths(
+man(PlainMF,FatMF,OldMF,DocMF,ExecMF,AthleteMF,BoyF),
+woman(PlainWF,FatWF,OldWF,DocWF,ExecWF,AthleteWF,GirlF,PregnantWF),
+nosex(HomelessF,CriminalF,BabyF),AnimalF),
+                   passenger_deaths(
+man(PlainMP,FatMP,OldMP,DocMP,ExecMP,AthleteMP,BoyP),
+woman(PlainWP,FatWP,OldWP,DocWP,ExecWP,AthleteWP,GirlP,PregnantWP),
+nosex(HomelessP,CriminalP,BabyP),AnimalP))
+     => children_deaths(D) = $sum(BoyA,$sum(BoyF,$sum($BoyP,$sum(GirlA,$sum(GirlF,$sum(GirlP,
+$sum(BabyA,$sum(BabyF,BabyP)))))))) ) )).
+
+tff(women_and_children_deaths,axiom,(
+    ! [D:decision] :
+      women_and_children_deaths(D) = $sum(women_deaths(D),children_deaths(D)) )).
+
+tff(total_human_deaths,axiom,(
+    ! [D:decision] :
+      total_human_deaths(D) = 
+      $sum(passenger_human_deaths(D),pedestrian_human_deaths(D)) )).
+
+tff(law_abiding_animal_deaths,axiom,(
+    ! [D:decision,Man:$int,Woman:$int,Nosex:$int,Animal:$int,LawFloutingDeaths:$int,PassengerDeaths:$int] :
+      ( scenario(D,law_abiding_deaths(Man,Woman,Nosex,Animal),LawFloutingDeaths,PassengerDeaths)
+     => law_abiding_animal_deaths(D) = Animal ) )).
+
+tff(law_flouting_animal_deaths,axiom,(
+    ! [D:decision,LawAbidingDeaths:$int,Man:$int,Woman:$int,Nosex:$int,Animal:$int,PassengerDeaths:$int] :
+      ( scenario(D,LawAbidingDeaths,law_flouting_deaths(Man,Woman,Nosex,Animal),PassengerDeaths)
+     => law_flouting_animal_deaths(D) = Animal ) )).
+
+tff(pedestrian_animal_deaths,axiom,(
+    ! [D:decision] :
+      pedestrian_animal_deaths(D) = 
+      $sum(law_abiding_animal_deaths(D),law_flouting_animal_deaths(D)) )).
+
+tff(passenger_animal_deaths,axiom,(
+    ! [D:decision,LawAbidingDeaths:$int,LawFloutingDeaths:$int,Man:$int,Woman:$int,Nosex:$int,Animal:$int] :
+      ( scenario(D,LawAbidingDeaths,LawFloutingDeaths,passenger_deaths(Man,Woman,Nosex,Animal))
+     => passenger_animal_deaths(D) = Animal ) )).
+
+tff(law_abiding_and_passenger_animal_deaths,axiom,(
+    ! [D:decision] :
+      law_abiding_and_passenger_animal_deaths(D) =
+      $sum(law_abiding_animal_deaths(D),passenger_animal_deaths(D)) )).
+
+%----total_animal_deaths is the sum of the total passenger and pedestrian animal deaths
+tff(total_animal_deaths,axiom,(
+    ! [D:decision] :
+      total_animal_deaths(D) = 
+      $sum(passenger_animal_deaths(D),pedestrian_animal_deaths(D)) )).
+
+tff(total_law_abiding_and_passenger_deaths,axiom,(
+    ! [D:decision] :
+      total_law_abiding_and_passenger_deaths(D) = 
+      $sum(law_abiding_and_passenger_human_deaths(D),law_abiding_and_passenger_animal_deaths(D)) )).
+
+tff(total_law_flouting_deaths,axiom,(
+    ! [D:decision] :
+      total_law_flouting_deaths(D) = 
+      $sum(law_flouting_human_deaths(D),law_flouting_animal_deaths(D)) )).
+
+%----total_deaths is the sum of human and animal deaths for a particular decision
+tff(total_deaths,axiom,(
+    ! [D:decision] :
+      total_deaths(D) = $sum(total_human_deaths(D),total_animal_deaths(D)) )).
+
+%----Rules for making decisions
+%----The car go straight xor swerve (not both)
+%tff(must_decide,axiom,
+%    take_decision(straight) <~> take_decision(swerve)).
+
+%----The only decisions are straight or serve. Cannot force a decision!
+%tff(only_decisions,axiom,(
+%    ! [D:decision] :
+%      ( D = straight
+%      | D = swerve ) )).
+
+%----The car takes only one decision
+tff(one_decision,axiom,(
+    ! [D1:decision,D2:decision] :
+      ~ ( D1 != D2
+        & take_decision(D1)
+        & take_decision(D2) ) )).
+
+tff(straight_not_swerve,axiom,(
+    straight != swerve )).
+</PRE>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE> Contextual Direct Relevance </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Contextual Direct Relevance </H1>
+
+<A HREF="RelevanceContextualGIF.html">
+<IMG SRC="RelevanceContextual.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> Intuition </H3>
+<UL>
+<LI> The ratio of symbols shared to symbols used
+<LI> Sharing common symbols is not so relevant
+</UL>
+
+<H3> Definition </H3>
+<UL>
+<LI> The <EM>contextual intersection</EM> &Pi;<SUB><TT>S</TT></SUB> between 
+     <TT>Fa</TT> and <TT>Fc</TT> in the context of the set <TT>S</TT> is
+     <PRE>
+                           |{f:f&isin;S,s&isin;sym(f)}|
+&sum;                    ( 1 - ------------------- )
+s&isin;(sym(Fa)&cap;sym(Fb))               |S| </PRE>
+<LI> The <EM>contextual direct relevance</EM> between <TT>Fa</TT>
+     and <TT>Fc</TT> in the context of the set <TT>S</TT> is
+     <PRE>
+|sym(Fa) &Pi;<SUB><TT>S</TT></SUB> sym(Fc)|
+--------------------
+|sym(Fa) &cup; sym(Fc)| </PRE>
+<LI> The <EM>directed contextual direct relevance</EM> from <TT>Fa</TT>
+     to <TT>Fc</TT> in the context of the set <TT>S</TT> is
+     <PRE>
+|sym(Fa) &Pi;<SUB><TT>S</TT></SUB> sym(Fc)|
+--------------------
+     |sym(Fc)| </PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

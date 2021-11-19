@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE> SLH Division Results </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'ResultsSLH.png'; 
+  images[1]     = new Image();
+  images[1].src = 'ResultsSLHPlot.jpg';
+  images[2]     = new Image();
+  images[2].src = 'HammersSlammers.jpg';
+
+  function displayImage (index) {
+      document.images['image'].src = images[index].src;
+  }  
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+<A HREF="" onClick="displayImage(2);return false">SLedgeHammer</A> Results 
+</H1>
+
+<A HREF="" onClick="displayImage(0);return false">
+<IMG NAME='image' SRC="ResultsSLH.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> Salient Systems </H3>
+<UL>
+<LI> Zipperposition solved most, Ehoh won
+     <UL>
+     <LI> Zipperposition had declared a COI
+     <LI> Ehoh associate will take the "romantic prize"
+     </UL>
+</UL>
+
+<H3> Performance Measures </H3>
+<UL>
+<LI> Leo-III's low efficiency is due to 
+     <A HREF="" onClick="displayImage(1);return false">higher CPU usage</A>
+     <UL>
+     <LI> Startup time
+     <LI> Mixture of internal and external reasoning
+     <LI> In 300s Zipperp'n solved 697 (+22), Leo-III 654 (+155)
+     </UL>
+</UL>
+
+<H3> Portfolio Possibilities </H3>
+<UL>
+<LI> 5 problems unsolved, 208 all solved
+<LI> 14 unique solutions, distributed
+<LI> Portfolio of Vampire, Leo-III, Ehoh, and Zipperp'n solves 700
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

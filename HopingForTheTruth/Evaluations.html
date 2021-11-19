@@ -1,0 +1,335 @@
+<HTML>
+<HEAD>
+<TITLE> Menu of Reliability</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Menu of Reliability
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="PL">
+<IMG SRC="MenuPictures/PLTofu.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Propositional Logic (PL) </H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> Only propositions and connectives
+     <LI> No way to explicitly denote objects
+     <LI> Example: <A HREF="Examples/PUZ004-1.p"><TT>PUZ004-1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Decidable
+     <LI> Very powerful systems based on CDCL and DPLL
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 10%
+     <LI> Reasoning - 90%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="DL">
+<IMG SRC="MenuPictures/DLChickenNuggets.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Description Logic (DL) </H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> Individuals, classes, roles
+     <LI> No way to denote non-explicit objects
+     <LI> Mostly fragments of FOF
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Designed to be decidable and tractable
+     <LI> Some standard reasoning tasks, e.g., subsumption
+     <LI> Some good, some buggy, ATP systems
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 35%
+     <LI> Reasoning - 50%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="EPR">
+<IMG SRC="MenuPictures/EPRRice.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Effectively Propositional Logic (EPR) </H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> No way to denote non-explicit objects
+     <LI> Fragment of CNF (and FOF I guess)
+     <LI> Example: <A HREF="Examples/PUZ128+1.p"><TT>PUZ128+1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Decidable
+     <LI> Some specialized approaches
+     <LI> Some strong ATP systems
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 20%
+     <LI> Reasoning - 80%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="CNF">
+<IMG SRC="MenuPictures/CNFPitepalt.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Clause Normal Form (CNF) </H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> Full representation of objects
+     <LI> Limited connectives (wrt FOF)
+     <LI> Example: <A HREF="Examples/PUZ021-1.p"><TT>PUZ021-1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Semi-decidable
+     <LI> Well understood reasoning
+     <LI> Mature, high-performance ATP systems
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 30%
+     <LI> Reasoning - 70%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="FOF">
+<IMG SRC="MenuPictures/FOFLoadedPotato.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> First-order Form (FOF) </H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> Full representation of objects
+     <LI> Expressive set of "natural" connectives
+     <LI> Variable quantifiers
+     <LI> Example: <A HREF="Examples/PUZ130+1.p"><TT>PUZ130+1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Semi-decidable
+     <LI> Various techniques, mainly superposition on CNF
+     <LI> Mature, fast ATP systems
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 50%
+     <LI> Reasoning - 60%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="TF0">
+<IMG SRC="MenuPictures/TF0Fish.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Typed First-order Form (TF0) </H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> Typed objects, connectives and quantifiers
+     <LI> Types avoid representational errors
+     <LI> Example: <A HREF="Examples/PUZ131_1.p"><TT>PUZ131_1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Semi-decidable
+     <LI> Translation, early attempts
+     <LI> Emerging modern techniques and implementations
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 60%
+     <LI> Reasoning - 50%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="TFA">
+<IMG SRC="MenuPictures/TFAHerring.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Typed First-order Form with Arithmetic (TFA)</H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> Typed objects, connectives and quantifiers
+     <LI> Numbers and arithmetic that reality needs
+     <LI> Example: <A HREF="Examples/DAT002=1.p"><TT>DAT002=1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Undecidable due to arithmetic
+     <LI> Spurred on by SMT
+     <LI> Rapidly maturing ATP systems, but a tough nut
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 70%
+     <LI> Reasoning - 25%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="TF1">
+<IMG SRC="MenuPictures/TF1Sushi.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Polymorphic Typed First-order Form (TF1)</H2>
+
+<UL>
+<LI> Representation (without arithmetic)
+     <UL>
+     <LI> Typed objects, connectives and quantifiers
+     <LI> Type constructors, polymorphic symbols
+     <LI> Getting past non-technical users
+     <LI> Example: <A HREF="Examples/PUZ139_2.p"><TT>PUZ139_2</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Monomorphization (sucks)
+     <LI> A few implementations, not powerful (yet)
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 65%
+     <LI> Reasoning - 40%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="TFX">
+<IMG SRC="MenuPictures/TFXPlatter.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Extended Typed First-order Form (TFX)</H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> Typed objects, connectives and quantifiers
+     <LI> Type constructors, polymorphic symbols
+     <LI> FOOLish logic
+     <LI> Example: <A HREF="Examples/FOO001_1.p"><TT>FOO001_1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Vampire, and only the Vampire
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 75%
+     <LI> Reasoning - 20%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="TH0">
+<IMG SRC="MenuPictures/TH0Steak.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Typed Higher-order Form (TH0) </H2>
+
+<UL>
+<LI> Representation (without arithmetic)
+     <UL>
+     <LI> Lambda calculus and friends
+     <LI> Great for mathematics and mathematicians (not people)
+     <LI> Example: <A HREF="Examples/PUZ140^1.p"><TT>PUZ140^1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> Very mature ITP
+     <LI> Maturing (and buggy) ATP
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 65%
+     <LI> Reasoning - 40%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="TH1">
+<IMG SRC="MenuPictures/TH1Paradilla.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Polymorphic Typed Higher-order Form (TH1) </H2>
+
+<UL>
+<LI> Representation (without arithmetic)
+     <UL>
+     <LI> Lambda calculus and friends
+     <LI> Type constructors, polymorphic symbols
+     <LI> Great for mathematics and savvy mathematicians (not people)
+     <LI> Example: <A HREF="Examples/PUZ000^1.p"><TT>PUZ000^1</TT></A>
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> No ATP (yet)
+     <LI> But coming soon, based on stable TH0
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 70%
+     <LI> Reasoning - 30%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+<A NAME="THX">
+<IMG SRC="MenuPictures/THXSurfTurf.jpg" ALIGN=RIGHT HEIGHT=33%>
+<H2> Extended High-order Form (THX) </H2>
+
+<UL>
+<LI> Representation
+     <UL>
+     <LI> More than a human brain can handle
+     <LI> Different flavours, and aquired taste
+     </UL>
+<P>
+<LI> Reasoning
+     <UL>
+     <LI> No ATP (in sight)
+     </UL>
+<P>
+<LI> Reliability
+     <UL>
+     <LI> Representation - 70%
+     <LI> Reasoning - 10%
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

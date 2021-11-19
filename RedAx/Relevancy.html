@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE> Relevancy Measures </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Relevancy Measures </H1>
+
+<IMG SRC="Measure.GIF" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Aboutness </H3>
+
+<UL>
+<LI> Is an axiom "about" the same things as the conjecture?
+<LI> Fraction of the axiom's symbols that occur in the conjecture
+<LI> Example
+     <UL>
+     <LI> Conjecture:
+          <TT>![X]:( even(X) => ?[Y]:equal(Y,divide(X,2)) )</TT>
+     <LI> Axiom:
+          <TT> ~?[X]:( greater(X,2) & even(X) & prime(X) )</TT>
+     <LI> 2 of the 4 axiom symbols occur in the conjecture: 
+          <TT>even</TT>, <TT>2</TT><BR>
+          Axiom score = 2/4 = 0.5
+		  </UL>
+</UL>
+
+<H3> Linkages </H3>
+
+<UL>
+<LI> Measures global linkages between clauses
+<LI> Consider each unique symbol/arity pair <EM>SA</EM>
+     <UL>
+     <LI> A term <EM>SA</EM> relevance is 
+          ( # of unique <EM>SA</EM>s / # of <EM>SA</EM> occurences )
+     <LI> A predicate <EM>SA</EM> relevance is
+          ( number of literals in set / 
+            number of <TT>~</TT><EM>SA</EM> literals )
+     <LI> Literal relevance is the product of its literal and predicate
+          relevances
+     <LI> Clause relevance is the sum of its literal relevances
+     </UL>
+</UL>
+
+<H3> Hierarchies </H3>
+
+<UL>
+<LI> Theories are often naturally layered, through use of definitions
+<LI> Axiom relevance measured by distance from layer(s) of conjecture
+<LI> ... ideas under construction ...
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE> Aggressive Selection </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Aggressive Selection </H1>
+
+<IMG SRC="AggressiveSelection.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<UL>
+<LI> Aim to reduce intersection of axioms and conjecture
+<LI> Prefer axiom with model of its negation, selected axioms, and conjecture
+     <P>
+     &nbsp;&nbsp;&nbsp;&nbsp;C = <TT>b</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>1</SUB> = <TT>a | b</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>2</SUB> = <TT>b => a</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>3</SUB> = <TT>(~a & (b | c)) | (a & ~b & ~c)</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>4</SUB> = <TT>b | (a <=> c)</TT>
+<P>
+<LI> There is a model of 
+     <TT>{~</TT>E<SUB>3</SUB>, E<SUB>4</SUB>, C<TT>}</TT>, but not of 
+     <TT>{~</TT>E<SUB>1</SUB>, E<SUB>4</SUB>, C<TT>}</TT>
+<P>
+<LI> Negated conjecture = <TT>~b</TT>
+<P>
+     <TABLE>
+     <TR> <TH>
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> Selected
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> Model
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> Axiom
+     <TR> <TD> 1
+          <TD>
+          <TD> <TT>{ }</TT>
+          <TD>
+          <TD> <TT>{&nbsp;a, ~b, ~c}</TT>
+          <TD>
+          <TD> E<SUB>4</SUB> 
+     <TR> <TD> 2
+          <TD>
+          <TD> <TT>{</TT>E<SUB>4</SUB><TT>}</TT>
+          <TD>
+          <TD> <TT>{~a, ~b, ~c}</TT>
+          <TD>
+          <TD> E<SUB>3</SUB> 
+     </TABLE>
+<LI> Cannot be used strictly
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

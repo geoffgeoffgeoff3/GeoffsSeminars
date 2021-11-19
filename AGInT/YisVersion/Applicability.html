@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE> Applicability </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Applicability </H1>
+
+<IMG SRC="ThreeBears.GIF" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Applicability </H3>
+<UL>
+<LI> Number of objects to which theorem applies
+<LI> Techniques
+     <UL>
+     <LI> Test truth of antecedent in models of the axioms
+     <LI> Fraction of HU that variables could represent
+     </UL>
+<LI> Examples
+     <UL>
+     <LI> The theorem:
+          <PRE>! [X] : 
+  ( ( iseven(X) 
+    & isprime(X) ) 
+ => isodd(sumofdivisorsof(X)))</PRE>
+          applies to only <TT>X = 2</TT>
+     <LI> <TT>X</TT> in the formula:
+	  <PRE>! [X] : natural(X)</PRE>
+          <TT>X</TT> applies to the entire HU, while in:
+	  <PRE>! [X] (odd(X) | even(X))</PRE>
+	  in the worst case <TT>X</TT> applies to maximally half the 
+	  HU in both places
+     </UL>
+</UL>
+
+<H3> Implementation </H3>
+<UL>
+<LI> Measure predicate constraints on universally quantified variables
+     <UL>
+     <LI> For only CNF formulae
+     </UL>
+<LI> <EM>Adaptivity</EM> (of a universallly quantified variable) =
+     1 / NumberOfOccurencesOfTheVariable
+<LI> <EM>Applicability</EM> =
+     Sum of adaptivities of variables in the theorem
+<LI> High applicability is good
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

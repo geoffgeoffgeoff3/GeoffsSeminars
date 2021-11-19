@@ -1,0 +1,12 @@
+%------------------------------------------------------------------------------
+include('PCAxiomDefns.ax').
+include('ModalRuleDefns.ax',[necessitation]).
+include('ModalAxiomDefns.ax',[axiom_K]).
+include('OperatorDefns.ax').
+%------------------------------------------------------------------------------
+fof(system_K,axiom,
+    ( all_hilbert
+    & necessitation
+    & axiom_K
+    & all_operators )  ).
+%------------------------------------------------------------------------------

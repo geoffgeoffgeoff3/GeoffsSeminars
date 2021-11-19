@@ -1,0 +1,50 @@
+CNF_SAT  Vampire---SAT-4.0, 
+    CNF_SAT_EPR  Vampire---SAT-4.0
+    CNF_SAT_RFO_EQU_NUE  Vampire---SAT-4.0
+    CNF_SAT_RFO_NEQ  Vampire---SAT-4.0
+    CNF_SAT_RFO_PEQ_UEQ  Mace4---1109a
+
+CNF_UNS  Vampire---4.0 or E---1.9
+    CNF_UNS_EPR  Vampire---4.0 iProver---1.4
+    CNF_UNS_RFO_NEQ_HRN  E---1.9 Vampire---4.0
+    CNF_UNS_RFO_NEQ_NHN  Vampire---4.0 E---1.9
+    CNF_UNS_RFO_SEQ_HRN  E---1.9 Vampire---4.0
+    CNF_UNS_RFO_SEQ_NHN  Vampire---4.0 E---1.9
+    CNF_UNS_RFO_PEQ_NUE  E---1.9 Vampire---4.0 Isabelle---2015
+    CNF_UNS_RFO_PEQ_UEQ  E---1.9 Waldmeister---710 Vampire---4.0 Prover9---1109a
+
+FOF_CSA/SAT  Vampire---SAT-4.0
+    FOF_CSA_EPR  Vampire---SAT-4.0 iProver---1.4
+    FOF_CSA_RFO_NEQ  iProver---SAT-1.4  (Vampire---SAT-4.0 behind)
+    FOF_CSA_RFO_SEQ  Vampire---SAT-4.0
+    FOF_SAT_RFO_NEQ  Vampire---SAT-4.0
+    FOF_SAT_RFO_SEQ  Vampire---SAT-4.0
+
+FOF_THM/UNS  Vampire---4.0
+    FOF_THM_EPR iProver---1.4
+    FOF_THM_RFO_NEQ  Vampire---4.0 E---1.9 iProver---1.4
+    FOF_THM_RFO_SEQ  Vampire---4.0
+    FOF_THM_RFO_PEQ  E---1.9 (Vampire---4.0 trails a bit)
+    FOF_UNS_RFO_NEQ  Vampire---4.0
+    FOF_UNS_RFO_SEQ  Vampire---4.0
+    FOF_UNS_RFO_PEQ  Vampire---4.0
+
+TF0_CSA/SAT
+    TF0_CSA_EQU_ARI  Z3---4.4-TPTP
+
+TF0_THM/UNS  Vampire, but a portfolio looks better
+    TF0_THM_NEQ_ARI  Princess---140704 Beagle---0.9
+    TF0_THM_EQU_NAR  Vampire---4.0
+    TF0_THM_EQU_ARI  CVC4---TFA-1.5pre Vampire---4.0 Princess---140704
+    TF0_UNS_EQU_NAR  CVC4---TFA-1.5pre Vampire---4.0
+    TF0_UNS_EQU_ARI  Vampire---4.0
+    
+TF1  Alt-Ergo---0.95.1 is the only option, until I test ZenonModulo
+
+TH0_CSA
+    TH0_CSA_NEQ  Nitpick---2015
+    TH0_CSA_EQU  Nitpick---2015
+
+TH0_THM Isabelle---2015 and Satallax---2.7
+    TH0_THM_NEQ  Satallax---2.7 Isabelle---2015
+    TH0_THM_EQU  Isabelle---2015 Satallax---2.7

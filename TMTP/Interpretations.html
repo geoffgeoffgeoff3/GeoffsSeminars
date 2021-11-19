@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE> Interpretations and Models </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Model1.jpg';
+  images[1]     = new Image();
+  images[1].src = 'SZSInterpretations.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Interpretations and Models
+</H1>
+
+<A HREF="SZSInterpretationsGIF.html">
+<IMG NAME="image" SRC="Model1.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> What is an Interpretation? </H3>
+<UL>
+<LI> Logical language ... variables, constants, functions, predicates, etc.
+<LI> An <EM>interpretation</EM> consists of a ...
+     <UL>
+     <LI> Domain (finite or infinite)
+     <LI> Interpretation of ground terms to domain elements
+     <LI> Interpretion of closed formulae to {<EM>true</EM>,<EM>false</EM>}
+     </UL>
+<LI> A <EM>model</EM> interprets given closed formulae to <EM>true</EM>
+</UL>
+
+<H3> Complete, Partial, Strictly Partial </H3>
+<UL>
+<LI> An interpretation is <EM>complete</EM> ... it interprets everything
+<LI> A <EM>partial interpretation</EM> might not interpret everything
+<LI> A <EM>strictly partial interpretation</EM> does not interpret everything
+<LI> A strictly partial interpretation can be <EM>complete for a set</EM>
+</UL>
+
+<H3> Types of Interpretations </H3>
+<UL>
+<LI> Herbrand interpretations
+<LI> Finite domain interpretations
+<LI> Integer and Real interpretations
+</UL>
+
+<H3> Extended SZS dataform ontology 
+     <A HREF="" onClick="putImage();return false">
+     <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A> </H3>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE> The TSTP Format </TITLE>
+</HEAD>
+<BODY>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript"><!--
+  if (document.images) {
+      imageoff = new Image();
+      imageoff.src  = 'TSTPFormatPic.GIF';
+      imageon = new Image();
+      imageon.src = 'TSTPFormatPaths.GIF';
+  }
+
+  function change(image,ext) {
+      if (document.images)
+          document.images[image].src = eval(image + ext + ".src");
+  }
+  //-->
+</SCRIPT>
+
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The TSTP Format </H1>
+
+<A HREF="TSTPFormatPaths.html" onMouseOver="change('image','on')" onClick="change('image','off')">
+    <IMG NAME="image" SRC="TSTPFormatPic.GIF" BORDER=0 ALIGN=RIGHT WIDTH=50%></A>
+
+<H3> Design Constraints </H3>
+<UL>
+<LI> Compatible problem and solution language
+     <UL>
+     <LI> Communicating systems
+     <LI> Pipelined filters
+     <LI> Common analysis tools' front-end
+     </UL>
+<LI> Sufficient information for solution presentation
+<LI> Sufficient information for verification
+     <UL>
+     <LI> Structural
+     <LI> Syntactic
+     <LI> Semantic
+     </UL>
+<LI> Easy to parse 
+     <UL>
+     <LI> Trivial in Prolog
+     </UL>
+</UL>
+
+<H3> Samples </H3>
+<UL>
+<LI> Problem formula
+     <PRE>
+fof(symmetry,axiom,
+    ( ! [X,Y] :
+        ( equal(X,Y)
+       => equal(Y,X) ) ),
+    theory(equality),
+    [description('Symmetry is an axiom of equality')]).  </PRE>
+<LI> Solution formula
+     <PRE>
+cnf(32,derived,
+    ( ~equal(compose(a,compose(b,A)),B)
+    | ~equal(compose(a,compose(b,C)),B)
+    | equal(A,C) ),
+    inference(demod,[thm],[
+        inference(back_demod,[thm],[13]),20,20,theory(equality)]),
+    [iquote('back_demod,13,demod,20,20')]).  </PRE>
+</UL>
+
+<H3> Generically </H3>
+     <UL>
+     <LI> Flexible formula format
+          <PRE>
+&lt;language>(&lt;name>,&lt;type>,
+    ( &lt;formula> ),
+    &lt;optional source>,
+    &lt;option informtaion>). </PRE>
+     <LI> <A HREF="http://www.cs.miami.edu/~geoff/ResearchProjects/TSTP/TSTPBNF.txt">Full BNF</A>
+     </UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

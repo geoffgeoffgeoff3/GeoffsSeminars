@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE> Verifying Explicitly Split Formulae </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Verifying Explicitly Split Formulae </H1>
+
+<IMG SRC="ExSplitFormulae.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> Inference Rule </H3>
+<UL>
+<LI> Replaces <EM>S &cup; {L &#8744; R}</EM> by <EM>S &cup; {L}</EM> 
+     and <EM>S &cup; {R}</EM>
+<LI> When the <EM>L</EM> (<EM>R</EM>) subproblem is refuted ...
+     <UL> 
+     <LI> Form the <EM>anti-kid</EM> <EM>~L</EM> (<EM>~R</EM>)
+     <LI> Can be used in subproblems containing <EM>S</EM>
+     </UL>
+<LI> Structural constraints required for soundness
+</UL>
+
+<H3> Semantic Verification </H3>
+<UL>
+<LI> <EM>{~L, ~R}</EM> |= <EM>~(L &#8744; R)</EM>, with relevance check
+     <UL>
+     <LI> Assures soundness of overall refutation
+     <LI> Assures variable disjointness of <EM>L</EM> and <EM>R</EM>
+     <LI> Relevance check assures correctness of splitting
+     </UL>
+<LI> <EM>{~L}</EM> |= <EM>anti-kid</EM>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE> Translation of Mizar Assumption/Conclusion rules to TPTP</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Translation of Mizar Assumption/Conclusion rules to TPTP</H1>
+
+<!----- <IMG SRC="Smile.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%> --->
+<UL>
+<LI> Mizar assumptions encoded as TPTP assumptions
+<LI> The thesis changes are made explicit in TPTP (implicit in Mizar)
+<LI> Theses start from the last empty ($true) thesis, and grow into the original thesis using the conclusion and discharge_asm rules  
+</UL>
+
+<H3 ALIGN=CENTER> Simple example in Mizar repeated</H3>
+<PRE>
+Lemma1: p implies q;        ;; this has been proved already
+Lemma2: q implies r;        ;; this has been proved already
+Goal1: p implies q & r
+proof                       ;; (Proof) thesis (Goal1) is: p implies q & r
+  assume E1: p;             ;; (Assumption) thesis (T1) is: q & r
+  thus E2: q by Lemma1,E1;  ;; (Conclusion) thesis (T2) is: r
+  thus E3: r by Lemma2,E2;  ;; (Conclusion) thesis (T3) is: verum
+end;
+</PRE>
+
+<H3 ALIGN=CENTER> Translation into extended TPTP derivation </H3>
+<PRE>
+fof(lemma1,plain, p => q). 
+fof(lemma2,plain, q => r). 
+fof(e1,assumption,p,introduced(assumption)). 
+fof(e2,plain,q, 
+  inference(mizar_by,[status(thm),assumptions([e1])],[lemma1,e1])). 
+fof(e3,plain,r, 
+  inference(mizar_by,[status(thm),assumptions([e1])],[lemma2,e2])). 
+fof(t3,plain,$true,introduced(tautology)). 
+fof(t2,plain,r, 
+  inference(conclusion,[status(thm),assumptions([e1])],[t3,e3])). 
+fof(t1,plain,q & r, 
+  inference(conclusion,[status(thm),assumptions([e1])],[t2,e2])). 
+fof(goal1,plain,p => q & r, 
+  inference(discharge_asm,[status(thm),discharge_asm(discharge,[e1])],[e1,t1])). 
+</PRE>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

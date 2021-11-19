@@ -1,0 +1,38 @@
+%------------------------------------------------------------------------------
+%----About the constants
+fof(a_not_b,   axiom, a != b ).
+
+%----About the functions
+fof(s_not_X,   axiom, ! [X] : s(X) != X ).
+fof(f_b_a,     axiom, f(b) = a ).
+fof(f_ss_X,    axiom, ! [X] : f(s(s(X))) = X ).
+
+%----About the predicates
+fof(p_a,       axiom, p(a) ).
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+%----Model domain
+fof(domain,fi_domain, ! [X] : ( X = "d1" | X = "d2" | X = "d3" ) ).
+
+%----Constants
+fof(a,   fi_functors, a = "d1" ).
+fof(b,   fi_functors, b = "d2" ).
+
+%----Total functions
+fof(f,   fi_functors, f("d1") = "d3" & f("d2") = "d1" & f("d3") = "d2" ).
+fof(s,   fi_functors, s("d1") = "d3" & s("d2") = "d1" & s("d3") = "d2" ).
+
+%----Total predicates - Universal quantification
+%---- fof(p, fi_predicates, ! [X1] : p(X1) <=> $true ).
+
+%----Total predicates - Listed
+fof(p, fi_predicates, p("d1") & p("d2") & p("d3") ).
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+%----Formulae to evaluate
+fof(prove,conjecture, p(f(s(s(a)))) ).    %----TRUE
+ 
+fof(prove,conjecture, ? [X] : ~ p(X) ).   %----FALSE
+%------------------------------------------------------------------------------

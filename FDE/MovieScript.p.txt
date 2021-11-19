@@ -1,0 +1,13 @@
+fof(living_alive,axiom,       alive(living) ).
+fof(dead_not_alive,axiom,   ~ alive(dead)   ).
+fof(undead_alive,axiom,       alive(undead) ).
+fof(undead_not_alive,axiom, ~ alive(undead) ).
+
+fof(alive,axiom,
+    ! [X] : (   alive(X) => ( script(X,words)    & script(X,placement) ) ) ).
+fof(dead,axiom,
+    ! [X] : ( ~ alive(X) => ( script(X,no_words) & script(X,placement) ) ) ).
+
+fof(dead_need_words_and_non_existent_need_placement,conjecture,
+    ( script(dead,words)
+    & script(non_existent,placement) ) ).

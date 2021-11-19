@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> Variations and Verification </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Variations and Verification </H1>
+
+<IMG SRC="InterpretationVLV.JPG" BORDER=0 ALIGN=RIGHT WIDTH=20%>
+
+<H3> Multiple Interpretations </H3>
+<UL>
+<LI> Uninterpreted functor is interpreted as each domain element
+<LI> Uninterpreted predicate is interpreted as <EM>true</EM> and <EM>false</EM>
+</UL>
+
+<H3> Compact Variations </H3>
+<PRE>
+fof(equality_lost,fi_predicates,
+    ( human("john") & human("got_a")
+    & ~ human("a")  & ~ human("f") 
+    & ! [X] : ~ created_equal("a",X)
+    & ! [X] : ~ created_equal("f",X)
+    & ! [X] : ~ created_equal(X,"a")
+    & ! [X] : ~ created_equal(X,"f")
+    & created_equal("john","john")  & created_equal("john","got_a")
+    & created_equal("got_a","john") & created_equal("got_a","got_a") ) ).
+</PRE>
+<UL>
+<LI> <A HREF="DarwinSample.txt">FM-Darwin's version</A>
+</UL>
+
+<H3> Verification </H3>
+<UL>
+<LI> Directly interpret each formula
+<LI> Add interpretation to formulae and find trusted model
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

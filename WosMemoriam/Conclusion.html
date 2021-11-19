@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<TITLE> Conclusion </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'LarryWos.jpg';
+  images[1]     = new Image();
+  images[1].src = 'AuthorBeeson.jpg';
+  images[2]     = new Image();
+  images[2].src = 'AuthorBonacina.jpg';
+  images[3]     = new Image();
+  images[3].src = 'AuthorKinyon.jpg';
+
+  function displayImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Conclusion </H1>
+by Geoff Sutcliffe
+
+<A HREF="" onClick="displayImage(0);return false">
+<IMG NAME='image' SRC="LarryWos.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<A HREF="" onClick="hideshow('influence');return false;">
+<H3> Broad, Deep, and Influential </H3>
+</A> <SPAN ID="influence" style="display:none">
+<UL>
+<LI> Larry valued and developed underlying theory<BR>
+     ... but he did not stop there.
+<LI> Larry pushed the theory into effective system implementations<BR>
+     ... but he did not stop there.
+<LI< Larry used the implementations in a range of applications<BR>
+     ... but he did not stop there.
+<LI> Larry inspired many people to join his efforts<BR>
+     ... through publications and conversations
+<LI> Contribution to the development of our thriving automated reasoning 
+     community
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('impact');return false;">
+<H3> Impact </H3>
+</A> <SPAN ID="impact" style="display:none">
+<UL>
+<LI> the How - his inference rules
+<LI> the What - his applications
+<LI> the Style - his persona
+<LI> He touched the heart of automated reasoning
+<LI> Died 20th August 2020, in Chicago USA
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('thanks');return false;">
+<H3> Thanks </H3>
+</A> <SPAN ID="thanks" style="display:none">
+<UL> 
+<LI> Co-authors:
+     <A HREF="" onClick="displayImage(1);return false">Michael Beeson</A>,
+     <A HREF="" onClick="displayImage(2);return false">Maria Paola Bonacina</A>,
+     <A HREF="" onClick="displayImage(3);return false">Michael Kinyon</A>
+<LI> Contributors: Jim Boyle, Branden Fitelson, Deepak Kapur,<BR>
+     Ranganathan Padmanabhan, Gail W. Pieper, and Brian Smith
+<LI> Christoph Weidenbach and CADE presidents
+</UL>
+</SPAN>
+
+<P>
+<HR><!------------------------------------------------------------------------>

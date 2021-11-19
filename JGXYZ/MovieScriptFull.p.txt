@@ -1,0 +1,22 @@
+%----Axioms of the undead
+fof(alive_or_buried,axiom,! [X] : ( alive(X) | buried(X) )).
+fof(alive_scripting,axiom,
+    ! [X] : ( alive(X) => ( script(X,words) & script(X,placement) ))).
+fof(not_alive_scripting,axiom,
+    ! [X] : ( ~alive(X) => ( ~script(X,words) & script(X,placement) ))).
+
+%----Current characters
+fof(alan_alive,axiom,     alive(alan) ).
+fof(desiree_dead,axiom,   ~alive(desiree) ).
+fof(desiree_buried,axiom, buried(desiree)).
+fof(umberto_alive,axiom,  alive(umberto) ).
+fof(umberto_dead,axiom,   ~alive(umberto) ).
+
+%----Queries
+fof(desiree_needs_words,conjecture,   script(desiree,words) ).
+fof(nigel_needs_placement,conjecture, script(nigel,placement)).
+fof(umberto_alive_and_not,conjecture, alive(umberto) & ~alive(umberto)).
+fof(nigel_alive_or_not,conjecture,    alive(nigel) | ~alive(nigel)).
+fof(umberto_buried,conjecture,        buried(umberto)).
+fof(not_alive_buried,conjecture,     ~alive(desiree) => buried(desiree)).
+

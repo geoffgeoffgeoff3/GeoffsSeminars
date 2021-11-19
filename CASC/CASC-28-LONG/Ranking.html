@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE> Ranking </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Trophy.jpg'; 
+  images[1]     = new Image();
+  images[1].src = 'Matryoshka.png';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }  
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Ranking and Prizes </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME='image' SRC="Trophy.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Ranking Measures </H3>
+<UL>
+<LI> Number of problems solved with ...
+<LI> <A HREF="http://www.tptp.org/CASC/28/Design.html#Evaluation">
+     Acceptable proof/model output</A> (according to panel)
+<LI> Average time taken over problems solved
+</UL>
+
+<H3> Performance Measures </H3>
+<UL>
+<LI> SotAC - unique abilities
+<LI> Efficiency - balances problems solved with time taken
+<LI> Core usage - extent which CPU cores are used (max 8)
+</UL>
+
+<H3> Trophies and Prizes </H3>
+<UL>
+<LI> Trophy for each division
+<LI> Romantic prize for the SLH division, sponsored by the
+     <A HREF="http://matryoshka.gforge.inria.fr/">Matryoshka project</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

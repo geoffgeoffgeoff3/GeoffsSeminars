@@ -1,0 +1,180 @@
+<HTML>
+<HEAD>
+<TITLE> Testing </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Testing
+</H1>
+
+<A TARGET="_new" HREF="http://www.tptp.org/cgi-bin/SystemOnTPTP">
+<IMG NAME=image SRC="Quiz.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Abraham Lincoln is a Mammal </H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('p2');return false;">
+     <EM>Prove that Abraham Lincoln is a mammal </EM>
+     </A>
+     <SPAN ID="p2" style="display:none"><PRE>
+fof(kb_SUMO_28,axiom,(
+    ! [V__X,V__Y,V__Z] :
+      ( ( is_instance(V__Y,'SetOrClass')
+        & is_instance(V__X,'SetOrClass') )
+     => ( ( subclass(V__X,V__Y)
+          & is_instance(V__Z,V__X) )
+       => is_instance(V__Z,V__Y) ) ) )).
+
+fof(kb_SUMO_5811,axiom,(
+    is_instance('Mammal','SetOrClass') )).
+
+fof(kb_SUMO_5813,axiom,(
+    subclass('Primate','Mammal') )).
+
+fof(kb_SUMO_5818,axiom,(
+    is_instance('Primate','SetOrClass') )).
+
+fof(kb_SUMO_5823,axiom,(
+    subclass('Hominid','Primate') )).
+
+fof(kb_SUMO_5824,axiom,(
+    is_instance('Hominid','SetOrClass') )).
+
+fof(kb_SUMO_5826,axiom,(
+    subclass('Human','Hominid') )).
+
+fof(kb_SUMO_5836,axiom,(
+    is_instance('Human','SetOrClass') )).
+
+% fof(cheat,axiom,is_instance('Abraham Lincoln','Human')).
+
+fof(abe_mammal,conjecture,(
+    is_instance('Abraham Lincoln','Mammal') )).</PRE>
+     </SPAN>
+<LI> YAGOSUMO facts and SUMO ontology (internal)
+<LI> 188 requests queued, 175 sent, 266 axioms delivered, 1 axiom used
+<LI> 15s CPU, 18s WC. 5863 clauses derived.
+</UL>
+
+<H3> An Early 18th Century Composer </H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('p3');return false;">
+     <EM>Name a composer born in the first half of the 18th century</EM>
+     </A>
+     <SPAN ID="p3" style="display:none"><PRE>
+fof(who,conjecture,
+    ? [Composer,BirthDay,BirthMonth,BirthYear] :
+      ( is_instance(Composer,'Composer')
+      & is_birthdate(Composer,BirthDay,BirthMonth,BirthYear)
+      & $greatereq(BirthYear,1700)
+      & $lesseq(BirthYear,1750)
+      & print(printall(nl,nl,'The composer is ',Composer,' born in ',BirthYear,nl)) ) ).</PRE>
+     </SPAN>
+<LI> YAGOSUMO facts, Arithmetic
+<LI> 515 requests queued, 427 sent, 456 axioms delivered, 2 axioms used
+<LI> 18s CPU, 26s WC. 7600 clauses derived.
+</UL>
+
+<H3> Prize Winning Curies </H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('p1');return false;">
+     <EM>Name all Nobel prizes won by members of the Curie family</EM>
+     </A>
+     <SPAN ID="p1" style="display:none"><PRE>
+fof(who,conjecture,
+    ? [FullName,GivenName,Prize] :
+      ( is_familyName('Curie',FullName)
+      & has_WonPrize(FullName,Prize)
+      & is_givenName(GivenName,FullName)
+      & printonly(printall(nl,nl,GivenName,' won the ',Prize,nl)) ) ).</PRE>
+     </SPAN>
+<LI> YAGOSUMO facts
+<LI> 32 requests queued, 32 sent, 31 axioms delivered, 11 axioms used
+<LI> 2s CPU, 14s WC. 10 clauses derived.
+</UL>
+
+<H3> An OECD Capital at the Same Latitude as Moscow that could get Flooded</H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('p4');return false;">
+     <EM>Name an OECD country's capital that is at the same latitude as
+     Moscow (to the nearest degree), that could get flooded</EM>
+     </A>
+     <SPAN ID="p4" style="display:none"><PRE>
+%----These come from SUMO
+fof(kb_SUMO_28,axiom,(
+    ! [V__X,V__Y,V__Z] :
+      ( ( s__instance(V__Y,s__SetOrClass)
+        & s__instance(V__X,s__SetOrClass) )
+     => ( ( s__subclass(V__X,V__Y)
+          & s__instance(V__Z,V__X) )
+       => s__instance(V__Z,V__Y) ) ) )).
+
+fof(kb_SUMO_MILO_6297,axiom,(
+    s__instance(s__WaterArea,s__SetOrClass) )).
+
+fof(kb_SUMO_MILO_10029,axiom,(
+    s__instance(s__BodyOfWater,s__SetOrClass) )).
+
+fof(kb_SUMO_MILO_DOMAINS_9645,axiom,(
+    s__subclass(s__Sea,s__BodyOfWater) )).
+
+fof(kb_SUMO_MILO_DOMAINS_9546,axiom,(
+    s__subclass(s__BodyOfWater,s__WaterArea) )).
+
+fof(kb_SUMO_MILO_DOMAINS_80407,axiom,(
+    s__instance(s__Sea,s__SetOrClass) )).
+
+%----These are supplied by Geoff
+fof(flood_near_water,axiom,
+    ! [W,C] :
+      ( ( s__orientation(C,W,s__Near)
+        & s__instance(W,s__WaterArea) )
+     => s__capability(s__Flooding,s__located__m,C) ) ).
+
+fof(coastal_cities_near_water,axiom,
+    ! [City] :
+      ( is_instance(City,'Coastal Cities Class')
+     => ? [Sea] :
+          ( s__instance(Sea,s__Sea) 
+          & s__orientation(City,Sea,s__Near) ) ) ).
+
+fof(where,conjecture,
+    ? [City,Country,CityLat,CityLong,CityName,CityCountry,Latitude,
+       MoscowLat,MoscowLong,MoscowName,MoscowCountry] :
+      ( is_instance(Country,'OECD Member Economies Class')
+      & capital_city(City,Country)
+      & look_different(City,'Moscow')
+      & latlong(City,CityLat,CityLong,CityName,CityCountry)
+      & $evaleq($to_int(CityLat),Latitude)
+      & latlong('Moscow',MoscowLat,MoscowLong,MoscowName,MoscowCountry)
+      & $evaleq($to_int(MoscowLat),Latitude)
+      & s__capability(s__Flooding,s__located__m,City)
+      & print(printall(nl,nl,'The city is ',City,' in ',Country,
+' at latitude ',CityLat,' (Moscow is at ',MoscowLat,')',nl,nl)) ) ).</PRE>
+     </SPAN>
+<LI> Needs preemptive requests for axioms (<TT>-IANo=0</TT>)
+<LI> YAGOSUMO facts, Yahoo map services, Arithmetic, Syntactic difference
+     SUMO ontology (internal)
+<LI> 230 requests queued, 227 sent, 321 axioms delivered, 11 axioms used
+<LI> 3s CPU, 19s WC. 1047 clauses derived.
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

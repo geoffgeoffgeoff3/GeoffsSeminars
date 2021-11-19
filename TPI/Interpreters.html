@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<TITLE> TPI Interpreters </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+TPI Interpreters
+</H1>
+
+<IMG SRC="Interpreter.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> TPII </H3>
+<UL>
+<LI> TPI interpreter without reasoning capability
+<LI> <TT>execute</TT> and friends can access SystemOnTPTP utility<BR>
+<LI> <A HREF="" onClick="hideshow('p1');return false;">
+     Example: Checking the axioms, asynchronously</A>
+     <SPAN ID="p1" style="display:none">
+     <PRE>
+    fof(an,axiom,p).
+    fof(another,axiom,p => q).
+    tpi(1,execute_async,'ASYNC_SZS_STATUS' =
+        '/home/tptp/Systems/Paradox---4.0/paradox --time 300 --tstp $getgroups(tpi)').
+    fof(a,conjecture,q).
+    tpi(2,execute,'SZS_STATUS' =
+        '/home/tptp/Systems/E---1.8/eprover --auto --cpu-limit=300 --tstp-format $getgroups(tpi)').
+    tpi(3,waitenv,'ASYNC_SZS_STATUS').
+    tpi(4,write,'Axioms status: ' & $getenv('ASYNC_SZS_STATUS')
+         & ' Conjecture status: ' & $getenv('SZS_STATUS')).
+    tpi(5,exit,exit). </PRE>
+     </SPAN>
+<LI> Part of the TPTP World, and in the SystemB4TPTP interface
+</UL>
+
+<H3> TPI in your Shell </H3>
+<UL>
+<LI> <TT>perl</TT> script to execute TPI commands from shell (script)
+<LI> Allows use of shell programming
+<LI> Slightly different syntax
+<LI> <A HREF="" onClick="hideshow('p2');return false;">
+     Example: Checking the axioms, asynchronously</A>
+     <SPAN ID="p2" style="display:none">
+     <PRE>
+    tpi input MyProblem.p
+    tpi execute async SZS_ASYNC = 'iprover 30 $getgroups(tpi_premises)'
+    tpi execute SZS = 'eprover --cpu-limit=30 --tstp-format $getgroups(tpi)'
+    tpi waitenv SZS_ASYNC
+    if (`tpi write '$getenv(SZS_ASYNC)'` == "Unsatisfiable") then
+        set ProblemStatus = "ContradictoryAxioms"
+    else
+        set ProblemStatus = `tpi write '$getenv(SZS)'`
+    endif
+    echo "The problem status is $ProblemStatus" </PRE>
+<LI> Some funkiness with "environment variables"
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

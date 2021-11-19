@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE> Logical Analysis Results </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Logical Analysis Results </H1>
+
+<A HREF="ValidationResultsGIF.html">
+<IMG SRC="ValidationResults.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Analysis </H3>
+<UL>
+<LI> Large chunks of consistency
+<LI> Properties of ontology relationships
+     <UL>
+     <LI> <EM>isa</EM> is reflexive, transitive, and exclusive
+     <LI> If &alpha; <EM>isa</EM> &beta; and &alpha; <EM>nota</EM> &gamma;
+          then &beta; <EM>nota</EM> &gamma;
+     </UL>
+<LI> All pairs of status values for <EM>isa</EM>
+     <UL>
+     <LI> Theorem: Relationship is <EM>isa</EM>
+     <LI> Stopped: Test for <EM>nevera</EM>
+          <UL>
+          <LI> Theorem: Test for <EM>xora</EM>
+               <UL>
+               <LI> Theorem: Relationship is <EM>xora</EM>
+               <LI> Stopped: Relationship is (assumed) <EM>nevera</EM>
+               </UL>
+          <LI> Stopped: Test for <EM>nota</EM>
+               <UL>
+               <LI> Theorem: Relationship is (assumed) <EM>nota</EM>
+               <LI> Stopped: Relationship is not validated
+               </UL>
+          </UL>
+     </UL>
+</UL>
+
+<H3> Results </H3>
+<UL>
+<LI> All <EM>isa</EM> relationships proved
+<LI> Three new ontology values added
+<LI> Three errors in value definitions exposed and corrected
+<LI> Four incorrect <EM>isa</EM> relationships removed
+<LI> Several new <EM>isa</EM> relationships added
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

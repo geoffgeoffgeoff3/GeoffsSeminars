@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE> External Axioms </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'Donuts.jpg';
+  images[1]     = new Image();
+  images[1].src = 'DonutEating.jpg';
+  images[2]     = new Image();
+  images[2].src = 'DonutShop.jpg';
+  images[3]     = new Image();
+  images[3].src = 'DonutTesting.gif';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+External Axioms
+</H1>
+
+<A HREF="Architectures3GIF.html">
+<IMG NAME=image SRC="ArchitectureLogos.gif" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> This Work </H3>
+<UL>
+<LI> Accessing <EM>external sources of axioms</EM> from ATP
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="DonutShop.jpg" BORDER=0 HEIGHT=10></A>
+<LI> Axioms not loaded/stored in the ATP system
+<LI> Axioms retrieved on demand from external sources
+<LI> Further challenges
+     <UL>
+     <LI> Specifying availability of external axioms
+     <LI> Retrieving and integrating external axioms
+     <LI> Adapting ATP to axioms arriving during reasoning
+     </UL>
+</UL>
+
+<H3> <A HREF="PreviousWork.html">Previous work</A> </H3>
+
+<H3> SPASS-XDB </H3>
+<UL>
+<LI> On-demand, asynchronous, retrieval of external axioms for a common 
+     ATP system design
+<LI> Unifying syntax and protocols, based on de facto standards (TPTP)
+<LI> Implemented in a state-of-the-art ATP system
+<LI> Implemented external sources - SQL, SPARQL, Prolog, WWW, Computation
+<LI> Testing and deployment to demonstrate capability
+     <A HREF="" onClick="putImage(3);return false">
+     <IMG SRC="DonutTesting.gif" BORDER=1 HEIGHT=10></A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

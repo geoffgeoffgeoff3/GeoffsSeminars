@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE> SYN000~1.p </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<PRE>
+%------------------------------------------------------------------------------
+%----One slide for Nikolaj 
+%----include('<A HREF="SYN001~0.ax.html">SYN001~0.ax</A>').
+%------------------------------------------------------------------------------
+dlf(owl_defn,     definition, owl       := 'http://www.w3.org/2002/07/owl' ).
+dlf(rdf_defn,     definition, rdf       := 'http://www.w3.org/1999/02/22-rdf-syntax-ns' ).
+dlf(xml_defn,     definition, xml       := 'http://www.w3.org/XML/1998/namespace' ).
+dlf(xsd_defn,     definition, xsd       := 'http://www.w3.org/2001/XMLSchema' ).
+dlf(rdfs_defn,    definition, rdfs      := 'http://www.w3.org/2000/01/rdf-schema' ).
+
+dlf(class_defn,   definition, class     := $tType ).
+dlf(thing_defn,   definition, thing     := &owl#Thing ).
+dlf(nothing_defn, definition, nothing   := &owl#Nothing ).
+%------------------------------------------------------------------------------
+dlf(ontology_defn,definition, $ontology := 'http://www.tptp.org/SYN001~0' ).
+dlf(base_defn,    definition, $base     := &($ontology)# ).
+
+dlf(class1_type,type, class1  : &class ).
+dlf(class2_type,type, class2  : &class ).
+dlf(class3_type,type, class3  : &class ).
+dlf(class4_type,type, class4  : &class ).
+
+dlf(role1_type, type, role1   : ( &thing * &thing ) > $o ).
+dlf(role2_type, type, role2   : ( class1 * &thing ) > $o ).
+dlf(role3_type, type, role3   : ( class1 * class2 ) > $o ).
+dlf(role4_type, type, role4   : ( (class1 ++ class2) * &thing ) > $o ).
+
+dlf(individual1_type,type, a1 : class1 ).
+dlf(individual2_type,type, a2 : class1 ).
+
+dlf(a1_is_different_individual_to_a2,axiom,
+    a1 != a2).
+
+dlf(a1_is_role1_related_to_a2,axiom,
+    role1(a1,a2)).
+
+dlf(class1_is_disjoint_with_class2,axiom,
+    class1 <> class2 ).
+
+dlf(class1_is_equivalent_to_collection_of_a1_a2_and_a3,axiom,
+    class1 = [a1,a2,a3] ).
+
+dlf(class1_is_equivalent_to_Nothing,axiom,
+    class1 = &amp;nothing ).
+
+dlf(class1_is_equivalent_to_all_individuals_in_role_with_class,axiom,
+    class1 = ! role1(_,class2) ).
+
+dlf(class1_is_equivalent_to_union_2,axiom,
+    ( class1 = ( class2 ++ class3 ++ class4 ))).
+
+dlf(axiom_3,axiom,
+    ( class1 = ( ( class2 ++ class3 ) ** ? role1(_,-class4) ** class4 ))).
+
+dlf(role1_is_functional,axiom,
+    $functional(role1)).
+
+dlf(role1_is_super_property_of_chain_role2_and_role3_and_role4_1,axiom,
+    ( role1 >> ( role2 @ role3 @ role4 ))).
+
+%------------------------------------------------------------------------------
+</PRE>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

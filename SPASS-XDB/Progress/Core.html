@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE> 
+The SPASS-XDB Core
+</HEAD>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = '../ArchitectureLogos.gif';
+  images[1]     = new Image();
+  images[1].src = '../Architecture.gif'; 
+  images[2]     = new Image();
+  images[2].src = '../ATPAlgorithm.gif'; 
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 3;
+      document.images['image'].src = images[myIndex].src;
+  }  
+  //-->
+</SCRIPT> 
+<!------------------------------------------------------------------------>
+<BODY ALIGN=JUSTIFY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The SPASS-XDB Core
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="../ArchitectureLogos.gif" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> Architecture
+     <A HREF="../ArchtectureGIF.html">
+     <IMG SRC="../Architecture.gif" BORDER=0 HEIGHT=10></A>
+</H3>
+<UL>
+<LI> Problems contain external specifications and formulae
+<LI> Modified version of SPASS (with TPTP parser)
+<LI> Mediators marshall and unmarshall TPTP format data
+<LI> External sources run asynchronously
+</UL>
+
+<H3> Modified SPASS Algorithm
+     <A HREF="../ATPAlgorithmGIF.html">
+     <IMG SRC="../ATPAlgorithm.gif" BORDER=0 HEIGHT=10></A>
+</H3>
+<PRE>
+while there is something to do
+    <FONT COLOR=RED>accept any world knowledge axiom deliveries
+    send queued world knowledge requests</FONT>
+    choose clause
+    <FONT COLOR=RED>match selected literals with external specifications
+    queue world knowledge requests</FONT>
+    do internal inferences</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

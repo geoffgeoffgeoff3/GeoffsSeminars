@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE> Binary Search </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Binary Search </H1>
+
+<IMG SRC="Saw.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> Intuition </H3>
+<UL>
+<LI> Selection of too many unnecessary axioms results in rich theorem<BR>
+     <EM>but</EM><BR>
+     Some portion of unnecessary axioms still may be selected
+<LI> Every axiom to be used in the proof must be selected<BR>
+     <EM>but</EM><BR>
+     Some axioms are necessary only in a subset of all possible proofs
+</UL>
+
+<H3> Definition </H3>
+<UL>
+<LI> Sort axioms by relevance
+<LI> Divide "somewhere in the middle"
+<LI> Form <EM>axiom reduced problem</EM> with conjecture and better part 
+     of axioms
+<LI> No solution in time allowed:
+     <UL>
+     <LI> Relevant axiom is missing: add upper half of lower ranked axioms
+     <LI> Too many unnecessary axioms: remove lower half of higher ranked 
+          axioms
+     </UL>
+</UL>
+
+<H3> Shortcomings </H3>
+<UL>
+<LI> Where to divide the axioms?
+<LI> What to do on timeout?
+<LI> What if the lowest ranked necessary axiom is ranked very low?
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

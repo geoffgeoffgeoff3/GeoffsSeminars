@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE> TSTP System States </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TSTP System States </H1>
+
+<IMG SRC="States.GIF" ALIGN=RIGHT WIDTH=25%>
+
+<H3> Logical States </H3>
+<UL>
+<LI> <TT>F</TT> of the form <TT>Ax => C</TT>
+     <UL>
+     <LI> <TT>F</TT> valid means <TT>C</TT> is a logical consequence 
+          of <TT>Ax</TT>
+     <LI> <TT>F</TT> not valid means ...
+     </UL>
+<LI> Conservative states
+     <UL>
+     <LI> Example: 
+          Satisfiable: Some models of <TT>Ax</TT> (and there are some) are 
+          models of <TT>C</TT>
+     </UL>
+<LI> Extension states
+     <UL>
+     <LI> Example:
+          Satisfiability mapping:  There is a mapping from the models 
+          of <TT>Ax</TT> (and there are some) to models of <TT>C</TT>
+     </UL>
+<LI> The hierarchy
+<PRE>
+           _____________________________________________________
+          /               |          |          |               \
+   Satisfiability         |       Vacuous       |       Counter satisfiability
+     preserving           |                     |            preserving
+         |                |                     |                |
+   Satisfiability    Satisfiable             Counter    Counter satisfiability
+   partial mapping        |     \          satisfiable      partial mapping
+         |                |      \   &   /      |                |
+   Satisfiability      Theorem    Neither    Counter    Counter satisfiability
+      mapping             |                  theorem          mapping
+         |                |                     |                |
+   Satisfiability    Tautologies          Unsatisfiable Counter satisfiability
+     bijection                                               bijection
+</PRE>
+<LI> Only a few used by current ATP
+</UL>
+
+<H3> Failure States </H3>
+<UL>
+<LI> <TT>Timeout</TT> - System ran past user imposed CPU time limit
+<LI> <TT>GaveUp</TT>  - System gave up before the time limit
+<LI> <TT>InputError</TT>  - System exited due to an error in its input
+<LI> <TT>ResourceOut</TT> - System exited due to running out of some
+     non-time resource
+<LI> <TT>Unknown</TT> - System exited before the time limit for unknown
+     reason
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

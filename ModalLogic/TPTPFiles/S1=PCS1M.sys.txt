@@ -1,0 +1,17 @@
+%------------------------------------------------------------------------------
+include('PCAxiomDefns.ax').
+include('ModalAxiomDefns.ax',
+    [axiom_S1,axiom_M,necessarily_axiom_S1,necessarily_axiom_M]).
+include('OperatorDefns.ax').
+%------------------------------------------------------------------------------
+%----This is missing necessitation of PC tautologies - seems to be 
+%----non-axiomatic, requiring a PC decision procedure at runtime.
+fof(system_M,axiom,
+    ( all_hilbert
+    & necessarily_hilbert
+    & axiom_S1
+    & necessarily_axiom_S1
+    & axiom_M
+    & necessarily_axiom_M
+    & all_operators )  ).
+%------------------------------------------------------------------------------

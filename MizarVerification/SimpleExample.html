@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE> Simple Mizar Proofs </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Simple Mizar Proofs </H1>
+
+<H3> A Trivial Proof </H3>
+<PRE>
+A1: p;              fof(a1,plain,p).
+A2: p implies q;    fof(a2,plain,p => q).
+A3: q by A1, A2;    fof(a3,plain,q,inference(by,[status(thm)],[a1,a2])).
+</PRE>
+
+<H3> A Simple Proof </H3>
+<PRE>
+Lemma1: p implies q;        ;; this has been proved already
+Lemma2: q implies r;        ;; this has been proved already
+Goal1: p implies q & r
+proof                       ;; (Proof) thesis (Goal1) is: p implies q & r
+  assume E1: p;             ;; (Assumption) thesis (T1) is: q & r
+  thus E2: q by Lemma1,E1;  ;; (Conclusion) thesis (T2) is: r
+  thus E3: r by Lemma2,E2;  ;; (Conclusion) thesis (T3) is: verum
+end;
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

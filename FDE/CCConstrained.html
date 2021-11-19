@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<TITLE> Constrained Conditional </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'CON.gif';
+  images[1]     = new Image();
+  images[1].src = 'CONTable.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Constrained Conditional (&rarr;<SUB>con</SUB>)
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="CON.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<UL>
+<LI> Constraints on conditional's properties
+     <UL>
+     <LI> Modus ponens holds
+     <LI> Agrees with classical logic for <B>T</B> and <B>F</B>
+     <LI> Antecedent <B>F</B> or consequent <B>T</B>, then <B>T</B>
+     <LI> Undesignated antecedent, then designated (<B>T</B> or <B>B</B>)
+     <LI> Designated antecedent above or equal to consequent<BR>
+          in either diamond, then consequent
+     <LI> For TV<SUB>1</SUB> &ne; TV<SUB>2</SUB>, 
+          TV<SUB>1</SUB> &harr; TV<SUB>2</SUB> &ne; <B>T</B>
+          (for &rarr;<SUB>cmi</SUB>, (<B>N</B> &harr; <B>F</B>) = <B>T</B>)
+     </UL>
+<P>
+<LI> Automated generation of the conditional
+     <UL>
+     <LI> Encode &and;, &or; &not;, diamonds, and constraints in FOL
+     <LI> Generate finite model, read off conditional, deny and repeat
+     <LI> Left to decide ... (<B>N</B> &rarr; <B>B</B>) and
+          (<B>N</B> &rarr; <B>N</B>), either <B>T</B> or <B>B</B>
+     </UL>
+<P>
+<LI> Final decisions
+     <UL>
+     <LI> (<B>N</B> &rarr; <B>N</B>) = <B>T</B>, so that 
+          (<B>N</B> &harr; <B>N</B>) = <B>T</B> (else 
+          (<B>N</B> &harr; <B>N</B>) = <B>B</B>)
+     <LI> (<B>N</B> &rarr; <B>B</B>) = <B>B</B>, so that 
+          (<B>N</B> &rarr; <B>N</B>) &ne; (<B>N</B> &rarr; <B>B</B>)
+     </UL>
+<!--
+<P>
+<LI> The conditional &rarr;<SUB>con</SUB>
+     <TABLE>
+     <TR> <TD> &rarr;<SUB>con</SUB>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B> &nbsp;&nbsp;
+          <TD> <B>B</B> &nbsp;&nbsp;
+          <TD> <B>N</B> &nbsp;&nbsp;
+          <TD> <B>F</B>
+     <TR> <TD COLSPAN=6> <HR>
+     <TR> <TD> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>B</B>
+          <TD> <B>N</B>
+          <TD> <B>F</B>
+     <TR> <TD> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>B</B>
+          <TD> <B>N</B>
+          <TD> <B>F</B>
+     <TR> <TD> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>B</B>
+          <TD> <B>T</B>
+          <TD> <B>B</B>
+     <TR> <TD> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+     </TABLE>
+-->
+<P>
+<LI> Strange feature ...
+     <UL>
+     <LI> &not;(<EM>p</EM> &rarr; <EM>q</EM>) &#8877; <EM>p</EM>
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

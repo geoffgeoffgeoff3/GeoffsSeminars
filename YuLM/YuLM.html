@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE> Recursive Lemma Selection </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Recursive Lemma Selection </H1>
+
+<IMG SRC="YuLM.GIF" BORDER=0 ALIGN=RIGHT WIDTH=40%>
+
+<H3> Intuition </H3>
+<UL>
+<LI> Demand-driven approach
+<LI> Select combinations of lemmas
+<LI> Copes with arbitrary lemma sets and proof structures
+</UL>
+
+<H3> The Algorithm </H3>
+<UL>
+<LI> Start with conjecture as <EM>target</EM>
+<LI> Form <EM>helper sets</EM> of increasing size, starting at 0
+<LI> If target can be proved from axioms and helper set
+     <UL>
+     <LI> Immediately, iteratively, recursively treat helpers as targets
+     </UL>
+<LI> Theorem proved when all helpers have been proved
+<LI> If a helper cannot be proved, try next helper set
+</UL>
+
+<H3> Strengths and Weaknesses </H3>
+<UL>
+<LI> Robust to nature of lemma set
+<LI> Can produce branching proof structures
+<LI> Lots of alternative helper sets
+     <UL>
+     <LI> Can be guided by ordering helper sets, using Prophet
+     </UL>
+<LI> Greedy immediate recursion ignores proof quality
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

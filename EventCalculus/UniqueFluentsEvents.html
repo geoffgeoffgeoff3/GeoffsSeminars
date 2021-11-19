@@ -1,0 +1,43 @@
+
+<HEAD>
+<TITLE> Unique Fluents and Events </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Unique Fluents and Events </H1>
+
+<IMG SRC="Unique.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+
+<H3> Uniqueness </H3>
+<UL>
+<LI> All ground (reified) fluents are unique, e.g.,<BR>
+
+     <P>
+     <TT>waterLevel(2) &ne; waterLevel(3)</TT>,<BR>
+     <TT>waterLevel(2) &ne; filling</TT>
+
+     <P>
+<LI> Fluents and events with distinct functors are not equal
+<LI> Fluents and events with the same functor and distinct arguments 
+     are not equal
+</UL>
+
+<H3> Inequality Axioms </H3>
+<UL>
+<LI> Generate axioms for all fluent and event functors
+
+     <P>
+<LI> &forall; <TT><EM>f</EM>(<EM>X<SUB>1</SUB> ... X<SUB>n</EM>)</TT> &ne;
+     <TT><EM>g</EM>(<EM>Y<SUB>1</SUB> ... Y<SUB>m</EM>)</TT>
+<LI> &forall; <TT><EM>f</EM>(<EM>X<SUB>1</SUB> ... X<SUB>n</EM>)</TT> =
+     <TT><EM>f</EM>(<EM>Y<SUB>1</SUB> ... Y<SUB>n</EM>)</TT> <TT>&rArr;</TT>
+     (<TT><EM>X<SUB>i</SUB> = Y<SUB>i</SUB></EM>)</TT>
+
+     <P>
+<LI> Relies on uniqueness of fluent and event argument values
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

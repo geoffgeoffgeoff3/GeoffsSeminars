@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE> The TPTP Language Hierarchy </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'TPTPForms.jpg';
+  images[1]     = new Image();
+  images[1].src = 'TPTPFormsTFX.jpg';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The TPTP Language Hierarchy </H1>
+
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="TPTPForms.jpg" ALIGN=RIGHT HEIGHT=80%>
+</A>
+
+<H3> Years of Development </H3>
+<UL> 
+<LI> 1993 - <FONT COLOR=VIOLET>CNF: Clause Normal Form</FONT>
+<LI> 1997 - <FONT COLOR=PURPLE>FOF: First-order Form</FONT>
+<LI> 2004 - New syntax, BNF, etc.
+<LI> 2009 - <FONT COLOR=BLUE>TH0: Monomorphic Typed Higher-order Form</FONT> 
+<LI> 2010 - <FONT COLOR=GREEN>TF0: Monomorphic Typed First-order Form</FONT>
+<LI> 2013 - <FONT COLOR=ORANGE>TF1: Polymorphic Typed First-order Form</FONT>
+<LI> 2016 - <FONT COLOR=RED>TH1: Polymorphic Typed Higher-order Form</FONT>
+</UL>
+
+<H3> TFF (<A HREF="TF0Language.html">TF0</A> and <A HREF="TF1Language.html">TF1</A>): Great, but ... </H3>
+<UL>
+<LI> Tuples a mess, confused with FOF
+<LI> Conditional and let expressions horribly formulated
+</UL>
+
+<H3> TFX (Typed First-order eXtended) </H3>
+<UL>
+<LI> Flexible tuples of terms and formulae
+<LI> Elegant new conditional and let expressions
+<LI> Formulae and terms conflated as in FOOL logic (see next)
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

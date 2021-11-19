@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE> Mizar Proof involving Quantifiers </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Mizar Proof involving Quantifiers </H1>
+
+<UL>
+<LI> <TT>Let</TT> rule: "let's have an arbitrary but fixed x"
+<LI> Introduces a new constant to instantiate a universally quantified thesis 
+<LI> Similar rules for existential quantifiers: <TT>Take</TT>, <TT>Consider</TT>
+</UL>
+
+<PRE>
+Lemma1: for x being set holds p(x)         ;; this has been proved already 
+Lemma2: for x being set holds p(x) => q(x) ;; this has been proved already 
+Goal1: for x being set holds q(x) 
+proof                  ;; (Proof) thesis (Goal1) is: for x being set holds q(x) 
+  let new_constant be set;               ;; (Let) thesis (T1) is: q(new_constant) 
+  E1: p(new_constant) by Lemma1;         ;; (JustifiedProposition) thesis unchanged 
+  thus E2: q(new_constant) by Lemma2,E1; ;; (Conclusion) thesis (T2) is: verum 
+end; 
+</PRE>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE> FOF Problem Formula Section </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> FOF Problem Formula Section </H1>
+
+<PRE>
+%--------------------------------------------------------------------------
+input_formula(phi_substitution_1,axiom,(
+    ! [A,B] :
+      ( equal(A,B)
+     => equal(phi(A),phi(B)) )   )).
+
+%----Definition of a homomorphism
+input_formula(homomorphism1,axiom,(
+    ! [X] :
+      ( group_member(X,f)
+     => group_member(phi(X),h) )   )).
+   ...
+
+%----Definition of left zero
+input_formula(left_zero,axiom,(
+    ! [G,X] :
+      ( left_zero(G,X)
+    <=> ( group_member(X,G)
+        & ! [Y] :
+            ( group_member(Y,G)
+           => equal(multiply(G,X,Y),X) ) ) )   )).
+
+%----The conjecture
+input_formula(left_zero_for_f,hypothesis,(
+    left_zero(f,f_left_zero)   )).
+
+input_formula(prove_left_zero_h,conjecture,(
+    left_zero(h,phi(f_left_zero))   )).
+%--------------------------------------------------------------------------
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

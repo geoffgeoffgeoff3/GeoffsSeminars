@@ -1,0 +1,252 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Results</title>
+<meta name="ROBOTS" content="INDEX,NOFOLLOW" />
+<link rel="stylesheet" type="text/css" href="CASCResults.css" />
+<script type="text/javascript">//<![CDATA[
+var lastRefreshed = new Date();
+lastRefreshed = Date.UTC(lastRefreshed.getYear(), lastRefreshed.getMonth(), lastRefreshed.getDay(), lastRefreshed.getHours(), lastRefreshed.getMinutes(), lastRefreshed.getSeconds(), lastRefreshed.getMilliseconds());
+    
+function updateLastRefresh() {
+  var timeToNextRefresh;
+  var now = new Date();
+
+  now = Date.UTC(now.getYear(), now.getMonth(), now.getDay(), now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
+  timeToNextRefresh = 60 - Math.round((now-lastRefreshed)/1000);
+  document.getElementById('lastRefresh').innerHTML = timeToNextRefresh +
+' seconds to next refresh';
+  if (timeToNextRefresh <= 0) {
+    window.location.reload();
+  }
+  window.setTimeout('updateLastRefresh();', 1000);
+}
+function silenceMusic(value) {
+  if (value==true) {
+    document.getElementById('Music').pause();
+  } else {
+    document.getElementById('Music').play();
+  }
+  document.cookie="silence="+value;
+}
+function playMusicUnlessSilenced() {
+  var cookie=document.cookie;
+  var silence=cookie.indexOf("silence=true");
+  if (silence==-1) {
+     document.getElementById('Music').play();
+  }
+}
+
+//]]></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body onload="">
+<SPAN CLASS="xxsmallfont" ID="lastRefresh"></SPAN>
+<A NAME="THFProblems">
+<TABLE WIDTH=610>
+<COL WIDTH=120>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<TR>
+<TH ALIGN=LEFT BGCOLOR=GREY> <SPAN CLASS ="smallfont">Higher-order Theorems</SPAN>
+<TH BGCOLOR=SKYBLUE> Satallax_MaLeS<BR><SPAN CLASS="xxsmallfont">&nbsp;1.3</SPAN>
+<TH BGCOLOR=LIME> <EM><A HREF="http://www.satallax.com">Satallax</A><BR><SPAN CLASS="xxsmallfont">&nbsp;2.7</SPAN></EM>
+<TH BGCOLOR=YELLOW> <A HREF="http://www.cl.cam.ac.uk/research/hvg/Isabelle/">Isabelle</A><BR><SPAN CLASS="xxsmallfont">&nbsp;2013</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://www.ags.uni-sb.de/~leo/">LEO&#8209;II</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.6.2</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="https://github.com/frelindb/agsyHOL">agsyHOL</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.0</SPAN>
+<TH BGCOLOR=WHITE> HOLyHammer<BR><SPAN CLASS="xxsmallfont">&nbsp;140616</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://www.alumnos.unican.es/ccc66/cocATP.htm">cocATP</A><BR><SPAN CLASS="xxsmallfont">&nbsp;0.2.0</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER>Solved<SPAN CLASS="xsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE> 333<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=LIME> 324<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=YELLOW> 316<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 269<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 236<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 96<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 74<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER> Av.&nbsp;CPU&nbsp;Time
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE>    18.88 
+<TD ALIGN=RIGHT BGCOLOR=LIME>     5.68 
+<TD ALIGN=RIGHT BGCOLOR=YELLOW>    38.91 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>     7.21 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>     5.83 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    25.89 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>     4.65 
+</TABLE>
+<A NAME="TFAProblems">
+<TABLE WIDTH=540>
+<COL WIDTH=120>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<TR>
+<TH ALIGN=LEFT BGCOLOR=GREY> <SPAN CLASS ="smallfont">Typed First-order Theorems +*-/</SPAN>
+<TH BGCOLOR=SKYBLUE> <A HREF="http://cvc4.cs.nyu.edu/web/">CVC4</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.4&#8209;TFA</SPAN>
+<TH BGCOLOR=LIME> <A HREF="http://www.philipp.ruemmer.org/princess.shtml">Princess</A><BR><SPAN CLASS="xxsmallfont">&nbsp;140704</SPAN>
+<TH BGCOLOR=YELLOW> <EM><A HREF="http://www.mpi-inf.mpg.de/~uwe/software/#TSPASS">SPASS+T</A><BR><SPAN CLASS="xxsmallfont">&nbsp;2.2.19</SPAN></EM>
+<TH BGCOLOR=WHITE> <A HREF="http://www.mpi-inf.mpg.de/~uwe/software/#TSPASS">SPASS+T</A><BR><SPAN CLASS="xxsmallfont">&nbsp;2.2.20</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://users.cecs.anu.edu.au/~baumgart/systems/beagle/">Beagle</A><BR><SPAN CLASS="xxsmallfont">&nbsp;0.9</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="https://www.rocq.inria.fr/deducteam/Zipperposition">Zipperposition</A><BR><SPAN CLASS="xxsmallfont">&nbsp;0.4&#8209;TFF</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER>Solved<SPAN CLASS="xsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE> 179<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=LIME> 176<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=YELLOW> 173<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 173<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 173<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 80<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER> Av.&nbsp;CPU&nbsp;Time
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE>     4.47 
+<TD ALIGN=RIGHT BGCOLOR=LIME>    11.81 
+<TD ALIGN=RIGHT BGCOLOR=YELLOW>     3.44 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>     3.57 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>     5.49 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>     6.57 
+</TABLE>
+<A NAME="FOFProblems">
+<TABLE WIDTH=890>
+<COL WIDTH=120>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<TR>
+<TH ALIGN=LEFT BGCOLOR=GREY> <SPAN CLASS ="smallfont">First-order Theorems</SPAN>
+<TH BGCOLOR=SKYBLUE> <EM><A HREF="http://www.vprover.org/">Vampire</A><BR><SPAN CLASS="xxsmallfont">&nbsp;2.6</SPAN></EM>
+<TH BGCOLOR=LIME> ET<BR><SPAN CLASS="xxsmallfont">&nbsp;0.1</SPAN>
+<TH BGCOLOR=YELLOW> <A HREF="http://www.eprover.org/">E</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.9</SPAN>
+<TH BGCOLOR=WHITE> VanHElsing<BR><SPAN CLASS="xxsmallfont">&nbsp;1.0</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://cvc4.cs.nyu.edu/web/">CVC4</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.4&#8209;FOF</SPAN>
+<TH BGCOLOR=PINK> <A HREF="http://www.cs.man.ac.uk/~korovink/iprover/">iProver</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.4</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://www.leancop.de/">leanCoP</A><BR><SPAN CLASS="xxsmallfont">&nbsp;2.2</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://www.cs.unm.edu/~mccune/prover9/">Prover9</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1109a</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="https://www.rocq.inria.fr/deducteam/Zipperposition">Zipperposition</A><BR><SPAN CLASS="xxsmallfont">&nbsp;0.4&#8209;FOF</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://www.math-info.univ-paris5.fr/~pastre/muscadet/muscadet.html">Muscadet</A><BR><SPAN CLASS="xxsmallfont">&nbsp;4.4</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://www.philipp.ruemmer.org/princess.shtml">Princess</A><BR><SPAN CLASS="xxsmallfont">&nbsp;140704</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER>Solved<SPAN CLASS="xsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE> 375<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=LIME> 339<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=YELLOW> 321<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 310<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 215<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 216<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 158<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 95<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 73<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 32<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 134<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER> Av.&nbsp;CPU&nbsp;Time
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE>    13.19 
+<TD ALIGN=RIGHT BGCOLOR=LIME>    29.31 
+<TD ALIGN=RIGHT BGCOLOR=YELLOW>    22.88 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    17.29 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    46.03 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    18.11 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    55.15 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    41.45 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    28.81 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    19.74 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    69.31 
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER> Solutions
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE>372<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=LIME>339<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=YELLOW>321<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>310<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>215<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>214<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>158<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>95<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>73<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>30<SPAN CLASS="xxsmallfont">/400</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>0<SPAN CLASS="xxsmallfont">/400</SPAN>
+</TABLE>
+<A NAME="FNTProblems">
+<TABLE WIDTH=470>
+<COL WIDTH=120>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<TR>
+<TH ALIGN=LEFT BGCOLOR=GREY> <SPAN CLASS ="smallfont">First-order Non-theorems</SPAN>
+<TH BGCOLOR=SKYBLUE> <EM><A HREF="http://www.cs.man.ac.uk/~korovink/iprover/">iProver</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.0&#8209;SAT</SPAN></EM>
+<TH BGCOLOR=PINK> <A HREF="http://www.cs.man.ac.uk/~korovink/iprover/">iProver</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.4&#8209;SAT</SPAN>
+<TH BGCOLOR=LIME> <A HREF="https://github.com/radekm/crossbow">Crossbow</A><BR><SPAN CLASS="xxsmallfont">&nbsp;0.1</SPAN>
+<TH BGCOLOR=YELLOW> <A HREF="http://cvc4.cs.nyu.edu/web/">CVC4</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.4&#8209;FNT</SPAN>
+<TH BGCOLOR=WHITE> <A HREF="http://www.eprover.org/">E</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.9&#8209;FNT</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER>Solved<SPAN CLASS="xsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE> 150<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 133<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=LIME> 124<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=YELLOW> 116<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 82<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER> Av.&nbsp;CPU&nbsp;Time
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE>    59.12 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    63.37 
+<TD ALIGN=RIGHT BGCOLOR=LIME>    21.66 
+<TD ALIGN=RIGHT BGCOLOR=YELLOW>    24.38 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>     7.23 
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER> Solutions
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE>150<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>133<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=LIME>124<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=YELLOW>116<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE>82<SPAN CLASS="xxsmallfont">/200</SPAN>
+</TABLE>
+<A NAME="EPRProblems">
+<TABLE WIDTH=330>
+<COL WIDTH=120>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<TR>
+<TH ALIGN=LEFT BGCOLOR=GREY> <SPAN CLASS ="smallfont">Effectively Propositional CNF</SPAN>
+<TH BGCOLOR=SKYBLUE> <EM><A HREF="http://www.cs.man.ac.uk/~korovink/iprover/">iProver</A><BR><SPAN CLASS="xxsmallfont">&nbsp;0.9</SPAN></EM>
+<TH BGCOLOR=PINK> <A HREF="http://www.cs.man.ac.uk/~korovink/iprover/">iProver</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.4</SPAN>
+<TH BGCOLOR=LIME> <A HREF="http://www.eprover.org/">E</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.9</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER>Solved<SPAN CLASS="xsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE> 183<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=WHITE> 180<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=LIME> 88<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER> Av.&nbsp;CPU&nbsp;Time
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE>    22.96 
+<TD ALIGN=RIGHT BGCOLOR=WHITE>    22.80 
+<TD ALIGN=RIGHT BGCOLOR=LIME>    31.02 
+</TABLE>
+<A NAME="UEQProblems">
+<TABLE WIDTH=260>
+<COL WIDTH=120>
+<COL WIDTH=70>
+<COL WIDTH=70>
+<TR>
+<TH ALIGN=LEFT BGCOLOR=GREY> <SPAN CLASS ="smallfont">Unsatisfiable Unit Equality CNF</SPAN>
+<TH BGCOLOR=SKYBLUE> <EM><A HREF="http://www.waldmeister.org/">Waldmeister</A><BR><SPAN CLASS="xxsmallfont">&nbsp;710</SPAN></EM>
+<TH BGCOLOR=LIME> <A HREF="http://www.eprover.org/">E</A><BR><SPAN CLASS="xxsmallfont">&nbsp;1.9</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER>Solved<SPAN CLASS="xsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE> 194<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TD ALIGN=RIGHT BGCOLOR=LIME> 168<SPAN CLASS="xxsmallfont">/200</SPAN>
+<TR><TH ALIGN=LEFT BGCOLOR=SILVER> Av.&nbsp;CPU&nbsp;Time
+<TD ALIGN=RIGHT BGCOLOR=SKYBLUE>    11.75 
+<TD ALIGN=RIGHT BGCOLOR=LIME>    13.08 
+</TABLE>
+<HR>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<TITLE> The Divvy ATP Meta-system </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'Split.jpg';
+  images[1]     = new Image();
+  images[1].src = 'DivHalf.gif';
+  images[2]     = new Image();
+  images[2].src = 'DivHalfQuarter.gif';
+  images[3]     = new Image();
+  images[3].src = 'DivHalfQuarter3Quarter.gif';
+  images[4]     = new Image();
+  images[4].src = 'DivEtc.gif';
+  images[5]     = new Image();
+  images[5].src = 'DivCSA.gif';
+  images[6]     = new Image();
+  images[6].src = 'DivLimit.gif';
+  images[7]     = new Image();
+  images[7].src = 'DivSmile.gif';
+  images[8]     = new Image();
+  images[8].src = 'DivAll.gif';
+  images[9]     = new Image();
+  images[9].src = 'DivMax.gif';
+  images[10]    = new Image();
+  images[10].src = 'DivMod.gif';
+  images[11]    = new Image();
+  images[11].src = 'Tools.jpg';
+  images[12]    = new Image();
+  images[12].src = 'Clock.gif';
+  images[13]    = new Image();
+  images[13].src = 'TPTP.GIF';
+  images[14]    = new Image();
+  images[14].src = 'Predict.jpg';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The Divvy ATP Meta-system
+</H1>
+
+<IMG NAME=image SRC="Split.jpg" ALIGN=RIGHT HEIGHT=50%>
+
+<H3> Divide and Conquer </H3>
+<UL>
+<LI> Order the axioms by relevance
+<LI> Try the top half
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="DivHalf.gif" BORDER=0 HEIGHT=10></A>
+     <UL>
+     <LI> Theorem? Done!
+          <A HREF="" onClick="putImage(7);return false">
+          <IMG SRC="DivSmile.gif" BORDER=0 HEIGHT=10></A>
+     <LI> Timeout? Need more or less!
+          <UL>
+          <LI> Try top quarter
+               <A HREF="" onClick="putImage(2);return false">
+               <IMG SRC="DivHalfQuarter.gif" BORDER=0 HEIGHT=10></A>
+          <LI> Try top three quarters
+               <A HREF="" onClick="putImage(3);return false">
+               <IMG SRC="DivHalfQuarter3Quarter.gif" BORDER=0 HEIGHT=10></A>
+          <LI> etc.
+               <A HREF="" onClick="putImage(4);return false">
+               <IMG SRC="DivEtc.gif" BORDER=0 HEIGHT=10></A>
+          </UL>
+     <LI> CounterSatisfiable? Need more!
+          <A HREF="" onClick="putImage(5);return false">
+          <IMG SRC="DivCSA.gif" BORDER=0 HEIGHT=10></A>
+     </UL>
+</UL>
+
+<H3> Optimizations </H3>
+<UL>
+<LI> Try all axioms first
+     <A HREF="" onClick="putImage(8);return false">
+     <IMG SRC="DivAll.gif" BORDER=0 HEIGHT=10></A>
+<LI> Specify maximal number of axioms to use
+     <A HREF="" onClick="putImage(9);return false">
+     <IMG SRC="DivMax.gif" BORDER=0 HEIGHT=10></A>
+<LI> Use model finder before each proof attempt
+     <A HREF="" onClick="putImage(10);return false">
+     <IMG SRC="DivMod.gif" BORDER=0 HEIGHT=10></A>
+<LI> Aim for assurance before proof
+<LI> User selectable systems
+     <A HREF="" onClick="putImage(11);return false">
+     <IMG SRC="Tools.jpg" BORDER=0 HEIGHT=10></A>
+<LI> User selectable relevance ordering tool
+     <A HREF="" onClick="putImage(14);return false">
+     <IMG SRC="Predict.jpg" BORDER=0 HEIGHT=10></A>
+<LI> Time limits for all aspects, with dynamic update
+     <A HREF="" onClick="putImage(12);return false">
+     <IMG SRC="Clock.gif" BORDER=0 HEIGHT=10></A>
+</UL>
+
+<H3> Implementation </H3>
+<UL>
+<LI> C and JJParser library
+<LI> TPTPWorld infrastructure
+     <A HREF="" onClick="putImage(13);return false">
+     <IMG SRC="TPTP.GIF" BORDER=0 HEIGHT=10></A>
+<LI> Available <A HREF="http://www.tptp.org/cgi-bin/SystemOnTPTP">online</A>
+     at <TT>www.tptp.org/cgi-bin/SystemOnTPTP</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

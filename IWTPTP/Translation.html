@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP to PML Translation  </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+TPTP to PML Translation
+</H1>
+
+<IMG NAME="image" SRC="cnf57.GIF" ALIGN=RIGHT WIDTH=50%>
+
+<H3> Process </H3>
+<UL>
+<LI> Parse TSTP file (using Andrei Tshaltsev's Java parser)
+<LI> Extract necessary information from proof
+<LI> Extract additional information from problem comments
+<LI> Generate a singleton NodeSet collection for each node in proof
+</UL>
+
+<A HREF="PML57.txt">
+<IMG NAME="image" SRC="PML57Part.GIF" ALIGN=RIGHT WIDTH=50%>
+</A>
+
+<H3> Information </H3>
+<UL>
+<LI> Extract information from <A HREF="../TSTP/EP---0.999.THM-CRf.s.txt">
+     TSTP file</A>
+<P>
+<LI> Language of formula - from principle of formula
+<LI> TPTP role - from formula
+<LI> The formula (doh!)
+<LI> Inference engine - from TSTP file header
+<LI> Inference rule - from <TT>inference()</TT> record
+<LI> Antecendents - from <TT>inference()</TT> record
+<LI> Source - the named problem file
+<LI> Date and time - from TSTP file header
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

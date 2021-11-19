@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<TITLE> Interpreting wrt an Interpretation </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Model5.jpg';
+  images[1]     = new Image();
+  images[1].src = 'StPeterYes.GIF';
+  images[2]     = new Image();
+  images[2].src = 'StPeterNo.GIF';
+  images[3]     = new Image();
+  images[3].src = 'ModelP.jpg';
+
+  function putImage (imageNumber) {
+      document.images['image'].src = images[imageNumber].src;
+  }
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Interpreting wrt an Interpretation
+</H1>
+
+<IMG NAME="image" SRC="Model5.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Why </H3>
+<UL>
+<LI> Determine semantics of terms, atoms, formulae
+<LI> Used by semantically guided ATP systems and tools
+</UL>
+
+<H3> What </H3>
+<UL>
+<LI> Formula/term and model input, semantic interpretation output
+<LI> Hopefully polynomial time (what does that mean?)
+<LI> Implemented as libraries, with support for persistent models
+</UL>
+
+<H3> How </H3>
+<UL>
+<LI> Directly wrt finite interpretations
+     <A HREF="" onClick="putImage(0);return false">
+     <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A>
+     <UL>
+     <LI> Evaluate ground terms/atoms in integer and real models
+     </UL>
+<LI> Theorem proving with model as axioms, formula as conjecture
+     <UL>
+     <LI> THM = <EM>true</EM> 
+          <A HREF="" onClick="putImage(1);return false">
+          <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A>, 
+          CTH = <EM>false</EM> 
+          <A HREF="" onClick="putImage(2);return false">
+          <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A>
+     <LI> If complete: SAT = <EM>true</EM>, CSA = <EM>false</EM>
+     <LI> Do in parallel <A HREF="" onClick="putImage(3);return false">
+          <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A>
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

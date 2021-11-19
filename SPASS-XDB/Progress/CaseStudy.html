@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<TITLE> Case Study </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Flooded.jpg'; 
+  images[1]     = new Image();
+  images[1].src = 'Copenhagen.gif'; 
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }  
+</SCRIPT> 
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Case Study
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME=image SRC="Flooded.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> An OECD Capital at the Same Latitude as Moscow that could get Flooded</H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('p4');return false;">
+     <EM>Name an OECD country's capital that is at the same latitude as
+     Moscow (to the nearest degree), that could get flooded</EM>
+     </A>
+     <SPAN ID="p4" style="display:none"><PRE>
+fof(kb_SUMO_28,axiom,(
+    ! [V__X,V__Y,V__Z] :
+      ( ( s__instance(V__Y,s__SetOrClass)
+        & s__instance(V__X,s__SetOrClass) )
+     => ( ( s__subclass(V__X,V__Y)
+          & s__instance(V__Z,V__X) )
+       => s__instance(V__Z,V__Y) ) ) )).
+
+fof(kb_SUMO_MILO_6297,axiom,(
+    s__instance(s__WaterArea,s__SetOrClass) )).
+
+fof(kb_SUMO_MILO_10029,axiom,(
+    s__instance(s__BodyOfWater,s__SetOrClass) )).
+
+fof(kb_SUMO_MILO_DOMAINS_9645,axiom,(
+    s__subclass(s__Sea,s__BodyOfWater) )).
+
+fof(kb_SUMO_MILO_DOMAINS_9546,axiom,(
+    s__subclass(s__BodyOfWater,s__WaterArea) )).
+
+fof(kb_SUMO_MILO_DOMAINS_80407,axiom,(
+    s__instance(s__Sea,s__SetOrClass) )).
+
+fof(flood_near_water,axiom,
+    ! [W,C] :
+      ( ( s__orientation(C,W,s__Near)
+        & s__instance(W,s__WaterArea) )
+     => s__capability(s__Flooding,s__located__m,C) ) ).
+
+fof(coastal_cities_near_water,axiom,
+    ! [City] :
+      ( is_instance_ground(City,'Coastal Cities Class')
+     => ? [Sea] :
+          ( s__instance(Sea,s__Sea)
+          & s__orientation(City,Sea,s__Near) ) ) ).
+
+fof(where,conjecture,
+    ? [City,Country,CityLat,CityLong,CityName,CityCountry,Latitude,
+       MoscowLat,MoscowLong,MoscowName,MoscowCountry] :
+      ( is_instance(Country,'OECD Member Economies Class')
+      & capital_city(City,Country)
+      & look_different(City,'Moscow')
+      & latlong(City,CityLat,CityLong,CityName,CityCountry)
+      & $evaleq($to_int(CityLat),Latitude)
+      & latlong('Moscow',MoscowLat,MoscowLong,MoscowName,MoscowCountry)
+      & $evaleq($to_int(MoscowLat),Latitude)
+      & s__capability(s__Flooding,s__located__m,City)
+      & print(printall(nl,nl,'The city is ',City,' in ',Country,
+' at latitude ',CityLat,' (Moscow is at ',MoscowLat,')',nl,nl)) ) ).</PRE>
+     </SPAN>
+<LI> YAGOSUMO facts, Yahoo Map Services, Prolog arithmetic, Prolog 
+     syntactic difference, internal predicate proxy, XDB-universal translator,
+     SUMO ontology (internal)
+<LI> 148 requests queued, 146 sent, 97 axioms delivered, 11 axioms used
+<LI> 59s CPU, 221s WC. 7861 clauses derived.
+</UL>
+
+<H3> Benefits of Control </H3>
+<UL>
+<LI> Set of support causes provides initial focus by goal directed reasoning
+<LI> First literal selected to get 27 OECD countries, search splits
+<LI> Only asks for each country's capitals - no further splitting
+<LI> Checks for difference to Moscow, and gets latitudes
+<LI> Resurrection control allows incremental use of ontology axioms
+<LI> Ontological reasoning done while world knowledge is retrieved
+<LI> Testing for flooding done last due to literal ordering
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

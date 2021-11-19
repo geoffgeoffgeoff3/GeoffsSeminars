@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE> New External Sources </TITLE>
+</HEAD>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'WhatsNew.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Mathematica.jpg';
+  images[2]     = new Image();
+  images[2].src = 'YahooGoogle.jpg'; 
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT> 
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+New External Sources
+</H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME=image SRC="WhatsNew.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Mathematica 
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="Mathematica.jpg" BORDER=0 HEIGHT=10></A>
+</H3>
+<UL>
+<LI> Built-in arithmetic does ground evaluation
+<LI> Mathematica as a source of arithmetic axioms
+<LI> Accepts conjoined requests, of all relevant literals
+<LI> Returns axiom for first literal
+<LI> Allows SPASS-XDB to enter TFA division of CASC
+</UL>
+
+<H3> Web Search 
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="YahooGoogle.jpg" BORDER=0 HEIGHT=10></A>
+</H3>
+<UL>
+<LI> The obvious thing to do
+<LI> Query search engine, match results with template, build axiom
+<LI> Currently limited to unary and binary predicates
+<LI> Leverage search engines, and still provide answers
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

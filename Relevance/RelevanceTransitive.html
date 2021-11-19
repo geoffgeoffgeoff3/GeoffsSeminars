@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE> Transitive Relevance </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Transitive Relevance </H1>
+
+<A HREF="RelevanceTransitiveGIF.html">
+<IMG SRC="RelevanceTransitive.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> Intuition </H3>
+<UL>
+<LI> Relevance to a formula relevant to a formula ... to the conjecture
+<LI> A chain is only as strong as its weakest link<BR
+     <EM>or</EM><BR>
+     A chain is only as strong as its first link
+<LI> Longer chains are weaker
+</UL>
+
+<H3> Definition </H3>
+<UL>
+<LI> Examine (directed contextual) direct relevances on paths 
+     <TT>Fa = F0 - F1 - ... - Fn = Fc</TT>
+<LI> The "weakest link" <EM>path relevance</EM> between 
+     <TT>Fa</TT> and <TT>Fc</TT> is
+     <PRE>
+min      direct-relevance(Fi-1,Fi)
+i=1..n
+----------------------------------
+                n    </PRE>
+<LI> The <EM>transitive relevance</EM> between
+     <TT>Fa</TT> and <TT>Fc</TT> is
+     <PRE>
+max path-relevance(Fa,Fc) </PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

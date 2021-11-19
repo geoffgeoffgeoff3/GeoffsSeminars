@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<TITLE>Measuring Relevance</TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'RelevanceDirect.GIF';
+  images[1]     = new Image();
+  images[1].src = 'RelevanceTransitive.GIF';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Measuring Relevance </H1>
+
+<IMG NAME="image" SRC="RelevanceDirect.GIF" ALIGN=RIGHT WIDTH=50%>
+
+<H3> Background </H3>
+<UL>
+<LI> A <EM>relevance measure</EM> measures relevance of a formula to a
+     conjecture
+<LI> Necessarily approximate (or P = NP)
+<LI> Adopt ideas from document retrieval research
+<LI> Variations galore 
+</UL>
+
+<A HREF="RelevanceDirect.html"><H3> Direct Relevance </H3></A>
+<UL>
+<LI> The <EM>contextual intersection</EM> &Pi; between <TT>Fa</TT>
+     and <TT>Fc</TT> in the context of the set <TT>S</TT> is
+<PRE>                           |{f:f&isin;S,s&isin;sym(f)}|
+&sum;                    ( 1 - ------------------- )
+s&isin;(sym(Fa)&cap;sym(Fb))               |S| </PRE>
+<LI> The <EM>contextual direct relevance</EM> between <TT>Fa</TT>
+     and <TT>Fc</TT> in the context of the set <TT>S</TT> is
+     <A HREF="" onMouseOver="putImage(0);return false">
+     <IMG SRC="RelevanceDirect.GIF" BORDER=0 WIDTH=10></A>
+     <PRE>|sym(Fa) &Pi; sym(Fc)|
+--------------------
+|sym(Fa) &cup; sym(Fc)| </PRE>
+</UL>
+
+<A HREF="RelevanceTransitive.html"><H3> Transitive Relevance </H3></A>
+<UL>
+<LI> The "weakest link" <EM>path relevance</EM> between
+     <TT>Fa</TT> and <TT>Fc</TT> is 
+     <A HREF="" onMouseOver="putImage(1);return false">
+     <IMG SRC="RelevanceTransitive.GIF" BORDER=0 WIDTH=10></A>
+     <PRE>min      direct-relevance(Fi-1,Fi)
+i=1..n
+----------------------------------
+                n    </PRE>
+<LI> The <EM>transitive relevance</EM> between
+     <TT>Fa</TT> and <TT>Fc</TT> is
+     <PRE>max path-relevance(Fa,Fc) </PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

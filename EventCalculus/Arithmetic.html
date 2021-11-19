@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE> Arithmetic </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Arithmetic </H1>
+
+<IMG SRC="Arithmetic.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> Integer Arithmetic </H3>
+<UL>
+<LI> Used for time points in DEC
+<LI> Used by scenarios
+
+     <P>
+<LI> Undecidable theory, restrict to a fragment
+     <UL>
+     <LI> Axiomatization, e.g., Peano
+     <LI> Call out to computation
+     </UL>
+</UL>
+
+<H3> An Adhoc Axiomatization </H3>
+<UL>
+<LI> Notions of equality, addition, order
+<LI> Limited to 0 to 9
+
+     <P>
+<LI> Ordered instances of addition, e.g., <TT>3 + 5 = 8</TT>
+<LI> Symmetry of addition, &forall; <TT>X,Y (X + Y = Y + X)</TT>
+
+     <P>
+<LI> Adjacent instances of ordering, e.g., <TT>6 &lt; 7</TT>
+<LI> Nothing less than 0, <TT>~&exist;X X &lt; 0</TT>
+
+     <P>
+<LI> Inequality definition, 
+     &forall; <TT>X,Y (X &le; Y &hArr; ( X &lt; Y |  X = Y))</TT>
+<LI> Total ordering, 
+     &forall; <TT>X,Y ( X &lt Y &hArr; (~(Y &lt X) & (Y &ne; X))</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

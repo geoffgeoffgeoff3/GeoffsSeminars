@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE> Conditional Expressions </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Conditional Expressions </H1>
+
+<IMG SRC="ForkInRoad.jpg" BORDER=0 ALIGN=RIGHT WIDTH=30%>
+
+<H3> The Idea </H3>
+<UL>
+<LI> Expressions of the form <TT>$ite(</TT><EM>&phi;</EM><TT>,</TT><EM>s</EM><TT>,</TT><EM>t</EM><TT>)</TT>
+<LI> Replaces the old <TT>$ite_t</TT> and <TT>$ite_f</TT>
+<LI> Conditional expressions removed from plain TFF
+</UL>
+
+<H3> Examples </H3>
+<UL>
+<LI> <TT>max: ($int * $int) > $int</TT><BR>
+     <TT>! [X: $int,Y: $int]: max(X,Y) = $ite($greatereq(X,Y),X,Y)</TT><BR>
+     <TT>! [X: $int,Y: $int]:</TT><BR>
+     <TT>&nbsp;&nbsp;$ite(max(X,Y) = X,$greatereq(X,Y),$greatereq(Y,X))</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

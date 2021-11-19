@@ -1,0 +1,47 @@
+<TITLE> Divisions </TITLE>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Divisions </H1>
+
+<IMG ALIGN=RIGHT SRC="T-Shirt-16.GIF" WIDTH=25%>
+
+<H3> The MIX Division: CNF theorems </H3>
+<PRE>
+input_clause(clause1,axiom,
+    [++g(A,a),
+     ++g(f(A),A)]).
+etc, etc
+
+input_clause(theorem,conjecture,
+    [--g(A,B),
+     --g(B,a)]).
+</PRE>
+
+<H3> The UEQ Division: Unit equality theorems </H3>
+<PRE>
+input_clause(left_inverse,axiom,
+    [++equal(multiply(inverse(Y),Y,X),X)]).
+etc, etc
+
+input_clause(prove_inverse_is_self_cancelling,conjecture,
+    [--equal(inverse(inverse(a)),a)]).
+</PRE>
+
+<H3> The SAT Division: Non-theorems </H3>
+
+<H3> The EPR Division: CNF, effectively propositional theorems </H3>
+
+<H3> The <STRONG>FOF</STRONG> Division: FOF theorems </H3>
+<PRE>
+input_formula(pel59_1,axiom,(
+    ! [X] : 
+      ( big_f(X)
+    <=> ~ big_f(f(X)) )   )).
+
+input_formula(pel59,conjecture,(
+    ? [X] : 
+      ( big_f(X)
+      & ~ big_f(f(X)) )   )).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>

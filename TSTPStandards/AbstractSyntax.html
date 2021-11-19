@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE> Abstract Syntax </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Abstract Syntax </H1>
+
+<TABLE>
+<TR VALIGN=TOP> <TD> 
+          <H3>  Annotated TSTP Formulae </H3>
+          <PRE>
+&lt;language>(&lt;name>,&lt;role>,
+    &lt;formula>[,
+    &lt;source>[,
+    &lt;useful info>]]).
+          </PRE>
+
+          <A HREF="TSTPBNF.txt"><H3> BNF Online </H3></A>
+     <TD> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TD> <H3> Example FOF Problem Formula </H3>
+          <PRE>
+fof(subclass_defn,axiom,
+    ! [X,Y] : 
+      ( subclass(X,Y)
+    <=> ! [U] : 
+          ( member(U,X)
+         => member(U,Y) ) ),
+    file('SET005+0.ax',subclass_defn),
+    [description('Definition of subclass'),
+     relevance(0.9)]).
+          </PRE>
+
+          <H3> Example CNF Solution Formula </H3>
+          <PRE>
+cnf(140,derived-lemma,
+    ( equal_sets(a,aUa)
+    | member(member_of(a,aUa),a) ),
+    inference(unit_del,[status(thm)],[
+        inference(hyper,[status(thm)],[
+            5,16]),11]),
+    [iquote('hyper,5,16.1,unit_del,11')]).
+          </PRE>
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

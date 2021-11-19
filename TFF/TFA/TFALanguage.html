@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE> The TFA Language </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The TFA Language
+</H1>
+
+<IMG SRC="TFA.gif" ALIGN=RIGHT WIDTH=33%>
+
+<H3> The TFF Language, plus ...</H3>
+
+<H3> Defined Sorts, Functions, Predicates</H3>
+<UL>
+<LI> Defined types (unbounded, infinite precision): <BR>
+     <TT>$int</TT>, <TT>$rat</TT>, <TT>$real</TT>
+<LI> Numeric constants: <BR>
+     <TT>1234</TT>, <TT>-4321</TT>,
+     <TT>123/456</TT>, <TT>-321/654</TT>,
+     <TT>123.456</TT>, <TT>-321.654</TT>,
+     <TT>123.456E78</TT>, <TT>-321.654e-87</TT>
+<LI> Defined functions (ad hoc polymorphic over the types):<BR>
+     <TT>$uminus</TT>,
+     <TT>$sum</TT>,
+     <TT>$difference</TT>,
+     <TT>$product</TT>,<BR>
+     <TT>$quotient</TT>,
+     <TT>$quotient_?</TT>,
+     <TT>$remainder_?</TT> (<TT>?</TT> = <TT>e</TT>, <TT>t</TT>, <TT>f</TT>)<BR>
+     <TT>$floor</TT>,
+     <TT>$ceiling</TT>,
+     <TT>$truncate</TT>,
+     <TT>$round</TT><BR>
+     <TT>$to_int</TT>,
+     <TT>$to_rat</TT>,
+     <TT>$to_real</TT>
+<LI> Defined predicates (ad hoc polymorphic over the types):<BR>
+     <TT>$less</TT>,
+     <TT>$lesseq</TT>,
+     <TT>$greater</TT>,
+     <TT>$greatereq</TT>,<BR>
+     <TT>$is_int</TT>,
+     <TT>$is_rat</TT>
+</UL>
+
+<H3> <A HREF="DAT002=1.txt">An Example</A>
+
+<H3> Controversial Parts </H3>
+<UL>
+<LI> <TT>$quotient</TT> and <TT>$quotient_?</TT>
+<LI> <TT>$to_rat</TT> for reals
+<LI> Prefix for ease of parsing, infix might come later
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

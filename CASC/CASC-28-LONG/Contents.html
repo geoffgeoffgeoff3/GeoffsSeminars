@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE> CASC-28 </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = '../T-Shirt-28.GIF'; 
+  images[1]     = new Image();
+  images[1].src = 'HendrixWoodstock.jpg';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }  
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> CASC-28 </H1>
+<H2> The CADE-28 ATP System Competition </H2>
+</CENTER>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME='image' SRC="../T-Shirt-28.GIF" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> <A HREF="../Summary.html">History and Motivations</A> </H3>
+
+<A HREF="" onClick="hideshow('design');return false;">
+<H3> Design and Organization </H3> </A>
+<SPAN ID="design" style="display:none">
+<UL>
+<LI> <A HREF="Divisions.html">6 Divisions</A>
+<LI> <A HREF="Entrants.html">22 Entrants</A>
+<LI> <A HREF="Problems.html">12220 Problems</A>
+<LI> <A HREF="Computers.html">32 Computers</A>
+<LI> <A HREF="Ranking.html">7 Awards</A>
+<LI> <A HREF="Organizers.html">5 Organizers</A>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('results');return false;">
+<H3> Results </H3> </A>
+<SPAN ID="results" style="display:none">
+<UL>
+<LI> <A HREF="ResultsTHF.html">The THF Division</A>
+<LI> <A HREF="ResultsFOF.html">The FOF Division</A>
+<LI> <A HREF="ResultsFNT.html">The FNT Division</A>
+<LI> <A HREF="ResultsUEQ.html">The UEQ Division</A>
+<LI> <A HREF="ResultsSLH.html">The SLH Division</A>
+<LI> <A HREF="ResultsLTB.html">The LTB Division</A>
+</UL>
+</SPAN>
+
+<H3> <A HREF="Stimulation.html">Stimulating Research</A> </H3>
+
+<H3> <A HREF="Conclusion.html">Conclusions</A> </H3>
+
+<H3> The End ... Questions? </H3>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

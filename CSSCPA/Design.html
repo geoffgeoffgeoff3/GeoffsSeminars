@@ -1,0 +1,44 @@
+<TITLE> CSSCPA Design </TITLE>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> CSSCPA Design </H1>
+
+<IMG SRC="GIFS/Design.GIF" ALIGN=RIGHT>
+
+<H3> CSSCPA and the FLi </H3>
+
+<UL>
+<LI> Problems in TPTP CNF syntax
+<LI> Components must output logical consequences to <CODE>stdout</CODE>
+<LI> Employs a formula librarian (the FLi)
+<LI> Modus operandi
+     <UL>
+     <LI> Save problem in FLi
+     <LI> Choose components based on expected performance
+     <LI> Run components in competition parallel
+          <UL>
+          <LI> Stop if a solution is found
+          </UL>
+     <LI> Parse components outputs for logical consequences
+     <LI> FLi accumulates logical consequences that improve things
+          <UL>
+          <LI> Total and average clause weight
+          <LI> Minimal deltas
+          </UL>
+     <LI> Restart when FLi's problem is significantly easier
+     </UL>
+<LI> Output improved problem files and component proof
+     <UL>
+     <LI> Sufficient information to build a monolithic proof
+     </UL>
+</UL>
+
+<H3> Iterative easing </H3>
+
+<UL>
+<LI> Creates a sequence of easier problems
+<LI> Is sound in principle
+<LI> On the macro level, is cooperative time-slicing
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>

@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+<TITLE> The Truth Evaluation Approach </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'TruthEvaluation.jpg';
+  images[1]     = new Image();
+  images[1].src = '../FDE/CMITable.gif';
+  images[2]     = new Image();
+  images[2].src = '../FDE/Diamonds.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 3;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The Truth Evaluation Approach 
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="TruthEvaluation.jpg" ALIGN=RIGHT WIDTH=30%>
+</A>
+
+<UL>
+<LI> A recursive translation function <EM>trs</EM>
+     <UL>
+     <LI> For a logic XYZ, formula F and target truth value TV (of XYZ) ...<BR>
+          &nbsp;&nbsp;&nbsp;
+          <EM>trs</EM>(F,TV) captures the conditions for F to be TV
+     </UL>
+<P>
+<LI> Example translation rules
+     <UL>
+     <LI> Rules for atoms are fixed
+     <LI> <EM>Rules for unary and binary connectives generated from 
+          truth tables</EM>
+     <LI> Rules for quantified formulae based on the 
+          <A HREF="Diamonds.html">Truth Diamond</A>
+     </UL>
+     <P>
+     <TABLE BORDER=0>
+     <TR> <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> F
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>trs</EM>(F,<B>T</B>)
+          <TD> &nbsp;
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>trs</EM>(F,<B>B</B>)
+          <TD> &nbsp;
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>trs</EM>(F,<B>N</B>)
+          <TD> &nbsp;
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>trs</EM>(F,<B>F</B>)
+     <TR> <TD COLSPAN=9> <HR>
+     <TR> <TD> &phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> &phi;<SUP>cT</SUP> &and; &not;&phi;<SUP>cF</SUP>
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> &phi;<SUP>cT</SUP> &and; &phi;<SUP>cF</SUP>
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> &not;&phi;<SUP>cT</SUP> &and; &not;&phi;<SUP>cF</SUP>
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> &not;&phi;<SUP>cT</SUP> &and; &phi;<SUP>cF</SUP>
+     <TR> <TD> &not;&phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>F</B>)
+          <TD ALIGN=CENTER> &nbsp;&nbsp;
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>B</B>)
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>N</B>)
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>T</B>)
+     <TR VALIGN=TOP> <TD> &phi;&nbsp;&rarr;<SUB>cmi</SUB>&nbsp;&psi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>N</B>)&nbsp;&or; <BR>
+               <EM>trs</EM>(&phi;,<B>F</B>)&nbsp;&or; <BR>
+               <EM>trs</EM>(&psi;,<B>T</B>) 
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> (<EM>trs</EM>(&phi;,<B>T</B>)&nbsp;&or;<BR>
+                           &nbsp;<EM>trs</EM>(&phi;,<B>B</B>))&nbsp;&and; <BR>
+               <EM>trs</EM>(&psi;,<B>B</B>)
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> (<EM>trs</EM>(&phi;,<B>T</B>)&nbsp;&or;<BR>
+                          &nbsp;<EM>trs</EM>(&phi;,<B>B</B>))&nbsp;&and; <BR>
+               <EM>trs</EM>(&psi;,<B>N</B>)
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> (<EM>trs</EM>(&phi;,<B>T</B>)&nbsp;&or;<BR>
+                          &nbsp;<EM>trs</EM>(&phi;,<B>B</B>))&nbsp;&and; <BR>
+               <EM>trs</EM>(&psi;,<B>F</B>)
+     <TR VALIGN=TOP> <TD> &forall;X &phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> &forall;X&nbsp;<EM>trs</EM>(&phi;,<B>T</B>)
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> &exist;X&nbsp;<EM>trs</EM>(&phi;,<B>B</B>&nbsp;&and; <BR>
+               &not;&exist;X&nbsp;<EM>trs</EM>(&phi;,<B>F</B>))
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> &exist;X&nbsp;<EM>trs</EM>(&phi;,<B>N</B>&nbsp;&and; <BR>
+               &not;&exist;X&nbsp;<EM>trs</EM>(&phi;,<B>F</B>))
+          <TD ALIGN=CENTER> &nbsp;
+          <TD ALIGN=LEFT> &exist;X&nbsp;<EM>trs</EM>(&phi;,<B>F</B>)
+     </TABLE>
+<P>
+<LI> Additional axioms
+     <UL>
+     <LI> <EM>Definition</EM> axioms (for truth values of XYZ) <BR>
+          &forall; (&phi;<SUP><B>T</B></SUP> &harr; (&phi;<SUP>cT</SUP> &and; 
+          &not;&phi;<SUP>cF</SUP>)); 
+          &forall; (&phi;<SUP><B>B</B></SUP> &harr; (&phi;<SUP>cT</SUP> &and; 
+          &phi;<SUP>cF</SUP>)); <BR>
+          &forall; (&phi;<SUP><B>N</B></SUP> &harr; (&not;&phi;<SUP>cT</SUP> &and; 
+          &not;&phi;<SUP>cF</SUP>)); 
+          &forall; (&phi;<SUP><B>F</B></SUP> &harr; (&not;&phi;<SUP>cT</SUP> &and; 
+          &phi;<SUP>cF</SUP>))
+     <LI> <EM>Exhaustion</EM> axiom (for truth values of XYZ) <BR>
+          &forall; (&phi;<SUP><B>T</B></SUP> &or; &phi;<SUP><B>B</B></SUP> &or;
+                    &phi;<SUP><B>N</B></SUP> &or; &phi;<SUP><B>F</B></SUP>)
+     </UL>
+<P>
+<LI> Define <EM>des</EM>(F) &cong; Disjunction of <EM>trs</EM>(F,DTV) 
+     for Designated Truth Values of XYZ<BR>
+     Axioms &#8872;<SUB>XYZ</SUB> Conjecture<BR>
+          &nbsp;&nbsp;&nbsp;
+     iff<BR>
+     (<EM>des</EM>(Axioms) &cup; Exhaustion &cup; Definition) 
+     &#8872;<SUB>FOL</SUB> <EM>des</EM>(Conjecture)
+     <UL>
+     <LI> Proof based on isomorphism between XYZ and FOL interpretations
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

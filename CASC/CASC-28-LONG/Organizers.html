@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE> Organizers </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'OrganizerGeoff.jpg'; 
+  images[1]     = new Image();
+  images[1].src = 'OrganizerPeter.jpg';
+  images[2]     = new Image();
+  images[2].src = 'OrganizerPascal.jpg';
+  images[3]     = new Image();
+  images[3].src = 'OrganizerChristoph.jpg';
+  images[4]     = new Image();
+  images[4].src = 'OrganizerMartin.jpg';
+
+  function displayImage (index) {
+      document.images['image'].src = images[index].src;
+  }  
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Organizers </H1>
+
+<IMG NAME='image' SRC="OrganizerGeoff.jpg" ALIGN=RIGHT WIDTH=25%>
+
+<H3> Panelists </H3>
+<UL>
+<LI> Advise on contentious issues
+<LI> Adjudicate on the acceptability of proofs and models
+<LI> Supply a random digit to seed problem selection
+<LI> Be contactable during the competition
+<LI> Confirm the final system rankings
+<LI> <A HREF="" onClick="hideshow('panelists');return false;">
+     And they were ...</A>
+     <SPAN ID="panelists" style="display:none">
+     <UL>
+     <LI> <A HREF="" onClick="displayImage(1);return false">
+          Peter Baumgartner</A>
+     <LI> <A HREF="" onClick="displayImage(2);return false">
+          Pascal Fontaine</A>
+     <LI> <A HREF="" onClick="displayImage(3);return false">
+          Christoph Weidenbach</A>
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> Organizers </H3>
+<UL>
+<LI> Prepare the problems
+<LI> Install the systems
+<LI> Control the execution
+<LI> Analyse the logs
+<LI> Report the results
+<LI> <A HREF="" onClick="hideshow('organizers');return false;">
+     And they were ...</A>
+     <SPAN ID="organizers" style="display:none">
+     <UL>
+     <LI> <A HREF="" onClick="displayImage(4);return false">
+          Martin Desharnais</A> for SLH and LTB
+     <LI> <A HREF="" onClick="displayImage(0);return false">
+          Geoff Sutcliffe</A>
+     </UL>
+     </SPAN>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

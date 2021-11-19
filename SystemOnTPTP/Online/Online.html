@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+htmlPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+EN "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><title>System on TPTP</title>
+</head><body><HR>
+<H1>System on TPTP</H1>
+<HR>
+<form method="post" action="http://www.cs.miami.edu/~tptp/cgi-bin/SystemOnTPTPFormReply" enctype="multipart/form-data">
+<H3>Problem</H3>
+<TABLE CELLSPACING=15%>
+<TR VALIGN=TOP>
+<TD> <INPUT TYPE="RADIO" NAME="ProblemSource" VALUE="TPTP" CHECKED>TPTP Problem Name (e.g., <TT>SYN054&#8209;1</TT>)<BR>
+<input type="text" name="TPTPProblem"  size="20" /><A HREF="http://www.cs.miami.edu/~tptp/cgi-bin/DVTPTP2WWW/view_file.pl?Category=Problems">Browse TPTP</A>
+<TD ROWSPAN=2> <INPUT TYPE="RADIO" NAME="ProblemSource" VALUE="FORMULAE">TPTP Formulae 
+(FOF example - <A HREF="http://www.cs.miami.edu/~tptp/cgi-bin/DVTPTP2WWW/view_file.pl?Category=Problems&Domain=SYN&File=SYN054+1.p"><TT>SYN054+1</TT></A>, 
+CNF example - <A HREF="http://www.cs.miami.edu/~tptp/cgi-bin/DVTPTP2WWW/view_file.pl?Category=Problems&Domain=PUZ&File=PUZ031-1.p"><TT>PUZ031-1</TT></A>)<BR>
+<textarea name="FORMULAEProblem" rows="8" cols="80"></textarea><TR VALIGN=TOP>
+<TD> <INPUT TYPE="RADIO" NAME="ProblemSource" VALUE="UPLOAD">Local file to upload<BR>
+<input type="file" name="UPLOADProblem"  size="20" /></TABLE>
+<HR>
+<TABLE>
+<TR ALIGN=LEFT VALIGN=TOP><TH WIDTH=20%> System Recommendations
+<TH COLSPAN=2 WIDTH=30%> System Reports
+<TH COLSPAN=3 WIDTH=50%> Solve the Problem
+<TR VALIGN=TOP><TD ROWSPAN=3> System recommendations are free.
+<P>
+The recommendations are based on the 
+<A HREF="http://www.cs.miami.edu/~tptp/TPTP/Results.html">systems' results for the TPTP</A>.
+There is no guarantee that they are the best systems for this
+particular problem.<TD COLSPAN=2> Systems reports are free, but you need a password for the
+selected systems.<BR>
+Password: <INPUT TYPE="PASSWORD" NAME="ReportPassword" SIZE=20>
+<BR>This is general analysis. 
+Any problem specified above is ignored.
+<TD COLSPAN=3> 
+Solution attempts are limited to users with passwords plus a few users
+without passwords. If you submit without a valid password your job may 
+be rejected if the machine is too busy.<BR>
+Password: <INPUT TYPE="PASSWORD" NAME="CPUPassword" SIZE=20>
+<TR VALIGN=TOP ALIGN=LEFT><TH> Reports required<BR>
+<TH> Output mode<BR>
+<TH> Output mode<BR>
+<TH> Parallel mode<BR>
+<TD> <input type="text" name="AutoModeTimeLimit" value="300" size="3" maxlength="3" />&nbsp;seconds<BR>
+<TR VALIGN=TOP><TD> <INPUT TYPE="CHECKBOX" NAME="Completeness" VALUE="Completeness" CHECKED>&nbsp;Completeness<BR>
+<INPUT TYPE="CHECKBOX" NAME="Soundness" VALUE="Soundness">&nbsp;Soundness<BR>
+<INPUT TYPE="CHECKBOX" NAME="Correctness" VALUE="Correctness">&nbsp;Correctness<BR>
+<TD> <INPUT TYPE="RADIO" NAME="ReportFlag" VALUE="-q2">Summary<BR>
+<INPUT TYPE="RADIO" NAME="ReportFlag" VALUE="-q0" CHECKED>Full<BR>
+<TD> <INPUT TYPE="RADIO" NAME="QuietFlag" VALUE="-q4">Nothing<BR>(except&nbsp;TSTP&nbsp;output)<BR>
+<INPUT TYPE="RADIO" NAME="QuietFlag" VALUE="-q3">Result<BR>
+<INPUT TYPE="RADIO" NAME="QuietFlag" VALUE="-q2" CHECKED>Progress<BR>
+<INPUT TYPE="RADIO" NAME="QuietFlag" VALUE="-q1">System<BR>
+<INPUT TYPE="RADIO" NAME="QuietFlag" VALUE="-q0">Everything<BR>
+<INPUT TYPE="CHECKBOX" NAME="X2TSTP" VALUE="-S">TSTP&nbsp;output<BR>
+<INPUT TYPE="CHECKBOX" NAME="YuTV" VALUE="-T">YuTV&nbsp;image
+<TD> <INPUT TYPE="RADIO" NAME="AutoMode" VALUE="-cU">Selected<BR>
+<INPUT TYPE="RADIO" NAME="AutoMode" VALUE="-cN">Naive ...<BR>
+<INPUT TYPE="RADIO" NAME="AutoMode" VALUE="-cS">SSCPA ...<BR>
+<INPUT TYPE="RADIO" NAME="AutoMode" VALUE="-cE" CHECKED>Eager&nbsp;SSCPA&nbsp;...<BR>
+<TD VALIGN=TOP> All selected systems<P>
+<input type="text" name="AutoModeSystemsLimit" value="3" size="3" maxlength="3" />&nbsp;systems<BR>
+<TR VALIGN=TOP><TD> <input type="submit" name="SubmitButton" value="RecommendSystems" />
+<TD COLSPAN=2> <input type="submit" name="SubmitButton" value="ReportSelectedSystems" />
+<TD> <input type="submit" name="SubmitButton" value="RunSelectedSystems" /><BR>
+<input type="submit" name="SubmitButton" value="RunNoSystems" />
+<TD COLSPAN=2> <input type="submit" name="SubmitButton" value="RunParallel" />
+</TABLE>
+<P>Our server does not output results until all tasks are completed.
+Be patient while the provers do their thing.
+Passwords are available from <A HREF="mailto:geoff@cs.miami.edu">
+Geoff Sutcliffe</A>.
+<HR>
+<TABLE>
+<TR ALIGN=LEFT>
+<TH> ATP System
+<TH> Time&nbsp;Limit
+<TH> Transform
+<TH> Format
+<TH> Command
+<TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Bliksem---1.12" VALUE="Bliksem---1.12">&nbsp;<A HREF="http://www.mpi-sb.mpg.de/~nivelle/programs/bliksem/">Bliksem</A>&nbsp;1.12
+<TD>
+<input type="text" name="TimeLimit___Bliksem---1.12" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Bliksem---1.12" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___Bliksem---1.12" value="bliksem" size="20" /><TD>
+<input type="text" name="Command___Bliksem---1.12" value="bliksem %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___CARINE---0.734" VALUE="CARINE---0.734">&nbsp;<A HREF="http://www.cs.mcgill.ca/~pharoun/atp_carine_site">CARINE</A>&nbsp;0.734
+<TD>
+<input type="text" name="TimeLimit___CARINE---0.734" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___CARINE---0.734" value="none" size="20" /><TD>
+<input type="text" name="Format___CARINE---0.734" value="carine" size="20" /><TD>
+<input type="text" name="Command___CARINE---0.734" value="carine %s t=%d xo=off uct=32000" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___CiME---2.01" VALUE="CiME---2.01">&nbsp;<A HREF="http://cime.lri.fr/">CiME</A>&nbsp;2.01
+<TD>
+<input type="text" name="TimeLimit___CiME---2.01" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___CiME---2.01" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___CiME---2.01" value="tptp" size="20" /><TD>
+<input type="text" name="Command___CiME---2.01" value="tptp2cime %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___CoDe---3.00" VALUE="CoDe---3.00">&nbsp;CoDe&nbsp;3.00
+<TD>
+<input type="text" name="TimeLimit___CoDe---3.00" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___CoDe---3.00" value="none" size="20" /><TD>
+<input type="text" name="Format___CoDe---3.00" value="code" size="20" /><TD>
+<input type="text" name="Command___CoDe---3.00" value="code3 -FE -c- -d- -e- -f- %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___DCTP---1.31" VALUE="DCTP---1.31">&nbsp;<A HREF="http://www.mpi-sb.mpg.de/~stenz/dctp-sb.html">DCTP</A>&nbsp;1.31
+<TD>
+<input type="text" name="TimeLimit___DCTP---1.31" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___DCTP---1.31" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___DCTP---1.31" value="tptp" size="20" /><TD>
+<input type="text" name="Command___DCTP---1.31" value="dctp-wrapper -negpref -complexity -fullrewrite -alternate -resisol %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___DCTP---1.31-EPR" VALUE="DCTP---1.31-EPR">&nbsp;<A HREF="http://www.mpi-sb.mpg.de/~stenz/dctp-sb.html">DCTP</A>&nbsp;1.31-EPR
+<TD>
+<input type="text" name="TimeLimit___DCTP---1.31-EPR" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___DCTP---1.31-EPR" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___DCTP---1.31-EPR" value="tptp" size="20" /><TD>
+<input type="text" name="Command___DCTP---1.31-EPR" value="dctp-wrapper -global -pospref -fullrewrite -alternate -resisol %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___DCTP---1.31-SAT" VALUE="DCTP---1.31-SAT">&nbsp;<A HREF="http://www.mpi-sb.mpg.de/~stenz/dctp-sb.html">DCTP</A>&nbsp;1.31-SAT
+<TD>
+<input type="text" name="TimeLimit___DCTP---1.31-SAT" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___DCTP---1.31-SAT" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___DCTP---1.31-SAT" value="tptp" size="20" /><TD>
+<input type="text" name="Command___DCTP---1.31-SAT" value="dctp-wrapper -negpref -complexity -fullrewrite -alternate -resisol -global -minselect -split %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___DCTP---10.21p" VALUE="DCTP---10.21p">&nbsp;<A HREF="http://www.mpi-sb.mpg.de/~stenz/dctp-sb.html">DCTP</A>&nbsp;10.21p
+<TD>
+<input type="text" name="TimeLimit___DCTP---10.21p" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___DCTP---10.21p" value="none" size="20" /><TD>
+<input type="text" name="Format___DCTP---10.21p" value="tptp" size="20" /><TD>
+<input type="text" name="Command___DCTP---10.21p" value="bin/dctp-10.21p %s %d" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___DCTP---10.21p-SAT" VALUE="DCTP---10.21p-SAT">&nbsp;<A HREF="http://www.mpi-sb.mpg.de/~stenz/dctp-sb.html">DCTP</A>&nbsp;10.21p-SAT
+<TD>
+<input type="text" name="TimeLimit___DCTP---10.21p-SAT" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___DCTP---10.21p-SAT" value="none" size="20" /><TD>
+<input type="text" name="Format___DCTP---10.21p-SAT" value="tptp" size="20" /><TD>
+<input type="text" name="Command___DCTP---10.21p-SAT" value="bin/dctp-10.21p-sat %s %d" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Darwin---040827" VALUE="Darwin---040827">&nbsp;<A HREF="http://www.mpi-sb.mpg.de/~baumgart/DARWIN/">Darwin</A>&nbsp;040827
+<TD>
+<input type="text" name="TimeLimit___Darwin---040827" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Darwin---040827" value="none" size="20" /><TD>
+<input type="text" name="Format___Darwin---040827" value="protein" size="20" /><TD>
+<input type="text" name="Command___Darwin---040827" value="darwin -umx true %s " size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Dilemma---0.1" VALUE="Dilemma---0.1">&nbsp;<A HREF="http://www.cs.chalmers.se/~mab/">Dilemma</A>&nbsp;0.1
+<TD>
+<input type="text" name="TimeLimit___Dilemma---0.1" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Dilemma---0.1" value="none" size="20" /><TD>
+<input type="text" name="Format___Dilemma---0.1" value="tptp" size="20" /><TD>
+<input type="text" name="Command___Dilemma---0.1" value="dilemma -o silent %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___E---0.82" VALUE="E---0.82">&nbsp;<A HREF="http://www.eprover.org/">E</A>&nbsp;0.82
+<TD>
+<input type="text" name="TimeLimit___E---0.82" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___E---0.82" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___E---0.82" value="tptp" size="20" /><TD>
+<input type="text" name="Command___E---0.82" value="eprover -s --print-statistics -xAuto -tAuto --memory-limit=192 --tptp-in %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___E-SETHEO---csp04" VALUE="E-SETHEO---csp04">&nbsp;<A HREF="http://www4.informatik.tu-muenchen.de/~schulz/WORK/e-setheo.html">E-SETHEO</A>&nbsp;csp04
+<TD>
+<input type="text" name="TimeLimit___E-SETHEO---csp04" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___E-SETHEO---csp04" value="none" size="20" /><TD>
+<input type="text" name="Format___E-SETHEO---csp04" value="tptp" size="20" /><TD>
+<input type="text" name="Command___E-SETHEO---csp04" value="bin/run-e-setheo %s %d" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___E-SETHEO---csp04-SAT" VALUE="E-SETHEO---csp04-SAT">&nbsp;<A HREF="http://www4.informatik.tu-muenchen.de/~schulz/WORK/e-setheo.html">E-SETHEO</A>&nbsp;csp04-SAT
+<TD>
+<input type="text" name="TimeLimit___E-SETHEO---csp04-SAT" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___E-SETHEO---csp04-SAT" value="none" size="20" /><TD>
+<input type="text" name="Format___E-SETHEO---csp04-SAT" value="tptp" size="20" /><TD>
+<input type="text" name="Command___E-SETHEO---csp04-SAT" value="bin/run-e-setheo-sat %s %d" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___EP---0.82" VALUE="EP---0.82">&nbsp;<A HREF="http://www.eprover.org/">EP</A>&nbsp;0.82
+<TD>
+<input type="text" name="TimeLimit___EP---0.82" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___EP---0.82" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___EP---0.82" value="tptp" size="20" /><TD>
+<input type="text" name="Command___EP---0.82" value="eproof --print-statistics -xAuto -tAuto --memory-limit=192 --tptp-in --tstp-out %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___EQP---0.9d" VALUE="EQP---0.9d">&nbsp;<A HREF="http://www-unix.mcs.anl.gov/AR/eqp/">EQP</A>&nbsp;0.9d
+<TD>
+<input type="text" name="TimeLimit___EQP---0.9d" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___EQP---0.9d" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___EQP---0.9d" value="eqp" size="20" /><TD>
+<input type="text" name="Command___EQP---0.9d" value="eqp_wrapper %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___FDP---0.9.16" VALUE="FDP---0.9.16">&nbsp;<A HREF="http://www.uni-koblenz.de/~peter/FDPLL/">FDP</A>&nbsp;0.9.16
+<TD>
+<input type="text" name="TimeLimit___FDP---0.9.16" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___FDP---0.9.16" value="none" size="20" /><TD>
+<input type="text" name="Format___FDP---0.9.16" value="protein" size="20" /><TD>
+<input type="text" name="Command___FDP---0.9.16" value="fdp-casc %s %d" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Fiesta---2" VALUE="Fiesta---2">&nbsp;Fiesta&nbsp;2
+<TD>
+<input type="text" name="TimeLimit___Fiesta---2" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Fiesta---2" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___Fiesta---2" value="dedam" size="20" /><TD>
+<input type="text" name="Command___Fiesta---2" value="fiesta-wrapper %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Gandalf---c-2.6" VALUE="Gandalf---c-2.6">&nbsp;<A HREF="http://www.ttu.ee/it/gandalf/">Gandalf</A>&nbsp;c-2.6
+<TD>
+<input type="text" name="TimeLimit___Gandalf---c-2.6" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Gandalf---c-2.6" value="rm_equality:stfp" size="20" /><TD>
+<input type="text" name="Format___Gandalf---c-2.6" value="otter:hypothesis:set(auto),clear(print_given)" size="20" /><TD>
+<input type="text" name="Command___Gandalf---c-2.6" value="gandalf-wrapper -time %d %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Gandalf---c-2.6-PRF" VALUE="Gandalf---c-2.6-PRF">&nbsp;<A HREF="http://www.ttu.ee/it/gandalf/">Gandalf</A>&nbsp;c-2.6-PRF
+<TD>
+<input type="text" name="TimeLimit___Gandalf---c-2.6-PRF" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Gandalf---c-2.6-PRF" value="rm_equality:stfp" size="20" /><TD>
+<input type="text" name="Format___Gandalf---c-2.6-PRF" value="otter:hypothesis:set(auto),clear(print_given)" size="20" /><TD>
+<input type="text" name="Command___Gandalf---c-2.6-PRF" value="gandalf-wrapper -time %d -proof %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Gandalf---c-2.6-SAT" VALUE="Gandalf---c-2.6-SAT">&nbsp;<A HREF="http://www.ttu.ee/it/gandalf/">Gandalf</A>&nbsp;c-2.6-SAT
+<TD>
+<input type="text" name="TimeLimit___Gandalf---c-2.6-SAT" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Gandalf---c-2.6-SAT" value="rm_equality:stfp" size="20" /><TD>
+<input type="text" name="Format___Gandalf---c-2.6-SAT" value="otter:hypothesis:set(auto),clear(print_given)" size="20" /><TD>
+<input type="text" name="Command___Gandalf---c-2.6-SAT" value="gandalf-wrapper -time %d -sat %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___GrAnDe---1.1" VALUE="GrAnDe---1.1">&nbsp;<A HREF="http://www.cs.miami.edu/~tptp/ATPSystems/GrAnDe/">GrAnDe</A>&nbsp;1.1
+<TD>
+<input type="text" name="TimeLimit___GrAnDe---1.1" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___GrAnDe---1.1" value="none" size="20" /><TD>
+<input type="text" name="Format___GrAnDe---1.1" value="tptp" size="20" /><TD>
+<input type="text" name="Command___GrAnDe---1.1" value="And %s %d" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___MUSCADET---2.4" VALUE="MUSCADET---2.4">&nbsp;<A HREF="http://www.math-info.univ-paris5.fr/~pastre/muscadet/muscadet.html">MUSCADET</A>&nbsp;2.4
+<TD>
+<input type="text" name="TimeLimit___MUSCADET---2.4" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___MUSCADET---2.4" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___MUSCADET---2.4" value="tptp" size="20" /><TD>
+<input type="text" name="Command___MUSCADET---2.4" value="muscadet %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Mace2---2.2" VALUE="Mace2---2.2">&nbsp;<A HREF="http://www.mcs.anl.gov/home/mccune/ar/mace">Mace2</A>&nbsp;2.2
+<TD>
+<input type="text" name="TimeLimit___Mace2---2.2" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Mace2---2.2" value="rm_equality:stfp" size="20" /><TD>
+<input type="text" name="Format___Mace2---2.2" value="otter:hypothesis:set(auto),clear(print_given)" size="20" /><TD>
+<input type="text" name="Command___Mace2---2.2" value="mace-script %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Mace4---2004-D" VALUE="Mace4---2004-D">&nbsp;<A HREF="http://www-unix.mcs.anl.gov/AR/mace4/">Mace4</A>&nbsp;2004-D
+<TD>
+<input type="text" name="TimeLimit___Mace4---2004-D" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Mace4---2004-D" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___Mace4---2004-D" value="mace4" size="20" /><TD>
+<input type="text" name="Command___Mace4---2004-D" value="mace-script %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Otter---3.3" VALUE="Otter---3.3">&nbsp;<A HREF="http://www.mcs.anl.gov/home/mccune/ar/otter">Otter</A>&nbsp;3.3
+<TD>
+<input type="text" name="TimeLimit___Otter---3.3" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Otter---3.3" value="rm_equality:stfp" size="20" /><TD>
+<input type="text" name="Format___Otter---3.3" value="otter:hypothesis:set(auto),clear(print_given)" size="20" /><TD>
+<input type="text" name="Command___Otter---3.3" value="otter-script %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Paradox---1.0" VALUE="Paradox---1.0">&nbsp;<A HREF="http://www.cs.chalmers.se/~koen/paradox">Paradox</A>&nbsp;1.0
+<TD>
+<input type="text" name="TimeLimit___Paradox---1.0" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Paradox---1.0" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___Paradox---1.0" value="tptp" size="20" /><TD>
+<input type="text" name="Command___Paradox---1.0" value="paradox --print Model %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Paradox---1.1" VALUE="Paradox---1.1">&nbsp;<A HREF="http://www.cs.chalmers.se/~koen/paradox">Paradox</A>&nbsp;1.1
+<TD>
+<input type="text" name="TimeLimit___Paradox---1.1" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Paradox---1.1" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___Paradox---1.1" value="tptp" size="20" /><TD>
+<input type="text" name="Command___Paradox---1.1" value="paradox --print Model %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___S-SETHEO---0.0" VALUE="S-SETHEO---0.0">&nbsp;<A HREF="http://www4.informatik.tu-muenchen.de/~letz/setheo/">S-SETHEO</A>&nbsp;0.0
+<TD>
+<input type="text" name="TimeLimit___S-SETHEO---0.0" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___S-SETHEO---0.0" value="none" size="20" /><TD>
+<input type="text" name="Format___S-SETHEO---0.0" value="tptp" size="20" /><TD>
+<input type="text" name="Command___S-SETHEO---0.0" value="scheme-setheo -foldup -sgindex -indexfoldup -reg -mate -dynsgreord 0 %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___SATO---3.2.1" VALUE="SATO---3.2.1">&nbsp;<A HREF="http://www.cs.uiowa.edu/~hzhang/sato/">SATO</A>&nbsp;3.2.1
+<TD>
+<input type="text" name="TimeLimit___SATO---3.2.1" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___SATO---3.2.1" value="none" size="20" /><TD>
+<input type="text" name="Format___SATO---3.2.1" value="dimacs" size="20" /><TD>
+<input type="text" name="Command___SATO---3.2.1" value="sato-wrapper %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___SCOTT---6.1" VALUE="SCOTT---6.1">&nbsp;<A HREF="http://discus.anu.edu.au/software/scott/">SCOTT</A>&nbsp;6.1
+<TD>
+<input type="text" name="TimeLimit___SCOTT---6.1" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___SCOTT---6.1" value="rm_equality:stfp+stdfof" size="20" /><TD>
+<input type="text" name="Format___SCOTT---6.1" value="scott:hypothesis:conjecture:none" size="20" /><TD>
+<input type="text" name="Command___SCOTT---6.1" value="scott-wrapper %d %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___SEM---1.7" VALUE="SEM---1.7">&nbsp;<A HREF="http://www.cs.uiowa.edu/~hzhang/sem.html">SEM</A>&nbsp;1.7
+<TD>
+<input type="text" name="TimeLimit___SEM---1.7" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___SEM---1.7" value="none" size="20" /><TD>
+<input type="text" name="Format___SEM---1.7" value="sem:all:1" size="20" /><TD>
+<input type="text" name="Command___SEM---1.7" value="SEMIterate %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___SETHEO---3.3" VALUE="SETHEO---3.3">&nbsp;<A HREF="http://www4.informatik.tu-muenchen.de/~letz/setheo/">SETHEO</A>&nbsp;3.3
+<TD>
+<input type="text" name="TimeLimit___SETHEO---3.3" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___SETHEO---3.3" value="none" size="20" /><TD>
+<input type="text" name="Format___SETHEO---3.3" value="setheo" size="20" /><TD>
+<input type="text" name="Command___SETHEO---3.3" value="setheo-wrapper %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___SNARK---20031012b" VALUE="SNARK---20031012b">&nbsp;<A HREF="http://www.ai.sri.com/~stickel/snark.html">SNARK</A>&nbsp;20031012b
+<TD>
+<input type="text" name="TimeLimit___SNARK---20031012b" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___SNARK---20031012b" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___SNARK---20031012b" value="kif" size="20" /><TD>
+<input type="text" name="Command___SNARK---20031012b" value="run-snark %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___SOS---1.0" VALUE="SOS---1.0">&nbsp;<A HREF="http://csl.anu.edu.au/~jks/software/sos.tar.gz">SOS</A>&nbsp;1.0
+<TD>
+<input type="text" name="TimeLimit___SOS---1.0" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___SOS---1.0" value="rm_equality:stfp" size="20" /><TD>
+<input type="text" name="Format___SOS---1.0" value="otter:hypothesis:set(auto),clear(print_given)" size="20" /><TD>
+<input type="text" name="Command___SOS---1.0" value="sos-script %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___SPASS---2.1" VALUE="SPASS---2.1">&nbsp;<A HREF="http://spass.mpi-sb.mpg.de/">SPASS</A>&nbsp;2.1
+<TD>
+<input type="text" name="TimeLimit___SPASS---2.1" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___SPASS---2.1" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___SPASS---2.1" value="dfg" size="20" /><TD>
+<input type="text" name="Command___SPASS---2.1" value="SPASS -PGiven=0 -PProblem=0 -DocProof -TimeLimit=%d %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Skippy---0.0" VALUE="Skippy---0.0">&nbsp;Skippy&nbsp;0.0
+<TD>
+<input type="text" name="TimeLimit___Skippy---0.0" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Skippy---0.0" value="none" size="20" /><TD>
+<input type="text" name="Format___Skippy---0.0" value="tptp" size="20" /><TD>
+<input type="text" name="Command___Skippy---0.0" value="Skippy %s %d" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___THEO---J2004" VALUE="THEO---J2004">&nbsp;THEO&nbsp;J2004
+<TD>
+<input type="text" name="TimeLimit___THEO---J2004" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___THEO---J2004" value="none" size="20" /><TD>
+<input type="text" name="Format___THEO---J2004" value="tptp" size="20" /><TD>
+<input type="text" name="Command___THEO---J2004" value="theo %s -l r1 L1 tptp w0" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Vampire---7.0" VALUE="Vampire---7.0">&nbsp;<A HREF="http://www.cs.man.ac.uk/~riazanoa/Vampire/">Vampire</A>&nbsp;7.0
+<TD>
+<input type="text" name="TimeLimit___Vampire---7.0" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Vampire---7.0" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___Vampire---7.0" value="tptp" size="20" /><TD>
+<input type="text" name="Command___Vampire---7.0" value="vampire -t %d %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Vampire---7.0-CASC" VALUE="Vampire---7.0-CASC">&nbsp;<A HREF="http://www.cs.man.ac.uk/~riazanoa/Vampire/">Vampire</A>&nbsp;7.0-CASC
+<TD>
+<input type="text" name="TimeLimit___Vampire---7.0-CASC" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Vampire---7.0-CASC" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___Vampire---7.0-CASC" value="tptp" size="20" /><TD>
+<input type="text" name="Command___Vampire---7.0-CASC" value="vampire --mode casc-j2 -t %d %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___Waldmeister---704" VALUE="Waldmeister---704">&nbsp;<A HREF="http://www.waldmeister.org/">Waldmeister</A>&nbsp;704
+<TD>
+<input type="text" name="TimeLimit___Waldmeister---704" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___Waldmeister---704" value="rm_equality:rstfp" size="20" /><TD>
+<input type="text" name="Format___Waldmeister---704" value="waldmeister" size="20" /><TD>
+<input type="text" name="Command___Waldmeister---704" value="WaldmeisterII.comp %s" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___ZChaff---2003.7.1" VALUE="ZChaff---2003.7.1">&nbsp;<A HREF="http://www.ee.princeton.edu/~chaff/zchaff.php">ZChaff</A>&nbsp;2003.7.1
+<TD>
+<input type="text" name="TimeLimit___ZChaff---2003.7.1" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___ZChaff---2003.7.1" value="none" size="20" /><TD>
+<input type="text" name="Format___ZChaff---2003.7.1" value="dimacs" size="20" /><TD>
+<input type="text" name="Command___ZChaff---2003.7.1" value="zchaff %s %d" size="20" /><TR ALIGN=LEFT>
+<TD>
+<INPUT TYPE="CHECKBOX" NAME="System___tptp2X---Only" VALUE="tptp2X---Only">&nbsp;tptp2X&nbsp;Only
+<TD>
+<input type="text" name="TimeLimit___tptp2X---Only" value="100" size="3" maxlength="3" />&nbsp;seconds
+<TD>
+<input type="text" name="Transform___tptp2X---Only" value="none" size="20" /><TD>
+<input type="text" name="Format___tptp2X---Only" value="tptp" size="20" /><TD>
+<input type="text" name="Command___tptp2X---Only" value="dummy_tptp2X %s" size="20" /></TABLE>
+</form><HR>
+</body></html>

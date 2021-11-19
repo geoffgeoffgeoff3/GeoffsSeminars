@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE> Implementation and Results </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Implementation and Results </H1>
+
+<IMG SRC="../RedAx/RedAx.GIF" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Implementation </H3>
+
+<UL>
+<LI> Implemented in the 
+     <A HREF="http://www.cs.miami.edu/~TPTP/ATPSystems/RedAx/">RedAx</A>
+     meta-ATP system
+<LI> Submission to the object ATP system through
+     <A HREF="http://www.cs.jcu.edu.au/cgi-bin/tptp/SystemOnTPTPFormMaker">
+     SystemOnTPTP</A>
+</UL>
+
+<H3> Testing </H3>
+
+<UL>
+<LI> With SPASS 2.0
+     <UL>
+     <LI> 60 FOF problems from the TPTP, randomly selected from the 426 
+          with axioms that SPASS could not solve in 600s
+     <LI> 3600s time limit, 60s per axiom reduced problem ...
+          <TABLE>
+          <TR> <TH ALIGN=LEFT> 
+               <TH> SPASS 2.0
+               <TH> RedAx
+               <TH> Both
+          <TR> <TD> Solved
+               <TD ALIGN=CENTER> 7
+               <TD ALIGN=CENTER> 14
+               <TD ALIGN=CENTER> 6
+          </TABLE>
+     <LI> <A HREF="ResultsTables.html">Results table ...</A>
+     </UL>
+<LI> With Vampire 5.0
+     <UL>
+     <LI> 73 FOF set theory and geometry problems from the TPTP, 
+          with a difficulty rating of 1.00
+     <LI> 3600s time limit, 60s per axiom reduced problem ...
+          <TABLE>
+          <TR> <TH ALIGN=LEFT> 
+               <TH> Vampire 5.0
+               <TH> RedAx
+               <TH> Both
+          <TR> <TD> Solved
+               <TD ALIGN=CENTER> 0
+               <TD ALIGN=CENTER> 4
+               <TD ALIGN=CENTER> 0
+          </TABLE>
+     <LI> <A HREF="ResultsTables.html">Results table ...</A>
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

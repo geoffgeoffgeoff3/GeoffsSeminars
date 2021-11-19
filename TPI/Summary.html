@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<TITLE> TPI </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var currentImage = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'TPTPTPITSTP.gif';
+  images[1]     = new Image();
+  images[1].src = 'ATPProcess.gif';
+  images[2]     = new Image();
+  images[2].src = 'MinStratSched.jpg';
+  images[3]     = new Image();
+  images[3].src = 'GoedelGod.jpg';
+
+  function putImage(index) {
+      currentImage = index;
+      document.images['image'].src = images[index].src;
+  }
+
+  function largeImage() {
+    switch (currentImage) {
+    case 0:
+      window.location = "Applications.html";
+      break;
+    case 1:
+      window.location = "ATPProcessGIF.html";
+      break;
+    case 2:
+      window.location = "MinStratSchedJPG.html";
+      break;
+    case 3:
+      window.location = "GoedelGodJPG.html";
+      break;
+    }
+    return false;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TPI - The TPTP Process Instruction Language</H1>
+
+<A HREF="" onClick="largeImage();return false">
+<IMG NAME="image" SRC="TPTPTPITSTP.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<A HREF="MotivationAims.html"><H3> What, Why, How? </H3></A>
+<UL>
+<LI> Existing languages only for logical formulae
+<LI> Need ways to control ATP systems
+<LI> Input/output, grouping, manipulation of logical formulae
+<LI> ATP system execution
+<LI> Environment variable manipulation, and utility commands
+<LI> <A HREF="http://www.tptp.org/Seminars/TPI/Examples.html">
+     Some Examples</A>
+</UL>
+
+<A HREF="Interpreters.html"><H3> TPI Interpreters </H3></A>
+<UL>
+<LI> TPII
+     <UL>
+     <LI> TPI interpreter without reasoning capability
+     <LI> TPI commands and logical formulae interleaved
+     </UL>
+<LI> TPI in your Shell
+     <UL>
+     <LI> <TT>perl</TT> script to execute TPI commands from shell (script)
+     <LI> Allows use of shell programming
+     </UL>
+</UL>
+
+<A HREF="Applications.html"><H3> Applications </H3></A>
+<UL>
+<LI> ATP Process 
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="ATPProcess.gif" BORDER=0 WIDTH=20></A>
+     <A HREF="ATPProcess.txt">The Script</A> and the
+     <A HREF="ATPProcessParallel.txt">The Parallelized Script</A>
+<LI> Minimized Strategy Scheduling
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="MinStratSched.jpg" BORDER=0 WIDTH=20></A>
+     <A HREF="MinStratSched.txt">The Script</A>
+<LI> G&ouml;del's Proof of God
+     <A HREF="" onClick="putImage(3);return false">
+     <IMG SRC="GoedelGod.jpg" BORDER=0 WIDTH=20></A>
+     <A HREF="GoedelGod.txt">The Script</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

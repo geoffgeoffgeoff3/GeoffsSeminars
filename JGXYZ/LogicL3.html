@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<TITLE> The Logic L3 </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'LogicL3.jpg';
+  images[1]     = new Image();
+  images[1].src = '../FDE/Diamonds.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The Logic &#0321;3 
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="LogicL3.jpg" ALIGN=RIGHT WIDTH=20%>
+</A>
+
+<UL>
+<LI> A Hollow Logic (with a Gap)
+     <UL>
+     <LI> Three-valued logic - 
+              <EM>true</EM> (<B>T</B>)
+          and <EM>neither</EM> (<B>N</B>)
+          and <EM>false</EM> (<B>F</B>) 
+     <LI> The designated value is 
+              <EM>true</EM> (<B>T</B>) 
+     </UL>
+<P>
+<LI> Connectives - classical plus ...
+     <TABLE BORDER=0>
+     <TR> <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &psi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &not;&phi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&and;&psi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&or;&psi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&rarr;&psi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&harr;&psi;
+     <TR> <TD COLSPAN=8> <HR>
+     <TR> <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+     <TR> <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>N</B>
+     <TR> <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+     <TR> <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>N</B>
+     </TABLE>
+<P>
+<LI> Interpretation, models, and logical consequence as for 
+     <A HREF="../RM3/ClassicalFOL.html">classical FOL</A>
+     <UL>
+     <LI> Some theorems of classical logic are not theorems of &#0321;3
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

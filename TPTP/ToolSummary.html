@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP Tools </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'Tools.jpg';
+  images[1]     = new Image();
+  images[1].src = '2X4X.GIF';
+  images[2]     = new Image();
+  images[2].src = '../GDV/Spagetti.GIF';
+  images[3]     = new Image();
+  images[3].src = '../IDV/IDVMouseOver.GIF';
+  images[4]     = new Image();
+  images[4].src = 'Tick.GIF';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TPTP Tools
+     <A HREF="" onClick="putImage(0);return false">
+     <IMG SRC="Tools.jpg" BORDER=0 HEIGHT=20></A>
+</H1>
+
+<IMG NAME="image" SRC="Tools.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<A HREF="TPTPNX.html">
+<H3> TPTP2X and TPTP4X</A>
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="2X4X.GIF" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL>
+<LI> Transform problems and solutions
+<LI> Convert TPTP problems to formats used by existing ATP systems
+<LI> Generate parameterized problems
+</UL>
+
+<A HREF="../GDV/Summary.html">
+<H3> Derivation Verification</A>
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="../GDV/Spagetti.GIF" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL>
+<LI> Structural verification of derivations
+<LI> Semantic verification of derivations
+</UL>
+
+<A HREF="../IDV/Summary.html">
+<H3> Derivation Viewing</A>
+     <A HREF="" onClick="putImage(3);return false">
+     <IMG SRC="../IDV/IDVMouseOver.GIF" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL>
+<LI> Interactive derivation viewing
+<LI> Derivation synopses
+<LI> Interface to GDV
+</UL>
+
+<H3> Parsers and Type Checkers
+     <A HREF="" onClick="putImage(4);return false">
+     <IMG SRC="Tick.GIF" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL>
+<LI> Hand-rolled and BNF-based parsing
+<LI> Simple and Twelf-based type checking
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+%----Andrew, Betty, and Charlie are (different) people
+thf(person_type,type,( person: $tType )).
+
+thf(andrew_type,type,( andrew: person )).
+
+thf(betty_type,type,( betty: person )).
+
+thf(charlie_type,type,( charlie: person )).
+
+thf(andrew_not_betty,axiom,(
+    andrew != betty )).
+
+thf(andrew_not_charlie,axiom,(
+    andrew != charlie )).
+
+thf(betty_not_charlie,axiom,(
+    betty != charlie )).
+
+%----Andrew loves himself, Betty does not love herself
+thf(loves_type,type,(
+    loves: person > person > $o )).
+
+thf(andrew_loves_himself,axiom,(
+    loves @ andrew @ andrew )).
+
+thf(not_betty_loves_herself,axiom,(
+    ~ ( loves @ betty @ betty ) )).
+
+%----Selfish love is a relationship between two (different) people in which
+%----the second person loves themself (and the first person is ignored).
+thf(selfish_love_type,type,(
+    selfish_love: person > person > $o )).
+
+thf(selfish_love,axiom,
+    ( selfish_love
+    = ( ^ [X: person,Y: person] :
+          ( ( X != Y )
+          & ( loves @ Y @ Y ) ) ) )).
+
+%----Prove that there exists a property of a person that is true for Andrew
+%----but not for Betty.
+thf(reflexive_person,conjecture,(
+    ? [P: person > $o] :
+      ( ( P @ andrew )
+      & ~ ( P @ betty) ) )).
+
+%----Answer: The property is (selfish_love @ charlie)
+%----This can be proved
+% thf(test,conjecture,
+%     ( ( ( selfish_love @ charlie ) @ andrew )
+%     & ~ ( ( selfish_love @ charlie ) @ betty ) ) ).

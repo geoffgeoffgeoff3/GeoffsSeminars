@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE> The Deathly Dilemma </TITLE>
+</HEAD>
+<!------------------------------------------------------------------------>
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The Deathly Dilemma </H1>
+
+<A HREF="FourDilemmas.html">
+<IMG SRC="FourDilemmas.png" ALIGN=RIGHT WIDTH=33%></A>
+</A>
+
+<H3> The Scenarios </H3>
+<UL>
+<LI> Self-driving car, passengers, pedestrians, crossings with(out) lights, 
+     barriers
+<LI> 7 life dimensions<BR>
+     &bull; Type; &bull; Age; &bull; Gender; &bull; Pregnancy;<BR>
+     &bull; Health; &bull; Social status; &bull; Lawfulness
+<LI> Self-driving car can go straight or swerve
+<LI> What should the self-driving car do? <B>Who dies?</B>
+</UL>
+
+<H3> The Logic Model (<A HREF="" onClick="hideshow('p1');return false;">click</A>)</H3>
+<SPAN ID="p1" style="display:none">
+<OL>
+<LI> Do the scenarios, make choice, write down reason
+<LI> Encode scenario and death calculation axioms
+<LI> Encode morality axioms
+<LI> Configure Vampire for arithmetic and question answering
+<LI> Conjecture what the car should do, run Vampire, be surprised 
+<LI> Adjust morality (axioms)
+<LI> Goto 2
+</OL>
+</SPAN>
+
+<H3> The Math Model (<A HREF="" onClick="hideshow('p2');return false;">click</A>)</H3>
+<SPAN ID="p2" style="display:none">
+<OL>
+<LI> Value dimensions<BR>
+     &bull; Important;
+     &bull; Somewhat important;
+     &bull; Not important.
+<LI> Unique ranking in dimensions<BR>
+     &bull; Really want to save;
+     &bull; Kinda want to save;
+     &bull; Indifferent;
+     &bull; Willing to kill.
+<LI> Math formula to compute value of group of lives
+     <UL>
+     <LI> Multiplier for dimension value
+     <LI> Score for value ranking (deal with unknown and N/A cases)
+     <LI> Predict highest scored group is saved
+     </UL>
+</OL>
+</SPAN>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

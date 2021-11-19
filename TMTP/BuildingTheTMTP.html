@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE> Building the TMTP </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Model4.jpg';
+  images[1]     = new Image();
+  images[1].src = 'SampleTMTPFile.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Building the TMTP
+</H1>
+
+<A HREF="SampleTMTPFile.txt">
+<IMG NAME="image" SRC="Model4.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Collecting Models </H3>
+<UL>
+<LI> Models created automatically as part of TSTP updates
+<LI> Copy "<A HREF="Examining.html">new</A>" models from TSTP to TMTP
+</UL>
+
+<H3> Model Files </H3>
+<UL>
+<LI> <A HREF="" onClick="putImage();return false">
+     <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A>
+<LI> Divided into domains, like the TPTP and TSTP
+<LI> Files named <TT><EM>DDDNNNFV.MMM-SZS</EM>.m</TT>
+     <UL>
+     <LI> <TT><EM>DDDNNNFV</EM></TT> is the TPTP problem name
+     <LI> <TT><EM>MMM</EM></TT> is the model number
+     <LI> <TT><EM>SZS</EM></TT> is the <A HREF="SZSInterpretationsGIF.html">
+          SZS dataform</A>, e.g., <TT>FMo, <TT>Sat</TT></TT>
+     </UL>
+<LI> Header section
+     <UL>
+     <LI> Model finder information
+     <LI> Resources given and used
+     <LI> Model properties and statistics
+     <LI> Comments
+     </UL>
+<LI> <A HREF="InterpretationFormats.html">Formula section</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

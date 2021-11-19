@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE> Surprisingness </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Surprisingness </H1>
+
+<IMG SRC="JackInABox.JPG" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Surprisingness </H3>
+<UL>
+<LI> New relationships between concepts
+<LI> Techniques
+     <UL>
+     <LI> Look for new combinations of predicates and functions
+     </UL>
+<LI> Examples
+     <UL>
+     <LI> It would be surprising if: 
+          <PRE>! [X] :
+  ( shoe_size(X)
+ => prime(X) ) </PRE>
+     </UL>
+</UL>
+
+<H3> Implementation </H3>
+<UL>
+<LI> Measure new co-occurences of symbols relative to axioms
+<LI> <EM>Repetitivity</EM> (of a symbol pair) =
+     1 - (NumberOfAxiomsWithBoth / NumberOfAxiomsWithEither)
+<LI> <EM>Surprisingness</EM> =
+     Sum of repetitivities of symbol pairs in the theorem
+<LI> High surprisingness is good
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE> Symbol Overlap </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Symbol Overlap </H1>
+
+<A HREF="RelevanceGIF.html">
+<IMG SRC="Relevance.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Contextual Direct Relevance </H3>
+<UL>
+<LI> The <EM>contextual intersection</EM> &Pi;<SUB><TT>SetF</TT></SUB>(<TT>F<SUB>i</SUB></TT>,<TT>F<SUB>j</SUB></TT>), 
+     <TT>F<SUB>i</SUB></TT>,<TT>F<SUB>j</SUB></TT>&isin;<TT>SetF</TT>, is
+     <PRE>
+                           |{f:f&isin;SetF,s&isin;sym(f)}|
+<FONT SIZE=+2>&sum;</FONT>                   ( 1 - --------------------- )
+s &isin; sym(F<SUB>i</SUB>)&cap;sym(F<SUB>j</SUB>)               |SetF| </PRE>
+<LI> The <EM>contextual direct relevance</EM> between <TT>F<SUB>i</SUB></TT>
+     and <TT>F<SUB>j</SUB></TT> is
+<P>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>&Pi;<SUB><TT>SetF</TT></SUB>(<TT>F<SUB>i</SUB></TT>,<TT>F<SUB>j</SUB></TT>)<BR>
+<TT>-------------------</TT><BR>
+<TT>|sym(F<SUB>i</SUB>) &cup; sym(F<SUB>j</SUB>)|</TT>
+</UL>
+
+<H3> Contextual Indirect Relevance </H3>
+<UL>
+<LI> The <EM>weakest link relevance</EM> of the chain 
+     <TT>F<SUB>0</SUB>-F<SUB>1</SUB>- ... -F<SUB>n</SUB></TT> is
+     <PRE>
+min    contextual-direct-relevance(F<SUB>i-1</SUB>,F<SUB>i</SUB>)
+i=1..n
+-------------------------------------------
+                    n</PRE>
+<LI> The <EM>contextual indirect relevance</EM> between
+     <TT>F<SUB>0</SUB></TT> and <TT>F<SUB>n</SUB></TT> is
+     <PRE>
+max weakest-link-relevance(F<SUB>0</SUB>,F<SUB>n</SUB>) </PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

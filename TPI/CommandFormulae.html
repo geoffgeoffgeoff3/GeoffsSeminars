@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> TPI Command Formulae </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+TPI Command Formulae
+</H1>
+
+<IMG SRC="Command.jpg" ALIGN=RIGHT WIDTH=25%>
+
+<H3> Structure </H3>
+<UL>
+<LI> TPTP logical formulae<BR>
+     &nbsp;&nbsp;<EM>language</EM><TT>(</TT><EM>name</EM><TT>,</TT><EM>role</EM><TT>,</TT><EM>formula</EM><TT>,</TT>[<EM>source</EM>[<TT>,</TT><EM>useful info</EM>]]<TT>).</TT>
+<LI> TPI command formulae<BR>
+     &nbsp;&nbsp;<TT>tpi(</TT><EM>name</EM><TT>,</TT><EM>command</EM><TT>,</TT><EM>details</EM><TT>,</TT>[<EM>source</EM>[<TT>,</TT><EM>useful info</EM>]]<TT>).</TT>
+<LI> Command and logical formulae interleaved - order matters
+</UL>
+
+<H3> Example, run with <TT>my_tpi_system Simple.tpi 300</TT> </H3>
+<PRE>
+    tpi(1,input,'Axioms/SET006+0.ax').
+    fof(thI14,conjecture,
+        ( ! [A] : equal_set(union(A,A),A) )).
+    tpi(2,execute,'SZS_STATUS' =
+        'eprover --auto --cpu-limit=$getargv(0) --tstp-format $getgroups(tpi)').
+    tpi(3,write,'Status:' & $getenv('SZS_STATUS')).
+    tpi(4,exit,exit(27)).
+</PRE>
+
+<H3> Implicit <TT>execute,self</TT> </H3>
+     <UL>
+     <LI> <TT>execute,self</TT> is implied at EOF if no <TT>exit</TT>
+     <LI> Existing problem files are TPI files!<BR>
+          Existing ATP systems are TPI systems!
+     </UL>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

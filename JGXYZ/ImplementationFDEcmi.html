@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<TITLE> Implementation of FDEcmi </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Implementation of FDE<SUP>&rarr;<SUB>cmi</SUB></SUP>
+</H1>
+<HR><!------------------------------------------------------------------------>
+<IMG SRC="../FDE/Belnap.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<PRE>
+logic_details(fdeCmi,
+[fdeCmi,
+ tvs(['$true','$both','$neither','$false']),
+ dtvs(['$true','$both']),
+ conns([('~'/1)-common_not,
+        ('|'/2)-common_or,
+        ('&'/2)-common_and,
+        ('=>'/2)-cmi_implies])
+]).
+
+connective_table(common_not,[
+['$true']    > '$false',
+['$both']    > '$both',
+['$neither'] > '$neither',
+['$false']   > '$true']).
+
+connective_table(common_or,[
+['$true','$true']       > '$true',
+['$true','$both']       > '$true',
+['$true','$neither']    > '$true',
+['$true','$false']      > '$true',
+['$both','$true']       > '$true',
+['$both','$both']       > '$both',
+['$both','$neither']    > '$true',
+['$both','$false']      > '$both',
+['$neither','$true']    > '$true',
+['$neither','$both']    > '$true',
+['$neither','$neither'] > '$neither',
+['$neither','$false']   > '$neither',
+['$false','$true']      > '$true',
+['$false','$both']      > '$both',
+['$false','$neither']   > '$neither',
+['$false','$false']     > '$false'
+]).
+
+connective_table(common_and,[
+['$true','$true']       > '$true',
+['$true','$both']       > '$both',
+['$true','$neither']    > '$neither',
+['$true','$false']      > '$false',
+['$both','$true']       > '$both',
+['$both','$both']       > '$both',
+['$both','$neither']    > '$false',
+['$both','$false']      > '$false',
+['$neither','$true']    > '$neither',
+['$neither','$both']    > '$false',
+['$neither','$neither'] > '$neither',
+['$neither','$false']   > '$false',
+['$false','$true']      > '$false',
+['$false','$both']      > '$false',
+['$false','$neither']   > '$false',
+['$false','$false']     > '$false'
+]).
+</PRE>
+<IMG SRC="../FDE/CMITable.gif" ALIGN=RIGHT WIDTH=33%>
+<PRE>
+connective_table(cmi_implies,[
+['$true','$true']       > '$true',
+['$true','$both']       > '$both',
+['$true','$neither']    > '$neither',
+['$true','$false']      > '$false',
+['$both','$true']       > '$true',
+['$both','$both']       > '$both',
+['$both','$neither']    > '$neither',
+['$both','$false']      > '$false',
+['$neither','$true']    > '$true',
+['$neither','$both']    > '$true',
+['$neither','$neither'] > '$true',
+['$neither','$false']   > '$true',
+['$false','$true']      > '$true',
+['$false','$both']      > '$true',
+['$false','$neither']   > '$true',
+['$false','$false']     > '$true'
+]).
+</PRE>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

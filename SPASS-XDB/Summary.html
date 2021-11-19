@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE> SPASS-XDB - World Knowledge for Automated Theorem Proving </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> SPASS-XDB - World Knowledge for ATP </H1>
+
+<H3> Motivation </H3>
+<UL>
+<LI> <A HREF="LargeTheories.html">Reasoning with world knowledge</A>
+     <UL>
+     <LI> (Effectively) too large to load
+          ... Cyc, YAGO, Wikipedia, BioBike, WordNet, MeSH, DBPedia, CIA 
+          Factbook ...
+     <LI> Computed rather than stored
+          ... Arithmetic, Axiom schemas, Lemma generators, Yahoo GeoServices,
+          GenBank, XchangeRates, Mathmatica, HR, ...
+     </UL>
+<LI> Limited <A HREF="PreviousWork.html">existing research and 
+     implementations</A>
+</UL>
+
+<A HREF="Architectures3GIF.html">
+<IMG NAME="image" SRC="ArchitectureLogos.gif" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> SPASS-XDB </H3>
+<UL>
+<LI> Retrieve external data on demand
+     <UL>
+     <LI> Positive ground facts
+     <LI> Retrieved asynchronously, on demand, during deduction
+     <LI> TPTP Q&A protocol with SZS standards
+     <LI> Local mediators for external sources
+     </UL>
+<LI> <A HREF="ImplementationSystem.html">Implemented in SPASS</A>
+<LI> A range of <A HREF="ImplementationXDBs.html">external sources</A><BR>
+     (available <A HREF="http://www.tptp.org/cgi-bin/SystemQATPTP">
+     online</A> at <TT>www.tptp.org/cgi-bin/SystemQATPTP</TT>)
+</UL>
+
+<A HREF="Testing.html"><H3> Examples </H3></A>
+<UL>
+<LI> Prove that Abraham Lincoln is a mammal
+<LI> Find bordering European countries with equally cloudy capitals
+<LI> Name a composer born in the first half of the 18th century
+<LI> Name an Al Pacino movie that contains the name "Glen" twice
+<LI> Name a member of the Curie family who has won two prizes
+<LI> Name all prizes won by members of the Curie family
+<LI> Prove it is possible to travel by land from Vienna to Budapest
+<LI> Name an OECD country's capital that is at the same latitude as
+     Moscow (to the nearest degree)
+<LI> ... and that could get flooded
+</UL>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

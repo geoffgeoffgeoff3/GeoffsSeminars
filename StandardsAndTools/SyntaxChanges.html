@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE> Fixing the TPTP (and its old syntax) </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Fixing the TPTP (and its old syntax) </H1>
+<CENTER>
+TPTP v3.0.0 will be in the new TPTP syntax.
+</CENTER>
+
+<IMG SRC="Repair.GIF" ALIGN=RIGHT WIDTH=33%>
+
+<H3> All in the new TPTP Syntax </H3>
+
+<H3> Equality </H3>
+<UL>
+<LI> Now assumed to be builtin
+     <UL>
+     <LI> (TPTP) Problems do not contain equality axioms
+     <LI> Axioms can be added with tptp2X
+     <LI> <TT>equal</TT>/2 still reserved and recognized by tptp2X
+     </UL>
+</UL>
+
+<H3> Terms with Semantics </H3>
+<UL>
+<LI> <TT>$true</TT> and <TT>$false</TT>
+<LI> Numbers reserved for future builtin arithmetic
+</UL>
+
+<H3> Types and Statuses </H3>
+<UL>
+<LI> New formula types ... <TT>negated_conjecture</TT>, <TT>lemma</TT>,
+     <TT>plain</TT>
+<LI> Problem statuses (in the TPTP) from the
+     <A HREF="ProblemStatuses.html">problem status ontology</A>
+</UL>
+
+<H3> Include Files </H3>
+<UL>
+<LI> Absolute
+<LI> Search under the <TT>$TPTP</TT> environment variable
+<LI> Search under the current working directory
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

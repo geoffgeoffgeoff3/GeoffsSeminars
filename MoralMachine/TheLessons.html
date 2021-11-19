@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE> The Lessons </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'MoralChoice.png';
+  images[1]     = new Image();
+  images[1].src = 'TenCommandments.jpg';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The Lessons </H1>
+
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="MoralChoice.png" ALIGN=RIGHT WIDTH=33%></A>
+</A>
+
+<H3> Knowing your Morals </H3>
+<UL>
+<LI> It's hard to know
+     <EM>(How do you choose 10 commandments?)</EM>
+<LI> It's hard to formalise
+     <EM>(Who wrote the 10 commandments?)</EM>
+<LI> It's hard to encode
+     <EM>(Could we encode the 10 commandments?)</EM>
+<LI> It's hard to predict
+     <EM>(Who will break which commandments?)</EM>
+</UL>
+
+<H3> Project </H3>
+<UL>
+<LI> Survey demographics, rankings, scenario choices, ethics
+<LI> Test accuracy of math model
+<LI> Statistics for demographics vs. ethics
+<LI> Compare STEM and Arts & Humanities data
+</UL>
+
+<H3> Logic Development </H3>
+<UL>
+<LI> TF0 and arithmetic  (Beagle, CVC4, Princess, SPASS+T, Vampire, Z3)
+<LI> Question answering (E, Vampire)
+<LI> TH0 for modal logic encoding (CVC4, Leo-III, Satallax, Vampire-NAR)
+<LI> Modalities, e.g., "It is necessary to swerve", or
+     "It is possibly the baby will survive"
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

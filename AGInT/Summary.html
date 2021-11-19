@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE> Automatic Generation of Interesting Theorems</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H2>AGInT - Automatic Generation of Interesting Theorems </H2>
+</CENTER>
+
+<A HREF="AGInTArchGIF.html"><IMG SRC="AGInTArch.GIF" ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> Logical Consequence Generation </H3>
+<UL>
+<LI> Input a satisfiable set of axioms
+<LI> ATP generates LCs according to the SoS strategy
+<!--
+     <UL>
+     <LI> Axioms used for first SoS
+     <LI> Top new interesting theorems used for subsequent SoS
+     </UL>
+-->
+<LI> Pre-processor cleans them up
+</UL>
+
+<H3> Adaptive Runtime Filter </H3>
+<UL>
+<LI> <EM>Obviousness</EM> measures derivation size
+<LI> <EM>Weight</EM> measures number of symbols
+<LI> <EM>Complexity</EM> measures number of different symbols
+<LI> <EM>Surprisingness</EM> measures unexpected co-occurences of symbols
+<LI> <EM>Intensity</EM> measures information summary
+<LI> <EM>Adaptivity</EM> measures variable constraints
+<LI> <EM>Focus</EM> measures polarity of atoms
+</UL>
+
+<A HREF="SoSGIF.html"><IMG SRC="SoS.GIF" ALIGN=RIGHT WIDTH=25%></A>
+<H3> Static Ranker and Post-processor</H3>
+<UL>
+<LI> Values from the Runtime Filter are normalized and propagated, and
+<LI> <EM>Usefulness</EM> measures proportion of interesting children
+<LI> Post-processor removes subsumed and redundant theorems
+<LI> Loop to reseed the SoS
+</UL>
+
+<H3> Results </H3>
+<UL>
+<LI> From <A HREF="ResultsPUZ.html">Puzzles</A>
+<LI> From <A HREF="ResultsSET.html">Set theory</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE> Structural Verification wih GDV</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Structural Verification with GDV</H1>
+
+<!----- <IMG SRC="Smile.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%> --->
+
+<H3 ALIGN=CENTER> Assumptions</H3>
+<UL>
+<LI> Assumption (supposition in Jaskowski's terminology): unproved proposition introduced (assumed to be true) locally in proof
+<LI> Coupled with a discharge (elimination) rule, making the reasoning result unconditionally true again
+<LI> Frequent example is proof by contradiction: asssume negation, deduce contradiction, i.e.: not C |- $false, then discharge not C:  |- not C => $false, then |- C 
+</UL>
+<H3 ALIGN=CENTER> TPTP Syntax </H3>
+<UL>
+<LI> formula role assumption
+<LI> asssumptions([...]) list for recording asssumptions
+<LI> discharge_asm list of discharged assumptions
+</UL>
+<H3 ALIGN=CENTER> Example</H3>
+<PRE>
+fof(e1,assumption, subset(c1,c2), introduced(assumption)). 
+
+fof(i3,plain, c2 = set_union2(c1,set_diff(c2,c1)), 
+  inference(conclusion,[status(thm),assumptions([dt_c1,e1])],[e3,i4])). 
+
+fof(i2,plain, (subset(c1,c2) => c2 = set_union2(c1,set_diff(c2,c1)), 
+  inference(discharge_asm,[status(thm),assumptions([dt_c1]), 
+    discharge_asm(discharge,[e1])], [e1,i3])).
+</PRE>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

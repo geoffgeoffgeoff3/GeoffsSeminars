@@ -1,0 +1,128 @@
+%----Old style TPTP clauses and formulae
+<FOF file>           ::= <FOF input>+
+<FOF input>          ::= <input formula> | <include> | <comment>
+<input formula>      ::= input_formula(<name>,<type>,<logic formula>).
+<CNF file>           ::= <CNF input>+
+<CNF input>          ::= <input clause> | <include> | <comment>
+<input clause>       ::= input_clause(<name>,<type>,<literals>).
+
+%----New style TSTP formulae
+<TSTP file>          ::= <TSTP input>+
+<TSTP input>         ::= <non-logical part> | <formula record> | <include> | 
+                         <comment>
+
+%----Non-formula parts
+<non-logical part>   ::= begin_non_logical_part.
+                         <non-logical record>*
+                         end_non_logical_part.
+<non-logical record> ::= <atom>.
+
+%----Formula records
+<formula record>     ::= <language>(<name>,<type>,<formula><record extension>).
+<record extension>   ::= <null> | ,<source> | ,<source>,<useful info>
+<language>           ::= english | cnf | fof | efof | tfof | mathml | ...
+%----Types for problems
+<type>               ::= <initial type> |
+%----Types for derivations
+                         initial<opt initial type> |
+                         derived<opt derived type> |
+                         unknown
+<opt initial type>   ::= -<initial type> | <null>
+<opt derived type>   ::= -<derived type> | <null>
+<initial type>       ::= axiom | definition | knowledge | assumption | 
+                         hypothesis | conjecture
+<derived type>       ::= lemma
+
+%----Flexible formula types
+<formula>            ::= <english formula> | <logic formula> |
+                         <mathml formula> | ...
+<english formula>    ::= <quoted string>
+<mathml formula>     ::= TBA
+
+%----FOF format, also used for CNF in TSTP
+<logic formula>      ::= <bracketed formula> | <quantified formula> | 
+                         <binary formula> |  <unary formula> | <atom>
+<bracketed formula>  ::= (<logic formula>)
+<quantified formula> ::= <quantifier> <variables> : <logic formula>
+<quantifier>         ::= ! | ?
+<variables>          ::= [<qvariable><rest of qvariables>*]
+<rest of qvariables> ::= ,<qvariable>
+<qvariable>          ::= <typed variable> | <number>:<typed variable>
+<typed variable>     ::= <variable> | <variable>:<variable type>
+<binary formula>     ::= <logic formula> <binary connective> <logic formula>
+<unary formula>      ::= <unary connective> <logic formula>
+<binary connective>  ::= & | <=> | => | <= | vline | <~> | ~vline | ~&
+<unary connective>   ::= ~
+
+%----Old style CNF
+<literals>           ::= [] | [<literal><rest of literals>*]
+<rest of literals>   ::= ,<literal>
+<literal>            ::= <sign><atom>
+<sign>               ::= ++ | --
+
+%----Terms
+<atom>               ::= <proposition> | <predicate><arguments>
+<proposition>        ::= <lower word>
+<predicate>          ::= <lower word>
+<arguments>          ::= (<term><rest of terms>*)
+<rest of terms>      ::= ,<term>
+<term>               ::= <constant> | <functor><arguments> | <variable>
+<functor>            ::= <lower word>
+<constant>           ::= <lower word> | <number> | <quoted string>
+<variable>           ::= <upper word>
+<variable type>      ::= <lower word>
+
+%----TSTP formula sources
+<source>             ::= <dag source> | <external source> | unknown
+<dag source>         ::= <name> | <inference record>
+<inference record>   ::= inference(<rule name>,<useful info>,
+                             [<parent info><rest parent info>*])
+<rule name>          ::= deduction | modus_tollens | modus_ponens | rewrite | 
+                         resolution | paramodulation | factorization | 
+                         cnf_conversion | cnf_refutation | ...
+<rest parent info>   ::= ,<parent info>
+<parent info>        ::= <parent source><parent details>
+<parent source>      ::= <source> | <theory>
+<theory>             ::= theory(<theory name>)
+<theory name>        ::= equality | ac | ...
+<parent details>     ::= -<quoted string> | <null>
+<external source>    ::= <file source> | <creator source> | <theory>
+<file source>        ::= file(<file name>,<file node name>)
+<file name>          ::= <quoted string>
+<file node name>     ::= <name> | unknown
+<creator source>     ::= creator(<creator name>,<useful info>)
+<creator name>       ::= <quoted string>
+
+%----Useful info fields
+<useful info>        ::= [] | [<info item><rest info item>*]
+<rest info item>     ::= ,<info item>
+<info item>          ::= <formula item> | <inference item> | <term>
+%----Useful info for formula records
+<formula item>       ::= <description item> | <iquote item> | 
+                         <replacement item> | <relevance item>
+<description item>   ::= description(<quoted string>)
+<iquote item>        ::= iquote(<quoted string>)
+<replacement item>   ::= replaces(<file source>)
+<relevance item>     ::= relevance(<number>)
+%----Useful info for inference records
+<inference info>     ::= <inference status> | <refutation>
+<inference status>   ::= status(<status value>)
+<status value>       ::= thm | sat | ...
+<refutation>         ::= refutation(<file source>)
+%----Useful info for creators is just atoms
+
+%----Include directives
+<include>            ::= include(<file name><formula selection>).
+<formula selection>  ::= <name> | [<name><rest names>*]
+<rest names>         ::= ,<name>
+
+%----Comments
+<comment>            ::= %<char>*
+
+%----General purpose
+<name>               ::= <lower word>
+<upper word>         ::= [A-Z][a-z0-9A-Z_]*
+<lower word>         ::= [a-z][a-z0-9A-Z_]*
+<quoted string>      ::= '<char>*'
+<number>             ::= [0-9]+[.[0-9]+]
+<char>               ::= <any printable ASCII character>

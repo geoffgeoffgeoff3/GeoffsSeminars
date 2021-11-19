@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE> Automatic Generation of Interesting Theorems</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER>AGInT - Automatic Generation of Interesting Theorems </H1>
+
+<A HREF="ArchitectureGIF.html"><IMG SRC="Architecture.GIF" ALIGN=RIGHT WIDTH=33%></A>
+
+<A HREF="PreProcessor.html"><H3> LC Generation </H3></A>
+<UL>
+<LI> Input a satisfiable set of axioms
+<LI> Axioms, then theorems, used in SoS
+<LI> E generates LCs according to the SoS strategy
+<LI> PreProcessor cleans them up
+</UL>
+
+<A HREF="RunTimeFilter.html"><H3> Runtime Filter </H3></A>
+<UL>
+<LI> <EM>Obviousness</EM> measures derivation size
+<LI> <EM>Weight</EM> measures number of symbols
+<LI> <EM>Complexity</EM> measures number of different symbols
+<LI> <EM>Surprisingness</EM> measures unexpected co-occurences of symbols
+<LI> <EM>Intensity</EM> measures information summary
+<LI> <EM>Adaptivity</EM> measures variable constraints
+<LI> <EM>Focus</EM> measures polarity of atoms
+<LI> Adaptive controllers use windows to determine suitable thresholds
+</UL>
+
+<A HREF="StaticRanker.html"><H3> Static Ranker </H3></A>
+<UL>
+<LI> Values from the Runtime Filter are normalized and propagated, and
+<LI> <EM>Usefulness</EM> measures proportion of interesting children
+</UL>
+
+<A HREF="PostProcessor.html"><H3> PostProcessor </H3></A>
+<UL>
+<LI> Removes subsumed and redundant theorems
+</UL>
+
+<H3> Results </H3>
+<UL>
+<LI> From <A HREF="ResultsPUZ.html">Puzzles</A>
+<LI> From <A HREF="ResultsSET.html">Set theory</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

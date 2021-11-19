@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<TITLE> FDE Logic </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Belnap.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Diamonds.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Belnap's First Degree Entailment (FDE) Logic
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="Belnap.jpg" ALIGN=RIGHT WIDTH=20%>
+</A>
+
+<UL>
+<LI> A hollow dialetheic logic
+     <UL>
+     <LI> Four-valued logic - 
+              <EM>true</EM> (<B>T</B>)
+          and <EM>both</EM> (<B>B</B>)
+          and <EM>neither</EM> (<B>N</B>)
+          and <EM>false</EM> (<B>F</B>) 
+     <LI> The designated values are 
+              <EM>true</EM> (<B>T</B>) 
+          and <EM>both</EM> (<B>B</B>)
+     </UL>
+<P>
+<LI> (Only 3) Connectives - classical plus ...
+     <TABLE BORDER=0>
+     <TR> <TD>
+     <TABLE BORDER=0>
+     <TR> <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &psi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &not;&phi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&and;&psi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&or;&psi;
+     <TR> <TD COLSPAN=6> <HR>
+<!--
+     <TR> <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>T</B>
+-->
+     <TR> <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>B</B>
+     <TR> <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>B</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>B</B>
+     </TABLE>
+     <TD> &nbsp;&nbsp;&nbsp;&nbsp;
+     <TD>
+     <TABLE BORDER=0>
+     <TR> <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &psi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &not;&phi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&and;&psi;
+          <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&or;&psi;
+     <TR> <TD COLSPAN=6> <HR>
+     <TR> <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>N</B>
+     <TR> <TD ALIGN=CENTER> <B>N</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>N</B>
+<!--
+     <TR> <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> <B>T</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>T</B>
+     <TR> <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>B</B>
+     <TR> <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>N</B>
+     <TR> <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD ALIGN=CENTER> 
+          <TD ALIGN=CENTER> <B>F</B>
+          <TD ALIGN=CENTER> <B>F</B>
+-->
+     </TABLE>
+     </TABLE>
+<P>
+<LI> Interpretation, models, and logical consequence as for 
+     <A HREF="../RM3/ClassicalFOL.html">classical FOL</A>
+<P>
+<LI> No conditional connective (&rarr;)
+     <UL>
+     <LI> Only first-degree entailment between formulae
+     <LI> Cannot say a formulae follows from others
+     <LI> Not very useful! (to the <A HREF="MovieScript.p.txt">undead in 
+          logic</A>)
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

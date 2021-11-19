@@ -1,0 +1,69 @@
+%------------------------------------------------------------------------------
+% File       : Paradox---4.0
+% Problem    : PUZ043-1 : TPTP v6.2.0. Released v2.5.0.
+% Transform  : none
+% Format     : tptp:short
+% Command    : paradox --no-progress --time %d --tstp --model %s
+
+% Computer   : n170.star.cs.uiowa.edu
+% Model      : x86_64 x86_64
+% CPU        : Intel(R) Xeon(R) CPU E5-2609 0 2.40GHz
+% Memory     : 32286.75MB
+% OS         : Linux 2.6.32-573.1.1.el6.x86_64
+% CPULimit   : 300s
+% DateTime   : Wed Aug  5 05:43:27 EDT 2015
+
+% Result     : Satisfiable 0.00s
+% Output     : FiniteModel 0.00s
+% Verified   : 
+% Statistics : Number of formulae       :   10 (  10 expanded)
+%              Number of leaves         :   10 (  10 expanded)
+%              Depth                    :    0
+%              Number of atoms          :   18 (  18 expanded)
+%              Number of equality atoms :    2 (   2 expanded)
+%              Maximal formula depth    :    4 (   2 average)
+%              Maximal term depth       :    2 (   1 average)
+
+% Comments   : 
+%------------------------------------------------------------------------------
+%----WARNING: Paradox---4.0 format not known, defaulting to TPTP
+% domain size is 1
+fof(domain,fi_domain,(
+    ! [X] : X = "1" )).
+
+fof(a_truth,fi_predicates,
+    ( a_truth("1")
+  <=> $false )).
+
+fof(female,fi_predicates,
+    ( female("1")
+  <=> $false )).
+
+fof(from_mars,fi_predicates,
+    ( from_mars("1")
+  <=> $false )).
+
+fof(from_venus,fi_predicates,
+    ( from_venus("1")
+  <=> $true )).
+
+fof(liar,fi_predicates,
+    ( liar("1")
+  <=> $true )).
+
+fof(male,fi_predicates,
+    ( male("1")
+  <=> $true )).
+
+fof(says,fi_predicates,(
+    ! [X1,X2] :
+      ( says(X1,X2)
+    <=> $false ) )).
+
+fof(statement_by,fi_functors,(
+    statement_by("1") = "1" )).
+
+fof(truthteller,fi_predicates,
+    ( truthteller("1")
+  <=> $false )).
+%------------------------------------------------------------------------------

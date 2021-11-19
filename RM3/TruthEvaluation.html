@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<TITLE> The Truth Evaluation Approach </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The Truth Evaluation Approach 
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<IMG SRC="TruthEvaluation.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<UL>
+<LI> A recursive translation function <EM>trs</EM>
+     <UL>
+     <LI> For an RM3 formula F and target truth value V 
+          (one of <B>T</B>, <B>B</B>, <B>F</B>) ...<BR>
+          &nbsp;&nbsp;&nbsp;
+          <EM>trs</EM>(F,V) caputures the conditions for F to be V
+     </UL>
+<P>
+<LI> Example translation rules (extracted from truth tables)
+     <TABLE BORDER=0>
+     <TR> <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> F
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>trs</EM>(F,<B>T</B>)
+          <TD> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>trs</EM>(F,<B>B</B>)
+          <TD> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>trs</EM>(F,<B>F</B>)
+     <TR> <TD COLSPAN=7> <HR>
+     <TR> <TD ALIGN=CENTER> &phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> &phi;<SUP>+</SUP> &and; &not;&phi;<SUP>-</SUP>
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> &phi;<SUP>+</SUP> &and; &phi;<SUP>-</SUP>
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> &not;&phi;<SUP>+</SUP> &and; &phi;<SUP>-</SUP>
+     <TR> <TD ALIGN=CENTER> &not;&phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>F</B>)
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>B</B>)
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>T</B>)
+     <TR> <TD ALIGN=CENTER> &phi;&rarr;&psi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>F</B>) &or; 
+               <EM>trs</EM>(&psi;,<B>T</B>) 
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> <EM>trs</EM>(&phi;,<B>B</B>) &and; 
+               <EM>trs</EM>(&psi;,<B>B</B>)
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> <EM>(complex)</EM>
+     <TR> <TD ALIGN=CENTER> &forall;X &phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> &forall;X <EM>trs</EM>(&phi;,<B>T</B>)
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> &exist;X <EM>trs</EM>(&phi;,<B>B</B> &and; 
+               &not;&exist;X <EM>trs</EM>(&phi;,<B>F</B>))
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> &exist;X <EM>trs</EM>(&phi;,<B>F</B>)
+     </TABLE>
+<P>
+<LI> Additional axioms
+     <UL>
+     <LI> <EM>Exhaustion</EM> axiom for each predicate 
+          &forall; (&phi;<SUP>+</SUP> &or; &phi;<SUP>-</SUP>)
+     <LI> <EM>Definition</EM> axioms for each predicate 
+          &forall; (&phi;<SUP>++</SUP> &harr; (&phi;<SUP>+</SUP> &and; 
+          &not;&phi;<SUP>-</SUP>)); 
+          &forall; (&phi;<SUP>+-</SUP> &harr; (&phi;<SUP>+</SUP> &and; 
+          &phi;<SUP>-</SUP>)); 
+          &forall; (&phi;<SUP>--</SUP> &harr; (&not;&phi;<SUP>+</SUP> &and; 
+          &phi;<SUP>-</SUP>))
+     </UL>
+<P>
+<LI> Define <EM>des</EM>(F) &cong; <EM>trs</EM>(F,<B>T</B>) &or; 
+     <EM>trs</EM>(F,<B>B</B>).<BR>
+     Axioms &#8872;<SUB>RM3</SUB> Conjecture<BR>
+          &nbsp;&nbsp;&nbsp;
+     iff<BR>
+     (<EM>des</EM>(Axioms) &cup; Exhaustion &cup; Definition) 
+     &#8872;<SUB>FOL</SUB> <EM>des</EM>(Conjecture)
+     <UL>
+     <LI> Proof based on isomorphism between RM3 and FOL interpretations
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

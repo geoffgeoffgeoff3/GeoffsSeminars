@@ -1,0 +1,119 @@
+;;-----------------------------------------------------------------------------
+;;----General SUMO background
+(subclass TransitiveRelation Relation)
+(subclass SymmetricRelation Relation)
+(subclass BinaryRelation Relation)
+(subclass TernaryRelation Relation)
+
+(<=> (instance ?REL TransitiveRelation)
+     (forall (?INST1 ?INST2 ?INST3)
+        (=> (and (?REL ?INST1 ?INST2) (?REL ?INST2 ?INST3))
+            (?REL ?INST1 ?INST3))))
+
+(<=> (instance ?REL SymmetricRelation)
+     (forall (?INST1 ?INST2)
+        (=> (?REL ?INST1 ?INST2) (?REL ?INST2 ?INST1))))
+
+(=> (and (subclass ?X ?Y) (subclass ?Y ?Z))
+    (subclass ?X ?Z))
+
+(=> (and (instance ?X ?Y) (subclass ?Y ?Z))
+    (instance ?X ?Z))
+
+;;----Every 3-dimensional volume has a numeric surface area.
+(instance surfaceArea BinaryRelation)
+(domain surfaceArea 1 SelfConnectedObject)
+(domain surfaceArea 2 AreaMeasure)
+(=> (surfaceArea ?S ?M)
+    (exists (?O) (surface ?S ?O)))
+
+(=> (surfaceArea ?S (MeasureFn ?N ?U))
+    (measure ?S (MeasureFn  ?N ?U)))
+
+;;----Every 3-dimensional volume has a numeric surface to volume ratio.
+(instance surfaceToVolumeRatio BinaryRelation)
+(domain surfaceToVolumeRatio 1 SelfConnectedObject)
+(domain surfaceToVolumeRatio 2 FunctionQuantity)
+(=> (surfaceToVolumeRatio ?O (PerFn (MeasureFn ?A ?U) (MeasureFn ?B ?U)))
+    (and
+      (surfaceArea ?O (MeasureFn ?N (SquareFn ?U2)))
+      (measure ?O (MeasureFn ?N2 (CubeFn ?U2)))
+      (equal
+        (PerFn (MeasureFn ?A ?U) (MeasureFn ?B ?U))
+        (PerFn (MeasureFn ?N (SquareFn ?U2)) (MeasureFn ?N2 (CubeFn ?U2))))))
+
+;;----Every cell and environment have a numeric exchange rate between the
+;;----cell and the environment.
+(instance exchangeRate TernaryRelation)
+(domain exchangeRate 1 Cell)
+(domain exchangeRate 2 Region)
+(domain exchangeRate 3 FunctionQuantity)
+(=> (exchangeRate ?C ?R (PerFn (MeasureFn ?N ?U) (MeasureFn ?N2 ?TU)))
+    (instance ?TU TimeDuration))
+
+(=> (and
+      (exchangeRate ?C ?R (PerFn (MeasureFn ?N ?U) (MeasureFn ?N2 ?TU)))
+      (greaterThan ?N 0))
+    (exists (?M ?S)
+      (and
+        (instance ?S Substance)
+        (measure ?S (MeasureFn ?N ?U))
+        (instance ?M Motion)
+        (duration (WhenFn ?M) (MeasureFn ?N2 ?TU))
+        (holdsDuring (ImmediatePastFn ?M) (orientation ?S ?C Inside))
+        (holdsDuring (ImmediateFutureFn ?M) (orientation ?S ?C Outside)))))
+
+(=> (and
+      (exchangeRate ?C ?R (PerFn (MeasureFn ?N ?U) (MeasureFn ?N2 ?TU)))
+      (greaterThan 0 ?N))
+    (exists (?M ?S)
+      (and
+        (instance ?S Substance)
+        (measure ?S (MeasureFn ?N ?U))
+        (instance ?M Motion)
+        (duration (WhenFn ?M) (MeasureFn ?N2 ?TU))
+        (holdsDuring (ImmediatePastFn ?M) (orientation ?S ?C Outside))
+        (holdsDuring (ImmediateFutureFn ?M) (orientation ?S ?C Inside)))))
+
+;;----Every cell has an environment.
+(instance cellEnvironmentFn UnaryFunction)
+(domain cellEnvironmentFn 1 Cell)
+(range cellEnvironmentFn Region)
+(=> (cellEnvironmentFn ?C ?R)
+    (orientation ?C ?R Inside))
+
+;;----Proportional is symmetric and transitive
+(instance proportional SymmetricRelation)
+(instance proportional TransitiveRelation)
+(domain proportional 1 Relation)
+(domain proportional 2 Relation)
+
+(=> (proportional ?X ?Y)
+    (proportional ?Y ?X))
+
+(=> (and (proportional ?X ?Y) (proportional ?Y ?Z))
+    (proportional ?X ?Z))
+
+;;----A high surface to volume ratio facilitates the exchange of materials
+;;----between a cell and its environment.
+(proportional surfaceToVolumeRatio exchangeRate)
+
+;;----Surface area is proportional to surface to volume ratio.
+(proportional surfaceArea surfaceToVolumeRatio)
+
+;;----If something numeric is important, and is proportional to another
+;;----numeric thing, then the other numeric thing is important.
+(instance Important RelationalAttribute)
+(=> (and
+      (instance ?R Relation)
+      (attribute ?R Important)
+      (proportional ?R ?R2))
+    (attribute ?R2 Important))
+
+;;----The exchange rate of a cell with its environment is important.
+(attribute exchangeRate Important)
+
+;;----Why is surface area important to normal cell function?
+(attribute surfaceArea Important)
+
+;;-----------------------------------------------------------------------------

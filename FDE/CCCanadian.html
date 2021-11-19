@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+<TITLE> Classical Material Implication </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'CMI.gif';
+  images[1]     = new Image();
+  images[1].src = 'CMITable.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Classical Material Implication (&rarr;<SUB>cmi</SUB>)
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="CMI.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<UL>
+<LI> Emphasizes the classical aspect of FDE
+     <UL>
+     <LI> Classical implication
+          <TABLE BORDER=0>
+          <TR> <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;
+               <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &psi;
+               <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+               <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> &phi;&nbsp;&rarr;&nbsp;&psi;
+               <TR> <TD COLSPAN=4> <HR>
+               <TR> <TD ALIGN=CENTER> <B>T</B>
+                    <TD ALIGN=CENTER> <B>T</B>
+                    <TD style="border-left: 1px solid black; padding-left: 5px;">
+                    <TD ALIGN=CENTER> <B>T</B>
+               <TR> <TD ALIGN=CENTER> <B>T</B>
+                    <TD ALIGN=CENTER> <B>F</B>
+                    <TD style="border-left: 1px solid black; padding-left: 5px;">
+                    <TD ALIGN=CENTER> <B>F</B>
+               <TR> <TD ALIGN=CENTER> <B>F</B>
+                    <TD ALIGN=CENTER> <B>T</B>
+                    <TD style="border-left: 1px solid black; padding-left: 5px;">
+                    <TD ALIGN=CENTER> <B>T</B>
+               <TR> <TD ALIGN=CENTER> <B>F</B>
+                    <TD ALIGN=CENTER> <B>F</B>
+                    <TD style="border-left: 1px solid black; padding-left: 5px;">
+                    <TD ALIGN=CENTER> <B>T</B>
+               </TABLE>
+     <LI> Designated antecedent ... conditional = consequent, e.g.,<BR>
+          (<B>T</B> &rarr; <U><B>N</B></U>) = <U><B>N</B></U>,&nbsp;&nbsp;&nbsp;&nbsp;
+          (<B>B</B> &rarr; <U><B>B</B></U>) = <U><B>B</B></U>
+     <LI> Undesignated antecedent ... conditional = <B>T</B>, e.g.,<BR>
+          (<B>N</B> &rarr; <B>N</B>) = <U><B>T</B></U>,&nbsp;&nbsp;&nbsp;&nbsp;
+          (<B>F</B> &rarr; <B>B</B>) = <U><B>T</B></U>
+     </UL>
+<P>
+<LI> FDE and other logics
+     <UL>
+     <LI> FDE restricted to <B>T</B>, <B>N</B>, <B>F</B> is the logic K3
+          <UL>
+          <LI> K3 plus &rarr;<SUB>cmi</SUB> is synonymous to &#321;3
+          </UL>
+     <LI> FDE restricted to <B>T</B>, <B>B</B>, <B>F</B> is the logic LP
+          <UL>
+          <LI> LP plus &rarr;<SUB>cmi</SUB> is the logic A3
+          <LI> LP plus contrapostive of &rarr;<SUB>cmi</SUB> is RM3
+          </UL>
+     </UL>
+<!--
+<P>
+     <TABLE>
+     <TR> <TD> &rarr;<SUB>cmi</SUB>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B> &nbsp;&nbsp;
+          <TD> <B>B</B> &nbsp;&nbsp;
+          <TD> <B>N</B> &nbsp;&nbsp;
+          <TD> <B>F</B>
+     <TR> <TD COLSPAN=6> <HR>
+     <TR> <TD> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>B</B>
+          <TD> <B>N</B>
+          <TD> <B>F</B>
+     <TR> <TD> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>B</B>
+          <TD> <B>N</B>
+          <TD> <B>F</B>
+     <TR> <TD> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+     <TR> <TD> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+     </TABLE>
+-->
+<P>
+<LI> Strange feature ...
+     <UL>
+     <LI> (<B>N</B> &harr; <B>F</B>) = <B>T</B>
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<TITLE> The Inference Rules </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'InferenceRules.jpg';
+  images[1]     = new Image();
+  images[1].src = 'InferenceSoSPaper.png';
+  images[2]     = new Image();
+  images[2].src = 'InferenceUnitPreferencePaper.jpg';
+  images[3]     = new Image();
+  images[3].src = 'InferenceDemodulationPaper.jpg';
+  images[4]     = new Image();
+  images[4].src = 'InferenceParamodulationPaper.jpg';
+
+  function displayImage (index) {
+      document.images['image'].src = images[index].src;
+  }  
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> The Inference Rules </H1>
+by Maria Paola Bonacina 
+</CENTER>
+
+<A HREF="" onClick="displayImage(0);return false">
+<IMG NAME="image" SRC="InferenceRules.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<A HREF="" onClick="hideshow('overview');return false;">
+<H3> Overview </H3>
+</A> <SPAN ID="overview" style="display:none">
+<UL>
+<LI> Strategy = Inference rules + Control
+<LI> P1 and PG1-5, (with Dan Carson), <BR>
+     RW1 (with George Robinson, demodulation and paramodulation), <BR>
+     WOS1 (with Ross Overbeek, given clause algorithm), <BR>
+     NIUTP1-7 (with Overbeek, LMA library), <BR>
+     ITP (with the LMA library), <BR>
+     Otter, Prover9, EQP.
+<LI> Experimentation produced ideas
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('sos');return false;">
+<H3> Set of Support </H3>
+</A> <SPAN ID="sos" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(1);return false">ACM paper</A>, 1965
+<LI> Idea - minimize irrelevant inferences
+<LI> Idea - goal directness
+<LI> Idea - disallow inferences between axioms
+<LI> Implementation - put axioms into the processed set
+<LI> Added (incomplete) bounds on clause size and inference depth
+<LI> Theory - put satisfiable subset into the processed set
+<LI> Basis for model and semantic resolution
+<LI> Motivation for the given clause algorithm
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('ur');return false;">
+<H3> Unit Resolution </H3>
+</A> <SPAN ID="ur" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(2);return false">AFIPS paper</A>, 1964
+<LI> Idea - Unit resolution infers shorter clauses
+<LI> Idea - Unit sections leading to unit clauses
+<LI> Complete for Horn clauses
+<LI> Useful addition to complete systems
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('demodulation');return false;">
+<H3> Demodulation </H3>
+</A> <SPAN ID="demodulation" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(3);return false">JACM paper</A>, 1967
+<LI> Idea - Love for problems with equality
+<LI> Idea - Automate Birkoff's theorem (replacing equals by equals)
+<LI> Idea - Unit equalities, k-modulants, reducing number of symbols
+<LI> Not well founded
+<LI> Foundation for paramodulation
+<LI> Basis for Knuth-Bendix completion, superposition.
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('paramodulation');return false;">
+<H3> Paramodulation </H3>
+</A> <SPAN ID="paramodulation" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(4);return false">MI paper</A>, 1969
+<LI> Idea - Avoid adding axioms of equality
+<LI> Idea - From clause, into clause
+<LI> Reflexivity axioms? - Wos-Robinson conjecture
+<LI> Various complete combinations of inference rules
+<LI> Inspiration for superposition, and much more
+</UL>
+</SPAN>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

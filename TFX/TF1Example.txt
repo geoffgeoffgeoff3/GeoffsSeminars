@@ -1,0 +1,23 @@
+%------------------------------------------------------------------------------
+tff(beverage_type,type,( beverage: $tType )).
+tff(syrup_type,type,( syrup: $tType )).
+tff(cup_of_type,type,( cup_of: $tType > $tType )).
+tff(full_cup_type,type,( full_cup: beverage > cup_of(beverage) )).
+tff(coffee_type,type,( coffee: beverage )).
+tff(vanilla_type,type,( vanilla: syrup )).
+tff(caramel_type,type,( caramel: syrup )).
+tff(help_stay_awake_type,type,( help_stay_awake: cup_of(beverage) > $o )).
+
+tff(mixture_type,type,(
+    mixture: !>[BeverageOrSyrup: $tType] :
+               ( ( BeverageOrSyrup * syrup ) > BeverageOrSyrup ) )).
+
+%----Coffee keeps you awake
+tff(mixture_of_coffee_help_stay_awake,axiom,(
+    ! [S: syrup] : help_stay_awake(full_cup(mixture(beverage,coffee,S))) )).
+
+%----Coffee mixed with a syrup or two helps you stay awake
+tff(syrup_coffee_help_stay_awake,conjecture,(
+    help_stay_awake(full_cup(
+      mixture(beverage,coffee,mixture(syrup,caramel,vanilla)))) )).
+%------------------------------------------------------------------------------

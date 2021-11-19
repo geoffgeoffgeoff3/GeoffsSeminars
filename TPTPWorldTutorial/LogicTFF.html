@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<TITLE> Typed First-order Logic </TITLE>
+</HEAD>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Typed First-order Logic (TFF) </H1>
+
+<IMG SRC="LogicTFF.gif" ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> New logic features </H3>
+<UL>
+<LI> Types
+<LI> Signatures
+<LI> Typed variables
+</UL>
+<P>
+<H3> Problem </H3>
+<UL>
+<LI> Axioms
+     <UL>
+     <LI> All (hu)men are created equal.
+     <LI> John is a human.
+     <LI> John got an F grade. 
+     <LI> There is some human who got an A grade.
+     <LI> An A grade is not equal to an F grade.
+     </UL>
+<LI> Conjecture
+     <UL>
+     <LI> There is a human other than John, who was created equal to John
+     </UL>
+</UL>
+<P>
+<H3> In logic </H3>
+<UL>
+<LI> Type information
+     <UL>
+     <LI> <EM>human</EM> is a type
+     <LI> <EM>grade</EM> is a type
+     <LI> <EM>john</EM> is a <EM>human</EM>
+     <LI> <EM>a</EM> is a <EM>grade</EM>
+     <LI> <EM>f</EM> is a <EM>grade</EM>
+     <LI> <EM>created_equal</EM> takes two <EM>human</EM> arguments 
+          and returns <EM>boolean</EM>
+     <LI> <EM>grade_of</EM> takes one <EM>human</EM> argument and returns
+          their <EM>grade</EM>
+     </UL>
+<LI> Axioms
+     <UL>
+     <LI> &forall; <EM>H1:human</EM>
+          &forall; <EM>H2:human</EM> <EM>created_equal(H1,H2)</EM>
+     <LI> <EM>grade_of(john) = f</EM>
+     <LI> &exist; <EM>H:human</EM> <EM>grade_of(H) = a</EM>
+     <LI> <EM>a &ne; f</EM>
+     </UL>
+<LI> Conjecture
+     <UL>
+     <LI> &exist; <EM>H:human</EM> <EM>(H &ne; john &and; created_equal(H,john))</EM>
+     </UL>
+</UL>
+<P>
+<H3> In TPTP format </H3>
+<UL>
+<LI>
+<PRE>
+tff(human_type,type,human: $tType).
+tff(grade_type,type,grade: $tType).
+tff(john_type,type,john: human).
+tff(a_type,type,a: grade).
+tff(f_type,type,f: grade).
+tff(created_equal_type,type,created_equal: (human * human) > $o).
+tff(grade_of_type,type,grade_of: human > grade).
+
+tff(all_created_equal,axiom,
+    ! [H1:human,H2:human] : created_equal(H1,H2) ).
+tff(john_got_an_f,axiom,
+    grade_of(john) = f ).
+tff(someone_got_an_a,axiom,
+    ? [H:human] : grade_of(H) = a ).
+tff(a_is_not_f,axiom,
+    a != f ).
+
+tff(there_is_someone_else,conjecture,
+    ? [H:human] :
+      ( H != john
+      & created_equal(H,john) ) ).
+</PRE>
+<LI> Check the syntax in 
+     <A HREF="http://www.tptp.org/cgi-bin/SystemB4TPTP">
+     SystemB4TPTP</A> using TPTP4X.
+<LI> Try it in <A HREF="http://www.tptp.org/cgi-bin/SystemOnTPTP">
+     SystemOnTPTP</A> using Vampire.
+</UL>
+<P>
+<H3> Challenge problem </H3>
+Geoff is the teacher of Joe.
+Joe is not stupid but Joe failed.
+If a student failed then either the student is stupid or there is
+is some other student with the same teacher who also failed.
+Therefore there is some student other then Joe and also taught by Geoff,
+who failed.
+Optional: Assume that each student has only one teacher, so that, e.g.,
+Geoff is the only teacher of Joe and the other student.
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

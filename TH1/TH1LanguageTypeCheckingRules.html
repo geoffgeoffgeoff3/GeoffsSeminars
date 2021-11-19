@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE> TH1: The Polymorphic Higher-order Form Type Checking Rules </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TH1 Type Checking - LF Rules</H1>
+
+<H3> Rules for Types </H3>
+<PRE>
+   $tType: type
+   $i    : $tType
+   $o    : $tType
+   >     : $tType -> $tType -> $tType     (infix)
+</PRE>
+
+<H3> Rules for Terms </H3>
+<PRE>
+   $tm   : $tType -> type
+   ^     : ($tm A -> $tm B) -> $tm (A > B)
+   @     : $tm (A > B) -> $tm A -> $tm B   (infix)
+</PRE>
+
+<H3> Rules for Term Constructors </H3>
+<PRE>
+\begin{verbatim}
+   !     : ($tm A -> $tm $o) -> $tm $o
+   ?     : ($tm A -> $tm $o) -> $tm $o
+   @+    : ($tm A -> $tm $o) -> $tm A
+   @-    : ($tm A -> $tm $o) -> $tm A
+   ==    :  $tm A -> $tm A   -> $tm $o
+</PRE>
+
+<H3> Rules for Proofs </H3>
+<PRE>
+   $istrue : $tm $o -> type
+</PRE>
+
+<H3> Rules for Polymorphic Constants </H3>
+<PRE>
+   !! : {A: $tType} $tm ((A > $o) > $o)
+   ?? : {A: $tType} $tm ((A > $o) > $o)
+   @@+: {A: $tType} $tm ((A > $o) > A )
+   @@-: {A: $tType} $tm ((A > $o) > A )
+   @= : {A: $tType} $tm ( A > A   > $o)
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

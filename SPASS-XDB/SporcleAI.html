@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE> SporcleAI </TITLE>
+</HEAD>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'SporcleAI.gif';
+  images[1]     = new Image();
+  images[1].src = 'SporcleAIArchitecture.gif'; 
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 3;
+      document.images['image'].src = images[myIndex].src;
+  }  
+  //-->
+</SCRIPT> 
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+SporcleAI
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME=image SRC="SporcleAI.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Mentally Stimulating Diversions </H3>
+<UL>
+<LI> Questions by the people, for the people
+<LI> Automated player
+<LI> SPASS-XDB used a backend knowledge provider
+<LI> <A HREF="http://sporcleai.cs.miami.edu">Online access</A>
+</UL>
+
+<H3> Architecture </H3>
+<UL>
+<LI> GreaseMonkey scripts
+<LI> SporcleAI server
+<LI> NLP by string hacking and ACE translation
+<LI> Two backend knowledge providers
+</UL>
+
+<H3> Illustrative Results</H3>
+<TABLE CELLPADDING=0 CELLSPACING=0>
+<TR> <TH ALIGN=LEFT> Quiz topic
+     <TH ALIGN=RIGHT> Solutions 
+     <TH> &nbsp;&nbsp;&nbsp;
+     <TH ALIGN=RIGHT> Time
+<TR> <TD> US state capitals
+     <TD ALIGN=RIGHT> 50/50
+     <TD>
+     <TD ALIGN=RIGHT>  7:33/10:00
+<TR> <TD> Countries of the world
+     <TD ALIGN=RIGHT> 149/195
+     <TD>
+     <TD ALIGN=RIGHT> 7:45/15:00
+<TR> <TD> <A HREF="FloodingCapitals.html">Floodable world capitals</A>
+     <TD ALIGN=RIGHT> 36/36
+     <TD>
+     <TD ALIGN=RIGHT> 3:34/10:00
+<TR> <TD> Words ending with 'ACE'
+     <TD ALIGN=RIGHT> 15/16
+     <TD>
+     <TD ALIGN=RIGHT> 0:21/4:00
+<TR> <TD> Greek gods and goddesses
+     <TD ALIGN=RIGHT> 11/12
+     <TD>
+     <TD ALIGN=RIGHT> 0:15/5:00
+<TR> <TD> Actor by movie
+     <TD ALIGN=RIGHT> 6/30
+     <TD>
+     <TD ALIGN=RIGHT> 6:00/6:00
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

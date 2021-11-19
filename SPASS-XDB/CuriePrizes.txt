@@ -1,0 +1,174 @@
+% START OF SYSTEM OUTPUT
+
+--------------------------SPASS-START-----------------------------
+Input Problem:
+1[0:Inp] || printonly(printall(nl,nl,U, won the ,V,nl))* is_givenName(U,W)* has_WonPrize(W,V)* is_familyName(Curie,W)* -> .
+ This is a first-order Horn problem without equality.
+ Axiom clauses: 0 Conjecture clauses: 1
+ Inferences: IORe=1 IOFc=2 
+ Reductions: RFMRR=1 RBMRR=1 RObv=1 RUnC=1 RTaut=1 RFSub=1 RBSub=1 RCon=1 
+ Extras    : No Input Saturation, Precedence Selection, No Splitting, Full Reduction,  Ratio: 2147483646, FuncWeight: 1, VarWeight: 1, PrefCon: 1
+ Precedence: printall > nequal > div > id > xdb_ut > gdm_ut > regexp > look_different > s__instance > s__instance_ground > is_instance > is_instance_ground > s__representsInLanguage > s__capitalCity > capital_city > s__hasPopulation > s__birthdate > is_birthdate > s__familyName > is_familyName > s__givenName > has_WonPrize > s__hasWonPrize > is_givenName > s__weight > is_weight > mondial_country > mondial_city > s__mondial_city > mondial_countries_meet > s__mondial_countries_meet > birthPlace > movie_actor > lmdb_url > book > country_code > location > latlong > weather > with_weather > xchange > $is_int > $is_rat > $unequal > $less > $lesseq > $greater > $greatereq > $evaleq > twitteronly > twitter > printonly > print > english > yagosumo > number > dbpedia > linkedmdb > Curie > nl >  won the 
+ Ordering  : KBO
+Processed Problem:
+
+Worked Off Clauses:
+
+Usable Clauses:
+1[0:Inp] || printonly(printall(nl,nl,U, won the ,V,nl))* has_WonPrize(W,V)* is_givenName(U,W)* is_familyName(Curie,W)* -> .
+Using default external source printonly
+Using default external source yago_is_familyName1
+Using default external source yago_is_familyName2
+Using default external source yago_is_givenName1
+Using default external source yago_is_givenName2
+Using default external source yago_has_WonPrize1
+Using default external source yago_has_WonPrize2
+Using translating external source xdb_ut
+
+xdb_utReceiving answer: fof(translated,answer,xdb_ut($fof(is_familyName(Curie,U)),$fof(is_familyName(english,english)),$fof(is_familyName(english,english)),$fof(s__familyName(Curie,U)),$fof(s__familyName(english,yagosumo))),answer_to(xdb_ut_Q1,[])).
+xdb_ut_Q1Sending question: fof(yago_is_familyName1_Q2,question,? [V1] : s__familyName('Curie',V1),unknown,[]).
+unknownReceiving answer: fof(s__familyName,answer,s__familyName(Curie,s__MarieCurie),answer_to(yago_is_familyName1_Q2,[])).
+yago_is_familyName1_Q2Receiving answer: fof(s__familyName,answer,s__familyName(Curie,s__PierreCurie),answer_to(yago_is_familyName1_Q2,[])).
+yago_is_familyName1_Q2Receiving answer: fof(s__familyName,answer,s__familyName(Curie,s__Entity_UC8_veCurie),answer_to(yago_is_familyName1_Q2,[])).
+
+yago_is_familyName1_Q2Sending question: fof(xdb_ut_Q3,question,? [V1,V2] : xdb_ut($fof(s__familyName('Curie',s__MarieCurie)),$fof(s__familyName(english,yagosumo)),V1,V2,$fof(is_familyName(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__familyName(Curie,s__MarieCurie)),$fof(s__familyName(english,yagosumo)),$fof(s__familyName(english,yagosumo)),$fof(is_familyName(Curie,Marie Curie)),$fof(is_familyName(english,english))),answer_to(xdb_ut_Q3,[])).
+xdb_ut_Q3Sending question: fof(xdb_ut_Q4,question,? [V1,V2] : xdb_ut($fof(s__familyName('Curie',s__PierreCurie)),$fof(s__familyName(english,yagosumo)),V1,V2,$fof(is_familyName(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__familyName(Curie,s__PierreCurie)),$fof(s__familyName(english,yagosumo)),$fof(s__familyName(english,yagosumo)),$fof(is_familyName(Curie,Pierre Curie)),$fof(is_familyName(english,english))),answer_to(xdb_ut_Q4,[])).
+xdb_ut_Q4Sending question: fof(xdb_ut_Q5,question,? [V1,V2] : xdb_ut($fof(s__familyName('Curie',s__Entity_UC8_veCurie)),$fof(s__familyName(english,yagosumo)),V1,V2,$fof(is_familyName(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__familyName(Curie,s__Entity_UC8_veCurie)),$fof(s__familyName(english,yagosumo)),$fof(s__familyName(english,yagosumo)),$fof(is_familyName(Curie,Entity_UC8_ve Curie)),$fof(is_familyName(english,english))),answer_to(xdb_ut_Q5,[])).
+xdb_ut_Q5Sending question: fof(xdb_ut_Q6,question,? [V1,V2] : xdb_ut($fof(s__familyName('Curie',s__JacquesCurie)),$fof(s__familyName(english,yagosumo)),V1,V2,$fof(is_familyName(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__familyName(Curie,s__JacquesCurie)),$fof(s__familyName(english,yagosumo)),$fof(s__familyName(english,yagosumo)),$fof(is_familyName(Curie,Jacques Curie)),$fof(is_familyName(english,english))),answer_to(xdb_ut_Q6,[])).
+xdb_ut_Q6Sending question: fof(xdb_ut_Q7,question,? [V1,V2] : xdb_ut($fof(has_WonPrize('Marie Curie',W)),$fof(has_WonPrize(english,english)),V1,V2,$fof(s__hasWonPrize(yagosumo,yagosumo))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(has_WonPrize(Marie Curie,W)),$fof(has_WonPrize(english,english)),$fof(has_WonPrize(english,english)),$fof(s__hasWonPrize(s__MarieCurie,W)),$fof(s__hasWonPrize(yagosumo,yagosumo))),answer_to(xdb_ut_Q7,[])).
+xdb_ut_Q7Sending question: fof(xdb_ut_Q8,question,? [V1,V2] : xdb_ut($fof(has_WonPrize('Pierre Curie',W)),$fof(has_WonPrize(english,english)),V1,V2,$fof(s__hasWonPrize(yagosumo,yagosumo))),unknown,[]).
+unknownSending question: fof(yago_has_WonPrize1_Q11,question,? [V1] : s__hasWonPrize(s__MarieCurie,V1),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(has_WonPrize(Pierre Curie,U)),$fof(has_WonPrize(english,english)),$fof(has_WonPrize(english,english)),$fof(s__hasWonPrize(s__PierreCurie,U)),$fof(s__hasWonPrize(yagosumo,yagosumo))),answer_to(xdb_ut_Q8,[])).
+
+xdb_ut_Q8Receiving answer: fof(translated,answer,xdb_ut($fof(has_WonPrize(Entity_UC8_ve Curie,U)),$fof(has_WonPrize(english,english)),$fof(has_WonPrize(english,english)),$fof(s__hasWonPrize(s__Entity_UC8_veCurie,U)),$fof(s__hasWonPrize(yagosumo,yagosumo))),answer_to(xdb_ut_Q9,[])).
+xdb_ut_Q9Sending question: fof(xdb_ut_Q10,question,? [V1,V2] : xdb_ut($fof(has_WonPrize('Jacques Curie',W)),$fof(has_WonPrize(english,english)),V1,V2,$fof(s__hasWonPrize(yagosumo,yagosumo))),unknown,[]).
+unknownReceiving answer: fof(s__hasWonPrize,answer,s__hasWonPrize(s__MarieCurie,s__NobelPrizeInChemistry),answer_to(yago_has_WonPrize1_Q11,[])).
+yago_has_WonPrize1_Q11Receiving answer: fof(s__hasWonPrize,answer,s__hasWonPrize(s__MarieCurie,s__NobelPrizeInPhysics),answer_to(yago_has_WonPrize1_Q11,[])).
+yago_has_WonPrize1_Q11Sending question: fof(yago_has_WonPrize1_Q12,question,? [V1] : s__hasWonPrize(s__PierreCurie,V1),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(has_WonPrize(Jacques Curie,U)),$fof(has_WonPrize(english,english)),$fof(has_WonPrize(english,english)),$fof(s__hasWonPrize(s__JacquesCurie,U)),$fof(s__hasWonPrize(yagosumo,yagosumo))),answer_to(xdb_ut_Q10,[])).
+xdb_ut_Q10Sending question: fof(xdb_ut_Q14,question,? [V1,V2] : xdb_ut($fof(s__hasWonPrize(s__MarieCurie,s__NobelPrizeInChemistry)),$fof(s__hasWonPrize(yagosumo,yagosumo)),V1,V2,$fof(has_WonPrize(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__hasWonPrize(s__MarieCurie,s__NobelPrizeInChemistry)),$fof(s__hasWonPrize(yagosumo,yagosumo)),$fof(s__hasWonPrize(yagosumo,yagosumo)),$fof(has_WonPrize(Marie Curie,Nobel Prize In Chemistry)),$fof(has_WonPrize(english,english))),answer_to(xdb_ut_Q14,[])).
+xdb_ut_Q14Sending question: fof(xdb_ut_Q15,question,? [V1,V2] : xdb_ut($fof(s__hasWonPrize(s__MarieCurie,s__NobelPrizeInPhysics)),$fof(s__hasWonPrize(yagosumo,yagosumo)),V1,V2,$fof(has_WonPrize(english,english))),unknown,[]).
+unknownReceiving answer: fof(s__hasWonPrize,answer,s__hasWonPrize(s__PierreCurie,s__NobelPrizeInPhysics),answer_to(yago_has_WonPrize1_Q12,[])).
+yago_has_WonPrize1_Q12Sending question: fof(yago_has_WonPrize1_Q13,question,? [V1] : s__hasWonPrize(s__Entity_UC8_veCurie,V1),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__hasWonPrize(s__MarieCurie,s__NobelPrizeInPhysics)),$fof(s__hasWonPrize(yagosumo,yagosumo)),$fof(s__hasWonPrize(yagosumo,yagosumo)),$fof(has_WonPrize(Marie Curie,Nobel Prize In Physics)),$fof(has_WonPrize(english,english))),answer_to(xdb_ut_Q15,[])).
+xdb_ut_Q15Sending question: fof(xdb_ut_Q17,question,? [V1,V2] : xdb_ut($fof(s__hasWonPrize(s__PierreCurie,s__NobelPrizeInPhysics)),$fof(s__hasWonPrize(yagosumo,yagosumo)),V1,V2,$fof(has_WonPrize(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__hasWonPrize(s__PierreCurie,s__NobelPrizeInPhysics)),$fof(s__hasWonPrize(yagosumo,yagosumo)),$fof(s__hasWonPrize(yagosumo,yagosumo)),$fof(has_WonPrize(Pierre Curie,Nobel Prize In Physics)),$fof(has_WonPrize(english,english))),answer_to(xdb_ut_Q17,[])).
+
+xdb_ut_Q17Receiving answer: fof(translated,answer,xdb_ut($fof(is_givenName(V,Marie Curie)),$fof(is_givenName(english,english)),$fof(is_givenName(english,english)),$fof(s__givenName(V,s__MarieCurie)),$fof(s__givenName(english,yagosumo))),answer_to(xdb_ut_Q18,[])).
+xdb_ut_Q18Sending question: fof(xdb_ut_Q19,question,? [V1,V2] : xdb_ut($fof(is_givenName(W,'Pierre Curie')),$fof(is_givenName(english,english)),V1,V2,$fof(s__givenName(english,yagosumo))),unknown,[]).
+unknownSending question: fof(yago_has_WonPrize1_Q16,question,? [V1] : s__hasWonPrize(s__JacquesCurie,V1),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_givenName(X,Pierre Curie)),$fof(is_givenName(english,english)),$fof(is_givenName(english,english)),$fof(s__givenName(X,s__PierreCurie)),$fof(s__givenName(english,yagosumo))),answer_to(xdb_ut_Q19,[])).
+xdb_ut_Q19Sending question: fof(xdb_ut_Q21,question,? [V1,V2] : xdb_ut($fof(is_givenName(W,'Entity_UC8_ve Curie')),$fof(is_givenName(english,english)),V1,V2,$fof(s__givenName(english,yagosumo))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(is_givenName(U,Entity_UC8_ve Curie)),$fof(is_givenName(english,english)),$fof(is_givenName(english,english)),$fof(s__givenName(U,s__Entity_UC8_veCurie)),$fof(s__givenName(english,yagosumo))),answer_to(xdb_ut_Q21,[])).
+xdb_ut_Q21Sending question: fof(yago_is_givenName2_Q20,question,? [V1] : s__givenName(V1,s__MarieCurie),unknown,[]).
+% 10 wall clock seconds gone, waiting for system output
+
+outputReceiving answer: fof(translated,answer,xdb_ut($fof(is_givenName(X,Jacques Curie)),$fof(is_givenName(english,english)),$fof(is_givenName(english,english)),$fof(s__givenName(X,s__JacquesCurie)),$fof(s__givenName(english,yagosumo))),answer_to(xdb_ut_Q24,[])).
+xdb_ut_Q24Receiving answer: fof(s__givenName,answer,s__givenName(Marie,s__MarieCurie),answer_to(yago_is_givenName2_Q20,[])).
+yago_is_givenName2_Q20Sending question: fof(yago_is_givenName2_Q22,question,? [V1] : s__givenName(V1,s__PierreCurie),unknown,[]).
+unknownSending question: fof(xdb_ut_Q26,question,? [V1,V2] : xdb_ut($fof(s__givenName('Marie',s__MarieCurie)),$fof(s__givenName(english,yagosumo)),V1,V2,$fof(is_givenName(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__givenName(Marie,s__MarieCurie)),$fof(s__givenName(english,yagosumo)),$fof(s__givenName(english,yagosumo)),$fof(is_givenName(Marie,Marie Curie)),$fof(is_givenName(english,english))),answer_to(xdb_ut_Q26,[])).
+xdb_ut_Q26Receiving answer: fof(s__givenName,answer,s__givenName(Pierre,s__PierreCurie),answer_to(yago_is_givenName2_Q22,[])).
+yago_is_givenName2_Q22Sending question: fof(yago_is_givenName2_Q23,question,? [V1] : s__givenName(V1,s__Entity_UC8_veCurie),unknown,[]).
+unknownSending question: fof(xdb_ut_Q27,question,? [V1,V2] : xdb_ut($fof(s__givenName('Pierre',s__PierreCurie)),$fof(s__givenName(english,yagosumo)),V1,V2,$fof(is_givenName(english,english))),unknown,[]).
+unknownSending question: fof(printonly_Q28,question,printonly(printall(nl,nl,'Marie',' won the ','Nobel Prize In Physics',nl)),unknown,[]).% XDB print : 
+% XDB print : 
+% XDB print : 'Marie' won the 'Nobel Prize In Physics'
+
+PhysicsReceiving answer: fof(translated,answer,xdb_ut($fof(s__givenName(Pierre,s__PierreCurie)),$fof(s__givenName(english,yagosumo)),$fof(s__givenName(english,yagosumo)),$fof(is_givenName(Pierre,Pierre Curie)),$fof(is_givenName(english,english))),answer_to(xdb_ut_Q27,[])).
+xdb_ut_Q27Sending question: fof(printonly_Q29,question,printonly(printall(nl,nl,'Marie',' won the ','Nobel Prize In Chemistry',nl)),unknown,[]).% XDB print : 
+% XDB print : 
+% XDB print : 'Marie' won the 'Nobel Prize In Chemistry'
+% XDB print : 
+printReceiving answer: fof(s__givenName,answer,s__givenName(%C8%ve,s__Entity_UC8_veCurie),answer_to(yago_is_givenName2_Q23,[])).
+yago_is_givenName2_Q23Sending question: fof(yago_is_givenName2_Q25,question,? [V1] : s__givenName(V1,s__JacquesCurie),unknown,[]).
+unknownSending question: fof(xdb_ut_Q30,question,? [V1,V2] : xdb_ut($fof(s__givenName('%C8%ve',s__Entity_UC8_veCurie)),$fof(s__givenName(english,yagosumo)),V1,V2,$fof(is_givenName(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__givenName(%C8%ve,s__Entity_UC8_veCurie)),$fof(s__givenName(english,yagosumo)),$fof(s__givenName(english,yagosumo)),$fof(is_givenName(%C8%ve,Entity_UC8_ve Curie)),$fof(is_givenName(english,english))),answer_to(xdb_ut_Q30,[])).
+xdb_ut_Q30Sending question: fof(printonly_Q31,question,printonly(printall(nl,nl,'Pierre',' won the ','Nobel Prize In Physics',nl)),unknown,[]).% XDB print : 
+% XDB print : 
+% XDB print : 'Pierre' won the 'Nobel Prize In Physics'
+% XDB print : 
+
+printSending question: fof(xdb_ut_Q32,question,? [V1,V2] : xdb_ut($fof(s__givenName('Jacques',s__JacquesCurie)),$fof(s__givenName(english,yagosumo)),V1,V2,$fof(is_givenName(english,english))),unknown,[]).
+unknownReceiving answer: fof(translated,answer,xdb_ut($fof(s__givenName(Jacques,s__JacquesCurie)),$fof(s__givenName(english,yagosumo)),$fof(s__givenName(english,yagosumo)),$fof(is_givenName(Jacques,Jacques Curie)),$fof(is_givenName(english,english))),answer_to(xdb_ut_Q32,[])).
+External connection statistics for 'xdb_ut':
+Number of requests queued: 20
+Number of questions asked: 20
+Number of axioms delivered: 20
+
+External connection statistics for 'printonly':
+Number of requests queued: 3
+Number of questions asked: 3
+Number of axioms delivered: 0
+
+External connection statistics for 'yago_is_familyName1':
+Number of requests queued: 1
+Number of questions asked: 1
+Number of axioms delivered: 4
+
+External connection statistics for 'yago_is_givenName2':
+Number of requests queued: 4
+Number of questions asked: 4
+Number of axioms delivered: 4
+
+External connection statistics for 'yago_has_WonPrize1':
+Number of requests queued: 4
+Number of questions asked: 4
+Number of axioms delivered: 3
+
+External connection statistics totals:
+Number of requests queued: 32
+Number of questions asked: 32
+Number of axioms delivered: 31
+
+SPASS V 3.5a 
+SPASS beiseite: Completion found.
+Problem: /home/graph/tptp/Systems/SPASS-XDB---3.01X0.4/AllExternals.ax 
+SPASS derived 32 clauses, backtracked 0 clauses, performed -1 splits and kept 11 clauses.
+SPASS allocated 66850 KBytes.
+SPASS spent0:00:16.11 on the problem.
+the0:00:00.04 for the input.
+the0:00:00.02 for the FLOTTER CNF translation.
+CNF0:00:00.00 for inferences.
+for0:00:00.00 for the backtracking.
+the0:00:00.00 for the reduction.
+
+
+ The saturated set of worked-off clauses is :
+43[0:Inp] ||  -> is_givenName(Jacques,Jacques Curie)*.
+38[0:Inp] ||  -> is_givenName(%C8%ve,Entity_UC8_ve Curie)*.
+39[0:Res:37.0,26.1] || printonly(printall(nl,nl,Pierre, won the ,Nobel Prize In Physics,nl))*+ -> .
+37[0:Inp] ||  -> is_givenName(Pierre,Pierre Curie)*.
+33[0:Res:31.0,21.1] || printonly(printall(nl,nl,Marie, won the ,Nobel Prize In Chemistry,nl))*+ -> .
+32[0:Res:31.0,23.1] || printonly(printall(nl,nl,Marie, won the ,Nobel Prize In Physics,nl))*+ -> .
+31[0:Inp] ||  -> is_givenName(Marie,Marie Curie)*.
+26[0:Res:25.0,8.1] || printonly(printall(nl,nl,U, won the ,Nobel Prize In Physics,nl))* is_givenName(U,Pierre Curie)+ -> .
+23[0:Res:20.0,4.1] || printonly(printall(nl,nl,U, won the ,Nobel Prize In Physics,nl))* is_givenName(U,Marie Curie)+ -> .
+21[0:Res:19.0,4.1] || printonly(printall(nl,nl,U, won the ,Nobel Prize In Chemistry,nl))* is_givenName(U,Marie Curie)+ -> .
+25[0:Inp] ||  -> has_WonPrize(Pierre Curie,Nobel Prize In Physics)*.
+20[0:Inp] ||  -> has_WonPrize(Marie Curie,Nobel Prize In Physics)*.
+19[0:Inp] ||  -> has_WonPrize(Marie Curie,Nobel Prize In Chemistry)*.
+16[0:Res:15.0,1.3] || printonly(printall(nl,nl,U, won the ,V,nl))* has_WonPrize(Jacques Curie,V)+ is_givenName(U,Jacques Curie) -> .
+15[0:Inp] ||  -> is_familyName(Curie,Jacques Curie)*.
+12[0:Res:11.0,1.3] || printonly(printall(nl,nl,U, won the ,V,nl))* has_WonPrize(Entity_UC8_ve Curie,V)+ is_givenName(U,Entity_UC8_ve Curie) -> .
+11[0:Inp] ||  -> is_familyName(Curie,Entity_UC8_ve Curie)*.
+8[0:Res:7.0,1.3] || printonly(printall(nl,nl,U, won the ,V,nl))* has_WonPrize(Pierre Curie,V)+ is_givenName(U,Pierre Curie) -> .
+7[0:Inp] ||  -> is_familyName(Curie,Pierre Curie)*.
+4[0:Res:3.0,1.3] || printonly(printall(nl,nl,U, won the ,V,nl))* has_WonPrize(Marie Curie,V)+ is_givenName(U,Marie Curie) -> .
+3[0:Inp] ||  -> is_familyName(Curie,Marie Curie)*.
+1[0:Inp] || printonly(printall(nl,nl,U, won the ,V,nl))* has_WonPrize(W,V)* is_givenName(U,W)* is_familyName(Curie,W)*+ -> .
+--------------------------SPASS-STOP------------------------------
+SELF  time: 0.110982
+CHILD time: 1.265806
+WARNING: TreeLimitedRun lost 1.64s, total lost is 1.64s
+
+% END OF SYSTEM OUTPUT
+% RESULT: SOT_4R96LI - SPASS-XDB---3.01X0.4 says GaveUp - CPU = 3.7 WC = 16.1  Derived = 32 Queued = 32 Asked = 32 Delivered = 31
+% OUTPUT: SOT_4R96LI - SPASS-XDB---3.01X0.4 says None - CPU = 0 WC = 0 
+

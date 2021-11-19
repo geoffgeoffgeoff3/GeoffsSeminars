@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE> TH1: The Polymorphic Higher-order Form Type Checking </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TH1 Type Checking </H1>
+
+<IMG SRC="TH1TypeChecking.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Overview </H3>
+<UL>
+<LI> Defined for all TPTP languages using LF
+<LI> LF provides type checking rules as a Twelf signature
+<LI> Two step process
+     <UL>
+     <LI> Translation from TPTP to Twelf
+     <LI> Run Twelf on signature + translated formulae
+     </UL>
+</UL>
+
+<H3> Translation to Twelf </H3>
+<UL>
+<LI> Reject formulae not allowed by language
+<LI> Translate all formulae to TH1
+     <UL>
+     <LI> CNF to FOF - quantify the variables
+     <LI> FOF to TF0 - add default types
+     <LI> TF0 to TF1, TH0 to TH1 - nada
+     <LI> TF0 to TH0, TF1 to TH1 - curry
+     </UL>
+</UL>
+
+<H3> Type Check with Twelf </H3>
+<UL>
+<LI> <A HREF="TH1LanguageTypeCheckingRules.html">Rules</A> for types
+<LI> <A HREF="TH1LanguageTypeCheckingRules.html">Rules</A> for terms
+<LI> <A HREF="TH1LanguageTypeCheckingRules.html">Rules</A> for term constructors
+<LI> <A HREF="TH1LanguageTypeCheckingRules.html">Rules</A> for proofs
+<LI> <A HREF="TH1LanguageTypeCheckingRules.html">Rules</A> for polymorphic
+     constants
+</UL>
+
+<H3> Questions </H3>
+<UL>
+<LI> Should be emailed to Florian
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+fof(interpretation_domain,fi_domain,(
+    ! [X] : ( X = "a" | X = "f" | X = "john" | X = "got_a" ) )).
+
+fof(interpretation_terms,fi_functors,
+    ( a = "a" & f = "f" & john = "john" 
+    & ! [X0,X1] : 
+        ( grade(X0) = X1
+      <=> ( ( X0 != "john" & X1 = "a" )
+          | ( X0 = "john"  & X1 = "f" ) ) ) )).
+
+fof(interpretation_atoms,fi_predicates,
+    ( ! [X0,X1] : 
+        ( created_equal(X0,X1)
+      <=> ( ( X0 = "john"  & X1 = "john" )
+          | ( X0 = "john"  & X1 = "got_a" )
+          | ( X0 = "got_a" & X1 = "john" )
+          | ( X0 = "got_a" & X1 = "got_a" ) ) )
+    & ! [X0] : 
+        ( human(X0)
+      <=> ( X0 = "john"
+          | X0 = "got_a" ) ) )).
+

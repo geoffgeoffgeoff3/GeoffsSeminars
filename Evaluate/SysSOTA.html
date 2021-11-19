@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE> System Rating by SOTA </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> System Rating by SOTA </H1>
+
+<IMG SRC="Cacti/Cactus8.gif" ALIGN=RIGHT>
+
+<H3> Approach </H3>
+<UL>
+<LI> Easy problems are solved by all decent systems, and <BR>
+     Unsolved problems do not differentiate between systems
+     <UL>
+     <LI> Use difficult problems
+     </UL>
+</UL>
+
+<H3> Rating Scheme </H3>
+<UL>
+<LI> The <STRONG>fraction of difficult problems it can solve</STRONG>
+     <PRE>
+              Number of difficult problems solved by the system
+Rating = -----------------------------------------------------------
+         Number of difficult problems solved by any SOTA contributor     </PRE>
+</UL>
+
+<H3> Example Results: <CODE>THM_RFO_NEQ_CNF_NHN</CODE> </H3>
+     <PRE>
+SPC size                        107
+SOTA contributors      solved   104
+SOTA contributors all  solved    90 = 0.87 SOTA   14 = 1.00 SSR
+
+E-SETHEO---99csp    SC solved   101 = 0.97 SOTA   11 = 0.79 SSR
+SPASS---0.99T       SC solved   100 = 0.96 SOTA   10 = 0.71 SSR
+Gandalf---c-1.0d       solved    95 = 0.91 SOTA    8 = 0.57 SSR
+E---0.32               solved    95 = 0.91 SOTA    5 = 0.36 SSR
+Vampire---0.0       SC solved    95 = 0.91 SOTA    5 = 0.36 SSR
+S-SETHEO---0.0         solved    76 = 0.73 SOTA    4 = 0.29 SSR
+OtterMACE---437        solved    85 = 0.82 SOTA    2 = 0.14 SSR
+Bliksem---1.01         solved    84 = 0.81 SOTA    1 = 0.07 SSR
+PROTEIN---V2.20        solved    64 = 0.62 SOTA    0 = 0.00 SSR
+  ... </PRE>
+</UL>
+
+<! Strengths and Weaknesses
+<! Ranks systems that are not comparable in System Ranking by Subsumption
+<! Scale is non-linear
+     <! A ratio of scores is usually not meaningful
+<! All problems are considered equal
+     <! All systems get the benefit
+<! Does not rank systems that solve the same number of problems.
+>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,95 @@
+Overall FOF Statistics
+----------------------
+Domains                     41
+Abstract problems         5648
+Problems                  8630
+Problems with equality    6811 (78%)
+Pure equality problems     372 ( 4%)
+Theorem/Unsatisfiable     7094 (82%)
+CounterSat/Satisfiable    1061 (12%)
+
+Problem-by-problem                 Min      Max      Avg      Med
+------------------                 ------------------------------
+Number of formulae                   1  3341984    27836       63
+% of unit formulae                  0%     100%      30%      23%
+Number of atoms                      1  5328211    57198      293
+% of equality atoms                 0%     100%      19%      11%
+Atoms per formula                  1.0 163741.5    195.6      3.2
+Number of predicate symbols          1   204678     2207       13
+Maximal predicate arity              0       81        3        2
+Number of functors                   0  1050014     9308       14
+Maximal functor arity                0      220        3        2
+Number of variables                  0   972236    14803      139
+          !                          0   972235    10318      122
+          ?                          0    34936      421        8
+Number of connectives                0  2065419    32096      217
+
+The TPTP Domain Structure
+-------------------------
+The domain structure of the TPTP is depicted below,  with counts of the numbers
+of FOF  problems and versions in each domain.  The prefixes name subdirectories 
+in the Problems directory, and prefix the problem names in that directory.
+
+                                                     Domain  # Problems
+     Field             Subfield                      Prefix  Abst / Vers
+ -----------------------------------------------------------------------
+ |-- Logic --------|-- Combinatory Logic                COL     0 /    0
+ |                 |-- Logic Calculi                    LCL   221 /  438
+ |                 |-- Henkin Models                    HEN     0 /    0
+ |
+ |-- Mathematics --|-- Set Theory                       SET   447 /  468
+ |                 |-- Set Theory Continued             SEU   433 /  906
+ |                 |-- Set Theory Continued             SEV    12 /   12
+ |                 |-- Graph Theory                     GRA    26 /   33
+ |                 |-- Algebra --|-- Relation Algebra   REL    53 /  111
+ |                 |             |-- Boolean Algebra    BOO     1 /    1
+ |                 |             |-- Robbins Algebra    ROB     0 /    0
+ |                 |             |-- Left Distributive  LDA     0 /    0
+ |                 |             |-- Lattices           LAT   108 /  413
+ |                 |             |-- Quantales          QUA     0 /    0
+ |                 |             |-- Kleene Algebra     KLE   182 /  241
+ |                 |             |-- Groups             GRP    86 /  202
+ |                 |             |-- Rings              RNG    84 /  157
+ |                 |             |-- Fields             FLD     0 /    0
+ |                 |             |-- Linear Algebra     LIN     0 /    0
+ |                 |             |-- Homological Alg    HAL     7 /   10
+ |                 |             |-- Real Algebra       RAL     0 /    0
+ |                 |             |-- General Algebra    ALG   222 /  286
+ |                 |-- Number Theory                    NUM   489 /  769
+ |                 |-- Number Theory Continued          NUN    40 /   79
+ |                 |-- Topology                         TOP    29 /  107
+ |                 |-- Analysis                         ANA     0 /    0
+ |                 |-- Geometry                         GEO   368 /  521
+ |                 |-- Category Theory                  CAT    17 /   68
+ |
+ |-- Computer -----|-- Computing Theory                 COM    44 /   61
+ |   Science       |-- Knowledge Representation         KRS   268 /  268
+ |                 |-- Natural Language Processing      NLP   262 /  262
+ |                 |-- Planning                         PLA    17 /   17
+ |                 |-- Agents                           AGT    27 /   53
+ |                 |-- Commonsense Reasoning            CSR   272 /  937
+ |                 |-- Semantic Web                     SWB   108 /  204
+ |                 |-- Data Structures                  DAT     0 /    0
+ |                 |-- Software Creation                SWC   423 /  423
+ |                 |-- Software Verification            SWV   328 /  346
+ |                 |-- Software Verification Continued  SWW   346 /  392
+ |
+ |-- Science and --|-- Biology                          BIO     4 /    4
+ |   Engineering   |-- Hardware Creation                HWC     0 /    0
+ |                 |-- Hardware Verification            HWV    95 /  108
+ |                 |-- Medicine                         MED    12 /   12
+ |                 |-- Processes                        PRO    18 /   72
+ |                 |-- Products                         PRD     3 /    3
+ |
+ |-- Social -------|-- Social Choice Theory             SCT    70 /   85
+ |   Sciences      |-- Management                       MGT    67 /   79
+ |                 |-- Geography                        GEG     1 /    1
+ |
+ |-- Arts and -----|-- Philosophy                       PHI     7 /    7
+ |   Humanities
+ |
+ |-- Other --------|-- Arithmetic                       ARI     0 /    0
+                   |-- Syntactic                        SYN   365 /  375
+                   |-- Syntactic Continued              SYO    46 /   51
+                   |-- Puzzles                          PUZ    29 /   37
+                   |-- Miscellaneous                    MSC    11 /   11

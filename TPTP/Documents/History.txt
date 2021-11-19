@@ -1,0 +1,1207 @@
++ In SyntaxBNF
+  - Added semantic rules for <thf_unitary_type>.
+  - Split <tff_top_level_type> into <tff_atomic_type> and 
+    <tff_non_atomic_type>, and added (<tff_atomic_type>) to <tff_atomic_type>.
+-------------------------------------------------------------------------------
+Release v7.2.0, Tue Jul 10 11:20:43 EDT 2018
+ 
+Changes from v7.1.0 to v7.2.0 for FOF problems
+ 12 new abstract problems, in the domains NUN PHI SYO.
+ 15 new problems, in the domains NUN PHI SYO.
+  0 new generators.
+  0 bugfixes done.
+
++ Changed the copyright notice in ReadMe to allow verbatim redistribution of
+  the TPTP and parts of the TPTP. 
+
++ In SyntaxBNF
+  - Changed <tfx_conditional> and <tfx_let> to use the TFX rather than THF
+    definition and rules.
+  - thf_type_formula> renamed to <thf_atom_typing>, and moved from
+    thf_logic_formula> to <thf_formula>. <thf_atom_typing> redefined to use
+    untyped_atom> instead of <thf_atom>, and to allow ()s around it.
+  - Added <thf_unit_formula> to use in <thf_or_formula>, <thf_and_formula>,
+    thf_apply_formula>, and <thf_quantified_formula>.
+  - Added <thf_unary_formula> to divide <thf_prefix_unary> and
+    thf_infix_unary>, and added <thf_preunit_formula> to use in
+    thf_prefix_unary>.
+  - Replaced <thf_atom> with <thf_atomic_formula>, which divides the various
+    atoms" into <thf_plain_atomic>, <thf_defined_atomic>, <thf_system_atomic>,
+    and <thf_fof_function>.
+  - Split off (in)equality into <thf_defined_infix> and <thf_infix_unary>, and
+    added <thf_unitary_term> to use in them.
+    thf_conn_term> redefined to use <nonassoc_connective> and infix_equality>.
+  - thf_subtype> changed to have <untyped_atom> on the lefthand side.
+    binary_connective> renamed to <nonassoc_connective>.
+-------------------------------------------------------------------------------
+Release v7.1.0, Tue Mar 6 12:00:10 EST 2018
+
+This release provides an introduction to the extended TFF syntax, in which
+(i) formulae can be used as terms with the type $o, (ii) variables of type $o
+can be used as formulae, (iii) tuple terms and tuple types are available as
+first-class citizens, and (iv) conditional and let expressions are supported.
+Corresponding changes to the THF syntax for conditional and let expressions.
+There are no problems in this TPTP release that use the extended TFF syntax,
+and instead a separate .tgz is available with sample problems. The SyntaxBNF
+file provides the extended syntax, and the changes are listed below.
+
+Changes from v7.0.0 to v7.1.0 for THF problems
+  0 new abstract problems.
+130 new problems, in the domains NUM NUN SYN.
+  0 new generators.
+  2 bugfixes done, in the domains PUZ SYN.
+
+Changes from v7.0.0 to v7.1.0 for TFA problems
+  0 new abstract problems.
+  0 new problems.
+  0 new generators.
+ 60 bugfixes done, in the domains SWW.
+
+Changes from v7.0.0 to v7.1.0 for TFF problems
+  0 new abstract problems.
+  2 new problems, in the domains SYN.
+  0 new generators.
+  0 bugfixes done.
+
+Changes from v7.0.0 to v7.1.0 for FOF problems
+  6 new abstract problems, in the domains SYO.
+  7 new problems, in the domains SYO.
+  0 new generators.
+  1 bugfixes done, in the domains SYN.
+
+Changes from v7.0.0 to v7.1.0 for CNF problems
+ 23 new abstract problems, in the domains SYO.
+ 24 new problems, in the domains SYO.
+  0 new generators.
+  1 bugfixes done, in the domains SYN.
+
++ In SyntaxBNF
+  In THF:
+  - <thf_subtype> moved from <thf_logic_formula> to <thf_formula>
+  - <thf_unitary_formula> reduced to contain only quantified, unary, atom,
+    and ()ed formulae.
+  - <thf_binary_pair> renamed to <thf_binary_nonassoc>, <thf_binary_tuple>
+    renamed to <thf_binary_assoc>.
+  - <thf_variable_list> changed to use <thf_typed_variable> instead of
+    <thf_variable>, because <thf_variable> included <variable> which was a
+    hangover from the default typing of TFF.
+  - <thf_atom> extended to include <atom> (moved up from <thf_function>) and
+    <thf_tuple> (moved down from thf_unitary_formula>).
+  - <thf_conn_term> in <thf_atom> must now be ()ed, i.e., to make a connective
+    into a term it must be ()ed.
+  - <thf_atom> extended to include <thf_conditional> and <thf_let> (moved down
+    from <thf_unitary_formula>).
+  - <thf_function> renamed to <thf_fof_function> (to show it captures the
+    first-order style of writing things).
+  - <thf_tuple> reverted back to using only []s (no {}s).
+    <thf_let> changed to new syntax.
+  - <thf_typeable_formula> reduced to allow only <thf_atom> (no ()s).
+  - <thf_unitary_type> allows tuple types, because <thf_unitary_formula> leads
+    to <thf_atom>, to <thf_function>, to <thf_tuple>. Loose syntax!
+  In TFF: Big changes to accomodate TFX, including ...
+  - <tff_subtype> moved from <tff_logic_formula> to <tff_formula>
+  - <tff_sequent> removed. That construct is now in the TFX language.
+  - <tff_unit_formula> added for use in binary formulae.
+  - <tff_preunit_formula> added for use in <tff_prefix_unary>.
+  - <tff_logic_formula> extended to include unary formulae.
+  - <tff_unary_formula> split into prefix and infix
+  - <tff_conditional> and <tff_let> moved from <tff_unitary_formula> to
+    <tff_defined_plain>.
+  - <tff_unitary_term> added for use in <tff_defined_infix> and
+    <tff_infix_unary>.
+  - <tfx_tuple> added, for use in <tff_term> and <tff_unitary_term>.
+  - <tff_typed_atom> renamed to <tff_atom_typing>.
+  - <tff_atomic_type> extended to include <tfx_tuple_type>, because the TFX
+    language uses the same type declaration rules.
+  In FOF:
+  - <fof_logic_formula> extended to include <fof_unary_formula> (previously
+    in <fof_unitary_formula>).
+  - <tff_conditional_term> and <tff_let_term> removed from <fof_term>. Those
+    constructs are now only in TFX and THF.
+  - <tff_tuple_term> removed from <fof_function_term>.
+-------------------------------------------------------------------------------
+Release v7.0.0, Mon Jul 24 17:36:26 EDT 2017
+
+This is the first release with polymorphic THF (TH1) problems. There are 644
+polymorphic TH1 problems in 14 domains.
+
+Changes from v6.4.0 to v7.0.0 for THF problems
+639 new abstract problems, in the domains ANA COM DAT GEO LIN MSC NUN PRO PUZ RAL SEV.
+648 new problems, in the domains ANA COM DAT GEO LIN MSC NUN PRO PUZ RAL SEV.
+  0 new generators.
+  0 bugfixes done.
+
+Changes from v6.4.0 to v7.0.0 for TFA problems
+195 new abstract problems, in the domains ARI DAT SWW.
+198 new problems, in the domains ARI DAT SWW.
+  0 new generators.
+  0 bugfixes done.
+
+Changes from v6.4.0 to v7.0.0 for TFF problems
+  0 new abstract problems.
+  0 new problems.
+  0 new generators.
+  0 bugfixes done.
+
+Changes from v6.4.0 to v7.0.0 for FOF problems
+106 new abstract problems, in the domains GEO SEV SYO.
+109 new problems, in the domains GEO SEV SYO.
+  0 new generators.
+  4 bugfixes done, in the domains BIO.
+
+Changes from v6.4.0 to v7.0.0 for CNF problems
+  0 new abstract problems.
+  0 new problems.
+  0 new generators.
+  0 bugfixes done.
+
++ Two new domains have been added:
+  - LIN (Linear Algebra)
+  - RAL (Real Algebra)
+
++ Numbers no longer permitted in CNF and FOF. Use "distinct objects", e.g.,
+  "27".
+
++ In SyntaxBNF
+  - Noted that <number>s may not be used in CNF or FOF.
+  - Added tcf
+  - Moved ^ into <th0_quantifier>
+  - Changed <thf_top_level_type> and <thf_unitary_type> to be more precise.
+    <thf_binary_type> removed from <thf_binary_formula>.
+  - Specified that the quantification in a $let must be universal.
+  - Added ()s around the <thf_let_plain_defn> in a <thf_let_quantified_defn>
+    (to avoid binding ambiguity).
+  - Changed $ite to be an instance of a <thf_unitary_formula>, so it uses
+    application rather than FOF style $ite(...).
+  - Added := to the THF binary connectives, to accomodate logic specifications.
+    This changed $let to use <thf_unitary_formula> for it's first arguments;
+    the original rule hierarchy for $let has been changed to :== semantic
+    rules. Semantic rules for logic specifications have been added.
+  - Added := to the TFF binary connectives, to accomodate logic specifications.
+  - Split off TFX language, for FOOL and modal logic.
+  - Renamed things to separate THF from TFF from FOF from general
+  - Added <tff_subtype> back
+  - Added <tff_tuple_term>. Allow <thf_tuple>s to use either {}s or []s.
+  - Added <thf_apply_type> to <thf_top_level_type>
+  - Updated comment about number of languages, and comment saying all variables
+    except CNF must be quantified.
+
+-------------------------------------------------------------------------------
+Release v6.4.0, Mon Jun 13 09:59:56 EDT 2016
+
+Changes from v6.3.0 to v6.4.0 for THF problems
+ 18 new abstract problems, in the domains LCL NUN PHI SEV.
+ 36 new problems, in the domains ALG DAT LCL NUN PHI PUZ QUA SEV SWW.
+
+Changes from v6.3.0 to v6.4.0 for TFA problems
+  9 new abstract problems, in the domains ARI DAT SWW.
+ 14 new problems, in the domains ARI DAT MSC NUM SWW.
+  2 bugfixes done, in the domains HWV NUM.
+
+Changes from v6.3.0 to v6.4.0 for TFF problems
+  None
+
+Changes from v6.3.0 to v6.4.0 for FOF problems
+ 53 new abstract problems, in the domains BIO COM CSR GEO KLE LCL SEV SWW.
+ 69 new problems, in the domains AGT ALG BIO COM CSR GEO GRA HAL KLE LCL MED NUN REL SEV SWW.
+ 38 bugfixes done, in the domains GEO.
+
+Changes from v6.3.0 to v6.4.0 for CNF problems
+  8 new abstract problems, in the domains FLD LAT LCL MSC.
+ 16 new problems, in the domains FLD GEO LAT LCL LDA MSC REL SEV.
+
++ In SyntaxBNF
+  - Added @@+ and @@-
+  - Require LHS of let definitions to be non-variable. Added let*.
+  - Fixed thf_let
+-------------------------------------------------------------------------------
+Release v6.3.0, Sat Nov 28 16:04:51 EST 2015
+
+Changes from v6.2.0 to v6.3.0 for TFA problems
+105 new abstract problems, in the domains ARI.
+106 new problems, in the domains ARI.
+  0 new generators.
+  0 bugfixes done.
+
+Changes from v6.2.0 to v6.3.0 for FOF problems
+  0 new abstract problems.
+  2 new problems, in the domains NUN SEV.
+  0 new generators.
+  1 bugfixes done, in the domains NUM.
+-------------------------------------------------------------------------------
+Release v6.2.0, Tue Jul 14 10:21:30 EDT 2015
+
+Changes from v6.1.0 to v6.2.0 for THF problems
+  4 new abstract problems, in the domains PUZ.
+  5 new problems, in the domains PUZ.
+  0 new generators.
+ 25 bugfixes done, in the domains PUZ SEU SEV.
+
+Changes from v6.1.0 to v6.2.0 for TFF problems
+  0 new abstract problems.
+  0 new problems.
+  0 new generators.
+ 48 bugfixes done, in the domains HWV.
+
+Changes from v6.1.0 to v6.2.0 for TFA problems
+  0 new abstract problems.
+  0 new problems.
+  0 new generators.
+  9 bugfixes done, in the domains HWV.
+
+Changes from v6.1.0 to v6.2.0 for FOF problems
+  3 new abstract problems, in the domains PRD.
+  3 new problems, in the domains PRD.
+  0 new generators.
+  0 bugfixes done.
+
+Changes from v6.1.0 to v6.2.0 for CNF problems
+  0 new abstract problems.
+  0 new problems.
+  0 new generators.
+  0 bugfixes done.
+
++ One new domain has been added
+  - PRD (Products)
+
++ In SyntaxBNF
+  - Allow leading zeros in exponents
+-------------------------------------------------------------------------------
+Release v6.1.0, Thu May 29 05:41:26 EDT 2014
+
+Changes from v6.0.0 to v6.1.0 for THF problems
+  5 new abstract problems, in the domains PHI.
+ 11 new problems, in the domains PHI PUZ.
+
+Changes from v6.0.0 to v6.1.0 for TFF problems
+ 45 new abstract problems, in the domains HWV.
+ 48 new problems, in the domains HWV PUZ.
+
+Changes from v6.0.0 to v6.1.0 for TFA problems
+180 new abstract problems, in the domains ARI DAT HWV SWW.
+185 new problems, in the domains ARI DAT HWV SWW.
+
+Changes from v6.0.0 to v6.1.0 for FOF problems
+ 47 new abstract problems, in the domains BIO HWV.
+ 49 new problems, in the domains BIO HWV.
+
+Changes from v6.0.0 to v6.1.0 for CNF problems
+ 46 new abstract problems, in the domains HWV.
+ 48 new problems, in the domains HWV.
+
++ Two new domains have been added (now there are 50 domains :-)
+  - BIO (Biology)
+  - PHI (Philosophy)
+-------------------------------------------------------------------------------
+Release v6.0.0, Thu Sep 12 14:29:33 EDT 2013
+
+This is the first release with polymorphic TFF (TF1) problems. There are 537
+TF1 problems in 5 domains.
+
+Changes from v5.5.0 to v6.0.0 for THF problems
+  0 new abstract problems.
+  0 new problems.
+
+Changes from v5.5.0 to v6.0.0 for TFF problems
+372 new abstract problems, in the domains COM NUM NUN SCT SWW.
+537 new problems, in the domains COM LCL NUM NUN SCT SWV SWW.
+
+Changes from v5.5.0 to v6.0.0 for TFA problems
+  0 new abstract problems.
+  0 new problems.
+
+Changes from v5.5.0 to v6.0.0 for FOF problems
+  0 new abstract problems.
+  0 new problems.
+
+Changes from v5.5.0 to v6.0.0 for CNF problems
+  0 new abstract problems.
+  0 new problems.
+
++ In SyntaxBNF
+  - Noted that $distinct should be used only as a fact with constant arguments.
+  - Allowed multiple binders for <tff_let_term_defn> and <tff_let_formula_defn>.
+-------------------------------------------------------------------------------
+Release v5.5.0, Tue May 21 08:32:07 EDT 2013
+
+Changes from v5.4.0 to v5.5.0 for THF problems
+ 19 new abstract problems, in the domains KRS PLA SYO.
+ 96 new problems, in the domains ALG KRS LCL MSC NLP PLA SET SEV SWC SWV SYN SYO.
+
+Changes from v5.4.0 to v5.5.0 for TFA problems
+ 13 new abstract problems, in the domains DAT.
+ 15 new problems, in the domains DAT NUM.
+
+Changes from v5.4.0 to v5.5.0 for FOF problems
+105 new abstract problems, in the domains HWV KLE KRS LCL PLA SYO.
+116 new problems, in the domains HWV KLE KRS LCL MGT MSC PLA PUZ SYO.
+
+Changes from v5.4.0 to v5.5.0 for CNF problems
+ 77 new abstract problems, in the domains HWV KRS PLA SYO.
+ 82 new problems, in the domains HWV KRS MSC PLA SYO.
+
++ In SyntaxBNF
+  - Added optional ()s around let bindings
+  - Rearranged <tff_*_type> to allow more ()s in places.
+  - Allow inference records to have no parents.
+-------------------------------------------------------------------------------
+Release v5.4.0, Tue Jun 19 07:10:11 EDT 2012
+
+Changes from v5.3.0 to v5.4.0 for THF problems
+  3 new problems, in the domains DAT MSC.
+ 11 bugfixes done, in the domains AGT.
+
+Changes from v5.3.0 to v5.4.0 for TFF problems
+  1 bugfixes done, in the domains SYO.
+
+Changes from v5.3.0 to v5.4.0 for TFA problems
+  1 bugfixes done, in the domains NUM.
+
+Changes from v5.3.0 to v5.4.0 for FOF problems
+389 bugfixes done, in the domains CSR KRS PUZ SET.
+
+Changes from v5.3.0 to v5.4.0 for CNF problems
+  4 new abstract problems, in the domains ALG LAT RNG.
+ 10 new problems, in the domains ALG GRP LAT RNG.
+
++ In SyntaxBNF
+  - Fixed THF $let_* grammar. Had to make it quite non-specific.
+-------------------------------------------------------------------------------
+Release v5.3.0, Wed Dec 7 08:11:04 EST 2011
+
+Changes from v5.2.0 to v5.3.0 for THF problems
+ 14 new abstract problems, in the domains NUM SCT SWW.
+ 66 new problems, in the domains CSR NUM PUZ SCT SWW SYO.
+ 15 bugfixes done, in the domains ALG NUM SEV.
+
+Changes from v5.2.0 to v5.3.0 for TFF problems
+ 27 new abstract problems, in the domains HWV NUM SCT SWW SYO.
+108 new problems, in the domains HWV NUM SCT SWW SYO.
+
+Changes from v5.2.0 to v5.3.0 for TFA problems
+ 12 new abstract problems, in the domains HWV.
+ 53 new problems, in the domains ARI HWV.
+
+Changes from v5.2.0 to v5.3.0 for FOF problems
+ 26 new abstract problems, in the domains HWV NUM SCT SWW.
+133 new problems, in the domains HWV NUM SCT SWW SYO.
+290 bugfixes done, in the domains CSR.
+
+Changes from v5.2.0 to v5.3.0 for CNF problems
+ 12 new abstract problems, in the domains HWV.
+ 31 new problems, in the domains HWV SYO.
+
++ In SyntaxBNF
+  - Removed $equal
+  - Made <thf_tuple> be a list of <thf_logic_formula>
+  - Made all <*_tuple> only used in <*_sequent>
+  - Added <tff_tuple> and <fof_tuple>. The latter is in FOFX.
+  - Added $quotient, $quotient_e, $quotient_t, $quotient_f,
+    $remainder_e, $remainder_t, $remainder_f,
+    $floor, $ceiling, $truncate, $round
+  - Removed $evaleq
+  - Renamed $itef to $ite_f and $itet to $ite_t
+  - Added <tff_let> and <let_term> (draft)
+  - Added TFF1 syntax
+  - Adapted <thf_let> to match <tff_let>
+-------------------------------------------------------------------------------
+Release v5.2.0, Sun Jun 26 15:33:15 EDT 2011
+
+Changes from v5.1.0 to v5.2.0 for THF problems
+ 59 new abstract problems, in the domains AGT LCL SEV SYO.
+ 74 new problems, in the domains AGT LCL PUZ SEV SYO.
+148 bugfixes done, in the domains ALG LCL NUM PUZ SEU SEV SYO.
+
+Changes from v5.1.0 to v5.2.0 for TFA problems
+  9 bugfixes done, in the domains ARI GEG SYO.
+
+Changes from v5.1.0 to v5.2.0 for FOF problems
+410 new abstract problems, in the domains KLE SWB SWW.
+537 new problems, in the domains CSR KLE LCL SWB SWW SYO.
+
+Changes from v5.1.0 to v5.2.0 for CNF problems
+ 71 new abstract problems, in the domains SWW.
+ 78 new problems, in the domains LCL PLA SWW.
+
++ In SyntaxBNF
+  - Fixed <general_function>
+  - Added commentary explaining intended use of definitions
+  - Set the type of <distinct_object>s to $i
+
++ One new domain has been added
+  - SWB (Semantic Web)
+-------------------------------------------------------------------------------
+Release v5.1.0, Wed Jan 12 08:23:36 EST 2011
+
+This release is mainly to provide more TFA problems for developers (especially
+those preparing for the TFA division in CASC-23).
+
+Changes from v5.0.0 to v5.1.0 for THF problems
+ 17 new problems, in the domains LCL NUM SET SEU SEV SYN SYO.
+  2 bugfixes done, in the domains LCL.
+
+Changes from v5.0.0 to v5.1.0 for TFF problems
+  1 new abstract problems, in the domains PUZ.
+  4 new problems, in the domains PUZ.
+
+Changes from v5.0.0 to v5.1.0 for TFA problems
+ 59 new abstract problems, in the domains ARI GEG.
+ 70 new problems, in the domains ARI GEG.
+  2 bugfixes done, in the domains ARI DAT.
+
++ In SyntaxBNF
+  - Made letrec into plain let.
+-------------------------------------------------------------------------------
+Release v5.0.0, Thu Sep 16 10:38:26 EDT 2010
+
+This is the first release with TFF problems. There are 817 TFF problems in
+13 domains. 805 of the problems contain arithmetic.
+
+Changes from v4.1.0 to v5.0.0 for THF problems
+ 45 bugfixes done, in the domains LCL SYN.
+
+Changes from v4.1.0 to v5.0.0 for FOF problems
+  1 bugfixes done, in the domains SYN.
+
+Changes from v4.1.0 to v5.0.0 for CNF problems
+  1 bugfixes done, in the domains SYN.
+
++ Three new domains have been added
+  - ARI (Arithmetic)
+  - DAT (Data Structures)
+  - SWW (Software Verification Continued)
+
++ A 32 bit binary of the TPTP4X utility has been added to the Scripts directory
+
++ In SyntaxBNF
+  - Added the Typed First-order Form (TFF) syntax
+  - Seperated the extended first-order form (FOFX) syntax. It includes
+    <fof_letrec>, <fof_conditional>, and <fof_sequent>. FOFX is optional.
+  - Added <thf_conditional>
+  - Added ()ed <thf_sequent>
+-------------------------------------------------------------------------------
+Release v4.1.0, Tue Jun 15 11:12:54 EDT 2010
+
+Changes from v4.0.1 to v4.1.0 for THF problems
+105 new abstract problems, in the domains CSR GEG LCL QUA SYO.
+164 new problems, in the domains CAT CSR GEG LCL NUM QUA SEV SYO.
+
+Changes from v4.0.1 to v4.1.0 for FOF problems
+119 new abstract problems, in the domains CSR GEO GRP NUM PUZ.
+156 new problems, in the domains CSR GEO GRP NUM PUZ.
+213 bugfixes done, in the domains CSR.
+
+Changes from v4.0.1 to v4.1.0 for CNF problems
+814 new abstract problems, in the domains ALG GRP LCL LDA ROB SCT SWV.
+834 new problems, in the domains ALG GRP LCL LDA ROB SCT SWC SWV.
+
++ Two new domains have been added:
+  - SCT (Social Choice Theory)
+  - QUA (Quantales)
+
++ The SPC (Specialist Problem Class) field has been added to problem headers.
+  This categorizes the problem according to syntactic characteristics.
+
++ In SyntaxBNF
+  - <thf_definition> has been removed
+  - <new_symbol_record> has been added
+  - Details of bind() terms for recording variable bindings have been added
+-------------------------------------------------------------------------------
+Release v4.0.1, Mon Nov 16 13:13:18 EST 2009
+
+Changes from v4.0.0 to v4.0.1 for THF problems
+  5 bugfixes done, in the domains SWV SYN.
+
+Changes from v4.0.0 to v4.0.1 for FOF problems
+219 bugfixes done, in the domains CSR GEO NLP SYN.
+
+Changes from v4.0.0 to v4.0.1 for CNF problems
+  1 bugfixes done, in the domains SYN.
+
++ In SyntaxBNF
+  - Changed <thf_type_formula> to require ()s around non-atomic terms.
+  - Added @+ as the binder for choice (indefinite description) and @- as the
+    binder for definite description. These are in full THF, not THF0.
+  - Added <thf_subtype>
+  - Allowed <distinct_object>s to be empty strings.
+-------------------------------------------------------------------------------
+Release v4.0.0, Sat Jul 4 09:05:28 EDT 2009
+
+This is the first full release with THF problems. TPTP v3.6.0 and v3.7.0 were
+the alpha and beta releases with THF problems. TPTP v3.5.0 was the last release
+with changes to the FOF and CNF parts of the TPTP.
+
+Changes from v3.7.0 to v4.0.0 for THF problems
+1199 new abstract problems, in the domains ALG LCL MSC NUM PUZ SEU SEV SYO.
+1516 new problems, in the domains ALG COM GRP LCL MSC NUM PUZ SET SEU SEV SYN
+     SYO.
+  17 bugfixes done, in the domains LCL SEU SYN SYO.
+
+Changes from v3.5.0 to v4.0.0 for FOF problems
+ 800 new abstract problems, in the domains COM CSR GEG GEO GRP KLE KRS LAT
+     LCL MSC NLP NUM PRO PUZ REL RNG SWV.
+1933 new problems, in the domains COM CSR GEG GEO GRP KLE KRS LAT LCL MED
+     MSC NLP NUM PRO PUZ REL RNG SWV SYN.
+ 136 bugfixes done, in the domains CSR LCL SET SEU.
+
+Changes from v3.5.0 to v4.0.0 for CNF problems
+ 217 new abstract problems, in the domains ALG GRP LAT REL SWV.
+ 454 new problems, in the domains ALG GRP LAT NUM REL SWV SYN.
+  13 bugfixes done, in the domains GRP NUM.
+
++ Five new domains have been added:
+  - GEG (Geography)
+  - KLE (Kleene Algebra)
+  - REL (Relation ALgebra)
+  - PRO (Processes)
+  - SEV (Set Theory Continued), as SEU had filled up
+
++ In Scripts
+  - Added ability to tptp2T extract solutions that use equality
+
++ In Documents
+  - Added number of equality atoms in solution statistics in
+    ProblemAndSolutionStatistics
+
++ In SyntaxBNF
+  - Fixed to require that all variables are typed in THF0
+  - Added semantic rule to allow multiple sources, to allow representation
+    of alternative derivations with shared parts.
+  - Converted FOF and CNF conjunctions and disjunctions to use explicit left
+    recursion, which is best for lex/yacc.
+-------------------------------------------------------------------------------
+Release v3.7.0, Sun Mar 8 11:42:26 EDT 2009
+
+Changes from v3.6.0 to v3.7.0 for THF problems
+631 new abstract problems, in the domains ALG LCL NUM SEU SWV SYN SYO.
+994 new problems, in the domains ALG LCL NUM SEU SWV SYN SYO.
+  5 bugfixes done, in the domains SEU SYN.
+
++ This is a beta release, for THF problems
+  - See the notes for v3.6.0
+  - Ratings have been added for the THF problems
+  - No changes have been made to the FOF and CNF parts
+
++ One new domain has been added:
+  - SYO (Syntactic Continued), as SYN had filled up
+
++ In tptp2X
+  - Added Isabelle format output
+
++ In SyntaxBNF
+  - Reverted != to <thf_pair_connective>. It is special for only fof/cnf/tff
+-------------------------------------------------------------------------------
+Release v3.6.0, Tue Dec 16 05:01:29 EST 2008
+
+Changes from v3.5.0 to v3.6.0 for THF problems
+175 new abstract problems, in the domains GRA LCL NUM PUZ SET SEU SWV SYN.
+281 new problems, in the domains GRA LCL NUM PUZ SET SEU SWV SYN.
+
+Changes from v3.5.0 to v3.6.0 for FOF problems
+  1 new abstract problems, in the domains SYN.
+  2 new problems, in the domains SYN.
+
+Changes from v3.5.0 to v3.6.0 for CNF problems
+  1 new abstract problems, in the domains SYN.
+  2 new problems, in the domains SYN.
+
++ This is an alpha release, introducing THF problems
+  - These are problems in the THF0 core syntax. Problem version numbers are
+    searated from the abstract name by a "^", e.g., LCL579^1.p.
+  - The Problems directory contains a THF domain, with symbolic links to all
+    the THF problems. This will not exist in the full (non-alpha) release.
+  - All documents and utilities have been upgraded to deal with THF0.
+  - Export to TPS and OmDoc formats is available using tptp2X.
+  - Only minor changes have been made to the FOF and CNF parts (the only new
+    problems are the SYN000 problems, suitable for testing parsers).
+
++ In tptp2X
+  - Upgraded statistics counts
+  - Upgraded to handle THF
+
++ In Scripts
+  - tptp1T is now longer supported, as it is superceded by tptp2T.
+
++ In Documents
+  - The FOFStatistics and CNFStatistics have been removed, as they are
+    superceded by ProblemAndSolutionStatistics.
+
++ In SyntaxBNF
+  - Allow only visibles in single_quoted and distinct_object
+  - Removed the comment that "All formulae must be closed" to accomodate
+    encodings of modal logics like S5 with free variables.
+  - Changed <file_name> to be <single_quoted>
+  - <thf_defined_const> renamed to <thf_definition>, and extended to allow
+    the constant to optionally be typed.
+  - Updated the list of SZS success status values.
+  - != is no longer a <defined_infix_pred>, but is treated specially,
+    because it really indicates a unary formula. Necessary for CNF, and
+    cleaner for THF and FOF.
+-------------------------------------------------------------------------------
+Release v3.5.0, Wed Aug 6 11:17:59 EDT 2008
+
+Changes from v3.4.2 to v3.5.0 for FOF problems
+ 12 new abstract problems, in the domains BOO CSR MSC PUZ.
+ 20 new problems, in the domains BOO CSR MSC PUZ.
+170 bugfixes done, in the domains CSR.
+
+Changes from v3.4.2 to v3.5.0 for CNF problems
+  9 new abstract problems, in the domains MSC PLA SWV.
+ 96 new problems, in the domains MSC PLA PUZ SWV.
+
++ In tptp2X
+  - Updated format.omdoc
+  - Added format.tps
+  - Added facilities for processing typed higher-order form (THF) formulae
+
++ In SyntaxBNF
+  - Fixed <useful_info> to be a <general_list>, and replaced <general_arguments>
+    by <general_terms>
+  - Added <variable> and $xxx(<xxx_formula>) as <general_data>
+  - Fixed <single_quoted> and <distinct_object> to simplify escapes
+  - Released the THF part. Note, only THF0 is stable.
+-------------------------------------------------------------------------------
+Release v3.4.2, Fri May 30 12:37:15 EDT 2008
+
+Changes from v3.4.1 to v3.4.2 for FOF problems
+ 70 bugfixes done, in the domain CSR.
+
++ Bugfixed CSR003+1 axioms
+-------------------------------------------------------------------------------
+Release v3.4.1, Mon Mar 31 10:49:39 EDT 2008
+
+Changes from v3.4.0 to v3.4.1 for FOF problems
+ 70 bugfixes done, in the domain CSR.
+
++ Bugfixed CSR003 axioms. These are the files used in the SUMO challenge.
++ In tptp2X
+  - Added format.clif
+-------------------------------------------------------------------------------
+Release v3.4.0, Tue Mar 4 21:24:03 EST 2008
+
+Changes from v3.3.0 to v3.4.0 for FOF problems
+330 new abstract problems, in the domains ALG CAT CSR GRP LAT SEU TOP.
+1385 new problems, in the domains ALG CAT CSR GRP LAT SEU TOP.
+3128 ratings changed
+
+Changes from v3.3.0 to v3.4.0 for CNF problems
+2992 ratings changed
+
++ There are new problems in the CSR domain that are much larger than anything
+  previously in the TPTP, some with over 3.3 million axioms.
++ A new utility script, tptp2T, has been added in the Scripts directory. tptp2T
+  is an enhanced version of the existing tptp1T script, for extracting lists
+  of problems, and now solutions, with specified characteristics. tptp2T works
+  in conjunction with a new data file ProblemAndSolutionStatistics, which is
+  in the Documents directory. ProblemAndSolutionStatistics combines the problem
+  statistics currently in the FOFProblemStatistics and CNFProblemStatistics
+  with statistics from ATP system runs on all the problems.
++ The SZS ontology (in the Documents directory) has been refined to include
+  new useful status and output values. A summary of commonly used values has
+  been added for those who do not want/need to deal with the full ontology.
++ In tptp2X
+  - Several new format modules have been added, and various minor improvements
+    have been implemented.
+  - Capability for reading and formatting THF - typed higher-order form -
+    formulae has been added.
++ In SyntaxBNF
+  - Fixed <useful_info> to be a <general_list>, and replaced
+    <general_arguments> by <general_terms>
+  - <variable> and $xxx(<xxx_formula>) added as <general_data>
+  - Fixed <single_quoted> and <distinct_object> to simplify escapes
+-------------------------------------------------------------------------------
+Release v3.3.0, Thu Jun 28 16:32:09 EDT 2007
+
+Changes from v3.2.0 to v3.3.0 for FOF problems
+566 new abstract problems, in the domains GEO LCL SEU SWV.
+920 new problems, in the domains GEO LCL SEU SWV.
+211 bugfixes done, in the domains SWV.
+
+Changes from v3.2.0 to v3.3.0 for CNF problems
+
++ In tptp2X
+  - Changed header processing so that having two separator lines makes the
+    header get filled in, otherwise no header is created or output.
++ In SyntaxBNF
+  - Removed lemma_conjecture role
+  - Added assumption_record, asssumption role, and asssumption intro_type
+  - Generalized the BNF for defined terms - been commented out so far
+  - Added real numbers in scientific notation
+-------------------------------------------------------------------------------
+Release v3.2.0, Wed Jul 19 15:07:11 EDT 2006
+
+Changes from v3.1.1 to v3.2.0 for FOF problems
+376 new abstract problems, in the domains ALG COM GEO GRA LAT MED MSC NUM PUZ
+    SET SEU SWV.
+400 new problems, in the domains ALG COM GEO GRA LAT MED MSC NUM PUZ SET SEU
+    SWV.
+ 19 bugfixes done, in the domains GRA MGT.
+2019 ratings changed.
+
+Changes from v3.1.1 to v3.2.0 for CNF problems
+290 new abstract problems, in the domains ANA COL COM LAT LCL PUZ SET SWV.
+571 new problems, in the domains ANA COL COM LAT LCL PUZ SET SWV.
+2723 ratings changed.
+
++ Two new domains have been added:
+  - MED (Medicine)
+  - SEU (Set Theory Continued), as SET had filled up
++ In tptp2X:
+  - Operator precedence of ~ fixed to allow, e.g., ~ ! [X] : p(X). That
+    previously required ()s around the quantified formula. Thanks to Allen
+    van Gelder for that one.
++ tptp2X_install and tptp1T_install now respect the TPTP and TPTP_HOME
+  environment variables. $TPTP can refer to the TPTP directory, and
+  $TPTP_HOME to the directory containing the TPTP directory.
++ In SyntaxBNF
+  - Four kinds of separators are used, to indicate different types of rules:
+    ::= is used for regular grammar rules, :== is used for semantic grammar
+    rules, ::- is used for rules that produce tokens, and ::: is used for
+    rules that define character classes used in the construction of tokens.
+  - Comments are no longer first class elements.
+  - Various cosmetic changes that ease understanding but do not change the
+    legal sentences.
+-------------------------------------------------------------------------------
+Release v3.1.1, Tue Dec 13 13:03:04 EST 2005
+
+Changes from v3.1.0 to v3.1.1 for FOF problems
+  0 ratings changed.
+Changes from v3.1.0 to v3.1.1 for CNF problems
+  0 ratings changed.
+
++ Patch to correct % Syntax field values in a number of problems
++ In Syntax
+  - -<source type> removed, and <type> is now the old <user type>. A formula
+    is known to be derived (the old <source type> option) iff the <source>
+    is a <dag source>.
+-------------------------------------------------------------------------------
+Release v3.1.0, Mon Jul 25 04:25:57 EDT 2005
+
+Changes from v3.0.1 to v3.1.0 for FOF problems
+540 new abstract problems, in the domains ALG GRA KRS MSC NUM PUZ SET SWV
+    SYN TOP.
+550 new problems, in the domains ALG GRA GRP KRS MSC NUM PUZ SET SWV SYN TOP.
+ 84 bugfixes done, in the domains AGT CSR SYN.
+1980 ratings changed
+
+Changes from v3.0.1 to v3.1.0 for CNF problems
+168 new abstract problems, in the domains GRP LAT PUZ ROB SYN.
+168 new problems, in the domains GRP LAT PUZ ROB SYN.
+  5 bugfixes done, in the domains COL ROB.
+3045 ratings changed
+
++ One new domain has been added:
+  - CSR (Commonsense Reasoning)
+
++ In tptp2X:
+  - Added "all" option for selection of formats
+  - Added sanity check on Prolog interpreter
+  - Relative names are searched for under the current working directory
+    and if not found then under the $TPTP environment variable
+
++ In SyntaxBNF
+  - Fixed <formula selection> to allow only lists of formulae
+  - Added <fof annotated> and <cnf annotated>, renamed <fol formula> to
+    <fof formula>, and added <cnf formula> to keep the two types of formulae
+    separate.
+  - Separated <binary formula> into <non-assoc binary> and <assoc binary>, so
+    that all <non-assoc binary> formulae have to be bracketed.
+  - Removed redundant <quoted string> from <general term>
+  - Many more.
+
++ In SZSOntology
+  - Added (Message) option to InputError
+-------------------------------------------------------------------------------
+Release v3.0.1, Wed Dec 8 08:58:57 EST 2004
+
+Changes from v3.0.0 to v3.0.1 for FOF problems
+  3 bugfixes done, in the domains SYN.
+  0 ratings changed.
+Changes from v3.0.0 to v3.0.1 for CNF problems
+  0 ratings changed.
+
++ In tptp2X:
+  - Fixed shortening of $false and $true
+  - Fixed output of $false and $true in various formats
+
++ In SyntaxBNF:
+  - Removed HTML formatting
+  - Replaced reference to <parent source> by <source>
+  - Replaced <logic formula> by <fol formula>
+-------------------------------------------------------------------------------
+Release v3.0.0, Thu Nov 11 12:55:48 EST 2004
+
+Changes from v2.7.0 to v3.0.0 for FOF problems
+ 53 bugfixes done, in the domains AGT SYN.
+  0 ratings changed.
+Changes from v2.7.0 to v3.0.0 for CNF problems
+  1 bugfixes done, in the domains SWC.
+  0 ratings changed.
+
++ The library has been translated to the new TPTP syntax (aka the TSTP syntax).
+  - The BNF for the new TPTP syntax has been added to the Documents directory.
+  - Equality is now written in infix, using = and !=
+  - CNF "conjecture"s have been changed to "negated_conjecture"
+  - $true and $false are now reserved constants, and have been used as expected.
++ Equality is now assumed to be builtin, and all equality axioms have been
+  removed from all problems.
++ Problem status values have been updated to the SZS problem status ontology:
+  - The ontology has been added to the Documents directory.
+  - FOF problems with conjectures are one of: Theorem, CounterSatisfiable,
+    Unknown, Open.
+  - FOF problems without conjectures are one of: Unsatisfiable, Satisfiable,
+    Unknown, Open.
+  - CNF problems are one of: Unsatisfiable, Satisfiable, Unknown, Open.
++ tptp1T has been updated to understand the new status values.
++ No numbers appear in any problems - numbers are now reserved for future
+  builtin treatment.
++ The tptp2X utility has been extended and improved :
+  - The new TPTP syntax (aka the TSTP syntax) is the default output format
+  - The old TPTP syntax is available as the oldtptp format
+  - rm_equality with no selection removes all
+  - add_equality has been parameterized like rm_equality
+  - New set_equality transform
+  - New prefix format
+  - FOF files with multiple conjecture formulae are expanded to multiple
+    files each with a single conjecture and all the other formulae.
+  - Searches for include files:
+    - No search for absolute names
+    - Relative names are searched for under the $TPTP environment variable
+      and if not found then under the current working directory
+  - Explicit support for YAP Prolog
+  - Installation is done by editing the *.uninstalled files and creating
+    the final files. This solves some CVS problems.
+-------------------------------------------------------------------------------
+Release v2.7.0, Sun Aug 15 10:46:43 EDT 2004
+
+Changes from v2.6.0 to v2.7.0 for FOF problems
+222 new abstract problems, in the domains AGT ALG.
+248 new problems, in the domains AGT ALG.
+  5 bugfixes done, in the domains SET.
+1121 ratings changed
+
+Changes from v2.6.0 to v2.7.0 for CNF problems
+ 31 new abstract problems, in the domains ALG COL COM GEO PUZ SET SWV SYN.
+ 51 new problems, in the domains ALG COL COM GEO HWV PUZ SET SWV SYN.
+ 65 bugfixes done, in the domains FLD GRP HWV.
+2888 ratings changed
+
++ One new domain has been added:
+  - AGT (Agents)
++ The tptp2X utility has been extended and improved :
+  - New formats omdoc, mace4, math
+-------------------------------------------------------------------------------
+Release v2.6.0, Wed Aug 20 22:22:22 EST 2003
+
+Changes from v2.5.0 to v2.6.0 for FOF problems
+  6 new abstract problems, in the domains HAL.
+  9 new problems, in the domains HAL.
+786 ratings changed.
+
+Changes from v2.5.0 to v2.6.0 for CNF problems
+292 new abstract problems, in the domains BOO COL GRP LAT PUZ.
+293 new problems, in the domains BOO COL GRP LAT PUZ.
+ 21 bugfixes done.
+2932 ratings changed.
+
++ One new domain has been added:
+  - HAL (Homological Algebra)
++ The tptp2X utility has been extended and improved :
+  - New formats tstp, carine
+  - New options for old formats finder, otter, sem
+  - Selective include directives allow inclusion of named formulae
+-------------------------------------------------------------------------------
+Release v2.5.0, Sun Jul 28 00:14:00 EST 2002
+
+Changes from v2.4.1 to v2.5.0 for FOF problems
+ 29 new abstract problems, in the domains GEO GRP LCL MGT PLA PUZ SET SWC SYN.
+ 29 new problems, in the domains GEO GRP LCL MGT PLA PUZ SET SWC SYN.
+  5 bugfixes done, in the domains PLA.
+854 ratings changed.
+
+Changes from v2.4.1 to v2.5.0 for CNF problems
+697 new abstract problems, in the domains ALG ANA BOO CAT COL GEO GRP HEN
+    HWC HWV LAT LCL MGT NUM PLA PUZ RNG ROB SET SWC SWV SYN.
+763 new problems, in the domains ALG ANA BOO CAT COL GEO GRP HEN HWC HWV
+    LAT LCL MGT NUM PLA PUZ RNG ROB SET SWC SWV SYN.
+ 18 bugfixes done, in the domains ALG GEO LAT SYN.
+2620 ratings changed.
+
++ A subdirectory Documents/VerySimilarProblemLists has been added, with
+  files containing names of problems that are "very similar".
++ The tptp2X utility has been extended and improved:
+  - Upgraded for Eclipse 5.X
+  - Explicit support for SWI Prolog
+  - A -l option has been added, to specify the name of a file containing
+    the names of the files to be manipulated.
+-------------------------------------------------------------------------------
+Release v2.4.1, Sun Jun 24 16:33:23 EST 2001
+
+Changes from v2.3.0 to v2.4.0 for FOF problems
+792 new abstract problems, in the domains GEO MGT NLP PLA SWC SWV.
+792 new problems, in the domains GEO MGT NLP PLA SWC SWV.
+1216 ratings changed
+
+Changes from v2.3.0 to v2.4.0 for CNF problems
+806 new abstract problems, in the domains GEO GRP LAT LCL MGT NLP PUZ SWC SWV.
+860 new problems, in the domains GEO GRP LAT LCL MGT NLP PUZ SWC SWV.
+  2 bugfixes done, in the domains LCL RNG.
+1939 ratings changed
+
++ There have been some domain name changes:
+  - PRV (Program Verification) renamed to SWV (Software Verification)
+  - CID (Circuit Design) renamed to HWC (Hardware Creation)
+  - CIV (Circuit Verification) renamed to HWV ((Hardware Verification)
++ Two new domains have been added:
+  - NLP (Natural Language Processing)
+  - SWC (Software Creation)
++ The tptp2X utility has been extended and improved :
+  - New transform propify for CNF problems, which converts 1st order problems
+    with a finite Herbrand Universe into propositional problems, preserving
+    satisfiability.
++ v2.4.0 was an internal released used for CASC-JC. The only difference is
+  that v2.4.1 contains one extra bugfix, in LCL206-3.
+-------------------------------------------------------------------------------
+Release v2.3.0, Tue Nov 16 08:18:25 EST 1999
+
+Changes from v2.2.1 to v2.3.0 for FOF problems
+  1 new abstract problems, in the domains LCL.
+  1 new problems, in the domains LCL.
+  3 bugfixes done, in the domains SYN.
+  4 ratings changed.
+
+Changes from v2.2.1 to v2.3.0 for CNF problems
+151 new abstract problems, in the domains GRP LCL PUZ SYN.
+232 new problems, in the domains GRP LCL PUZ SYN.
+ 80 bugfixes done, in the domains COL GRP LCL RNG.
+450 ratings changed.
+
++ The tptp2X utility has been extended and improved :
+  - Five new CNF output formats: CoDe, Dedam, Satchmo, SCOTT, SEM
++ All problem ratings are now based on performance data from at least three
+  systems.
+-------------------------------------------------------------------------------
+Release v2.2.1, Thu May 13 08:50:59 EST 1999
+
+Changes from v2.2.0 to v2.2.1 for FOF problems
+ 58 bugfixes done, in the domains SET.
+ 59 ratings changed
+
+Changes from v2.2.0 to v2.2.1 for CNF problems
+  3 bugfixes done, in the domains LAT.
+617 ratings changed
+
++ This release is a patch, to be used in CASC-16
+-------------------------------------------------------------------------------
+Release v2.2.0, Thu Feb 11 10:54:02 EST 1999
+
+Changes from v2.1.0 to v2.2.0 for FOF problems
+208 new abstract problems, in the domains SET SYN.
+323 new problems, in the domains PUZ SET SYN.
+  1 bugfixes done, in the domains COM.
+384 ratings changed.
+
+Changes from v2.1.0 to v2.2.0 for CNF problems
+ 57 new abstract problems, in the domains ALG BOO GRP LAT.
+ 58 new problems, in the domains ALG BOO GRP LAT.
+  4 bugfixes done, in the domains BOO CIV SET.
+1108 ratings changed.
+
++ Two new reserved constants, true and false, are used in FOF problems.
++ The tptp2X utility has been extended and improved :
+  - One new CNF output format: Bliksem
+  - One new FOF output format: KIF
+  - The Otter format module has been extended to translate true to $T and false
+    to $F. The Otter format module now includes set(tptp_eq) by default.
+  - The PTTP format module now selects a negative conjecture as top clause, if
+    possible.
+  - The FOF to CNF transformations in transform.clausify remove the constants
+    true and false.
+  - The stdfof transformation has been added transform.clausify. It removes
+    <=, <~>, ~|, and ~& from FOF problems, by rewriting formulae to use the
+    other connectives.
+  - Input file names no longer have to be in TPTP format, except that generator
+    files must have a .g extension.
++ The tptp1T utility has been extended and improved.
+-------------------------------------------------------------------------------
+Release v2.1.0, Wed Dec 17 13:41:02 EST 1997
++ This is the seventh public release.
++ This release is available from only Australia.
+
+Changes from v2.0.0 to v2.1.0 for FOF problems
+130 new abstract problems, in the domains SYN.
+130 new problems, in the domains SYN.
+  1 bugfixes done, in the domains SYN.
+132 ratings changed.
+
+Changes from v2.0.0 to v2.1.0 for CNF problems
+134 new abstract problems, in the domains CIV SYN.
+163 new problems, in the domains CIV COL SYN.
+1172 bugfixes done, in the domains ALG FLD NUM SET (Most of these are due to
+    Johan Belinfante finding a typo in the SET004-0.ax file, subsequent to a
+    discussion we had regarding his AAR newsletter articles.).
+2321 ratings changed, 0.03 average over 901 known changes.
+
++ The problem ratings have been updated. (Due to an improvement in the way
+  the ratings are calculated, some problems now appear harder than before.)
++ The specific sizes of generic problems included in the TPTP have been
+  reviewed. Non-theorem as well as theorem sizes are now also included in the
+  problem set.
++ The tptp2X utility has been extended and improved :
+  - Three new CNF output formats: FINDER, PROTEIN, Waldmeister.
+  - One new FOF output format: THINKER.
+  - Installation has been refined to select which output formats are required.
+    Those not required are not loaded at runtime.
+  - The "er" and "ran_er" transformations now reverse the arguments of equality
+    literals in all types of problems (not only unit equality problems).
++ tptp1T arguments can now be negated with a leading "-". As a result some
+  previously possible argument values are not needed, and have been disabled.
++ A BibTeX file containing entries for all material referenced in the TPTP has
+  been added to the Documents directory. The % Refs entries in problem, axiom,
+  and generator files have been reduced to a single line that includes a key
+  for the bibliography file.
++ The TPTP technical report has been updated.
+===============================================================================
+Release v2.0.0, Thu Jun 5 15:06:26 EST 1997
+
+v2.0.0 is the second version of the TPTP. The major changes in this version
+are :
++ FOF (First Order Form) problems have been added.
++ Three new domains have been added: FLD (Field theory), KRS (Knowledge
+  Representation), and MGT (Management).
++ Difficulty ratings have been assigned to those problems for which sufficient
+  performance data from state-of-the-art ATP systems is available. The ratings
+  are given in a new % Rating field in the problem headers.
++ A new utility called tptp1T, for finding problems with certain user specified
+  characteristics, has been added.
+
+Other changes are given below.
+===============================================================================
+Changes from v1.2.1 to v2.0.0 for FOF problems
+110 new abstract problems, in the domains COM GRP LCL MGT MSC PUZ SET SYN.
+217 new problems, in the domains COM GRP LCL MGT MSC PUZ SET SYN.
+  1 new generators.
+
+Changes from v1.2.1 to v2.0.0 for CNF problems
+120 new abstract problems, in the domains FLD KRS LCL PUZ.
+309 new problems, in the domains FLD KRS LCL PUZ.
+  1 new generators, in the domains PUZ.
+  3 bugfixes done, in the domains GRP SYN.
+
++ This is the sixth public release.
++ The % Version fields have been reviewed. Problems that are "Special" have
+  been explicitly labelled as such.
++ The % Syntax field of CNF problems has been extended to include the average
+  number of literals per clause and the average term depth.
++ The tptp2X utility has been extended and improved :
+  - Four new CNF output formats: CLIN-S, DFG, DIMACS, ILF.
+  - Four FOF output formats: TPTP, DFG, Otter, OSCAR.
+  - Nine new transformations: clausify (4 FOF to CNF transformations), simplify
+    (simplifies a set of clauses), cnf (clausify then simplify), er (reverses
+    arguments in the clauses of unit equality problems), ran_er (does the er
+    transformation to randomly selected clauses).
+  - The format modules now receive an extra argument containing the file
+    header information. This information may be used only for supplementary
+    documentation of the problem.
++ The TPTP technical report has been updated.
+===============================================================================
+Release v1.2.1, Wed Jun 12 08:53:00 MET DST 1996
+
+Changes from v1.2.0 to v1.2.1
+0 new abstract problems.
+0 new problems.
+233 bugfixes done, in the domains BOO GEO GRP HEN NUM PUZ RNG SET SYN.
+
++ This is the fifth public release, and will be used in the CADE-13 ATP System
+  Competition.
++ If the axiomatization used in a problem has been formed by reducing and
+  augmenting an existing axiomatization, and the result is complete but also
+  non-standard due to redundancy, this is noted with "(Non-standard)" in the
+  % Version field.
++ The % Syntax field has been extended to include counts of range restricted
+  clauses, and the arity ranges of the predicate and function symbols.
++ The tptp2X utility has been extended and improved :
+  - One new output format: SPASS.
+  - Two new transformations: to_equality and add_equality.
+  - The equality removal transformation has been renamed to rm_equality, and
+    now fails if the equality axiomatization is incomplete.
+  - The shorten transformation no longer shortens equal to eq (i.e., equal/2
+    always remains as the equality predicate).
++ In problems where the equality axiomatization was incomplete, the equal/2
+  predicate has been renamed to equalish/2.
++ The clause type information has been reviewed and four corrections were made.
+  Throughout the TPTP the "theorem" type has been replaced by "conjecture".
+-------------------------------------------------------------------------------
+Release v1.2.0, Wed Aug 30 08:03:11 +1000 1995
+
+Changes from v1.1.3 to v1.2.0
+245 new abstract problems, in the domains BOO COL GRP SYN.
+267 new problems, in the domains BOO COL GRP MSC PUZ ROB SYN.
+49 bugfixes done, in the domains COL LCL PUZ ROB SYN.
+
++ This is the fourth public release.
++ Generic problems (e.g., the N-queens problem) are now handled by problem
+  generators:
+  - This allows the automatic generation of any desired problem size.
+  - For each generic problem, a particular size is in the problem set.
+  - 159 problem sizes previously in the problem set have been removed.
++ The % Syntax field has been reordered in all files.
++ The tptp2X utility has been extended and improved in various ways :
+  - Installation and use of tptp2X have been simplified.
+  - tptp2X now updates the % Syntax field after transformations.
+  - There are three new output formats: 3TAP, KIF, and leanTAP.
+  - Problem generation has been integrated into tptp2X.
+  - The syntax for specifying equality axiom removal has changed.
+  - The syntax for specifying OTTER format output has changed.
++ The TPTP technical report has been substantially revised.
+-------------------------------------------------------------------------------
+Release v1.1.3, Thu Aug 25 08:53:57 +1000 1994
+
+Changes from v1.1.2 to v1.1.3
+1 bugfixes done, in the domains PUZ.
+
++ This is the third public release.
++ Some more changes done to the tptp2X utility and tptp_convert
+-------------------------------------------------------------------------------
+Release v1.1.2, Fri Aug 12 09:04:47 +1000 1994
+
+Changes from v1.1.1 to v1.1.2
+1 bugfixes done, in the domains PUZ.
+
++ This is an intermediate non-official release.
++ The tptp2X utility was broken in v1.1.1. That's been fixed, and is the
+  motivation for this release.
++ The tptp_convert script has been improved substantially.
+-------------------------------------------------------------------------------
+Release v1.1.1, Tue Jul 5 05:14:27 +1000 1994
+
+Changes from v1.1.0 to v1.1.1
+3 bugfixes done, in the domains CID LCL.
+
++ This is the second public release.
++ Problems SYN04[23]-1 noted to be versions of LCL181 and LCL230. SYN04[23]-1
+  have therefore been moved to LCL181-2 and LCL230-2.
+-------------------------------------------------------------------------------
+Release v1.1.0, Fri Apr 8 12:12:45 +1000 1994
+
+Changes from v1.0.0 to v1.1.0
+357 new problems (320 new abstract problems), in the domains ANA BOO CID CIV
+    COM GEO GRP LAT LCL NUM PLA PUZ SYN.
+736 bugfixes done, in the domains ALG ANA BOO COM GEO GRP NUM PUZ SET.
+
++ This version has been released to registered TPTP users only.
++ Some critical bugfixes have been done.
++ Two new domains have been introduced : CID = Circuit design
+                                     and CIV = Circuit verification
+  both in the field of Engineering.
++ The tptp2X utility has been substantially overhauled. The utility can now
+  apply a sequence of transformations to clauses, and installation has been
+  simplified. See the tptp2X ReadMe file for details.
++ A list of known users is included in the Documents directory.
++ The TPTP release and the release of the last bugfix are now given in the
+  % File field of each problem and axiom set.
+-------------------------------------------------------------------------------
+Release v1.0.0, Fri Nov 12 15:30:54 +1000 1993
+
++ This is the first public release.
+-------------------------------------------------------------------------------

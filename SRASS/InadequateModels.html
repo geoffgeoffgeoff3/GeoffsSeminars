@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<TITLE> Inadequate Models </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Inadequate Models </H1>
+
+<IMG SRC="IncompleteModels.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+
+<UL>
+<LI> Model might not be found even if one exists ... totally incomplete
+<LI> Evaluation might not be possible in incomplete models
+<LI> Evaluation in a model might timeout
+<P>
+<LI> If no <EM>false</EM> or <EM>not-true</EM> axiom, select a 
+     <EM>counter satisfiable</EM> axiom
+     <P>
+     &nbsp;&nbsp;&nbsp;&nbsp;C = <TT>b</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>1</SUB> = <TT>a | b</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>2</SUB> = <TT>b => a</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>3</SUB> = <TT>(~a & (b | c)) | (a & ~b & ~c)</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>4</SUB> = <TT>b | (a <=> c)</TT>
+<P>
+<LI> Negated conjecture = <TT>~b</TT>
+<P>
+     <TABLE>
+     <TR VALIGN=TOP>
+          <TH>
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> Selected set
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> Model
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> False
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> N-T
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> CSA
+     <TR> <TD> 1
+          <TD>
+          <TD> <TT>{ }</TT>
+          <TD>
+          <TD> <TT>{~b}</TT>
+          <TD>
+          <TD> -
+          <TD>
+          <TD> -
+          <TD>
+          <TD> E<SUB>1</SUB> 
+     <TR> <TD> 2
+          <TD>
+          <TD> <TT>{</TT>E<SUB>1</SUB><TT>}</TT>
+          <TD>
+          <TD> <TT>{a, ~b}</TT>
+          <TD>
+          <TD> -
+          <TD>
+          <TD> -
+          <TD>
+          <TD> E<SUB>3</SUB> 
+     <TR> <TD> 3
+          <TD>
+          <TD> <TT>{</TT>E<SUB>1</SUB>, E<SUB>3</SUB><TT>}</TT>
+          <TD>
+          <TD> <TT>{a, ~b, ~c}</TT>
+          <TD>
+          <TD> E<SUB>4</SUB>
+          <TD> 
+          <TD> 
+          <TD> 
+          <TD> 
+     <TR> <TD> 4
+          <TD>
+          <TD> <TT>{</TT>E<SUB>1</SUB>, E<SUB>3</SUB>, E<SUB>4</SUB><TT>}</TT>
+          <TD>
+          <TD> -
+          <TD>
+          <TD> -
+          <TD>
+          <TD> -
+          <TD>
+          <TD> -
+     </TABLE>
+<LI> The converse of the basic process
+<LI> Establishing satisfiability may be easier than finding a model
+</UL>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

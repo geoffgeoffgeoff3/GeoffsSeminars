@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE> Semantic Proof Verification </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Semantic Proof Verification </H1>
+
+<A HREF="SPVGIF..html"><IMG SRC="SPV.GIF" ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> Principle </H3>
+<UL>
+<LI> Check input is copied correctly
+<LI> Check each inference is logical
+<LI> For each inference generate a proof obligation
+     <UL>
+     <LI> Parents of step are the axioms
+     <LI> Conclusion of step is the conjecture
+     </UL>
+<LI> Submit to trustworthy ATP system
+</UL>
+
+<H3> Implementation </H3>
+<UL>
+<LI> DV in <TT>perl</TT>
+     <UL>
+     <LI> Reads TSTP format
+     <LI> Verifies with Otter
+     </UL>
+<LI> DVDV in <TT>C</TT>
+     <UL>
+     <LI> Uses the JJParser to read TSTP format
+     <LI> Verifies with SystemOnTPTP
+     </UL>
+</UL>
+
+<H3> Issues </H3>
+<UL>
+<LI> Proofs vs Refutations
+<LI> Satisfiability preserving transformations in refutations
+<LI> Setting the limbo bar
+<LI> Cross verification
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE> Single Combining Steps </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Single Combining Steps
+</H1>
+
+<A HREF="ABOneStepJPG.html">
+<CENTER>
+<IMG SRC="ABOneStep.jpg" ALIGN=RIGHT WIDTH=50%>
+</CENTER>
+</A>
+
+<H3> One Step </H3>
+<UL>
+<LI> Select <EM>replaced node</EM> in <EM>target proof</EM>
+<LI> Find equivalent <EM>replacing node</EM> in <EM>contributing proof</EM>
+<LI> Replace sub-DAG in target proof to form <EM>combined proof</EM>
+     <UL>
+     <LI> Retain replaced nodes that are used elsewhere
+     <LI> Merge duplicated leaves
+     </UL>
+<!--
+<P>
+<LI> <EM>Self-combining</EM> steps use the target proof as the contributing 
+     proof
+-->
+</UL>
+
+<H3> Example </H3>
+<UL>
+<LI> Replace at <EM>e</EM>
+<LI> Retain <EM>a</EM>
+<LI> Merge <EM>e &hArr; b</EM>
+</UL>
+
+<H3> Is the Combined Proof Different? </H3>
+<UL>
+<LI> Compare <EM>C<SUB>sw</SUB><SUP>&alpha;</SUP>(S+Target) and
+             <EM>C<SUB>sw</SUB><SUP>&alpha;</SUP>(S+Combined)
+<LI> <EM>C<SUB>sw</SUB><SUP>Leaves</SUP>(S+Target) = 0.7576</EM><BR>
+     <EM>C<SUB>sw</SUB><SUP>Leaves</SUP>(S+Combined) = 0.4241</EM>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

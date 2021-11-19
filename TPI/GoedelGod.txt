@@ -1,0 +1,503 @@
+tpi(com,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_1,write,
+    '%%% 1. Introducing the required logic embedding, ' & 
+    'signature, definitions, axioms, and theorems.').
+
+tpi(com_2,start_group,embedding).
+
+thf(mu_type,type,(
+    mu: $tType )).
+
+thf(mnot_type,type,(
+    mnot: ( $i > $o ) > $i > $o )).
+
+thf(mnot,definition,
+    ( mnot
+    = ( ^ [Phi: $i > $o,W: $i] :
+          ~ ( Phi @ W ) ) )).
+
+thf(mor_type,type,(
+    mor: ( $i > $o ) > ( $i > $o ) > $i > $o )).
+
+thf(mor,definition,
+    ( mor
+    = ( ^ [Phi: $i > $o,Psi: $i > $o,W: $i] :
+          ( ( Phi @ W )
+          | ( Psi @ W ) ) ) )).
+
+thf(mand_type,type,(
+    mand: ( $i > $o ) > ( $i > $o ) > $i > $o )).
+
+thf(mand,definition,
+    ( mand
+    = ( ^ [Phi: $i > $o,Psi: $i > $o,W: $i] :
+          ( ( Phi @ W )
+          & ( Psi @ W ) ) ) )).
+
+thf(mimplies_type,type,(
+    mimplies: ( $i > $o ) > ( $i > $o ) > $i > $o )).
+
+thf(mimplies,definition,
+    ( mimplies
+    = ( ^ [Phi: $i > $o,Psi: $i > $o,W: $i] :
+          ( ( Phi @ W )
+         => ( Psi @ W ) ) ) )).
+
+thf(mequiv_type,type,(
+    mequiv: ( $i > $o ) > ( $i > $o ) > $i > $o )).
+
+thf(mequiv,definition,
+    ( mequiv
+    = ( ^ [Phi: $i > $o,Psi: $i > $o,W: $i] :
+          ( ( Phi @ W )
+        <=> ( Psi @ W ) ) ) )).
+
+thf(mforall_ind_type,type,(
+    mforall_ind: ( mu > $i > $o ) > $i > $o )).
+
+thf(mforall_ind,definition,
+    ( mforall_ind
+    = ( ^ [Phi: mu > $i > $o,W: $i] :
+        ! [X: mu] :
+          ( Phi @ X @ W ) ) )).
+
+thf(mforall_indset_type,type,(
+    mforall_indset: ( ( mu > $i > $o ) > $i > $o ) > $i > $o )).
+
+thf(mforall_indset,definition,
+    ( mforall_indset
+    = ( ^ [Phi: ( mu > $i > $o ) > $i > $o,W: $i] :
+        ! [X: mu > $i > $o] :
+          ( Phi @ X @ W ) ) )).
+
+thf(mexists_ind_type,type,(
+    mexists_ind: ( mu > $i > $o ) > $i > $o )).
+
+thf(mexists_ind,definition,
+    ( mexists_ind
+    = ( ^ [Phi: mu > $i > $o] :
+          ( mnot
+          @ ( mforall_ind
+            @ ^ [X: mu] :
+                ( mnot @ ( Phi @ X ) ) ) ) ) )).
+
+thf(rel_type,type,(
+    rel: $i > $i > $o )).
+
+thf(mbox_type,type,(
+    mbox: ( $i > $o ) > $i > $o )).
+
+thf(mbox,definition,
+    ( mbox
+    = ( ^ [Phi: $i > $o,W: $i] :
+        ! [V: $i] :
+          ( ( rel @ W @ V )
+         => ( Phi @ V ) ) ) )).
+
+thf(mdia_type,type,(
+    mdia: ( $i > $o ) > $i > $o )).
+
+thf(mdia,definition,
+    ( mdia
+    = ( ^ [Phi: $i > $o,W: $i] :
+        ? [V: $i] :
+          ( ( rel @ W @ V )
+          & ( Phi @ V ) ) ) )).
+
+thf(mvalid_type,type,(
+    v: ( $i > $o ) > $o )).
+
+thf(mvalid,definition,
+    ( v
+    = ( ^ [Phi: $i > $o] :
+        ! [W: $i] :
+          ( Phi @ W ) ) )).
+
+tpi(com_3,end_group,embedding).
+
+tpi(com_4,start_group,symmetry).
+
+thf(sym,axiom,(
+    ! [S: $i,T: $i] :
+      ( ( rel @ S @ T )
+     => ( rel @ T @ S ) ) )).
+
+tpi(com_5,end_group,symmetry).
+
+tpi(com_6,start_group,signature).
+
+thf(p_tp,type,(
+    p: ( mu > $i > $o ) > $i > $o )).
+
+thf(g_tp,type,(
+    g: mu > $i > $o )).
+
+thf(ess_tp,type,(
+    ess: ( mu > $i > $o ) > mu > $i > $o )).
+
+thf(ne_tp,type,(
+    ne: mu > $i > $o )).
+
+tpi(com_7,end_group,signature).
+
+tpi(com_8,start_group,d1).
+
+thf(defD1,definition,
+    ( g
+    = ( ^ [X: mu] :
+          ( mforall_indset
+          @ ^ [Phi: mu > $i > $o] :
+              ( mimplies @ ( p @ Phi ) @ ( Phi @ X ) ) ) ) )).
+
+tpi(com_9,end_group,d1).
+
+tpi(com_10,start_group,d2).
+
+thf(defD2,definition,
+    ( ess
+    = ( ^ [Phi: mu > $i > $o,X: mu] :
+          ( mand @ ( Phi @ X )
+          @ ( mforall_indset
+            @ ^ [Psi: mu > $i > $o] :
+                ( mimplies @ ( Psi @ X )
+                @ ( mbox
+                  @ ( mforall_ind
+                    @ ^ [Y: mu] :
+                        ( mimplies @ ( Phi @ Y ) @ ( Psi @ Y ) ) ) ) ) ) ) ) )).
+
+tpi(com_11,end_group,d2).
+
+tpi(com_12,start_group,d3).
+
+thf(defD3,definition,
+    ( ne
+    = ( ^ [X: mu] :
+          ( mforall_indset
+          @ ^ [Phi: mu > $i > $o] :
+              ( mimplies @ ( ess @ Phi @ X )
+              @ ( mbox
+                @ ( mexists_ind
+                  @ ^ [Y: mu] :
+                      ( Phi @ Y ) ) ) ) ) ) )).
+
+tpi(com_13,end_group,d3).
+
+tpi(com_14,start_group,a1a).
+
+thf(axA1a,axiom,
+    ( v
+    @ ( mforall_indset
+      @ ^ [Phi: mu > $i > $o] :
+          ( mimplies
+          @ ( p
+            @ ^ [X: mu] :
+                ( mnot @ ( Phi @ X ) ) )
+          @ ( mnot @ ( p @ Phi ) ) ) ) )).
+
+tpi(com_15,end_group,a1a).
+
+tpi(com_16,start_group,a1b).
+
+thf(axA1b,axiom,
+    ( v
+    @ ( mforall_indset
+      @ ^ [Phi: mu > $i > $o] :
+          ( mimplies @ ( mnot @ ( p @ Phi ) )
+          @ ( p
+            @ ^ [X: mu] :
+                ( mnot @ ( Phi @ X ) ) ) ) ) )).
+
+tpi(com_17,end_group,a1b).
+
+tpi(com_18,start_group,a2).
+
+thf(axA2,axiom,
+    ( v
+    @ ( mforall_indset
+      @ ^ [Phi: mu > $i > $o] :
+          ( mforall_indset
+          @ ^ [Psi: mu > $i > $o] :
+              ( mimplies
+              @ ( mand @ ( p @ Phi )
+                @ ( mbox
+                  @ ( mforall_ind
+                    @ ^ [X: mu] :
+                        ( mimplies @ ( Phi @ X ) @ ( Psi @ X ) ) ) ) )
+              @ ( p @ Psi ) ) ) ) )).
+
+tpi(com_19,end_group,a2).
+
+tpi(com_20,start_group,a3).
+
+thf(axA3,axiom,
+    ( v @ ( p @ g ) )).
+
+tpi(com_21,end_group,a3).
+
+tpi(com_22,start_group,a4).
+
+thf(axA4,axiom,
+    ( v
+    @ ( mforall_indset
+      @ ^ [Phi: mu > $i > $o] :
+          ( mimplies @ ( p @ Phi ) @ ( mbox @ ( p @ Phi ) ) ) ) )).
+
+tpi(com_23,end_group,a4).
+
+tpi(com_24,start_group,a5).
+
+thf(axA5,axiom,
+    ( v @ ( p @ ne ) )).
+
+tpi(com_25,end_group,a5).
+
+tpi(com_26,write,'%%%    Done.').
+tpi(com_27,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_28,write,'').
+
+%----Checking asynchronously for satisfiability of Axioms.
+tpi(com_29,execute_async,'SZS_AXIOM_STATUS' = 
+    'Nitrox---2013 60 $getgroups(tpi)').
+
+tpi(com_30,start_group,d2orig).
+
+thf(defD2orig,definition,
+    ( ess
+    = ( ^ [Phi: mu > $i > $o,X: mu] :
+          ( mforall_indset
+          @ ^ [Psi: mu > $i > $o] :
+              ( mimplies @ ( Psi @ X )
+              @ ( mbox
+                @ ( mforall_ind
+                  @ ^ [Y: mu] :
+                      ( mimplies @ ( Phi @ Y ) @ ( Psi @ Y ) ) ) ) ) ) ) )).
+
+tpi(com_31,end_group,d2orig).
+
+%----Checking asynchroneously for unsatisfiability of Goedel's original 
+%----Axioms (modified definition D2).
+tpi(com_32,execute_async,'SZS_STATUS_D2orig' = 
+    'LEO-II--- 120 $getgroups(embedding,signature,symmetry,d2orig,a1a,a2,d3,a5)').
+
+tpi(com_33,start_group,t1).
+
+thf(thmT1_con,conjecture,
+    ( v
+    @ ( mforall_indset
+      @ ^ [Phi: mu > $i > $o] :
+          ( mimplies @ ( p @ Phi )
+          @ ( mdia
+            @ ( mexists_ind
+              @ ^ [X: mu] :
+                  ( Phi @ X ) ) ) ) ) )).
+
+tpi(com_34,end_group,t1).
+tpi(com_35,execute,'SZS_STATUS' = 
+    'LEO-II--- 20 $getgroups(embedding,signature,a1a,a2,t1)').
+tpi(com_36,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_37,write,'%%% 2. Analysing theorem t1.').
+tpi(com_38,write,'%%%    Checking a1a,a2 |- t1 (using LEO-II).').
+tpi(com_39,output,stdout = a1a).
+tpi(com_40,output,stdout = a2).
+tpi(com_41,output,stdout = t1).
+tpi(com_42,write,'%%%    SZS_STATUS for t1 is ' & '$getenv(SZS_STATUS)').
+tpi(com_43,assert,$getenv('SZS_STATUS') = 'Theorem').
+tpi(com_44,set_role,thmT1_con = lemma).
+tpi(com_45,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_46,write,'').
+
+tpi(com_47,start_group,c).
+
+thf(corC_con,conjecture,
+    ( v
+    @ ( mdia
+      @ ( mexists_ind
+        @ ^ [X: mu] :
+            ( g @ X ) ) ) )).
+
+tpi(com_48,end_group,c).
+tpi(com_49,execute,'SZS_STATUS' = 
+    'LEO-II--- 20 $getgroups(embedding,signature,d1,a3,t1,c)').
+tpi(com_50,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_51,write,'%%% 3. Analysing corollary c.').
+tpi(com_52,write,'%%%    Checking d1,a3,t1 |- c (using LEO-II).').
+tpi(com_53,output,stdout = d1).
+tpi(com_54,output,stdout = a3).
+tpi(com_55,output,stdout = t1).
+tpi(com_56,output,stdout = c).
+tpi(com_57,write,'%%%    SZS_STATUS for c is ' & '$getenv(SZS_STATUS)').
+tpi(com_58,assert,$getenv('SZS_STATUS') = 'Theorem').
+tpi(com_59,set_role,corC_con = lemma).
+tpi(com_60,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_61,write,'').
+
+tpi(com_62,start_group,t2).
+
+thf(thmT2_con,conjecture,
+    ( v
+    @ ( mforall_ind
+      @ ^ [X: mu] :
+          ( mimplies @ ( g @ X ) @ ( ess @ g @ X ) ) ) )).
+
+tpi(com_63,end_group,t2).
+tpi(com_64,execute,'SZS_STATUS' = 
+    'Satallax---2.7 20 $getgroups(embedding,symmetry,signature,d1,d2,a1b,a4,t2)').
+tpi(com_65,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_66,write,'%%% 4. Analysing theorem t2.').
+tpi(com_67,write,'%%%    Checking d1,d2,a1b,a4 |- t2 (using Satallax).').
+tpi(com_68,output,stdout = d1).
+tpi(com_69,output,stdout = d2).
+tpi(com_70,output,stdout = a1b).
+tpi(com_71,output,stdout = a4).
+tpi(com_72,output,stdout = t2).
+tpi(com_73,write,'%%%    SZS_STATUS for t2 is ' & '$getenv(SZS_STATUS)').
+tpi(com_74,assert,$getenv('SZS_STATUS') = 'Theorem').
+tpi(com_75,set_role,thmT2_con = lemma).
+tpi(com_76,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_77,write,'').
+
+tpi(com_78,start_group,t3).
+
+thf(thmT3_con,conjecture,
+    ( v
+    @ ( mbox
+      @ ( mexists_ind
+        @ ^ [X: mu] :
+            ( g @ X ) ) ) )).
+
+tpi(com_79,end_group,t3).
+tpi(com_80,execute,'SZS_STATUS' = 
+    'LEO-II--- 20 $getgroups(embedding,symmetry,signature,d1,d3,c,t2,a5,t3)').
+tpi(com_81,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_82,write,'%%% 5. Analysing theorem t3.').
+tpi(com_83,write,'%%%    Checking sym,d1,d3,c,t2,a5 |- t3 (using LEO-II).').
+tpi(com_84,output,stdout = d1).
+tpi(com_85,output,stdout = d3).
+tpi(com_86,output,stdout = c).
+tpi(com_87,output,stdout = t2).
+tpi(com_88,output,stdout = a5).
+tpi(com_89,output,stdout = t3).
+tpi(com_90,write,'%%%    SZS_STATUS for t3 is ' & '$getenv(SZS_STATUS)').
+tpi(com_91,assert,$getenv('SZS_STATUS') = 'Theorem').
+tpi(com_92,set_role,thmT3_con = lemma).
+tpi(com_93,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_94,write,'').
+
+tpi(com_95,start_group,c2).
+
+thf(corC2_con,conjecture,
+    ( v
+    @ ( mexists_ind
+      @ ^ [X: mu] :
+          ( g @ X ) ) )).
+
+tpi(com_96,end_group,c2).
+tpi(com_97,execute,'SZS_STATUS' = 
+    'LEO-II--- 20 $getgroups(embedding,symmetry,signature,d1,t1,t3,c2)').
+tpi(com_98,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_99,write,'%%% 6. Analysing corollary c2.').
+tpi(com_100,write,'%%%    Checking  sym,d1,t1,t3 |- c2 (using LEO-II).').
+tpi(com_101,output,stdout = d1).
+tpi(com_102,output,stdout = t1).
+tpi(com_103,output,stdout = t3).
+tpi(com_104,output,stdout = c2).
+tpi(com_105,write,'%%%    SZS_STATUS for c2 is ' & '$getenv(SZS_STATUS)').
+tpi(com_106,assert,$getenv('SZS_STATUS') = 'Theorem').
+tpi(com_107,set_role,corC2_con = lemma).
+tpi(com_108,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_109,write,'').
+
+tpi(4,waitenv,'SZS_AXIOM_STATUS').
+tpi(com_110,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_111,write,'%%% 7. Checking satisfiability of all assumptions (using Nitpick).').
+tpi(com_112,write,'%%%    SZS_AXIOM_STATUS for assumptions is ' & '$getenv(SZS_AXIOM_STATUS)').
+tpi(com_113,assert,$getenv('SZS_AXIOM_STATUS') = 'Satisfiable').
+tpi(com_114,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_115,write,'').
+
+tpi(com_116,start_group,mc).
+
+thf(phi_type,type,(
+    phi: $i > $o )).
+
+thf(thmMC_con,conjecture,
+    ( v @ ( mimplies @ phi @ ( mbox @ phi ) ) )).
+
+tpi(com_117,end_group,mc).
+
+tpi(com_118,start_group,fg).
+
+thf(thmFG_con,conjecture,
+    ( v
+    @ ( mforall_indset
+      @ ^ [Phi: mu > $i > $o] :
+          ( mforall_ind
+          @ ^ [X: mu] :
+              ( mimplies @ ( g @ X ) @ ( mimplies @ ( mnot @ ( p @ Phi ) ) @ ( mnot @ ( Phi @ X ) ) ) ) ) ) )).
+
+tpi(com_119,end_group,fg).
+
+tpi(com_120,execute_async,'SZS_STATUS_MC' = 
+    'Satallax---2.7 40 $getgroups(embedding,symmetry,signature,d2,t2,t3,mc)').
+tpi(com_121,execute_async,'SZS_STATUS_FG' = 
+    'Satallax---2.7 90 $getgroups(embedding,signature,a1b,d1,fg)').
+
+tpi(com_122,waitenv,'SZS_STATUS_MC').
+tpi(com_123,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_124,write,'%%% 8. Analysing modal collapse.').
+tpi(com_125,write,'%%%    Checking  sym,d2,t2,t3 |- mc (using Satallax).').
+tpi(com_126,write,'%%%    SZS_STATUS_MC for mc is ' & '$getenv(SZS_STATUS_MC)').
+tpi(com_127,assert,$getenv('SZS_STATUS_MC') = 'Theorem').
+tpi(com_128,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_129,write,'').
+
+tpi(com_130,waitenv,'SZS_STATUS_FG').
+tpi(com_131,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_132,write,'%%% 9. Analysing flawless god.').
+tpi(com_133,write,'%%%    Checking  a1b,d1 |- fg (using Satallax).').
+tpi(com_134,write,'%%%    SZS_STATUS_FG for fg is ' & '$getenv(SZS_STATUS_FG)').
+tpi(com_135,assert,$getenv('SZS_STATUS_FG') = 'Theorem').
+tpi(com_136,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_137,write,'').
+
+tpi(com_138,start_group,mt).
+
+thf(mequals_type,type,(
+    mequals: mu > mu > $i > $o )).
+
+thf(mequals,definition,
+    ( mequals
+    = ( ^ [X: mu,Y: mu] :
+          ( mforall_indset
+          @ ^ [Phi: mu > $i > $o] :
+              ( mimplies @ ( Phi @ X ) @ ( Phi @ Y ) ) ) ) )).
+
+thf(thmMT_con,conjecture,
+    ( v
+    @ ( mforall_ind
+      @ ^ [X: mu] :
+          ( mforall_ind
+          @ ^ [Y: mu] :
+              ( mimplies @ ( g @ X ) @ ( mimplies @ ( g @ Y ) @ ( mequals @ X @ Y ) ) ) ) ) )).
+
+tpi(com_139,end_group,mt).
+tpi(com_140,execute,'SZS_STATUS_MT' = 
+    'LEO-II--- 90 $getgroups(embedding,signature,fg,d1,mt)').
+tpi(com_141,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_142,write,'%%% 10. Analysing monotheism.').
+tpi(com_143,write,'%%%     Checking  fg,d1 |- mt (using LEO-II).').
+tpi(com_144,write,'%%%     SZS_STATUS_MT for mt is ' & '$getenv(SZS_STATUS_MT)').
+tpi(com_145,assert,$getenv('SZS_STATUS_MT') = 'Theorem').
+tpi(com_146,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_147,write,'').
+
+tpi(com_148,waitenv,'SZS_STATUS_D2orig').
+tpi(com_149,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_150,write,'%%% 11. Proving inconsistency in combination with Goedel\'s original definition of essence: d2orig.').
+tpi(com_151,write,'%%%     Checking  d2orig,a1a,a2,d3,a5  (using LEO-II).').
+tpi(com_152,write,'%%%     SZS_STATUS_D2orig for d2orig is ' & '$getenv(SZS_STATUS_D2orig)').
+tpi(com_153,assert,$getenv('SZS_STATUS_D2orig') = 'Unsatisfiable').
+tpi(com_154,write,'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%').
+tpi(com_155,write,'').
+
+tpi(end,exit,exit).

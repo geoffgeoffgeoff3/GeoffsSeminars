@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE> The Short Five Lemma, Part I </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The Short Five Lemma, Part I </H1>
+
+<IMG SRC="S5L.GIF" ALIGN=RIGHT WIDTH=33%>
+
+<H3> The Short Five Lemma </H3>
+
+<UL>
+<LI> In the commutative diagram with exact rows ...
+     <UL>
+     <LI> &alpha; and &gamma; are injections
+     <LI> &beta; and &delta; are surjections
+     <LI> ker &beta; = Im &alpha; and ker &delta; = Im &gamma;
+     <LI> &gamma;<EM>(f(a))</EM> = <EM>g(</EM>&alpha;<EM>(a))</EM> and
+          &delta;<EM>(g(b))</EM> = <EM>h(</EM>&beta;<EM>(b))</EM>
+     </UL>
+<LI> Part I: If <EM>f</EM> and <EM>h</EM> are injections then <EM>g</EM> is
+     an injection
+<LI> Part II: If <EM>f</EM> and <EM>h</EM> are surjections then <EM>g</EM> is
+     a surjection
+</UL>
+
+<H3> Finding Proofs </H3>
+
+<UL>
+<LI> <A HREF="http://www.cs.miami.edu/~TPTP/ATPSystems/RedAx/S5LAxioms+0.ax">
+     Axioms in 1st order logic</A> form a rich theory
+<LI> With the complete axiomatization, Part I is a reasonable challenge for ATP
+     (and Part II is too much)
+<LI> Only four of the eight conditions are required for the proof.
+<LI> On a 450MHz SUN Ultra 80 with 1GB RAM, 300s time limit ...
+     <TABLE>
+     <TR> <TH ALIGN=LEFT> Axioms
+          <TH> Vampire 5.0
+          <TH> E 0.7
+     <TR> <TD COLSPAN=3> <HR>
+     <TR> <TD> Complete
+          <TD ALIGN=CENTER> 42.3s
+          <TD ALIGN=CENTER> Timeout
+     <TR> <TD> Minimal
+          <TD ALIGN=CENTER> 0.1s
+          <TD ALIGN=CENTER> 0.6s
+     </TABLE>
+<LI> Removing unnecessary axioms really helped!
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,160 @@
+<HTML>
+<HEAD>
+<TITLE> Running Example </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Running Example
+</H1>
+
+<H3> Question </H3>
+<UL>
+<LI> <TT>
+     p(a,b)<BR>
+     p(a,f(b,c))<BR>
+     &forall;Z p(b,Z)<BR>
+     &forall;Z p(Z,c)<BR>
+     a != b<BR>
+     a = c
+     </TT>
+<P>
+<LI> Question: <TT>&exist;X,Y p(X,Y)</TT>
+</UL>
+
+<H3> Answers </H3>
+<UL>
+<LI> Answers: <TT>X=a</TT>,<TT>Y=b</TT>;&nbsp;&nbsp;
+              <TT>X=a</TT>,<TT>Y=f(b,c)</TT>;&nbsp;&nbsp;
+              <TT>X=b</TT>,<TT>Y=Z</TT>;&nbsp;&nbsp;
+              <TT>X=c</TT>,<TT>Y=b</TT>;
+              ... etc.
+</UL>
+
+<A NAME="TPTPQuestion">
+<H3> TPTP format Question </H3>
+<PRE>
+    fof(pab,axiom,      p(a,b)            ).
+    fof(pafbc,axiom,    p(a,f(b,c))       ).
+    fof(pbZ,axiom,      ! [Z] : p(b,Z)    ).
+    fof(pZc,axiom,      ! [Z] : p(Z,c)    ).
+    fof(a_not_b,axiom,  a != b            ).
+    fof(a_is_c,axiom,   a = c             ).
+    fof(pXY,question,   ? [X,Y] : p(X,Y)  ).</PRE>
+
+<A NAME="TPTPAnswers">
+<H3> TPTP format Answers </H3>
+<UL>
+<LI> <PRE>SZS answers Tuple for ANS001+1 [[a,b],[b,Z],[a,c]]</PRE>
+<LI> <PRE>SZS answers start Formulae for ANS001+1
+fof(1,answer,
+    ? [X,Y] :
+      ( X = a & Y = b & p(X,Y) ),
+    answer_to(pXY,[])).
+fof(2,answer,
+    ? [X,Y] :
+      ( X = b & Y = Z & p(X,Y) ),
+    answer_to(pXY,[])).
+fof(3,answer,
+    ? [X,Y] :
+      ( X = a & Y = c & p(X,Y) ),
+    answer_to(pXY,[])).
+SZS answers end Formulae for ANS001+1</PRE>
+</UL>
+
+<A NAME="Unequal">
+<H3> Denying Previous Answers with Inequalities</H3>
+<PRE>
+    fof(pXY,question,   ? [X,Y] : ( p(X,Y) ).                 p(a,b)
+    %----Answer [a,b]                                         p(a,f(b,c))
+                                                              &forall;Z p(b,Z)
+    fof(pXY,question,   ? [X,Y] : ( p(X,Y) &                  &forall;Z p(Z,c)
+        (X != a | Y != b) )  ).                               a != b
+    %----Answer [b,Z]                                         a = c
+
+    fof(pXY,question,   ? [X,Y] : ! [Z] : ( p(X,Y) & 
+        (X != a | Y != b) & (X != b | Y != Z) )  ).
+    %----Answer [a,c]
+
+    fof(pXY,question,   ? [X,Y] : ! [Z] : ( p(X,Y) & 
+        (X != a | Y != b) & (X != b | Y != Z) &
+        (X != a | Y != c) )  ).
+    %----CounterSatisfiable.</PRE>
+<UL>
+<LI> Answers: <TT>[[a,b],[b,Z],[a,c]]</TT> (modulo <TT>a = c</TT>)
+</UL>
+
+<A NAME="LookDifferent">
+<H3> Denying Previous Answers with "look different" Axioms </H3>
+<PRE>
+    fof(pXY,question,   ? [X,Y] : ( p(X,Y) ).                 p(a,b)
+    %----Answer [a,b]                                         p(a,f(b,c))
+                                                              &forall;Z p(b,Z)
+    fof(ld__a_b,axiom,  ld__(a,b)  ).                         &forall;Z p(Z,c)
+    fof(ld__a_c,axiom,  ld__(a,c)  ).                         a != b
+    fof(ld__a_f,axiom,  ! [X,Y] : ld__(a,f(X,Y))  ).          a = c
+    fof(ld__b_c,axiom,  ld__(b,c)  ).
+    fof(ld__b_f,axiom,  ! [X,Y] : ld__(b,f(X,Y))  ).
+    fof(ld__symmetry,axiom,! [X,Y] : (ld__(X,Y) => ld__(Y,X))  ).
+    fof(pXY,question,   ? [X,Y] : ( p(X,Y) & 
+        (ld__(X,a) | ld__(Y,b)) )  ).
+    %----Answer [a,f(b,c)]
+
+    fof(ld__c_f,axiom,  ! [X,Y] : ld__(c,f(X,Y))  ).
+    fof(ld__f_f,axiom,  ! [X11,X12,X21,X22] :
+        ( (ld__(X11,X12) | ld__(X21,X22))
+       => ld__(f(X11,X21),f(X12,X22)) )  ).
+    fof(pXY,question,   ? [X,Y] : ( p(X,Y) & 
+        (ld__(X,a) | ld__(Y,b)) & 
+        (ld__(X,a) | ld__(Y,f(b,c))) )  ).
+    %----Answer [b,Z]
+
+    etc.</PRE>
+<UL>
+<LI> Answers: <TT>[[a,b],[a,f(b,c)],[b,Z],[a,c],[c,c],[f(X,Y),c]]</TT>
+</UL>
+
+<A NAME="TestUnequal">
+<H3> Equality Testing </H3>
+<UL>
+<LI> Unequal <IMG SRC=Smiley.gif HEIGHT=20> <PRE>
+    %----Answers [[a,b],[a,f(b,c)]], then [b,Z]
+    fof(new,conjecture, ? [Z] :
+        ( ( b != a | Z != b) & (b != a | Z != f(b,c)) )  ).
+    %----Theorem</PRE>
+    Answer <TT>[b,Z]</TT> is accepted.
+<P>
+<A NAME="TestEqual">
+<LI> Equal <IMG SRC=Sadey.gif HEIGHT=20> <PRE>
+    %----Answers [[a,b],[a,f(b,c)],[b,Z],[a,c]] 
+    %----Answer [c,c]. Fail Unequal.
+    fof(old,conjecture, ? [Z] :
+        ( (c = a & c = b) | (c = a & c = f(b,c)) |
+          (c = b & c = Z) | (c = a & c = c) )  ).
+    %----Theorem.</PRE>
+    Answer <TT>[c,c]</TT> is rejected.
+<P>
+<A NAME="TestNotEqual">
+<LI> Not Equal <IMG SRC=Smiley.gif HEIGHT=20> <PRE>
+    %----Answer [a,b]. Fail Unequal and Equal.
+    fof(old,conjecture, (a = a & f(b,c) = b)  ).
+    CounterSatisfiable</PRE>
+    Answer <TT>[a,b]</TT> is accepted.
+<P>
+<A NAME="TestNotUnequal">
+<LI> Not Unequal <IMG SRC=Sadey.gif HEIGHT=20> <PRE>
+    %----Answers [[a,b],[a,f(b,c)],[b,Z]] 
+    %----Answer [c,c]. Fail (imagine) Unequal, Equal, Not equal
+    fof(new,conjecture, ? [Z] :
+        ( (a = a & c = b) | (a = a & c = f(b,c)) | 
+          (a = b & c = Z) )  ).
+    %----Theorem</PRE>
+    Answer <TT>[c,c]</TT> is accepted.
+<P>
+<LI> Otherwise <IMG SRC=Smiley.gif HEIGHT=20>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

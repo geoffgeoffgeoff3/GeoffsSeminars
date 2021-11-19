@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE> Patrick's Proof Display </TITLE>
+</HEAD>
+<BODY>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript"><!--
+  if (document.images) {
+      imageoff = new Image();
+      imageoff.src  = 'PPDPic.JPG';
+      imageon = new Image();
+      imageon.src = 'PPDPlace.GIF';
+  }
+
+  function change(image,ext) {
+      if (document.images)
+          document.images[image].src = eval(image + ext + ".src");
+  }
+  //-->
+</SCRIPT>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Patrick's Proof Display </H1>
+
+<A HREF="PPDPlace.html" onMouseOver="change('image','on')" onClick="change('image','off')">
+    <IMG NAME="image" SRC="PPDPic.GIF" BORDER=0 ALIGN=RIGHT WIDTH=50%></A>
+
+<H3> Tree Display </H3>
+<UL>
+<LI> Input proofs in TSTP format
+<LI> <A HREF="http://www.bus.miami.edu/~pzhou/source/treemenu/sylow2.html">
+     WWW GUI</A>
+<LI> Alternate subtrees
+<LI> Lemma detection by bushiness
+<LI> Proof merging
+</UL>
+
+<H3> Refutations and Proofs </H3>
+<UL>
+<LI> Refutations are proof by contradiction
+<LI> Proofs are in the Hilbert style
+<LI> Conversion is possible, with a few caveats
+     <UL>
+     <LI> Syntactic conversion
+     <LI> Semantic conversion using refutation to guide proof
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

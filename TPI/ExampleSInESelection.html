@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE> SInE Selection </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+SInE Selection
+</H1>
+
+<UL>
+<LI> Input axioms, execute ATP system asynchronously
+<LI> Filter axioms, output, execute ATP system
+<LI> Wait for systems, write SZS statuses, exit
+</UL>
+
+<PRE>
+    tpi(1,input,lt_problem = 'LTProblem.p').
+    tpi(2,input,'ExtraLTAxioms.ax').
+    tpi(3,execute_async, 'ASYNC_SZS_STATUS' =
+        'E---1.8/eprover -s --satauto --cpu-limit=300 --tstp-format $getgroups(tpi)').
+    tpi(4,start_group,sine_problem).
+    tpi(5,filter,
+        'SInE---1.8/run_sine_select --mode axiom_selection $getgroups(lt_problem)').
+    tpi(6,end_group,sine_problem).
+    tpi(7,output,'SInEdProblem.p' = sine_problem).
+    tpi(8,execute,'SZS_STATUS' =
+        'E---1.8/eprover -s --satauto --cpu-limit=300 --tstp-format
+        $getgroups(sine_problem)').
+    tpi(9,waitenv,'ASYNC_SZS_STATUS').
+    tpi(10,write,'Conjecture status with all axioms:' & $getenv('ASYNC_SZS_STATUS')).
+    tpi(11,write,'Conjecture status with selected axioms:' & $getenv('SZS_STATUS')).
+    tpi(12,exit,exit).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

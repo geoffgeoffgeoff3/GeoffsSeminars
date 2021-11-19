@@ -1,0 +1,408 @@
+<HTML>
+<HEAD>
+<TITLE>
+ATP System Result Status Options
+</TITLE>
+</HEAD>
+<BODY>
+<!---------------------------------------------------------------------------->
+
+<P ALIGN=JUSTIFY>
+The output from current ATP systems varies widely in quantity, quality,
+and meaning.
+At the low end of the scale, systems that search for a refutation of a
+set of clauses may output only an assurance that a refutation exists
+(the wonderful "<TT>yes</TT>" output).
+At the high end of the scale a system may output a natural deduction 
+proof of a problem expressed in FOF.
+In some cases the output is misleading, e.g., when a CNF based system
+claims that a FOF input problem is "unsatisfiable" it typically means that
+the negated CNF of the problem is unsatisfiable.
+
+<P ALIGN=JUSTIFY>
+In order to use ATP systems' results, e.g., as input to other tools, it 
+is necessary that the ATP systems correctly and precisely specify what 
+has been established.
+To this end a hierarchy of result status values has been established.
+The hierarchy was based on initial work done to establish 
+communication protocols for systems on the MathWeb Software Bus.
+The hierarchy is shown below:
+
+<PRE>
+                                  Result
+                                     |
+           --------------------------+--------------------------
+          /               |          |          |               \
+   Satisfiability         |       Vacuous       |       Counter satisfiability
+     preserving           |       theorem       |            preserving 
+         |                |                     |                |
+   Satisfiability    Satisfiable             Counter    Counter satisfiability
+   partial mapping        |     \          satisfiable      partial mapping  
+         |                |      \   &   /      |                |
+   Satisfiability      Theorem    Neither    Counter    Counter satisfiability
+      mapping             |                  theorem          mapping  
+         |                |                     |                |
+   Satisfiability    Tautologies          Unsatisfiable Counter satisfiability
+     bijection                                               bijection
+
+                                   Error 
+                                     |
+           --------------------------+--------------------------
+          /               |                     |               \
+    Input error        Gave up             Resource out       Unknown
+                                            /        \
+                                        Timeout     Other
+</PRE>
+
+<P ALIGN=JUSTIFY>
+Let <TT>F</TT> be a formula in classical first order logic, of the form 
+<TT>Ax => C</TT>.
+<UL>
+<LI> If <TT>Ax</TT> is empty, i.e., <TT>F</TT> is a monolithic formula
+     (e.g., a set of clauses), that's the same as <TT>Ax</TT> being 
+     <TT>TRUE</TT>. 
+<LI> If <TT>C</TT> is empty, e.g., testing the satisfiability of a set 
+     of axioms, that's the same as <TT>C</TT> being <TT>TRUE</TT>.
+</UL>
+<P ALIGN=JUSTIFY>
+By showing that <TT>F</TT> is valid, an ATP system shows that <TT>C</TT> is a 
+theorem (a logical consequence) of <TT>Ax</TT>, i.e., <TT>Ax |= C</TT>
+where <TT>|=</TT> is the standard first order entailment.
+If <TT>F</TT> is not valid, there are several other possible relationships
+between <TT>Ax</TT> and <TT>C</TT>, as shown in the hierarchy and 
+enumerated below
+Associated with each possible status are the possible outputs from the
+ATP system.
+The status values and possible outputs are ordered as follows:
+
+<OL>
+<LI> Every interpretation is a model of <TT>Ax</TT> and a model of <TT>C</TT>
+     <UL>
+     <LI> <TT>F</TT> is valid, 
+          <TT>~F</TT> is unsatisfiable,
+          <TT>C</TT> is a tautology
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "tautology"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  "tautology"
+          <LI> MathWeb status  "valid"
+          </UL>
+     <LI> TSTP status "Tautologies"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          <LI> Proof of <TT>F</TT>
+          <LI> Refutation of <TT>~F</TT>
+          </UL>
+     </UL>
+
+<P>
+<LI> Every model of <TT>Ax</TT> (and there are some) is a model of <TT>C</TT>, 
+     but not case "Tautologies"
+     <UL>
+     <LI> <TT>F</TT> is valid,
+          <TT>C</TT> is a theorem of <TT>Ax</TT>
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  not possible (that's "Tautologies")
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  "satisfiable"
+          <LI> MathWeb status  "valid"
+          </UL>
+     <LI> TSTP status "Theorem"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          <LI> Proof of <TT>C</TT> from <TT>Ax</TT>
+          <LI> Refutation of <TT>Ax U {~C}</TT>
+          <LI> Refutation of CNF(<TT>Ax U {~C}</TT>)
+          </UL>
+     </UL>
+
+<P>
+<LI> Some models of <TT>Ax</TT> (and there are some) are models of <TT>C</TT>
+     <UL>
+     <LI> <TT>F</TT> is satisfiable,
+          <TT>~F</TT> is not valid,
+          <TT>C</TT> is not a theorem of <TT>Ax</TT>
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  "satisfiable"
+          <LI> MathWeb status  "satisfiable"
+          </UL>
+     <LI> TSTP status "Satisfiable"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          <LI> Model
+          <LI> Saturation
+          </UL>
+     </UL>
+
+<P>
+<LI> There is a bijection between the models of <TT>Ax</TT> 
+     (and there are some) 
+     and models of <TT>C</TT>
+     <UL>
+     <LI> <TT>F</TT> is ???
+     <LI> Example: Skolemization, splitting by new predicates
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  "satisfiable" 
+          </UL>
+     <LI> TSTP status "Satisfiability bijection"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          </UL>
+     </UL>
+
+<P>
+<LI> There is a mapping from the models of <TT>Ax</TT> (and there are some)
+     to models of <TT>C</TT>
+     <UL>
+     <LI> <TT>F</TT> is ???
+     <LI> Example: 
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  "satisfiable" 
+          </UL>
+     <LI> TSTP status "Satisfiability mapping"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          </UL>
+     </UL>
+
+<P>
+<LI> There is a partial mapping from the models of <TT>Ax</TT> 
+     (and there are some) 
+     to models of <TT>C</TT>
+     <UL>
+     <LI> <TT>F</TT> is ???
+     <LI> Example: <TT>Ax</TT> = <TT>{p \/ q}</TT>, <TT>C</TT> = <TT>p /\ r</TT>
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  
+              not possible (must be "Satisfiability mapping")
+          </UL>
+     <LI> TSTP status "Satisfiability partial mapping"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          <LI> Pairs of models
+          <LI> Pairs of saturations
+          </UL>
+     </UL>
+
+<P>
+<LI> If there exists a model of <TT>Ax</TT> then there exists a model of 
+     <TT>C</TT>
+     <UL>
+     <LI> <TT>F</TT> is ???
+     <LI> Existing status
+          <UL> 
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  "satisfiable" if there
+               exists a model of <TT>Ax</TT>, "unsatisfiable" otherwise
+          </UL>
+     <LI> TSTP status "Satisfiability preserving"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          </UL>
+     </UL>
+
+<P>
+<LI> There are no models of <TT>Ax</TT>
+     <UL>
+     <LI> <TT>F</TT> is valid,
+          Anything is a theorem of <TT>Ax</TT>
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  not possible 
+               (<TT>Ax</TT> is <TT>TRUE</TT>)
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  "trivial"
+          <LI> MathWeb status  "valid"
+          </UL>
+     <LI> TSTP status "Vacuous theorem"
+     <LI> Expected output 
+          <UL>
+          <LI>  Assurance
+          <LI>  Refutation of <TT>Ax</TT>
+          <LI> Refutation of CNF(<TT>Ax U {~C}</TT>)
+          </UL>
+     </UL>
+
+<P>
+<LI> Some models of <TT>Ax</TT> (and there are some) are models of <TT>C</TT>,
+     and some are models of <TT>~C</TT>.
+     <UL>
+     <LI> <TT>F</TT> is not valid,
+          <TT>F</TT> is satisfiable,
+          <TT>~F</TT> is not valid,
+          <TT>~F</TT> is satisfiable,
+          <TT>C</TT> is not a theorem of <TT>Ax</TT>
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "satisfiable" and
+               "counter satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  not possible
+               (<TT>~C</TT> is FALSE)
+          </UL>
+     <LI> TSTP status "Neither"
+     <LI> Expected output
+          <UL>
+          <LI> Assurance
+          <LI> Pair of models
+          <LI> Pair of saturations
+          </UL>
+     </UL>
+
+<P>
+<LI> If there exists a model of <TT>Ax</TT> then there exists a model of 
+     <TT>~C</TT>
+     <UL>
+     <LI> <TT>F</TT> is ???
+     <LI> Existing status
+          <UL> 
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "counter satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  not possible
+          </UL>
+     <LI> TSTP status "Counter satisfiability preserving"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          </UL>
+     </UL>
+
+<P>
+<LI> There is a partial mapping from the models of <TT>Ax</TT> 
+     (and there are some) 
+     to models of <TT>~C</TT>
+     <UL>
+     <LI> <TT>F</TT> is ???
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "counter satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  not possible
+          </UL>
+     <LI> TSTP status "Counter satisfiability partial mapping"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          <LI> Pairs of models
+          </UL>
+     </UL>
+
+<P>
+<LI> There is a mapping from the models of <TT>Ax</TT> (and there are some) 
+     to models of <TT>~C</TT>
+     <UL>
+     <LI> <TT>F</TT> is ???
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "counter satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  not possible
+          </UL>
+     <LI> TSTP status "Counter satisfiability mapping"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          </UL>
+     </UL>
+
+<P>
+<LI> There is a bijection between the models of <TT>Ax</TT> 
+     (and there are some) 
+     and models of <TT>~C</TT>
+     <UL>
+     <LI> <TT>F</TT> is ???
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "counter satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  not possible
+          </UL>
+     <LI> TSTP status "Counter satisfiability bijection"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          </UL>
+     </UL>
+
+<P>
+<LI> Some models of <TT>Ax</TT> (and there are some) are models of <TT>~C</TT>
+     <UL>
+     <LI> <TT>F</TT> is not valid,
+          <TT>~F</TT> is satisfiable,
+          <TT>C</TT> is not a theorem of <TT>Ax</TT>
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "counter satisfiable"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  not possible 
+               (<TT>~C</TT> is FALSE)
+          <LI> MathWeb status  "counter satisfiable"
+          </UL>
+     <LI> TSTP status "Counter satisfiable" (previously "Dissatisfiable")
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          <LI> Model
+          <LI> Saturation
+          </UL>
+     </UL>
+
+<P>
+<LI> Every model of <TT>Ax</TT> (and there are some) is a model of <TT>~C</TT>, 
+     but not "Unsatisfiable"
+     <UL>
+     <LI> <TT>F</TT> is not valid, 
+          <TT>~C</TT> is a theorem of <TT>Ax</TT>
+          <TT>C</TT> cannot be made into a theorem by extending <TT>Ax</TT>,
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "counter theorem"
+          <LI> <TT>C</TT>  <TT>TRUE</TT> status  not possible 
+               (<TT>~C</TT> is FALSE)
+          <LI> MathWeb status  not given
+          </UL>
+     <LI> TSTP status "Counter theorem"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          <LI> Proof of <TT>~C</TT> from <TT>Ax</TT>
+          <LI> Refutation of <TT>Ax U {C}</TT>
+          <LI> Refutation of CNF(<TT>Ax U {C}</TT>)
+          </UL>
+     </UL>
+
+<P>
+<LI> Every interpretation is a model of <TT>Ax</TT> and a model of <TT>~C</TT>
+     <UL>
+     <LI> <TT>F</TT> is unsatisfiable,
+          <TT>~F</TT> is valid,
+          <TT>~C</TT> is a tautology
+     <LI> Existing status
+          <UL>
+          <LI> <TT>Ax</TT> <TT>TRUE</TT> status  "counter theorem"
+          <LI> <TT>C</TT> <TT>TRUE</TT> status  not possible 
+               (<TT>~C</TT> is FALSE)
+          <LI> MathWeb status  "unsatisfiable"
+          </UL>
+     <LI> TSTP status "Unsatisfiable"
+     <LI> Expected output 
+          <UL>
+          <LI> Assurance
+          <LI> Refutation of <TT>F</TT>
+          <LI> Proof of <TT>~F</TT>
+          </UL>
+     </UL>
+
+</OL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

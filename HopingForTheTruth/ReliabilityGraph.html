@@ -1,0 +1,206 @@
+<HTML>
+<HEAD>
+<TITLE> Reliability of Logics </TITLE>
+</HEAD>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var indices = new Array();
+
+  images[2]       = new Array();
+  images[2][0]     = new Image();
+  images[2][0].src = 'ClickableGIF/R2-PL.gif';
+  images[2][1]     = new Image();
+  images[2][1].src = 'ClickableGIF/R2+PL.gif';
+  indices[2]      = 0;
+  images[3]       = new Array();
+  images[3][0]     = new Image();
+  images[3][0].src = 'ClickableGIF/R3-EPR.gif';
+  images[3][1]     = new Image();
+  images[3][1].src = 'ClickableGIF/R3+EPR.gif';
+  indices[3]      = 0;
+  images[4]       = new Array();
+  images[4][0]     = new Image();
+  images[4][0].src = 'ClickableGIF/R4-CNF.gif';
+  images[4][1]     = new Image();
+  images[4][1].src = 'ClickableGIF/R4+CNF.gif';
+  indices[4]      = 0;
+  images[5]       = new Array();
+  images[5][0]     = new Image();
+  images[5][0].src = 'ClickableGIF/R5-FOF.gif';
+  images[5][1]     = new Image();
+  images[5][1].src = 'ClickableGIF/R5+FOF.gif';
+  indices[5]      = 0;
+  images[6]       = new Array();
+  images[6][0]     = new Image();
+  images[6][0].src = 'ClickableGIF/R6a-DL.gif';
+  images[6][1]     = new Image();
+  images[6][1].src = 'ClickableGIF/R6a+DL.gif';
+  indices[6]      = 0;
+  images[16]       = new Array();
+  images[16][0]     = new Image();
+  images[16][0].src = 'ClickableGIF/R6b-TF0.gif';
+  images[16][1]     = new Image();
+  images[16][1].src = 'ClickableGIF/R6b+TF0.gif';
+  indices[16]      = 0;
+  images[7]       = new Array();
+  images[7][0]     = new Image();
+  images[7][0].src = 'ClickableGIF/R7-TF1TH0.gif';
+  images[7][1]     = new Image();
+  images[7][1].src = 'ClickableGIF/R7+TF1TH0.gif';
+  indices[7]      = 0;
+  images[8]       = new Array();
+  images[8][0]     = new Image();
+  images[8][0].src = 'ClickableGIF/R8-TFATH1.gif';
+  images[8][1]     = new Image();
+  images[8][1].src = 'ClickableGIF/R8+TFATH1.gif';
+  indices[8]      = 0;
+  images[9]       = new Array();
+  images[9][0]     = new Image();
+  images[9][0].src = 'ClickableGIF/R9-TFX.gif';
+  images[9][1]     = new Image();
+  images[9][1].src = 'ClickableGIF/R9+TFX.gif';
+  indices[9]      = 0;
+  images[10]       = new Array();
+  images[10][0]     = new Image();
+  images[10][0].src = 'ClickableGIF/R10-THX.gif';
+  images[10][1]     = new Image();
+  images[10][1].src = 'ClickableGIF/R10+THX.gif';
+  indices[10]      = 0;
+
+  function switchImage(image,index) {
+      indices[index] = (indices[index] + 1) % 2;
+      document.images[image].src = images[index][indices[index]].src;
+  }
+
+  function setAllImages(onoff) {
+      indices[2] = (onoff + 1) % 2; switchImage('R2',2);
+      indices[6] = (onoff + 1) % 2; switchImage('R6a',6);
+      indices[3] = (onoff + 1) % 2; switchImage('R3',3);
+      indices[4] = (onoff + 1) % 2; switchImage('R4',4);
+      indices[5] = (onoff + 1) % 2; switchImage('R5',5);
+      indices[16] = (onoff + 1) % 2; switchImage('R6b',16);
+      indices[9] = (onoff + 1) % 2; switchImage('R9',9);
+      indices[8] = (onoff + 1) % 2; switchImage('R8',8);
+      indices[7] = (onoff + 1) % 2; switchImage('R7',7);
+      indices[10] = (onoff + 1) % 2; switchImage('R10',10);
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Reliability of Logics
+</H1>
+
+<TABLE> <TR VALIGN=BOTTOM> <TD WIDTH=20%>
+<B> <FONT SIZE=+3><A HREF="Evaluations.html"><TT>Logic Menu:&nbsp;</TT></A></FONT></B>
+<TABLE BORDER=1>
+<TR> <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/PLTofu.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#PL">PL</A></FONT></B>
+          <P>
+          Tasteless&nbsp;Tofu
+     <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/DLChickenNuggets.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#DL">DL</A>&nbsp;</FONT></B>
+          <P>
+          Artificial&nbsp;Nuggets&nbsp;&nbsp;&nbsp;
+<TR> <TD WIDTH=125> 
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#EPR">EPR</A>&nbsp;</FONT></B>
+          <IMG SRC="MenuPictures/EPRRice.jpg" ALIGN=RIGHT HEIGHT=50>
+          <P>
+          Simply&nbsp;Rice
+     <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/CNFPitepalt.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#CNF">CNF</A>&nbsp;</FONT></B>
+          <P>
+          Boiled&nbsp;Potatoes
+<TR> <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/FOFLoadedPotato.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#FOF">FOF</A>&nbsp;</FONT></B>
+          <P>
+          Fully&nbsp;Loaded
+     <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/TF0Fish.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#TF0">TF0</A>&nbsp;</FONT></B>
+          <P>
+          A&nbsp;Type&nbsp;of&nbsp;Fish
+<TR> <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/TFAHerring.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#TFA">TFA</A>&nbsp;</FONT></B>
+          <P>
+          Pickled&nbsp;in&nbsp;Math&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/TF1Sushi.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#TF1">TF1</A>&nbsp;</FONT></B>
+          <P>
+          Many&nbsp;Sushi
+<TR> 
+     <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/TFXPlatter.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#TFX">TFX</A>&nbsp;</FONT></B>
+          <P>
+          Many&nbsp;Sushi
+     <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/TH0Steak.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#TH0">TH0</A>&nbsp;</FONT></B>
+          <P>
+          Manly&nbsp;Meat
+<TR> 
+     <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/TH1Paradilla.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#TH1">TH1</A>&nbsp;</FONT></B>
+          <P>
+          Mutliple&nbsp;Meats
+     <TD WIDTH=125> 
+          <IMG SRC="MenuPictures/THXSurfTurf.jpg" ALIGN=RIGHT HEIGHT=50>
+          <B><FONT SIZE=+3><A HREF="Evaluations.html#THX">THX</A>&nbsp;</FONT></B>
+          <P>
+          Confusing&nbsp;Meal
+</TABLE>
+<CENTER>
+<TD WIDTH=5%> <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>
+<TD WIDTH=100%>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 HEIGHT=50% WIDTH=90%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R1" SRC="ClickableGIF/R1.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R2" SRC="ClickableGIF/R2-PL.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R3" SRC="ClickableGIF/R3-EPR.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R4" SRC="ClickableGIF/R4-CNF.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R5" SRC="ClickableGIF/R5-FOF.gif" WIDTH=100%>
+<TR> <TD COLSPAN=1> <IMG NAME="R6a" SRC="ClickableGIF/R6a-DL.gif" WIDTH=100%>
+     <TD COLSPAN=1> <IMG NAME="R6b" SRC="ClickableGIF/R6b-TF0.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R7" SRC="ClickableGIF/R7-TF1TH0.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R8" SRC="ClickableGIF/R8-TFATH1.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R9" SRC="ClickableGIF/R9-TFX.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R10" SRC="ClickableGIF/R10-THX.gif" WIDTH=100%>
+<TR> <TD COLSPAN=2 WIDTH=100%> <IMG NAME="R11" SRC="ClickableGIF/R11.gif" WIDTH=100%>
+</TABLE>
+<P>
+</CENTER>
+<TT>Reveal:&nbsp;</TT>
+<A HREF="" onClick="setAllImages(1);return false">ALL</A>&nbsp;
+<A HREF="" onClick="setAllImages(0);return false">NONE</A><BR>
+<TT>Reveal:&nbsp;</TT>
+<A HREF="" onClick="switchImage('R2',2);return false">PL</A>&nbsp;
+<A HREF="" onClick="switchImage('R6a',6);return false">DL</A>&nbsp;
+<A HREF="" onClick="switchImage('R3',3);return false">EPR</A>&nbsp;
+<A HREF="" onClick="switchImage('R4',4);return false">CNF</A>&nbsp;
+<A HREF="" onClick="switchImage('R5',5);return false">FOF</A>&nbsp;
+<A HREF="" onClick="switchImage('R6b',16);return false">TF0</A>&nbsp;
+<A HREF="" onClick="switchImage('R8',8);return false">TFA</A>&nbsp;
+<A HREF="" onClick="switchImage('R7',7);return false">TF1</A>&nbsp;
+<A HREF="" onClick="switchImage('R9',9);return false">TFX</A>&nbsp;
+<A HREF="" onClick="switchImage('R7',7);return false">TH0</A>&nbsp;
+<A HREF="" onClick="switchImage('R8',8);return false">TH1</A>&nbsp;
+<A HREF="" onClick="switchImage('R10',10);return false">THX</A>&nbsp;
+</H2>
+<TD WIDTH=10% VALIGN=TOP> <IMG SRC="AllTPTPForms.jpg" HEIGHT=20%>
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

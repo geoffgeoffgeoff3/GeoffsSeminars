@@ -1,0 +1,44 @@
+%------------------------------------------------------------------------------
+%----About the constants
+fof(a_not_b,   axiom, a != b ).
+
+%----About the functions
+fof(bigger_s,  axiom, ! [X] : bigger(s(X),X) ).
+fof(bigger_t,  axiom, ! [X,Y] : ( bigger(X,Y) => bigger(s(X),Y) ) ).
+fof(s_not_X,   axiom, ! [X,Y] : ( bigger(X,Y) => X != Y ) ).
+fof(f_b_a,     axiom, f(b) = a ).
+fof(f_ss_X,    axiom, ! [X] : f(s(s(X))) = X ).
+
+%----About the predicates
+fof(p_a,       axiom, p(a) ).
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+%----Model types
+tff(a_type,    type,  a: $int ).
+tff(b_type,    type,  b: $int ).
+tff(s_type,    type,  s: $int > $int ).
+tff(f_type,    type,  f: $int > $int ).
+tff(b_type,    type,  bigger: ( $int * $int ) > $o ).
+tff(p_type,    type,  p: $int > $o ).
+
+%----Constants
+tff(a_is_1,    axiom, a = 1 ).
+tff(b_is_1,    axiom, b = 4 ).
+
+%----Total functions
+tff(s,         axiom, ! [X: $int] : s(X) = $product(X,2) ).
+tff(f_s,       axiom, ! [X: $int] : f(X) = $quotient_t(X,4) ).
+
+%----Total predicates
+tff(bigger,    axiom, ! [X: $int,Y: $int] : ( bigger(X,Y) <=> $greater(X,Y) ) ).
+tff(p_natural, axiom, ! [X: $int] : ( p(X) <= $greatereq(X,1) )).
+tff(not_p_more,axiom, ! [X: $int] : ( ~ p(X) <= $less(X,1) )).
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+%----Formulae to evaluate
+tff(prove,conjecture, p(f(s(s(a)))) ).                            %----TRUE
+
+tff(prove,conjecture, ? [X: $int] : ( p(X) & ~ p(f(s(s(X)))) ) ). %----FALSE
+%------------------------------------------------------------------------------

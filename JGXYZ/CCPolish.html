@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<TITLE> The Lukasiewicz Conditional </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Luk.gif';
+  images[1]     = new Image();
+  images[1].src = 'LukTable.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The &#0321;ukasiewicz Conditional (&rarr;<SUB>&#0321;uk</SUB>)
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="Luk.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<UL>
+<LI> Add contraposition to &rarr;<SUB>cmi</SUB>
+     <UL>
+     <LI> (&phi; &rarr;<SUB>&#0321;uk</SUB> &psi;) =<SUB>df</SUB>
+          ((&phi; &rarr;<SUB>cmi</SUB> &psi;) &and; 
+          (&not;&psi; &rarr;<SUB>cmi</SUB> &not;&phi;)) 
+     <LI> A combination of the implications from 
+          <A HREF="LogicL3.html">&#0321;3</A> and
+          <A HREF="../RM3/LogicRM3.html">RM3</A>
+     </UL>
+<P>
+<!--
+     <TABLE>
+     <TR> <TD> &rarr;<SUB>&#0321;uk</SUB>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B> &nbsp;&nbsp;
+          <TD> <B>B</B> &nbsp;&nbsp;
+          <TD> <B>N</B> &nbsp;&nbsp;
+          <TD> <B>F</B>
+     <TR> <TD COLSPAN=6> <HR>
+     <TR> <TD> <B>T</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>F</B>
+          <TD> <B>N</B>
+          <TD> <B>F</B>
+     <TR> <TD> <B>B</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>B</B>
+          <TD> <B>N</B>
+          <TD> <B>F</B>
+     <TR> <TD> <B>N</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>N</B>
+          <TD> <B>T</B>
+          <TD> <B>N</B>
+     <TR> <TD> <B>F</B>
+          <TD style="border-left: 1px solid black; padding-left: 5px;">
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+          <TD> <B>T</B>
+     </TABLE>
+-->
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

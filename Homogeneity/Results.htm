@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<TITLE> Testing on TPTP v2.0.0 </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'OldSPCs.GIF';
+  images[1]     = new Image();
+  images[1].src = '../Evaluate/SPCs.GIF';
+
+  var currentImageIndex = 0;
+
+  function swapImage () {
+      currentImageIndex = (currentImageIndex + 1) % 2;
+      document.images['image'].src = images[currentImageIndex].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Testing on TPTP v2.0.0 </H1>
+
+<H3> SPCs </H3>
+<CENTER>
+<A HREF="Results.htm" onClick="swapImage();return false">
+<IMG NAME="image" SRC="OldSPCs.GIF" BORDER=0></A>
+</CENTER>
+
+<H3> Sample Results </H3>
+<CENTER>
+<TABLE BORDER>
+<TR> <TD>
+          <TABLE>
+          <TR> <TH COLSPAN=5> <TT>THM_RFO_SEQ_CNF_HRN</TT> </TH>
+          </TR>
+          <TR> <TH ALIGN=LEFT> T'd </TH>
+               <TH COLSPAN=2> 67 nodes </TH>
+               <TH COLSPAN=2> 381 problems </TH>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.0000 </TD>
+               <TD ALIGN=RIGHT> 20 </TD>
+               <TD ALIGN=RIGHT> (29%) </TD>
+               <TD ALIGN=RIGHT> 246</TD>
+               <TD ALIGN=RIGHT> (64%)</TD>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.0625 </TD>
+               <TD ALIGN=RIGHT> 38 </TD>
+               <TD ALIGN=RIGHT> (56%) </TD>
+               <TD ALIGN=RIGHT> 325 </TD>
+               <TD ALIGN=RIGHT> (85%)</TD>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.1250 </TD>
+               <TD ALIGN=RIGHT> 55 </TD>
+               <TD ALIGN=RIGHT> (82%) </TD>
+               <TD ALIGN=RIGHT> 349 </TD>
+               <TD ALIGN=RIGHT> (91%)</TD>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.2500 </TD>
+               <TD ALIGN=RIGHT> 66 </TD>
+               <TD ALIGN=RIGHT> (98%) </TD>
+               <TD ALIGN=RIGHT> 380 </TD>
+               <TD ALIGN=RIGHT> (99%)</TD>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.5000 </TD>
+               <TD ALIGN=RIGHT> 67 </TD>
+               <TD ALIGN=RIGHT>(100%) </TD>
+               <TD ALIGN=RIGHT> 381 </TD>
+               <TD ALIGN=RIGHT>(100%)</TD>
+          </TR>
+          </TABLE>
+     </TD>
+     <TD>
+          <TABLE>
+          <TR> <TH COLSPAN=5> <TT>SAT_RFO_CNF</TT> </TH>
+          </TR>
+          <TR> <TH ALIGN=LEFT> T'd </TH>
+               <TH COLSPAN=2> 38 nodes </TH>
+               <TH COLSPAN=2> 88 problems </TH>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.0000 </TD>
+               <TD ALIGN=RIGHT>  14 </TD>
+               <TD ALIGN=RIGHT> (36%) </TD>
+               <TD ALIGN=RIGHT>  41 </TD>
+               <TD ALIGN=RIGHT> (46%)</TD>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.0625 </TD>
+               <TD ALIGN=RIGHT>  14 </TD>
+               <TD ALIGN=RIGHT> (36%) </TD>
+               <TD ALIGN=RIGHT>  41 </TD>
+               <TD ALIGN=RIGHT> (46%)</TD>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.1250 </TD>
+               <TD ALIGN=RIGHT>  25 </TD>
+               <TD ALIGN=RIGHT> (65%) </TD>
+               <TD ALIGN=RIGHT>  56 </TD>
+               <TD ALIGN=RIGHT> (63%)</TD>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.2500 </TD>
+               <TD ALIGN=RIGHT>  30 </TD>
+               <TD ALIGN=RIGHT> (78%) </TD>
+               <TD ALIGN=RIGHT>  68 </TD>
+               <TD ALIGN=RIGHT> (77%)</TD>
+          </TR>
+          <TR> <TD ALIGN=RIGHT> 0.5000 </TD>
+               <TD ALIGN=RIGHT>  30 </TD>
+               <TD ALIGN=RIGHT> (78%) </TD>
+               <TD ALIGN=RIGHT>  68 </TD>
+               <TD ALIGN=RIGHT> (77%)</TD>
+          </TR>
+          </TABLE>
+     </TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<UL>
+<LI> All but <TT>SAT_RFO_CNF</TT> homogeneous
+<LI> Heterogeneity in <TT>SAT_RFO_CNF</TT> traced to equality
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

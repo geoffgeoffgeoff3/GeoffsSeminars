@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE> Number Theory Example </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Number Theory Example
+</H1>
+
+<PRE>
+%--------------------------------------------------------------------------
+% File     : NUM922=1 : TPTP v6.1.0. Released v5.0.0.
+% Domain   : Number Theory
+% Problem  : Universal predicate
+% Version  : Especial.
+% English  : 
+
+% Refs     : [PW06]  Prevosto & Waldmann (2006), SPASS+T
+%          : [Wal10] Waldmann (2010), Email to Geoff Sutcliffe
+% Source   : [Wal10]
+% Names    : (26) [PW06]
+
+% Status   : Theorem
+% Rating   : 1.00 v5.0.0
+% Syntax   : Number of formulae    :    2 (   0 unit;   1 type)
+%            Number of atoms       :    8 (   0 equality)
+%            Maximal formula depth :    6 (   4 average)
+%            Number of connectives :    5 (   0   ~;   0   |;   2   &)
+%                                         (   0 <=>;   3  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&)
+%            Number of type conns  :    1 (   1   >;   0   *;   0   +;   0  <<)
+%            Number of predicates  :    4 (   3 propositional; 0-1 arity)
+%            Number of functors    :    4 (   2 constant; 0-2 arity)
+%            Number of variables   :    3 (   0 sgn;   3   !;   0   ?)
+%            Maximal term depth    :    2 (   1 average)
+%            Arithmetic symbols    :    5 (   1 pred;    2 func;    2 numbers)
+% SPC      : TF0_THM_NEQ_ARI
+
+% Comments : 
+%--------------------------------------------------------------------------
+tff(p_type,type,(
+    p: $int > $o )).
+
+tff(co1,conjecture,
+    ( ( p(0)
+      & ! [U: $int] :
+          ( p(U)
+         => p($sum(U,1)) )
+      & ! [V: $int] :
+          ( p(V)
+         => p($difference(V,1)) ) )
+   => ! [W: $int] : p(W) )).
+%--------------------------------------------------------------------------
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

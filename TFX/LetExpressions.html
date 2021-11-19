@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE> Let Expressions </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Let Expressions </H1>
+
+<IMG SRC="FindAndReplace.jpg" BORDER=0 ALIGN=RIGHT WIDTH=30%>
+
+<H3> The Idea </H3>
+<UL>
+<LI> Expressions of the form <TT>$let(</TT><EM>types</EM><TT>,</TT><EM>defns</EM><TT>,</TT><EM>t</EM><TT>)</TT>
+<LI> Replaces the old <TT>$let_tt</TT>, <TT>$let_tf</TT>, <TT>$let_ft</TT>, and <TT>$let_ff</TT>
+<LI> Let expressions removed from plain TFF
+</UL>
+
+<H3> Examples </H3>
+<UL>
+<LI> <TT>p: ($int * $int) > $o</TT><BR>
+     <TT>$let(c: $int,c:= $sum(2,3),p(c,c))</TT>
+<LI> <TT>$let(max: ($real * $real) > $real,</TT><BR>
+     <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max(X,Y):= $ite($greatereq(X,Y),X,Y),</TT><BR>
+     <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max(max(a,b),c) )</TT>
+<LI> <TT>a: $i</TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TT>b: $i</TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TT>p: ($i * $i) > $o</TT><BR>
+     <TT>$let([a:$i,b:$i],[a:=b, b:=a],p(a,b))</TT><BR>
+     <TT>$let([a:$i,b:$i],[a,b]:=[b,a],p(a,b))</TT>
+<LI> <TT>i: $int</TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TT>f: ($int * $int * $int * $int) > $int</TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TT>p: $int > $o</TT><BR>
+     <TT>$let([ff: ($int * $int) > $int, gg: $int > $int],</TT><BR>
+     <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ff(X,Y):=f(X,X,Y,Y), gg(Z):=f(Z,Z,Z,Z)],</TT><BR>
+     <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p(ff(i,gg(i))))</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

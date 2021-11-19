@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<TITLE> The Syntax </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The Syntax </H1>
+
+<TABLE>
+<TR VALIGN=TOP> 
+     <TD> <H3>  Annotated TPTP Formulae </H3>
+          <PRE>
+&lt;language>(&lt;name>,&lt;user type>[-&lt;source type>],
+    &lt;formula>[,
+    &lt;source>[,
+    &lt;useful info>]]).
+          </PRE>
+          <H3> Fields </H3>
+          <UL>
+          <LI> <TT>&lt;language></TT> provides extensibility
+          <LI> <TT>&lt;user type>[-&lt;source type>]</TT> indicates semantics
+               <UL>
+               <LI> User types: <TT>axiom</TT>, <TT>conjecture</TT>, 
+                    <TT>lemma</TT>, ...
+               <LI> Source types: <TT>derived</TT>
+               </UL>
+          <LI> <TT>&lt;formula></TT> uses TPTP FOF syntax
+               <UL>
+               <LI> Follows user conventions
+               <LI> Compact, parsable, readable, writable, ASCII text
+               <LI> Same for CNF and FOF
+               <LI> Infix equality using <TT>=</TT> and <TT>!=</TT>
+               </UL>
+          <LI> <TT>&lt;source></TT>
+               <UL>
+               <LI> External: file, human, etc
+               <LI> Derived: <TT>inference</TT> term
+               </UL>
+          <LI> <TT>&lt;useful info></TT> fields used for annotations, in
+               same abstract syntax
+          </UL>
+     <TD> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TD> <H3> Example FOF Problem Formula </H3>
+          <PRE>
+fof(extensionality,axiom,
+    ! [X,Y] :
+      ( X = Y
+    <=> ( subclass(X,Y)
+        & subclass(Y,X) ) ),
+    file('SET005+0.ax',extensionality),
+    [description('Principle of extensionality'),
+     relevance(0.9)]).
+          </PRE>
+
+          <H3> Example CNF Derivation Formula </H3>
+          <PRE>
+cnf(140,lemma-derived,
+    ( equal_sets(a,aUa)
+    | member(member_of(a,aUa),a) ),
+    inference(unit_del,[status(thm)],[
+        inference(hyper,[status(thm)],[
+            5,16]),11]),
+    [iquote('hyper,5,16.1,unit_del,11')]).
+          </PRE>
+<TR COLSPAN=3>
+     <TD> <H3> Online </H3>
+          <UL>
+          <LI> <A HREF="http://www.tptp.org/TSTP"><TT>http://www.tptp.org/TSTP</TT></A>
+          </UL>
+
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

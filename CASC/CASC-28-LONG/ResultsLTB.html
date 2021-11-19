@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<TITLE> LTB Division Results </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'ResultsLTB.png'; 
+  images[1]     = new Image();
+  images[1].src = 'ResultsLTBPlot.jpg';
+  images[2]     = new Image();
+  images[2].src = 'ResultsLTBVersions.png';
+
+  function displayImage (index) {
+      document.images['image'].src = images[index].src;
+  }  
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Large Theory Batch Results </H1>
+
+<A HREF="" onClick="displayImage(0);return false">
+<IMG NAME='image' SRC="ResultsLTB.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> Salient Systems </H3>
+<UL>
+<LI> Vampire out front
+     <UL>
+     <LI> Dynamic strategy scheduling 
+     <LI> Impacted later and repeated runs
+     <LI> Max 137 attempts, on 2024 problems, 5 solved
+     <LI> Large range of gracefully increasing 
+          <A HREF="" onClick="displayImage(1);return false">
+          accumulated CPU times</A>
+     </UL>
+<LI> Zipperposition's low times and core usage due to a scheduling bug!
+</UL>
+
+<H3> Version Solutions </H3>
+<UL>
+<LI> Quite a high degree of
+     <A HREF="" onClick="displayImage(2);return false">specialization</A>
+<LI> Vampire is broadest
+<LI> Leo-III can also attempt FOF and TF0
+     <UL>
+     <LI> Won CASC-27 by solving across the versions
+     </UL>
+<LI> iProver did not use its FOF capability, 
+     <UL> 
+     <LI> Did not attempt 8 problems due to a memory error
+     </UL>
+<LI> E 2.6 did not use it's TH0 capability due to a bug
+</UL>
+
+<H3> Portfolio Possibilities </H3>
+<UL>
+<LI> 1668 problems unsolved, 2136 all solved
+<LI> 699 unique solutions, 427 by Vampire
+<LI> Portfolio hard to consider, but ...
+<LI> Union of Vampire and Zipperposition solves 8121
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

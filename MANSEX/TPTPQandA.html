@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP Standards for Questions and Answers </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER>
+TPTP Standards for Questions and Answers
+</H1>
+
+<IMG NAME="image" SRC="QandA.GIF" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Questions </H3>
+<UL>
+<LI> Conjecture with outermost existentially quantified 
+     <EM>answer variables</EM>
+<LI> Given the role <TT>question</TT>
+<LI> E.g., <PRE>fof(pXY,question,   ? [X,Y] : p(X,Y)  ).</PRE>
+</UL>
+
+<H3> Short Answers </H3>
+<UL>
+<LI> <TT>SZS answers short</TT> <EM>list_of_definite_answer_tuples</EM>
+<LI> E.g., <PRE>SZS answers short for ANS001+1 [[a,b],[b,Z],[a,c]]</PRE>
+</UL>
+
+<H3> Long Answers </H3>
+<UL>
+<LI> <TT>SZS answers start for</TT> <EM>problem_file_name</EM><BR>
+<TT>fof(</TT><EM>some_name,answer</EM><TT>,</TT><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<EM>quantification_from_question<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disjunction_of_conjunctions_of_binding_equations & the_question,</EM><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;<TT>answer_to(</TT><EM>name_of_question</EM><TT>,[])).</TT><BR>
+...<BR>
+...<BR>
+<TT>SZS answers end for</TT> <EM>problem_file_name</EM>
+<LI> E.g.., <PRE>SZS answers start for ANS001+1
+fof(1,answer,
+    ? [X,Y] :
+      ( X = a & Y = b & p(X,Y) ),
+    answer_to(pXY,[])).
+fof(2,answer,
+    ? [X,Y] :
+      ( X = b & Y = Z & p(X,Y) ),
+    answer_to(pXY,[])).
+fof(3,answer,
+    ? [X,Y] :
+      ( X = a & Y = c & p(X,Y) ),
+    answer_to(pXY,[])).
+SZS answers end for ANS001+1</PRE>
+<LI> Intermediate forms possible
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+

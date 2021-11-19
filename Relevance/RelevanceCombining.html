@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<TITLE> Combining Predicate and Functor Relevance </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Combining Predicate and Functor Relevance </H1>
+
+<IMG SRC="Combine.JPG" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> Intuition </H3>
+<UL>
+<LI> Relevance measured by predicates, functors, or both
+<LI> Combining them when measured seperately
+</UL>
+
+<H3> Definition </H3>
+<UL>
+<LI> Let <TT>Rp</TT> be the measure by predicates, 
+     <TT>Rf</TT> the measure by functors
+<LI> The <EM>combined normalized measure</EM> by Euclidean distance is
+     <PRE>
+  (Rp<SUP>2</SUP> + Rf<SUP>2</SUP>)
+( ----------- )<SUP>0.5</SUP>
+       2   </PRE>
+<LI> The <EM>combined normalized measure</EM> by probability is
+     <PRE>
+1 - ((1 - Rp) * (1 - Rf))<SUP>2</SUP> </PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

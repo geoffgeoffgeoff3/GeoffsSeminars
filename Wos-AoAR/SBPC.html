@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> The SBPC Logic </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The SBPC Logic </H1>
+
+<IMG SRC="SBPC.JPG" BORDER=0 ALIGN=RIGHT WIDTH=35%>
+
+<H3> <EM>SBPC</EM> Axioms </H3>
+<UL>
+<LI> Start with <TT>A1</TT>, <TT>A2</TT>, <TT>A4</TT>, <TT>A5</TT>, 
+     <TT>A8</TT>, <TT>A9</TT>
+<LI> Add (<TT>a</TT> and <TT>o</TT> are logical <STRONG>and</STRONG> and
+     <STRONG>or</STRONG>) <PRE>
+    P(j(x,o(x,y)))                          % A11
+    P(i(y,o(x,y)))                          % A12
+    P(j(j(x,z),j(j(y,z),j(o(x,y),z))))      % A13
+    P(i(a(x,y),x))                          % A14
+    P(j(a(x,y),y))                          % A15
+    P(i(i(x,y),i(i(x,z),i(x,a(y,z)))))      % A16 </PRE>
+<LI> Proved <PRE>
+    P(j(i(x,y),i(o(x,z),o(y,z))))           % T5
+    P(j(i(x,y),i(o(z,x),o(z,y))))           % T6
+    P(j(i(x,y),j(i(y,x),i(a(x,z),a(y,z))))) % T7
+    P(j(i(x,y),i(a(z,x),a(z,y))))           % T8</PRE>
+     avoiding <TT>A3</TT>, <TT>A6</TT>, <TT>A7</TT>
+</UL>
+
+<H3> <TT>P(i(j(j(x,y),x),x)) % A7</TT> </H3>
+<UL>
+<LI> <TT>A7</TT> proved from <TT>A1</TT>, <TT>A2</TT>, <TT>A4</TT>, 
+     <TT>A5</TT>, <TT>A8</TT>, <TT>A9</TT>, <TT>A11</TT> <TT>A12</TT>
+     <TT>A13</TT>, <TT>A14</TT>, <TT>A15</TT>, <TT>A16</TT><BR>
+     avoiding <TT>A3</TT> and <TT>A6</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

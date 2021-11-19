@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE> SPASS-XDB Implementation </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+SPASS-XDB Implementation
+</H1>
+
+<A HREF="ATPAlgorithmGIF.html">
+<IMG NAME=image SRC="ATPAlgorithm.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Algorithm (5,4,1,2,3,6)</H3>
+<PRE>
+while (!Solved && (Usable || DeliveryPending || RequestQueue) {
+    repeat {
+        Accept deliveries, add to Usable;
+        Dequeue requests and send
+        if (!Usable && DeliveryPending) sleep(1);
+    until (Usable || !DeliveryPending);
+    if (!Usable) break;
+    Move ChosenClause from Usable to WorkedOff;
+    Enqueue requests for negative literals of ChosenClause
+    Do relaxed-extended inferencing with ChosenClause
+}
+</PRE>
+
+<UL>
+<LI> <A HREF="" onClick="hideshow('p1');return false;">Points to note</A>
+     <SPAN ID="p1" style="display:none">
+     <UL>
+     <LI> Augmented <TT>while</TT> loop condition
+     <LI> Requests and deliveries, one-at-a-time per source
+     <LI> Request queues can be priority queues
+     <LI> Preemptive requests are useful, and also necessary
+          (<A HREF="RelaxationExamples.html">why?</A>)
+     <LI> Matching is loosely defined
+     <LI> Inferencing relaxed for external axioms
+     <LI> Inferencing includes built-in arithmetic
+     <LI> Soundness follows naturally
+     <LI> Completeness is different, but is OK
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> Controls on Retrieval </H3>
+<UL>
+<LI> Universal quantification in external specifications
+<LI> <TT>xdb(limit,*)</TT> terms
+<LI> <TT>xdb(group,*)</TT> terms
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

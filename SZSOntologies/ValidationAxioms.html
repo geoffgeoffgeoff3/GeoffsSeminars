@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<TITLE> Logical Analysis Axioms </TITLE>
+</HEAD>
+<BODY>
+<A NAME="OntologyValues">
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Logical Analysis Axioms </H1>
+
+<IMG SRC="Axiom1.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Axioms for the Ontology Values </H3>
+<PRE>
+fof(esa,axiom,(
+    ! [Ax,C] :
+      ( ( ? [I1] : model(I1,Ax)
+      <=> ? [I2] : model(I2,C) )
+    <=> status(Ax,C,esa) ) )).
+
+fof(thm,axiom,(
+    ! [Ax,C] :
+      ( ! [I1] :
+          ( model(I1,Ax)
+         => model(I1,C) )
+    <=> status(Ax,C,thm) ) )).
+
+fof(eth,axiom,(
+    ! [Ax,C] :
+      ( ( ? [I1] : model(I1,Ax)
+        & ? [I2] : ~ model(I2,Ax)
+        & ! [I3] :
+            ( model(I3,Ax)
+          <=> model(I3,C) ) )
+    <=> status(Ax,C,eth) ) )).
+
+fof(wca,axiom,(
+    ! [Ax,C] :
+      ( ( ~ ? [I1] : model(I1,Ax)
+        & ? [I2] : model(I2,C)
+        & ? [I3] : ~ model(I3,C) )
+    <=> status(Ax,C,wca) ) )).
+</PRE>
+
+<A NAME="Relationships">
+<H3> Axioms for Ontology Relationships </H3>
+<IMG SRC="Axiom3.jpg" ALIGN=RIGHT WIDTH=33%>
+<PRE>
+fof(isa,axiom,(
+    ! [S1,S2] :
+      ( ! [Ax,C] :
+          ( status(Ax,C,S1)
+         => status(Ax,C,S2) )
+    <=> isa(S1,S2) ) )).
+
+fof(nota,axiom,(
+    ! [S1,S2] :
+      ( ? [Ax,C] :
+          ( status(Ax,C,S1)
+          & ~ status(Ax,C,S2) )
+    <=> nota(S1,S2) ) )).
+
+fof(nevera,axiom,(
+    ! [S1,S2] :
+      ( ! [Ax,C] :
+          ( status(Ax,C,S1)
+         => ~ status(Ax,C,S2) )
+    <=> nevera(S1,S2) ) )).
+
+fof(xora,axiom,(
+    ! [S1,S2] :
+      ( ! [Ax,C] :
+          ( status(Ax,C,S1)
+        <~> status(Ax,C,S2) )
+    <=> xora(S1,S2) ) )).
+</PRE>
+
+<A NAME="FormulaeAndModels">
+<H3> Axioms for Formulae and Models </H3>
+<IMG SRC="Axiom2.jpg" ALIGN=RIGHT WIDTH=33%>
+<PRE>
+fof(completeness,axiom,(
+    ! [I,F] :
+      ( model(I,F)
+    <~> model(I,not(F)) ) )).
+
+fof(not,axiom,(
+    ! [I,F] :
+      ( model(I,F)
+    <=> ~ model(I,not(F)) ) )).
+
+fof(tautology,axiom,(
+    ? [F] :
+    ! [I] : model(I,F) )).
+
+fof(satisfiable,axiom,(
+    ? [F] :
+      ( ? [I1] : model(I1,F)
+      & ? [I2] : ~ model(I2,F) ) )).
+
+fof(contradiction,axiom,(
+    ? [F] :
+    ! [I] : ~ model(I,F) )).
+
+fof(sat_non_taut_pair,axiom,(
+    ? [Ax,C] :
+      ( ? [I1] :
+          ( model(I1,Ax)
+          & model(I1,C) )
+      & ? [I2] :
+          ( ~ model(I2,Ax)
+          | ~ model(I2,C) ) ) )).
+
+fof(non_thm_spt,axiom,(
+    ? [I1,Ax,C] :
+      ( model(I1,Ax)
+      & ~ model(I1,C)
+      & ? [I2] : model(I2,C) ) )).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

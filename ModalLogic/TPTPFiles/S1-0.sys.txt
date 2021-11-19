@@ -1,0 +1,20 @@
+%------------------------------------------------------------------------------
+include('ModalAxiomDefns.ax',
+    [axiom_s1_1,axiom_s1_2,axiom_s1_3,axiom_s1_4,axiom_s1_5]).
+include('ModalRuleDefns.ax',
+    [adjunction,modus_ponens_strict_implies,substitution_strict_equiv]).
+include('OperatorDefns.ax').
+%------------------------------------------------------------------------------
+fof(system_S1_0,axiom,
+    ( axiom_s1_1
+    & axiom_s1_2
+    & axiom_s1_3
+    & axiom_s1_4
+    & axiom_s1_5 
+    & adjunction
+    & modus_ponens_strict_implies
+    & substitution_strict_equiv
+    & all_operators )  ).
+
+%----not_is_idempotent can be derived from s1_1 - s1_5
+%------------------------------------------------------------------------------

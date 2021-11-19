@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE> Future </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Future.jpg';
+  images[1]     = new Image();
+  images[1].src = 'FutureForEver.jpg';
+  images[2]     = new Image();
+  images[2].src = 'FutureDeath.jpg';
+  images[3]     = new Image();
+  images[3].src = 'FutureModern.jpg';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 4
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The Future of the TPTP </H1>
+
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="Future.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Coming Soon </H3>
+<UL>
+<LI> TFX - <A HREF="../TFX/Contents.html">Typed First-order eXtended</A>
+     (in v8.0.0)
+<LI> Modalities (<A HREF="../TPTPLanguage/SyntaxBNF.html#logic_defn_rule">in progress</A>)
+<LI> <A HREF="../JGXYZ/Contents.html">Multi-valued logics</A> (not soon)
+</UL>
+
+<H3> The Big Picture </H3>
+<UL>
+<LI> 25th CASC next year ... quo vadis?
+<LI> TPTP community
+     <UL>
+     <LI> Please keep contributing problems
+     <LI> Please keep writing ATP systems
+     </UL>
+<LI> There are still 3990 problems of rating 1.00!
+<P>
+<LI> The TPTP is immortal ... am I?
+     <UL>
+     <LI> Modernization of the TPTP
+     <LI> Alignment with SMTLib
+     <LI> More CASCs
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

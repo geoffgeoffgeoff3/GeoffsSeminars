@@ -1,0 +1,164 @@
+<HTML>
+<HEAD>
+<TITLE> The Persona </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Persona.jpg';
+  images[1]     = new Image();
+  images[1].src = 'AuthorBeeson.jpg';
+  images[2]     = new Image();
+  images[2].src = 'PersonaPadmanabhan.jpg';
+  images[3]     = new Image();
+  images[3].src = 'PersonaPoker.jpg';
+  images[4]     = new Image();
+  images[4].src = 'PersonaPieper.jpg';
+  images[5]     = new Image();
+  images[5].src = 'PersonaSmith.jpg';
+  images[6]     = new Image();
+  images[6].src = 'PersonaBoyle.jpg';
+  images[7]     = new Image();
+  images[7].src = 'PersonaKapur.jpg';
+  images[8]     = new Image();
+  images[8].src = 'PersonaPhone.jpg';
+
+  function displayImage (index) {
+      document.images['image'].src = images[index].src;
+  }  
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> The Persona </H1>
+by Michael Beeson
+<P>
+<SMALL>with contributions from Jim Boyle, Branden Fitelson, Deepak Kapur,<BR>
+ Ranganathan Padmanabhan, Gail W. Pieper, and Brian Smith</SMALL>
+</CENTER>
+
+<A HREF="" onClick="displayImage(0);return false">
+<IMG NAME="image" SRC="Persona.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<A HREF="" onClick="hideshow('beeson1');return false;">
+<H3> Michael Beeson </H3>
+</A> <SPAN ID="beeson1" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(1);return false">Meeting Wos</A>
+<LI> A challenge problem led to ...
+<LI> Merged scientific and personal relationships
+<LI> Long phone conversations, scientific and personal
+<LI> Enthusiasm for interaction
+<LI> No time wasted! No pleasantries! No politics!
+<LI> Focus on problems, in Otter format
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('padmanabhan');return false;">
+<H3> Ranganathan Padmanabhan </H3>
+</A> <SPAN ID="padmanabhan" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(2);return false">A Mathematician</A>
+<LI> A challenge problem led to ...
+<LI> Argonne workshops
+<LI> Insights to source of challenges
+<LI> Indian food ... Saag Paneer
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('beeson2');return false;">
+<H3> Michael Beeson </H3>
+</A> <SPAN ID="beeson2" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(3);return false">Visiting Wos</A>
+<LI> A visit to Chicago, Indian food, a "criminal past"
+<LI> White-water rafting, paddling through life
+<LI> Playing poker, the benefits' of good hearing, kneecapping?
+<LI> Betting on the horses, helping the bookies
+<LI> Unsighted, not blind ... an effort to learn the difference
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('pieper');return false;">
+<H3> Gail W. Pieper </H3>
+</A> <SPAN ID="pieper" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(4);return false">The Writer</A>
+<LI> Fixed ideas about writing style, Tarski's quotation marks
+<LI> Em dash for emphsis
+<LI> Counting changes
+<LI> Shorter proofs ... 135 steps, 103 steps, less than 100 steps
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('smith');return false;">
+<H3> Brian Smith </H3>
+</A> <SPAN ID="smith" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(5);return false">A Programmer</A>
+<LI> Never say "blind", say "look" and "see"
+<LI> Blind bowling
+<LI> Being unsighted doesn't mean you can't see by hearing
+<LI> Reading paper tape (late 1960s), and braille (1980s)
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('boyle');return false;">
+<H3> Jim Boyle </H3>
+</A> <SPAN ID="boyle" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(6);return false">A Poet Too</A>
+<LI> Drawn into conversation
+<LI> "Lawrence T. Wos" ... "T"? "Terraponesta"? It's worth $5
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('kapur');return false;">
+<H3> Deepak Kapur </H3>
+</A> <SPAN ID="kapur" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(7);return false">A Professor</A>
+<LI> RRL and AC Knuth=Bendix completion, added to EQP
+<LI> Handover as editor-in-chief of the JAR
+<LI> Being the chair ends research
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('beeson3');return false;">
+<H3> Michael Beeson </H3>
+</A> <SPAN ID="beeson3" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(8);return false">Remember the calls</A>
+<LI> Faithful and generous
+<LI> Helping others, unsighted and beyond
+<LI> A talent for identifying and enabling talent
+<LI> Quick to priase, slow to criticize
+<LI> Remember the phone calls
+</UL>
+</SPAN>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<TITLE> LCL634^1.p </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj,next) {
+    var elem = document.getElementById(obj);
+    var elemnext = document.getElementById(next);
+
+    if (elem.style.background == 'aqua') { 
+        elem.style.background = 'white'; 
+        elemnext.style.background = 'aqua'; 
+    } else if (elem.style.background == 'white') { 
+        elemnext = document.getElementById('p1');
+        elemnext.style.background = 'white'; 
+        elemnext = document.getElementById('p2');
+        elemnext.style.background = 'white'; 
+        elemnext = document.getElementById('p3');
+        elemnext.style.background = 'white'; 
+        elemnext = document.getElementById('p4');
+        elemnext.style.background = 'white'; 
+        elemnext = document.getElementById('p5');
+        elemnext.style.background = 'white'; 
+        elemnext = document.getElementById('p6');
+        elemnext.style.background = 'white'; 
+        elemnext = document.getElementById('p7');
+        elemnext.style.background = 'white'; 
+        elemnext = document.getElementById('p8');
+        elemnext.style.background = 'white'; 
+        elem.style.background = 'aqua'; 
+    } else { 
+        elem.style.background = 'white';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<PRE>
+%------------------------------------------------------------------------------
+% File     : LCL634^1 : TPTP v3.7.0. Released v3.6.0.
+% Domain   : Logical Calculi
+% Problem  : Goedel's ontological argument on the existence of God
+% Version  : [Ben08] axioms : Especial.
+% English  :
+
+% Refs     : [Fit00] Fitting (2000), Higher-Order Modal Logic - A Sketch
+%          : [Ben08] Benzmueller (2008), Email to G. Sutcliffe
+% Source   : [Ben08]
+% Names    : Fitting-HOLML-Ex-God-alternative-b [Ben08]
+
+% Status   : Theorem
+% Rating   : 1.00 v3.7.0
+% Syntax   : Number of formulae    :   48 (   3 unit;  27 type;  19 defn)
+%            Number of atoms       :  323 (  19 equality;  60 variable)
+%            Maximal formula depth :   13 (   5 average)
+%            Number of connectives :   71 (   3   ~;   1   |;   2   &;  64   @)
+%                                         (   0 <=>;   1  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :  118 ( 118   >;   0   *;   0   +)
+%            Number of symbols     :   28 (  27   :;   0  :=)
+%            Number of variables   :   51 (   2 sgn;   6   !;   4   ?;  41   ^)
+%                                         (  51   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments :
+</PRE>
+<A NAME="Formulae">
+<PRE>
+%------------------------------------------------------------------------------
+%----Include simple maths definitions and axioms
+include('Axioms/LCL008^0.ax').
+%------------------------------------------------------------------------------
+%----<A HREF="" onClick="hideshow('p4','p5');return false;">$tType</A>
+thf(a,type,
+    a: <SPAN ID="p4" style="background:white">$tType</SPAN> )).
+
+%----<A HREF="" onClick="hideshow('p1','p2');return false;">The type role</A> and <A HREF="" onClick="hideshow('p2','p3');return false;">global typing of constants</A>
+thf(p,<SPAN ID="p1" style="background:aqua">type</SPAN>,(
+    <SPAN ID="p2" style="background:white">p:</SPAN> ( a > $i > $o ) > $i > $o )).
+
+thf(g,type,(
+    g: a > $i > $o )).
+
+thf(e,type,(
+    e: ( a > $i > $o ) > a > $i > $o )).
+
+%----<A HREF="" onClick="hideshow('p3','p4');return false;">$i and $o</A>
+thf(r,type,(
+    r: <SPAN ID="p3" style="background:white">$i > $i > $o</SPAN> )).
+
+%----<A HREF="" onClick="hideshow('p5','p6');return false;">> for function types</A>
+thf(mall_aio,type,(
+    mall_aio: ( <SPAN ID="p5" style="background:white">( a > $i > $o ) > $i > $o ) > $i > $o</SPAN> )).
+
+thf(mall_a,type,(
+    mall_a: ( a > $i > $o ) > $i > $o )).
+
+%----<A HREF="" onClick="hideshow('p6','p7');return false;">Local typing of variables</A> and <A HREF="#FormulaePart2" onClick="hideshow('p7','p8');return false;">^ as the lambda binder</A>
+thf(mall_aio,definition,
+    ( mall_aio
+    = ( <SPAN ID="p7" style="background:white">^</SPAN> [P: ( a > $i > $o ) > $i > $o,W: $i] :
+        ! [<SPAN ID="p6" style="background:white">X: a > $i > $o</SPAN>] :
+          ( P @ X @ W ) ) )).
+
+thf(mall_a,definition,
+    ( mall_a
+    = ( ^ [P: a > $i > $o,W: $i] :
+        ! [X: a] :
+          ( P @ X @ W ) ) )).
+
+<A NAME="FormulaePart2">%----<A HREF="" onClick="hideshow('p8','p9');return false;">@ for application</A>
+thf(positiveness,axiom,
+    ( mvalid
+    @ ( mall_aio
+      @ ^ [X: a > $i > $o] :
+          <SPAN ID="p8" style="background:white">( mimpl @ ( mnot @ ( p @ X ) )
+          @ ( p
+            @ ^ [Z: a] :
+                ( mnot @ ( X @ Z ) ) ) ) ) )</SPAN>).
+
+thf(g,definition,
+    ( g
+    = ( ^ [Z: a] :
+          ( mall_aio
+          @ ^ [X: a > $i > $o] :
+              ( mimpl @ ( p @ X ) @ ( X @ Z ) ) ) ) )).
+
+thf(e,definition,
+    ( e
+    = ( ^ [X: a > $i > $o,Z: a] :
+          ( mall_aio
+          @ ^ [Y: a > $i > $o] :
+              ( mimpl @ ( Y @ Z )
+              @ ( mbox @ r
+                @ ( mall_a
+                  @ ^ [W: a] :
+                      ( mimpl @ ( X @ W ) @ ( Y @ W ) ) ) ) ) ) ) )).
+
+thf(thm,conjecture,
+    ( mvalid
+    @ ( mall_a
+      @ ^ [Z: a] :
+          ( mimpl @ ( g @ Z ) @ ( e @ g @ Z ) ) ) )).
+
+%------------------------------------------------------------------------------
+<PRE>
+</BODY>
+</HTML>

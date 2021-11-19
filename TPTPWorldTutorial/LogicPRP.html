@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE> Propositional Logic </TITLE>
+</HEAD>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Propositional Logic (PRP) </H1>
+
+<IMG SRC="LogicPRP.gif" ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> Logic features </H3>
+<UL>
+<LI> <EM>Propositions</EM> are <EM>true</EM> or <EM>false</EM> (boolean)
+<LI> Propositions can be <EM>negated</EM> with &not; (not)
+<LI> Propositions can be <EM>conjoined</EM> with &and; (and)
+<LI> Propositions can be <EM>disjoined</EM> with &or; (or)
+<LI> Propositions can be <EM>implied</EM> with &rarr; (implies)
+<LI> Propositions can be <EM>equivalent</EM> with &harr; (equivalent)
+</UL>
+<P>
+<H3> Problem </H3>
+<UL>
+<LI> Axioms
+     <UL>
+     <LI> If the horse races are fixed or the bookies are crooked, then 
+          the tourist trade declines. 
+     <LI> If the tourist trade declines then the police force is happy. 
+     <LI> The police force is not happy.
+     </UL>
+<LI> Conjecture
+     <UL>
+     <LI> The horse races are not fixed
+     </UL>
+</UL>
+<P>
+<H3> In logic </H3>
+<UL>
+<LI> Axioms
+     <UL>
+     <LI> <EM>(horse_races_fixed &or; bookies_crooked) &rarr;
+          tourist_trade_declines</EM>
+     <LI> <EM>tourist_trade_declines &rarr; police_force_happy</EM>
+     <LI> <EM>&not; police_force_happy</EM>
+     </UL>
+<LI> Conjecture
+     <UL>
+     <LI> <EM>&not; horse_races_fixed</EM>
+     </UL>
+</UL>
+<P>
+<H3> In TPTP format </H3>
+<UL>
+<LI>
+<PRE>
+fof(bad_tourism,axiom,
+    (horse_races_fixed | bookies_crooked) => tourist_trade_declines ).
+fof(happy_police,axiom,
+    tourist_trade_declines => happy_police ).
+fof(unhappy_police,axiom,
+    ~ happy_police ).
+
+fof(horse_races_ok,conjecture,
+    ~ horse_races_fixed ).
+</PRE>
+<LI> Check the syntax in 
+     <A HREF="http://www.tptp.org/cgi-bin/SystemB4TPTP">
+     SystemB4TPTP</A> using TPTP4X.
+<LI> Try it in <A HREF="http://www.tptp.org/cgi-bin/SystemOnTPTP">
+     SystemOnTPTP</A> using E.
+</UL>
+<P>
+<H3> Challenge problem </H3>
+If you are quiet then you are resting.
+If you are resting then you are peaceful and quiet.
+If you are peaceful then you are quiet or resting (or both).
+Therefore, being peaceful is the same as being quiet.
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

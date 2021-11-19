@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<TITLE> Overview </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'Overview.gif';
+  images[1]     = new Image();
+  images[1].src = 'Success.jpg';
+  images[2]     = new Image();
+  images[2].src = 'NoSuccess.jpg';
+  images[3]     = new Image();
+  images[3].src = 'Dataform.jpg';
+  images[4]     = new Image();
+  images[4].src = 'Presentation.jpg';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Overview 
+    <A HREF="" onClick="putImage(0);return false">
+    <IMG SRC="Overview.gif" BORDER=0 HEIGHT=20></A> 
+</H1>
+
+<IMG NAME="image" SRC="Overview.gif" ALIGN=RIGHT WIDTH=40%>
+
+<H3> SZS Success Ontology 
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="Success.jpg" BORDER=0 HEIGHT=20></A> 
+</H3>
+<UL>
+<LI> What is known?
+<LI> What has successfully been established?
+<LI> Relates axioms to conjecture in logical data
+</UL>
+
+<H3> SZS No-success Ontology 
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="NoSuccess.jpg" BORDER=0 HEIGHT=20></A> 
+</H3>
+<UL>
+<LI> Why no success ontology value?
+</UL>
+
+<H3> SZS Dataform Ontology 
+     <A HREF="" onClick="putImage(3);return false">
+     <IMG SRC="Dataform.jpg" BORDER=0 HEIGHT=20></A> 
+</H3>
+<UL>
+<LI> What is the nature of the logical data?
+</UL>
+
+<H3> SZS Presentation Standards 
+     <A HREF="" onClick="putImage(4);return false">
+     <IMG SRC="Presentation.jpg" BORDER=0 HEIGHT=20></A> 
+</H3>
+<UL>
+<LI> "OneWord" values and TLAs
+<LI> Standard presentation
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

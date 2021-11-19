@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> SRASS - Semantic Selection of Axioms </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> SRASS - Semantic Selection of Axioms </H1>
+
+<A HREF="BasicProcessGIF.html">
+<IMG SRC="BasicProcess.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Basic Process </H3>
+<UL>
+<LI> Find model of negated conjecture and axioms selected so far
+<LI> If no such model, logic consequence is established
+<LI> Else choose axiom that is <EM>false</EM> in the model
+</UL>
+
+<H3> Extended Process </H3>
+<UL>
+<LI> Use <A HREF="../Prophet/Summary.html">Prophet</A> to order axioms
+<LI> Be <A HREF="Termination.html">greedy</A> about termination
+<LI> Cope with <A HREF="IncompleteModels.html">Incomplete</A> and
+     <A HREF="InadequateModels.html">inadequate</A> models
+<LI> Use <A HREF="LastGasp.html">syntax</A> when semantics fails
+<LI> Select <A HREF="BatchLimitedSelection.html">many from few</A> for faster
+     progress
+<LI> Try <A HREF="InitialFinal.html">regular ATP</A> too
+</UL>
+
+<H3> Results </H3>
+<UL>
+<LI> Solves 54 of 71 <A HREF="Testing.html">appropriate TPTP problems</A>, 
+     vs. 39 by ATP
+<LI> Was winning the <A HREF="MPTPChallenge.html">MPTP Challenge</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

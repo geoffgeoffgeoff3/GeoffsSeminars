@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<TITLE> Comparison with SAT </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Comparison with SAT </H1>
+
+<IMG SRC="Winner.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> The Scenario </H3>
+<UL>
+<LI> N trolleys, all pushed and pulled together, all spin
+<LI> Increasing N gives increasing problem size
+
+     <P>
+<LI> Compare Mueller's SAT reasoner with ATP solution
+<LI> ATP clauses as counted by E (but times by Vampire)
+</UL>
+
+<H3> Results </H3>
+<TABLE>
+<TR> <TD COLSPAN=5> <HR><!---------------------------------------------------->
+<TR ALIGN=CENTER> <TD>
+     <TD COLSPAN=2> SAT reasoner
+     <TD COLSPAN=2> ATP reasoner
+<TR ALIGN=RIGHT> <TD> N
+     <TD> Clauses
+     <TD> Time
+     <TD> Clauses
+     <TD> Time
+<TR> <TD COLSPAN=5> <HR><!---------------------------------------------------->
+<TR ALIGN=RIGHT> <TD> 1
+     <TD> 70
+     <TD> 0.2
+     <TD> 845
+     <TD> 1.0
+<TR ALIGN=RIGHT> <TD> 2
+     <TD> 328
+     <TD> 0.3
+     <TD> 864
+     <TD> 1.1
+<TR ALIGN=RIGHT> <TD> 4
+     <TD> 1084
+     <TD> 0.7
+     <TD> 1124
+     <TD> 1.4
+<TR ALIGN=RIGHT> <TD> 8
+     <TD> 3562
+     <TD> 2.4
+     <TD> 66468
+     <TD> 7.8
+<TR ALIGN=RIGHT> <TD> 9
+     <TD> 4446
+     <TD> 3.0
+     <TD> 263097
+     <TD> 26.0
+<TR ALIGN=RIGHT> <TD> 10
+     <TD> 5428
+     <TD> 3.9
+     <TD> 1049553
+     <TD> Timeout
+<TR> <TD COLSPAN=5> <HR><!---------------------------------------------------->
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

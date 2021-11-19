@@ -1,0 +1,150 @@
+<HTML>
+<HEAD>
+<TITLE> Introduction </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'IntroductionARBook.jpg';
+  images[1]     = new Image();
+  images[1].src = 'ArgonneAerial.png';
+  images[2]     = new Image();
+  images[2].src = 'JACMResolution.png';
+  images[3]     = new Image();
+  images[3].src = 'ColleagueHenschen.jpg';
+  images[4]     = new Image();
+  images[4].src = 'ColleagueLusk.png';
+  images[5]     = new Image();
+  images[5].src = 'ColleagueMcCune.jpg';
+  images[6]     = new Image();
+  images[6].src = 'ColleagueVeroff.jpg';
+  images[7]     = new Image();
+  images[7].src = 'ToolOtter.gif';
+  images[8]     = new Image();
+  images[8].src = 'ToolProver9.gif';
+  images[9]     = new Image();
+  images[9].src = 'ToolEQP.gif';
+  images[10]     = new Image();
+  images[10].src = 'ToolARBook.jpg';
+  images[11]     = new Image();
+  images[11].src = 'ToolCADE.jpg';
+  images[12]     = new Image();
+  images[12].src = 'ToolJAR.jpg';
+  images[13]     = new Image();
+  images[13].src = 'ToolAAR.gif';
+  images[14]     = new Image();
+  images[14].src = 'ToolAARColumn.png';
+  images[15]     = new Image();
+  images[15].src = 'LarryWos.jpg';
+
+  function displayImage (index) {
+      document.images['image'].src = images[index].src;
+  }  
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> Introduction </H1>
+by Maria Paola Bonacina and Geoff Sutcliffe
+</CENTER>
+
+<A HREF="" onClick="displayImage(0);return false">
+<IMG NAME="image" SRC="IntroductionARBook.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<A HREF="" onClick="hideshow('origins');return false;">
+<H3> Origins </H3>
+</A> <SPAN ID="origins" style="display:none">
+<UL>
+<LI> Born 13th July 1930, in Chicago USA
+<LI> Parents were Polish immigrants
+<LI> BS and MS from University of Chicago
+<LI> PhD from University of Illinois at Urbana-Champaign
+<LI> Worked at <A HREF="" onClick="displayImage(1);return false">
+     Argonne National Laboratory</A> from 1957
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('early');return false;">
+<H3> Early Influences </H3>
+</A> <SPAN ID="early" style="display:none">
+<UL>
+<LI> Career in the Mathematics and Computer Science Division of ANL
+<LI> (John) Alan Robinson had summer jobs at MCS, 1961-1966 
+<LI> <A HREF="" onClick="displayImage(2);return false">
+     The birth of resolution</A> 1962-1964
+<LI> Recognizing the need for control 
+<LI> The benefits of experimentation
+<LI> Building in equality with George Robinson
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('colleagues');return false;">
+<H3> Colleagues </H3>
+</A> <SPAN ID="colleagues" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(3);return false">Larry Henschen</A>
+<LI> <A HREF="" onClick="displayImage(4);return false">Rusty Lusk</A>
+<LI> <A HREF="" onClick="displayImage(5);return false">Bill McCune</A>
+<LI> Ross Overbeek
+<LI> <A HREF="" onClick="displayImage(6);return false">Bob Veroff</A>
+<LI> Steve Winker
+<LI> Visitors ... so many
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('tools');return false;">
+<H3> Tools and Products </H3>
+</A> <SPAN ID="tools" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(7);return false">Otter</A>, 
+      Mace, 
+      <A HREF="" onClick="displayImage(8);return false">Prover9</A>, 
+      <A HREF="" onClick="displayImage(9);return false">EQP</A>, 
+      and predecessors
+<LI> <A HREF="" onClick="displayImage(10);return false">Papers, books</A>, 
+     <A HREF="" onClick="displayImage(14);return false">AAR newsletter 
+     columns</A>
+<LI> <A HREF="" onClick="displayImage(11);return false">CADE</A>, 
+     <A HREF="" onClick="displayImage(12);return false">JAR</A>, 
+     <A HREF="" onClick="displayImage(13);return false">AAR</A>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('recognition');return false;">
+<H3> Recognition </H3>
+</A> <SPAN ID="recognition" style="display:none">
+<UL>
+<LI> ATP Prize of the AMS (with Winker) 1982
+<LI> Herbrand Award (1992)
+<LI> Herbrand Award to Bill McCune (2000)
+</UL>
+</SPAN>
+
+<H3> <A HREF="" onClick="displayImage(15);return false">
+     In case you don't know ...</A> </H3>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,127 @@
+%------------------------------------------------------------------------------
+% File     : PUZ131_1 : TPTP v5.3.0. Released v5.0.0.
+% Domain   : Puzzles
+% Problem  : Victor teaches Michael
+% Version  : Especial.
+% English  : Every student is enrolled in at least one course. Every professor
+%            teaches at least one course. Every course has at least one student
+%            enrolled. Every course has at least one professor teaching. The
+%            coordinator of a course teaches the course. If a student is
+%            enroled in a course then the student is taught by every professor
+%            who teaches the course. Michael is enrolled in CSC410. Victor is
+%            the coordinator of CSC410. Therefore, Michael is taught by Victor.
+
+% Refs     :
+% Source   : [TPTP]
+% Names    :
+
+% Status   : Theorem
+% Rating   : 0.00 v5.0.0
+% Syntax   : Number of formulae    :   19 (   9 unit)
+%            Number of atoms       :   40 (   4 equality)
+%            Maximal formula depth :    8 (   3 average)
+%            Number of connectives :   24 (   3   ~;   0   |;   8   &)
+%                                         (   0 <=>;  13  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&)
+%            Number of predicates  :    7 (   0 propositional; 1-2 arity)
+%            Number of functors    :    4 (   3 constant; 0-1 arity)
+%            Number of variables   :   22 (   0 sgn;  15   !;   7   ?)
+%            Maximal term depth    :    2 (   1 average)
+% SPC      : TFF_THM_EQU_NAR
+
+% Comments :
+%          : tptp2X -f tptp:short -t tff2fof:with PUZ131_1.p 
+%------------------------------------------------------------------------------
+fof(fof_student_type,axiom,(
+    ? [A] : student(A) )).
+
+fof(fof_professor_type,axiom,(
+    ? [A] : professor(A) )).
+
+fof(fof_course_type,axiom,(
+    ? [A] : course(A) )).
+
+fof(fof_michael_type,axiom,(
+    student(michael) )).
+
+fof(course_professor_distinct,axiom,(
+    ! [A,B] : 
+      ( ( course(A)
+        & professor(B) )
+     => A != B ) )).
+
+fof(course_student_distinct,axiom,(
+    ! [A,B] : 
+      ( ( course(A)
+        & student(B) )
+     => A != B ) )).
+
+fof(professor_student_distinct,axiom,(
+    ! [A,B] : 
+      ( ( professor(A)
+        & student(B) )
+     => A != B ) )).
+
+fof(fof_victor_type,axiom,(
+    professor(victor) )).
+
+fof(fof_csc410_type,axiom,(
+    course(csc410) )).
+
+fof(fof_coordinator_of_type,axiom,(
+    ! [A] : 
+      ( course(A)
+     => professor(coordinatorof(A)) ) )).
+
+fof(fof_student_enrolled_axiom,axiom,(
+    ! [X] : 
+      ( student(X)
+     => ? [Y] : 
+          ( course(Y)
+          & enrolled(X,Y) ) ) )).
+
+fof(fof_professor_teaches,axiom,(
+    ! [X] : 
+      ( professor(X)
+     => ? [Y] : 
+          ( course(Y)
+          & teaches(X,Y) ) ) )).
+
+fof(fof_course_enrolled,axiom,(
+    ! [X] : 
+      ( course(X)
+     => ? [Y] : 
+          ( student(Y)
+          & enrolled(Y,X) ) ) )).
+
+fof(fof_course_teaches,axiom,(
+    ! [X] : 
+      ( course(X)
+     => ? [Y] : 
+          ( professor(Y)
+          & teaches(Y,X) ) ) )).
+
+fof(fof_coordinator_teaches,axiom,(
+    ! [X] : 
+      ( course(X)
+     => teaches(coordinatorof(X),X) ) )).
+
+fof(fof_student_enrolled_taught,axiom,(
+    ! [X,Y] : 
+      ( ( student(X)
+        & course(Y) )
+     => ( enrolled(X,Y)
+       => ! [Z] : 
+            ( professor(Z)
+           => ( teaches(Z,Y)
+             => taughtby(X,Z) ) ) ) ) )).
+
+fof(fof_michael_enrolled_csc410_axiom,axiom,(
+    enrolled(michael,csc410) )).
+
+fof(fof_victor_coordinator_csc410_axiom,axiom,
+    ( coordinatorof(csc410) = victor )).
+
+fof(fof_teaching_conjecture,conjecture,(
+    taughtby(michael,victor) )).
+%------------------------------------------------------------------------------

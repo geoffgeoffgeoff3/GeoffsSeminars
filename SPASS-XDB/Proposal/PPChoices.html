@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE> Prototype Choices </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Prototype Choices </H1>
+
+<IMG SRC="Choice.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<UL>
+<LI> Positive ground facts (ground atoms)
+     <UL>
+     <LI> Database is necessarily consistent
+     <LI> Plan for consistency with internal axioms
+     </UL>
+<P>
+<LI> Stored in an SQL database
+     <UL>
+     <LI> Sound retrieval
+     <LI> No uncertainty or imprecision
+     </UL>
+<P>
+<LI> Interfaces to external data
+     <UL>
+     <LI> TPTP format for indicating external data
+     <LI> TPTP Q&A standards for questions and answers
+     <LI> SZS standards (may need to be extended) for status information
+     <LI> Local process access
+     </UL>
+<P>
+<LI> Search-time retrieval
+     <UL>
+     <LI> Synchronous and asynchronous with ATP saturation loop
+     <LI> Pull based on negative selected literal
+     <LI> Batch retrieval with number limit
+     <LI> No uniqueness requirements
+     </UL>
+<P>
+<LI> Retention of external data
+     <UL>
+     <LI> All retrieved data stored persistently (modulo ATP simplification)
+     </UL>
+</UL>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

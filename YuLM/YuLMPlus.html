@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE> Recursive Lemma Minimization </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Recursive Lemma Minimization </H1>
+
+<IMG SRC="Mini.GIF" BORDER=0 ALIGN=RIGHT WIDTH=20%>
+
+<H3> Intuition </H3>
+<UL>
+<LI> Maintain robustness of recursive lemma selection
+<LI> Optimize proof w.r.t. lemmas used or CPU time taken
+<LI> Branch-and-bound over developing alternative proof structures
+</UL>
+
+<A HREF="YuLMPlusAlgorithm.html"><H3> The Algorithm </H3></A>
+<UL>
+<LI> Maintain a list of alternative <EM>proof candidates</EM><BR>
+     <UL>
+     <LI> Each candidate has a <EM>target queue</EM> of unproved lemmas
+     <LI> Initial proof candidate has the conjecture in its target queue
+     </UL>
+<LI> Pop <EM>target formula</EM> from current candidate's target queue
+<LI> Form <EM>helper sets</EM> of increasing size, starting at 0
+     <UL>
+     <LI> If/when the target formula can be proved from axioms and helper set
+          <UL>
+          <LI> Find all successful helper sets of that size, and stop
+          </UL>
+     </UL>
+<LI> Form new proof candidates by appending helpers to current candidate's
+     target queue
+<LI> If quality of the best new candidate is within <EM>tolerance factor</EM>
+     of the best on the alternatives list
+     <UL>
+     <LI> Add other new candidates to the alternatives list 
+     <LI> Iterate with that best new candidate
+     </UL>
+     Else
+     <UL> 
+     <LI> Add all new candidates to the alternatives list 
+     <LI> Iterate with best candidate on the alternatives list
+     </UL>
+<LI> Stop when current candidate has an empty queue
+</UL>
+
+<H3> Strengths and Weaknesses </H3>
+<UL>
+<LI> Finds a proof structure within tolerance factor of optimal
+<LI> Maintains robustness of recursive lemma selection
+<LI> More stable than recursive lemma selection
+<LI> Can be tuned using tolerance factor
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

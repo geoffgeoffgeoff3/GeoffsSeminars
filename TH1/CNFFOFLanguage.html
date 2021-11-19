@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<TITLE> CNF, FOF: The Clause Normal and First-order Forms </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> CNF, FOF: The Clause Normal and First-order Forms </H1>
+
+<TABLE>
+<TR VALIGN=TOP> 
+     <TD> <H3>  Annotated TSTP Formulae </H3>
+          <PRE>
+&lt;language>(&lt;name>,&lt;role>,
+    &lt;formula>[,
+    &lt;source>[,
+    &lt;useful info>]]).
+          </PRE>    
+          <H3> Fields </H3>
+          <UL>
+          <LI> <TT>&lt;language></TT> provides extensibility
+          <LI> <TT>&lt;role></TT> indicates user semantics, e.g.,
+               <UL>
+               <LI> For problems: <TT>axiom</TT>, <TT>conjecture</TT>, 
+                    <TT>lemma</TT>, ...
+               <LI> For solutions: <TT>axiom</TT>, <TT>plain</TT>, 
+                    <TT>assumption</TT>, ...
+               </UL>
+          <LI> <TT>&lt;formula></TT> uses TPTP syntax
+               <UL>
+               <LI> Follows user conventions
+               <LI> Compact ASCII text
+               <LI> Easy to parse (esp. in Prolog :-)
+               </UL>
+          <LI> <TT>&lt;source></TT>
+               <UL>
+               <LI> External: file, human, etc
+               <LI> Derived: <TT>inference</TT> term
+               </UL>
+          <LI> <TT>&lt;useful info></TT> fields used for annotations, in
+               same abstract syntax
+          </UL>
+
+     <TD> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TD> <H3> Example FOF Problem Formula </H3>
+          <PRE>
+fof(subclass_defn,axiom,
+    ! [X,Y] : 
+      ( subclass(X,Y)
+    <=> ! [U] : 
+          ( member(U,X)
+         => member(U,Y) ) ),
+    file('SET005+0.ax',subclass_defn),
+    [description('Definition of subclass'),
+     relevance(0.9)]).
+          </PRE>
+
+          <H3> Example CNF Solution Formula </H3>
+          <PRE>
+cnf(140,lemma,
+    ( equal_sets(a,aUa)
+    | member(member_of(a,aUa),a) ),
+    inference(unit_del,[status(thm)],[
+        inference(hyper,[status(thm)],[
+            5,16]),11]),
+    [iquote('hyper,5,16.1,unit_del,11')]).
+          </PRE>
+</TABLE>
+
+<A HREF="../HopingForTheTruth/ReliabilityGraph.html">
+<H3>Reliability</H3>
+</A>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,678 @@
+-------------------------------------------------------------------------------
+The SZS ontologies (named after the authors of the original paper describing 
+the success ontology [1]) provide status values to describe logical data. The 
+SZS success ontology provides status values to describe what is known or has 
+been successfully established about the relationship between the axioms and 
+conjectures in logical data. The SZS no-success ontology provides status values 
+to describe why a success ontology value has not been established. The SZS 
+dataform ontology provides status values to describe the nature of logical 
+data.  All status values are expressed as "OneWord" to make system output 
+parsing simple, and also have a three letter mnemonic.
+
+Commonly Used Ontology Values
+-----------------------------
+The ontologies are very fine grained ontology, which have more status values 
+and dataforms than are commonly used by ATP systems. Suitable subsets for 
+practical purposes are as follows:
++ For Success
+  - THF, TFF, and FOF problems with conjectures - report 
+    Theorem or ContradictoryAxioms or CounterSatisfiable
+  - THF, TFF, and FOF problems without conjectures - report 
+    Satisfiable or Unsatisfiable
+  - TCF and CNF problems - report 
+    Satisfiable or Unsatisfiable
++ For No-success
+  - System stopped due to CPU limit - report Timeout
+  - System gave up due to incompleteness - report GaveUp
+  - System stopped due to an error - report Error
++ For Dataforms
+  - A generic proof - report Proof
+  - A CNF refutation - report CNFRefutation
+  - A generic model - report Model
+  - A finite model - report FiniteModel
+  - An infinite model - report InfiniteModel
+  - A saturation - report Saturation
+
+Success ontology values are also used in TPTP format proofs to record the 
+relationship between the parents and inferred formula of each inference step.
+Commonly used values are:
+  - The inferred formula is a theorem of the parents (logical consequences, 
+    e.g., resolvants, etc.) - report Theorem
+  - The inferred and parent formulae are equisatisfiable (e.g., Skolemization)
+    - report EquiSatisfiable
+  - The negation of the inferred formula is a theorem of the parents (e.g.,
+    negating the conjecture in a proof by refutation) - report CounterTheorem
+
+Standard Presentation of Ontology Values
+----------------------------------------
+The solution status should be reported exactly once, in a line starting 
+"% SZS status" (the leading '%' makes the line into a TPTP language comment). 
+For examples:
+
+    % SZS status Unsatisfiable for SYN075+1
+
+    % SZS status GaveUp for SYN075+1
+
+A success or no-success ontology value should be presented as early as
+possible, at least before any data output to justify the value. 
+The justifying data should be reported exactly once, delimited by lines 
+starting "% SZS output start" and "% SZS output end". 
+For example:
+
+    % SZS output start CNFRefutation for SYN075-1
+      ...
+    % SZS output end CNFRefutation for SYN075-1
+
+All "SZS" lines lines can optionally have software specific information
+appended, separated by a :. For examples:
+
+    % SZS status GaveUp for SYN075+1 : Could not complete CNF conversion
+
+    % SZS output end CNFRefutation for SYN075-1 : Completed in CNF conversion
+
+-------------------------------------------------------------------------------
+The SZS Success Ontology
+------------------------
+
+The ontology assumes that the input is a 2-tuple of the form <Ax, C>, where 
+Ax is a set (conjunction) of axioms and C is a conjunction of conjecture 
+formulae. This is a common standard usage of ATP systems (often there is only
+a single conjecture formula). If the input is not of the form <Ax, C>, it is 
+treated as a conjecture formula (even if it is a "set of axioms" from the user 
+view point, e.g., a set of formulae all with the TPTP role "axiom"), and the 
+2-tuple is <TRUE, C>. The ontology values can also be interpreted in terms of 
+the formula F, of the form Ax => C. The ontology values are based on the 
+possible relationships between the sets of models of Ax and C. In the figure 
+below many of the "OneWord" status values are abbreviated - see the list below 
+for the official full "OneWord"s. The lines in the ontology can be followed up 
+the hierarchy as isa links, e.g., an ETH isa EQV isa (SAT and a THM).
+
+                                  Success
+                                    SUC
+          ___________________________|_______________________________
+         |         |    |                                  |         |
+      UnsatPre  SatPre  |                             CtrSatPre CtrUnsatPre
+        UNP       SAP   |                                 CSP       CUP
+         |_______/ |    |                                  | \_______|
+         |         |    |                                  |         |
+      EquSat       | FiniteThm                             |     EquCtrSat
+        ESA        |   FTH                                 |        ECS
+         |         |   /                                   |         |
+      Sat'ble   Theorem                                 CtrThm     CtrSat
+        SAT       THM                                     CTH       CSA
+       / | \______.|._____________________________________.|.______/ | \
+      /  |         |                   |                   |         |  \
+  FinSat |         |                NoConq                 |  FinUns | FinCtrSat
+   FSA   |         |                  NOC                  |     FUN |   FCS
+         |         |_______________________________________|       | |
+         |         |                   |                   |       | |
+         |     SatAxThm             CtraAx              SatAxCth   | |
+         |        STH                 CAX                 SCT      : |
+        _|_________|_              ____|____              _|_________|_
+       |      |      |            |         |            |      |  :   |
+    Eqvlnt  TautC  WeakC      SatConCA   SatCCoCA      WkCC  UnsCon|CtrEqu
+      EQV    TAC    WEC          SCA       SCC          WCC    UNC |  CEQ
+     __|__   _|_   __|__        __|___   ___|__        __|__   _|_ |__|__
+    |     | /   \ |     |      |      \ /      |      |     | /   \|     |
+ Equiv  Taut-  Weaker Weaker TauCon   WCon  UnsCon Weaker Weaker Unsat Equiv
+  Thm   ology  TautCo  Thm   CtraAx  CtraAx CtraAx CtrThm UnsCon -able CtrTh
+  ETH    TAU    WTC    WTH    TCA     WCA     UCA    WCT    WUC    UNS  ECT
+
+
++ Success (SUC):
+  The logical data has been processed successfully.
+
++ UnsatisfiabilityPreserving (UNP):
+  If there does not exist a model of Ax then there does not exist a model of 
+  C, i.e., if Ax is unsatisfiable then C is unsatisfiable.
+
++ SatisfiabilityPreserving (SAP):
+  If there exists a model of Ax then there exists a model of C, i.e., if Ax 
+  is satisfiable then C is satisfiable.
+  - F is satisfiable.
+
++ EquiSatisfiable (ESA):
+  There exists a model of Ax iff there exists a model of C, i.e., Ax is 
+  (un)satisfiable iff C is (un)satisfiable.
+
++ Satisfiable (SAT):
+  Some interpretations are models of Ax, and
+  some models of Ax are models of C.
+  - F is satisfiable, and ~F is not valid.
+  - Possible dataforms are Models of Ax | C.
+
++ FinitelySatisfiable (FSA):
+  Some finite interpretations are finite models of Ax, and
+  some finite models of Ax are finite models of C.
+  - F is satisfiable, and ~F is not valid.
+  - Possible dataforms are FiniteModels of Ax | C.
+
++ FiniteTheorem (FTH):
+  All finite models of Ax are finite models of C.
+  - Any models of Ax | ~C are infinite.
+
++ Theorem (THM):
+  All models of Ax are models of C.
+  - F is valid, and C is a theorem of Ax.
+  - Possible dataforms are Proofs of C from Ax.
+
++ SatisfiableTheorem (STH):
+  Some interpretations are models of Ax, and
+  all models of Ax are models of C.
+  - F is valid, and C is a theorem of Ax.
+  - Possible dataforms are Models of Ax with Proofs of C from Ax.
+
++ Equivalent (EQV):
+  Some interpretations are models of Ax,
+  all models of Ax are models of C, and
+  all models of C are models of Ax.
+  - F is valid, C is a theorem of Ax, and Ax is a theorem of C.
+  - Possible dataforms are Proofs of C from Ax and of Ax from C.
+
++ TautologousConclusion (TAC):
+  Some interpretations are models of Ax, and
+  all interpretations are models of C.
+  - F is valid, and C is a tautology.
+  - Possible dataforms are Proofs of C.
+
++ WeakerConclusion (WEC):
+  Some interpretations are models of Ax,
+  all models of Ax are models of C, and
+  some models of C are not models of Ax.
+  - See Theorem and Satisfiable.
+
++ EquivalentTheorem (ETH):
+  Some, but not all, interpretations are models of Ax,
+  all models of Ax are models of C, and
+  all models of C are models of Ax.
+  - See Equivalent.
+
++ Tautology (TAU):
+  All interpretations are models of Ax, and
+  all interpretations are models of C.
+  - F is valid, ~F is unsatisfiable, and C is a tautology.
+  - Possible dataforms are Proofs of Ax and of C.
+
++ WeakerTautologousConclusion (WTC):
+  Some, but not all, interpretations are models of Ax, and
+  all interpretations are models of C.
+  - F is valid, and C is a tautology.
+  - See TautologousConclusion and WeakerConclusion.
+
++ WeakerTheorem (WTH):
+  Some interpretations are models of Ax,
+  all models of Ax are models of C,
+  some models of C are not models of Ax, and
+  some interpretations are not models of C.
+  - See Theorem and Satisfiable.
+
++ ContradictoryAxioms (CAX):
+  No interpretations are models of Ax.
+  - F is valid, and anything is a theorem of Ax.
+  - Possible dataforms are Refutations of Ax.
+
++ SatisfiableConclusionContradictoryAxioms (SCA):
+  No interpretations are models of Ax, and
+  some interpretations are models of C.
+  - See ContradictoryAxioms.
+
++ TautologousConclusionContradictoryAxioms (TCA):
+  No interpretations are models of Ax, and
+  all interpretations are models of C.
+  - See TautologousConclusion and SatisfiableConclusionContradictoryAxioms.
+
++ WeakerConclusionContradictoryAxioms (WCA):
+  No interpretations are models of Ax, and
+  some, but not all, interpretations are models of C.
+  - See SatisfiableConclusionContradictoryAxioms and
+    SatisfiableCounterConclusionContradictoryAxioms.
+
++ CounterUnsatisfiabilityPreserving (CUP):
+  If there does not exist a model of Ax then there does not exist a model of 
+  ~C, i.e., if Ax is unsatisfiable then ~C is unsatisfiable.
+
++ CounterSatisfiabilityPreserving (CSP):
+  If there exists a model of Ax then there exists a model of ~C, i.e., if Ax 
+  is satisfiable then ~C is satisfiable.
+
++ EquiCounterSatisfiable (ECS):
+  There exists a model of Ax iff there exists a model of ~C, i.e., Ax is 
+  (un)satisfiable iff ~C is (un)satisfiable.
+
++ CounterSatisfiable (CSA):
+  Some interpretations are models of Ax, and
+  some models of Ax are models of ~C.
+  - F is not valid, ~F is satisfiable, and C is not a theorem of Ax.
+  - Possible dataforms are Models of Ax | ~C.
+
++ FinitelyCounterSatisfiable (FCS):
+  Some finite interpretations are finite models of Ax, and
+  some finite models of Ax are finite models of ~C.
+  - F is not valid, ~F is satisfiable, and C is not a theorem of Ax.
+  - Possible dataforms are FiniteModels of Ax | ~C.
+
++ CounterTheorem (CTH):
+  All models of Ax are models of ~C.
+  - F is not valid, and ~C is a theorem of Ax.
+  - Possible dataforms are Proofs of ~C from Ax.
+
++ SatisfiableCounterTheorem (SCT):
+  Some interpretations are models of Ax, and
+  all models of Ax are models of ~C.
+  - F is valid, and ~C is a theorem of Ax.
+  - Possible dataforms are Models of Ax with Proofs of ~C from Ax.
+
++ CounterEquivalent (CEQ):
+  Some interpretations are models of Ax,
+  all models of Ax are models of ~C, and
+  all models of ~C are models of Ax
+  (i.e., all interpretations are models of Ax xor of C).
+  - F is not valid, and ~C is a theorem of Ax. 
+  - Possible dataforms are Proofs of ~C from Ax and of Ax from ~C.
+
++ UnsatisfiableConclusion (UNC):
+  Some interpretations are models of Ax, and
+  all interpretations are models of ~C 
+  (i.e., no interpretations are models of C).
+  - F is not valid, and ~C is a tautology.
+  - Possible dataforms are Proofs of ~C.
+
++ WeakerCounterConclusion (WCC):
+  Some interpretations are models of Ax, and
+  all models of Ax are models of ~C, and
+  some models of ~C are not models of Ax.
+  - See CounterTheorem and CounterSatisfiable.
+
++ EquivalentCounterTheorem (ECT):
+  Some, but not all, interpretations are models of Ax,
+  all models of Ax are models of ~C, and
+  all models of ~C are models of Ax.
+  - See CounterEquivalent.
+
++ FinitelyUnsatisfiable (FUN):
+  All finite interpretations are finite models of Ax, and
+  all finite interpretations are finite models of ~C
+  (i.e., no finite interpretations are finite models of C).
+
++ Unsatisfiable (UNS):
+  All interpretations are models of Ax, and
+  all interpretations are models of ~C.
+  (i.e., no interpretations are models of C).
+  - F is unsatisfiable, ~F is valid, and ~C is a tautology.
+  - Possible dataforms are Proofs of Ax and of C, and Refutations of F.
+
++ WeakerUnsatisfiableConclusion (WUC):
+  Some, but not all, interpretations are models of Ax, and
+  all interpretations are models of ~C.
+  - See Unsatisfiable and WeakerCounterConclusion.
+
++ WeakerCounterTheorem (WCT):
+  Some interpretations are models of Ax,
+  all models of Ax are models of ~C,
+  some models of ~C are not models of Ax, and
+  some interpretations are not models of ~C.
+  - See CounterSatisfiable.
+
++ SatisfiableCounterConclusionContradictoryAxioms (SCC):
+  No interpretations are models of Ax, and
+  some interpretations are models of ~C.
+  - See ContradictoryAxioms.
+
++ UnsatisfiableConclusionContradictoryAxioms (UCA):
+  No interpretations are models of Ax, and
+  all interpretations are models of ~C
+  (i.e., no interpretations are models of C).
+  - See UnsatisfiableConclusion and
+  - SatisfiableCounterConclusionContradictoryAxioms.
+
++ NoConsequence (NOC):
+  Some interpretations are models of Ax,
+  some models of Ax are models of C, and
+  some models of Ax are models of ~C.
+  - F is not valid, F is satisfiable, ~F is not valid, ~F is satisfiable, and 
+    C is not a theorem of Ax.
+  - Possible dataforms are pairs of models, one Model of Ax | C and one Model 
+    of Ax | ~C.
+
+-------------------------------------------------------------------------------
+The NoSuccess Ontology
+----------------------
+
+In order to understand and make productive use of a lack of success, it is 
+necessary to precisely specify the reason for and nature of the lack of 
+success. The SZS no-success ontology provides status values for describing the
+reasons. Note that no-success is not the same as failure: failure means that 
+the software has completed its attempt to process the logical data and could 
+not establish a success ontology value. In contrast, no-success might be 
+because the software is still running, or that it has not yet even started 
+processing the logical data. In the figure below many of the "OneWord" status 
+values are abbreviated - see the list below for the official full "OneWord"s.
+
+                         NoSuccess
+                            NOS
+         ____________________|_______________________________________
+        |                    |                   |                   |
+       Open               Assumed             Unknown            Incorrect
+       OPN              ASS(UNK,SUC)            UNK                 INC
+                                _________________|_________________
+                               |                 |                 |
+                            Stopped         InProgress         NotTried
+                              STP               INP               NTT
+           ____________________|________________               ____|____
+          |                    |                |             |         |
+        Error               Forced           GaveUp           |    NotTriedYet
+         ERR                  FOR              GUP            |        NTY
+      ____|____            ____|____   _________|__________   |
+     |         |          |         | |         |     |    |  |
+  OSError   InputEr      User   ResourceOut  Incompl  |  Inappro
+    OSE       INE        USR        RSO        INC    |    IAP
+            ___|___               ___|___             v
+           |   |   |             |       |           ERR
+       UseEr SynEr SemEr     Timeout   MemOut
+          USE SYE SEE           TMO     MMO
+                   |
+               TypeError
+                  TYE
+
++ NoSuccess (NOS):
+  The logical data has not been processed successfully (yet).
+
++ Open (OPN):
+  A success value has never been established.
+
++ Unknown (UNK):
+  Success value unknown, and no assumption has been made.
+
++ Assumed (ASS(U,S)):
+  The success ontology value S has been assumed because the actual value is 
+  unknown for the no-success ontology reason U. U is taken from the 
+  subontology starting at Unknown in the no-success ontology.
+
++ Stopped (STP):
+  Software attempted to process the data, and stopped without a success status.
+
++ Error (ERR):
+  Software stopped due to an error.
+
++ OSError (OSE):
+  Software stopped due to an operating system error.
+
++ InputError (INE):
+  Software stopped due to an input error.
+
++ UsageError (USE):
+  Software stopped due to an ATP system usage error.
+
++ SyntaxError (SYE):
+  Software stopped due to an input syntax error.
+
++ SemanticError (SEE):
+  Software stopped due to an input semantic error.
+
++ TypeError (TYE):
+  Software stopped due to an input type error (for typed logical data).
+
++ Forced (FOR):
+  Software was forced to stop by an external force.
+
++ User (USR):
+  Software was forced to stop by the user.
+
++ ResourceOut (RSO):
+  Software stopped because some resource ran out.
+
++ Timeout (TMO):
+  Software stopped because the CPU time limit ran out.
+
++ MemoryOut (MMO):
+  Software stopped because the memory limit ran out.
+
++ GaveUp (GUP):
+  Software gave up of its own accord.
+
++ Incomplete (INC):
+  Software gave up because it's incomplete.
+
++ Inappropriate (IAP):
+  Software gave up because it cannot process this type of data.
+
++ InProgress (INP):
+  Software is still running.
+
++ NotTried (NTT):
+  Software has not tried to process the data.
+
++ NotTriedYet (NTY):
+  Software has not tried to process the data yet, but might in the future.
+
+-------------------------------------------------------------------------------
+The Dataform Ontology
+---------------------
+
+The dataform ontology provides suitable values for describing the form of 
+logical data. The ontology values are commonly used to describe data provided
+to justify a success ontology value, e.g., if an ATP system reports the success
+ontology value Theorem it might output a proof to justify that. In the figure 
+below many of the "OneWord" status values are abbreviated - see the list below 
+for the official full "OneWord"s.
+
+
+                                        LogicalData
+                                            LDa
+                    _________________________|____________________
+                   |          |                                   |
+                 None     Solution                              NotSoln
+                  Non        Sol                                  NSo
+           ___________________|__________________            ______|______
+          |                   |                  |          |      |      |
+       Proof           Interpretation        ListFrm     Assure IncoPrf IncoInt
+        Prf                  Int                Lof        Ass    IPr    IIn
+      ___|___                 |\            _____|_____ 
+     |       |                | Model      |   |   |   |
+  Derivn  Refutn              |  Mod    LiTHF/TFF/FOF/CNF
+    Der     Ref               |/          Lth/Ltf/Lfo/Lcn
+             |                |________    |___|___|___|
+          CNFRef              |\       \         |
+            CRf               | Partial Strictly |
+                              | PIn/PMo SIn/SMo  |
+                              |/_______/         |
+                    __________|___________  _____|
+                   |                      |/
+             Domain Int/Mod       Herbrand Int/Mode
+                DIn/DMo                HIn/HMo
+            DPI/DPM/DSI/DSM        HPI/HPM/HSI/HSM
+           ________|________          ____|____
+          |        |        |        |         |
+       Finite   Integer  Real     Formula  Saturation
+       FIn/FMo  IIn/IMo  RIn/RMo  TIn/TMo     Sat
+       FPI/FPM/ IPI/IPM/ RPI/RPM/ TPI/TPM/
+       FSI/FSM  ISI/ISM  RSI/RSM  TSI/TSM
+
+
++ LogicalData (LDa):
+  Logical data.
+
++ Solution (Sln):
+  A solution.
+
++ Proof (Prf):
+  A proof.
+
++ Derivation (Der):
+  A derivation (inference steps ending in the theorem, in the Hilbert style).
+
++ Refutation (Ref):
+  A refutation (starting with Ax U ~C and ending in FALSE).
+
++ CNFRefutation (CRf):
+  A refutation in clause normal form, including, for FOF Ax or C, the 
+  translation from FOF to CNF (without the FOF to CNF translation it's an 
+  IncompleteProof).
+
++ Interpretation (Int):
+  An interpretation.
+
++ Model (Mod):
+  A model.
+
++ PartialInterpretation (Pin):
+  A partial interpretation.
+
++ PartialModel (PMo):
+  A partial model.
+
++ StrictlyPartialInterpretation (SIn):
+  A strictly partial interpretation.
+
++ StrictlyPartialModel (SMo):
+  A strictly partial model.
+
++ DomainInterpretation (DIn):
+  An interpretation whose domain is not the Herbrand universe.
+
++ DomainModel (DMo):
+  A model whose domain is not the Herbrand universe.
+
++ DomainPartialInterpretation (DPI):
+  A domain interpretation that is partial.
+
++ DomainPartialModel (DPM):
+  A domain model that is partial.
+
++ DomainStrictlyPartialInterpretation (DSI):
+  A domain interpretation that is strictly partial.
+
++ DomainStrictlyPartialModel (DSM):
+  A domain model that is strictly partial.
+
++ FiniteInterpretation:
+  A domain interpretation with a finite domain.
+
++ FiniteModel (FMo):
+  A domain model with a finite domain.
+
++ FinitePartialInterpretation (FPI):
+  A domain partial interpretation with a finite domain.
+
++ FinitePartialModel (FPM):
+  A domain partial model with a finite domain.
+
++ FiniteStrictlyPartialInterpretation (FSI):
+  A domain strictly partial interpretation with a finite domain.
+
++ FiniteStrictlyPartialModel (FSM):
+  A domain strictly partial model with a finite domain.
+
++ IntegerInterpretation:
+  An integer domain interpretation.
+
++ IntegerModel (FMo):
+  An integer domain model.
+
++ IntegerPartialInterpretation (FPI):
+  An integer domain partial interpretation.
+
++ IntegerPartialModel (FPM):
+  An integer domain partial model.
+
++ IntegerStrictlyPartialInterpretation (FSI):
+  An integer domain strictly partial interpretation.
+
++ IntegerStrictlyPartialModel (FSM):
+  An integer domain strictly partial model.
+
++ RealInterpretation:
+  A real domain interpretation.
+
++ RealModel (FMo):
+  A real domain model.
+
++ RealPartialInterpretation (FPI):
+  A real domain partial interpretation.
+
++ RealPartialModel (FPM):
+  A real domain partial model.
+
++ RealStrictlyPartialInterpretation (FSI):
+  A real domain strictly partial interpretation.
+
++ RealStrictlyPartialModel (FSM):
+  A real domain strictly partial model.
+
++ HerbrandInterpretation (HIn):
+  A Herbrand interpretation.
+
++ HerbrandModel (HMo):
+  A Herbrand model.
+
++ FormulaInterpretation (TIn):
+  A Herbrand interpretation defined by a set of TPTP formulae.
+
++ FormulaModel (TMo):
+  A Herbrand model defined by a set of TPTP formulae.
+
++ FormulaPartialInterpretation (TPI):
+  A Herbrand partial interpretation defined by a set of TPTP formulae.
+
++ FormulaPartialModel (TMo):
+  A Herbrand partial model defined by a set of TPTP formulae.
+
++ FormulaStrictlyPartialInterpretation (TSI):
+  A Herbrand strictly partial interpretation defined by a set of TPTP formulae.
+
++ FormulaStrictlyPartialModel (TSM):
+  A Herbrand strictly partial model defined by a set of TPTP formulae.
+
++ Saturation (Sat):
+  A Herbrand model expressed as a saturating set of formulae.
+
++ ListOfFormulae (Lof):
+  A list of formulae.
+
++ ListOfTHF (Lth):
+  A list of THF formulae.
+
++ ListOfTFF (Ltf):
+  A list of TFF formulae.
+
++ ListOfFOF (Lfo):
+  A list of FOF formulae.
+
++ ListOfCNF (Lcn):
+  A list of CNF formulae.
+
++ NotASolution (NSo):
+  Something that is not a well formed solution.
+
++ Assurance (Ass):
+  Only an assurance of the success ontology value.
+
++ IncompleteProof (IPr):
+  A proof with some part missing.
+
++ IncompleteInterpretation (IIn):
+  An interpretation with some part missing.
+
++ None (Non):
+  Nothing.
+
+-------------------------------------------------------------------------------
+References
+----------
+[1] Sutcliffe G., Zimmer J., Schulz S. (2003), Communication Formalisms for 
+    Automated Theorem Proving Tools, Sorge V. Colton S. Fisher M. Gow J., 
+    Proceedings of the Workshop on Agents and Automated Reasoning, 18th 
+    International Joint Conference on Artificial Intelligence, (Acapulco, 
+    Mexico), 52-57. 
+
+[2] Sutcliffe G., Zimmer J., Schulz S. (2004), TSTP Data-Exchange Formats 
+    for Automated Theorem Proving Tools, Zhang W., Sorge V., Distributed 
+    Constraint Problem Solving and Reasoning in Multi-Agent Systems, Frontiers 
+    in Artificial Intelligence and Applications 112, 201-215.
+
+[3] Sutcliffe G. (2008), The SZS Ontologies for Automated Reasoning Software, 
+    Rudnicki P., Sutcliffe G., Proceedings of the LPAR Workshops: Knowledge 
+    Exchange: Automated Provers and Proof Assistants, and The 7th International 
+    Workshop on the Implementation of Logics (Doha, Qattar), CEUR Workshop 
+    Proceedings 418, 38-49.
+-------------------------------------------------------------------------------

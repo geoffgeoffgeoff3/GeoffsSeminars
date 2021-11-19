@@ -1,0 +1,140 @@
+fof(modus_ponens,axiom,
+    ( modus_ponens
+  <=> ! [X,Y] : 
+        ( ( is_a_theorem(X)
+          & is_a_theorem(implies(X,Y)) )
+       => is_a_theorem(Y) ) )).
+
+%----John says this can be inferred from not_is_idempotent and modus_ponens
+%----Is it a rule or an axiom? The neccesarily_hilbert assumes it's an axiom.
+fof(modus_tollens,axiom,
+    ( modus_tollens
+  <=> ! [X,Y] : is_a_theorem(implies(implies(not(Y),not(X)),implies(X,Y))) )).
+
+fof(implies_1,axiom,
+    ( implies_1
+  <=> ! [X,Y] : is_a_theorem(implies(X,implies(Y,X))) )).
+
+fof(implies_2,axiom,
+    ( implies_2
+  <=> ! [X,Y,Z] : is_a_theorem(implies(implies(X,implies(Y,Z)),implies(implies(X,Y),implies(X,Z)))) )).
+
+fof(and_1,axiom,
+    ( and_1
+  <=> ! [X,Y] : is_a_theorem(implies(and(X,Y),X)) )).
+
+fof(and_2,axiom,
+    ( and_2
+  <=> ! [X,Y] : is_a_theorem(implies(and(X,Y),Y)) )).
+
+fof(and_3,axiom,
+    ( and_3
+  <=> ! [X,Y] : is_a_theorem(implies(X,implies(Y,and(X,Y)))) )).
+
+fof(or_1,axiom,
+    ( or_1
+  <=> ! [X,Y] : is_a_theorem(implies(X,or(X,Y))) )).
+
+fof(or_2,axiom,
+    ( or_2
+  <=> ! [X,Y] : is_a_theorem(implies(Y,or(X,Y))) )).
+
+fof(or_3,axiom,
+    ( or_3
+  <=> ! [X,Y,Z] : is_a_theorem(implies(implies(X,Z),implies(implies(Y,Z),implies(or(X,Y),Z)))) )).
+
+fof(equivalence_1,axiom,
+    ( equivalence_1
+  <=> ! [X,Y] : is_a_theorem(implies(equiv(X,Y),implies(X,Y))) )).
+
+fof(equivalence_2,axiom,
+    ( equivalence_2
+  <=> ! [X,Y] : is_a_theorem(implies(equiv(X,Y),implies(Y,X))) )).
+
+fof(equivalence_3,axiom,
+    ( equivalence_3
+  <=> ! [X,Y] : is_a_theorem(implies(implies(X,Y),implies(implies(Y,X),equiv(X,Y)))) )).
+
+fof(not_is_idempotent,axiom,
+    ( not_is_idempotent
+  <=> ! [X] : not(not(X)) = X )).
+
+fof(all_hilbert,axiom,
+    ( all_hilbert
+   => ( modus_ponens
+      & modus_tollens
+      & implies_1
+      & implies_2
+      & and_1
+      & and_2
+      & and_3
+      & or_1
+      & or_2
+      & or_3
+      & equivalence_1
+      & equivalence_2
+      & equivalence_3
+      & not_is_idempotent ) )).
+
+fof(necessarily_modus_tollens,axiom,
+    ( necessarily_modus_tollens
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(implies(not(Y),not(X)),implies(X,Y)))) )).
+
+fof(necessarily_implies_1,axiom,
+    ( necessarily_implies_1
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(X,implies(Y,X)))) )).
+
+fof(necessarily_implies_2,axiom,
+    ( necessarily_implies_2
+  <=> ! [X,Y,Z] : is_a_theorem(necessarily(implies(implies(X,implies(Y,Z)),implies(implies(X,Y),implies(X,Z))))) )).
+
+fof(necessarily_and_1,axiom,
+    ( necessarily_and_1
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(and(X,Y),X))) )).
+
+fof(necessarily_and_2,axiom,
+    ( necessarily_and_2
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(and(X,Y),Y))) )).
+
+fof(necessarily_and_3,axiom,
+    ( necessarily_and_3
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(X,implies(Y,and(X,Y))))) )).
+
+fof(necessarily_or_1,axiom,
+    ( necessarily_or_1
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(X,or(X,Y)))) )).
+
+fof(necessarily_or_2,axiom,
+    ( necessarily_or_2
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(Y,or(X,Y)))) )).
+
+fof(necessarily_or_3,axiom,
+    ( necessarily_or_3
+  <=> ! [X,Y,Z] : is_a_theorem(necessarily(implies(implies(X,Z),implies(implies(Y,Z),implies(or(X,Y),Z))))) )).
+
+fof(necessarily_equivalence_1,axiom,
+    ( necessarily_equivalence_1
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(equiv(X,Y),implies(X,Y)))) )).
+
+fof(necessarily_equivalence_2,axiom,
+    ( necessarily_equivalence_2
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(equiv(X,Y),implies(Y,X)))) )).
+
+fof(necessarily_equivalence_3,axiom,
+    ( necessarily_equivalence_3
+  <=> ! [X,Y] : is_a_theorem(necessarily(implies(implies(X,Y),implies(implies(Y,X),equiv(X,Y))))) )).
+
+fof(neccesarily_hilbert,axiom,
+    ( necessarily_hilbert
+   => ( necessarily_modus_tollens
+      & necessarily_implies_1
+      & necessarily_implies_2
+      & necessarily_and_1
+      & necessarily_and_2
+      & necessarily_and_3
+      & necessarily_or_1
+      & necessarily_or_2
+      & necessarily_or_3
+      & necessarily_equivalence_1
+      & necessarily_equivalence_2
+      & necessarily_equivalence_3 ) )).

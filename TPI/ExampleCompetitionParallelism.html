@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE> Competition Parallelism </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Competition Parallelism
+</H1>
+
+<UL>
+<LI> Input axioms, execute two ATP systems asynchronously
+<LI> Wait for either
+<LI> Write SZS statuses, exit
+</UL>
+
+<PRE>
+    tpi(1,input,'Simple.p').
+    tpi(2,execute_async,'EP_SZS' =
+        'E---1.8/eprover -s --auto --cpu-limit=300 --tstp-format $getgroups(tpi)').
+    tpi(3,execute_async,'VAMPIRE_SZS' =
+        'Vampire---2.6/vampire_rel --proof tptp --mode casc -t 300 $getgroups(tpi)').
+    tpi(4,waitenv,'EP_SZS' | 'VAMPIRE_SZS').
+    tpi(5,write,'EP_SZS = $getenv(EP_SZS) '
+        & ' VAMPIRE_SZS = $getenv(VAMPIRE_SZS)').
+    tpi(6,exit,exit).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

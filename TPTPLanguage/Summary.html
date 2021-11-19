@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP Language Summary </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TPTP Language Summary </H1>
+
+<IMG SRC="ExtendedBNF.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+
+<H3> A Key to Success </H3>
+<UL>
+<LI> Same language for input (problems) and output (derivations, models)<BR>
+     Inter-operability between systems and tools
+<LI> Simple <A HREF="ConcreteSyntax.html">concrete syntax</A> that is
+     <A HREF="../IWTPTP/XMLSucks.html">Prolog like</A>
+<LI> Easily identified <A HREF="InterpretedSymbols.html">Interpreted symbols</A>
+</UL>
+
+<H3> Languages </H3>
+<UL>
+<LI> CNF and FOF - stable and defacto standards
+<LI> TF0 and TH0 - stable and being used
+<LI> TF1 and TH1 - stable, but not much use yet
+<LI> TFA - TF0 or TF1 with arithmetic, being used
+<LI> TFX - published and coming soon
+<LI> TH0 and TH1 include arithmetic, but not much use yet
+</UL>
+
+<H3> Language Definition in BNF </H3>
+<UL>
+<LI> <A HREF="ExtendedBNF.html">Extended BNF</A>
+     <UL>
+     <LI> <!-- Syntax rules<BR> -->
+          <TT>&lt;source>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= &lt;general_term></TT>
+     <LI> <!-- Semantic rules<BR> -->
+          <TT>&lt;source>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:== &lt;dag_source> | &lt;internal_source></TT>
+     <LI> <!-- Token rules<BR> -->
+          <TT>&lt;lower_word>&nbsp;&nbsp;::- &lt;lower_alpha>&lt;alpha_numeric>*</TT>
+     <LI> <!-- Character macros<BR> -->
+          <TT>&lt;lower_alpha>&nbsp;::: [a-z]</TT>
+     </UL>
+<LI> LR1 - <TT>lex</TT>/<TT>yacc</TT>/<TT>flex</TT>/<TT>bison</TT> friendly
+<LI> <A HREF="http://www.tptp.org/TPTP/SyntaxBNF.html">Hyperlinked online</A> 
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

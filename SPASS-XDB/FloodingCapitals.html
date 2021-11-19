@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE> SporcleAI </TITLE>
+</HEAD>
+<BODY>
+<!------------------------------------------------------------------------>
+<PRE>
+fof(kb_SUMO_28,axiom,(
+    ! [V__X,V__Y,V__Z] :
+      ( ( s__instance(V__Y,s__SetOrClass)
+        & s__instance(V__X,s__SetOrClass) )
+     => ( ( s__subclass(V__X,V__Y)
+          & s__instance(V__Z,V__X) )
+       => s__instance(V__Z,V__Y) ) ) )).
+
+fof(kb_SUMO_MILO_6297,axiom,(
+    s__instance(s__WaterArea,s__SetOrClass) )).
+
+fof(kb_SUMO_MILO_10029,axiom,(
+    s__instance(s__BodyOfWater,s__SetOrClass) )).
+
+fof(kb_SUMO_MILO_DOMAINS_9645,axiom,(
+    s__subclass(s__Sea,s__BodyOfWater) )).
+
+fof(kb_SUMO_9900,axiom,(
+    s__subclass(s__River,s__BodyOfWater) )).
+
+fof(kb_SUMO_9967,axiom,(
+    s__subclass(s__Lake,s__StaticWaterArea) )).
+
+fof(kb_SUMO_912,axiom,(
+    s__instance(s__River,s__SetOrClass) )).
+
+fof(kb_SUMO_MILO_DOMAINS_80407,axiom,(
+    s__instance(s__Sea,s__SetOrClass) )).
+
+fof(kb_SUMO_9941,axiom,(
+    s__instance(s__Lake,s__SetOrClass) )).
+
+fof(kb_SUMO_32358,axiom,(
+    s__instance(s__StaticWaterArea__t,s__SetOrClass) )).
+
+fof(kb_SUMO_32357,axiom,(
+    s__subclass(s__StaticWaterArea,s__WaterArea) )).
+
+fof(kb_SUMO_MILO_DOMAINS_9546,axiom,(
+    s__subclass(s__BodyOfWater,s__WaterArea) )).
+
+fof(coastal_cities_near_water,axiom,
+    ! [City] :
+      ( is_instance(City,'Coastal Cities Class')
+     => ? [Sea] :
+          ( s__instance(Sea,s__Sea) 
+          & s__orientation(City,Sea,s__Near,s__Sea) ) ) ).
+ 
+fof(river_cities_near_water,axiom,
+    ! [City] :
+      ( is_instance(City,'River Cities Class')
+     => ? [River] :
+          ( s__instance(River,s__River) 
+          & s__orientation(City,River,s__Near,s__River) ) ) ).
+ 
+fof(lakeshore_cities_near_water,axiom,
+    ! [City] :
+      ( is_instance(City,'Lakeshore Cities Class')
+     => ? [Lake] :
+          ( s__instance(Lake,s__Lake) 
+          & s__orientation(City,Lake,s__Near,s__Lake) ) ) ).
+ 
+fof(flood_near_water,axiom,
+    ! [W,C,Type] :
+      ( ( s__orientation(C,W,s__Near,Type)
+        & s__instance(W,s__WaterArea) )
+     => s__capability(s__Flooding,Type,C) ) ).
+
+fof(where,conjecture,
+   ? [City,Country,Type] :
+     ( capital_city_of(City,Country)
+     & s__capability(s__Flooding,Type,City)
+     & printonly(printall('% XDB print : ',Country,',',City,nl)) ) ).
+</PRE>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

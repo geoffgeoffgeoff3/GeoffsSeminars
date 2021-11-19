@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<TITLE> The Translational Approach </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The Translational Approach 
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<IMG SRC="Translational.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<UL>
+<LI> Two mutually recursive translation functions
+     <UL>
+     <LI> The translation <EM>tr</EM>, and the anti-translation <EM>atr</EM>
+     <LI> <EM>tr</EM> captures a formula being <EM>true-only</EM> or <EM>both</EM>
+     <LI> <EM>atr</EM> captures a formula being <EM>false-only</EM> or <EM>both</EM>
+     <LI> For an RM3 formula F ...
+          <UL>
+          <LI> If <EM>tr</EM>(F) is true and <EM>atr</EM>(F) is false in FOL then
+               F is  <EM>true-only</EM> in RM3
+          <LI> If <EM>tr</EM>(F) is false and <EM>atr</EM>(F) is true in FOL then
+               F is  <EM>false-only</EM> in RM3
+          <LI> If <EM>tr</EM>(F) is true and <EM>atr</EM>(F) is true in FOL then
+               F is  <EM>both</EM> in RM3
+          <LI> <EM>tr</EM>(F) and <EM>atr</EM>(F) cannot both be false in FOL
+          </UL>
+     </UL>
+<P>
+<LI> Example translation rules
+     <TABLE BORDER=0>
+     <TR> <TD ALIGN=CENTER style="padding-right: 5px; padding-left: 5px;"> F
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>tr</EM>(F)
+          <TD> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT style="padding-right: 5px; padding-left: 5px;"> 
+               <EM>atr</EM>(F)
+     <TR> <TD COLSPAN=5> <HR>
+     <TR> <TD ALIGN=CENTER> &phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> &phi;<SUP>+</SUP>
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> &phi;<SUP>-</SUP>
+     <TR> <TD ALIGN=CENTER> &not;&phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> <EM>atr</EM>(&phi;)
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> <EM>tr</EM>(&phi;)
+     <TR> <TD ALIGN=CENTER> &phi;&rarr;&psi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> &not;<EM>tr</EM>(&phi;) &or; &not;<EM>atr</EM>(&psi;) 
+               &or; (<EM>tr</EM>(&phi;) &and; <EM>atr</EM>(&phi;) &and; 
+               <EM>tr</EM>(&psi;) &and; <EM>atr</EM>(&psi;))
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> <EM>tr</EM>(&phi;) &and; <EM>atr</EM>(&psi;)
+     <TR> <TD ALIGN=CENTER> &forall;X &phi;
+          <TD style="border-left: 1px solid black; padding-right: 5px; padding-left: 5px;">
+          <TD ALIGN=LEFT> &forall;X <EM>tr</EM>(&phi;)
+          <TD ALIGN=CENTER> &nbsp;&nbsp;&nbsp;
+          <TD ALIGN=LEFT> &exist;X <EM>atr</EM>(&phi;)
+     </TABLE>
+<P>
+<LI> Additional axioms
+     <UL>
+     <LI> <EM>Exhaustion</EM> axiom for each predicate 
+          &forall; (&phi;<SUP>+</SUP> &or; &phi;<SUP>-</SUP>)
+     </UL>
+<P>
+<LI> Axioms &#8872;<SUB>RM3</SUB> Conjecture<BR>
+     &nbsp;&nbsp;&nbsp;
+     iff<BR>
+     (<EM>tr</EM>(Axioms) &cup; Exhaustion) &#8872;<SUB>FOL</SUB> 
+     <EM>tr</EM>(Conjecture)
+<LI> Proof based on isomorphism between RM3 and FOL interpretations
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

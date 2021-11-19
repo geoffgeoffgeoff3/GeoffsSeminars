@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE> Future Work </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'Meters.jpg';
+  images[1]     = new Image();
+  images[1].src = 'JoinerTree.jpg';
+  images[2]     = new Image();
+  images[2].src = 'NewPersona.jpg';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Future Work </H1>
+
+<IMG NAME="image" SRC="Meters.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> Real-time Performance Feedback
+     <A HREF="" onClick="putImage(0);return false">
+     <IMG SRC="Meters.jpg" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL> 
+<LI> Analysis of conversation logs
+<LI> New interface elements showing progress
+<LI> Appropriateness of questions
+</UL>
+
+<H3> Computation of Risk Level from Parameters Values 
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="JoinerTree.jpg" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL>
+<LI> Using the actual values
+<LI> Using the values the user has been told
+<LI> Using values from a medical chart
+</UL>
+
+<H3> Creation of New Avatar Persona 
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="NewPersona.jpg" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL> 
+<LI> Random selection of parameter values
+<LI> Constraints to avoid bad combinations
+<LI> Guidance from conversation logs to <BR>
+     focus on user's deficiencies
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE> Recursive Lemma Minimization Algorithm </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Recursive Lemma Minimization Algorithm </H1>
+
+<PRE>
+CurrentCandidate.TargetQueue = [Conjecture];
+AlternativeCandidates = [];
+while CurrentCandidate.TargetQueue not empty {
+    TargetFormula = pop(CurrentCandidate.TargetQueue);
+    SuccessfulHelperSets = [];
+    foreach HelperSetSize (0 ... MAX_HELPER_SET_SIZE) {
+        foreach HelperSet (CombinationOfSize(LemmaSet,HelperSetSize)) {
+            if (Axioms U HelperSet |- TargetFormula) {
+                SuccessfulHelperSets += HelperSet;
+            }
+        }
+        if (!Empty(SuccessfulHelperSets)) {
+            break;
+        }
+    }
+    NewCandidates = [];
+    foreach HelperSet (SuccessfulHelperSets) {
+        New.TargetQueue = Append(CurrentCandidate.TargetQueue,HelperSet);
+        NewCandidates += New;
+    }
+    if (QualityOf(BestOf(NewCandidates)) < 
+ToleranceFactor * QualityOf(BestOf(AlternativeCandidates)) {
+        CurrentCandidate = ExtractBestOf(NewCandidates);
+    } else {
+        CurrentCandidate = ExtractBestOf(AlternativeCandidates);
+    }
+    AlternativeCandidates += NewCandidates;
+}
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

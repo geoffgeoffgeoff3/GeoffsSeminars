@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<TITLE> FOF_CSA and FOF_SAT </TITLE>
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> <FONT SIZE=+5><TT>FOF_CSA</TT> and <TT>FOF_SAT</TT></FONT> </H1>
+
+<IMG SRC="VampireLike2.jpg" ALIGN="RIGHT" WIDTH=33%>
+
+<H3> Highlights </H3>
+<UL>
+<LI> System of Choice : <STRONG>Vampire 4.0</STRONG> (in SAT mode)
+<LI> Vampire a SOTA contributor in all 5 SPCs
+<LI> Vampire best in 4 SPCs
+<LI> iProver best in <FONT SIZE=+1><TT>FOF_CSA_RFO_NEQ</TT></FONT>,
+     Vampire and Paradox OK
+</UL>
+
+<H3> SPC Analysis </H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('FOF_CSA_EPR');return false;">
+     <FONT SIZE=+1><TT>FOF_CSA_EPR&nbsp;&nbsp;&nbsp;&nbsp;</TT></FONT></A>
+     : Vampire 4.0 (in SAT mode)
+<LI> <A HREF="" onClick="hideshow('FOF_CSA_RFO_NEQ');return false;">
+     <FONT SIZE=+1><TT>FOF_CSA_RFO_NEQ</TT></FONT></A>
+     : iProver 1.4 (in SAT mode)
+<LI> <A HREF="" onClick="hideshow('FOF_CSA_RFO_SEQ');return false;">
+     <FONT SIZE=+1><TT>FOF_CSA_RFO_SEQ</TT></FONT></A>
+     : Vampire 4.0 (in SAT mode)
+<LI> <A HREF="" onClick="hideshow('FOF_SAT_RFO_NEQ');return false;">
+     <FONT SIZE=+1><TT>FOF_SAT_RFO_NEQ</TT></FONT></A>
+     : Vampire 4.0 (in SAT mode)
+<LI> <A HREF="" onClick="hideshow('FOF_SAT_RFO_SEQ');return false;">
+     <FONT SIZE=+1><TT>FOF_SAT_RFO_SEQ</TT></FONT></A>
+     : Vampire 4.0 (in SAT mode)
+</UL>
+
+<H3> SOTA Contributors and System Ratings </H3>
+<SPAN ID="FOF_CSA_EPR" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/FOF_CSA_EPR"><B>FOF_CSA_EPR</B></A>
+Unbiased SPC size               156
+SOTA contributors      solved   156 = 1.00 SPC 1.00 attempted
+SOTA contributors all  solved   133 = 0.85 SPC 0.85 SOTA   23 =  1.00 SSR
+Vampire---SAT-4.0    C solved   154 = 0.99 SPC 0.99 SOTA   21 =  0.91 SSR
+iProver---1.4        C solved   152 = 0.97 SPC 0.97 SOTA   19 =  0.83 SSR
+iProver---SAT-1.4    C solved   146 = 0.94 SPC 0.94 SOTA   13 =  0.57 SSR
+E-Darwin---1.5       C solved   137 = 0.88 SPC 0.88 SOTA    4 =  0.17 SSR
+</PRE>
+</SPAN>
+
+<SPAN ID="FOF_CSA_RFO_NEQ" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/FOF_CSA_RFO_NEQ"><B>FOF_CSA_RFO_NEQ</B></A>
+Unbiased SPC size               321
+SOTA contributors      solved   309 = 0.96 SPC 0.96 attempted
+SOTA contributors all  solved   191 = 0.60 SPC 0.62 SOTA  118 =  1.00 SSR
+iProver---SAT-1.4    C solved   281 = 0.88 SPC 0.91 SOTA   90 =  0.76 SSR
+Vampire---SAT-4.0    C solved   256 = 0.80 SPC 0.83 SOTA   65 =  0.55 SSR
+Paradox---4.0        C solved   247 = 0.77 SPC 0.80 SOTA   56 =  0.47 SSR
+Nitpick---2015       C solved   226 = 0.70 SPC 0.73 SOTA   35 =  0.30 SSR
+CVC4---FNT-1.5pre    C solved   218 = 0.68 SPC 0.71 SOTA   27 =  0.23 SSR
+Geo---2010C          C solved   211 = 0.66 SPC 0.68 SOTA   20 =  0.17 SSR
+</PRE>
+</SPAN>
+
+<SPAN ID="FOF_CSA_RFO_SEQ" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/FOF_CSA_RFO_SEQ"><B>FOF_CSA_RFO_SEQ</B></A>
+Unbiased SPC size               253
+SOTA contributors      solved   205 = 0.81 SPC 0.81 attempted
+SOTA contributors all  solved   144 = 0.57 SPC 0.70 SOTA   61 =  1.00 SSR
+Vampire---SAT-4.0    C solved   204 = 0.81 SPC 1.00 SOTA   60 =  0.98 SSR
+Vampire---4.0        C solved   149 = 0.59 SPC 0.73 SOTA    5 =  0.08 SSR
+</PRE>
+</SPAN>
+
+<SPAN ID="FOF_SAT_RFO_NEQ" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/FOF_SAT_RFO_NEQ"><B>FOF_SAT_RFO_NEQ</B></A>
+Unbiased SPC size                50
+SOTA contributors      solved    33 = 0.66 SPC 0.66 attempted
+SOTA contributors all  solved    16 = 0.32 SPC 0.48 SOTA   17 =  1.00 SSR
+Vampire---SAT-4.0    C solved    32 = 0.64 SPC 0.97 SOTA   16 =  0.94 SSR
+iProver---SAT-1.4    C solved    21 = 0.42 SPC 0.64 SOTA    5 =  0.29 SSR
+</PRE>
+</SPAN>
+
+<SPAN ID="FOF_SAT_RFO_SEQ" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/FOF_SAT_RFO_SEQ"><B>FOF_SAT_RFO_SEQ</B></A>
+SOTA contributors      solved    36 = 0.68 SPC 0.68 attempted
+SOTA contributors all  solved    16 = 0.30 SPC 0.44 SOTA   20 =  1.00 SSR
+Vampire---SAT-4.0    C solved    34 = 0.64 SPC 0.94 SOTA   18 =  0.90 SSR
+E---1.9              C solved    30 = 0.57 SPC 0.83 SOTA   14 =  0.70 SSR
+SPASS---3.7          C solved    27 = 0.51 SPC 0.75 SOTA   11 =  0.55 SSR
+FIMO---0.3           C solved    24 = 0.45 SPC 0.67 SOTA    8 =  0.40 SSR
+Mace4---1109a        C solved    22 = 0.42 SPC 0.61 SOTA    6 =  0.30 SSR
+</PRE>
+</SPAN>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

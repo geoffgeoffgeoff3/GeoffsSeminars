@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<TITLE> Different Axioms and Conjectures </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Different Axioms and Conjectures
+</H1>
+
+<UL>
+<LI> Input axioms, store axiom group, execute self
+<LI> Delete axiom group, store axioms, execute self
+<LI> Exit
+</UL>
+
+<PRE>
+    tpi(1,input,'Axioms/SYN001+1.ax').
+    tpi(2,start_group,try_these).
+    fof(another,axiom,q).
+    fof(a,conjecture,qq).
+    tpi(3,end_group,try_these).
+    tpi(4,execute,self).
+    tpi(5,delete_group,try_these).
+    fof(yet_another,axiom,r).
+    fof(and_another,conjecture,rr).
+    tpi(6,execute,self).
+    tpi(7,exit,exit).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

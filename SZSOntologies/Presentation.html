@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> The SZS Presentation Standards </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The SZS Presentation Standards </H1>
+
+<IMG SRC="Grep.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Motivation </H3>
+<UL>
+<LI> <A HREF="Motivation.html">Use of Automated Reasoning software</A>
+<LI> E.g., in practice, <TT>grep</TT> to find ontology vaues
+</UL>
+
+<H3> Success and No-success Values </H3>
+<UL>
+<LI> <TT>% SZS status</TT> <EM>ontology_value</EM> <TT>for</TT> <EM>logical_data_identifier</EM>
+<LI> Software specific information can be appended after a <TT>:</TT>
+<P>
+<LI> <TT>% SZS status Unsatisfiable for SYN075+1</TT><BR>
+<LI> <TT>% SZS status InputError for SYN075+1</TT> : Cannot read FOF
+<P>
+<LI> Present as early as possible, before justifying logical data
+</UL>
+
+<H3> Dataform Values for Output Logical Data </H3>
+<UL>
+<LI> <TT>% SZS output start</TT> <EM>ontology_value</EM> <TT>for</TT> <EM>logical_data_identifier</EM><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;<EM>output_logical_data</EM><BR>
+     <TT>% SZS output end</TT> <EM>ontology_value</EM> <TT>for</TT> <EM>logical_data_identifier</EM>
+<P>
+<LI> <TT>% SZS output start CNFRefutation for SYN075-1</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>CNF_refutation</EM><BR>
+     <TT>% SZS output end CNFRefutation for SYN075-1 : Completed in CNF conversion</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

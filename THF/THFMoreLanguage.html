@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE> More of the THF Language </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> More of the THF Language </H1>
+
+<IMG SRC="LeonHenkin.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<UL>
+<LI> The use of connectives as terms (THF0), e.g.,<BR>
+      <TT>&nbsp;&nbsp;(& @ $false) = (^ [P:$o] : $false)</TT>
+<P>
+<LI> <TT>!!</TT> and <TT>??</TT> for the &Pi; (forall) and &Sigma; (exists)
+      operators (THF0), e.g.,<BR>
+      <TT>&nbsp;&nbsp;((!! (p)) & (!! (q))) = (! [X:$i] : ((p @ X) & (q @ X)))</TT>
+<P>
+<LI> <TT>!></TT> and <TT>?*</TT> for &Pi; (dependent product) and &Sigma;
+      (sum) types (THF), e.g.,<BR>
+      <TT>&nbsp;&nbsp;cons: !> [N:nat] : ($i > (list @ N) > (list @ (succ @ N)))</TT>
+<P>
+<LI> <TT>[ ]</TT> for tuples (THF), e.g.,<BR>
+      <TT>&nbsp;&nbsp;make_triple = ^ [X:$i,Y:$i:,Z:$i] : [X,Y,Z]</TT>
+<P>
+<LI> <TT>*</TT> and <TT>+</TT> for simple product and sum (disjoint union) types
+      (THF), e.g.,<BR>
+      <TT>&nbsp;&nbsp;roots: quadratic > (($real * $real) + $real + undef)</TT>
+<P>
+<LI> <TT>:=</TT> as a connective for global definitions (THFX), e.g.,<BR>
+      <TT>&nbsp;&nbsp;apply_twice:= ^ [F:$o > $o,X:$o] : (F @ (F @ X))</TT><BR>
+<P>
+<LI> <TT>:=</TT> as a separator for local definitions (ala <TT>letrec</TT>) (THFX), e.g., <BR>
+      <TT>&nbsp;&nbsp;:= [NN:= (apply_twice @ ~)] : (NN = (apply_twice @ NN))</TT>
+<P>
+<LI> <TT>--></TT> as the sequent connective (THFX), e.g.,<BR>
+      <TT>&nbsp;&nbsp;[p,q,r] --> [s,t]</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

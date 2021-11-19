@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE> User Friendly Input </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+User Friendly Input
+</H1>
+
+<A TARGET="_new" HREF="http://www.tptp.org/cgi-bin/SystemB4TPTP">
+<IMG SRC="DonutTesting.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> A Prize Winning Curie </H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('p1');return false;">
+     <EM>Name a member of the Curie family who has won two prizes</EM>
+     </A>
+     <SPAN ID="p1" style="display:none"><PRE>
+fof(who,conjecture,
+    ? [FullName,GivenName,Prize] :
+      ( is_familyName('Curie',FullName)
+      & has_WonPrize(FullName,Prize)
+      & is_givenName(GivenName,FullName)
+      & printonly(printall(nl,nl,GivenName,' won the ',Prize,nl)) ) ).</PRE>
+     </SPAN>
+</UL>
+
+<H3> Attempto Controlled English (ACE) </H3>
+<UL>
+<LI> A controlled (unambiguous) natural language
+<LI> Service for converting ACE to TPTP, at 
+     <A HREF="http://attempto.ifi.uzh.ch/site/description/">University 
+     of Zurich</A>
+<LI> <A HREF="" onClick="hideshow('p2');return false;">
+     <EM>Name a person who is a member of the n:Curie-family and who 
+     wins a prize A and a prize B that is not the prize A.</EM>
+     </A>
+     <SPAN ID="p2" style="display:none"><PRE>
+fof(name,axiom,(
+    ? [A,B,C,D,E,F,G] :
+      ( person(A)
+      & member(B)
+      & relation(B,of,C)
+      & 'Curie-family'(C)
+      & A = B
+      & prize(D)
+      & has_part(G,D)
+      & predicate2(E,win,A,G)
+      & prize(F)
+      & F != D
+      & has_part(G,F)
+      & object(G,na,countable,na,eq,2) ) )).</PRE>
+     </SPAN>
+<LI> Postprocess to "natural" TPTP form (not integrated)
+<LI> <A HREF="http://www.tptp.org/cgi-bin/SystemB4TPTP">Online Access</A>
+</UL>
+
+<H3> AlexSI </H3>
+<UL>
+<LI> Web form for building conjectures in TPTP format (by Alex)
+<LI> Reads external specifications to build forms' menus
+<LI> Limited logical structure (essentially CNF)
+<LI> Option to call SPASS-XDB
+<LI> <A HREF="http://www.tptp.org/cgi-bin/AleXSI">Online Access</A>
+</UL>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

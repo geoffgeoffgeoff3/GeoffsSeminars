@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE> SPASS-XDB </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+SPASS-XDB
+</H1>
+
+<IMG NAME=image SRC="FishyLogo.gif" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Implements the <A HREF="ConcreteSystem.html">Concrete System Design</A> </H3>
+
+<H3> External Source <TT>struct</TT> </H3>
+<UL>
+<LI> Details of external process
+<LI> Unnamed pipes for communication
+<LI> DeliveryPending flag
+<LI> Queue of requests, ordered by weight and groundness
+<LI> List of previous requests
+</UL>
+
+<H3> Relaxation of Constraints </H3>
+<UL>
+<LI> Ordered resolution if none from automode
+<LI> Sort inferencing disabled (for now)
+<LI> External <TT>ChosenClause</TT> may resolve with any 
+     <TT>WorkedOff</TT> literal
+     (<A HREF="RelaxationExamples.html#ExternalChosenClause">why?</A>)
+<LI> Selected literal matching external, but cannot enqueue requests,
+     selects all literals
+     (<A HREF="RelaxationExamples.html#ExternalSelectedLiteral">why?</A>)
+</UL>
+
+<H3> TPTP parser integral to implementation </H3>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

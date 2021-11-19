@@ -1,0 +1,84 @@
+%------------------------------------------------------------------------------
+cnf(5,axiom,
+    ( s__subclass(s__BinaryRelation,s__Relation) )).
+
+cnf(6,axiom,
+    ( s__subclass(s__TernaryRelation,s__Relation) )).
+
+cnf(8,axiom,
+    ( ~ s__instance(X,Y)
+    | ~ s__subclass(Y,Z)
+    | s__instance(X,Z) )).
+
+cnf(9,axiom,
+    ( s__instance(s__surfaceArea__m,s__BinaryRelation) )).
+
+cnf(14,axiom,
+    ( s__instance(s__surfaceToVolumeRatio__m,s__BinaryRelation) )).
+
+cnf(22,axiom,
+    ( s__instance(s__exchangeRate__m,s__TernaryRelation) )).
+
+cnf(50,axiom,
+    ( ~ s__instance(X,s__Relation)
+    | ~ s__instance(Y,s__Relation)
+    | ~ s__proportional(Y,X)
+    | s__proportional(X,Y) )).
+
+cnf(51,axiom,
+    ( ~ s__instance(X,s__Relation)
+    | ~ s__instance(Y,s__Relation)
+    | ~ s__instance(Z,s__Relation)
+    | ~ s__proportional(Z,Y)
+    | ~ s__proportional(Y,X)
+    | s__proportional(Z,X) )).
+
+cnf(52,axiom,
+    ( s__proportional(s__surfaceToVolumeRatio__m,s__exchangeRate__m) )).
+
+cnf(53,axiom,
+    ( s__proportional(s__surfaceArea__m,s__surfaceToVolumeRatio__m) )).
+
+cnf(56,axiom,
+    ( ~ s__instance(X,s__Relation)
+    | ~ s__instance(Y,s__Relation)
+    | ~ s__attribute(Y,s__Important)
+    | ~ s__proportional(Y,X)
+    | s__attribute(X,s__Important) )).
+
+cnf(57,axiom,
+    ( s__attribute(s__exchangeRate__m,s__Important) )).
+
+fof(prove,conjecture,(
+    s__attribute(s__surfaceArea__m,s__Important) )).
+
+cnf(58,negated_conjecture,
+    ( ~ s__attribute(s__surfaceArea__m,s__Important) ),
+    inference('NEGATE',[status(cth)],[prove])).
+
+cnf(59,plain,
+    ( s__instance(s__exchangeRate__m,s__Relation) ),
+    inference('HYPERRESOLVE',[status(thm)],[8,22,6])).
+
+cnf(60,plain,
+    ( s__instance(s__surfaceArea__m,s__Relation) ),
+    inference('HYPERRESOLVE',[status(thm)],[8,9,5])).
+
+cnf(61,plain,
+    ( s__instance(s__surfaceToVolumeRatio__m,s__Relation) ),
+    inference('HYPERRESOLVE',[status(thm)],[8,14,5])).
+
+cnf(64,plain,
+    ( s__proportional(s__surfaceArea__m,s__exchangeRate__m) ),
+    inference('HYPERRESOLVE',[status(thm)],[51,61,59,60,53,52])).
+
+cnf(68,plain,
+    ( s__proportional(s__exchangeRate__m,s__surfaceArea__m) ),
+    inference('HYPERRESOLVE',[status(thm)],[50,64,59,60])).
+
+cnf(71,plain,
+    ( $false ),
+    inference('REWRITE',[status(thm)],[inference('HYPERRESOLVE',[status(thm)],[56,68,60,59,57]),58])).
+
+%------------------------------------------------------------------------------
+

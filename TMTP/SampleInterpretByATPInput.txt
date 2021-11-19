@@ -1,0 +1,35 @@
+%------------------------------------------------------------------------------
+% SZS output start Interpretation
+%------ Negative definition of lives
+fof(lives_defn,axiom,(
+    ! [X0] : ( ~ lives(X0) <=> $false ) )).
+
+%------ Positive definition of killed
+fof(killed_defn,axiom,(
+    ! [X0,X1] :
+      ( killed(X0,X1)
+    <=> ( X0 = agatha & X1 = agatha ) ) )).
+
+%------ Positive definition of richer
+fof(richer_defn,axiom,(
+    ! [X0,X1] :
+      ( richer(X0,X1)
+    <=> ( X0 = butler & X1 = agatha ) ) )).
+
+%------ Negative definition of hates
+fof(hates_defn,axiom,(
+    ! [X0,X1] :
+      ( ~ hates(X0,X1)
+    <=> ( ( X0 = agatha & X1 = butler )
+        | ( X0 = butler & X1 = butler )
+        | X0 = charles
+        | ( X1 = butler & X0 != butler ) ) ) )).
+% SZS output end Interpretation
+%------------------------------------------------------------------------------
+% SZS output start ListOfFormulae
+%----Formulae to evaluate
+fof(prove_true, conjecture, ? [X] : killed(X,X) ).    %----TRUE
+ 
+fof(prove_false,conjecture, hates(butler,butler) ).   %----FALSE
+% SZS output end ListOfFormulae
+%------------------------------------------------------------------------------

@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE> Prototype Algorithms </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Prototype Algorithms </H1>
+
+<IMG SRC="Algorithm.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<UL>
+<LI> Principles
+     <UL>
+     <LI> In the context of a saturation prover
+     <LI> Minimize disruption to normal operation
+     </UL>
+<P>
+<LI> Synchronous algorithm<PRE>
+Store external data references in separate area
+In the saturation loop
+    If a negative literal is selected
+        Foreach matching external reference
+            Query external database
+            Wait for external data to be delivered
+            Add returned data to active list
+    Continue normal processing </PRE>
+<P>
+<LI> Asynchronous algorithm<PRE>
+Store external data references in separate area
+In the saturation loop
+    Add any delivered external data in passive list
+    If a negative literal is selected
+        Foreach matching external reference
+            Query external database
+    Continue normal processing </PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

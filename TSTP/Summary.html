@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE> The TSTP Solution Library </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'TAT.GIF';
+  images[1]     = new Image();
+  images[1].src = 'TSTP.GIF';
+
+  function putImage (index) {
+      if (myIndex == 0)
+          myIndex = 1;
+      else myIndex = 0;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The TSTP Solution Library </H1>
+
+<A HREF="" onClick="putImage(1);return false">
+<IMG NAME="image" SRC="TAT.GIF" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> A Library of Solutions </H3>
+<UL>
+<LI> Aim
+     <UL>
+     <LI> A simple, unambiguous, source and reference mechanism 
+     <LI> Set standards for ATP system output
+     <LI> Improve interpretation of ATP systems' output 
+     </UL>
+     <P>
+<LI> Motivation
+     <UL>
+     <LI> System development by solution analysis
+     <LI> Solution processing by standard tools
+     <LI> System certification by solution verification
+     </UL>
+</UL>
+
+<H3> Features </H3>
+<UL>
+<LI> 70+ systems' TPTP derivations and models 
+<LI> Resources beyond <A HREF="../Evaluate/PPP.html">systems' PPP</A>s
+<LI> <A HREF="EP.THM-CRf.s.txt">Documented</A>:
+     System,
+     Resources,
+     SZS result and output,
+     Statistics
+<LI> <A HREF="EP.THM-CRf.s.txt">Human and computer readable</A>:
+     Name, 
+     Role, 
+     Logic,
+     Source and user annotations
+<LI> A key - the <A HREF="../TPTPLanguage/Summary.html">TPTP language</A>
+</UL>
+
+<H3> Browsing available
+     <A TARGET="_blank" HREF="http://www.tptp.org/TSTP">online</A> at
+     <TT>www.tptp.org/TSTP</TT> </H3>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

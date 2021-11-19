@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE> Binary Search </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Binary Search </H1>
+
+<A HREF="YiBSGIF.html"><IMG SRC="YiBS.GIF" ALIGN=RIGHT WIDTH=50%></A>
+
+<H3> Algorithm </H3>
+
+<UL>
+<LI> Provide axioms with relevance measure
+<LI> Divide formulae into top and bottom parts
+<LI> Call ATP system using the top part
+     <UL>
+     <LI> If proof found, hoorah
+     <LI> If proof impossible, add top of bottom
+     <LI> If timeout
+          <UL>
+          <LI> Optimistic mode, try top of top
+          <LI> Pessimistic mode, add top of bottom
+          </UL>
+     </UL>
+</UL>
+
+<H3> Dividing Strategies </H3>
+
+<UL>
+<LI> At the median - get half the formulae
+<LI> At 0.5 - get formulae "more than half relevant"
+<LI> At the (geometric) average - get formulae "above average relevance"
+<LI> &Sigma;top-relevancies = &Sigma;bottom-relevancies 
+     - get "half the relevance"
+<LI> &Sigma;top-relevancies = &Sigma;(1 - bottom-relevancies) 
+     - balances relevance against irrelevance
+<LI> &Sigma;(1 - top-relevance) = &Sigma;bottom-relevancies
+     - balances irrelevance against relevance.
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

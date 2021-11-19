@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE> Reification </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Reification </H1>
+
+<IMG SRC="Squish.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+
+<H3> Fluents are Truth Functional </H3>
+<UL>
+<LI> Example: <TT>waterLevel(2)</TT>
+
+     <P>
+<LI> Event calculus uses <TT>holdsAt</TT>/2 to situate fluents in 
+     time, e.g.,<BR>
+     <TT>holdsAt(waterLevel(2),3)</TT>
+<LI> <TT>waterLevel(2)</TT> has been <EM>reified</EM> to a term
+</UL>
+
+<H3> Sorts and Reification </H3>
+<UL>
+<LI> Three sorts: <TT><EM>fluent</EM></TT>, <TT><EM>event</EM></TT>, 
+     <TT><EM>time</EM></TT>
+<LI> DEC predicates and functions have a sort signature,<BR>
+     e.g., <TT>holdsAt(<EM>fluent</EM>,<EM>time</EM>)</TT>
+
+     <P>
+<LI> Sort conformance ensured by structure of first-order system
+     (non-explicit)
+
+     <P>
+<LI> Does not allow deduction of negation of anomalies, e.g.,<BR>
+     <TT>~holdsAt(tapOn,waterLevel(3))</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

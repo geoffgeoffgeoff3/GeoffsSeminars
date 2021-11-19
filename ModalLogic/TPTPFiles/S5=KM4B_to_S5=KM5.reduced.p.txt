@@ -1,0 +1,87 @@
+%------------------------------------------------------------------------------
+fof(modus_ponens,axiom,
+    ( modus_ponens
+  <=> ! [X,Y] : 
+        ( ( is_a_theorem(X)
+          & is_a_theorem(implies(X,Y)) )
+       => is_a_theorem(Y) ) )).
+
+fof(modus_tollens,axiom,
+    ( modus_tollens
+  <=> ! [X,Y] : is_a_theorem(implies(implies(not(Y),not(X)),implies(X,Y))) )).
+
+fof(implies_1,axiom,
+    ( implies_1
+  <=> ! [X,Y] : is_a_theorem(implies(X,implies(Y,X))) )).
+
+fof(implies_2,axiom,
+    ( implies_2
+  <=> ! [X,Y,Z] : is_a_theorem(implies(implies(X,implies(Y,Z)),implies(implies(X,Y),implies(X,Z)))) )).
+
+fof(not_is_idempotent,axiom,
+    ( not_is_idempotent
+  <=> ! [X] : not(not(X)) = X )).
+
+fof(all_hilbert,axiom,
+    ( all_hilbert
+   => ( modus_ponens
+      & modus_tollens
+      & implies_1
+      & implies_2
+      & not_is_idempotent ) )).
+
+fof(necessitation,axiom,
+    ( necessitation
+  <=> ! [X] : 
+        ( is_a_theorem(X)
+       => is_a_theorem(necessarily(X)) ) )).
+
+fof(axiom_K,axiom,
+    ( axiom_K
+  <=> ! [X,Y] : is_a_theorem(implies(necessarily(implies(X,Y)),implies(necessarily(X),necessarily(Y)))) )).
+
+fof(op_possibly,axiom,
+    ( op_possibly
+   => ! [X] : possibly(X) = not(necessarily(not(X))) )).
+
+fof(op_implies,axiom,
+    ( op_implies
+   => ! [X,Y] : implies(X,Y) = not(and(X,not(Y))) )).
+
+fof(op_or,axiom,
+    ( op_or
+   => ! [X,Y] : or(X,Y) = not(and(not(X),not(Y))) )).
+
+fof(all_operators,axiom,
+    ( all_operators
+   => ( op_possibly
+      & op_implies
+      & op_or
+      ) )).
+
+fof(system_M,axiom,
+    ( all_hilbert
+    & necessitation
+    & axiom_K
+    & all_operators )).
+
+fof(axiom_4,axiom,
+    ( axiom_4
+  <=> ! [X] : is_a_theorem(implies(necessarily(X),necessarily(necessarily(X)))) )).
+
+fof(axiom_B,axiom,
+    ( axiom_B
+  <=> ! [X] : is_a_theorem(implies(X,necessarily(possibly(X)))) )).
+
+fof(system_KM4B,axiom,
+    ( axiom_4
+    & axiom_B )).
+
+fof(axiom_5,axiom,
+    ( axiom_5
+  <=> ! [X] : is_a_theorem(implies(possibly(X),necessarily(possibly(X)))) )).
+
+%----E---0.82dev070 says Theorem - CPU = 7.0 on Walkabout
+fof(axiom_5,conjecture,(
+    axiom_5 )).
+%------------------------------------------------------------------------------

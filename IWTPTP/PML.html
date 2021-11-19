@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE> Proof Markup Language  </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Proof Markup Language
+</H1>
+
+<IMG NAME="image" SRC="PML.GIF" ALIGN=RIGHT WIDTH=50%>
+
+<H3> Overview </H3>
+<UL>
+<LI> Interlingua for representing and sharing explanations
+<LI> Sources ...  web-based Q&A, text analysis, logical reasoning,
+     task processors, web services, ML, etc.
+<LI> 3 modules
+     <UL>
+     <LI> Provenance - records properties of entities used
+     <LI> Justification - encodes justifications for conclusions
+     <LI> Trust - explains belief assertions
+     </UL>
+<LI> PML classes are OWL classes, hence XML
+     (<A HREF="XMLSucks.html">personal opinion</A>)
+</UL>
+
+<H3> NodeSets and InferenceSteps</H3>
+<UL>
+<LI> URI identifier
+<LI> Conclusion
+<LI> Language information
+<LI> Any number of <STRONG>inference steps</STRONG> justifying the conclusion
+     <UL>
+     <LI> Antecedent NodeSets
+     <LI> Inference rule and engine
+     <LI> Variable bindings, discharged assumptions
+     <LI> Original sources, time stamp
+     </UL>
+</UL>
+
+<H3> Multiple Proofs </H3>
+<UL>
+<LI> Multiple inference steps capture multiple proofs
+<LI> Single proofs can be extracted
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

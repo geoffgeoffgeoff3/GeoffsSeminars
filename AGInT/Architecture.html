@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE> AGInT Architecture </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> AGInT Architecture </H1>
+
+<A HREF="AGInTArchGIF.html">
+<IMG SRC="AGInTArch.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+</A>
+
+<H3> Macro Process </H3>
+<UL>
+<LI> Generate logical consequences from axioms and interesting theorems
+<LI> Double filtering to remove uninteresting consequences
+<LI> Rank the interesting theorems
+<LI> Postprocess with stored interesting theorems
+<LI> Store the surviving interesting theorems
+</UL>
+
+<A HREF="SoSGIF.html">
+<IMG SRC="SoS.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+</A>
+
+<H3> Set-of-Support </H3>
+<UL>
+<LI> All formulae descend from SoS
+<LI> Axioms in first SoS<BR>
+     Nothing else
+<LI> New interesting theorems in subsequent SoS's<BR>
+     Axioms + old interesting theorems in non-SoS
+<LI> Produces focussed search deeper into search space
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

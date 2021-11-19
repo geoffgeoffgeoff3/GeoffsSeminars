@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE> Example Interpretation </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Example Interpretation </H1>
+
+<IMG SRC="JohnMcCarthy.JPG" BORDER=0 ALIGN=RIGHT WIDTH=20%>
+
+<H3> <A HREF="ExampleInterpretationProblem.html">Example Problem</A> </H3>
+
+<H3> Paradox's Finite Model </H3>
+<PRE>
+fof(equality_lost,fi_domain,
+    ! [X] : ( X = "a" | X = "f" | X = "john" | X = "got_a")  ).
+
+fof(equality_lost,fi_functors,
+    ( a = "a"  & f = "f"  & john = "john"
+    & grade("a") = "f"    & grade("f") = "a"
+    & grade("john") = "f" & grade("got_a") = "a" )  ).
+
+fof(equality_lost,fi_predicates,
+    ( human("john")                 & human("got_a")
+    & ~ human("a")                  & ~ human("f") 
+    & ~ created_equal("a","a")      & ~ created_equal("a","f")
+    & ~ created_equal("a","john")   & ~ created_equal("a","got_a")
+    & ~ created_equal("f","a")      & ~ created_equal("f","f")
+    & ~ created_equal("f","john")   & ~ created_equal("f","got_a")
+    & ~ created_equal("john","a")   & ~ created_equal("john","f")
+    & created_equal("john","john")  & created_equal("john","got_a")
+    & ~ created_equal("got_a","a")  & ~ created_equal("got_a","f")
+    & created_equal("got_a","john") & created_equal("got_a","got_a") ) ).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

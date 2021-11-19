@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE> First-Order Logic with bOoleans </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> First-Order Logic (FOL) + bOoleans = FOOL </H1>
+
+<IMG SRC="FOOL.gif" BORDER=0 ALIGN=RIGHT WIDTH=30%>
+
+<H3> Boolean Terms and Formulae </H3>
+<UL>
+<LI> Boolean variables as formulae and Formulae (including variables) as terms
+<LI> Example: <EM>&forall;X:bool &forall;Y:bool (imply(X,Y) &harr; (&not;X &or; Y))</EM>
+</UL>
+
+<H3> Tuples </H3>
+<UL>
+<LI> Tuple types and Tuple terms
+<LI> Example: <EM>(&#8477;,&#8477;)</EM> and <EM>(2.3,-6.6)</EM>
+</UL>
+
+<H3> Conditional Expressions </H3>
+<UL>
+<LI> Expressions of the form <EM>if &phi; then s else t</EM>
+<LI> Example term: <EM>&forall;X:&#8484; &forall;Y:&#8484; (max(X,Y) = if X &ge; Y then X else Y)</EM>
+<LI> Example formula: <EM>&forall;X:&#8484; &forall;Y:&#8484; (if max(X,Y) = X then X &ge; Y else Y &ge; X)</EM>
+</UL>
+
+<H3> Let Expressions </H3>
+<UL>
+<LI> Expressions of the form <EM>let D<SUB>1</SUB>;...;D<SUB>k</SUB> in t</EM>
+<LI> Example term: <EM>&forall;X:&#8484; &forall;Y:&#8484; let (max(X,Y) = if X &ge; Y then X else Y) in p(max(max(a,b),c))</EM>
+<LI> Example formula: <EM>&forall;X:bool &forall;Y:bool let (imply(X,Y) = &not;X &or; Y) in (imply(a,b) &and; imply(b,a))</EM>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

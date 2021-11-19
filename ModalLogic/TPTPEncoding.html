@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP Encoding </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TPTP Encoding </H1>
+
+<IMG SRC="TSO.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+
+<H3> TPTP Syntax </H3>
+<UL>
+<LI> Improved syntax introduced in <A HREF="../TPTP">TPTP</A> v3.0.0
+<LI> Annotated formulae as building blocks
+     <UL>
+     <LI> Language
+     <LI> Name, type, and the logical formula
+     <LI> Optional source and user annotations
+     </UL>
+</UL>
+
+<H3> Definitional Appproach </H3>
+<UL>
+<LI> All formulae defined with <TT><=></TT>
+<LI> Allows easy reference to formulae
+<LI> Example:
+     <PRE>fof(axiom_K,axiom,
+    ( axiom_K
+  <=> ! [X,Y] : is_a_theorem(implies(necessarily(implies(X,Y)),
+implies(necessarily(X),necessarily(Y))))  )).</PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE> A Meta-System </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+A Meta-System
+</H1>
+
+<UL>
+<LI> Load problem
+<LI> Execute ATP system
+<LI> Write status
+<LI> Command line<BR>
+     <TT>my_tpi_system Meta.tpi 'E---1.8/eprover --auto $getgroups(tpi)' Simple.p</TT>
+</UL>
+
+<PRE>
+    tpi(1,input,$getargv(1)).
+    tpi(2,execute,'SZS_VAR' = '$getargv(0)').
+    tpi(3,write,'The SZS status is' & $getenv('SZS_VAR')).
+    tpi(4,exit,exit).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

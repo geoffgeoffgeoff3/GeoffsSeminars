@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP History </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'History.jpg';
+  images[1]     = new Image();
+  images[1].src = '../CASC/SuttnerHair.jpg';
+  images[2]     = new Image();
+  images[2].src = 'GeoffAndChris.jpg';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 3;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TPTP History </H1>
+
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="History.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Conception </H3>
+<UL>
+<LI> With Christian Suttner from TU M&uuml;nchen
+     <UL>
+     <LI> They had the ideas
+     <LI> I had infrastructure
+     </UL>
+<LI> Alpha and Beta releases in 1992-1993
+<LI> First released <TT>Fri Nov 12 15:30:54 +1000 1993</TT>
+</UL>
+
+<H3> TPTP Releases </H3>
+<UL>
+<LI> v.<EM>Version</EM>.<EM>Edition</EM>.<EM>Patch</EM>
+<LI> Version - New features
+<LI> Edition - New problems
+<LI> Patch - Bugfixes
+</UL>
+
+<H3> TPTP Languages </H3>
+<UL>
+<LI> 1993 - v1.0.0 - CNF
+<LI> 1997 - v2.0.0 - FOF
+<LI> 2004 - v3.0.0 - New syntax
+<LI> 2009 - v4.0.0 - TH0
+<LI> 2010 - v5.0.0 - TF0
+<LI> 2013 - v6.0.0 - TF1
+<LI> 2017 - v7.0.0 - TH1
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

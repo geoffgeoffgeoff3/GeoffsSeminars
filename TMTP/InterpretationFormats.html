@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE> Interpretation Formats </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Model3.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Model3H.jpg';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Interpretation Formats
+</H1>
+
+<IMG NAME="image" SRC="Model3.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Herbrand Interpretations </H3>
+<UL>
+<LI> Set of TPTP formulae
+<LI> <A HREF="SampleHerbrandModel.txt">Sample Herbrand Model</A>
+     <UL>
+     <LI> <A HREF="" onClick="putImage();return false">
+          <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A>
+     </UL>
+<LI> Saturations are a special case
+     <UL>
+     <LI> Guarantees the existence of a Herbrand model, not uniquely
+     <LI> Interpreting formulae might be difficult, inefficient, impossible!
+     <LI> <A HREF="SampleSaturation.txt">Sample Saturation</A>
+     </UL>
+</UL>
+
+<H3> Finite Interpretations </H3>
+<UL>
+<LI> Domain of distinct elements
+<LI> Total interpretation of functors and predicates
+<LI> <A HREF="SampleFiniteModel.txt">Sample Finite Model</A>
+</UL>
+
+<H3> Integer and Real Interpretations </H3>
+<UL>
+<LI> <TT>$int</TT> and <TT>$real</TT> as domains
+<LI> <A HREF="SampleIntegerModel.txt">Sample Integer Model</A>
+<LI> <A HREF="SampleRealModel.txt">Sample Real Model</A>
+</UL>
+
+<H3> Multiple Interpretations </H3>
+<UL>
+<LI> Uninterpreted functor is interpreted as each domain element
+<LI> Uninterpreted predicate is interpreted as <TT>$true</TT> and <TT>$false</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

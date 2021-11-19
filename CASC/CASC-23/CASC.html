@@ -1,0 +1,81 @@
+<TITLE> CASC-23 </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = '../T-Shirt-23.GIF'; 
+  images[1]     = new Image();
+  images[1].src = 'HendrixWoodstock.jpg';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }  
+  //-->
+</SCRIPT> 
+<!------------------------------------------------------------------------>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> CASC-23 </H1>
+<H2> The CADE-23 ATP System Competition </H2>
+</CENTER>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME='image' SRC="../T-Shirt-23.GIF" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<UL>
+<LI> <A HREF="../History.html">History</A>
+<LI> <A HREF="../Aims.html">Aims and Motivations</A>
+<P>
+<LI> <A HREF="Divisions.html">Divisions</A>
+<LI> <A HREF="Details.html">CASC-23</A>
+<LI> <A HREF="Entrants.html">Entrants</A>
+<P>
+<LI> <A HREF="" onClick="hideshow('list1');return false;">
+     Results ... </A>
+     <SPAN ID='list1' style="display:none">
+     <UL>
+     <LI> <A HREF="ResultsSummary.html">Overall Results</A>
+     <LI> <A HREF="LTBResults.html">LTB Results</A>
+     <LI> Jasmin Blanchette - ISA prize award (here's <A HREF="http://www.technologyreview.com/article/37206/">why</A>)
+     <LI> Adam Pease - SMO prize award
+     </UL>
+     </SPAN>
+<LI> <A HREF="" onClick="hideshow('list2');return false;">
+     Developer presentations ... </A>
+     <SPAN ID='list2' style="display:none">
+     <UL>
+     <LI> Chad Brown - how <A HREF="Satallax.pdf">Satallax</A> got so 
+          high in the order
+     <LI> Orkunt Sabuncu - was <A HREF="FIMO.pdf">FIMO</A> was almost a Paradox?
+     <LI> Uwe Waldmann - why <A HREF="SPASS+T.pdf">SPASS+T</A> is more fun than Z3
+     <LI> Stephan Schulz - how <A HREF="E.pdf">E</A> slayed the Vampire
+     <LI> Andrei Voronkov - why Vampires like LTB blood
+     </UL>
+     </SPAN>
+<P>
+<LI> <A HREF="Thanks.html">Thanks</A>
+<LI> <A HREF="Conclusion.html">Conclusion</A>
+<LI> Questions ... for me or the system developers
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>

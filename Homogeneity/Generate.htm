@@ -1,0 +1,185 @@
+<HTML>
+<HEAD>
+<TITLE> Generating Homogeneous Sets </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Generating Homogeneous Sets </H1>
+
+<H3>  </H3>
+<UL>
+<LI> Test on entire problem set, discard insignificant cliques
+     <UL>
+     <LI> Seven significant cliques with threshold 0.125
+     </UL>
+<LI> Compare with SPCs
+     <UL>
+     <LI> SPCs inside cliques => Homogeneous SPC
+     <LI> SPC over multiple cliques => Heterogeneous SPC
+     </UL>
+<LI> Measure ratio of intersection with size of SPC
+</UL>
+
+<CENTER>
+<TABLE>
+<TR> <TH ALIGN=LEFT> SPC
+     <TH COLSPAN=7> Homogeneous Subset
+     <TH ALIGN=RIGHT> Problems
+</TR>
+<TR> <TD>
+     <TH> 1
+     <TH> 2
+     <TH> 3
+     <TH> 4
+     <TH> 5
+     <TH> 6
+     <TH> 7
+     <TD>
+<TR> <TD ALIGN=LEFT> <TT>SAT_EPR_CNF</TT>   
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> <STRONG>0.86</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 139 
+<TR> <TD ALIGN=LEFT> <TT>SAT_EPR_FOF</TT>   
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> <STRONG>0.99</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 83 
+<TR> <TD ALIGN=LEFT> <TT>SAT_RFO_CNF</TT>   
+     <TD ALIGN=RIGHT> 0.03 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> <STRONG>0.57</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 88 
+<TR> <TD ALIGN=LEFT> <TT>SAT_RFO_FOF</TT>   
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> <STRONG>1.00</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT>  9 
+<TR> <TD ALIGN=LEFT> <TT>THM_EPR_CNF</TT>   
+     <TD ALIGN=RIGHT> <STRONG>0.81</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.15 
+     <TD ALIGN=RIGHT> 401 
+<TR> <TD ALIGN=LEFT> <TT>THM_EPR_FOF</TT>   
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> <STRONG>1.00</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 235 
+<TR> <TD ALIGN=LEFT> <TT>_EQU_FOF</TT>      
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> <STRONG>0.96</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT>  323 
+<TR> <TD ALIGN=LEFT> <TT>_NEQ_FOF</TT>      
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> <STRONG>1.00</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT>  21 
+<TR> <TD ALIGN=LEFT> <TT>_NEQ_CNF_HRN</TT> 
+     <TD ALIGN=RIGHT> <STRONG>0.81</STRONG>
+     <TD ALIGN=RIGHT> 0.08 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.03 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.01 
+     <TD ALIGN=RIGHT> 0.01 
+     <TD ALIGN=RIGHT> 379 
+<TR> <TD ALIGN=LEFT> <TT>_NEQ_CNF_NHN</TT> 
+     <TD ALIGN=RIGHT> <STRONG>0.77</STRONG>
+     <TD ALIGN=RIGHT> 0.08 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.06 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.01 
+     <TD ALIGN=RIGHT> 430 
+<TR> <TD ALIGN=LEFT> <TT>_SEQ_CNF_HRN</TT> 
+     <TD ALIGN=RIGHT> <STRONG>0.78</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.13 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.03 
+     <TD ALIGN=RIGHT> 381 
+<TR> <TD ALIGN=LEFT> <TT>_SEQ_CNF_NHN</TT> 
+     <TD ALIGN=RIGHT> <STRONG>0.88</STRONG>
+     <TD ALIGN=RIGHT> 0.05 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.02 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.02 
+     <TD ALIGN=RIGHT> 1194 
+<TR> <TD ALIGN=LEFT> <TT>_PEQ_CNF_NUE</TT> 
+     <TD ALIGN=RIGHT> <STRONG>0.80</STRONG>
+     <TD ALIGN=RIGHT> 0.03 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.04 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.05 
+     <TD ALIGN=RIGHT> 122 
+<TR> <TD ALIGN=LEFT> <TT>_PEQ_CNF_UEQ</TT> 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> <STRONG>0.85</STRONG>
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 0.00 
+     <TD ALIGN=RIGHT> 424 
+<TR> <TH ALIGN=LEFT> Problems      
+     <TH ALIGN=RIGHT> 2418 
+     <TH ALIGN=RIGHT>  128 
+     <TH ALIGN=RIGHT>  359 
+     <TH ALIGN=RIGHT>  119 
+     <TH ALIGN=RIGHT>  656 
+     <TH ALIGN=RIGHT>  174 
+     <TH ALIGN=RIGHT>  118 
+     <TH ALIGN=RIGHT> 4229
+</TABLE>
+</CENTER>
+
+<UL>
+<LI> Techniques good for most CNF theorems
+<LI> Techniques good for most FOF problems
+<LI> Heterogeneity in <TT>SAT_RFO_CNF</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

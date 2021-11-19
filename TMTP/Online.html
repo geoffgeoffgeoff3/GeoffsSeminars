@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE> TMTP Online </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Model7.jpg';
+  images[1]     = new Image();
+  images[1].src = 'TMTPOnline.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TMTP Online </H1>
+
+<A TARGET="_blank" HREF="http://www.tptp.org/TMTP">
+<IMG NAME="image" SRC="Model7.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Web Page at <TT>www.tptp.org/TMTP</TT> 
+     <A HREF="" onClick="putImage();return false">
+     <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A> </H3>
+
+<H3> Model Browser </H3>
+<UL>
+</UL>
+
+<H3> SZS Ontology </H3>
+<UL>
+</UL>
+
+<H3> System on TMTP </H3>
+<UL>
+<LI> Sample <A HREF="SampleInterpretByATPInput.txt">InterpretByATP</A> input
+<LI> Sample <A HREF="SampleGMVInput.txt">GMV</A> input
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

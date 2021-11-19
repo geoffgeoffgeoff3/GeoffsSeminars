@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE> What is Automated Reasoning? </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'WhatIsATP.gif';
+  images[1]     = new Image();
+  images[1].src = 'WorldOfAR.jpg';
+  images[2]     = new Image();
+  images[2].src = 'THMPrf.gif';
+  images[3]     = new Image();
+  images[3].src = 'THMRef.gif';
+  images[4]     = new Image();
+  images[4].src = 'SATMod.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 5;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> What is Automated Reasoning? </H1>
+
+<A HREF="" onClick="putImage();return false">
+<IMG NAME="image" SRC="WhatIsATP.gif" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> The World Has Problems </H3>
+<UL>
+<LI> Translate world problem to logic
+     <UL>
+     <LI> <EM>Axioms</EM> describe what you know about the world
+     <LI> <EM>Conjecture</EM> describes what need to be solved
+     </UL>
+<LI> Use Automated Reasoning to get a logic solution
+     <UL>
+     <LI> <EM>Theorem provers</EM> find proofs
+     <LI> <EM>Model finders</EM> finite countermodels
+     <LI> <EM>Model finders</EM> check axioms are consistent
+     </UL>
+<LI> Translate logic solution to world
+     <UL>
+     <LI> <EM>Proof</EM> of the conjecture describes the solution
+     <LI> <EM>Countermodel</EM> is an example of why there is no solution
+     </UL>
+</UL>
+
+<H3> <A HREF="MotivatingExample.html">A Motivating Example</A> </H3>
+
+<H3> Automated Reasoning Systems </H3>
+<UL>
+<LI> Computer programs that (try to) determine if
+     <UL>
+     <LI> <FONT COLOR=GREEN>
+          A conjecture <TT>C</TT> is a <EM>logical consequence</EM> of
+          a set of axioms <TT>Ax</TT>
+          </FONT>
+     </UL>
+     The derivation of conclusions that follow inevitably from facts.
+<P>
+<LI> Computer programs that (try to) determine if
+     <UL>
+     <LI> <FONT COLOR=GREEN>
+          A set of statements <TT>S</TT> is <EM>satisfiable</EM>
+          </FONT>
+     </UL>
+     Establishing consistency and non-logical consequence
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

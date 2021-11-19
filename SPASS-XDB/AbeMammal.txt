@@ -1,0 +1,215 @@
+% START OF SYSTEM OUTPUT
+
+--------------------------SPASS-START-----------------------------
+Input Problem:
+1[0:Inp] ||  -> s__instance(s__Human,s__SetOrClass)*.
+2[0:Inp] ||  -> s__subclass(s__Human,s__Hominid)*.
+3[0:Inp] ||  -> s__instance(s__Hominid,s__SetOrClass)*.
+4[0:Inp] ||  -> s__subclass(s__Hominid,s__Primate)*.
+5[0:Inp] ||  -> s__instance(s__Primate,s__SetOrClass)*.
+6[0:Inp] ||  -> s__subclass(s__Primate,s__Mammal)*.
+7[0:Inp] ||  -> s__instance(s__Mammal,s__SetOrClass)*.
+8[0:Inp] || s__instance(s__AbrahamLincoln,s__Mammal)* -> .
+9[0:Inp] || s__instance(U,s__SetOrClass)* s__instance(V,W)* s__subclass(W,U)* s__instance(W,s__SetOrClass)* -> s__instance(V,U)*.
+ This is a first-order Horn problem without equality.
+ This is a problem that has, if any, a finite domain model.
+ There are no function symbols.
+ The conjecture is ground.
+ Axiom clauses: 8 Conjecture clauses: 1
+ Inferences: IORe=1 IOFc=2 
+ Reductions: RFMRR=1 RBMRR=1 RObv=1 RUnC=1 RTaut=1 RFSub=1 RBSub=1 RCon=1 
+ Extras    : Input Saturation, Precedence Selection, No Splitting, Full Reduction,  Ratio: 2147483646, FuncWeight: 1, VarWeight: 1, PrefCon: 1
+ Precedence: nequal > div > id > xdb_ut > gdm_ut > regexp > look_different > s__instance > s__instance_ground > is_instance > is_instance_ground > s__representsInLanguage > s__capitalCity > capital_city > s__hasPopulation > s__birthdate > is_birthdate > s__familyName > is_familyName > s__givenName > is_givenName > s__hasWonPrize > has_WonPrize > s__weight > is_weight > mondial_country > mondial_city > s__mondial_city > mondial_countries_meet > s__mondial_countries_meet > birthPlace > movie_actor > lmdb_url > book > country_code > location > latlong > weather > with_weather > xchange > $is_int > $is_rat > $unequal > $less > $lesseq > $greater > $greatereq > $evaleq > s__subclass > twitteronly > twitter > printonly > print > english > yagosumo > number > dbpedia > linkedmdb > s__SetOrClass > s__Mammal > s__Primate > s__Hominid > s__Human > s__AbrahamLincoln
+ Ordering  : KBO
+Processed Problem:
+
+Worked Off Clauses:
+9[0:Inp] || s__subclass(U,V)* s__instance(W,U)* s__instance(U,s__SetOrClass)* s__instance(V,s__SetOrClass)* -> s__instance(W,V)*.
+1[0:Inp] ||  -> s__instance(s__Human,s__SetOrClass)*.
+3[0:Inp] ||  -> s__instance(s__Hominid,s__SetOrClass)*.
+5[0:Inp] ||  -> s__instance(s__Primate,s__SetOrClass)*.
+7[0:Inp] ||  -> s__instance(s__Mammal,s__SetOrClass)*.
+2[0:Inp] ||  -> s__subclass(s__Human,s__Hominid)*.
+4[0:Inp] ||  -> s__subclass(s__Hominid,s__Primate)*.
+6[0:Inp] ||  -> s__subclass(s__Primate,s__Mammal)*.
+Usable Clauses:
+8[0:Inp] || s__instance(s__AbrahamLincoln,s__Mammal)* -> .
+11[0:MRR:10.0,7.0] || s__instance(U,s__SetOrClass)* s__subclass(U,s__Mammal) s__instance(s__AbrahamLincoln,U)* -> .
+Using default external source yago_s__instance1
+Using default external source yago_s__instance2
+
+
+
+yago_s__instance2Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__AssassinatedAmericanPoliticiansClass),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__AssassinatedUnitedStatesPresidentsClass),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__Human),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__IllinoisLawyersClass),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__IllinoisPoliticiansClass),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__IllinoisRepublicansClass),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__Lawyer),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__President2),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__PresidentsOfTheUnitedStatesClass),answer_to(yago_s__instance2_Q6,[])).
+yago_s__instance2_Q6Receiving answer: fof(s__instance,answer,s__instance(s__AbrahamLincoln,s__UnionPoliticalLeadersClass),answer_to(yago_s__instance2_Q6,[])).
+% 10 wall clock seconds gone, waiting for system output
+outputSending question: fof(yago_s__instance1_Q12,question,? [V1] : s__instance(V1,s__Human),unknown,[xdb(limit,number(100))]).
+100Receiving answer: fof(s__instance,answer,s__instance(s__Nikolaas_U20_Tinbergen,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Jean_U20_Baptiste_U20_Michel_U20_Bucquet,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Schewiakoff,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__W_U20_Jones,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Charles_U20_A_U20_Young,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__F_U20_Wheeler_U20_Loomis,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Edward_U20_D_U20_Lazowska,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Patrick_U20_Winston,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__P_U20_Kohler,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Michael_U20_Herman,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Shokichi_U20_Iyanaga,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Martyn_U20_Raymond_U20_Christian_U20_Symons,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__John_U20_R_U20_Murlin,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Franklin_U20_D_U20_Keim,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Jack_U20_B_U20_Dennis,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Alan_U20_Portis,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Prof_U20_Joseph_U20_Henry,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__George_U20_Darmois,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Waldemar_U20_Lindgren,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Erwin_U20_von_U20_Beckerath,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Richard_U20_Hubert_U20_Bruck,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__I_U20_A_U20_Campbell,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Robert_U20_F_U20_Mozley,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Yavuz_U20_Nutku,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Emil_U20_Dovifat,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Robert_U20_L_U20_Carroll,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Gisbert_U20_Hasenjaeger,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Brian_U20_Fitzgerald,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Wilson_U20_E_U20_Singletary,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__John_U20_S_U20_Waugh,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Glenn_U20_T_U20_Seabog,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Henry_U20_Roland_U20_Totten,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Bernhard_U20_Haurwitz,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Benu_U20_Gutenberg,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Barry_U20_Dunning,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Julius_U20_Von_U20_Bram,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__David_U20_Frisch,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Keith_U20_Porter,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Maurice_U20_Black,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Ernest_U20_G_U20_Cravalho,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Llewellyn_U20_G_U20_Hoxton,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__R_U20_Hans_U20_Brink,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Ahmed_U20_Abdul_U20_Qadeer,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Prof_U20_Sei,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Dr_U20_Joseph_U20_Carroll,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Karl_U20_K_U20_Turekian,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__J_U20_David_U20_Robertson,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Dr_U20_Mann,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__W_U20_King,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Manardi,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__John_U20_Junkins,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__JeanDaniel_U20_Boissonnat,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Frank_U20_Wattenberg,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Prof_U20_G_U20_H_U20_Garnir,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Barbara_U20_Ryden_U20_David_U20_Weinberg,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Mark_U20_Grinblatt,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Robin_U20_Cooper,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Kaj_U20__UD6_hrnberg,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Henry_U20_Andrews_U20_Bumstead,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__C_U20_Bolton,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Marco_U20_Ant_UF4_nio_U20_Casanova,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Prof_U20_Franco_U20_Bolgiani,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Arabidze,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Edward_U20_Seidel,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Glenn_U20_Northcutt,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__K_U20_G_U20_Ramanathan,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Per_U20_Olof_U20_Froman,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Karlheinz_U20_Bernhardt,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Adolf_U20_Ebel,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Aleksandr_U20_Butlerov,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Prof_U20_Cantoni,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Jens_U20_Frehse,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Wojciech_U20_Guzicki,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__V_UF5_jtech_U20_R_U151_dl,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Frances_U20_H_U20_Arnold,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Joachim_U20_Gnilka,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Miguel_U20__UC1_ngel_U20_Rodriguez,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Edmund_U20_Kieran_U20_Burke,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Rocabonela,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Britannicus,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Ixhuetzcatocatzin,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Caesarion,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Barbara,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Kenneth,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Kakushinnhi,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Zenran,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__EuropaWebPortal,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Khalsa,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Jonathan,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Alexandria,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Planetshakers,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Yasuko,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Masako,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Colbee,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Sushila,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Hazzan,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Saangi,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Oba,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__RedNorway,s__Human),answer_to(yago_s__instance1_Q12,[])).
+yago_s__instance1_Q12Receiving answer: fof(s__instance,answer,s__instance(s__Katrin,s__Human),answer_to(yago_s__instance1_Q12,[])).
+
+External connection statistics for 'yago_s__instance1':
+Number of requests queued: 17
+Number of questions asked: 4
+Number of axioms delivered: 100
+
+External connection statistics for 'yago_s__instance2':
+Number of requests queued: 12
+Number of questions asked: 1
+Number of axioms delivered: 10
+
+External connection statistics totals:
+Number of requests queued: 29
+Number of questions asked: 5
+Number of axioms delivered: 110
+
+SPASS V 3.5a 
+SPASS beiseite: Proof found.
+Problem: /home/graph/tptp/Systems/SPASS-XDB---3.01X0.4/AllExternals.ax 
+SPASS derived 16214 clauses, backtracked 0 clauses, performed -1 splits and kept 4110 clauses.
+SPASS allocated 78966 KBytes.
+SPASS spent0:00:12.86 on the problem.
+the0:00:00.04 for the input.
+the0:00:00.02 for the FLOTTER CNF translation.
+CNF0:00:01.13 for inferences.
+for0:00:00.00 for the backtracking.
+the0:00:09.82 for the reduction.
+
+
+Here is a proof with depth 6, length 21 :
+1[0:Inp] ||  -> s__instance(s__Human,s__SetOrClass)*.
+2[0:Inp] ||  -> s__subclass(s__Human,s__Hominid)*.
+3[0:Inp] ||  -> s__instance(s__Hominid,s__SetOrClass)*.
+4[0:Inp] ||  -> s__subclass(s__Hominid,s__Primate)*.
+5[0:Inp] ||  -> s__instance(s__Primate,s__SetOrClass)*.
+6[0:Inp] ||  -> s__subclass(s__Primate,s__Mammal)*.
+7[0:Inp] ||  -> s__instance(s__Mammal,s__SetOrClass)*.
+8[0:Inp] || s__instance(s__AbrahamLincoln,s__Mammal)*+ -> .
+9[0:Inp] || s__subclass(U,V)* s__instance(W,U)* s__instance(U,s__SetOrClass)* s__instance(V,s__SetOrClass)* -> s__instance(W,V)*.
+10[0:Res:9.4,8.0] || s__instance(s__Mammal,s__SetOrClass)* s__instance(s__AbrahamLincoln,U)* s__subclass(U,s__Mammal) s__instance(U,s__SetOrClass)* -> .
+11[0:MRR:10.0,7.0] || s__instance(U,s__SetOrClass)*+ s__subclass(U,s__Mammal)+ s__instance(s__AbrahamLincoln,U)*+ -> .
+15[0:Res:5.0,11.0] || s__subclass(s__Primate,s__Mammal) s__instance(s__AbrahamLincoln,s__Primate)* -> .
+20[0:MRR:15.0,6.0] || s__instance(s__AbrahamLincoln,s__Primate)*+ -> .
+21[0:Res:9.4,20.0] || s__subclass(U,s__Primate) s__instance(s__AbrahamLincoln,U)* s__instance(U,s__SetOrClass)* s__instance(s__Primate,s__SetOrClass)* -> .
+23[0:MRR:21.3,5.0] || s__subclass(U,s__Primate) s__instance(s__AbrahamLincoln,U)*+ s__instance(U,s__SetOrClass)* -> .
+30[0:Res:9.4,23.1] || s__subclass(U,V)* s__instance(s__AbrahamLincoln,U)* s__instance(U,s__SetOrClass)* s__instance(V,s__SetOrClass)* s__subclass(V,s__Primate) s__instance(V,s__SetOrClass)* -> .
+32[0:Obv:30.3] || s__subclass(U,V)* s__instance(s__AbrahamLincoln,U)*+ s__instance(U,s__SetOrClass)* s__subclass(V,s__Primate) s__instance(V,s__SetOrClass)* -> .
+67[0:Res:2.0,32.0] || s__instance(s__AbrahamLincoln,s__Human) s__instance(s__Human,s__SetOrClass) s__subclass(s__Hominid,s__Primate) s__instance(s__Hominid,s__SetOrClass)* -> .
+82[0:MRR:67.1,67.2,67.3,1.0,4.0,3.0] || s__instance(s__AbrahamLincoln,s__Human)*+ -> .
+18958[0:Inp] ||  -> s__instance(s__AbrahamLincoln,s__Human)*.
+20649[0:Res:18958.0,82.0] ||  -> .
+Formulae used in the proof : kb_SUMO_5836 kb_SUMO_5826 kb_SUMO_5824 kb_SUMO_5823 kb_SUMO_5818 kb_SUMO_5813 kb_SUMO_5811 abe_mammal kb_SUMO_28
+
+--------------------------SPASS-STOP------------------------------
+SELF  time: 14.156846
+CHILD time: 0.007998
+
+% END OF SYSTEM OUTPUT
+% RESULT: SOT_pXz2go - SPASS-XDB---3.01X0.4 says Theorem - CPU = 12.2 WC = 14.0  Derived = 16214 Queued = 29 Asked = 5 Delivered = 110
+% OUTPUT: SOT_pXz2go - SPASS-XDB---3.01X0.4 says Refutation - CPU = 12.2 WC = 14.0 
+

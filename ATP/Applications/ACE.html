@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<TITLE> Controlled Natural Language Input </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Controlled Natural Language Input </H1>
+
+<IMG SRC="Talk.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Attempto Controlled English (ACE) </H3>
+<UL>
+<LI> A controlled natural language, i.e. a subset of English
+<LI> Can be unambiguously translated into first-order logic
+</UL>
+
+<H3> Linking to the TPTP </H3>
+<UL>
+<LI> ACE to DRS translation by ACE parser (service in Zurich)
+<LI> DRS to TPTP translation by ACE tool or NACE
+<LI> ACE is an input language option in
+     <A HREF="../../SystemOnTPTP/Online/Summary.html">SystemB4TPTP</A>
+<LI> Results passed to ATP ... a front end for 
+     <A HREF="../../SPASS-XDB/Summary.html">SPASS-XDB</A>
+</UL>
+
+<H3> Examples </H3>
+
+<UL>
+<LI> <A HREF="" onClick="hideshow('p1');return false;">Oedipus and Patricide</A>
+     <SPAN ID="p1" style="display:none">
+     <P>
+     Iokaste is a parent of Oedipus.<BR>
+     Iokaste is a parent of Polyneikes.<BR>
+     Oedipus is a parent of Polyneikes.<BR>
+     Polyneikes is a parent of Thersandros.<BR>
+     Oedipus is a patricide.<BR>
+     Thersandros is not a patricide.<BR>
+     Therefore, Iokaste is a parent of a patricide that is a parent 
+     of somebody who is not a patricide.
+     <P>
+     </SPAN>
+<LI> <A HREF="" onClick="hideshow('p2');return false;">Grocers aren't Cyclists</A>
+     <SPAN ID="p2" style="display:none">
+     <P>
+     If<BR>
+     every honest and industrious person is healthy, and<BR>
+     no grocer is healthy, and<BR>
+     every industrious grocer is honest, and<BR> 
+     every cyclist is industrious, and<BR>
+     every unhealthy cyclist is dishonest, and<BR> 
+     no healthy person is unhealthy, and<BR>
+     no honest person is dishonest, and<BR> 
+     every grocer is a person, and<BR> 
+     every cyclist is a person<BR>
+     then<BR>
+     no grocer is a cyclist.
+     <P>
+     </SPAN>
+<LI> <A HREF="" onClick="hideshow('p3');return false;">Aunt Agatha</A>
+     <SPAN ID="p3" style="display:none">
+     <P>
+     Someone who lives in DreadburyMansion kills AuntAgatha.<BR>
+     If somebody X lives in DreadburyMansion then X is AuntAgatha or X is
+     the Butler or X is Charles.<BR>
+     Everyone hates everyone that he kills.<BR>
+     Noone is richer than someone that he kills.<BR>
+     Charles hates noone who is hated by AuntAgatha.<BR>
+     AuntAgatha does not hate the Butler.<BR>
+     Everyone that is not the Butler is hated by AuntAgatha.<BR>
+     The Butler hates everyone who is not richer than AuntAgatha.<BR>
+     The Butler hates everyone who is hated by AuntAgatha.<BR>
+     Noone hates everyone.<BR>
+     AuntAgatha is not the Butler.<BR>
+     Therefore, AuntAgatha kills AuntAgatha.
+     </SPAN>
+</UL>
+
+<H3> See the ACE project 
+     <A HREF="http://attempto.ifi.uzh.ch/site/">online</A> </H3>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

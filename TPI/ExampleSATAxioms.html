@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE> Checking Axioms with a Conjecture </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Checking Axioms with a Conjecture
+</H1>
+
+<UL>
+<LI> Store axioms, check satisfiability, execute ATP system
+<LI> Write SZS status and exit
+</UL>
+
+<PRE>
+    fof(an,axiom,p).
+    fof(another,axiom,p => q).
+    tpi(1,execute,'SZS_STATUS' =
+        'Paradox--4.0/paradox --time 300 --tstp $getgroups(tpi)').
+    tpi(2,write,'Axiom status:' & $getenv('SZS_STATUS')).
+    tpi(3,assert,$getenv('SZS_STATUS') = 'Satisfiable').
+    fof(a,conjecture,q).
+    tpi(4,execute,'SZS_STATUS' =
+        'E---1.8/eprover --auto --cpu-limit=300 --tstp-format $getgroups(tpi)').
+    tpi(5,write,'Conjecture status: ' & $getenv('SZS_STATUS')).
+    tpi(6,exit,exit).
+</PRE>
+
+<UL>
+<LI> With axiom satisfiability checked asynchronously
+</UL>
+
+<PRE>
+    fof(an,axiom,p).
+    fof(another,axiom,p => q).
+    tpi(1,execute_async,'ASYNC_SZS_STATUS' =
+        'Paradox---4.0/paradox --time 300 --tstp $getgroups(tpi)').
+    fof(a,conjecture,q).
+    tpi(2,execute,'SZS_STATUS' =
+        'E---1.8/eprover --auto --cpu-limit=300 --tstp-format $getgroups(tpi)').
+    tpi(3,waitenv,'ASYNC_SZS_STATUS').
+    tpi(4,write,'Axioms status: ' & $getenv('ASYNC_SZS_STATUS')
+         & ' Conjecture status: ' & $getenv('SZS_STATUS')).
+    tpi(5,exit,exit).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<TITLE> TPI Applications </TITLE>
+</HEAD>
+<BODY>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var currentImage = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Application.jpg';
+  images[1]     = new Image();
+  images[1].src = 'ATPProcess.jpg';
+  images[2]     = new Image();
+  images[2].src = 'MinStratSched.jpg';
+  images[3]     = new Image();
+  images[3].src = 'GoedelGod.jpg';
+
+  function putImage(index) {
+      currentImage = index;
+      document.images['image'].src = images[index].src;
+  }
+
+  function largeImage() {
+    switch (currentImage) {
+    case 0:
+      window.location = "Applications.html";
+      break;
+    case 1:
+      window.location = "ATPProcessJPG.html";
+      break;
+    case 2:
+      window.location = "MinStratSchedJPG.html";
+      break;
+    case 3:
+      window.location = "GoedelGodJPG.html";
+      break;
+    }
+    return false;
+  }
+  //-->
+</SCRIPT>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+TPI Applications
+</H1>
+
+<A HREF="" onClick="largeImage();return false">
+<IMG NAME="image" SRC="Application.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> The ATP Process 
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="ATPProcess.jpg" BORDER=0 WIDTH=20></A>
+</H3>
+<UL>
+<LI> This is what you really should do!
+<LI> Implemented as a script for the shell interpreter
+<LI> <A HREF="ATPProcess.txt">The Script</A> and the
+     <A HREF="ATPProcessParallel.txt">The Parallelized Script</A>
+</UL>
+
+<H3> Minimized Strategy Scheduling 
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="MinStratSched.jpg" BORDER=0 WIDTH=20></A>
+</H3>
+<UL>
+<LI> Anyone remember Voronkov's talk at Dagstuhl?
+<LI> Implemented as a script for the shell interpreter
+<LI> <A HREF="MinStratSched.txt">The Script</A>
+</UL>
+
+<H3> G&ouml;del's Proof of God 
+     <A HREF="" onClick="putImage(3);return false">
+     <IMG SRC="GoedelGod.jpg" BORDER=0 WIDTH=20></A>
+</H3>
+<UL>
+<LI> Benzm&uumlller made Apple laptops famous
+<LI> Implemented using the TPII interpreter
+<LI> <A HREF="GoedelGod.txt">The Script</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

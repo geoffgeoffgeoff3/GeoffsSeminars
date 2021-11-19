@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE> Verification with GDV</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Verification with GDV</H1>
+
+<!----- <IMG SRC="Smile.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%> --->
+
+<H3 ALIGN=CENTER> Structural Verification </H3>
+<UL>
+<LI> Existing Checks:<BR>
+     Unique names; Parents exist;
+     Acyclic; <EM>false</EM> roots for refutations;
+     Independence of splits
+<LI> New Checks for Assumptions
+     <UL>
+     <LI> Propagation from parents to inferred formula <TT>assumptions([...])</TT> list
+     <LI> Discharged assumptions may be removed (optional but normal)
+     <LI> All assumptions discharged eventually
+     </UL>
+<LI> Uniqueness of new symbols in leaves introducing them (Henkin axioms)
+</UL>
+
+<H3 ALIGN=CENTER> Semantic Verification </H3>
+<UL>
+<LI> Use trusted ATP to verify inferences
+<LI> Existing Checks:<BR>
+     Leaves from problem;
+     Leaf tautologies;
+     Logical consequences;
+     Satisfiability preserving steps
+<LI> New Checks for Assumptions
+     <UL>
+     <LI> Discharged assumptions as preconditions on parents
+     <LI> Decomposed into finer grained steps for verification
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

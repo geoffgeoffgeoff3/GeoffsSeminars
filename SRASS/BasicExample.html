@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<TITLE> The Basic Process - Example </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The Basic Process - Example </H1>
+
+<A HREF="BasicExampleGIF.html">
+<IMG SRC="BasicExample.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<UL>
+<LI> Conjecture:<BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;C = <TT>b</TT>
+<LI> Axioms:<BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>1</SUB> = <TT>a | b</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>2</SUB> = <TT>b => a</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>3</SUB> = <TT>(~a & (b | c)) | (a & ~b & ~c)</TT><BR>
+     &nbsp;&nbsp;&nbsp;&nbsp;E<SUB>4</SUB> = <TT>b | (a <=> c)</TT>
+<P>
+<LI> E<SUB>1</SUB> and E<SUB>2</SUB> are superfluous
+<P>
+<LI> Negated conjecture = <TT>~b</TT>
+<P>
+     <TABLE>
+     <TR> <TH>
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> Selected
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> Model
+          <TH> &nbsp;&nbsp;
+          <TH ALIGN=LEFT> Axiom
+     <TR> <TD> 1
+          <TD>
+          <TD> <TT>{ }</TT>
+          <TD>
+          <TD> <TT>{&nbsp;a, ~b, ~c}</TT>
+          <TD>
+          <TD> E<SUB>4</SUB> 
+     <TR> <TD> 2
+          <TD>
+          <TD> <TT>{</TT>E<SUB>4</SUB><TT>}</TT>
+          <TD>
+          <TD> <TT>{~a, ~b, ~c}</TT>
+          <TD>
+          <TD> E<SUB>1</SUB> 
+     <TR> <TD> 3
+          <TD>
+          <TD> <TT>{</TT>E<SUB>1</SUB>, E<SUB>4</SUB><TT>}</TT>
+          <TD>
+          <TD> <TT>{&nbsp;a, ~b, &nbsp;c}</TT>
+          <TD>
+          <TD> E<SUB>3</SUB> 
+     <TR> <TD> 4
+          <TD>
+          <TD> <TT>{</TT>E<SUB>1</SUB>, E<SUB>3</SUB>, E<SUB>4</SUB><TT>}</TT>
+          <TD>
+          <TD> -
+          <TD>
+          <TD> -
+     </TABLE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

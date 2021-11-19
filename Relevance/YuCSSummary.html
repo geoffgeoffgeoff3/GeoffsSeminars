@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>Using Relevance</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Using Relevance </H1>
+
+<IMG SRC="CliqueClusters.GIF" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Clustering </H3>
+<UL>
+<LI> Treat each formula as a vertex in a graph
+<LI> Add edges weighted with transitive relevance
+<LI> Build maximal cliques in graph
+     <UL>
+     <LI> Initially seeded from conjecture
+     <LI> Edges must have minimal specified relevance
+     <LI> Vertices must have limited range of relevance to conjecture
+     </UL>
+<LI> Each clique is a cluster of closely related formulae, with similar
+     relevance to conjecture
+</UL>
+
+<H3> Combinations </H3>
+<UL>
+<LI> Set cluster relevance to average of axioms' relevances to conjecture
+<LI> Use combinations of clusters in <EM>increasing</EM> order of probability:
+     <PRE>
+&Pi;(clurel(Cl)) * &Pi;(1-clurel(Cl))
+Cl&isin;Comb         Cl&notin;Comb   </PRE>
+</UL>
+
+<H3> Evaluation </H3>
+<UL>
+<LI> In progress
+</UL>
+
+<H3> Cluster Paths (the future) </H3>
+<UL>
+<LI> Treat each cluster as a vertex in a graph
+<LI> Add edges weited with inter-cluster relevance
+<LI> Require use of strong paths
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

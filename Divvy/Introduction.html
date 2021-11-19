@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<TITLE> Motivation, History, and Overview </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'Why.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Donuts.jpg';
+  images[2]     = new Image();
+  images[2].src = 'SomeDonuts.jpg';
+  images[3]     = new Image();
+  images[3].src = 'DonutSelected.jpg';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Motivation, History, and Overview
+</H1>
+
+<IMG NAME=image SRC="Why.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Large Theories </H3>
+<UL>
+<LI> Many functors and predicates, many (common) axioms, many theorems
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="Donuts.jpg" BORDER=0 HEIGHT=10></A>
+<LI> SUMO, Cyc, Mizar, YAGO, WordNet, MeSH
+<LI> Different challenges for ATP
+     <UL>
+     <LI> Parsing and building data structures
+     <LI> Loading and preprocessing the common axioms only once
+     <LI> Selecting axioms that are likely to be useful
+     <LI> Extracting heuristics and lemmas from proofs
+     </UL>
+</UL>
+
+<H3> Selecting Axioms that are Likely to be Useful </H3>
+<UL>
+<LI> To obtain a proof of a given conjecture
+<LI> <B>Select just enough axioms to obtain a proof</B>
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="SomeDonuts.jpg" BORDER=0 HEIGHT=10></A>
+<LI> <A HREF="PreviousWork.html">Previous work</A>
+</UL>
+
+<H3> This Work </H3>
+<UL>
+<LI> Two syntactic relevance orderings
+<LI> (More) robust selection that "starts in the middle"
+<LI> Evaluation shows it's effective
+     <A HREF="" onClick="putImage(3);return false">
+     <IMG SRC="DonutSelected.jpg" BORDER=0 HEIGHT=10></A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

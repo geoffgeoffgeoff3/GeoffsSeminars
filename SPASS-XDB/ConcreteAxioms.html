@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<TITLE> Interfaces to External Sources </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') { 
+        elem.style.display = 'none'; 
+    } else if (elem.style.display == 'none') { 
+        elem.style.display = 'block'; 
+    } else { 
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Interfaces to External Sources
+</H1>
+
+<A HREF="Architectures3GIF.html">
+<IMG NAME=image SRC="Architecture.gif" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> External Specifications </H3>
+<UL>
+<LI> <PRE>
+fof(creators,external,
+    ! [Thing] : ? [Name] : 
+      s__creatorOf(Name,Thing),
+    external(exec,'DBServer CreatorDB',tptp_qa,
+      [xdb(limit,number(1000)),xdb(limit,cpu(4))]) ).</PRE>
+<LI> <A HREF="" onClick="hideshow('p1');return false;">Points to note</A>
+     <SPAN ID="p1" style="display:none">
+     <UL>
+     <LI> <TT>external</TT> role
+     <LI> Formula body as a template
+     <LI> Universal (<TT>!</TT>) and existential (<TT>?</TT>) quantification
+     <LI> <TT>external()</TT> term to specify manifestation
+          <UL>
+          <LI> <TT>tptp_qa</TT> protocol
+          <LI> <TT>xdb()</TT> terms to provide auxilliary information
+          </UL>
+     <LI> A problem file can contain multiple specifications
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> Requests for External Axioms </H3>
+<UL>
+<LI> <PRE>
+fof(who,question,
+    ? [Name] : 
+      s__creatorOf(Name,s__YAGOOntology),
+    spass,
+    [xdb(limit,number(1000)),xdb(limit,cpu(4))] ).</PRE>
+<LI> <A HREF="" onClick="hideshow('p2');return false;">Points to note</A>
+     <SPAN ID="p2" style="display:none">
+     <UL>
+     <LI> <TT>question</TT> role, from TPTP Q&A standards
+     <LI> <TT>xdb()</TT> terms copied from specification
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> Delivery of External Axioms </H3>
+<UL>
+<LI> <PRE>
+% SZS status Success for spass
+% SZS answers start InstantiatedFormulae for spass
+fof(creators,answer,
+    s__creatorOf(s__FabianMartinSuchanek,s__YAGOOntology),
+    answer_to(who,[]),[]).
+fof(creators,answer,
+    s__creatorOf(s__GjergjiKasneci,s__YAGOOntology),
+    answer_to(who,[]),[]).
+% SZS answers end InstantiatedFormulae for spass</PRE>
+<LI> <A HREF="" onClick="hideshow('p3');return false;">Points to note</A>
+     <SPAN ID="p3" style="display:none">
+     <UL>
+     <LI> <A HREF="../SZSOntologies/Summary.html">SZS</A> 
+          ontology values and standards
+     <LI> <TT>answer</TT> role, from TPTP Q&A standards
+     <LI> "Useful info" fields for passing back auxilliary information
+     </UL>
+     </SPAN>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

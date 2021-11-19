@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<TITLE> Typed First-order Form </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Typed First-order Form </H1>
+
+<IMG SRC="AllSorts.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<H3> The TFF Language </H3>
+<UL>
+<LI> Syntactically conservative extension of 
+     <A HREF="../TPTPLanguage/Summary.html">FOF language</A> (Prolog-like)
+<LI> Defined types <TT>$i</TT>, <TT>$o</TT>, <TT>$tType</TT>
+<LI> Ad-hoc polymorphic equality
+<LI> Explicit and default typing of all symbols
+<LI> <A HREF="" onClick="hideshow('p1');return false;">Example</A>
+     <SPAN ID="p1" style="display:none">
+<PRE>tff(taught_by_type,type,(
+    taughtby: ( student * professor ) > $o )).
+
+tff(coordinator_of_type,type,(
+    coordinatorof: course > professor )).
+
+tff(student_enrolled_axiom,axiom,(
+    ! [X: student] :
+    ? [Y: course] : enrolled(X,Y) )).</PRE>
+     </SPAN>
+<LI> Translation to FOF in TPTP2X
+</UL>
+
+<H3> Adding Arithmetic </H3>
+<UL>
+<LI> Defined types (unbounded, infinite precision): <BR>
+     <TT>$int</TT>, <TT>$rat</TT>, <TT>$real</TT>
+<LI> Numeric constants: <BR>
+     <TT>1234</TT>, <TT>-4321</TT>,
+     <TT>123/456</TT>, <TT>-321/654</TT>,
+     <TT>123.456</TT>, <TT>-321.654</TT>,
+     <TT>123.456E78</TT>, <TT>-321.654e-87</TT>
+<LI> Defined functions (ad hoc polymorphic over the types):<BR>
+     <TT>$uminus</TT>,
+     <TT>$sum</TT>,
+     <TT>$difference</TT>,
+     <TT>$product</TT>,
+     <TT>$quotient</TT>,
+     <TT>$quotient_?</TT>,
+     <TT>$remainder_?</TT> (<TT>?</TT> = <TT>e</TT>, <TT>t</TT>, <TT>f</TT>)<BR>
+     <TT>$floor</TT>,
+     <TT>$ceiling</TT>,
+     <TT>$truncate</TT>,
+     <TT>$round</TT>
+     <TT>$to_int</TT>,
+     <TT>$to_rat</TT>,
+     <TT>$to_real</TT>
+<LI> Defined predicates (ad hoc polymorphic over the types):<BR>
+     <TT>$less</TT>,
+     <TT>$lesseq</TT>,
+     <TT>$greater</TT>,
+     <TT>$greatereq</TT>,<BR>
+     <TT>$is_int</TT>,
+     <TT>$is_rat</TT>
+<LI> <A HREF="" onClick="hideshow('p2');return false;">Example</A>
+     <SPAN ID="p2" style="display:none">
+<PRE>tff(recursive_fib_sort,axiom,(
+    ! [X: $int,Y: $int,Z: $int,R: list] :
+      ( ( $less(X,Y)
+        & $greatereq(Z,$sum(X,Y))
+        & fib_sorted(mycons(Y,mycons(Z,R))) )
+     => fib_sorted(mycons(X,mycons(Y,mycons(Z,R)))) ) )).
+
+tff(check_list,conjecture,(
+    fib_sorted(mycons(1,mycons(2,mycons(4,mycons(7,mycons(100,nil)))))) )).</PRE>
+     </SPAN>
+</UL>
+
+<H3> TPTP Problems </H3>
+<UL>
+<LI> First release: TPTP v5.0.0 - September 2010
+<LI> Non-arithmetic problems: COM, GEO, KRS, PUZ
+<LI> <A HREF="TFA/TPTPTFA.html">Arithmetic problems</A>: 
+     ARI, DAT, GEG, HWV, MSC, NUM, PUZ, SET, SWV, SYN
+</UL>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

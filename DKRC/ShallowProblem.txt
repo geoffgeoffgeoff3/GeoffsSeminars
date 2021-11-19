@@ -1,0 +1,76 @@
+%------------------------------------------------------------------------------
+tff(cell_type,type,(
+    cell: $tType )).
+
+tff(environment_type,type,(
+    environment: $tType )).
+
+tff(number_type,type,(
+    number: $tType )).
+
+tff(numeric_function_on_cell_type,type,(
+    numeric_function_on_cell: $tType )).
+
+tff(surface_area_type,type,(
+    surface_area: cell > numeric_function_on_cell )).
+
+tff(surface_to_volume_ratio_type,type,(
+    surface_to_volume_ratio: cell > numeric_function_on_cell )).
+
+tff(exchange_rate_type,type,(
+    exchange_rate: ( cell * environment ) > numeric_function_on_cell )).
+
+tff(environment_of_type,type,(
+    environment_of: cell > environment )).
+
+tff(apply_type,type,(
+    apply: ( numeric_function_on_cell * cell ) > number )).
+
+tff(proportional_type,type,(
+    proportional: ( numeric_function_on_cell * numeric_function_on_cell ) > $o )).
+
+tff(important_type,type,(
+    important: numeric_function_on_cell > $o )).
+
+tff(high_type,type,(
+    high: number > $o )).
+
+%----A high surface-to-volume ratio facilitates the exchange of materials 
+%----between a cell and its environment.
+tff(proportional1,axiom,(
+    ! [C: cell] : proportional(surface_to_volume_ratio(C),exchange_rate(C,environment_of(C))) )).
+
+%----Surface area is proportional to surface-to-volume ratio.
+tff(proportional2,axiom,(
+    ! [C: cell] : proportional(surface_area(C),surface_to_volume_ratio(C)) )).
+
+%----Proportional is symmetric
+tff(proportional_symmetric,axiom,(
+    ! [R1: numeric_function_on_cell,R2: numeric_function_on_cell] :
+      ( proportional(R1,R2)
+     => proportional(R2,R1) ) )).
+
+%----Proportional is transitive
+tff(proportional_transitive,axiom,(
+    ! [R1: numeric_function_on_cell,R2: numeric_function_on_cell,R3: numeric_function_on_cell] :
+      ( ( proportional(R1,R2)
+        & proportional(R2,R3) )
+     => proportional(R1,R3) ) )).
+
+%----If something is important, and proportional to another thing, then the
+%----other thing is important.
+tff(important_proportional,axiom,(
+    ! [R1: numeric_function_on_cell,R2: numeric_function_on_cell] :
+      ( ( important(R1)
+        & proportional(R1,R2) )
+     => important(R2) ) )).
+
+%----The exchange of materials between a cell and its environment is important.
+tff(important_to_cell,axiom,(
+    ! [C: cell] : important(exchange_rate(C,environment_of(C))) )).
+
+%----Why is surface area important to normal cell function?
+tff(surface_area_important,conjecture,(
+    ! [C: cell] : important(surface_area(C)) )).
+
+%-----------------------------------------------------------------------------

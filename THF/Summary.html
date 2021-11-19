@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<TITLE> Typed Higher-order Form </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Typed Higher-order Form </H1>
+
+<IMG SRC="Lambda.gif" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Status Quo </H3>
+<UL>
+<LI> Many frameworks, Church's simple type theory is a common basis
+<LI> Applications in verification, KB reasoning, mathematics, logics
+<LI> Proof assistants: Isabelle, HOL, Coq, ProofPower, Omega, ...
+</UL>
+
+<H3> The THF Language </H3>
+<UL>
+<LI> Syntactically conservative extension of 
+     <A HREF="../TPTPLanguage/Summary.html">FOF language</A> (Prolog-like)
+<LI> Layers - THF0, THF, THFX
+<LI> <A HREF="" onClick="hideshow('p1');return false;">Example</A>
+     <SPAN ID="p1" style="display:none">
+<PRE>thf(const_in,type,( 
+    in: ( $i > ( $i > $o ) > $o ) )).
+
+thf(ax_in,axiom,( 
+    ( in = ( ^ [X: $i,S: ( $i > $o )] : ( S @ X ) ) ) )). </PRE>
+     </SPAN>
+</UL>
+
+<H3> Building the TPTP </H3>
+<UL>
+<LI> First release: TPTP v4.0.0 - August 2009
+<LI> Problems: ALG, CAT, COM, CSR, GEG, GRA, GRP, LCL, MSC, NUM, PUZ, QUA, SET, SWV, SYN
+
+</UL>
+
+<H3> Tools </H3>
+<UL>
+<LI> <A HREF="../TPTP/TPTPNX.html">TPTP2X</A> and 
+     <A HREF="../TPTP/TPTPNX.html">TPTP4X</A>
+<LI> Exports to Twelf and OmDoc and TPS and Isabelle and S-expressions
+<LI> BNF translation to <TT>lex</TT>/<TT>yacc</TT>/<TT>flex</TT>/<TT>bison</TT>
+     input
+<LI> Syntax tree analysis, 
+     <A HREF="../SystemOnTPTP/Online/Summary.html">clickable interface
+     in SystemB4TPTP</A> 
+<LI> Type checking by export to Twelf, magic by Florian Rabe
+<LI> ATP: 
+     <A HREF="SystemLEO.html">LEO II</A>, 
+     <A HREF="SystemTPS.html">TPS</A>, 
+     <A HREF="SystemIsabelle.html">Isabelle/Refute/Nitpick</A>, 
+     <A HREF="SystemSatallax.html">Satallax</A> ... erm ...
+<LI> Documentation:
+     <A HREF="http://www.tptp.org/TPTP/QuickGuide">Quick guide</A>,
+     <A HREF="http://www.tptp.org/TPTP/TR/TPTPTR.shtml">Technical manual</A>
+<LI> Division in <A HREF="../CASC/Summary.html">CASC</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

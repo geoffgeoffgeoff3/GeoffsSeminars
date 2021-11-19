@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE> A Set Theory Paradox </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+A Set Theory Paradox 
+</H1>
+
+<HR><!------------------------------------------------------------------------>
+<IMG SRC="Countermodel16.jpg" ALIGN=RIGHT WIDTH=33%>
+
+<UL>
+<LI> The Axiom of Separation (to make set theory nice)
+     <UL>
+     <LI> &forall;Z&exist;Y&forall;X (el(X,Y) &harr; (el(X,Z) &and; &not;el(X,X))) &rarr; &not;&exist;W&forall;U el(U,W)
+     <LI> The LHS of the &rarr; says 
+          <UL>
+          <LI> for every set Z  [ &forall;Z ]
+          <LI> there is a subset Y [ &exist;Y&forall;X (el(X,Y) &harr; (el(X,Z) ]
+          <LI> containing those elements X of Z [ el(X,Z) ]
+          <LI> that are not elements of themselves [ &not;el(X,X) ]
+          </UL>
+     <LI> The RHS of the &rarr; says
+          <UL>
+          <LI> there does not exist a set W [ &not;&exist;W ]
+          <LI> such that every U is an element of W [ &forall;U el(U,W) ]
+          </UL>
+          i.e., there is no universal set.
+     </UL>
+<P>
+<LI> In Classical Logic
+     <UL>
+     <LI> The LHS is inconsistent with the existence of a universal set
+     <LI> Thus it's a theorem
+     </UL>
+<P>
+<LI> In RM3
+     <UL>
+     <LI> There is a countermodel with a domain of 2 elements {<EM>US</EM>, 
+          <EM>SS</EM>}
+     <LI> <EM>US</EM> and <EM>SS</EM> are both elements of <EM>US</EM>, so ...<BR>
+          &nbsp;&nbsp;&nbsp;<EM>US</EM> is the Universal Set
+     <LI> <EM>US</EM> and <EM>SS</EM> are non-elements of <EM>SS</EM>, and 
+          <EM>SS</EM> is the only element of <EM>SS</EM>, so ...<BR>
+          &nbsp;&nbsp;&nbsp;<EM>SS</EM> is the Sets of all Sets that are not elements of themselves
+     <LI> The RHS of the &rarr; is T<SUB>3</SUB>, and the LHS is F<SUB>3</SUB> -
+          it's not an RM3 theorem
+     <LI> Possible because <EM>SS</EM> can be both an element and a non-element of itself
+     </UL>
+</UL>
+
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

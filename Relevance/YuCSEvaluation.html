@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<TITLE> Evaluation </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Evaluation </H1>
+
+<IMG SRC="Scalpel.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> Methodology </H3>
+<UL>
+<LI> Evaluation on 22 problems hard for SPASS 2.1 (no solution
+     in 600s), randomly choosen.
+<LI> SPASS 2.1, 3600s overall time limit
+<LI> YuCS
+     <UL>
+     <LI> Using SPASS 2.1 for proofs
+     <LI> Implements the combinatorial groups algorithm
+     <LI> Using <EM>GeRe</EM> - non-contextual transitive relevance combined
+          by Euclidean distance
+     <LI> 3600s overall time limit, 60s per attempt
+     <LI> In YuCS the problems were mostly divided into 6 groups, leading to 64
+          combinations and 57s per combination
+     </UL>
+<LI> Hardware: P3 with 256MB, Linux 2.4
+</UL>
+
+<H3> Results </H3>
+<UL>
+<LI> For problems solved by either system:
+     <TABLE>
+     <TR VALIGN=TOP> <TH ALIGN=LEFT> Problem
+          <TH ALIGN=RIGHT> TPTP<BR>
+               Rating
+          <TH ALIGN=RIGHT> SPASS<BR>
+               CPU time
+          <TH ALIGN=RIGHT> YuCS<BR>
+               CPU time
+          <TH ALIGN=RIGHT>Axioms
+          <TH ALIGN=RIGHT>Axioms<BR>
+               Used
+          <TH ALIGN=RIGHT>Groups<BR>
+               Used
+     <TR> <TD COLSPAN=7> <HR><!------------------------------------>
+     <TR> <TD ALIGN=RIGHT> <TT>GEO084+1</TT>
+          <TD ALIGN=RIGHT>   0.50
+          <TD ALIGN=RIGHT>     1250
+          <TD ALIGN=RIGHT>     434
+          <TD ALIGN=RIGHT>     34
+          <TD ALIGN=RIGHT>    25
+          <TD ALIGN=RIGHT>    4
+     <TR> <TD ALIGN=RIGHT> <TT>GEO088+1</TT>
+          <TD ALIGN=RIGHT>   0.83
+          <TD ALIGN=RIGHT>  Timeout
+          <TD ALIGN=RIGHT>     763
+          <TD ALIGN=RIGHT>     34
+          <TD ALIGN=RIGHT>     7
+          <TD ALIGN=RIGHT>    3
+     <TR> <TD ALIGN=RIGHT> <TT>GEO093+1</TT>
+          <TD ALIGN=RIGHT>   0.67
+          <TD ALIGN=RIGHT>     1130
+          <TD ALIGN=RIGHT>     435
+          <TD ALIGN=RIGHT>     34
+          <TD ALIGN=RIGHT>    25
+          <TD ALIGN=RIGHT>    4
+     <TR> <TD ALIGN=RIGHT> <TT>MGT042+1</TT>
+          <TD ALIGN=RIGHT>   0.67
+          <TD ALIGN=RIGHT>     1879
+          <TD ALIGN=RIGHT>  Timeout
+          <TD ALIGN=RIGHT>     35
+          <TD ALIGN=RIGHT>
+          <TD ALIGN=RIGHT>
+     <TR> <TD ALIGN=RIGHT> <TT>SET199+4</TT>
+          <TD ALIGN=RIGHT>   0.67
+          <TD ALIGN=RIGHT>  Timeout
+          <TD ALIGN=RIGHT>    1923
+          <TD ALIGN=RIGHT>     32
+          <TD ALIGN=RIGHT>    14
+          <TD ALIGN=RIGHT>    3
+     <TR> <TD ALIGN=RIGHT> <TT>SET351+4</TT>
+          <TD ALIGN=RIGHT>   0.83
+          <TD ALIGN=RIGHT>  Timeout
+          <TD ALIGN=RIGHT>     345
+          <TD ALIGN=RIGHT>     32
+          <TD ALIGN=RIGHT>    29
+          <TD ALIGN=RIGHT>    5
+     <TR> <TD ALIGN=RIGHT> <TT>SET595+3</TT>
+          <TD ALIGN=RIGHT>   0.67
+          <TD ALIGN=RIGHT>     1053
+          <TD ALIGN=RIGHT>  Timeout
+          <TD ALIGN=RIGHT>      8
+          <TD ALIGN=RIGHT>
+          <TD ALIGN=RIGHT>
+     <TR> <TD ALIGN=RIGHT> <TT>SET606+3</TT>
+          <TD ALIGN=RIGHT>   0.67
+          <TD ALIGN=RIGHT>  Timeout
+          <TD ALIGN=RIGHT>     215
+          <TD ALIGN=RIGHT>      8
+          <TD ALIGN=RIGHT>     6
+          <TD ALIGN=RIGHT>    4
+     </TABLE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE> 
+User Interfaces
+</HEAD>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = '../../SystemOnTPTP/Online/WebInterface.jpg';
+  images[1]     = new Image();
+  images[1].src = '../../SystemOnTPTP/Online/SystemOnTPTP.GIF';
+  images[2]     = new Image();
+  images[2].src = 'AleXSI.gif';
+  images[3]     = new Image();
+  images[3].src = 'SystemQATPTP.gif';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 4;
+      document.images['image'].src = images[myIndex].src;
+  }  
+  //-->
+</SCRIPT> 
+<!------------------------------------------------------------------------>
+<BODY ALIGN=JUSTIFY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+User Interfaces
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="../../SystemOnTPTP/Online/WebInterface.jpg" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> SystemOnTPTP </H3>
+<UL>
+<LI> A web service for running automated reasoning software
+<LI> SPASS-XDB is available for use
+<LI> <A HREF="http://www.cs.miami.edu/~tptp/cgi-bin/SystemOnTPTP">
+     Try it</A> at <TT>www.tptp.org/cgi-bin/SystemOnTPTP</TT>
+</UL>
+
+<H3> AleXSI </H3>
+<UL>
+<LI> A web interface for creating conjectures for SPASS-XDB
+<LI> Knows about world knowledge and SUMO symbols
+<LI> Search for symbols using regular expressions
+</UL>
+
+<H3> SystemQATPTP </H3>
+<UL>
+<LI> A web service for querying world knowledge sources
+<LI> All SPASS-XDB sources are available
+<LI> <A HREF="http://www.cs.miami.edu/~tptp/cgi-bin/SystemQATPTP">
+     Try it</A> at <TT>www.tptp.org/cgi-bin/SystemQATPTP</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

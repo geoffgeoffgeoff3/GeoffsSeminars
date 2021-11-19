@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE> Translation of Mizar Let rule to TPTP</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Translation of Mizar Let rule to TPTP</H1>
+
+<!----- <IMG SRC="Smile.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%> --->
+<UL>
+<LI> "Henkin axiom" is used to generalize a thesis instantiated with a new constant ( thesis(c) => ![X]:thesis(X) )
+<LI> Conservative extension, provided that each henkin axiom introduces a fresh constant (checked by GDV) 
+<LI> Correctness of the Henkin axioms (their proper form) ensured by very simple declarative Prolog code for their creation (correctness by construction) 
+<LI> Similar dealing with the existential quantifier (Consider): (?[X]:p(x)) => p(c)  
+</UL>
+
+<H3 ALIGN=CENTER> Quantified example in Mizar repeated</H3>
+<PRE>
+Lemma1: for x being set holds p(x)         ;; this has been proved already 
+Lemma2: for x being set holds p(x) => q(x) ;; this has been proved already 
+Goal1: for x being set holds q(x) 
+proof                  ;; (Proof) thesis (Goal1) is: for x being set holds q(x) 
+  let new_constant be set;               ;; (Let) thesis (T1) is: q(new_constant) 
+  E1: p(new_constant) by Lemma1;         ;; (JustifiedProposition) thesis unchanged 
+  thus E2: q(new_constant) by Lemma2,E1; ;; (Conclusion) thesis (T2) is: verum ($true) 
+end; 
+</PRE>
+
+<H3 ALIGN=CENTER> Translation into extended TPTP derivation </H3>
+<PRE>
+fof(lemma1,plain, ![X]: (set(X) => p(X))). 
+fof(lemma2,plain, ![X]: (set(X) => (p(X) => q(X)))). 
+fof(henkin_ax1, plain, (set(new_constant) => q(new_constant)) => ![X]: (set(X) => q(X)), 
+  introduced(definition, [new_symbol(new_constant)])). 
+fof(type_ass1, assumption, set(new_constant), introduced(assumption)). 
+fof(e1,plain, p(new_constant), inference(mizar_by,[status(thm), 
+  assumptions([type_ass1])],[type_ass1,lemma1])). 
+fof(e2,plain, q(new_constant), inference(mizar_by,[status(thm), 
+  assumptions([type_ass1])],[type_ass1,e1,lemma2])). 
+fof(t2,plain, $true,introduced(tautology)). 
+fof(t1,plain, q(new_constant), 
+  inference(conclusion,[status(thm),assumptions([type_ass1])],[t2,e2])). 
+fof(t1_1,plain, set(new_constant) => q(new_constant), 
+  inference(discharge_asm, [status(thm), 
+    discharge_asm(discharge, [type_ass1])], [type_ass1, t1])). 
+fof(goal1,plain, ![X]: (set(X) => q(X)), 
+  inference(let, [status(thm)], [t1_1, henkin_ax1])). 
+</PRE>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

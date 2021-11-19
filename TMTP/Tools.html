@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE> Tools for Interpretations </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Model6.jpg';
+  images[1]     = new Image();
+  images[1].src = 'TermTrees.gif';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Tools for Interpretations
+</H1>
+
+<A HREF="TermTreesGIF.html">
+<IMG NAME="image" SRC="Model6.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Viewing </H3>
+<UL>
+<LI> To understand interpretations' structures and relationships
+<LI> Interactive Model Viewer - IMV (like <A HREF="../IDV/Summary.html">IDV</A>)
+<LI> One idea <A HREF="" onClick="putImage();return false">
+     <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A>
+</UL>
+
+<H3> Verifying </H3>
+<UL>
+<LI> Geoff's Model Verifier - GMV (like <A HREF="../GDV/Summary.html">GDV</A>)
+<LI> Check each formula is <A HREF="Interpreting.html">interpreted as</A>
+     <EM>true</EM>
+<LI> Alternative way: check input + model is not UNS
+</UL>
+
+<H3> Examining </H3>
+<UL>
+<LI> To determine relationships, suggesting new models
+<LI> Check for syntactic variants
+<LI> Compare the sets of ground atoms that are <EM>true</EM>
+</UL>
+
+<H3> Manipulating </H3>
+<UL>
+<LI> Extract submodel for sublanguage
+<LI> Extend model for added axioms
+<LI> Combine models for combined axiomatizations
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE> Motivating Example </TITLE>
+</HEAD>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Motivating Example </H1>
+
+<IMG SRC="ElectricCar.jpg" ALIGN=RIGHT WIDTH=33% style="vertical-align:middle;margin:0px 20px"></A>
+
+<P ALIGN=JUSTIFY>
+The Venezuelan car manufacturer "Sucre" has been developing a futuristic 
+electric car, called the Quipos.
+The Quipos has only three digital control circuits: 
+the Energy Control Circuit (ECQ), 
+the Wheel Control Circuit (WCQ), and
+the Human Haptics Detection (HHD) circuit (don't blame me for their strange
+acronyms).
+During development one of the circuits was repeatedly sending faulty signals 
+to the WCQ, causing it to fail, with corresponding downstream impact on the 
+car's self-steering and automatic braking features.
+The engineers needed to determine which circuit was sending the faulty signals
+to the WCQ.
+The following facts were known about the signals being sent between the 
+circuits:
+<UL>
+<LI> A sending circuit causes a receiving circuit to fail by sending it 
+     (faulty) signals.
+<LI> A sending circuit never uses more power than the receiving circuit.
+<LI> The ECQ never sent signals to circuits that the WCQ sent signals to. 
+<LI> The WCQ sent signals to all the circuits except the HHD.
+<LI> The HHD sent signals to all the circuits that did not use more power than
+     the WCQ.
+<LI> The HHD sent signals to all the circuits that that the WCQ sent signals to.
+<LI> No circuit sent signals to every circuit. 
+</UL>
+
+Automated Theorem Proving was used to analyse this issue, and it turned out
+that the WCQ was sending faulty signals to itself, causing itself to fail!
+</P>
+
+<A HREF="http://www.tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">Another version</A>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

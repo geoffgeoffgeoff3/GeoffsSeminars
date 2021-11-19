@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE> Mizar Proof Structure</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Mizar Proof Structure</H1>
+
+<!----- <IMG SRC="Smile.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%> --->
+
+<UL>
+<LI> Limited fast checker for verifying simple inferences<BR>
+     (<EM>Simple Justifications</EM>)
+<LI> Trying to capture the "obviousness" concept:<BR>
+     inferences accepted by the checker should be neither too strong, nor 
+     too simple for humans to understand
+<LI> Inferences too complicated for the checker have to be decomposed 
+     into sufficiently simple inferences using structural rules 
+     (Jaskowski-style natural deduction) (<EM>Mizar Proof block</EM>)
+<LI> A part of the Mizar verifier (<EM>Reasoner</EM>) checks the correctness 
+     of the structural rules 
+<LI> Additional lemmas and constants can be introduced inside Mizar proofs
+<LI> The reasoning steps inside Mizar proofs can be divided into those that
+     modify the current "thesis", and other (<EM>Auxiliary</EM>) steps that
+     do not (e.g., introduce a useful lemma)
+</UL>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE> The Applications </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Applications.jpg';
+  images[1]     = new Image();
+  images[1].src = 'ApplicationLogic.jpg';
+  images[2]     = new Image();
+  images[2].src = 'ApplicationTarskianGeometry.jpg';
+  images[3]     = new Image();
+  images[3].src = 'ApplicationSimplification.jpg';
+  images[4]     = new Image();
+  images[4].src = 'ApplicationPure.jpg';
+  images[5]     = new Image();
+  images[5].src = 'ApplicationMiscellaneous.jpg';
+
+  function displayImage (index) {
+      document.images['image'].src = images[index].src;
+  }  
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> The Applications </H1>
+by Michael Kinyon
+</CENTER>
+
+<A HREF="" onClick="displayImage(0);return false">
+<IMG NAME="image" SRC="Applications.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<A HREF="" onClick="hideshow('logic');return false;">
+<H3> Logic </H3>
+</A> <SPAN ID="logic" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(1);return false">JAR paper</A>, 2001
+<LI> Single axioms for propositional logic
+     <UL>
+     <LI> Meredith's single axiom
+     <LI> Proof simplifications
+     <LI> Blocking double negations
+     <LI> Shortest single axioms
+     </UL>
+<LI> Single axioms for equivalential calculus
+     <UL>
+     <LI> Disproofs
+     <LI> The hard XCB case
+     </UL>
+<LI> Combinatory logic, the kernel strategy, open problems
+<LI> Axiomatizations for non-classical logics
+     <UL>
+     <LI> Axiomatization for RM<SUB>&rarr;</SUB>
+     <LI> Axiomatization for implicational fragments of S4 and S5
+     </UL>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('geometry');return false;">
+<H3> Tarskian Geometry </H3>
+</A> <SPAN ID="geometry" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(2);return false">IJCAR paper</A>, 2014
+<LI> Not the first in the area
+<LI> Proofs of four challenges
+<LI> Proofs of Hilbert's axioms
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('simplification');return false;">
+<H3> Proof Simplification </H3>
+</A> <SPAN ID="simplification" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(3);return false">The Book</A>, 2003
+<LI> Background
+     <UL>
+     <LI> A mathematician's perspective, ala Paul Erd&ouml;s
+     <LI> First proofs are often ugly
+     <LI> Hilbert's 24th problem
+     </UL>
+<LI> How to measure elegance
+     <UL>
+     <LI> Number of comparable inference steps
+     <LI> Forward vs. backward vs. mixed steps
+     <LI> Restrictions on inference rules, e.g., no demodulation
+     <LI> Graph complexity, with R&uuml;diger Thiele
+     <LI> Clause size (vs. proof length), e.g., Robbins algebra proof
+     <LI> "Pure" proofs
+     </UL>
+<LI> Techniques
+     <UL>
+     <LI> Ancestor subsumption (by proof length)
+     <LI> Constraints to enforce limits on measures
+     </UL>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('pure');return false;">
+<H3> Pure Proofs </H3>
+</A> <SPAN ID="pure" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(4);return false">JAR paper</A>, 1995
+<LI> What?
+     <UL>
+     <LI> Set of formulae S<SUB>1</SUB> ... S<SUB>n</SUB>
+     <LI> Prove S<SUB>i+1</SUB> from S<SUB>i</SUB>,  and S<SUB>1</SUB> from S<SUB>n</SUB>, without prove any other S<SUB>j</SUB>
+     <LI> Challenge is to avoid the S<SUB>j</SUB>
+     </UL>
+<LI> Not possible for 13 shortest single axioms for equivalential calculus
+<LI> Found for any permutation of the 4 Moufang identities
+<LI> Might have been motivated by advisor, Reinhold Baer
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('misc');return false;">
+<H3> Miscellaneous </H3>
+</A> <SPAN ID="misc" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(5);return false">A Book</A>, 1997
+<LI> A finite semigroup with an antiautomorphism but no involutions (helpful)
+<LI> Jordan rings (failure)
+<LI> Ternary Boolean algebra (success)
+<LI> Job-shop scheduling (optimization)
+<LI> Combinatorial logic, problems by Smullyan (fun)
+</UL>
+</SPAN>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

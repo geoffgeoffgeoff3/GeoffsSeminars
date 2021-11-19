@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE> Simplified grammar of Mizar justifications</TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Simplified grammar of Mizar justifications</H1>
+
+<!--- <IMG SRC="ASimpleExample.GIF" BORDER=0 ALIGN=RIGHT WIDTH=33%> --->
+
+<PRE>
+## Theorem as a proposition with justification. 
+JustifiedTheorem = element JustifiedTheorem {Proposition, Justification} 
+Justification = ( Inference | Proof | SkippedProof ) 
+## By and From encode the atomic inference steps done by Mizar. 
+Inference = ( By | From | element ErrorInf { empty } ) 
+## By encodes one simple justification from zero or more references. 
+By = element By { Ref* } 
+## From encodes a simple justification involving Mizar schemes 
+From = element From { Ref* } 
+## Proofs (of BlockThesis) encode ND reasonings consisting of many steps. 
+Proof = element Proof {BlockThesis, Reasoning } 
+## Reasoning is a series of skeleton and auxiliary items (steps) 
+## optionally finished by reasoning per cases. 
+Reasoning = ( ( SkeletonItem | AuxiliaryItem )*, PerCasesReasoning? ) 
+## Skeleton items are the steps that change the current thesis, the 
+## new Thesis is printed explicitly after them. 
+SkeletonItem = ((Let|Conclusion|Assume|Given|Take|TakeAsVar), Thesis) 
+## Auxiliary items are items which do not change thesis. 
+AuxiliaryItem = (JustifiedProposition|Consider|Set|Reconsider| 
+DefFunc|DefPred) 
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

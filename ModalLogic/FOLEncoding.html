@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE> 1st Order Logic Encoding </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 1st Order Logic Encoding </H1>
+
+<IMG SRC="ClingWrap.GIF" BORDER=0 ALIGN=RIGHT WIDTH=35%>
+
+<H3> Encoding by Wrapping </H3>
+<UL>
+<LI> As done also by Fitelson
+<LI> Represent the modal theorem <EM>X</EM> by <EM>is_a_theorem(X)</EM>
+<LI> Use 1st order functors for modal connectives
+<LI> Use 1st order variables for generalizing over modal formulae
+<LI> Use 1st order <EM>&rArr;</EM> to implement modal entailment
+<LI> Use 1st order equality to implement substitution or equivalents
+</UL>
+
+<H3>Some Examples</H3>
+<UL>
+<LI> <EM>&forall;X&forall;Y  
+  ( ( is_a_theorem(X) & is_a_theorem(implies(X,Y)) ) 
+ &rArr; is_a_theorem(Y) )</EM>
+<LI> <EM>&forall;X 
+  ( is_a_theorem(X) 
+ &rArr; is_a_theorem(&#9633;(X)) )</EM>
+<LI> <EM>&forall;X ( &loz;(X) = not(&#9633;(not(X))) )</EM>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

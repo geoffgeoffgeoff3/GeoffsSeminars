@@ -1,0 +1,101 @@
+Overall TFF Statistics
+----------------------
+Domains                      19
+Abstract problems          1877
+Problems                   2084
+Problems with equality     1737 (83%)
+Pure equality problems      339 (16%)
+Problems with arithmetic   1371 (65%)
+Problems with polymorphism  599 (28%)
+Theorem/Unsatisfiable      1667 (79%)
+CounterSat/Satisfiable      118 ( 5%)
+
+HELP 0 atoms 26 formulae in problem SYN000_4
+Problem-by-problem                 Min      Max      Avg      Med
+------------------                 ------------------------------
+Number of formulae                   1   340918     4147       76
+% of type formulae                  0%     100%      30%      29%
+% of unit formulae                  0%     100%      40%      30%
+Number of atoms                      0  1986853    15167      184
+% of equality atoms                 0%    -nan%    -nan%      37%
+Atoms per formula                  0.0  31836.0    591.4      2.0
+Number of predicate symbols          0   271855     3159       42
+Maximal predicate arity              0        8        2        2
+Number of functors                   0     9977      146       20
+Maximal functor arity                0       18        2        2
+Number of variables                  0   246172     3103      186
+         !>                          0       62        8        0
+          !                          0   246172     3075      171
+          ?                          0     2178       18        1
+Number of connectives                0  1911707    14461      105
+Number of arithmetic symbols         0    30626      307        3
+
+The TPTP Domain Structure
+-------------------------
+The domain structure of the TPTP is depicted below,  with counts of the numbers
+of TFF  problems and versions in each domain.  The prefixes name subdirectories
+in the Problems directory, and prefix the problem names in that directory.
+
+                                                     Domain  # Problems
+     Field             Subfield                      Prefix  Abst / Vers
+ -----------------------------------------------------------------------
+ |-- Logic --------|-- Combinatory Logic                COL     0 /    0
+ |                 |-- Logic Calculi                    LCL   100 /  100
+ |                 |-- Henkin Models                    HEN     0 /    0
+ |
+ |-- Mathematics --|-- Set Theory                       SET     0 /    0
+ |                 |-- Set Theory Continued             SEU     0 /    0
+ |                 |-- Set Theory Continued             SEV     6 /    6
+ |                 |-- Graph Theory                     GRA     0 /    0
+ |                 |-- Algebra --|-- Relation Algebra   REL     0 /    0
+ |                 |             |-- Boolean Algebra    BOO     0 /    0
+ |                 |             |-- Robbins Algebra    ROB     0 /    0
+ |                 |             |-- Left Distributive  LDA     0 /    0
+ |                 |             |-- Lattices           LAT     0 /    0
+ |                 |             |-- Quantales          QUA     0 /    0
+ |                 |             |-- Kleene Algebra     KLE     0 /    0
+ |                 |             |-- Groups             GRP     0 /    0
+ |                 |             |-- Rings              RNG     0 /    0
+ |                 |             |-- Fields             FLD     0 /    0
+ |                 |             |-- Linear Algebra     LIN     0 /    0
+ |                 |             |-- Homological Alg    HAL     0 /    0
+ |                 |             |-- Real Algebra       RAL     0 /    0
+ |                 |             |-- General Algebra    ALG     0 /    0
+ |                 |-- Number Theory                    NUM   141 /  157
+ |                 |-- Number Theory Continued          NUN    19 /   19
+ |                 |-- Topology                         TOP     0 /    0
+ |                 |-- Analysis                         ANA     0 /    0
+ |                 |-- Geometry                         GEO     1 /    1
+ |                 |-- Category Theory                  CAT     0 /    0
+ |
+ |-- Computer -----|-- Computing Theory                 COM   101 /  102
+ |   Science       |-- Knowledge Representation         KRS     1 /    1
+ |                 |-- Natural Language Processing      NLP     0 /    0
+ |                 |-- Planning                         PLA     7 /    7
+ |                 |-- Agents                           AGT     0 /    0
+ |                 |-- Commonsense Reasoning            CSR     0 /    0
+ |                 |-- Semantic Web                     SWB     0 /    0
+ |                 |-- Data Structures                  DAT   114 /  114
+ |                 |-- Software Creation                SWC     0 /    0
+ |                 |-- Software Verification            SWV    54 /   54
+ |                 |-- Software Verification Continued  SWW   470 /  494
+ |
+ |-- Science and --|-- Biology                          BIO     0 /    0
+ |   Engineering   |-- Hardware Creation                HWC     0 /    0
+ |                 |-- Hardware Verification            HWV    61 /  200
+ |                 |-- Medicine                         MED     0 /    0
+ |                 |-- Processes                        PRO     0 /    0
+ |                 |-- Products                         PRD     0 /    0
+ |
+ |-- Social -------|-- Social Choice Theory             SCT    97 /  105
+ |   Sciences      |-- Management                       MGT     0 /    0
+ |                 |-- Geography                        GEG     5 /    5
+ |
+ |-- Arts and -----|-- Philosophy                       PHI     0 /    0
+ |   Humanities
+ |
+ |-- Other --------|-- Arithmetic                       ARI   681 /  693
+                   |-- Syntactic                        SYN     1 /    5
+                   |-- Syntactic Continued              SYO     6 /    7
+                   |-- Puzzles                          PUZ     9 /   11
+                   |-- Miscellaneous                    MSC     3 /    3

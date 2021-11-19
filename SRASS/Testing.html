@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE> Testing </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Testing </H1>
+
+<IMG SRC="Testing.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+
+<H3> (Conservative) System Configuration </H3>
+<UL>
+<LI> No Initial Proof Attempts 
+<LI> Greedy Termination and Aggressive Selection disabled
+<LI> No Batch Selection or Limited Selection
+<LI> Automated reasoning components
+     <UL>
+     <LI> E 0.99 to test for (counter)theoremhood and unsatisfiability
+     <LI> EP 0.99 to find proofs
+     <LI> FMDarwin 1.3g to build models
+     <LI> Paradox 2.0b to test for (counter)satisfiability
+     <LI> SPASS 2.2 to further test for (counter)satisfiability.
+     </UL>
+<LI> 2.8GHz Intel Xeon CPU, 1GB memory, Linux 2.6.
+<LI> Overall CPU limit 600s 
+<LI> Component CPU limits: 10s (counter)theoremhood, 120s unsatisfiability, 
+     600s proofs, 10s models, 2s (counter)satifiability
+</UL>
+
+<H3> Test Problems </H3>
+<UL>
+<LI> Problems not solved by E 0.99 in 20s
+<LI> 75 modal logic problems 
+     (from 132 problems <TT>LCL448+1</TT> to <TT>LCL578+1</TT>)
+<LI> 103 Mizar set theory problems
+     (from 253 problems <TT>SET866+1</TT> to <TT>SEU118+1</TT>)
+<LI> 61 NASA software verification problems
+     (from 109 problems <TT>SWV022+1</TT> to <TT>SWV130+1</TT>)
+<P>
+<LI> Superfluous axioms in principle and due to encodings
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>
+

@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE> Displaying Results </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'ArchResultDisplays.GIF';
+  images[1]     = new Image();
+  images[1].src = 'HyperlinkedKIF.GIF';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+  //-->
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Displaying Results
+</H1>
+
+<A HREF="HyperlinkedKIFGIF.html" onMouseOver="putImage();return false">
+<IMG NAME="image" SRC="ArchResultDisplays.GIF" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Three Displays </H3>
+<UL>
+<LI> <A HREF="../TSTP/EP---0.999.THM-CRf.s.txt">TPTP format</A> proofs
+<LI> Integrated <A HREF="../IDV/Summary.html">IDV</A>
+<LI> SigmeKEE's hyper-linked SUO-KIF display
+</UL>
+
+<H3> GUI Interface </H3>
+<UL>
+<LI> Formula text box for SUO-KIF queries
+<LI> Selection of local or remote SystemOnTPTP
+<LI> Selection of ATP system
+<LI> Maximal number of answers
+<LI> CPU time limit for ATP
+<LI> Ask (and tell) button
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

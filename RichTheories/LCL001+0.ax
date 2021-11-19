@@ -1,0 +1,65 @@
+%--------------------------------------------------------------------------
+% File     : LCL001-1 : TPTP v2.6.0. Released v1.0.0.
+% Domain   : Logic Calculi (Wajsberg Algebras)
+% Axioms   : Wajsberg algebra lattice structure definitions
+% Version  : [Bon91] (equality) axioms.
+% English  : 
+
+% Refs     : [FRT84] Font et al. (1984), Wajsberg Algebras
+%          : [Bon91] Bonacina (1991), Problems in Lukasiewicz Logic
+% Source   : [Bon91]
+% Names    : 
+
+% Status   : 
+% Syntax   : Number of clauses    :   10 (   0 non-Horn;   2 unit;   4 RR)
+%            Number of literals   :   20 (  14 equality)
+%            Maximal clause size  :    3 (   2 average)
+%            Number of predicates :    2 (   0 propositional; 2-2 arity)
+%            Number of functors   :    5 (   1 constant; 0-2 arity)
+%            Number of variables  :   26 (   0 singleton)
+%            Maximal term depth   :    4 (   1 average)
+
+% Comments : Requires LCL001-0.ax
+%--------------------------------------------------------------------------
+%----Definitions of big_V and big_hat 
+input_clause(big_V_definition,axiom,
+    [++equal(big_V(X,Y),implies(implies(X,Y),Y))]).
+
+input_clause(big_hat_definition,axiom,
+    [++equal(big_hat(X,Y),not(big_V(not(X),not(Y))))]).
+
+%----Definition of partial order 
+input_clause(partial_order_definition1,axiom,
+    [--ordered(X,Y),
+     ++equal(implies(X,Y),truth)]).
+
+input_clause(partial_order_definition2,axiom,
+    [--equal(implies(X,Y),truth),
+     ++ordered(X,Y)]).
+
+input_clause(big_V_substitution1,axiom,
+    [--equal(A,B),
+     ++equal(big_V(A,C),big_V(B,C))]).
+
+input_clause(big_V_substitution2,axiom,
+    [--equal(D,E),
+     ++equal(big_V(F,D),big_V(F,E))]).
+
+input_clause(big_hat_substitution1,axiom,
+    [--equal(G,H),
+     ++equal(big_hat(G,I),big_hat(H,I))]).
+
+input_clause(big_hat_substitution2,axiom,
+    [--equal(J,K),
+     ++equal(big_hat(L,J),big_hat(L,K))]).
+
+input_clause(ordered_substitution1,axiom,
+    [--equal(M,N),
+     --ordered(M,O),
+     ++ordered(N,O)]).
+
+input_clause(ordered_substitution2,axiom,
+    [--equal(P,Q),
+     --ordered(R,P),
+     ++ordered(R,Q)]).
+%--------------------------------------------------------------------------

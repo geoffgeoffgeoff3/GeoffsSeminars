@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+<TITLE> Logic for PyRes </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY>
+<!---------------------------------------------------------------------->
+<H1 ALIGN=CENTER> 
+Logic for PyRes
+</H1>
+
+<IMG SRC="LogicPenguins.gif" ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> PRP, FOF, ATP, LC, SPTs </H3>
+<UL>
+<LI> <A HREF="../TPTPWorldTutorial/LogicPRP.html">Propositional Logic</A> 
+     (<A HREF="" onClick="hideshow('PRPTopics');return false;">topics</A>)
+     <SPAN ID="PRPTopics" style="display:none">
+     <UL>
+     <LI> The logic
+     <LI> An example
+     <LI> In TPTP format
+     </UL>
+     </SPAN>
+<LI> <A HREF="../TPTPWorldTutorial/LogicFOF.html">First-order Logic</A>
+     (<A HREF="" onClick="hideshow('FOFTopics');return false;">topics</A>)
+     <SPAN ID="FOFTopics" style="display:none">
+     <UL>
+     <LI> The logic
+     <LI> An example
+     <LI> In TPTP format
+     </UL>
+     </SPAN>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/WhatIsATP.shtml">What is ATP, Really?</A>
+     (<A HREF="" onClick="hideshow('ATPTopics');return false;">topics</A>)
+     <SPAN ID="ATPTopics" style="display:none">
+     <UL>
+     <LI> An example
+     <LI> Logical consequence
+     <LI> Soundness and completeness
+     <LI> Model finding
+     </UL>
+     </SPAN>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/LogicalConsequence.shtml">Logical Consequence</A>
+     (<A HREF="" onClick="hideshow('LCTopics');return false;">topics</A>)
+     <SPAN ID="LCTopics" style="display:none">
+     <UL>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/LogicalConsequence.shtml#Interpretation">Interpretation</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/LogicalConsequence.shtml#Models">Models, etc.</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/LogicalConsequence.shtml#Definition">Definition</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/LogicalConsequence.shtml#LCByInference">By inference</A>
+     </UL>
+     </SPAN>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/1stOrder.shtml#LCByUNS">Satisfiability Preserving Transformations</A>
+     (<A HREF="" onClick="hideshow('SPTTopics');return false;">topics</A>)
+     <SPAN ID="SPTTopics" style="display:none">
+     <UL>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/LogicalConsequence.shtml#LCByUNS">LC by UNS</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/1stOrder.shtml#SPTs">SPTs</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/1stOrder.shtml#LCBySPTs">LC by SPTs</A>
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> FOL, CNF, BR&F</H3>
+<UL>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/1stOrder.shtml#Language">The Language of (First-order) Logic</A>
+     (<A HREF="" onClick="hideshow('FOLTopics');return false;">topics</A>)
+     <SPAN ID="FOLTopics" style="display:none">
+     <UL>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/1stOrder.shtml#Language">Symbols, terms, atoms</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/1stOrder.shtml#Formulae">Formulae, literals, ground</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/1stOrder.shtml#Equality">Equality</A>
+     </UL>
+     </SPAN>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/FOFToCNF.shtml">Clause Normal Form</A>
+     (<A HREF="" onClick="hideshow('CNFTopics');return false;">topics</A>)
+     <SPAN ID="CNFTopics" style="display:none">
+     <UL>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/FOFToCNF.shtml">The form</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/FOFToCNF.shtml#Transforming">Transforming</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/FOFToCNF.shtml#Hornness">(Non-)Horn clauses</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/FOFToCNF.shtml#SPT">It's an SPT!</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/FOFToCNF.shtml#LogicalConsequence">Logical consequence</A>
+     </UL>
+     </SPAN>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/Resolution.shtml">Two Inference Rules</A>
+     (<A HREF="" onClick="hideshow('BRFTopics');return false;">topics</A>)
+     <SPAN ID="BRFTopics" style="display:none">
+     <UL>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/Resolution.shtml#Substitutions">Substitutions and unification</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/Resolution.shtml#Resolution">Binary resolution</A>
+     <LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/Resolution.shtml#Factoring">Factoring</A>
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> ATP, ANL</H3>
+<UL>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/Saturation.shtml">Saturation</A>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/ANLLoop.shtml">Search</A>
+<LI> <A HREF="https://www.cs.miami.edu/home/geoff/Courses/CSC749-19F/Content/ANLLoop.shtml#ANL">ANL loop</A>
+</UL>
+
+<H3> The End - Any Questions?  </H3>
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

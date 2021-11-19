@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE> 
+Mediators
+</HEAD>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = '../Architecture.gif'; 
+  images[1]     = new Image();
+  images[1].src = 'HTTPProxy.gif'; 
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }  
+  //-->
+</SCRIPT> 
+<!------------------------------------------------------------------------>
+<BODY ALIGN=JUSTIFY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Mediators
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="../Architecture.gif" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> Structure </H3>
+<UL>
+<LI> Run on same computer as SPASS-XDB
+<LI> Marshall and unmarshall TPTP format data
+<LI> Generic implementation for flexible reuse
+<LI> Prolog, MySQL, SPARQL, WWW
+</UL>
+
+<H3> Proxy Mediator </H3>
+<UL>
+<LI> Runs on same computer as SPASS-XDB
+<LI> Real mediators run on remote computer
+<LI> Communication by HTTP
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

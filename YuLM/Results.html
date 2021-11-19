@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<TITLE> Results </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Results </H1>
+
+<CENTER>
+<TABLE>
+<TR> <TD COLSPAN=7> <HR><!---------------------------------------------------->
+<TR> <TD> System
+     <TD ALIGN=RIGHT> Graph
+     <TD ALIGN=RIGHT> Short 5
+     <TD ALIGN=CENTER COLSPAN=4> Kitchen sink
+<TR> <TD>
+     <TD ALIGN=RIGHT> triangles
+     <TD ALIGN=RIGHT> lemma
+     <TD ALIGN=RIGHT> Ordered
+     <TD ALIGN=RIGHT> Random 1
+     <TD ALIGN=RIGHT> Random 2
+     <TD ALIGN=RIGHT> Reversed
+<TR> <TD COLSPAN=7> <HR><!---------------------------------------------------->
+<TR> <TD> ILA
+     <TD ALIGN=RIGHT> (11) 37s
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+<TR> <TD> ILR
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+<TR> <TD> ILA
+     <TD ALIGN=RIGHT> (1) 88s
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+     <TD ALIGN=RIGHT> Failed
+<TR> <TD> RLS
+     <TD ALIGN=RIGHT> (1) 34s
+     <TD ALIGN=RIGHT> (9) 4195s
+     <TD ALIGN=RIGHT> (5) 1509s
+     <TD ALIGN=RIGHT> (6) 2422s
+     <TD ALIGN=RIGHT> (8) 2333s
+     <TD ALIGN=RIGHT> (11) 2036s
+<TR> <TD> RLM (TF=1)
+     <TD ALIGN=RIGHT> (1) 139s
+     <TD ALIGN=RIGHT> (8) 5042s
+     <TD ALIGN=RIGHT> (5) 5315s
+     <TD ALIGN=RIGHT> (5) 5312s
+     <TD ALIGN=RIGHT> (5) 5320s
+     <TD ALIGN=RIGHT> (5) 5310s
+<TR> <TD COLSPAN=7> <HR><!---------------------------------------------------->
+</TABLE>
+</CENTER>
+
+<UL>
+<LI> Iterative lemma usage fails on branching proof structures
+     <UL>
+     <LI> ILA has its uses
+     </UL>
+<LI> Lemmas work
+     <UL>
+     <LI> Especially with recursive approaches
+     </UL>
+<LI> RLM always finds the optimal proof structure
+     <UL>
+     <LI> But you pay with time
+     <LI> Can be tuned by 
+          <A HREF="Tolerance.html">increasing the tolerance factor</A>
+     </UL>
+<LI> Greedy nature of RLS takes small steps with reversed lemmas
+     <UL>
+     <LI> Compare the <A HREF="ProofStructures.html">proof structures</A>
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

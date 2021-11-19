@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE> The TMTP Idea </TITLE>
+</HEAD>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Model2.jpg';
+  images[1]     = new Image();
+  images[1].src = 'LetterFromAlan.GIF';
+
+  function putImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The TMTP Idea
+</H1>
+
+<A HREF="LetterFromAlanGIF.html">
+<IMG NAME="image" SRC="Model2.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> What </H3>
+<UL>
+<LI> TPTP axiomatization problems
+     <UL>
+     <LI> Contain only <TT>include</TT> directives for axiom files
+     <LI> Axiomatize some established theory
+     </UL>
+<LI> Library of models for TPTP axiomatization problems
+     <UL>
+     <LI> Written in the TPTP language
+     </UL>
+<LI> Infrastructure for collecting models from the TSTP
+<LI> Functions for efficiently interpreting wrt an interpretation
+<LI> Tools for examining and manipulating interpretations
+</UL>
+
+<H3> Why </H3>
+<UL>
+<LI> ATP semantically guided by fixed interpretation(s)
+     <UL>
+     <LI> Semantic Resolution (Slagle, 1967, no implementations)
+     <LI> SRASS, SCOTT, SLM, etc.
+     <LI> <A HREF="" onClick="putImage();return false">
+          <IMG SRC="TinyCatwalk.gif" style="height:0.8em"></A>
+     </UL>
+<LI> Semantic axiom selection in large theories
+<LI> Insights into semantic structure of axiomatizations
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

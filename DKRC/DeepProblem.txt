@@ -1,0 +1,221 @@
+%-----------------------------------------------------------------------------
+%----General SUMO background
+fof(kb_SRI_1,axiom,(
+    s__subclass(s__TransitiveRelation,s__Relation) )).
+
+fof(kb_SRI_2,axiom,(
+    s__instance(s__TransitiveRelation__t,s__SetOrClass) )).
+
+fof(kb_SRI_3,axiom,(
+    s__instance(s__Relation__t,s__SetOrClass) )).
+
+fof(kb_SRI_4,axiom,(
+    s__subclass(s__SymmetricRelation,s__Relation) )).
+
+fof(kb_SRI_5,axiom,(
+    s__subclass(s__BinaryRelation,s__Relation) )).
+
+fof(kb_SRI_6,axiom,(
+    s__subclass(s__TernaryRelation,s__Relation) )).
+
+fof(kb_SRI_7,axiom,(
+    ! [V__X,V__Y,V__Z] :
+      ( ( s__subclass(V__X,V__Y)
+        & s__subclass(V__Y,V__Z) )
+     => s__subclass(V__X,V__Z) ) )).
+
+fof(kb_SRI_8,axiom,(
+    ! [V__X,V__Y,V__Z] :
+      ( ( s__instance(V__X,V__Y)
+        & s__subclass(V__Y,V__Z) )
+     => s__instance(V__X,V__Z) ) )).
+
+%----T1: Every cell has a numeric function called surface_area that return's
+%----the cell's surface area.
+fof(kb_SRI_9,axiom,(
+    s__instance(s__surfaceArea__m,s__BinaryRelation) )).
+
+fof(kb_SRI_10,axiom,(
+    s__domain(s__surfaceArea__m,1,s__SelfConnectedObject) )).
+
+fof(kb_SRI_11,axiom,(
+    s__domain(s__surfaceArea__m,2,s__AreaMeasure) )).
+
+fof(kb_SRI_12,axiom,(
+    ! [V__S,V__M] :
+      ( ( s__instance(V__M,s__AreaMeasure)
+        & s__instance(V__S,s__SelfConnectedObject) )
+     => ( s__surfaceArea(V__S,V__M)
+       => ? [V__O] : s__surface(V__S,V__O) ) ) )).
+
+fof(kb_SRI_13,axiom,(
+    ! [V__S,V__U,V__N] :
+      ( s__instance(V__S,s__SelfConnectedObject)
+     => ( s__surfaceArea(V__S,s__MeasureFn(V__N,V__U))
+       => s__measure(V__S,s__MeasureFn(V__N,V__U)) ) ) )).
+
+%----T2: Every cell has a numeric function called surface_to_volume_ratio that
+%----return's the cell's surface to volume ratio.
+fof(kb_SRI_14,axiom,(
+    s__instance(s__surfaceToVolumeRatio__m,s__BinaryRelation) )).
+
+fof(kb_SRI_15,axiom,(
+    s__instance(s__BinaryRelation__t,s__SetOrClass) )).
+
+fof(kb_SRI_16,axiom,(
+    s__domain(s__surfaceToVolumeRatio__m,1,s__SelfConnectedObject) )).
+
+fof(kb_SRI_17,axiom,(
+    s__domain(s__surfaceToVolumeRatio__m,2,s__FunctionQuantity) )).
+
+fof(kb_SRI_18,axiom,(
+    ! [V__O,V__U2,V__N2,V__B,V__A,V__U,V__N] :
+      ( s__instance(V__O,s__SelfConnectedObject)
+     => ( s__surfaceToVolumeRatio(V__O,s__PerFn(s__MeasureFn(V__A,V__U),s__MeasureFn(V__B,V__U)))
+       => ( s__surfaceArea(V__O,s__MeasureFn(V__N,s__SquareFn(V__U2)))
+          & s__measure(V__O,s__MeasureFn(V__N2,s__CubeFn(V__U2)))
+          & s__PerFn(s__MeasureFn(V__A,V__U),s__MeasureFn(V__B,V__U)) = s__PerFn(s__MeasureFn(V__N,s__SquareFn(V__U2)),s__MeasureFn(V__N2,s__CubeFn(V__U2))) ) ) ) )).
+
+%----T3: Every cell and environment have a numeric function called
+%----exchange_rate that returns the exchange rate between the cell and the
+%----environment.
+fof(kb_SRI_19,axiom,(
+    s__documentation(s__exchangeRate__m,s__EnglishLanguage,'The rate at which a cell exchanges material with its environment. Positive rate means the cell is taking in material. A better formulation would be relative to a particular type of Substance.') )).
+
+fof(kb_SRI_20,axiom,(
+    s__instance(s__exchangeRate__m,s__TernaryRelation) )).
+
+fof(kb_SRI_21,axiom,(
+    s__instance(s__TernaryRelation__t,s__SetOrClass) )).
+
+fof(kb_SRI_22,axiom,(
+    s__domain(s__exchangeRate__m,1,s__Cell) )).
+
+fof(kb_SRI_23,axiom,(
+    s__domain(s__exchangeRate__m,2,s__Region) )).
+
+fof(kb_SRI_24,axiom,(
+    s__domain(s__exchangeRate__m,3,s__FunctionQuantity) )).
+
+fof(kb_SRI_25,axiom,(
+    ! [V__TU,V__N2,V__R,V__C,V__U,V__N] :
+      ( ( s__instance(V__C,s__Cell)
+        & s__instance(V__R,s__Region) )
+     => ( s__exchangeRate(V__C,V__R,s__PerFn(s__MeasureFn(V__N,V__U),s__MeasureFn(V__N2,V__TU)))
+       => s__instance(V__TU,s__TimeDuration) ) ) )).
+
+fof(kb_SRI_26,axiom,(
+    ! [V__TU,V__N2,V__R,V__C,V__U,V__N] :
+      ( ( s__instance(V__C,s__Cell)
+        & s__instance(V__R,s__Region) )
+     => ( ( s__exchangeRate(V__C,V__R,s__PerFn(s__MeasureFn(V__N,V__U),s__MeasureFn(V__N2,V__TU)))
+          & greater(V__N,0) )
+       => ? [V__M,V__S] :
+            ( s__instance(V__S,s__Substance)
+            & s__measure(V__S,s__MeasureFn(V__N,V__U))
+            & s__instance(V__M,s__Motion)
+            & s__duration(s__WhenFn(V__M),s__MeasureFn(V__N2,V__TU))
+            & s__holdsDuring(s__ImmediatePastFn(V__M),'s__orientation(V__S,V__C,s__Inside)')
+            & s__holdsDuring(s__ImmediateFutureFn(V__M),'s__orientation(V__S,V__C,s__Outside)') ) ) ) )).
+
+fof(kb_SRI_27,axiom,(
+    ! [V__TU,V__N2,V__R,V__C,V__U,V__N] :
+      ( ( s__instance(V__C,s__Cell)
+        & s__instance(V__R,s__Region) )
+     => ( ( s__exchangeRate(V__C,V__R,s__PerFn(s__MeasureFn(V__N,V__U),s__MeasureFn(V__N2,V__TU)))
+          & greater(0,V__N) )
+       => ? [V__M,V__S] :
+            ( s__instance(V__S,s__Substance)
+            & s__measure(V__S,s__MeasureFn(V__N,V__U))
+            & s__instance(V__M,s__Motion)
+            & s__duration(s__WhenFn(V__M),s__MeasureFn(V__N2,V__TU))
+            & s__holdsDuring(s__ImmediatePastFn(V__M),'s__orientation(V__S,V__C,s__Outside)')
+            & s__holdsDuring(s__ImmediateFutureFn(V__M),'s__orientation(V__S,V__C,s__Inside)') ) ) ) )).
+
+%----T4: Every cell has a function called environment_of that returns the
+%----environment of the cell.
+fof(kb_SRI_28,axiom,(
+    s__instance(s__cellEnvironmentFn__m,s__UnaryFunction) )).
+
+fof(kb_SRI_29,axiom,(
+    s__instance(s__UnaryFunction__t,s__SetOrClass) )).
+
+fof(kb_SRI_30,axiom,(
+    s__domain(s__cellEnvironmentFn__m,1,s__Cell) )).
+
+fof(kb_SRI_31,axiom,(
+    s__range(s__cellEnvironmentFn__m,s__Region) )).
+
+fof(kb_SRI_32,axiom,(
+    ! [V__R,V__C] :
+      ( s__instance(V__C,s__Cell)
+     => ( s__cellEnvironmentFn(V__C,V__R)
+       => s__orientation(V__C,V__R,s__Inside) ) ) )).
+
+fof(kb_SRI_33,axiom,(
+    s__instance(s__proportional__m,s__SymmetricRelation) )).
+
+fof(kb_SRI_34,axiom,(
+    s__instance(s__SymmetricRelation__t,s__SetOrClass) )).
+
+fof(kb_SRI_35,axiom,(
+    s__instance(s__proportional__m,s__TransitiveRelation) )).
+
+fof(kb_SRI_36,axiom,(
+    s__domain(s__proportional__m,1,s__Relation) )).
+
+fof(kb_SRI_37,axiom,(
+    s__domain(s__proportional__m,2,s__Relation) )).
+
+%----A3: Proportional is symmetric on numeric functions.
+fof(kb_SRI_38,axiom,(
+    ! [V__X,V__Y] :
+      ( ( s__instance(V__Y,s__Relation)
+        & s__instance(V__X,s__Relation) )
+     => ( s__proportional(V__X,V__Y)
+       => s__proportional(V__Y,V__X) ) ) )).
+
+%----A4: Proportional is transitive on numeric functions.
+fof(kb_SRI_39,axiom,(
+    ! [V__X,V__Y,V__Z] :
+      ( ( s__instance(V__Z,s__Relation)
+        & s__instance(V__Y,s__Relation)
+        & s__instance(V__X,s__Relation) )
+     => ( ( s__proportional(V__X,V__Y)
+          & s__proportional(V__Y,V__Z) )
+       => s__proportional(V__X,V__Z) ) ) )).
+
+%----A1: For every cell the surface_to_volume_ratio function is proportional
+%----to its exchange_rate function.
+fof(kb_SRI_40,axiom,(
+    s__proportional(s__surfaceToVolumeRatio__m,s__exchangeRate__m) )).
+
+%----A2: For every cell the surface_area function is proportional to its
+%----surface_to_volume_ratio function.
+fof(kb_SRI_41,axiom,(
+    s__proportional(s__surfaceArea__m,s__surfaceToVolumeRatio__m) )).
+
+fof(kb_SRI_42,axiom,(
+    s__instance(s__Important,s__RelationalAttribute) )).
+
+fof(kb_SRI_43,axiom,(
+    s__instance(s__RelationalAttribute__t,s__SetOrClass) )).
+
+%----A5: If a numeric function is important, and is proportional to another
+%----numeric function, then the other numeric function is also important.
+fof(kb_SRI_44,axiom,(
+    ! [V__R,V__R2] :
+      ( s__instance(V__R2,s__Relation)
+     => ( ( s__instance(V__R,s__Relation)
+          & s__attribute(V__R,s__Important)
+          & s__proportional(V__R,V__R2) )
+       => s__attribute(V__R2,s__Important) ) ) )).
+
+%----H1: The exchange_rate function of a cell is important.
+fof(kb_SRI_45,axiom,(
+    s__attribute(s__exchangeRate__m,s__Important) )).
+
+fof(prove,conjecture,(
+    s__attribute(s__surfaceArea__m,s__Important) )).
+
+%-----------------------------------------------------------------------------

@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<TITLE> CNF_SAT </TITLE>
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> <FONT SIZE=+5><TT>CNF_SAT</TT></FONT> </H1>
+
+<IMG SRC="VampireLike1.jpg" ALIGN="RIGHT" WIDTH=33%>
+
+<H3> Highlights </H3>
+<UL>
+<LI> System of Choice : <STRONG>Vampire 4.0</STRONG> (in SAT mode)
+<LI> Vampire a SOTA contributor in all 4 SPCs
+<LI> Vampire best in 3 SPCs
+     <UL>
+     <LI> iProver beaten in <FONT SIZE=+1><TT>CNF_SAT_EPR</TT></FONT>
+     </UL>
+<LI> Mace4 best in <FONT SIZE=+1><TT>CNF_SAT_RFO_PEQ_UEQ</TT></FONT>, 
+     Vampire weak, Paradox also good 
+</UL>
+
+<H3> SPC Analysis </H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('CNF_SAT_EPR');return false;">
+     <FONT SIZE=+1><TT>CNF_SAT_EPR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT></FONT></A>
+     : Vampire 4.0 (in SAT mode)
+<LI> <A HREF="" onClick="hideshow('CNF_SAT_RFO_NEQ');return false;">
+     <FONT SIZE=+1><TT>CNF_SAT_RFO_NEQ&nbsp;&nbsp;&nbsp;&nbsp;</TT></FONT></A>
+     : Vampire 4.0 (in SAT mode)
+<LI> <A HREF="" onClick="hideshow('CNF_SAT_RFO_EQU_NUE');return false;">
+     <FONT SIZE=+1><TT>CNF_SAT_RFO_EQU_NUE</TT></FONT></A>
+     : Vampire 4.0 (in SAT mode)
+<LI> <A HREF="" onClick="hideshow('CNF_SAT_RFO_PEQ_UEQ');return false;">
+     <FONT SIZE=+1><TT>CNF_SAT_RFO_PEQ_UEQ</TT></FONT></A>
+     : Mace4 1109a
+</UL>
+
+<H3> SOTA Contributors and System Ratings </H3>
+<SPAN ID="CNF_SAT_EPR" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/CNF_SAT_EPR"><B>CNF_SAT_EPR</B></A>
+Unbiased SPC size               239
+SOTA contributors      solved   226 = 0.95 SPC 0.95 attempted
+SOTA contributors all  solved   140 = 0.59 SPC 0.62 SOTA   86 =  1.00 SSR
+Vampire---SAT-4.0    c solved   219 = 0.92 SPC 0.97 SOTA   79 =  0.92 SSR
+Vampire---4.0        C solved   219 = 0.92 SPC 0.97 SOTA   79 =  0.92 SSR
+iProver---1.4        C solved   209 = 0.87 SPC 0.92 SOTA   69 =  0.80 SSR
+Paradox---4.0        C solved   180 = 0.75 SPC 0.80 SOTA   40 =  0.47 SSR
+GrAnDe---1.1         C solved   152 = 0.64 SPC 0.67 SOTA   12 =  0.14 SSR
+</PRE>
+</SPAN>
+
+<SPAN ID="CNF_SAT_RFO_NEQ" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/CNF_SAT_RFO_NEQ"><B>CNF_SAT_RFO_NEQ</B></A>
+Unbiased SPC size               274
+SOTA contributors      solved   274 = 1.00 SPC 1.00 attempted
+SOTA contributors all  solved   212 = 0.77 SPC 0.77 SOTA   62 =  1.00 SSR
+Vampire---SAT-4.0    C solved   273 = 1.00 SPC 1.00 SOTA   61 =  0.98 SSR
+Mace4---1109a        C solved   213 = 0.78 SPC 0.78 SOTA    1 =  0.02 SSR
+</PRE>
+</SPAN>
+
+<SPAN ID="CNF_SAT_RFO_EQU_NUE" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/CNF_SAT_RFO_EQU_NUE"><B>CNF_SAT_RFO_EQU_NUE</B></A>
+Unbiased SPC size               493
+SOTA contributors      solved   402 = 0.82 SPC 0.82 attempted
+SOTA contributors all  solved    78 = 0.16 SPC 0.19 SOTA  324 =  1.00 SSR
+Vampire---SAT-4.0    C solved   355 = 0.72 SPC 0.88 SOTA  277 =  0.85 SSR
+DarwinFM---1.4.5     C solved   241 = 0.49 SPC 0.60 SOTA  163 =  0.50 SSR
+CVC4---FNT-1.5pre    C solved   233 = 0.47 SPC 0.58 SOTA  155 =  0.48 SSR
+SPASS---3.7          C solved   205 = 0.42 SPC 0.51 SOTA  127 =  0.39 SSR
+E---1.9              C solved   202 = 0.41 SPC 0.50 SOTA  124 =  0.38 SSR
+Mace4---1109a        C solved   200 = 0.41 SPC 0.50 SOTA  122 =  0.38 SSR
+Nitpick---2015       C solved   193 = 0.39 SPC 0.48 SOTA  115 =  0.35 SSR
+</PRE>
+</SPAN>
+
+<SPAN ID="CNF_SAT_RFO_PEQ_UEQ" style="display:none">
+<PRE>
+<A HREF="SystemsInSPCs/CNF_SAT_RFO_PEQ_UEQ"><B>CNF_SAT_RFO_PEQ_UEQ</B></A>
+Unbiased SPC size               140
+SOTA contributors      solved   127 = 0.91 SPC 0.91 attempted
+SOTA contributors all  solved    76 = 0.54 SPC 0.60 SOTA   51 =  1.00 SSR
+Mace4---1109a        C solved   119 = 0.85 SPC 0.94 SOTA   43 =  0.84 SSR
+Paradox---4.0        C solved   116 = 0.83 SPC 0.91 SOTA   40 =  0.78 SSR
+Vampire---SAT-4.0    C solved    83 = 0.59 SPC 0.65 SOTA    7 =  0.14 SSR
+</PRE>
+</SPAN>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

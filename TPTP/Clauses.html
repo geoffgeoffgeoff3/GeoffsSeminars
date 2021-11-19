@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE> CNF Problem Clauses Section </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> CNF Problem Clauses Section </H1>
+
+<PRE>
+%--------------------------------------------------------------------------
+%----Redundant two axioms
+input_clause(right_identity,axiom,
+    [++equal(multiply(X,identity),X)]).
+
+input_clause(right_inverse,axiom,
+    [++equal(multiply(X,inverse(X)),identity)]).
+
+    <some clauses omitted>
+
+%----Denial of theorem
+input_clause(b_in_O2,hypothesis,
+    [++subgroup_member(b)]).
+
+input_clause(b_times_a_inverse_is_c,hypothesis,
+    [++equal(multiply(b,inverse(a)),c)]).
+
+input_clause(a_times_c_is_d,hypothesis,
+    [++equal(multiply(a,c),d)]).
+
+input_clause(prove_d_in_O2,conjecture,
+    [--subgroup_member(d)]).
+%--------------------------------------------------------------------------
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

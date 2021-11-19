@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE> Verifying Leaf Formulae </TITLE>
+</HEAD>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'LeafMatch.GIF';
+  images[1]     = new Image();
+  images[1].src = 'LeafDerived.GIF';
+  images[2]     = new Image();
+  images[2].src = 'LeafBadRefutation.GIF';
+  images[3]     = new Image();
+  images[3].src = 'LeafRefutation.GIF';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Verifying Leaf Formulae </H1>
+
+<IMG NAME="image" SRC="LeafMatch.GIF" BORDER=0 ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> Matched and Derived Leaves 
+     <A HREF="" onMouseOver="putImage(0);return false">
+     <IMG SRC="LeafMatch.GIF" BORDER=0 WIDTH=10></A>
+     <A HREF="" onMouseOver="putImage(1);return false">
+     <IMG SRC="LeafDerived.GIF" BORDER=0 WIDTH=10></A>
+</H3>
+<UL>
+<LI> Check that the leaf matches an input formula
+<LI> Some ATP systems preprocess input
+     <UL>
+     <LI> Leaves are derived from input
+     <LI> Obligation to prove leaf formula from input problem
+     </UL>
+<LI> Undocumented conversion to CNF ... aaargh
+     <UL>
+     <LI> Clauses from the negated conjecture
+     <LI> Clauses with Skolems
+     </UL>
+</UL>
+
+<H3> Proofs by Refutation
+     <A HREF="" onMouseOver="putImage(2);return false">
+     <IMG SRC="LeafBadRefutation.GIF" BORDER=0 WIDTH=10></A>
+     <A HREF="" onMouseOver="putImage(3);return false">
+     <IMG SRC="LeafRefutation.GIF" BORDER=0 WIDTH=10></A>
+</H3>
+<UL>
+<LI> Discharge through use of proof by refutation is incomplete
+<LI> Check for relevance will fail
+<LI> Split problem into satisfiable parts
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

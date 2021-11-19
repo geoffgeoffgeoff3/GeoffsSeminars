@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE> Jaccard Similarities </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+Jaccard Similarities
+</H1>
+
+<H3> The Problem </H3>
+<UL>
+<LI> Axioms: <EM>{ a, b, a &hArr; d, d &hArr; e, e &hArr; b }</EM>
+<LI> Conjecture: <EM>a &amp; b</EM>
+</UL>
+
+<CENTER>
+<IMG SRC="ABJaccardDistances.jpg" HEIGHT=33%>
+</CENTER>
+
+<H3> Jaccard Similarities for Proof Artifacts </H3>
+<CENTER>
+<TABLE BORDER = 0>
+<TR> <TD>
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TH ALIGN=LEFT> Left Proof
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TH ALIGN=LEFT> Right Proof
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TH ALIGN=RIGHT> Jaccard Similarity
+<TR> <TH ALIGN=LEFT> Leaves
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD> <EM>{ a &amp; b, a, a &hArr; d, d &hArr; e, e &hArr; b }</EM>
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD> <EM>{ a &amp; b, a, e &hArr; b, b }</EM>
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD ALIGN=RIGHT> 3/6 = 0.50
+<TR> <TH ALIGN=LEFT> Inferred
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD> <EM>{ &not;a|&not;b, a, &not;a|d, &not;d|e, &not;e|b, d, e, b, false }</EM>
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD> <EM>{ &not;a|&not;b, a, &not;e|b, &not;b|e, b, e, false }</EM>
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD ALIGN=RIGHT> 9/15 = 0.60
+<TR> <TH ALIGN=LEFT> Inferences
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD> <EM>{ 1,2,3,4,5,6,7,8,9 }
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD> <EM>{ 1,2,5,8,9,10,11,12 }</EM>
+     <TD> <TT>&nbsp;&nbsp;</TT>
+     <TD ALIGN=RIGHT> 5/12 = 0.42
+</TABLE>
+</CENTER>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

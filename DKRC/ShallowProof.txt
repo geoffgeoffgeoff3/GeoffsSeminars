@@ -1,0 +1,49 @@
+%------------------------------------------------------------------------------
+tff(1,axiom,(
+    ! [X: cell] : proportional(surface_to_volume_ratio(X),exchange_rate(X,environment_of(X))) )).
+
+tff(2,axiom,(
+    ! [X: cell] : proportional(surface_area(X),surface_to_volume_ratio(X)) )).
+
+tff(3,axiom,(
+    ! [X: numeric_function_on_cell,Y: numeric_function_on_cell] :
+      ( ~ proportional(X,Y)
+      | proportional(Y,X) ) )).
+
+tff(5,axiom,(
+    ! [X: numeric_function_on_cell,Y: numeric_function_on_cell] :
+      ( ~ important(X)
+      | ~ proportional(X,Y)
+      | important(Y) ) )).
+
+tff(6,axiom,(
+    ! [X: cell] : important(exchange_rate(X,environment_of(X))) )).
+
+tff(surface_area_important,conjecture,(
+    ! [C: cell] : important(surface_area(C)) )).
+
+tff(7,negated_conjecture,(
+    ~ important(surface_area('cell-SKOLEMAACG1')) ),
+    inference('NEGATE',[status(cth)],[surface_area_important])).
+
+tff(8,plain,(
+    ! [X: cell] : proportional(surface_to_volume_ratio(X),surface_area(X)) ),
+    inference('HYPERRESOLVE',[status(thm)],[3,2])).
+
+tff(9,plain,(
+    ! [X: cell] : proportional(exchange_rate(X,environment_of(X)),surface_to_volume_ratio(X)) ),
+    inference('HYPERRESOLVE',[status(thm)],[3,1])).
+
+tff(13,plain,(
+    ! [X: cell] : important(surface_to_volume_ratio(X)) ),
+    inference('HYPERRESOLVE',[status(thm)],[5,9,6])).
+
+tff(16,plain,(
+    ! [X: cell] : important(surface_area(X)) ),
+    inference('HYPERRESOLVE',[status(thm)],[5,13,8])).
+
+tff(17,plain,(
+    $false ),
+    inference('REWRITE',[status(thm)],[7,16])).
+
+%------------------------------------------------------------------------------

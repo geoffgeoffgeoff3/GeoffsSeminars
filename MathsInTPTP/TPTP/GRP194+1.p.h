@@ -1,0 +1,28 @@
+%--------------------------------------------------------------------------
+% File     : GRP194+1 : TPTP v2.4.1. Released v2.0.0.
+% Domain   : Group Theory (Semigroups)
+% Problem  : In semigroups, a surjective homomorphism maps the zero
+% Version  : [Gol93] axioms.
+% English  : If (F,*) and (H,+) are two semigroups, phi is a surjective 
+%            homomorphism from F to H, and id is a left zero for F, 
+%            then phi(id) is a left zero for H.
+
+% Refs     : [Gol93] Goller (1993), Anwendung des Theorembeweisers SETHEO a
+% Source   : [Gol93]
+% Names    : 
+
+% Status   : theorem
+% Rating   : 0.12 v2.4.0, 0.25 v2.3.0, 0.33 v2.2.1, 0.00 v2.1.0
+% Syntax   : Number of formulae    :   19 (   3 unit)
+%            Number of atoms       :   47 (  22 equality)
+%            Maximal formula depth :    6 (   3 average)
+%            Number of connectives :   28 (   0 ~  ;   0  |;  11  &)
+%                                         (   1 <=>;  16 =>;   0 <=)
+%                                         (   0 <~>;   0 ~|;   0 ~&)
+%            Number of predicates  :    3 (   0 propositional; 2-2 arity)
+%            Number of functors    :    5 (   3 constant; 0-3 arity)
+%            Number of variables   :   47 (   0 singleton;  46 !;   1 ?)
+%            Maximal term depth    :    3 (   1 average)
+
+% Comments : 
+%--------------------------------------------------------------------------
