@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<TITLE> FOF </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> First-Order Form </H1>
+</CENTER>
+
+<IMG NAME="image" SRC="Pictures/Garfield.png" ALIGN=RIGHT WIDTH=33%>
+
+<H3> First-Order Form (FOF) </H3>
+<UL>
+<LI> Hardly need introduction
+<LI> ATP systems ... THINKER, Muscadet
+<LI> <A HREF="" onClick="hideshow('ExampleFOF');return false;">
+     Example
+     </A> <SPAN ID="ExampleFOF" style="display:none">
+<PRE>
+fof(odie_is_a_dog,axiom,                   fof(jon_owns_odie,axiom,
+    dog(odie) ).                               jon = owner_of(odie) ).
+
+fof(odie_bit_jon,axiom,                    fof(all_owners_are_human,axiom,
+    bit(odie,jon) ).                           ! [D] :
+                                                 ( dog(D)
+fof(another_dog_bit_jon,axiom,                  => human(owner_of(D)) ) ).
+    ? [D] :
+      ( dog(D)                             fof(hate_the_biter,axiom,
+      & D != odie                              ! [D,H] :
+      & jon != owner_of(D)                       ( ( dog(D)
+      & bit(D,jon) ) ).                            & human(H)
+                                                   & H != owner_of(D)
+fof(jon_hates_another_human,conjecture,            & bit(D,H) )
+    ? [H] :                                     => hates(H,owner_of(D)) ) ).
+      ( human(H)
+      & H != jon
+      & hates(jon,H) ) ).
+</PRE>
+</UL>
+
+<H3> Clause Normal Form (CNF) </H3>
+<UL>
+<LI> The "assembly language" of ATP
+<LI> Proof-by-contradiction, Equisatisfiable translation
+<LI> ATP systems ... E, Twee, iProver, Zipperposition
+<LI> <A HREF="" onClick="hideshow('ExampleCNF');return false;">
+     Example
+     </A> <SPAN ID="ExampleCNF" style="display:none">
+<PRE>
+cnf(odie_is_a_dog,axiom,                   cnf(jon_owns_odie,axiom,
+    dog(odie) ).                               owner_of(odie) = jon ).
+
+cnf(odie_bit_jon,axiom,                    cnf(all_owners_are_human,axiom,
+    bit(odie,jon) ).                           ( ~ dog(D)
+                                               | human(owner_of(D)) ) ).
+cnf(another_dog,axiom,
+    dog(esk1_0) ).                         cnf(hate_the_biter,axiom,
+cnf(not_odie,axiom,                            ( ~ dog(D)
+    esk1_0 != odie ).                          | ~ human(H)
+cnf(not_owned_by_jon,axiom,                    | H = owner_of(D)
+    jon != owner_of(esk1_0) ).                 | ~ bit(D,H)
+cnf(bit_jon,axiom,                             | hates(H,owner_of(D)) ) ).
+    bit(esk1_0,jon) ).
+
+cnf(jon_hates_another_human,negated_conjecture,
+    ( ~ human(H)
+    | H = jon
+    | ~ hates(jon,H) ) ).
+</PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

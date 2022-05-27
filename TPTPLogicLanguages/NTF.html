@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<TITLE> NTF </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> Non-classical Typed Forms </H1>
+</CENTER>
+
+<IMG NAME="image" SRC="Pictures/Arlene.png" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Non-classical Typed Forms (NTF) </H3>
+<UL>
+<LI> Hot off the press! Not stable yet!
+<LI> First-order (NXF) based on TXF, higher-order (NHF) based on THF
+<LI> Monomorphic (NX0, NH0) and polymorphic (NX1, NH1)
+<LI> Semantics of non-classica polymorphic unclear
+<LI> Logic specifications, non-classical connectives
+</UL>
+
+<H3> Logic specifications </H3>
+<UL>
+<LI> Specify logic to be used, with properties
+<LI> <A HREF="" onClick="hideshow('ExampleLogicSpecification');return false;">
+     Example
+     </A> <SPAN ID="ExampleLogicSpecification" style="display:none">
+<PRE>
+   tff(simple_spec,logic,
+       $modal == [
+         $constants == $rigid,
+         $quantification == [ $constant, some_user_type == $varying ],
+         $modalities == $modal_system_S5 ] ).
+</PRE>
+<LI> By default <TT>axiom</TT>s are global, <TT>hypothesis</TT>es are local,
+     <TT>conjecture</TT>s are local; can override.
+</UL>
+
+<H3> Non-classical Connectives </H3>
+<UL>
+<LI> <TT>{$</TT><EM>connective_name</EM><TT>(</TT><EM>parameters</EM><TT>)}</TT>
+<LI> <EM>parameters</EM> ... <TT>#</TT><EM>index</EM>, <EM>key</EM><TT>:=</TT><EM>value</EM>
+<LI> <A HREF="" onClick="hideshow('ExampleNH0');return false;">
+     Example
+     </A> <SPAN ID="ExampleNH0" style="display:none">
+<PRE>
+<FONT COLOR="RED">thf(semantics,logic,(
+  $modal ==
+    [ $constants == $rigid,
+      $quantification == $constant,
+      $modalities == $modal_system_S5 ] )).</FONT>
+
+thf(dog_decl,type,       dog: $tType ).      thf(human_decl,type,     human: $tType ).
+thf(odie_decl,type,      odie: dog ).        thf(jon_decl,type,       jon: human ).
+
+thf(owner_of_decl,type,  owner_of: dog > human ).
+thf(owns_decl,type,      owns: human > dog > $o ).
+thf(bit_decl,type,       bit: dog > human > $int > $o ).
+thf(hates_decl,type,     hates: human > human > $o ).
+thf(feeds_decl,type,     feeds: human > dog > $o ).
+thf(chases_decl,type,    chases: human > dog > $o ).
+thf(says_decl,type,      says: human > $o > $o ).
+
+thf(owns_defn,definition,
+    ( owns = ( ^ [H: human,D: dog] : ( H = ( owner_of @ D ) ) ) ) ).
+
+thf(jon_owns_odie,axiom-local,               thf(odie_bit_jon_twice,axiom-local,
+     owns @ jon @ odie ).                        bit @ odie @ jon @ 2 ).
+
+thf(hate_the_multi_biter_dog,axiom,          thf(feed_the_non_biter_dog,axiom,
+    ! [D: dog,H: human,N: $int] :                ! [D: dog,H: human] :
+      ( ( ~ ( owns @ H @ D )                       $ite(
+        & ( bit @ D @ H @ N )                        ? [N: $int] :
+        & ( $greater @ N @ 1 ) )                       ( ( bit @ D @ H @ N )
+     => ( <FONT COLOR="RED">{$necessary(#arlene)} @</FONT>                    & ( $greater @ N @ 0 ) ),
+          <FONT COLOR="RED">( hates @ H @</FONT>                              chases @ H @ D,
+            <FONT COLOR="RED">( owner_of @ D ) )</FONT> ) ) ).                feeds @ H @ D) ).
+
+thf(jon_says_a_dog_bit_twice,axiom-local,    thf(jon_says_truth,axiom,
+    ? [D: dog] :                                 ! [S: $o] :
+      ( ( D != odie )                              ( ( says @ jon @ S )
+      & (~ ( owns @ jon @ D ))                    => S ) ).
+      & ( says @ jon @ (
+          bit @ D @ jon @ 2 ) ) ) ).
+
+thf(jon_chases_and_feels,conjecture,
+    ? [D:dog,H: human,F: human > human > $o] :
+      ( ( <FONT COLOR="RED">{$possible(#garfield)} @ ( chases @ jon @ D )</FONT> )
+      & ( H != jon )
+      & ( F @ jon @ H ) ) ).
+</PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

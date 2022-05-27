@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<TITLE> TFF </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> Typed First-order Form </H1>
+</CENTER>
+
+<IMG NAME="image" SRC="Pictures/Odie.png" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Typed First-order Form (TFF) </H3>
+<UL>
+<LI> Types, type signatures, typed quantification
+<LI> Formulae must be correctly typed
+<LI> Makes arithmetic possible
+</UL>
+
+<H3> Monomorphic TFF (TF0) </H3>
+<UL>
+<LI> Types ... <TT>$i</TT>, <TT>$o</TT>, <TT>$int</TT>, <TT>$rat</TT>,
+     <TT>$real</TT>, declared types - <TT>$tType</TT>
+<LI> Type signatures ... types, function types, predicate types
+<LI> Polymorphic equality and arithmetic
+<LI> Default typing ... FOF!
+<LI> ATP systems ... cvc5, E, Vampire, etc.
+<LI> <A HREF="" onClick="hideshow('ExampleTF0');return false;">
+     Example
+     </A> <SPAN ID="ExampleTF0" style="display:none">
+<PRE>
+<FONT COLOR="RED">tff(dog_decl,type,      dog: $tType ).</FONT>     tff(human_decl,type,    human: $tType ).
+<FONT COLOR="RED">tff(odie_decl,type,     odie: dog ).</FONT>       tff(jon_decl,type,      jon: human ).
+
+tff(owner_of_decl,type, owner_of: dog > human ).
+<FONT COLOR="RED">tff(bit_decl,type,      bit: (dog * human * $int) > $o ).</FONT>
+tff(hates_decl,type,    hates: (human * human) > $o ).
+
+tff(jon_owns_odie,axiom,                   tff(odie_bit_jon_twice,axiom,
+    jon = owner_of(odie) ).                    <FONT COLOR="RED">bit(odie,jon,2)</FONT> ).
+
+tff(another_dog_bit_jon_twice,axiom,       tff(hate_the_multi_biter_dog,axiom,
+    ? [D: dog] :                               <FONT COLOR="RED">! [D: dog,H: human,N: $int] :</FONT>
+      ( D != odie                                ( ( H != owner_of(D)
+      & jon != owner_of(D)                         & bit(D,H,N)
+      & bit(D,jon,2) ) ).                          & <FONT COLOR="RED">$greater(N,1)</FONT> )
+                                                => hates(H,owner_of(D)) ) ).
+tff(jon_hates_another_human,conjecture,
+    ? [H: human] :
+      ( H != jon
+      & hates(jon,H) ) ).
+</PRE>
+</UL>
+
+<H3> Polymorphic TFF (TF1) </H3>
+<UL>
+<LI> Types ... TF0, type constructors, type variables
+<LI> Type signatures ... TF0, <TT>!></TT> polymorphic signatures
+<LI> Types provided for uses of polymorphic symbols
+<LI> ATP systems ... Alt-Ergo, Leo-III, Vampire, Zipperposition, etc.
+<LI> <A HREF="" onClick="hideshow('ExampleTF1');return false;">
+     Example
+     </A> <SPAN ID="ExampleTF1" style="display:none">
+<PRE>
+tff(dog_decl,type,      dog: $tType ).       tff(human_decl,type,    human: $tType ).
+<FONT COLOR="RED">tff(biter_decl,type,    biter: $tType > $tType ).</FONT>
+tff(odie_decl,type,     <FONT COLOR="RED">odie: biter(dog)</FONT> ).  tff(jon_decl,type,      jon: human ).
+
+<FONT COLOR="RED">tff(owner_of_decl,type, owner_of:
+    !>[BiterType: $tType]: (biter(BiterType) > human ) ).</FONT>
+tff(bit_decl,type,      bit:
+    !>[BiterType: $tType]: ( (biter(BiterType) * human * $int) > $o ) ).
+tff(hates_decl,type,    hates: (human * human) > $o ).
+
+tff(jon_owns_odie,axiom,                   tff(odie_bit_jon_twice,axiom,
+    jon = owner_of(dog,odie) ).                <FONT COLOR="RED">bit(dog,odie,jon,2)</FONT> ).
+
+tff(another_dog_bit_jon_twice,axiom,       tff(hate_the_multi_biter_any,axiom,
+    ? [D: biter(dog)] :                        <FONT COLOR="RED">! [T: $tType,B: biter(T),</FONT>
+      ( D != odie                                           <FONT COLOR="RED">H: human,N: $int] :</FONT>
+      & jon != owner_of(dog,D)                   <FONT COLOR="RED">( ( H != owner_of(T,B)</FONT>
+      & bit(dog,D,jon,2) ) ).                      <FONT COLOR="RED">& bit(T,B,H,N)</FONT>
+                                                   <FONT COLOR="RED">& $greater(N,1) )</FONT>
+tff(jon_hates_another_human,conjecture,         <FONT COLOR="RED">=> hates(H,owner_of(T,B)) )</FONT> ).
+    ? [H: human] :
+      ( H != jon
+      & hates(jon,H) ) ).
+</PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

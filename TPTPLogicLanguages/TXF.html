@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<TITLE> TXF </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> Typed eXtended First-order form </H1>
+</CENTER>
+
+<IMG NAME="image" SRC="Pictures/Nermal.png" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Typed eXtended First-order form (TXF) </H3>
+<UL>
+<LI> FOOL formulae ... formulae as terms, Boolean variables
+<LI> FOOL terms ... tuples, conditionals, let expressions
+<LI> Can be translated to TFF/FOF
+</UL>
+
+<H3> Monomorphic TXF (TX0) </H3>
+<UL>
+<LI> ATP systems ... E, Leo-III, Vampire, Zipperposition, etc.
+<LI> <A HREF="" onClick="hideshow('ExampleTX0');return false;">
+     Example
+     </A> <SPAN ID="ExampleTX0" style="display:none">
+<PRE>
+tff(dog_decl,type,      dog: $tType ).       tff(human_decl,type,    human: $tType ).
+tff(odie_decl,type,     odie: dog ).         tff(jon_decl,type,      jon: human ).
+
+tff(owner_of_decl,type, owner_of: dog > human ).
+tff(bit_decl,type,      bit: (dog * human * $int) > $o ).
+tff(hates_decl,type,    hates: (human * human) > $o ).
+tff(feeds_decl,type,    feeds: (human * dog) > $o ).
+tff(chases_decl,type,   chases: (human * dog) > $o ).
+<FONT COLOR="RED">tff(says_decl,type,     says: (human * $o) > $o ).</FONT>
+
+tff(jon_owns_odie,axiom,                   tff(odie_bit_jon_twice,axiom,
+    jon = owner_of(dog,odie) ).                bit(dog,odie,jon,2) ).
+
+tff(hate_the_multi_biter_dog,axiom,        tff(feed_the_non_biter_dog,axiom,
+    ! [D: dog,H: human,N: $int] :              ! [D: dog,H: human] :
+      ( ( H != owner_of(D)                       <FONT COLOR="RED">$ite(</FONT>
+        & bit(D,H,N)                               <FONT COLOR="RED">? [N: $int] :</FONT>
+        & $greater(N,1) )                            <FONT COLOR="RED">( bit(D,H,N) & $greater(N,0) ),</FONT>
+     => hates(H,owner_of(D)) ) ).                  <FONT COLOR="RED">chases(H,D),</FONT>
+                                                   <FONT COLOR="RED">feeds(H,D))</FONT> ).
+tff(jon_says_a_dog_bit_him_twice,axiom,
+    ? [D: dog] :                           tff(jon_says_truth,axiom,
+      ( D != odie                              <FONT COLOR="RED">! [S: $o] :</FONT>
+      & jon != owner_of(D)                       <FONT COLOR="RED">( says(jon,S)</FONT>
+      & <FONT COLOR="RED">says(jon,bit(D,jon,2))</FONT> ) ).             <FONT COLOR="RED">=> S ) ).</FONT>
+
+tff(jon_chases_and_hates,conjecture,
+    ? [D: dog,H: human] :
+      ( chases(jon,D)
+      & H != jon
+      & hates(jon,H) ) ).
+</PRE>
+</UL>
+
+<H3> Polymorphic TXF (TX1) </H3>
+<UL>
+<LI> ATP systems ... Leo-III, Vampire, etc.
+<LI> <A HREF="" onClick="hideshow('ExampleTX1');return false;">
+     Example
+     </A> <SPAN ID="ExampleTX1" style="display:none">
+<PRE>
+tff(dog_decl,type,      dog: $tType ).       tff(human_decl,type,    human: $tType ).
+tff(biter_decl,type,    biter: $tType > $tType ).
+tff(odie_decl,type,     odie: biter(dog) ).  tff(jon_decl,type,      jon: human ).
+
+tff(owner_of_decl,type, <FONT COLOR="RED">owner_of: !>[BiterType: $tType]: (biter(BiterType) > human )</FONT> ).
+tff(bit_decl,type,      bit:
+    !>[BiterType: $tType]: ( (biter(BiterType) * human * $int) > $o ) ).
+tff(hates_decl,type,    hates: (human * human) > $o ).
+tff(feeds_decl,type,    feeds: (human * biter(dog)) > $o ).
+tff(chases_decl,type,   chases: (human * biter(dog)) > $o ).
+tff(says_decl,type,     says: (human * $o) > $o ).
+
+tff(jon_owns_odie,axiom,                   tff(odie_bit_jon_twice,axiom,
+    jon = owner_of(dog,odie) ).                bit(dog,odie,jon,2) ).
+
+tff(hate_the_multi_biter_any,axiom,        tff(feed_the_non_biter_dog,axiom,
+    ! [T: $tType,B: biter(T),                  ! [D: biter(dog),H: human] :
+                 H: human,N: $int] :             $ite(
+      ( ( H != owner_of(T,B)                       ? [N: $int] :
+        & bit(T,B,H,N)                               ( bit(dog,D,H,N) & $greater(N,0) ),
+        & $greater(N,1) )                          chases(H,D),
+     => hates(H,owner_of(T,B)) ) ).                feeds(H,D)) ).
+
+tff(jon_says_a_dog_bit_him_twice,axiom,    tff(jon_says_truth,axiom,
+    ? [D: biter(dog)] :                        ! [S: $o] :
+      ( D != odie                                ( says(jon,S)
+      & jon != owner_of(dog,D)                  => S ) ).
+      & says(jon,bit(dog,D,jon,2)) ) ).
+
+tff(jon_chases_and_hates,conjecture,
+    ? [D: biter(dog),H: human] :
+      ( chases(jon,D)
+      & H != jon
+      & hates(jon,H) ) ).
+</PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

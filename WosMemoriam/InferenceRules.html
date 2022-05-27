@@ -16,6 +16,8 @@
   images[3].src = 'InferenceDemodulationPaper.jpg';
   images[4]     = new Image();
   images[4].src = 'InferenceParamodulationPaper.jpg';
+  images[5]     = new Image();
+  images[5].src = 'InferenceModusPonens.jpg';
 
   function displayImage (index) {
       document.images['image'].src = images[index].src;
@@ -71,9 +73,11 @@ by Maria Paola Bonacina
 <UL>
 <LI> <A HREF="" onClick="displayImage(1);return false">ACM paper</A>, 1965
 <LI> Idea - minimize irrelevant inferences
-<LI> Idea - goal directness
+<LI> Inspiration - reasoning over mathematical theories
+<LI> Idea - proof by refutation, goal directness
 <LI> Idea - disallow inferences between axioms
 <LI> Implementation - put axioms into the processed set
+<LI> Effect - all inferences have ancestor in negated conjecture 
 <LI> Added (incomplete) bounds on clause size and inference depth
 <LI> Theory - put satisfiable subset into the processed set
 <LI> Basis for model and semantic resolution
@@ -82,7 +86,7 @@ by Maria Paola Bonacina
 </SPAN>
 
 <A HREF="" onClick="hideshow('ur');return false;">
-<H3> Unit Resolution </H3>
+<H3> Unit and UR Resolution </H3>
 </A> <SPAN ID="ur" style="display:none">
 <UL>
 <LI> <A HREF="" onClick="displayImage(2);return false">AFIPS paper</A>, 1964
@@ -98,7 +102,7 @@ by Maria Paola Bonacina
 </A> <SPAN ID="demodulation" style="display:none">
 <UL>
 <LI> <A HREF="" onClick="displayImage(3);return false">JACM paper</A>, 1967
-<LI> Idea - Love for problems with equality
+<LI> Idea - Love for mathematical problems, with equality
 <LI> Idea - Automate Birkoff's theorem (replacing equals by equals)
 <LI> Idea - Unit equalities, k-modulants, reducing number of symbols
 <LI> Not well founded
@@ -117,6 +121,28 @@ by Maria Paola Bonacina
 <LI> Reflexivity axioms? - Wos-Robinson conjecture
 <LI> Various complete combinations of inference rules
 <LI> Inspiration for superposition, and much more
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('mp');return false;">
+<H3> Condensed Detachment </H3> 
+</A> <SPAN ID="mp" style="display:none">
+<UL>
+<LI> <A HREF="" onClick="displayImage(5);return false">CADE-11 paper</A>, 1992
+<LI> Idea - Encode condensed detachment at the meta-level, for some <EM>rule</EM>
+     <P>
+     <TT>(provable(<EM>rule</EM>(A,C)) & provable(A)) => provable(C)</TT><BR>
+     <TT>~provable(<EM>rule</EM>(A,C) | ~provable(A) | provable(C)</TT>
+     <P>
+<LI> Idea - Provide known axioms at the meta-level
+<LI> Idea - Use binary resolution to apply condensed detachment
+<LI> Example - equivalential calculus
+     <P>
+     <TT>~provable(e(A,C)) | ~provable(A) | provable(C)</TT>  #--CD<BR>
+     <TT>provable(e(e(X,Y),e(Y,X)))</TT> #--EC-4<BR>
+     <TT>provable(e(e(e(X,Y),Z),e(X,e(Y,Z))))</TT> #--EC-5<BR>
+     <TT>~provable(e(e(e(a,v),e(c,a)),e(b,c)))</TT> #--Deny EC-1
+<LI> Proof length measured by uses of CD
 </UL>
 </SPAN>
 

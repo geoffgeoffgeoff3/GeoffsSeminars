@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+<TITLE> THF </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> Typed Higher-order Form </H1>
+</CENTER>
+
+<IMG NAME="image" SRC="Pictures/Jon.png" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Typed Higher-order Form (THF) </H3>
+<UL>
+<LI> Curried types, lambda terms, application, connective terms, description binders
+<LI> Henkin semantics with choice
+</UL>
+
+<H3> Monomorphic THF (TH0) </H3>
+<UL>
+<LI> Types ... TF0, type signatures
+<LI> Type signatures ... types
+<LI> ATP systems ... agsyHOL, cvc5, Satallax, Vampire, etc.
+<LI> <A HREF="" onClick="hideshow('ExampleTH0');return false;">
+     Example
+     </A> <SPAN ID="ExampleTH0" style="display:none">
+<PRE>
+thf(dog_decl,type,       dog: $tType ).      thf(human_decl,type,     human: $tType ).
+thf(odie_decl,type,      odie: dog ).        thf(jon_decl,type,       jon: human ).
+
+thf(owner_of_decl,type,  owner_of: dog > human ).
+thf(owns_decl,type,      owns: human > dog > $o ).
+thf(bit_decl,type,       <FONT COLOR="RED">bit: dog > human > $int > $o ).</FONT>
+thf(hates_decl,type,     hates: human > human > $o ).
+thf(feeds_decl,type,     feeds: human > dog > $o ).
+thf(chases_decl,type,    chases: human > dog > $o ).
+thf(says_decl,type,      says: human > $o > $o ).
+
+thf(owns_defn,definition,
+    ( <FONT COLOR="RED">owns = ( ^ [H: human,D: dog] : ( H = ( owner_of @ D ) ) )</FONT> ) ).
+
+thf(jon_owns_odie,axiom,                     thf(odie_bit_jon_twice,axiom,
+    owns @ jon @ odie ).                         <FONT COLOR="RED">bit @ odie @ jon @ 2</FONT> ).
+
+thf(hate_the_multi_biter_dog,axiom,          thf(feed_the_non_biter_dog,axiom,
+    ! [D: dog,H: human,N: $int] :                ! [D: dog,H: human] :
+      ( ( ~ ( owns @ H @ D )                       $ite(
+        & ( bit @ D @ H @ N )                        ? [N: $int] :
+        & ( $greater @ N @ 1 ) )                       ( ( bit @ D @ H @ N )
+     => ( hates @ H @ ( owner_of @ D ) ) ) ).          & ( $greater @ N @ 0 ) ),
+                                                     chases @ H @ D,
+thf(jon_says_a_dog_bit_him_twice,axiom,              feeds @ H @ D) ).
+    ? [D: dog] :
+      ( ( D != odie )                        thf(jon_says_truth,axiom,
+      & (~ ( owns @ jon @ D ))                   ! [S: $o] :
+      & ( says @ jon @                             ( ( says @ jon @ S )
+          ( bit @ D @ jon @ 2 ) ) ) ).            => S ) ).
+
+thf(jon_chases_and_feels,conjecture,
+    ? [D:dog,H: human,<FONT COLOR="RED">F: human > human > $o</FONT>] :
+      ( ( chases @ jon @ D )
+      & ( H != jon )
+      & ( F @ jon @ H ) ) ).
+</PRE>
+</UL>
+
+<H3> Polymorphic THF (TH1) </H3>
+<UL>
+<LI> Constants for binders
+<LI> Types ... TH0 + TF1
+<LI> Type signatures ... TH0 + TF1
+<LI> <EM>Some</EM> types provided for uses of polymorphic symbols
+<LI> ATP systems ... HOLyHammer, Leo-III, Vampire, Zipperposition, etc.
+<LI> <A HREF="" onClick="hideshow('ExampleTH1');return false;">
+     Example
+     </A> <SPAN ID="ExampleTH1" style="display:none">
+<PRE>
+thf(dog_decl,type,      dog: $tType ).         thf(human_decl,type,    human: $tType ).
+thf(biter_decl,type,    biter: $tType > $tType ).
+thf(odie_decl,type,     odie: (biter @ dog) ). thf(jon_decl,type,      jon: human ).
+
+thf(owner_of_decl,type, owner_of:
+    !>[BiterType: $tType] : ( ( biter @ BiterType ) > human ) ).
+thf(owns_decl,type,     <FONT COLOR="RED">owns:
+    !>[BiterType: $tType] : ( human > ( biter @ BiterType ) > $o ) ).</FONT>
+thf(bit_decl,type,      bit:
+    !>[BiterType: $tType] : ( ( biter @ BiterType ) > human > $int > $o ) ).
+thf(hates_decl,type,    hates: human > human > $o ).
+thf(feeds_decl,type,    feeds: human > (biter @ dog) > $o ).
+thf(chases_decl,type,   chases: human > (biter @ dog) > $o ).
+thf(says_decl,type,     says: human > $o > $o ).
+
+thf(owns_defn,definition,
+    ( <FONT COLOR="RED">owns
+    = ( ^ [T: $tType,H: human,B: biter @ T] : ( H = ( owner_of @ T @ B ) ) )</FONT> ) ).
+
+thf(jon_owns_odie,axiom,                       thf(odie_bit_jon_twice,axiom,
+    owns @ dog @ jon @ odie ).                     bit @ dog @ odie @ jon @ 2 ).
+
+thf(hate_the_multi_biter_any,axiom,            thf(feed_the_non_biter_dog,axiom,
+    <FONT COLOR="RED">! [T: $tType,B: biter @ T,</FONT>                     ! [D: biter @ dog,H: human] :
+                 <FONT COLOR="RED">H: human,N: $int] :</FONT>                 $ite(
+      <FONT COLOR="RED">( ( ~ ( owns @ T @ H @ B )</FONT>                       ? [N: $int] :
+        <FONT COLOR="RED">& ( bit @ T @ B @ H @ N )</FONT>                        ( ( bit @ dog @ D @ H @ N )
+        <FONT COLOR="RED">& ( $greater @ N @ 1 ) )</FONT>                         & ( $greater @ N @ 0 ) ),
+     <FONT COLOR="RED">=> ( hates @ H @ ( owner_of @ T @ B ) ) )</FONT> ).      chases @ H @ D,
+                                                       feeds @ H @ D) ).
+thf(jon_says_a_dog_bit_him_twice,axiom,
+    ? [D: biter @ dog] :                       thf(jon_says_truth,axiom,
+      ( ( D != odie )                              ! [S: $o] :
+      & ~ ( owns @ dog @ jon @ D )                   ( ( says @ jon @ S )
+      & ( says @ jon @                              => S ) ).
+          ( bit @ dog @ D @ jon @ 2 ) ) ) ).
+
+thf(jon_chases_and_feels,conjecture,
+    ? [D: biter @ dog,H: human,F: human > human > $o] :
+      ( ( chases @ jon @ D )
+      & ( H != jon )
+      & ( F @ jon @ H ) ) ).
+</PRE>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>
