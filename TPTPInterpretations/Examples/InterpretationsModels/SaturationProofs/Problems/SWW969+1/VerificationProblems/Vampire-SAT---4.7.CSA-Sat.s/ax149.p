@@ -1,2 +1,0 @@
-include('Saturations/SWW969+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
-fof(ax149,conjecture,! [VAR_0X40SID_619] : ! [VAR_A_616] : ! [VAR_B_617] : ! [VAR_NA_618] : ( pred_attacker(tuple_server_S_in_1(VAR_A_616,VAR_B_617,VAR_NA_618)) => pred_attacker(tuple_server_S_out_2(constr_cbc_enc_4(VAR_NA_618,VAR_B_617,name_Kab_65(VAR_0X40SID_619),constr_cbc_enc_2(name_Kab_65(VAR_0X40SID_619),VAR_A_616,name_Kbs),name_Kas))) ) ).

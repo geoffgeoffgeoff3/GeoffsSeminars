@@ -1,2 +1,0 @@
-include('Saturations/NLP228-1/Saturations/E-SAT---3.0.ax').
-fof(clause88,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ! [X2] : ( ~ state(U,V) | ~ man(U,W) | ~ accessible_world(U,X) | ~ proposition(U,X) | ~ theme(U,Y,X) | ~ event(U,Y) | ~ present(U,Y) | ~ think_believe_consider(U,Y) | ~ forename(U,Z) | ~ vincent_forename(U,Z) | ~ of(U,Z,X1) | ~ man(U,X1) | ~ agent(U,Y,X1) | ~ be(U,V,X1,W) | ~ forename(U,X2) | ~ jules_forename(U,X2) | ~ of(U,X2,X1) | ~ actual_world(U) | man(X,skf4(X)) ) ).

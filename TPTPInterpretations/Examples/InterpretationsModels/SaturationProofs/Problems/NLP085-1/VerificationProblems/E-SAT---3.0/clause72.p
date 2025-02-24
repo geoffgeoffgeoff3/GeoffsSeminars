@@ -1,2 +1,0 @@
-include('Saturations/NLP085-1/Saturations/E-SAT---3.0.ax').
-fof(clause72,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( skf21(U,V,W,X,Y,Z,X1,X2) != U | ~ member(X3,U,X4) | ~ member(X3,X5,X4) | ~ member(X3,X6,X4) | ~ member(X3,X7,X4) | ~ member(X3,X8,X4) | ~ member(X3,X9,X4) | six(X3,X4) | U = X9 | U = X8 | U = X7 | U = X6 | U = X5 | X5 = X9 | X5 = X8 | X5 = X7 | X5 = X6 | X6 = X9 | X6 = X8 | X6 = X7 | X7 = X9 | X7 = X8 | X8 = X9 ) ).

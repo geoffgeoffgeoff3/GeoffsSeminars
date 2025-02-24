@@ -1,2 +1,0 @@
-include('Saturations/SWW969+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
-fof(ax106,conjecture,! [VAR_V_219] : ! [VAR_V_220X30] : ! [VAR_V_221] : ! [VAR_V_222] : ! [VAR_V_223] : ( ( pred_attacker(VAR_V_219) & pred_attacker(VAR_V_220X30) & pred_attacker(VAR_V_221) & pred_attacker(VAR_V_222) & pred_attacker(VAR_V_223) ) => pred_attacker(constr_cbc_enc_4(VAR_V_219,VAR_V_220X30,VAR_V_221,VAR_V_222,VAR_V_223)) ) ).

@@ -1,2 +1,0 @@
-include('Saturations/PUZ069+2/Saturations/E-SAT---3.0.ax').
-fof(axQ321,conjecture,p(n7,n4,n1) | p(n7,n5,n1) | p(n7,n6,n1) | p(n8,n4,n1) | p(n8,n5,n1) | p(n8,n6,n1) | p(n9,n4,n1) | p(n9,n5,n1) | p(n9,n6,n1) ).

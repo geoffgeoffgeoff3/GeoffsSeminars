@@ -1,2 +1,0 @@
-include('Saturations/SWB019+4/Saturations/iProver-SAT---3.7.ax').
-fof(rdfs_reification_subject_domain,conjecture,iext(uri_rdfs_domain,uri_rdf_subject,uri_rdfs_Statement) ).

@@ -1,2 +1,0 @@
-include('Saturations/SWB010-10/Saturations/E-SAT---3.0.ax').
-fof(testcase_premise_fullish_010_Negative_Property_Assertions_6,conjecture,iext(uri_owl_complementOf,sK4_testcase_premise_fullish_010_Negative_Property_Assertions_BNODE_x2,sK1_testcase_premise_fullish_010_Negative_Property_Assertions_BNODE_x3) = true ).

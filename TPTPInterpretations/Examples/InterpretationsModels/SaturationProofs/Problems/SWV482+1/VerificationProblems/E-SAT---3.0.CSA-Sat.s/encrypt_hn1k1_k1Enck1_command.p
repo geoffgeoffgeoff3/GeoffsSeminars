@@ -1,2 +1,0 @@
-include('Saturations/SWV482+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(encrypt_hn1k1_k1Enck1_command,conjecture,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ! [X13] : ! [X14] : ! [X15] : ! [X16] : ! [X17] : ! [X18] : ! [X19] : ! [X20] : ( p(state(h(n1,X0,X1,n1,X3,X4,X5),X6),iknows(atoms(n1,X8),enc(n0,X10,X11,X12))) => p(state(h(n1,X0,X1,n1,X3,X4,X5),X6),iknows(atoms(n1,X8),enc(n1,X10,X11,X12))) ) ).

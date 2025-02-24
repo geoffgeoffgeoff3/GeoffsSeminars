@@ -1,2 +1,0 @@
-include('Saturations/KLE177+1/Saturations/iProver-SAT---3.7.ax').
-fof(divergence2,conjecture,! [X0] : ! [X1] : ! [X2] : ( addition(domain(X0),addition(forward_diamond(X1,domain(X0)),domain(X2))) = addition(forward_diamond(X1,domain(X0)),domain(X2)) => addition(domain(X0),addition(divergence(X1),forward_diamond(star(X1),domain(X2)))) = addition(divergence(X1),forward_diamond(star(X1),domain(X2))) ) ).

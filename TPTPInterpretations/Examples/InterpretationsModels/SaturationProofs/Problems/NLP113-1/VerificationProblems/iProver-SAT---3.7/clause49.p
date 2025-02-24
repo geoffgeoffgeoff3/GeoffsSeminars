@@ -1,2 +1,0 @@
-include('Saturations/NLP113-1/Saturations/iProver-SAT---3.7.ax').
-fof(clause49,conjecture,! [U] : ! [V] : ( ~ in(skc2,U,skc3) | ~ customer(skc2,U) | agent(skc2,skf5(V),skf7(V)) ) ).

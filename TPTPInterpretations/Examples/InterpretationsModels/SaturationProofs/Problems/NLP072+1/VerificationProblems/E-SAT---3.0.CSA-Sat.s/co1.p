@@ -1,2 +1,0 @@
-include('Saturations/NLP072+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ? [W] : ( male(U,V) & ! [X] : ! [Y] : ! [Z] : ( ( man(U,X) & of(U,Y,V) & cannon(U,Y) & member(U,Z,W) ) => ? [X1] : ( event(U,X1) & agent(U,X1,X) & patient(U,X1,Z) & present(U,X1) & nonreflexive(U,X1) & fire(U,X1) & from_loc(U,X1,Y) ) ) & six(U,W) & group(U,W) & ! [X2] : ( member(U,X2,W) => shot(U,X2) ) ) ) ) )).

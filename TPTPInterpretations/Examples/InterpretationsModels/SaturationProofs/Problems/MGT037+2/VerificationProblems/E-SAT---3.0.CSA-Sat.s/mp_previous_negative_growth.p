@@ -1,2 +1,0 @@
-include('Saturations/MGT037+2/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(mp_previous_negative_growth,conjecture,! [E] : ! [T] : ( ( environment(E) & greater_or_equal(T,appear(efficient_producers,E)) & cardinality_at_time(efficient_producers,T) = zero ) => ? [To] : ( greater(To,appear(efficient_producers,E)) & in_environment(E,To) & greater(T,To) & greater(zero,growth_rate(efficient_producers,To)) ) ) ).

@@ -1,2 +1,0 @@
-include('Saturations/SWV484+2/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(unwrap_hn2k1_hn1k1_command,conjecture,! [X18] : ! [X17] : ! [X16] : ! [A] : ! [B] : ! [C] : ! [D] : ! [E] : ! [F] : ! [G] : ! [H] : ! [I] : ! [X12] : ! [X11] : ! [X10] : ! [X9] : ! [X7] : ! [J] : ! [K] : ! [L] : ! [M] : ! [N] : ! [O] : ! [P] : ! [X5] : ! [X4] : ! [X3] : ! [X2] : ! [X1] : ! [X0] : ( p(n0,X0,X1,X2,X3,X4,X5,P,O,N,M,L,K,J,n1,X7,n1,X9,X10,X11,X12,I,H,G,F,E,D,C,B,A,n1,X16,X17,X18) => p(n1,X0,X1,X2,X3,X4,n1,P,O,N,M,L,K,J,n1,X7,n1,X9,X10,X11,X12,I,H,G,F,E,D,C,B,A,n1,X16,X17,X18) ) ).

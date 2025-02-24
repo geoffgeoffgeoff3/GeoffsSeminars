@@ -1,2 +1,0 @@
-include('Saturations/CSR111+2/Saturations/E-SAT---3.0.ax').
-fof(ax1_878,conjecture,! [X] : ( tptpcol_5_106498(X) => isa(X,c_tptpcol_5_106498) ) ).

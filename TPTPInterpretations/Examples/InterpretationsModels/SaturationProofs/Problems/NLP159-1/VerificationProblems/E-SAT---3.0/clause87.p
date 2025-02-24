@@ -1,2 +1,0 @@
-include('Saturations/NLP159-1/Saturations/E-SAT---3.0.ax').
-fof(clause87,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ( ~ city(U,V) | ~ street(U,V) | ~ lonely(U,V) | ~ down(U,W,V) | ~ in(U,W,V) | ~ placename(U,X) | ~ hollywood_placename(U,X) | ~ of(U,X,V) | ~ event(U,W) | ~ present(U,W) | ~ barrel(U,W) | ~ agent(U,W,Y) | ~ old(U,Y) | ~ dirty(U,Y) | ~ white(U,Y) | ~ chevy(U,Y) | ~ group(U,Z) | ~ two(U,Z) | ~ ssSkP0(Z,U) | ~ actual_world(U) | member(U,skf5(U,Z),Z) ) ).

@@ -1,2 +1,0 @@
-include('Saturations/NLP020+1/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
-fof(co1,conjecture,~(! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ! [X3] : ! [X4] : ( ( seat(U) & furniture(U) & front(U) & hollywood(V) & city(V) & event(W) & street(X) & way(X) & lonely(X) & chevy(Y) & car(Y) & white(Y) & dirty(Y) & old(Y) & barrel(W,Y) & down(W,X) & in(W,V) & fellow(Z) & man(Z) & young(Z) & fellow(X1) & man(X1) & young(X1) & Z = X3 & in(X3,U) & X1 = X4 & in(X4,U) ) => Z != X1 ) )).

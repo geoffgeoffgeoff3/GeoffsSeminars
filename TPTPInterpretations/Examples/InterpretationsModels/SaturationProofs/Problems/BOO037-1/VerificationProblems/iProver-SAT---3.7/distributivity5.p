@@ -1,2 +1,0 @@
-include('Saturations/BOO037-1/Saturations/iProver-SAT---3.7.ax').
-fof(distributivity5,conjecture,! [X] : ! [Y] : ! [V1] : ! [Z] : ! [V2] : ! [V3] : ! [V4] : ( ~ sum(X,Y,V1) | ~ sum(X,Z,V2) | ~ product(Y,Z,V3) | ~ sum(X,V3,V4) | product(V1,V2,V4) ) ).

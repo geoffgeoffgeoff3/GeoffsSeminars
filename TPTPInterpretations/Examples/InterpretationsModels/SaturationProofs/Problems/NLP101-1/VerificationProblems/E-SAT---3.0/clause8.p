@@ -1,2 +1,0 @@
-include('Saturations/NLP101-1/Saturations/E-SAT---3.0.ax').
-fof(clause8,conjecture,ssSkC0 | human_person(skc17,skc19) ).

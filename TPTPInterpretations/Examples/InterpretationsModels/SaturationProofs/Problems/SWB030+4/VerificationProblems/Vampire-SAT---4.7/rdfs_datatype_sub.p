@@ -1,2 +1,0 @@
-include('Saturations/SWB030+4/Saturations/Vampire-SAT---4.7.ax').
-fof(rdfs_datatype_sub,conjecture,iext(uri_rdfs_subClassOf,uri_rdfs_Datatype,uri_rdfs_Class) ).

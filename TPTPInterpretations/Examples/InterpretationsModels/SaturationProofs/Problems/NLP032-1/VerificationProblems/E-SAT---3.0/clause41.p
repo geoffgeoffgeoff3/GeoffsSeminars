@@ -1,2 +1,0 @@
-include('Saturations/NLP032-1/Saturations/E-SAT---3.0.ax').
-fof(clause41,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ( ~ group(U,V) | ~ three(U,V) | ~ ssSkP1(skf34(U,W),V,U) | ssSkP3(X,U) | member(U,skf35(U,V),V) ) ).

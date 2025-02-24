@@ -1,2 +1,0 @@
-include('Saturations/SWV484+2/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(co1,conjecture,~(? [A] : ? [B] : ? [C] : ? [D] : ? [X1] : ? [E] : ? [F] : ? [G] : ? [H] : ? [I] : ? [J] : ? [K] : ? [L] : ? [M] : ? [N] : ? [O] : ? [P] : ? [Q] : ? [R] : ? [S] : ? [T] : ? [U] : ? [V] : ? [W] : ? [X] : ? [Y] : ? [Z] : ? [A1] : ? [B1] : ? [C1] : ? [D1] : ? [E1] : ? [F1] : p(F1,E1,D1,C1,B1,A1,Z,Y,X,W,V,U,T,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,n1,X1,D,C,B,A) )).

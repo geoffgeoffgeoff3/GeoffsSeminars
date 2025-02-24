@@ -1,2 +1,0 @@
-include('Saturations/SYN490-1/Saturations/Vampire-SAT---4.7.ax').
-fof(clause42,conjecture,~ c2_1(a10) | ~ hskp12 ).

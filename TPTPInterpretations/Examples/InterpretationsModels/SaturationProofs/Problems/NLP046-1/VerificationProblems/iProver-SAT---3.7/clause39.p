@@ -1,2 +1,0 @@
-include('Saturations/NLP046-1/Saturations/iProver-SAT---3.7.ax').
-fof(clause39,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ( ~ member(U,V,W) | ~ ssSkP0(X,W,U) | cost(U,skf6(U,Y,Z)) ) ).

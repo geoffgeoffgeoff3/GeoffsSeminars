@@ -1,2 +1,0 @@
-include('Saturations/NLP038+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ? [W] : ( table(U,V) & ! [X] : ( member(U,X,W) => ? [Y] : ( ! [Z] : ( member(U,Z,Y) => ? [X1] : ( event(U,X1) & agent(U,X1,X) & present(U,X1) & sit(U,X1) & at(U,X1,V) & with(U,X1,Z) ) ) & group(U,Y) & ! [X2] : ( member(U,X2,Y) => hamburger(U,X2) ) ) ) & three(U,W) & group(U,W) & ! [X3] : ( member(U,X3,W) => ( guy(U,X3) & young(U,X3) ) ) ) ) ) )).

@@ -1,2 +1,0 @@
-include('Saturations/SWV016-1/Saturations/iProver-SAT---3.7.ax').
-fof(server_t_generates_key_16,conjecture,! [C] : ! [A] : ! [D] : ! [E] : ! [G] : ! [F] : ! [B] : ( message(sent(t,C,triple(encrypt(quadruple(A,D,generate_key(D),E),G),encrypt(triple(C,generate_key(D),E),F),B))) | ~ a_nonce(D) | ~ message(sent(A,t,triple(A,B,encrypt(triple(C,D,E),F)))) | ~ t_holds(key(G,C)) | ~ t_holds(key(F,A)) ) ).

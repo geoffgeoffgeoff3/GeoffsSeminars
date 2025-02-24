@@ -1,2 +1,0 @@
-include('Saturations/LCL908+1/Saturations/iProver-SAT---3.7.ax').
-fof(and_1,conjecture,and_1 <=> ! [X] : ! [Y] : is_a_theorem(implies(and(X,Y),X)) ).

@@ -1,2 +1,0 @@
-include('Saturations/SWV973-10/Saturations/iProver-SAT---3.7.ax').
-fof(cls_val_Osimps_I2_J_0,conjecture,! [V_int] : ! [V_int_H] : ifeq2(c_Value_Oval_OIntg(V_int),c_Value_Oval_OIntg(V_int_H),V_int,V_int_H) = V_int_H ).

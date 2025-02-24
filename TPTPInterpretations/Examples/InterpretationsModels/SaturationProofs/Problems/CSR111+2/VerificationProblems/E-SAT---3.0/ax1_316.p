@@ -1,2 +1,0 @@
-include('Saturations/CSR111+2/Saturations/E-SAT---3.0.ax').
-fof(ax1_316,conjecture,isa(c_tptpnsubcollectionofwithrelationfromtypefnunitvectorintervaldirectionoftranslation_throughoutmovement_translationevent_786,f_subcollectionofwithrelationfromtypefn(c_unitvectorinterval,c_directionoftranslation_throughout,c_movement_translationevent)) ).

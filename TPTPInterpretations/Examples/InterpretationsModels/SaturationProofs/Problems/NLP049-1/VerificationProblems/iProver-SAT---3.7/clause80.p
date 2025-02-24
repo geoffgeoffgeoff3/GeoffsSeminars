@@ -1,2 +1,0 @@
-include('Saturations/NLP049-1/Saturations/iProver-SAT---3.7.ax').
-fof(clause80,conjecture,shake_beverage(skc7,skc12) ).

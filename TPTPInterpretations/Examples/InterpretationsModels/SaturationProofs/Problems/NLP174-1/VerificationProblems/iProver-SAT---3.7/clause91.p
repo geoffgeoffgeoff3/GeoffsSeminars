@@ -1,2 +1,0 @@
-include('Saturations/NLP174-1/Saturations/iProver-SAT---3.7.ax').
-fof(clause91,conjecture,of(skc8,skc17,skc16) ).

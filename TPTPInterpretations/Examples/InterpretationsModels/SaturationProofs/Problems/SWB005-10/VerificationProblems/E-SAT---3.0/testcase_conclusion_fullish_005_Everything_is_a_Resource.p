@@ -1,2 +1,0 @@
-include('Saturations/SWB005-10/Saturations/E-SAT---3.0.ax').
-fof(testcase_conclusion_fullish_005_Everything_is_a_Resource,conjecture,tuple(iext(uri_rdf_type,uri_ex_s,uri_owl_Thing),iext(uri_rdf_type,uri_ex_s,uri_rdfs_Resource),iext(uri_rdf_type,uri_ex_p,uri_owl_Thing),iext(uri_rdf_type,uri_ex_p,uri_rdfs_Resource),iext(uri_rdf_type,uri_ex_p,uri_rdf_Property),iext(uri_rdf_type,uri_ex_p,uri_owl_ObjectProperty),iext(uri_rdf_type,uri_ex_o,uri_owl_Thing),iext(uri_rdf_type,uri_ex_o,uri_rdfs_Resource)) != tuple(true,true,true,true,true,true,true,true) ).

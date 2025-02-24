@@ -1,2 +1,0 @@
-include('Saturations/NLP206-1/Saturations/iProver-SAT---3.7.ax').
-fof(clause96,conjecture,forename(skc11,skc14) ).

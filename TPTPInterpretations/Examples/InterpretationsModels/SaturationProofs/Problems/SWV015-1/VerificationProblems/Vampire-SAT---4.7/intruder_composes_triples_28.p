@@ -1,2 +1,0 @@
-include('Saturations/SWV015-1/Saturations/Vampire-SAT---4.7.ax').
-fof(intruder_composes_triples_28,conjecture,! [A] : ! [B] : ! [C] : ( intruder_message(triple(A,B,C)) | ~ intruder_message(C) | ~ intruder_message(B) | ~ intruder_message(A) ) ).

@@ -1,2 +1,0 @@
-include('Saturations/NLP053-1/Saturations/iProver-SAT---3.7.ax').
-fof(clause72,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( skf18(U,V,W,X,Y,Z,X1) != V | ~ member(X2,U,X3) | ~ member(X2,V,X3) | ~ member(X2,X4,X3) | ~ member(X2,X5,X3) | ~ member(X2,X6,X3) | five(X2,X3) | U = X6 | U = X5 | U = X4 | U = V | V = X6 | V = X5 | V = X4 | X4 = X6 | X4 = X5 | X5 = X6 ) ).

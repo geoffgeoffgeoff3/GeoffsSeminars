@@ -1,2 +1,0 @@
-include('Saturations/HAL007+1/Saturations/iProver-SAT---3.7.ax').
-fof(commute_properties,conjecture,! [M1] : ! [M2] : ! [M3] : ! [M4] : ! [Dom] : ! [DomCod1] : ! [DomCod2] : ! [Cod] : ( ( commute(M1,M2,M3,M4) & morphism(M1,Dom,DomCod1) & morphism(M2,DomCod1,Cod) & morphism(M3,Dom,DomCod2) & morphism(M4,DomCod2,Cod) ) => ! [ElDom] : ( element(ElDom,Dom) => apply(M2,apply(M1,ElDom)) = apply(M4,apply(M3,ElDom)) ) ) ).

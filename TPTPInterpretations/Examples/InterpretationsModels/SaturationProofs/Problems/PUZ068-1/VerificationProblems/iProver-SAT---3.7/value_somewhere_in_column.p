@@ -1,2 +1,0 @@
-include('Saturations/PUZ068-1/Saturations/iProver-SAT---3.7.ax').
-fof(value_somewhere_in_column,conjecture,! [J] : ! [X] : ( ~ dom(J) | ~ dom(X) | el(s(n0),J,X) | el(s(s(n0)),J,X) | el(s(s(s(n0))),J,X) | el(s(s(s(s(n0)))),J,X) | el(s(s(s(s(s(n0))))),J,X) | el(s(s(s(s(s(s(n0)))))),J,X) | el(s(s(s(s(s(s(s(n0))))))),J,X) | el(s(s(s(s(s(s(s(s(n0)))))))),J,X) | el(s(s(s(s(s(s(s(s(s(n0))))))))),J,X) ) ).

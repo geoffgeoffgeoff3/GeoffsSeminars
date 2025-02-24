@@ -1,2 +1,0 @@
-include('Saturations/SWV506-1.040/Saturations/iProver-SAT---3.7.ax').
-fof(hyp353,conjecture,i17 != i23 ).

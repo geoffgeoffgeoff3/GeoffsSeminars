@@ -1,2 +1,0 @@
-include('Saturations/SWV483+2/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(decrypt_hn1k2_k2Enck2_command,conjecture,! [X19] : ! [X18] : ! [X17] : ! [X16] : ! [X14] : ! [X13] : ! [X12] : ! [X11] : ! [X10] : ! [X8] : ! [A] : ! [B] : ! [C] : ! [D] : ! [E] : ! [F] : ! [G] : ! [X6] : ! [X5] : ! [X3] : ! [X2] : ! [X1] : ! [H] : ! [I] : ! [J] : ! [K] : ! [L] : ! [M] : ! [N] : ( p(N,M,L,K,J,I,H,n1,X1,X2,X3,n1,X5,X6,G,F,E,D,C,B,A,X8,n0,X10,X11,X12,X13,X14,n1,X16,X17,X18,X19) => p(N,M,L,K,J,I,H,n1,X1,X2,X3,n1,X5,X6,G,F,E,D,C,B,A,X8,n1,X10,X11,X12,X13,X14,n1,X16,X17,X18,X19) ) ).

@@ -1,2 +1,0 @@
-include('Saturations/TOP016-1/Saturations/Vampire-SAT---4.7.ax').
-fof(neighborhood_62,conjecture,! [U] : ! [Y] : ! [X] : ! [Vt] : ( neighborhood(U,Y,X,Vt) | ~ topological_space(X,Vt) | ~ open(U,X,Vt) | ~ element_of_set(Y,U) ) ).
