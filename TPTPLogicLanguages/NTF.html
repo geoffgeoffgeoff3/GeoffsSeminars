@@ -27,10 +27,10 @@
 
 <H3> Non-classical Typed Forms (NTF) </H3>
 <UL>
-<LI> Hot off the press! Not stable yet!
+<LI> Hot off the press! 
 <LI> First-order (NXF) based on TXF, higher-order (NHF) based on THF
 <LI> Monomorphic (NX0, NH0) and polymorphic (NX1, NH1)
-<LI> Semantics of non-classica polymorphic unclear
+<LI> Semantics of non-classical polymorphic unclear
 <LI> Logic specifications, non-classical connectives
 </UL>
 
@@ -55,17 +55,67 @@
 <UL>
 <LI> <TT>{$</TT><EM>connective_name</EM><TT>(</TT><EM>parameters</EM><TT>)}</TT>
 <LI> <EM>parameters</EM> ... <TT>#</TT><EM>index</EM>, <EM>key</EM><TT>:=</TT><EM>value</EM>
-<LI> <A HREF="" onClick="hideshow('ExampleNH0');return false;">
-     Example
-     </A> <SPAN ID="ExampleNH0" style="display:none">
+<LI> ATP systems ... Leo-III, that's all folks (right now)
+<LI> <A HREF="" onClick="hideshow('ExampleNX0');return false;">
+     NX0 Example
+     </A> (as a <A HREF="PUZGarfieldExamples/PUZXXX-09.NX0.p">plain file</A>)
+     <SPAN ID="ExampleNX0" style="display:none">
 <PRE>
-<FONT COLOR="RED">thf(semantics,logic,(
+tff(garfield,logic,
+    $modal == [
+      $constants == $rigid,
+      $quantification == $constant,
+      $modalities == $modal_system_S5 ] ).
+
+tff(dog_decl,type,      dog: $tType ).      tff(human_decl,type,    human: $tType ).
+tff(odie_decl,type,     odie: dog ).        tff(jon_decl,type,      jon: human ).
+tff(owner_of_decl,type, owner_of: dog > human ).
+tff(bit_decl,type,      bit: (dog * human * $int) > $o ).
+tff(hates_decl,type,    hates: (human * human) > $o ).
+tff(feeds_decl,type,    feeds: (human * dog) > $o ).
+tff(chases_decl,type,   chases: (human * dog) > $o ).
+tff(says_decl,type,     says: (human * $o) > $o ).
+
+tff(jon_owns_odie,axiom,                    tff(odie_bit_jon_twice,axiom,
+    jon = owner_of(odie) ).                     bit(odie,jon,2) ).
+
+tff(hate_the_multi_biter_dog,axiom,         tff(feed_the_non_biter_dog,axiom,
+    ! [D: dog,H: human,N: $int] :               ! [D: dog,H: human] :
+      ( ( H != owner_of(D)                        $ite(
+        & bit(D,H,N)                                ? [N: $int] :
+        & $greater(N,1) )                             ( bit(D,H,N)
+     => <FONT COLOR="RED">{$necessary(#arlene)} @</FONT>                       & $greater(N,0) ),
+          <FONT COLOR="RED">hates(H,owner_of(D))</FONT> ) ).                 chases(H,D),
+                                                    feeds(H,D)) ).
+
+tff(jon_says_a_dog_bit_him_twice,axiom,     tff(jon_says_truth,axiom,
+    ? [D: dog] :                                ! [S: $o] :
+      ( D != odie                                 ( says(jon,S)
+      & jon != owner_of(D)                       => S ) ).
+      & says(jon,bit(D,jon,2)) ) ).
+
+tff(jon_chases_and_hates,conjecture,
+    ? [D: dog,H: human] :
+      ( <FONT COLOR="RED">{$possible(#garfield)} @ chases(jon,D)</FONT>
+      & H != jon
+      & hates(jon,H) ) ).
+
+</PRE>
+</SPAN>
+<LI> NX1 Example (as a 
+     <A HREF="PUZGarfieldExamples/PUZXXX-10.NX1.p">plain file</A>)
+<LI> <A HREF="" onClick="hideshow('ExampleNH0');return false;">
+     NH0 Example
+     </A> (as a <A HREF="PUZGarfieldExamples/PUZXXX-11.NH0.p">plain file</A>)
+     <SPAN ID="ExampleNH0" style="display:none">
+<PRE>
+thf(semantics,logic,(
   $modal ==
     [ $constants == $rigid,
       $quantification == $constant,
-      $modalities == $modal_system_S5 ] )).</FONT>
+      $modalities == $modal_system_S5 ] )).
 
-thf(dog_decl,type,       dog: $tType ).      thf(human_decl,type,     human: $tType ).
+thf(dog_type,type,       dog: $tType ).      thf(human_type,type,     human: $tType ).
 thf(odie_decl,type,      odie: dog ).        thf(jon_decl,type,       jon: human ).
 
 thf(owner_of_decl,type,  owner_of: dog > human ).
@@ -104,6 +154,9 @@ thf(jon_chases_and_feels,conjecture,
       & ( H != jon )
       & ( F @ jon @ H ) ) ).
 </PRE>
+</SPAN>
+<LI> NH1 Example (as a 
+     <A HREF="PUZGarfieldExamples/PUZXXX-12.NH1.p">plain file</A>)
 </UL>
 
 <P>

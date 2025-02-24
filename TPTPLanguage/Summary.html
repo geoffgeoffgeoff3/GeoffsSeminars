@@ -1,50 +1,80 @@
 <HTML>
 <HEAD>
-<TITLE> TPTP Language Summary </TITLE>
+<TITLE> The TPTP Language </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'TPTPLanguage.png';
+  images[1]     = new Image();
+  images[1].src = 'TPTPLogics.png';
+
+  function putImage(index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
 </HEAD>
 <BODY>
-<HR><!------------------------------------------------------------------------>
-<H1 ALIGN=CENTER> TPTP Language Summary </H1>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> The TPTP Language </H1>
 
-<IMG SRC="ExtendedBNF.GIF" BORDER=0 ALIGN=RIGHT WIDTH=25%>
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME='image' SRC="TPTPLanguage.png" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
 
 <H3> A Key to Success </H3>
 <UL>
+<LI> Human-readable, machine-parsable, flexible, extensible
 <LI> Same language for input (problems) and output (derivations, models)<BR>
      Inter-operability between systems and tools
-<LI> Simple <A HREF="ConcreteSyntax.html">concrete syntax</A> that is
-     <A HREF="../IWTPTP/XMLSucks.html">Prolog like</A>
-<LI> Easily identified <A HREF="InterpretedSymbols.html">Interpreted symbols</A>
+<LI> <A HREF="" onClick="putImage(1);hideshow('logics');return false">Hierarchy of Languages</A>
+     <SPAN ID="logics" style="display:none">
+     <UL>
+     <LI> CNF and FOF - stable and defacto standards
+     <LI> TF0, TX0, and TH0 - stable and being used, with arithmetic
+     <LI> NX0 and NH0 - just released
+     <LI> TF1, TX1, and TH1 - stable, but not much use yet
+     <LI> NX1 and NH1 unclear
+     </UL>
+     </SPAN>
 </UL>
 
-<H3> Languages </H3>
+<H3> Annotated Formulae </H3>
 <UL>
-<LI> CNF and FOF - stable and defacto standards
-<LI> TF0 and TH0 - stable and being used
-<LI> TF1 and TH1 - stable, but not much use yet
-<LI> TFA - TF0 or TF1 with arithmetic, being used
-<LI> TFX - published and coming soon
-<LI> TH0 and TH1 include arithmetic, but not much use yet
+<LI> Simple <A HREF="ConcreteSyntax.html">concrete syntax</A>
+<LI> <A HREF="TPTPvsOthers.html">Prolog like</A>
+<LI> "we provide the syntax, you provide the semantics"
 </UL>
 
 <H3> Language Definition in BNF </H3>
 <UL>
 <LI> <A HREF="ExtendedBNF.html">Extended BNF</A>
      <UL>
-     <LI> <!-- Syntax rules<BR> -->
-          <TT>&lt;source>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= &lt;general_term></TT>
-     <LI> <!-- Semantic rules<BR> -->
-          <TT>&lt;source>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:== &lt;dag_source> | &lt;internal_source></TT>
-     <LI> <!-- Token rules<BR> -->
-          <TT>&lt;lower_word>&nbsp;&nbsp;::- &lt;lower_alpha>&lt;alpha_numeric>*</TT>
-     <LI> <!-- Character macros<BR> -->
-          <TT>&lt;lower_alpha>&nbsp;::: [a-z]</TT>
+     <LI> Syntax rules:
+          <TT>&lt;fof_binary_assoc> ::= &lt;fof_or_formula> | &lt;fof_and_formula></TT>
+     <LI> Semantic rules:
+          <TT>&lt;source> :== &lt;dag_source> | &lt;internal_source></TT>
+     <LI> Token rules:
+          <TT>&lt;lower_word> ::- &lt;lower_alpha>&lt;alpha_numeric>*</TT>
+     <LI> Character macros:
+          <TT>&lt;lower_alpha> ::: [a-z]</TT>
      </UL>
 <LI> LR1 - <TT>lex</TT>/<TT>yacc</TT>/<TT>flex</TT>/<TT>bison</TT> friendly
-<LI> <A HREF="http://www.tptp.org/TPTP/SyntaxBNF.html">Hyperlinked online</A> 
+<LI> <A HREF="https://tptp.org/UserDocs/TPTPLanguage/SyntaxBNF.html">Hyperlinked online</A> 
 </UL>
 
 <P>
-<HR><!------------------------------------------------------------------------>
+<HR><!-- -------------------------------------------------------------------------------------- -->
 </BODY>
 </HTML>

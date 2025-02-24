@@ -111,7 +111,7 @@ more details, explanations, and further options, see the TPTP technical report.
 1. Obtaining the TPTP
 
    Use the World Wide Web (WWW) with the following URL :
-      http://www.tptp.org
+      http://tptp.org
 
 
 2. Installing the TPTP

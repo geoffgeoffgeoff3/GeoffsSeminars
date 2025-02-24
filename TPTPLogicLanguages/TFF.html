@@ -42,9 +42,10 @@
 <LI> ATP systems ... cvc5, E, Vampire, etc.
 <LI> <A HREF="" onClick="hideshow('ExampleTF0');return false;">
      Example
-     </A> <SPAN ID="ExampleTF0" style="display:none">
+     </A> (as a <A HREF="PUZGarfieldExamples/PUZXXX-03.TF0.p">plain file</A>)
+     <SPAN ID="ExampleTF0" style="display:none">
 <PRE>
-<FONT COLOR="RED">tff(dog_decl,type,      dog: $tType ).</FONT>     tff(human_decl,type,    human: $tType ).
+<FONT COLOR="RED">tff(dog_type,type,      dog: $tType ).</FONT>     tff(human_type,type,    human: $tType ).
 <FONT COLOR="RED">tff(odie_decl,type,     odie: dog ).</FONT>       tff(jon_decl,type,      jon: human ).
 
 tff(owner_of_decl,type, owner_of: dog > human ).
@@ -75,10 +76,11 @@ tff(jon_hates_another_human,conjecture,
 <LI> ATP systems ... Alt-Ergo, Leo-III, Vampire, Zipperposition, etc.
 <LI> <A HREF="" onClick="hideshow('ExampleTF1');return false;">
      Example
-     </A> <SPAN ID="ExampleTF1" style="display:none">
+     </A> (as a <A HREF="PUZGarfieldExamples/PUZXXX-04.TF1.p">plain file</A>)
+     <SPAN ID="ExampleTF1" style="display:none">
 <PRE>
-tff(dog_decl,type,      dog: $tType ).       tff(human_decl,type,    human: $tType ).
-<FONT COLOR="RED">tff(biter_decl,type,    biter: $tType > $tType ).</FONT>
+tff(dog_type,type,      dog: $tType ).       tff(human_type,type,    human: $tType ).
+<FONT COLOR="RED">tff(biter_type,type,    biter: $tType > $tType ).</FONT>
 tff(odie_decl,type,     <FONT COLOR="RED">odie: biter(dog)</FONT> ).  tff(jon_decl,type,      jon: human ).
 
 <FONT COLOR="RED">tff(owner_of_decl,type, owner_of:

@@ -1,28 +1,26 @@
 <HTML>
 <HEAD>
 <TITLE> The TPTP Problem Library </TITLE>
-</HEAD>
 <SCRIPT language="JavaScript">
-<!--
   var images = new Array();
   var myIndex = 0;
 
   images[0]     = new Image();
   images[0].src = 'Teepee.GIF';
   images[1]     = new Image();
-  images[1].src = 'TPTP.GIF';
+  images[1].src = 'TPTPPL.png';
 
-  function putImage () {
-      myIndex = (myIndex + 1) % 2;
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
       document.images['image'].src = images[myIndex].src;
   }
-  //-->
 </SCRIPT>
+</HEAD>
 <BODY>
 <HR><!------------------------------------------------------------------------>
 <H1 ALIGN=CENTER> The TPTP Problem Library </H1>
 
-<A HREF="" onClick="putImage();return false">
+<A HREF="" onClick="nextImage();return false">
 <IMG NAME="image" SRC="Teepee.GIF" ALIGN=RIGHT WIDTH=33%>
 </A>
 
@@ -46,24 +44,19 @@
 <H3> Features </H3>
 <UL>
 <LI> First released <TT>Fri Nov 12 15:30:54 +1000 1993</TT>
-<LI> TPTP 7.5.0 - <A HREF="Synopsis.html">54 domains, 24098 problems</A>
-<LI> Three layers of logic FOF (+CNF), TFF (TF0+TF1), THF (TH0+TH1)
-<LI> <A HREF="SET817+4.p.html">Documented</A>:
-     References,
-     Status,
-     Rating,
-     Statistics,
-<LI> <A HREF="SET817+4.p.html">Human and computer readable</A>:
-     Name,
-     Role,
-     Logic,
-     Annotations
+<LI> TPTP v9.0.0 - <A HREF="Synopsis.html">55 domains, 25779 problems</A>
+<LI> <A HREF="../TPTPLanguage/Summary.html">Six logics families</A>: PRP, FOF, TFF, TXF, THF, NTF
+<LI> <A HREF="http://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">
+     Documented</A>: References, Status, Rating, Statistics,
+<LI> <A HREF="http://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">
+     Human and computer readable</A>: Name, Role, Logic, Annotations
+<LI> <A HREF="http://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=SET&File=SET817+4.p">
+     <TT>include</TT> directives</A>
 <LI> A key - the <A HREF="../TPTPLanguage/Summary.html">TPTP language</A>
 </UL>
 
 <H3> Tarball and browsing available
-     <A TARGET="_blank" HREF="http://www.tptp.org">online</A> at
-     <TT>www.tptp.org</TT> </H3>
+     <A TARGET="_blank" HREF="http://tptp.org">online</A> at <TT>tptp.org</TT> </H3>
 
 <P>
 <HR><!------------------------------------------------------------------------>

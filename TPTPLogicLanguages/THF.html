@@ -28,7 +28,7 @@
 <H3> Typed Higher-order Form (THF) </H3>
 <UL>
 <LI> Curried types, lambda terms, application, connective terms, description binders
-<LI> Henkin semantics with choice
+<LI> Henkin semantics with choice (thus also extensionality)
 </UL>
 
 <H3> Monomorphic THF (TH0) </H3>
@@ -38,13 +38,14 @@
 <LI> ATP systems ... agsyHOL, cvc5, Satallax, Vampire, etc.
 <LI> <A HREF="" onClick="hideshow('ExampleTH0');return false;">
      Example
-     </A> <SPAN ID="ExampleTH0" style="display:none">
+     </A> (as a <A HREF="PUZGarfieldExamples/PUZXXX-07.TH0.p">plain file</A>)
+     <SPAN ID="ExampleTH0" style="display:none">
 <PRE>
-thf(dog_decl,type,       dog: $tType ).      thf(human_decl,type,     human: $tType ).
+thf(dog_type,type,       dog: $tType ).      thf(human_type,type,     human: $tType ).
 thf(odie_decl,type,      odie: dog ).        thf(jon_decl,type,       jon: human ).
 
 thf(owner_of_decl,type,  owner_of: dog > human ).
-thf(owns_decl,type,      owns: human > dog > $o ).
+thf(owns_decl,type,      <FONT COLOR="RED">owns: human > dog > $o ).</FONT>
 thf(bit_decl,type,       <FONT COLOR="RED">bit: dog > human > $int > $o ).</FONT>
 thf(hates_decl,type,     hates: human > human > $o ).
 thf(feeds_decl,type,     feeds: human > dog > $o ).
@@ -88,10 +89,11 @@ thf(jon_chases_and_feels,conjecture,
 <LI> ATP systems ... HOLyHammer, Leo-III, Vampire, Zipperposition, etc.
 <LI> <A HREF="" onClick="hideshow('ExampleTH1');return false;">
      Example
-     </A> <SPAN ID="ExampleTH1" style="display:none">
+     </A> (as a <A HREF="PUZGarfieldExamples/PUZXXX-08.TH1.p">plain file</A>)
+     <SPAN ID="ExampleTH1" style="display:none">
 <PRE>
-thf(dog_decl,type,      dog: $tType ).         thf(human_decl,type,    human: $tType ).
-thf(biter_decl,type,    biter: $tType > $tType ).
+thf(dog_type,type,      dog: $tType ).         thf(human_type,type,    human: $tType ).
+thf(biter_type,type,    biter: $tType > $tType ).
 thf(odie_decl,type,     odie: (biter @ dog) ). thf(jon_decl,type,      jon: human ).
 
 thf(owner_of_decl,type, owner_of:

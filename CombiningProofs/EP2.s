@@ -146,7 +146,7 @@ fof(30,negated_conjecture,(
 
 fof(31,negated_conjecture,(
     ~ degree ),
-    inference(fof_simplification,[status(thm)],[30,theory(equality)])).
+    inference(fof_simplification,[status(thm)],[30])).
 
 cnf(32,negated_conjecture,
     ( ~ degree ),
@@ -443,97 +443,97 @@ cnf(104,plain,
 cnf(105,plain,
     ( science
     | $false ),
-    inference(rw,[status(thm)],[60,65,theory(equality)])).
+    inference(rw,[status(thm)],[60,65])).
 
 cnf(106,plain,
     ( science ),
-    inference(cn,[status(thm)],[105,theory(equality)])).
+    inference(cn,[status(thm)],[105])).
 
 cnf(114,plain,
     ( social_science
     | $false ),
-    inference(rw,[status(thm)],[76,83,theory(equality)])).
+    inference(rw,[status(thm)],[76,83])).
 
 cnf(115,plain,
     ( social_science ),
-    inference(cn,[status(thm)],[114,theory(equality)])).
+    inference(cn,[status(thm)],[114])).
 
 cnf(125,plain,
     ( language
     | $false ),
-    inference(rw,[status(thm)],[90,98,theory(equality)])).
+    inference(rw,[status(thm)],[90,98])).
 
 cnf(126,plain,
     ( language ),
-    inference(cn,[status(thm)],[125,theory(equality)])).
+    inference(cn,[status(thm)],[125])).
 
 cnf(143,plain,
     ( writing
     | $false ),
-    inference(rw,[status(thm)],[103,104,theory(equality)])).
+    inference(rw,[status(thm)],[103,104])).
 
 cnf(144,plain,
     ( writing ),
-    inference(cn,[status(thm)],[143,theory(equality)])).
+    inference(cn,[status(thm)],[143])).
 
 cnf(145,plain,
     ( art
     | $false ),
-    inference(rw,[status(thm)],[44,48,theory(equality)])).
+    inference(rw,[status(thm)],[44,48])).
 
 cnf(146,plain,
     ( art ),
-    inference(cn,[status(thm)],[145,theory(equality)])).
+    inference(cn,[status(thm)],[145])).
 
 cnf(153,plain,
     ( literature
     | $false ),
-    inference(rw,[status(thm)],[51,52,theory(equality)])).
+    inference(rw,[status(thm)],[51,52])).
 
 cnf(154,plain,
     ( literature ),
-    inference(cn,[status(thm)],[153,theory(equality)])).
+    inference(cn,[status(thm)],[153])).
 
 cnf(155,plain,
     ( religion
     | $false ),
-    inference(rw,[status(thm)],[54,55,theory(equality)])).
+    inference(rw,[status(thm)],[54,55])).
 
 cnf(156,plain,
     ( religion ),
-    inference(cn,[status(thm)],[155,theory(equality)])).
+    inference(cn,[status(thm)],[155])).
 
 cnf(157,plain,
     ( composition
     | $false
     | ~ eng106 ),
-    inference(rw,[status(thm)],[36,38,theory(equality)])).
+    inference(rw,[status(thm)],[36,38])).
 
 cnf(158,plain,
     ( composition
     | $false
     | $false ),
-    inference(rw,[status(thm)],[157,37,theory(equality)])).
+    inference(rw,[status(thm)],[157,37])).
 
 cnf(159,plain,
     ( composition ),
-    inference(cn,[status(thm)],[158,theory(equality)])).
+    inference(cn,[status(thm)],[158])).
 
 cnf(162,plain,
     ( math
     | $false
     | ~ staXXX ),
-    inference(rw,[status(thm)],[69,71,theory(equality)])).
+    inference(rw,[status(thm)],[69,71])).
 
 cnf(163,plain,
     ( math
     | $false
     | $false ),
-    inference(rw,[status(thm)],[162,72,theory(equality)])).
+    inference(rw,[status(thm)],[162,72])).
 
 cnf(164,plain,
     ( math ),
-    inference(cn,[status(thm)],[163,theory(equality)])).
+    inference(cn,[status(thm)],[163])).
 
 cnf(166,plain,
     ( humanities
@@ -541,7 +541,7 @@ cnf(166,plain,
     | ~ literature
     | ~ religion
     | ~ phi115 ),
-    inference(rw,[status(thm)],[40,146,theory(equality)])).
+    inference(rw,[status(thm)],[40,146])).
 
 cnf(167,plain,
     ( humanities
@@ -549,7 +549,7 @@ cnf(167,plain,
     | $false
     | ~ religion
     | ~ phi115 ),
-    inference(rw,[status(thm)],[166,154,theory(equality)])).
+    inference(rw,[status(thm)],[166,154])).
 
 cnf(168,plain,
     ( humanities
@@ -557,7 +557,7 @@ cnf(168,plain,
     | $false
     | $false
     | ~ phi115 ),
-    inference(rw,[status(thm)],[167,156,theory(equality)])).
+    inference(rw,[status(thm)],[167,156])).
 
 cnf(169,plain,
     ( humanities
@@ -565,11 +565,11 @@ cnf(169,plain,
     | $false
     | $false
     | $false ),
-    inference(rw,[status(thm)],[168,56,theory(equality)])).
+    inference(rw,[status(thm)],[168,56])).
 
 cnf(170,plain,
     ( humanities ),
-    inference(cn,[status(thm)],[169,theory(equality)])).
+    inference(cn,[status(thm)],[169])).
 
 cnf(171,plain,
     ( degree
@@ -580,7 +580,7 @@ cnf(171,plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],[34,159,theory(equality)])).
+    inference(rw,[status(thm)],[34,159])).
 
 cnf(172,plain,
     ( degree
@@ -591,7 +591,7 @@ cnf(172,plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],[171,170,theory(equality)])).
+    inference(rw,[status(thm)],[171,170])).
 
 cnf(173,plain,
     ( degree
@@ -602,7 +602,7 @@ cnf(173,plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],[172,106,theory(equality)])).
+    inference(rw,[status(thm)],[172,106])).
 
 cnf(174,plain,
     ( degree
@@ -613,7 +613,7 @@ cnf(174,plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],[173,164,theory(equality)])).
+    inference(rw,[status(thm)],[173,164])).
 
 cnf(175,plain,
     ( degree
@@ -624,7 +624,7 @@ cnf(175,plain,
     | $false
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],[174,115,theory(equality)])).
+    inference(rw,[status(thm)],[174,115])).
 
 cnf(176,plain,
     ( degree
@@ -635,7 +635,7 @@ cnf(176,plain,
     | $false
     | $false
     | ~ writing ),
-    inference(rw,[status(thm)],[175,126,theory(equality)])).
+    inference(rw,[status(thm)],[175,126])).
 
 cnf(177,plain,
     ( degree
@@ -646,15 +646,15 @@ cnf(177,plain,
     | $false
     | $false
     | $false ),
-    inference(rw,[status(thm)],[176,144,theory(equality)])).
+    inference(rw,[status(thm)],[176,144])).
 
 cnf(178,plain,
     ( degree ),
-    inference(cn,[status(thm)],[177,theory(equality)])).
+    inference(cn,[status(thm)],[177])).
 
 cnf(179,plain,
     ( $false ),
-    inference(sr,[status(thm)],[178,32,theory(equality)])).
+    inference(sr,[status(thm)],[178,32])).
 
 cnf(180,plain,
     ( $false ),

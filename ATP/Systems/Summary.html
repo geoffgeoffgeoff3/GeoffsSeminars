@@ -1,10 +1,10 @@
 <HTML>
 <HEAD>
-<TITLE> ATP Systems </TITLE>
+<TITLE> Automated Reasoning Systems </TITLE>
 </HEAD>
 <BODY>
-<HR><!------------------------------------------------------------------------>
-<H1 ALIGN=CENTER> ATP Systems </H1>
+<HR><!-------------------------------------------------------------------------------------------->
+<H1 ALIGN=CENTER> Automated Reasoning Systems </H1>
 
 <IMG SRC="Machine.jpg" ALIGN=RIGHT WIDTH=33%>
 
@@ -16,14 +16,48 @@
      - successor to Otter
 <LI> <A HREF="http://www.eprover.org/">E</A>
      - purely equational reasoning
-<LI> <A HREF="http://gilith.com/software/metis">Metis</A>
-     - a proof tactic used in Isabelle 
 <LI> <A HREF="https://www.mpi-inf.mpg.de/departments/automation-of-logic/software/spass-workbench">SPASS</A>
      - a theorem prover with sorts
 <LI> <A HREF="http://www.vampire.fm/">Vampire</A>
-     - wins <A HREF="http://www.tptp.org/CASC/">CASC</A>
+     - wins <A HREF="http://tptp.org/CASC/">CASC</A>
+<LI> <A HREF="http://www.cs.man.ac.uk/~korovink/iprover/">iProver</A>
+     - instantiation based 
 <LI> <A HREF="http://www.waldmeister.org/">Waldmeister</A>
-     - for unit equational logic
+     - inside Wolfram Mathematica
+</UL>
+
+<H3> Systems with Arithmetic Capabilities </H3>
+<UL>
+<LI> <A HREF="http://users.cecs.anu.edu.au/~baumgart/systems/beagle/">
+     Beagle</A> - an evolutionary system
+<LI> <A HREF="https://cvc5.github.io/">cvc5</A>
+     - an SMT system that has seen the light
+<LI> <A HREF="http://www.philipp.ruemmer.org/princess.shtml">Princess</A>
+     - where arithmetic comes first
+<LI> <A HREF="http://www.ai.sri.com/~stickel/snark.html">SNARK</A>
+     - classical ATP with procedural attachments
+<LI> <A HREF="http://www.mpi-inf.mpg.de/~uwe/software/#TSPASS">SPASS+T</A>
+     - superposition with built-in arithmetic and SMT
+<LI> <A HREF="http://www.vampire.fm/">Vampire</A>
+     - ad hoc integration of arithmetic
+<LI> <A HREF="http://research.microsoft.com/en-us/um/redmond/projects/z3/">Z3</A> 
+     - many techniques, with support for many theories
+</UL>
+
+<H3> Higher-order Systems </H3>
+<UL>
+<LI> <A HREF="http://www.eprover.org/">E</A>
+     - from FOF to THF
+<LI> <A HREF="http://isabelle.in.tum.de/">Nitpick</A>
+     - model finding with Isabelle
+<LI> <A HREF="http://page.mi.fu-berlin.de/lex/leo3/">Leo III</A>
+     - extensional paramodulation and first-order ATP
+<LI> <A HREF="http://www.satallax.com">Satallax</A>
+     - tableau calculus and propositional ATP
+<LI> <A HREF="http://www.vampire.fm/">Vampire</A>
+     - Recent extension to higher-order logic
+<LI> <A HREF="https://github.com/c-cube/zipperposition/">Zipperposition</A>
+     - aimed at typed logics
 </UL>
 
 <H3> Non-CNF-Saturation Systems </H3>
@@ -32,8 +66,6 @@
      - a hierarchy of logics 
 <LI> <A HREF="http://www.ii.uni.wroc.pl/~nivelle/software/geo">Geo</A>
      - based on geometric resolution
-<LI> <A HREF="http://www.cs.man.ac.uk/~korovink/iprover/">iProver</A>
-     - instantiation based 
 <LI> <A HREF="http://www.leancop.de/">leanCoP</A>
      - very compact connection calculus
 <LI> <A HREF="https://dl.acm.org/doi/abs/10.1016/0004-3702%2889%2990035-0">Muscadet</A>
@@ -52,34 +84,12 @@
      - finite model denial
 </UL>
 
-<H3> Systems with Arithmetic Capabilities </H3>
+<H3> Infinite Model Finders </H3>
 <UL>
-<LI> <A HREF="http://users.cecs.anu.edu.au/~baumgart/systems/beagle/">
-     Beagle</A> - an evolutionary system
-<LI> <A HREF="https://cvc4.github.io/">CVC4</A>
+<LI> <A HREF="https://cvc5.github.io/">cvc5</A>
      - an SMT system that has seen the light
-<LI> <A HREF="http://www.philipp.ruemmer.org/princess.shtml">Princess</A>
-     - where arithmetic comes first
-<LI> <A HREF="http://www.ai.sri.com/~stickel/snark.html">SNARK</A>
-     - classical ATP with procedural attachments
-<LI> <A HREF="http://www.mpi-inf.mpg.de/~uwe/software/#TSPASS">SPASS+T</A>
-     - superposition with built-in arithmetic and SMT
-<LI> <A HREF="http://research.microsoft.com/en-us/um/redmond/projects/z3/">Z3</A> 
-     - many techniques, with support for many theories
-</UL>
-
-<H3> Higher-order Systems </H3>
-<UL>
-<LI> <A HREF="http://isabelle.in.tum.de/">Isabelle</A>
-     - strategy scheduling the tactics
-<LI> <A HREF="http://isabelle.in.tum.de/">Refute and Nitpick</A>
-     - model finding with Isabelle
-<LI> <A HREF="http://page.mi.fu-berlin.de/lex/leo3/">Leo III</A>
-     - extensional paramodulation and first-order ATP
-<LI> <A HREF="http://www.satallax.com">Satallax</A>
-     - tableau calculus and propositional ATP
-<LI> <A HREF="https://github.com/c-cube/zipperposition/">Zipperposition</A>
-     - aimed at typed logics
+<LI> <A HREF="https://zenodo.org/records/10125136">FEST</A>
+     - models with an integer domain
 </UL>
 
 <H3> Meta-Systems </H3>
@@ -90,8 +100,10 @@
      - Machine learning axiom selection
 <LI> <A HREF="https://code.google.com/archive/p/males/">*-MaLeS</A>
      - an automatic strategy scheduler
-<LI> <A HREF="http://www.tptp.org/ATPSystems/HPDS/SSCPA.html">SSCPA</A>
+<LI> <A HREF="http://tptp.org/ATPSystems/HPDS/SSCPA.html">SSCPA</A>
      - selective competition parallism
+<LI> SnakeForV
+     - guiding Vampire with machine learning
 </UL>
 
 <H3> (Higher-order) Proof Assistants <EM>(partially "A")</EM></H3>
@@ -102,12 +114,12 @@
 <LI> <A HREF="http://www.cl.cam.ac.uk/Research/HVG/isabelle.html">Isabelle</A>
 <LI> <A HREF="http://pvs.csl.sri.com/">PVS</A>
 <LI> <A HREF="http://www.lemma-one.com/ProofPower/index/index.html">ProofPower</A>
+<LI> <A HREF="https://leanprover.github.io/about/">Lean</A>
 </UL>
 
-<A HREF="https://theoremprover-museum.github.io/">
-<H3>The Theorem Prover Museum</H3></A>
+<A HREF="https://theoremprover-museum.github.io/"><H3>The Theorem Prover Museum</H3></A>
 
 <P>
-<HR><!------------------------------------------------------------------------>
+<HR><!-------------------------------------------------------------------------------------------->
 </BODY>
 </HTML>

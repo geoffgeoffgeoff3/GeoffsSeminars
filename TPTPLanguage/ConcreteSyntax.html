@@ -8,35 +8,36 @@
 
 <TABLE>
 <TR VALIGN=TOP> 
-     <TD> <H3>  Annotated TPTP Formulae </H3>
-          <PRE>
-&lt;language>(&lt;name>,&lt;role>,
-    &lt;formula>[,
-    &lt;source>[,
-    &lt;useful info>]]).
-          </PRE>    
-          <H3> Fields </H3>
+     <TD> <H3>  Annotated Formulae </H3>
           <UL>
-          <LI> <TT>&lt;language></TT> provides extensibility
-          <LI> <TT>&lt;role></TT> indicates user semantics, e.g.,
+          <LI> <EM>language</EM><TT>(</TT><EM>name</EM><TT>, </TT><EM>role</EM><TT>, </TT><EM>formula</EM><TT>, </TT><EM>source</EM><TT>, </TT><EM>useful info</EM><TT>).</TT>
+          <P>
+          <LI> <EM>language</EM> provides extensibility ...
+               <TT>cnf</TT>, <TT>fof</TT>, <TT>tff</TT>, <TT>thf</TT>
+          <LI> <EM>role</EM> indicates user semantics, e.g.,
                <UL>
                <LI> For problems: <TT>axiom</TT>, <TT>conjecture</TT>, 
                     <TT>lemma</TT>, ...
                <LI> For solutions: <TT>axiom</TT>, <TT>plain</TT>, 
                     <TT>assumption</TT>, ...
                </UL>
-          <LI> <TT>&lt;formula></TT> uses TPTP syntax
+          <LI> <EM>formula</EM> uses TPTP syntax
                <UL>
-               <LI> Follows user conventions
-               <LI> Compact ASCII text
+               <LI> Prolog-like (no Greek letters, only Roman)
+               <LI> Connectives ... <TT>!</TT>, <TT>?</TT>, <TT>~</TT>, 
+                    <TT>|</TT>, <TT>&</TT>, <TT>=></TT>, <TT>&lt;=</TT>, 
+                    <TT>&lt;=></TT>, <TT>&lt;~></TT>.
+               <LI> Easily identified <A HREF="InterpretedSymbols.html">
+                    Interpreted symbols</A>
+               <LI> Equality ... <TT>=</TT>, <TT>!=</TT>
                <LI> Easy to parse (esp. in Prolog :-)
                </UL>
-          <LI> <TT>&lt;source></TT>
+          <LI> <EM>source</EM>
                <UL>
                <LI> External: file, human, etc
                <LI> Derived: <TT>inference</TT> term
                </UL>
-          <LI> <TT>&lt;useful info></TT> fields used for annotations, in
+          <LI> <EM>useful info</EM> fields used for annotations, in
                same abstract syntax
           </UL>
 
@@ -60,8 +61,7 @@ cnf(140,lemma,
     ( equal_sets(a,aUa)
     | member(member_of(a,aUa),a) ),
     inference(unit_del,[status(thm)],[
-        inference(hyper,[status(thm)],[
-            5,16]),11]),
+        inference(hyper,[status(thm)],[5,16]),11]),
     [iquote('hyper,5,16.1,unit_del,11')]).
           </PRE>
 </TABLE>

@@ -1,11 +1,11 @@
 cnf('EP1---248',plain,
     ( literature ),
-    inference(cn,[status(thm)],['EP1---247',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---247'])).
 
 cnf('EP1---247',plain,
     ( literature
     | $false ),
-    inference(rw,[status(thm)],['EP1---77','EP1---13',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---77','EP1---13'])).
 
 cnf('EP1---64',plain,
     ( humanities
@@ -48,7 +48,7 @@ fof('EP1---98',plain,
 
 cnf('EP1---240',plain,
     ( art ),
-    inference(cn,[status(thm)],['EP1---239',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---239'])).
 
 fof('EP1---66',plain,
     ( ( ~ artXXX
@@ -117,17 +117,17 @@ cnf('EP1---61',plain,
 
 cnf('EP1---256',plain,
     ( religion ),
-    inference(cn,[status(thm)],['EP1---255',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---255'])).
 
 cnf('EP1---197',plain,
     ( language ),
-    inference(cn,[status(thm)],['EP1---196',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---196'])).
 
 cnf('EP1---257',plain,
     ( composition
     | $false
     | ~ eng106 ),
-    inference(rw,[status(thm)],['EP1---60','EP1---62',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---60','EP1---62'])).
 
 cnf('EP1---91',plain,
     ( science
@@ -138,21 +138,21 @@ cnf('EP1---258',plain,
     ( composition
     | $false
     | $false ),
-    inference(rw,[status(thm)],['EP1---257','EP1---61',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---257','EP1---61'])).
 
 cnf('EP1---259',plain,
     ( composition ),
-    inference(cn,[status(thm)],['EP1---258',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---258'])).
 
 cnf('EP1---255',plain,
     ( religion
     | $false ),
-    inference(rw,[status(thm)],['EP1---80','EP1---15',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---80','EP1---15'])).
 
 cnf('EP1---156',plain,
     ( science
     | $false ),
-    inference(rw,[status(thm)],['EP1---91','EP1---18',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---91','EP1---18'])).
 
 fof('EP1---7',axiom,(
     artXXX ),
@@ -160,17 +160,17 @@ fof('EP1---7',axiom,(
 
 cnf('EP1---157',plain,
     ( science ),
-    inference(cn,[status(thm)],['EP1---156',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---156'])).
 
 cnf('EP1---239',plain,
     ( art
     | $false ),
-    inference(rw,[status(thm)],['EP1---71','EP1---7',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---71','EP1---7'])).
 
 cnf('EP1---196',plain,
     ( language
     | $false ),
-    inference(rw,[status(thm)],['EP1---135','EP1---38',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---135','EP1---38'])).
 
 fof('EP1---answer---1',theorem,(
     degree ),
@@ -236,7 +236,7 @@ cnf('EP1---269',plain,
     | $false
     | $false
     | ~ phi115 ),
-    inference(rw,[status(thm)],['EP1---268','EP1---256',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---268','EP1---256'])).
 
 fof('EP1---80',plain,
     ( ~ relXXX
@@ -249,7 +249,7 @@ cnf('EP1---267',plain,
     | ~ literature
     | ~ religion
     | ~ phi115 ),
-    inference(rw,[status(thm)],['EP1---64','EP1---240',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---64','EP1---240'])).
 
 cnf('EP1---268',plain,
     ( humanities
@@ -257,17 +257,17 @@ cnf('EP1---268',plain,
     | $false
     | ~ religion
     | ~ phi115 ),
-    inference(rw,[status(thm)],['EP1---267','EP1---248',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---267','EP1---248'])).
 
 cnf('EP1---261',plain,
     ( math
     | $false
     | $false ),
-    inference(rw,[status(thm)],['EP1---260','EP1---26',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---260','EP1---26'])).
 
 cnf('EP1---262',plain,
     ( math ),
-    inference(cn,[status(thm)],['EP1---261',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---261'])).
 
 fof('EP1---154',plain,
     ( ~ phi115
@@ -284,16 +284,16 @@ cnf('EP1---260',plain,
     ( math
     | $false
     | ~ cscXXX ),
-    inference(rw,[status(thm)],['EP1---101','EP1---25',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---101','EP1---25'])).
 
 cnf('EP1---229',plain,
     ( writing ),
-    inference(cn,[status(thm)],['EP1---228',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---228'])).
 
 cnf('EP1---228',plain,
     ( writing
     | $false ),
-    inference(rw,[status(thm)],['EP1---154','EP1---16',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---154','EP1---16'])).
 
 fof('EP1---105',plain,
     ( ( ~ apyXXX
@@ -335,7 +335,7 @@ cnf('EP1---274',plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP1---273','EP1---157',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---273','EP1---157'])).
 
 cnf('EP1---275',plain,
     ( degree
@@ -346,7 +346,7 @@ cnf('EP1---275',plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP1---274','EP1---262',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---274','EP1---262'])).
 
 cnf('EP1---276',plain,
     ( degree
@@ -357,7 +357,7 @@ cnf('EP1---276',plain,
     | $false
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP1---275','EP1---174',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---275','EP1---174'])).
 
 cnf('EP1---277',plain,
     ( degree
@@ -368,7 +368,7 @@ cnf('EP1---277',plain,
     | $false
     | $false
     | ~ writing ),
-    inference(rw,[status(thm)],['EP1---276','EP1---197',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---276','EP1---197'])).
 
 cnf('EP1---278',plain,
     ( degree
@@ -379,11 +379,11 @@ cnf('EP1---278',plain,
     | $false
     | $false
     | $false ),
-    inference(rw,[status(thm)],['EP1---277','EP1---229',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---277','EP1---229'])).
 
 cnf('EP1---279',plain,
     ( degree ),
-    inference(cn,[status(thm)],['EP1---278',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---278'])).
 
 cnf('EP1---135',plain,
     ( language
@@ -392,7 +392,7 @@ cnf('EP1---135',plain,
 
 cnf('EP1---174',plain,
     ( social_science ),
-    inference(cn,[status(thm)],['EP1---173',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---173'])).
 
 cnf('EP1---114',plain,
     ( social_science
@@ -402,7 +402,7 @@ cnf('EP1---114',plain,
 cnf('EP1---173',plain,
     ( social_science
     | $false ),
-    inference(rw,[status(thm)],['EP1---114','EP1---29',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---114','EP1---29'])).
 
 cnf('EP1---270',plain,
     ( humanities
@@ -410,11 +410,11 @@ cnf('EP1---270',plain,
     | $false
     | $false
     | $false ),
-    inference(rw,[status(thm)],['EP1---269','EP1---16',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---269','EP1---16'])).
 
 cnf('EP1---271',plain,
     ( humanities ),
-    inference(cn,[status(thm)],['EP1---270',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---270'])).
 
 cnf('EP1---272',plain,
     ( degree
@@ -425,7 +425,7 @@ cnf('EP1---272',plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP1---58','EP1---259',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---58','EP1---259'])).
 
 cnf('EP1---273',plain,
     ( degree
@@ -436,7 +436,7 @@ cnf('EP1---273',plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP1---272','EP1---271',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---272','EP1---271'])).
 
 fof('EP1---3',axiom,
     ( ( eng105
@@ -576,7 +576,7 @@ fof('EP1---124',plain,
 
 cnf('EP1---280',plain,
     ( $false ),
-    inference(sr,[status(thm)],['EP1---279','EP1---54',theory(equality)])).
+    inference(sr,[status(thm)],['EP1---279','EP1---54'])).
 
 cnf('EP1---281',plain,
     ( $false ),

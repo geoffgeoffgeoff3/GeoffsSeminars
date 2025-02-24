@@ -37,9 +37,10 @@
 <LI> ATP systems ... E, Leo-III, Vampire, Zipperposition, etc.
 <LI> <A HREF="" onClick="hideshow('ExampleTX0');return false;">
      Example
-     </A> <SPAN ID="ExampleTX0" style="display:none">
+     </A> (as a <A HREF="PUZGarfieldExamples/PUZXXX-05.TX0.p">plain file</A>)
+     <SPAN ID="ExampleTX0" style="display:none">
 <PRE>
-tff(dog_decl,type,      dog: $tType ).       tff(human_decl,type,    human: $tType ).
+tff(dog_type,type,      dog: $tType ).       tff(human_type,type,    human: $tType ).
 tff(odie_decl,type,     odie: dog ).         tff(jon_decl,type,      jon: human ).
 
 tff(owner_of_decl,type, owner_of: dog > human ).
@@ -78,13 +79,14 @@ tff(jon_chases_and_hates,conjecture,
 <LI> ATP systems ... Leo-III, Vampire, etc.
 <LI> <A HREF="" onClick="hideshow('ExampleTX1');return false;">
      Example
-     </A> <SPAN ID="ExampleTX1" style="display:none">
+     </A> (as a <A HREF="PUZGarfieldExamples/PUZXXX-06.TX1.p">plain file</A>)
+     <SPAN ID="ExampleTX1" style="display:none">
 <PRE>
-tff(dog_decl,type,      dog: $tType ).       tff(human_decl,type,    human: $tType ).
-tff(biter_decl,type,    biter: $tType > $tType ).
+tff(dog_type,type,      dog: $tType ).       tff(human_type,type,    human: $tType ).
+tff(biter_type,type,    biter: $tType > $tType ).
 tff(odie_decl,type,     odie: biter(dog) ).  tff(jon_decl,type,      jon: human ).
 
-tff(owner_of_decl,type, <FONT COLOR="RED">owner_of: !>[BiterType: $tType]: (biter(BiterType) > human )</FONT> ).
+tff(owner_of_decl,type, owner_of: !>[BiterType: $tType]: (biter(BiterType) > human ) ).
 tff(bit_decl,type,      bit:
     !>[BiterType: $tType]: ( (biter(BiterType) * human * $int) > $o ) ).
 tff(hates_decl,type,    hates: (human * human) > $o ).
@@ -96,12 +98,12 @@ tff(jon_owns_odie,axiom,                   tff(odie_bit_jon_twice,axiom,
     jon = owner_of(dog,odie) ).                bit(dog,odie,jon,2) ).
 
 tff(hate_the_multi_biter_any,axiom,        tff(feed_the_non_biter_dog,axiom,
-    ! [T: $tType,B: biter(T),                  ! [D: biter(dog),H: human] :
-                 H: human,N: $int] :             $ite(
-      ( ( H != owner_of(T,B)                       ? [N: $int] :
-        & bit(T,B,H,N)                               ( bit(dog,D,H,N) & $greater(N,0) ),
-        & $greater(N,1) )                          chases(H,D),
-     => hates(H,owner_of(T,B)) ) ).                feeds(H,D)) ).
+    ! [T: $tType,B: biter(T),                  <FONT COLOR="RED">! [D: biter(dog),H: human] :</FONT>
+                 H: human,N: $int] :             <FONT COLOR="RED">$ite(</FONT>
+      ( ( H != owner_of(T,B)                       <FONT COLOR="RED">? [N: $int] :</FONT>
+        & bit(T,B,H,N)                               <FONT COLOR="RED">( bit(dog,D,H,N) & $greater(N,0) ),</FONT>
+        & $greater(N,1) )                          <FONT COLOR="RED">chases(H,D),</FONT>
+     => hates(H,owner_of(T,B)) ) ).                <FONT COLOR="RED">feeds(H,D))</FONT> ).
 
 tff(jon_says_a_dog_bit_him_twice,axiom,    tff(jon_says_truth,axiom,
     ? [D: biter(dog)] :                        ! [S: $o] :

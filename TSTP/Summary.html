@@ -1,30 +1,26 @@
 <HTML>
 <HEAD>
 <TITLE> The TSTP Solution Library </TITLE>
-</HEAD>
 <SCRIPT language="JavaScript">
-<!--
   var images = new Array();
   var myIndex = 0;
 
   images[0]     = new Image();
   images[0].src = 'TAT.GIF';
   images[1]     = new Image();
-  images[1].src = 'TSTP.GIF';
+  images[1].src = 'TSTP.png';
 
-  function putImage (index) {
-      if (myIndex == 0)
-          myIndex = 1;
-      else myIndex = 0;
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
       document.images['image'].src = images[myIndex].src;
   }
-  //-->
 </SCRIPT>
+</HEAD>
 <BODY>
-<HR><!------------------------------------------------------------------------>
+<HR><!-- -------------------------------------------------------------------------------------- -->
 <H1 ALIGN=CENTER> The TSTP Solution Library </H1>
 
-<A HREF="" onClick="putImage(1);return false">
+<A HREF="" onClick="nextImage();return false">
 <IMG NAME="image" SRC="TAT.GIF" ALIGN=RIGHT WIDTH=33%>
 </A>
 
@@ -47,7 +43,7 @@
 
 <H3> Features </H3>
 <UL>
-<LI> 70+ systems' TPTP derivations and models 
+<LI> 80+ systems' TPTP derivations and models 
 <LI> Resources beyond <A HREF="../Evaluate/PPP.html">systems' PPP</A>s
 <LI> <A HREF="EP.THM-CRf.s.txt">Documented</A>:
      System,
@@ -60,13 +56,19 @@
      Logic,
      Source and user annotations
 <LI> A key - the <A HREF="../TPTPLanguage/Summary.html">TPTP language</A>
+     <UL>
+     <LI> Standards for writing 
+          <A HREF="../TPTPProofsAndModels/Derivations.html">derivations</A>
+     <LI> Standards for writing finite and infinite
+          <A HREF="../TPTPInterpretations/TarskianInTF0.shtml">Tarskian</A> and
+          <A HREF="../TPTPInterpretations/KripkeInTX0.shtml">Kripke</A> interpretations
+     </UL>
 </UL>
 
 <H3> Browsing available
-     <A TARGET="_blank" HREF="http://www.tptp.org/TSTP">online</A> at
-     <TT>www.tptp.org/TSTP</TT> </H3>
+     <A TARGET="_blank" HREF="../../TSTP">online</A> at <TT>tptp.org/TSTP</TT> </H3>
 
 <P>
-<HR><!------------------------------------------------------------------------>
+<HR><!-- -------------------------------------------------------------------------------------- -->
 </BODY>
 </HTML>

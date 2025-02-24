@@ -64,17 +64,17 @@ cnf(24,negated_conjecture,
 
 cnf(25,negated_conjecture,
     ( john = esk1_0 ),
-    inference(spm,[status(thm)],[24,18,theory(equality)])).
+    inference(spm,[status(thm)],[24,18])).
 
 cnf(28,plain,
     ( f = a ),
     inference(rw,[status(thm)],[
-        inference(rw,[status(thm)],[17,25,theory(equality)]),
-        14,theory(equality)])).
+        inference(rw,[status(thm)],[17,25]),
+        14])).
 
 cnf(29,plain,
     ( $false ),
-    inference(sr,[status(thm)],[28,19,theory(equality)])).
+    inference(sr,[status(thm)],[28,19])).
 </PRE>
 
 <P>

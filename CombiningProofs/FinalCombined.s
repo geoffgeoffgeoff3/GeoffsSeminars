@@ -3,7 +3,7 @@ fof('Metis---phi115',axiom,(
 
 cnf('EP1---279',plain,
     ( degree ),
-    inference(cn,[status(thm)],['EP2---177',theory(equality)])).
+    inference(cn,[status(thm)],['EP2---177'])).
 
 cnf('Metis---refute_0_21',plain,
     ( religion ),
@@ -69,11 +69,11 @@ fof('EP1---54',negated_conjecture,(
 cnf('EP2---114',plain,
     ( social_science
     | $false ),
-    inference(rw,[status(thm)],['EP2---76','EP2---21',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---76','EP2---21'])).
 
 cnf('EP2---115',plain,
     ( social_science ),
-    inference(cn,[status(thm)],['EP2---114',theory(equality)])).
+    inference(cn,[status(thm)],['EP2---114'])).
 
 fof('EP2---102',plain,
     ( ~ wwwXXX
@@ -98,11 +98,11 @@ cnf('Metis---refute_0_11',plain,
 cnf('EP2---143',plain,
     ( writing
     | $false ),
-    inference(rw,[status(thm)],['EP2---102','EP2---29',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---102','EP2---29'])).
 
 cnf('EP2---144',plain,
     ( writing ),
-    inference(cn,[status(thm)],['EP2---143',theory(equality)])).
+    inference(cn,[status(thm)],['EP2---143'])).
 
 cnf('Metis---refute_0_16',plain,
     ( ~ phi115
@@ -166,7 +166,7 @@ cnf('EP2---90',plain,
 
 cnf('EP1---280',plain,
     ( $false ),
-    inference(sr,[status(thm)],['EP1---279','EP1---54',theory(equality)])).
+    inference(sr,[status(thm)],['EP1---279','EP1---54'])).
 
 fof('EP2---33',plain,
     ( ~ composition
@@ -253,7 +253,7 @@ cnf('EP2---171',plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP2---34','Metis---refute_0_6',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---34','Metis---refute_0_6'])).
 
 cnf('EP2---172',plain,
     ( degree
@@ -264,7 +264,7 @@ cnf('EP2---172',plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP2---171','Metis---refute_0_22',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---171','Metis---refute_0_22'])).
 
 cnf('EP2---173',plain,
     ( degree
@@ -275,7 +275,7 @@ cnf('EP2---173',plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP2---172','EP1---157',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---172','EP1---157'])).
 
 cnf('EP2---174',plain,
     ( degree
@@ -286,7 +286,7 @@ cnf('EP2---174',plain,
     | ~ social_science
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP2---173','EP2---164',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---173','EP2---164'])).
 
 fof('Metis---normalize_0_2',plain,
     ( ~ eng105
@@ -303,7 +303,7 @@ cnf('EP2---175',plain,
     | $false
     | ~ language
     | ~ writing ),
-    inference(rw,[status(thm)],['EP2---174','EP2---115',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---174','EP2---115'])).
 
 cnf('EP2---176',plain,
     ( degree
@@ -314,7 +314,7 @@ cnf('EP2---176',plain,
     | $false
     | $false
     | ~ writing ),
-    inference(rw,[status(thm)],['EP2---175','EP2---126',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---175','EP2---126'])).
 
 cnf('EP2---177',plain,
     ( degree
@@ -325,7 +325,7 @@ cnf('EP2---177',plain,
     | $false
     | $false
     | $false ),
-    inference(rw,[status(thm)],['EP2---176','EP2---144',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---176','EP2---144'])).
 
 fof('Metis---normalize_0_8',plain,
     ( ( ~ arhXXX
@@ -366,7 +366,7 @@ fof('EP2---24',axiom,(
 
 cnf('EP1---157',plain,
     ( science ),
-    inference(cn,[status(thm)],['EP1---156',theory(equality)])).
+    inference(cn,[status(thm)],['EP1---156'])).
 
 fof('Metis---normalize_0_5',plain,(
     eng106 ),
@@ -375,7 +375,7 @@ fof('Metis---normalize_0_5',plain,(
 cnf('EP1---156',plain,
     ( science
     | $false ),
-    inference(rw,[status(thm)],['EP1---91','EP1---18',theory(equality)])).
+    inference(rw,[status(thm)],['EP1---91','EP1---18'])).
 
 fof('EP2---20',axiom,
     ( ( apyXXX
@@ -441,17 +441,17 @@ cnf('EP2---163',plain,
     ( math
     | $false
     | $false ),
-    inference(rw,[status(thm)],['EP2---162','EP2---19',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---162','EP2---19'])).
 
 cnf('EP2---164',plain,
     ( math ),
-    inference(cn,[status(thm)],['EP2---163',theory(equality)])).
+    inference(cn,[status(thm)],['EP2---163'])).
 
 cnf('EP2---162',plain,
     ( math
     | $false
     | ~ staXXX ),
-    inference(rw,[status(thm)],['EP2---69','EP2---18',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---69','EP2---18'])).
 
 cnf('EP2---69',plain,
     ( math
@@ -514,7 +514,7 @@ fof('EP1---1',conjecture,(
 cnf('EP2---125',plain,
     ( language
     | $false ),
-    inference(rw,[status(thm)],['EP2---90','EP2---24',theory(equality)])).
+    inference(rw,[status(thm)],['EP2---90','EP2---24'])).
 
 fof('EP2---19',axiom,(
     staXXX ),
@@ -522,7 +522,7 @@ fof('EP2---19',axiom,(
 
 cnf('EP2---126',plain,
     ( language ),
-    inference(cn,[status(thm)],['EP2---125',theory(equality)])).
+    inference(cn,[status(thm)],['EP2---125'])).
 
 fof('EP2---17',axiom,
     ( ( mth162

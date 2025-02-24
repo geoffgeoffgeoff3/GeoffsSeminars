@@ -45,7 +45,7 @@ cnf(5,derived,
     | ~group_member(B,f)
     | equal(phi(multiply(f,A,B)),multiply(h,phi(A),phi(B))) ),
     inference(flip,[status(thm)],[
-        inference(copy,[status(thm)],[4]),theory(equality)]),
+        inference(copy,[status(thm)],[4])]),
     [iquote('copy,4,flip.3')]).
 
 % 6 [] -group_member(A,h)|group_member($f1(A),f).
@@ -147,7 +147,7 @@ cnf(121,derived,
     ( equal(multiply(h,phi(f_left_zero),sk_f2(h,phi(f_left_zero))),phi(f_left_zero)) ),
     inference(flip,[status(thm)],[
         inference(demod,[status(thm)],[
-            inference(hyper,[status(thm)],[5,21,84]),118,83,theory(equality)]),theory(equality)]),
+            inference(hyper,[status(thm)],[5,21,84]),118,83])]),
     [iquote('hyper,5,21.1,84.1,demod,118,83,flip.1')]).
 
 % 517 [hyper,11,31.1,121.1] left_zero(h,phi(f_left_zero)).

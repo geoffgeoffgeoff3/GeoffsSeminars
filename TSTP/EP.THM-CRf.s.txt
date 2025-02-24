@@ -99,28 +99,28 @@ fof(16,plain,(
     ! [X1,X2] :
       ( killed(X1,X2)
      => ~ richer(X1,X2) ) ),
-    inference(fof_simplification,[status(thm)],[7,theory(equality)])).
+    inference(fof_simplification,[status(thm)],[7])).
 
 fof(17,plain,(
     ! [X1] :
       ( hates(agatha,X1)
      => ~ hates(charles,X1) ) ),
-    inference(fof_simplification,[status(thm)],[8,theory(equality)])).
+    inference(fof_simplification,[status(thm)],[8])).
 
 fof(18,plain,(
     ! [X1] :
       ( ~ richer(X1,agatha)
      => hates(butler,X1) ) ),
-    inference(fof_simplification,[status(thm)],[10,theory(equality)])).
+    inference(fof_simplification,[status(thm)],[10])).
 
 fof(19,plain,(
     ! [X1] :
     ? [X2] : ~ hates(X1,X2) ),
-    inference(fof_simplification,[status(thm)],[12,theory(equality)])).
+    inference(fof_simplification,[status(thm)],[12])).
 
 fof(20,negated_conjecture,(
     ~ killed(agatha,agatha) ),
-    inference(fof_simplification,[status(thm)],[15,theory(equality)])).
+    inference(fof_simplification,[status(thm)],[15])).
 
 fof(21,plain,(
     ? [X2] :
@@ -289,52 +289,52 @@ cnf(53,negated_conjecture,
 
 cnf(54,plain,
     ( hates(esk1_0,agatha) ),
-    inference(spm,[status(thm)],[33,23,theory(equality)])).
+    inference(spm,[status(thm)],[33,23])).
 
 cnf(56,plain,
     ( agatha = esk1_0
     | butler = esk1_0
     | charles = esk1_0 ),
-    inference(spm,[status(thm)],[30,24,theory(equality)])).
+    inference(spm,[status(thm)],[30,24])).
 
 cnf(57,plain,
     ( hates(butler,X1)
     | ~ killed(X1,agatha) ),
-    inference(spm,[status(thm)],[36,45,theory(equality)])).
+    inference(spm,[status(thm)],[36,45])).
 
 cnf(58,plain,
     ( hates(butler,X1)
     | butler = X1 ),
-    inference(spm,[status(thm)],[48,42,theory(equality)])).
+    inference(spm,[status(thm)],[48,42])).
 
 cnf(59,plain,
     ( butler = X1
     | ~ hates(charles,X1) ),
-    inference(spm,[status(thm)],[39,42,theory(equality)])).
+    inference(spm,[status(thm)],[39,42])).
 
 cnf(63,plain,
     ( killed(esk1_0,esk1_0)
     | esk1_0 = charles
     | esk1_0 = butler ),
-    inference(spm,[status(thm)],[23,56,theory(equality)])).
+    inference(spm,[status(thm)],[23,56])).
 
 cnf(65,negated_conjecture,
     ( esk1_0 = charles
     | esk1_0 = butler
     | ~ killed(esk1_0,esk1_0) ),
-    inference(spm,[status(thm)],[53,56,theory(equality)])).
+    inference(spm,[status(thm)],[53,56])).
 
 cnf(72,plain,
     ( butler = esk2_1(butler) ),
-    inference(spm,[status(thm)],[51,58,theory(equality)])).
+    inference(spm,[status(thm)],[51,58])).
 
 cnf(75,plain,
     ( hates(butler,esk1_0) ),
-    inference(spm,[status(thm)],[57,23,theory(equality)])).
+    inference(spm,[status(thm)],[57,23])).
 
 cnf(76,plain,
     ( ~ hates(butler,butler) ),
-    inference(spm,[status(thm)],[51,72,theory(equality)])).
+    inference(spm,[status(thm)],[51,72])).
 
 cnf(78,negated_conjecture,
     ( esk1_0 = charles
@@ -344,24 +344,24 @@ cnf(78,negated_conjecture,
 cnf(82,negated_conjecture,
     ( hates(charles,agatha)
     | esk1_0 = butler ),
-    inference(spm,[status(thm)],[54,78,theory(equality)])).
+    inference(spm,[status(thm)],[54,78])).
 
 cnf(93,negated_conjecture,
     ( butler = agatha
     | esk1_0 = butler ),
-    inference(spm,[status(thm)],[59,82,theory(equality)])).
+    inference(spm,[status(thm)],[59,82])).
 
 cnf(94,negated_conjecture,
     ( esk1_0 = butler ),
-    inference(sr,[status(thm)],[93,52,theory(equality)])).
+    inference(sr,[status(thm)],[93,52])).
 
 cnf(95,plain,
     ( hates(butler,butler) ),
-    inference(rw,[status(thm)],[75,94,theory(equality)])).
+    inference(rw,[status(thm)],[75,94])).
 
 cnf(96,plain,
     ( $false ),
-    inference(sr,[status(thm)],[95,76,theory(equality)])).
+    inference(sr,[status(thm)],[95,76])).
 
 cnf(97,plain,
     ( $false ),
@@ -385,11 +385,11 @@ cnf(97,plain,
 % fof(13, axiom,~(agatha=butler),file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p', pel55_11)).
 % fof(14, conjecture,killed(agatha,agatha),file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p', pel55)).
 % fof(15, negated_conjecture,~(killed(agatha,agatha)),inference(assume_negation,[status(cth)],[14])).
-% fof(16, plain,![X1]:![X2]:(killed(X1,X2)=>~(richer(X1,X2))),inference(fof_simplification,[status(thm)],[7,theory(equality)])).
-% fof(17, plain,![X1]:(hates(agatha,X1)=>~(hates(charles,X1))),inference(fof_simplification,[status(thm)],[8,theory(equality)])).
-% fof(18, plain,![X1]:(~(richer(X1,agatha))=>hates(butler,X1)),inference(fof_simplification,[status(thm)],[10,theory(equality)])).
-% fof(19, plain,![X1]:?[X2]:~(hates(X1,X2)),inference(fof_simplification,[status(thm)],[12,theory(equality)])).
-% fof(20, negated_conjecture,~(killed(agatha,agatha)),inference(fof_simplification,[status(thm)],[15,theory(equality)])).
+% fof(16, plain,![X1]:![X2]:(killed(X1,X2)=>~(richer(X1,X2))),inference(fof_simplification,[status(thm)],[7])).
+% fof(17, plain,![X1]:(hates(agatha,X1)=>~(hates(charles,X1))),inference(fof_simplification,[status(thm)],[8])).
+% fof(18, plain,![X1]:(~(richer(X1,agatha))=>hates(butler,X1)),inference(fof_simplification,[status(thm)],[10])).
+% fof(19, plain,![X1]:?[X2]:~(hates(X1,X2)),inference(fof_simplification,[status(thm)],[12])).
+% fof(20, negated_conjecture,~(killed(agatha,agatha)),inference(fof_simplification,[status(thm)],[15])).
 % fof(21, plain,?[X2]:(lives(X2)&killed(X2,agatha)),inference(variable_rename,[status(thm)],[1])).
 % fof(22, plain,(lives(esk1_0)&killed(esk1_0,agatha)),inference(skolemize,[status(esa)],[21])).
 % cnf(23,plain,(killed(esk1_0,agatha)),inference(split_conjunct,[status(thm)],[22])).
@@ -420,22 +420,22 @@ cnf(97,plain,
 % cnf(51,plain,(~hates(X1,esk2_1(X1))),inference(split_conjunct,[status(thm)],[50])).
 % cnf(52,plain,(agatha!=butler),inference(split_conjunct,[status(thm)],[13])).
 % cnf(53,negated_conjecture,(~killed(agatha,agatha)),inference(split_conjunct,[status(thm)],[20])).
-% cnf(54,plain,(hates(esk1_0,agatha)),inference(spm,[status(thm)],[33,23,theory(equality)])).
-% cnf(56,plain,(agatha=esk1_0|butler=esk1_0|charles=esk1_0),inference(spm,[status(thm)],[30,24,theory(equality)])).
-% cnf(57,plain,(hates(butler,X1)|~killed(X1,agatha)),inference(spm,[status(thm)],[36,45,theory(equality)])).
-% cnf(58,plain,(hates(butler,X1)|butler=X1),inference(spm,[status(thm)],[48,42,theory(equality)])).
-% cnf(59,plain,(butler=X1|~hates(charles,X1)),inference(spm,[status(thm)],[39,42,theory(equality)])).
-% cnf(63,plain,(killed(esk1_0,esk1_0)|esk1_0=charles|esk1_0=butler),inference(spm,[status(thm)],[23,56,theory(equality)])).
-% cnf(65,negated_conjecture,(esk1_0=charles|esk1_0=butler|~killed(esk1_0,esk1_0)),inference(spm,[status(thm)],[53,56,theory(equality)])).
-% cnf(72,plain,(butler=esk2_1(butler)),inference(spm,[status(thm)],[51,58,theory(equality)])).
-% cnf(75,plain,(hates(butler,esk1_0)),inference(spm,[status(thm)],[57,23,theory(equality)])).
-% cnf(76,plain,(~hates(butler,butler)),inference(spm,[status(thm)],[51,72,theory(equality)])).
+% cnf(54,plain,(hates(esk1_0,agatha)),inference(spm,[status(thm)],[33,23])).
+% cnf(56,plain,(agatha=esk1_0|butler=esk1_0|charles=esk1_0),inference(spm,[status(thm)],[30,24])).
+% cnf(57,plain,(hates(butler,X1)|~killed(X1,agatha)),inference(spm,[status(thm)],[36,45])).
+% cnf(58,plain,(hates(butler,X1)|butler=X1),inference(spm,[status(thm)],[48,42])).
+% cnf(59,plain,(butler=X1|~hates(charles,X1)),inference(spm,[status(thm)],[39,42])).
+% cnf(63,plain,(killed(esk1_0,esk1_0)|esk1_0=charles|esk1_0=butler),inference(spm,[status(thm)],[23,56])).
+% cnf(65,negated_conjecture,(esk1_0=charles|esk1_0=butler|~killed(esk1_0,esk1_0)),inference(spm,[status(thm)],[53,56])).
+% cnf(72,plain,(butler=esk2_1(butler)),inference(spm,[status(thm)],[51,58])).
+% cnf(75,plain,(hates(butler,esk1_0)),inference(spm,[status(thm)],[57,23])).
+% cnf(76,plain,(~hates(butler,butler)),inference(spm,[status(thm)],[51,72])).
 % cnf(78,negated_conjecture,(esk1_0=charles|esk1_0=butler),inference(csr,[status(thm)],[65,63])).
-% cnf(82,negated_conjecture,(hates(charles,agatha)|esk1_0=butler),inference(spm,[status(thm)],[54,78,theory(equality)])).
-% cnf(93,negated_conjecture,(butler=agatha|esk1_0=butler),inference(spm,[status(thm)],[59,82,theory(equality)])).
-% cnf(94,negated_conjecture,(esk1_0=butler),inference(sr,[status(thm)],[93,52,theory(equality)])).
-% cnf(95,plain,(hates(butler,butler)),inference(rw,[status(thm)],[75,94,theory(equality)])).
-% cnf(96,plain,($false),inference(sr,[status(thm)],[95,76,theory(equality)])).
+% cnf(82,negated_conjecture,(hates(charles,agatha)|esk1_0=butler),inference(spm,[status(thm)],[54,78])).
+% cnf(93,negated_conjecture,(butler=agatha|esk1_0=butler),inference(spm,[status(thm)],[59,82])).
+% cnf(94,negated_conjecture,(esk1_0=butler),inference(sr,[status(thm)],[93,52])).
+% cnf(95,plain,(hates(butler,butler)),inference(rw,[status(thm)],[75,94])).
+% cnf(96,plain,($false),inference(sr,[status(thm)],[95,76])).
 % cnf(97,plain,($false),96,['proof']).
 % # SZS output end CNFRefutation
 % # Processed clauses                    : 46

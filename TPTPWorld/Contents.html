@@ -1,27 +1,22 @@
 <HTML>
 <HEAD>
-<TITLE> The TPTP World -
-Infrastructure for Automated Reasoning </TITLE>
-</HEAD>
-<!---------------------------------------------------------------------->
+<TITLE> The TPTP World - Infrastructure for Automated Reasoning </TITLE>
+<LINK REL="icon" HREF="https://tptp.org/Logos/TPTPWorld.png" type="image/png" />
 <SCRIPT type="text/javascript">
-function hideshow(obj) {
-    var elem = document.getElementById(obj);
-    if (elem.style.display == 'block') {
-        elem.style.display = 'none';
-    } else if (elem.style.display == 'none') {
-        elem.style.display = 'block';
-    } else {
-        elem.style.display = 'none';
-    }
-}
-</SCRIPT>
-<SCRIPT language="JavaScript">
-<!--
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
   var images = new Array();
 
   images[0]     = new Image();
-  images[0].src = 'TPTPWorld.gif';
+  images[0].src = 'https://tptp.org/Logos/TPTPWorld.png';
   images[1]     = new Image();
   images[1].src = 'Hard.jpg';
   images[2]     = new Image();
@@ -34,71 +29,112 @@ function hideshow(obj) {
   function putImage2 (index) {
       document.images['image2'].src = images[index].src;
   }
-  //-->
 </SCRIPT>
-<!---------------------------------------------------------------------->
-<BODY>
-<HR><!------------------------------------------------------------------------>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR> <!-- ------------------------------------------------------------------------------------- -->
 <H1 ALIGN=CENTER> 
 The TPTP World -<BR>
 Infrastructure for Automated Reasoning<BR>
-<A HREF="http://www.tptp.org"><TT>http://www.tptp.org</TT></A>
+<A HREF="https://tptp.org"><TT>tptp.org</TT></A>
 </H1>
 
 <A HREF="" onClick="putImage1(0);return false">
-<IMG NAME="image1" SRC="Hard.jpg" ALIGN=RIGHT HEIGHT=45%></A>
+<IMG NAME="image1" SRC="Hard.jpg" ALIGN=RIGHT HEIGHT=33%></A>
 
 <H3> Introduction
-     <SUP><FONT SIZE=-3 COLOR=GREY>0:05</FONT></SUP>
      <A HREF="" onClick="putImage1(1);return false">
      <IMG SRC="Hard.jpg" BORDER=0 HEIGHT=10></A>
 </H3>
 <UL>
-<LI> <A HREF="../ATP/WhatIsATP.html">ATP, What is it?</A>
-<LI> <A HREF="../ATP/Applications/Summary.html">ATP, What is it Good For?</A>
-<LI> <A HREF="../ATP/Systems/Summary.html">ATP, What Systems are Successful?</A>
-<LI> <A HREF="../TPTPetc/TPTPInfrastructure.html">TPTP Infrastructure</A>
+<LI> <A HREF="../ATP/WhatIsATP.html">Automated Reasoning, What is it?</A>
+<LI> <A HREF="../ATP/Applications/Summary.html">Automated Reasoning, What is it Good For?</A>
+<LI> <A HREF="../ATP/Systems/Summary.html">Automated Reasoning, What Systems are Successful?</A>
+<LI> <A HREF="TPTPWorld.html">The TPTP World</A>
 </UL>
 
-<H3> TPTP World Core Infrastructure
-     <SUP><FONT SIZE=-3 COLOR=GREY>0:10</FONT></SUP> </H3>
+<H3> TPTP World Core Infrastructure </H3>
 <UL>
 <LI> <A HREF="../TPTP/Summary.html">The TPTP Problem Library</A>
 <LI> <A HREF="../TPTPLanguage/Summary.html">The TPTP Language</A> (++)
-<LI> <A HREF="../SZSOntologies/Summary.html">The SZS Ontology</A>
+<LI> <A HREF="../SZSOntologies/Summary.html">The SZS Ontologies</A>
 <LI> <A HREF="../TSTP/Summary.html">The TSTP Solution Library</A>
 <LI> <A HREF="../Evaluate/Summary.html">Problem and System Ratings</A> (++)
 <LI> <A HREF="../TPI/Summary.html">The TPTP Process Instruction Language</A> (++)
 </UL>
 
-<H3> TPTP World Services
-     <SUP><FONT SIZE=-3 COLOR=GREY>0:25</FONT></SUP> </H3>
+<H3> TPTP World Services </H3>
 <UL>
-<LI> <A HREF="../SystemOnTPTP/Online/Summary.html">SystemOnTPTP -
-     ATP in your Web Browser</A>
-<LI> <A HREF="../SystemOnTPTP/Utility/Summary.html">
-     SystemOnTPTP - ATP Systems and Tools</A> (++)
-<LI> <A HREF="../SystemOnTPTP/Online/RemoteSoT.html">RemoteSoT - ATP
-     in your Software</A> (++)
-<LI> <A HREF="../GDV/Summary.html">GDV - Semantic Derivation Verification</A>
-<LI> <A HREF="../AGInT/RaterSummary.html">AGInTRater - Derivation Nodes' Interestingness</A>
-<LI> <A HREF="../IDV/Summary.html">IDV - Interactive Viewing of Derivations</A>
+<LI> <A HREF="" onClick="hideshow('p3');return false;">System*T*TP</A>
+     <SPAN ID="p3" style="display:none">
+     <UL> 
+     <LI> <A HREF="../SystemOnTPTP/Online/Summary.html">Online - ATP in your Web Browser</A>
+     <LI> <A HREF="../SystemOnTPTP/Utility/Summary.html">Desktop - ATP on your Computer</A> (++)
+     <LI> <A HREF="../SystemOnTPTP/Online/RemoteSoT.html">Remote - ATP in your Software</A> (++)
+     </UL>
+     </SPAN>
+<LI> <A HREF="" onClick="hideshow('p4');return false;">Derivation Tools</A>
+     <SPAN ID="p4" style="display:none">
+     <UL>
+     <LI> <A HREF="../IDV/Summary.html">IDV</A> - Interactive Derivation Viewer
+     <LI> <A HREF="../AGInT/RaterSummary.html">AGInTRater</A> - Derivation Nodes' Interestingness
+     <LI> <A HREF="../GDV/Summary.html">GDV</A> - Semantic Derivation Verification
+     </UL>
+     </SPAN>
+<LI> <A HREF="" onClick="hideshow('p5');return false;">Interpretation Tools</A>
+     <SPAN ID="p5" style="display:none">
+     <UL>
+     <LI> <A HREF="../IIV/Summary.html">IIV</A> - Interactive Interpretation Viewer</A>
+     <LI> <A HREF="../AGMV/Summary.html">AGMV</A> - Semantic Model Verification
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> Using the TPTP World (--) </H3>
+<UL>
+<LI> <A HREF="https://tptp.org/UserDocs/QuickGuide/Problems.html">Writing TPTP Problems</A>
+<LI> <A HREF="" onClick="hideshow('p2');return false;">SystemOnTPTP demonstration</A> using 
+     <A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">
+     <TT>PUZ001+1</TT></A>
+     <SPAN ID="p2" style="display:none">
+     <UL>
+     <LI> Start at the TPTP : <A HREF="https://tptp.org" TARGET="_blank"><TT>tptp.org</TT></A>
+     <LI> Browse TPTP problems to PUZ001+1
+     <LI> Note language, SPC, Rating
+     <LI> Browse TSTP solutions to E solution, note language
+     <LI> Could rush forward to "Solve problem", but first ...
+     <LI> Copy formulae, open SystemB4TPTP :
+          <A HREF="http://tptp.org/cgi-bin/SystemB4TPTP" TARGET="_blank">
+          <TT>http://tptp.org/cgi-bin/SystemB4TPTP</TT></A>, and explain interface. 
+          Then check syntax using default, and with BNFParserDrill.
+     <LI> Open SystemOnTPTP :
+          <A HREF="http://tptp.org/cgi-bin/SystemOnTPTP" TARGET="_blank">
+          <TT>http://tptp.org/cgi-bin/SystemOnTPTP</TT></A>, and explain interface. 
+          Then check axioms using Paradox.
+     <LI> Add conjecture and prove with E. Note yacko proof, then redo with "TPTP format". 
+          Note language.
+     <LI> Could shortcut using SoTSTP, but first ...
+          Copy formulae, open SystemOnTSTP :
+          <A HREF="http://tptp.org/cgi-bin/SystemOnTSTP" TARGET="_blank">
+          <TT>http://tptp.org/cgi-bin/SystemOnTSTP</TT></A>, and explain interface. 
+     <LI> Run IDV on solution. Explain IDV interface.
+          Show interestingness. Show "good/bad cat lemmas". Show verification.
+     <LI> Then check proof using GDV.
+     </UL>
+     </SPAN>
+<LI> <A HREF="../../UserDocs/TPTPWorldTutorial/Contents.html">Tutorial on Logic and the TPTP World</A> (++)
+<LI> <A HREF="../../UserDocs/TPTPWorldTutorial/ATPProcess.html">The ATP Process</A>
 </UL>
 
 <A HREF="" onClick="putImage2(2);return false">
-<IMG NAME="image2" SRC="Hard.jpg" ALIGN=RIGHT HEIGHT=45%></A>
+<IMG NAME="image2" SRC="Hard.jpg" ALIGN=RIGHT HEIGHT=33%></A>
 
-<H3> TPTP World Applications
-<SUP><FONT SIZE=-3 COLOR=GREY>0:40</FONT></SUP> </H3>
+<H3> TPTP World Applications </H3>
 <UL>
-<LI> <A HREF="../ATP/Applications/NASA.html">
-     Certifiable program sythesis at NASA</A>
-<LI> <A HREF="../ATP/Applications/MPTP.html">
-     Cross-verification of the Mizar Mathematical Library</A>
-<LI> <A HREF="../ATP/Applications/Isabelle.html">
-     The Sledgehammer in Isabelle</A>
-<LI> <A HREF="../ATP/Applications/Ontological.html">
-     The Ontological Argument</A>
+<LI> <A HREF="../MathsInTPTP/Contents.html">Mathematics in Many Forms</A>
+<LI> <A HREF="../ATP/Applications/NASA.html">Certifiable program sythesis at NASA</A>
+<LI> <A HREF="../ATP/Applications/Isabelle.html">The Sledgehammer in Isabelle</A>
+<LI> <A HREF="../ATP/Applications/Ontological.html">The Ontological Argument</A>
 <LI> <A HREF="" onClick="hideshow('p1');return false;">Some Internal Projects</A>
      <SPAN ID="p1" style="display:none">
      <UL>
@@ -106,66 +142,34 @@ Infrastructure for Automated Reasoning<BR>
      <LI> <A HREF="../AGInT/Summary.html">AGInT - Generating Interesting Theorems</A>
      <LI> <A HREF="../SRASS/Summary.html">SRASS - Semantic Selection of Axioms</A>
      <LI> <A HREF="../MANSEX/Summary.html">MANSEX - Multiple Answer Extraction</A>
-     <LI> <A HREF="../SPASS-XDB/Summary.html">
-          SPASS-XDB - External Data Access for ATP</A>
+     <LI> <A HREF="../SPASS-XDB/Summary.html">SPASS-XDB - External Data Access for ATP</A>
      </UL>
      </SPAN>
 <LI> <A HREF="../CASC/Summary.html">The CADE ATP System Competition</A>
 </UL>
 
-<H3> Using the TPTP World (--)
-<SUP><FONT SIZE=-3 COLOR=GREY>1:00</FONT></SUP> </H3>
+<H3> Keeping AI Honest, Trustworthy, Ethical </H3>
 <UL>
-<LI> <A HREF="../TPTPWorldTutorial/Contents.html">Tutorial on Logic</A> 
-     using the TPTP World
-<LI> <A HREF="http://www.tptp.org/TPTP/QuickGuide/">The TPTP Quick Guide</A>
-<LI> <A HREF="" onClick="hideshow('p2');return false;">
-     SystemOnTPTP demonstration</A>
-     using <TT>PUZ001+1</TT> and <TT>PUZ131_1</TT>
-     <SPAN ID="p2" style="display:none">
-     <UL>
-     <LI> Start at the TPTP : <A HREF="http://www.tptp.org" TARGET="_blank">
-          <TT>http://www.tptp.org</TT></A>
-     <LI> Browse TPTP problems to PUZ001+1
-     <LI> Note language, SPC, Rating
-     <LI> Browse TSTP solutions to E solution, note language
-     <LI> Could rush forward to "Solve problem", but first ...
-     <LI> Copy formulae, open SystemB4TPTP :
-          <A HREF="http://www.tptp.org/cgi-bin/SystemB4TPTP" TARGET="_blank">
-          <TT>http://www.tptp.org/cgi-bin/SystemB4TPTP</TT></A>, and explain
-          interface. Then check syntax using BNFParserDrill.
-     <LI> Open SystemOnTPTP :
-          <A HREF="http://www.tptp.org/cgi-bin/SystemOnTPTP" TARGET="_blank">
-          <TT>http://www.tptp.org/cgi-bin/SystemOnTPTP</TT></A>, and explain
-          interface. Then check axioms using Paradox.
-     <LI> Add conjecture and prove with E. Note yacko proof, then redo
-          with "TPTP format". Note language.
-     <LI> Could shortcut using SoTSTP, but first ...
-          Copy formulae, open SystemOnTSTP :
-          <A HREF="http://www.tptp.org/cgi-bin/SystemOnTSTP" TARGET="_blank">
-          <TT>http://www.tptp.org/cgi-bin/SystemOnTSTP</TT></A>, and explain
-          interface. Then check proof using GDV.
-     <LI> Run IDV on solution. Explain IDV interface.
-          Show interestingness. Show "good/bad cat lemmas". Show verification.
-     <LI> Return to SystemB4TPTP :
-          <A HREF="http://www.tptp.org/cgi-bin/SystemB4TPTP" TARGET="_blank">
-          <TT>http://www.tptp.org/cgi-bin/SystemB4TPTP</TT></A>, and do
-          <TT>PUZ131_1</TT>. Type check with TwHelFTC. Prove using Beagle.
-          Translate to FOF by Isabelle, then Monotonox as an option.
-          Prove FOF with E, look at IDV image and verify with GDV.
-     </UL>
-     </SPAN>
-<LI> <A HREF="../TPTPWorldTutorial/ATPProcess.html">The ATP Process</A>
+<LI> Recall <A HREF="../ATP/Applications/Summary.html#Neurosymbolic">Neurosymbolic AI</A>
+<LI> <A HREF="../AChatWithBard/Contents.html">A Chat with Bard</A>
+<LI> The <A HREF="../TrustworthyAI/Summary.html">Cycle of Trust</A>
+<LI> <A HREF="../EthicalAI/Summary.html">Ethical AI</A>
 </UL>
 
-<H3> <A HREF="Conclusion.html">Why Does it Work?</A>
-<SUP><FONT SIZE=-3 COLOR=GREY>0:50 or 1:20</FONT></SUP> </H3>
+<H3> Conclusion </H3>
+<UL>
+<LI> <A HREF="WorkInProgress.html">Work in Progress</A>
+<LI> <A HREF="Conclusion.html">Why Does it Work?</A>
+</UL>
 
 <H3> The End - Any Questions?
      <A HREF="" onClick="putImage2(1);return false">
      <IMG SRC="Hard.jpg" BORDER=0 HEIGHT=10></A>
 </H3>
+
+<H3>Advertisement: <A HREF="https://worldtour.tptp.org/">The TPTP World Tour</A></H3>
+
 <P>
-<HR><!------------------------------------------------------------------------>
+<HR> <!-- ------------------------------------------------------------------------------------- -->
 </BODY>
 </HTML>
