@@ -1,0 +1,12 @@
+fof(c_50,axiom,! [X0] : add(X0,additive_identity) = X0 ).
+fof(c_51,axiom,! [X0] : add(additive_inverse(X0),X0) = additive_identity ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : add(add(X0,X1),X2) = add(X0,add(X1,X2)) ).
+fof(c_54,axiom,! [X0] : ! [X1] : add(X0,X1) = add(X1,X0) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ! [X2] : multiply(multiply(X0,X1),X2) = multiply(X0,multiply(X1,X2)) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : add(multiply(X0,X1),multiply(X0,X2)) = multiply(X0,add(X1,X2)) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : add(multiply(X0,X1),multiply(X2,X1)) = multiply(add(X0,X2),X1) ).
+fof(c_66,axiom,! [X0] : add(X0,additive_inverse(X0)) = additive_identity ).
+fof(c_83,axiom,! [X0] : X0 = X0 ).
+fof(c_84,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_85,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | add(X0,X2) = add(X1,X3) ) ).
+fof(c_86,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | multiply(X0,X2) = multiply(X1,X3) ) ).

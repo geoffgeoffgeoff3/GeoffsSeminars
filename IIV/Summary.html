@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE> IIV - Interactive Interpretation Viewer </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'IIVTextInterpretation.png';
+  images[1]     = new Image();
+  images[1].src = 'IIVBasic.png';
+  images[2]     = new Image();
+  images[2].src = 'IIVMouseOver.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> IIV - Interactive Interpretation Viewer </H1>
+
+<IMG NAME="image" SRC="IIVTextInterpretation.png" ALIGN=RIGHT WIDTH=33%>
+
+<H3> Basic Interaction </H3>
+<UL>
+<LI> Text interpretations are useful but can be difficult humans
+     <A HREF="" onClick="putImage(0);return false">
+     <IMG SRC="IIVTextInterpretation.png" BORDER=0 HEIGHT=20></A>
+<LI> IIV's graphical rendering provides an easy overview
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="IIVBasic.png" BORDER=0 HEIGHT=20></A>
+<LI> Mouse-over highlights interpretation of symbols
+     <A HREF="IIVMouseOverLarge.html">
+     <IMG SRC="IIVMouseOver.png" BORDER=0 HEIGHT=20></A>
+</UL>
+
+<H3> Implementation </H3>
+<UL>
+<LI> Built on top of <A HREF="../IDV/Summary.html">IDV</A>
+<LI> Interpretation translated into a derivation form
+<LI> Translated form passed to IDV
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,10 @@
+fof(top,conjecture,! [X] : join(complement(X),X) = n1 ).
+fof(bottom,conjecture,! [X] : meet(complement(X),X) = n0 ).
+fof(absorption2,conjecture,! [X] : ! [Y] : join(X,meet(X,Y)) = X ).
+fof(commutativity_of_meet,conjecture,! [X] : ! [Y] : meet(X,Y) = meet(Y,X) ).
+fof(commutativity_of_join,conjecture,! [X] : ! [Y] : join(X,Y) = join(Y,X) ).
+fof(associativity_of_meet,conjecture,! [X] : ! [Y] : ! [Z] : meet(meet(X,Y),Z) = meet(X,meet(Y,Z)) ).
+fof(associativity_of_join,conjecture,! [X] : ! [Y] : ! [Z] : join(join(X,Y),Z) = join(X,join(Y,Z)) ).
+fof(complement_involution,conjecture,! [X] : complement(complement(X)) = X ).
+fof(join_complement,conjecture,! [X] : ! [Y] : join(X,join(Y,complement(Y))) = join(Y,complement(Y)) ).
+fof(meet_complement,conjecture,! [X] : ! [Y] : meet(X,Y) = complement(join(complement(X),complement(Y))) ).

@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE> LLMs and the Robbins Problem </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT>
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'ChatGPT.png';
+images[1]     = new Image();
+images[1].src = 'RobbinsChatGPT.png';
+images[2]     = new Image();
+images[2].src = 'RobbinsBard.png';
+
+function putImage (index) {
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> LLMs and the Robbins Problem </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="ChatGPT.png" ALIGN=RIGHT WIDTH=50%>
+</A>
+
+<H3>LLMs are Wonderful</H3>
+<UL>
+<LI> <A HREF="https://blog.eleuther.ai/llemma/">LLEMMA</A>
+<LI> <A HREF="https://github.com/lupantech/dl4math">DL4MATH</A>
+<LI> <A HREF="https://www.nature.com/articles/s41586-023-06924-6">Mathematical discoveries</A>
+</UL>
+
+<H3>LLMs are Fallible</H3>
+<UL>
+<LI> A <A HREF="../AChatWithBard/Contents.html">Chat with Bard</A>
+<LI> Ask <A HREF="" onClick="putImage(1);return false">ChatGPT</A>
+     (<A HREF="https://chat.openai.com/" TARGET=_blank>Live!</A>)
+<LI> Ask <A HREF="" onClick="putImage(2);return false">Bard</A>
+     (<A HREF="https://bard.google.com/" TARGET=_blank>Live!</A>)
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

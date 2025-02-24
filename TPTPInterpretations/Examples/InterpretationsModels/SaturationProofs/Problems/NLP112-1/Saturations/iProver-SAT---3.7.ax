@@ -1,0 +1,20 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ( ~ see(X0,X1) | event(X0,X1) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | thing(X0,X1) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | singleton(X0,X1) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | specific(X0,X1) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | thing(X0,X1) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | specific(X0,X1) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | impartial(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | unisex(X0,X1) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | impartial(X0,X1) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | human(X0,X1) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ( ~ customer(X0,X1) | human_person(X0,X1) ) ).
+fof(c_83,axiom,actual_world(skc5) ).
+fof(c_87,axiom,past(skc5,skc7) ).
+fof(c_93,axiom,! [X0] : ! [X1] : ( ~ in(skc5,X0,skc6) | ~ customer(skc5,X0) | see(skc5,skf1(X1)) ) ).
+fof(c_94,axiom,! [X0] : ! [X1] : ( ~ in(skc5,X0,skc6) | ~ customer(skc5,X0) | nonreflexive(skc5,skf1(X1)) ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ( ~ in(skc5,X0,skc6) | ~ customer(skc5,X0) | past(skc5,skf1(X1)) ) ).
+fof(c_96,axiom,! [X0] : ! [X1] : ( ~ in(skc5,X0,skc6) | ~ customer(skc5,X0) | event(skc5,skf1(X1)) ) ).
+fof(c_97,axiom,! [X0] : ! [X1] : ( ~ in(skc5,X0,skc6) | ~ customer(skc5,X0) | patient(skc5,skf1(X1),skc8) ) ).
+fof(c_98,axiom,! [X0] : ( ~ in(skc5,X0,skc6) | ~ customer(skc5,X0) | agent(skc5,skf1(X0),X0) ) ).

@@ -1,0 +1,2 @@
+include('Saturations/NLP060-1/Saturations/iProver-SAT---3.7.ax').
+fof(clause17,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ( ssSkP0(U,V,W) | of(W,skf16(W,V,X),V) ) ).

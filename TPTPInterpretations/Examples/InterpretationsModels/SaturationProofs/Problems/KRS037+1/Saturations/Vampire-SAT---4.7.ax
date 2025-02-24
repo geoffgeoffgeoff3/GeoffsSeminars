@@ -1,0 +1,60 @@
+fof(u80,axiom,! [X0] : ( xsd_string(X0) | xsd_integer(X0) ) ).
+fof(u79,axiom,! [X0] : ( ~ xsd_string(X0) | ~ xsd_integer(X0) ) ).
+fof(u135,axiom,rr(i2003_11_14_17_15_51999,sK3(i2003_11_14_17_15_51999)) ).
+fof(u82,axiom,! [X0] : ( rr(sK2(X0),sK3(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u98,axiom,! [X1] : ! [X0] : ( rr(X1,X0) | ~ rinvR(X0,X1) ) ).
+fof(u81,axiom,! [X0] : ( rr(X0,sK2(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u136,axiom,! [X0] : ( ~ rr(sK3(i2003_11_14_17_15_51999),X0) | rr(i2003_11_14_17_15_51999,X0) ) ).
+fof(u146,axiom,! [X0] : ( ~ rr(sK3(i2003_11_14_17_15_51999),X0) | rr(sK2(i2003_11_14_17_15_51999),X0) ) ).
+fof(u189,axiom,! [X0] : ( ~ rr(sK3(i2003_11_14_17_15_51999),X0) | cp1(sK0(X0)) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) ) ).
+fof(u198,axiom,! [X0] : ( ~ rr(sK3(i2003_11_14_17_15_51999),X0) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) | rinvR(X0,sK0(X0)) ) ).
+fof(u204,axiom,! [X0] : ( ~ rr(sK3(i2003_11_14_17_15_51999),X0) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) | rr(sK0(X0),sK1(X0)) ) ).
+fof(u131,axiom,! [X0] : ( ~ rr(sK2(i2003_11_14_17_15_51999),X0) | rr(i2003_11_14_17_15_51999,X0) ) ).
+fof(u162,axiom,! [X0] : ( ~ rr(sK2(i2003_11_14_17_15_51999),X0) | cp1(X0) ) ).
+fof(u155,axiom,! [X0] : ( ~ rr(i2003_11_14_17_15_51999,X0) | cp1(X0) ) ).
+fof(u99,axiom,! [X1] : ! [X0] : ( ~ rr(X1,X0) | rinvR(X0,X1) ) ).
+fof(u108,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ rr(X0,X1) | ~ rr(X1,X2) | rr(X0,X2) ) ).
+fof(u87,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ rr(X0,X1) | ~ cp1(X0) | ~ cp1(X2) | cp1(sK0(X2)) | ~ rr(X1,X2) | cSatisfiable(X0) ) ).
+fof(u86,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ rr(X0,X1) | ~ cp1(X0) | ~ cp1(X2) | rinvR(X2,sK0(X2)) | ~ rr(X1,X2) | cSatisfiable(X0) ) ).
+fof(u88,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ rr(X0,X1) | ~ cp1(X0) | ~ cp1(X2) | rr(sK0(X2),sK1(X2)) | ~ rr(X1,X2) | cSatisfiable(X0) ) ).
+fof(u137,axiom,rinvR(sK3(i2003_11_14_17_15_51999),i2003_11_14_17_15_51999) ).
+fof(u127,axiom,! [X0] : ( rinvR(sK3(X0),sK2(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u125,axiom,! [X0] : ( rinvR(sK2(X0),X0) | ~ cSatisfiable(X0) ) ).
+fof(u150,axiom,! [X0] : ! [X1] : ( ~ rinvR(sK3(i2003_11_14_17_15_51999),X0) | ~ cp1(X0) | ~ rr(X0,X1) | cp1(X1) ) ).
+fof(u141,axiom,! [X0] : ( ~ rinvR(X0,sK3(i2003_11_14_17_15_51999)) | rr(i2003_11_14_17_15_51999,X0) ) ).
+fof(u148,axiom,! [X0] : ( ~ rinvR(X0,sK3(i2003_11_14_17_15_51999)) | rr(sK2(i2003_11_14_17_15_51999),X0) ) ).
+fof(u191,axiom,! [X0] : ( ~ rinvR(X0,sK3(i2003_11_14_17_15_51999)) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) | cp1(sK0(X0)) ) ).
+fof(u200,axiom,! [X0] : ( ~ rinvR(X0,sK3(i2003_11_14_17_15_51999)) | rinvR(X0,sK0(X0)) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) ) ).
+fof(u206,axiom,! [X0] : ( ~ rinvR(X0,sK3(i2003_11_14_17_15_51999)) | rr(sK0(X0),sK1(X0)) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) ) ).
+fof(u134,axiom,! [X0] : ( ~ rinvR(X0,sK2(i2003_11_14_17_15_51999)) | rr(i2003_11_14_17_15_51999,X0) ) ).
+fof(u165,axiom,! [X0] : ( ~ rinvR(X0,sK2(i2003_11_14_17_15_51999)) | cp1(X0) ) ).
+fof(u158,axiom,! [X0] : ( ~ rinvR(X0,i2003_11_14_17_15_51999) | cp1(X0) ) ).
+fof(u129,axiom,! [X2] : ! [X4] : ! [X3] : ( ~ rinvR(X2,X4) | rr(X4,X3) | ~ rr(X2,X3) ) ).
+fof(u169,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ rinvR(X4,X2) | ~ cp1(X3) | cp1(sK0(X3)) | ~ rr(X4,X3) | cSatisfiable(X2) | ~ cp1(X2) ) ).
+fof(u177,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ rinvR(X4,X2) | ~ cp1(X3) | rinvR(X3,sK0(X3)) | ~ rr(X4,X3) | cSatisfiable(X2) | ~ cp1(X2) ) ).
+fof(u184,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ rinvR(X4,X2) | ~ cp1(X3) | rr(sK0(X3),sK1(X3)) | ~ rr(X4,X3) | cSatisfiable(X2) | ~ cp1(X2) ) ).
+fof(u96,axiom,! [X0] : ! [X1] : ( ~ rinvF(X0,X1) | rf(X1,X0) ) ).
+fof(u97,axiom,! [X1] : ! [X0] : ( ~ rf(X1,X0) | rinvF(X0,X1) ) ).
+fof(u123,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ rf(X0,X1) | ~ rf(X0,X2) | X1 = X2 ) ).
+fof(u156,axiom,cp1(sK3(i2003_11_14_17_15_51999)) ).
+fof(u84,axiom,! [X0] : ( cp1(sK3(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u164,axiom,cp1(sK2(sK2(i2003_11_14_17_15_51999))) | ~ cSatisfiable(sK2(i2003_11_14_17_15_51999)) ).
+fof(u159,axiom,cp1(sK2(i2003_11_14_17_15_51999)) ).
+fof(u190,axiom,cp1(sK0(sK2(sK3(i2003_11_14_17_15_51999)))) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) | ~ cSatisfiable(sK3(i2003_11_14_17_15_51999)) ).
+fof(u85,axiom,! [X0] : ( cp1(X0) | ~ cSatisfiable(X0) ) ).
+fof(u89,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ cp1(sK1(X2)) | ~ cp1(X0) | ~ cp1(X2) | cSatisfiable(X0) | ~ rr(X1,X2) | ~ rr(X0,X1) ) ).
+fof(u76,axiom,! [X0] : cowlThing(X0) ).
+fof(u77,axiom,! [X0] : ~ cowlNothing(X0) ).
+fof(u75,axiom,cSatisfiable(i2003_11_14_17_15_51999) ).
+fof(u140,axiom,~ cSatisfiable(sK3(i2003_11_14_17_15_51999)) | rr(i2003_11_14_17_15_51999,sK2(sK3(i2003_11_14_17_15_51999))) ).
+fof(u147,axiom,~ cSatisfiable(sK3(i2003_11_14_17_15_51999)) | rr(sK2(i2003_11_14_17_15_51999),sK2(sK3(i2003_11_14_17_15_51999))) ).
+fof(u199,axiom,~ cSatisfiable(sK3(i2003_11_14_17_15_51999)) | rinvR(sK2(sK3(i2003_11_14_17_15_51999)),sK0(sK2(sK3(i2003_11_14_17_15_51999)))) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) ).
+fof(u205,axiom,~ cSatisfiable(sK3(i2003_11_14_17_15_51999)) | rr(sK0(sK2(sK3(i2003_11_14_17_15_51999))),sK1(sK2(sK3(i2003_11_14_17_15_51999)))) | cSatisfiable(sK2(i2003_11_14_17_15_51999)) ).
+fof(u133,axiom,~ cSatisfiable(sK2(i2003_11_14_17_15_51999)) | rr(i2003_11_14_17_15_51999,sK2(sK2(i2003_11_14_17_15_51999))) ).
+fof(u172,axiom,! [X1] : ! [X0] : ! [X2] : ( ~ cSatisfiable(sK1(X1)) | ~ cp1(X1) | cSatisfiable(X0) | ~ rr(X2,X1) | ~ rr(X0,X2) | ~ cp1(X0) ) ).
+fof(u128,axiom,! [X0] : ! [X1] : ( ~ cSatisfiable(X0) | rr(X0,X1) | ~ rr(sK2(X0),X1) ) ).
+fof(u130,axiom,! [X5] : ! [X6] : ( ~ cSatisfiable(X5) | rr(sK2(X5),X6) | ~ rr(sK3(X5),X6) ) ).
+fof(u83,axiom,! [X0] : ! [X7] : ! [X8] : ( ~ cSatisfiable(X0) | ~ rr(X7,X8) | ~ cp1(X7) | ~ rinvR(sK3(X0),X7) | cp1(X8) ) ).
+fof(u170,axiom,! [X5] : ! [X6] : ( ~ cSatisfiable(X5) | ~ cp1(X6) | cp1(sK0(X6)) | ~ rr(sK3(X5),X6) | cSatisfiable(sK2(X5)) | ~ cp1(sK2(X5)) ) ).
+fof(u178,axiom,! [X5] : ! [X6] : ( ~ cSatisfiable(X5) | ~ cp1(X6) | rinvR(X6,sK0(X6)) | ~ rr(sK3(X5),X6) | cSatisfiable(sK2(X5)) | ~ cp1(sK2(X5)) ) ).
+fof(u185,axiom,! [X5] : ! [X6] : ( ~ cSatisfiable(X5) | ~ cp1(X6) | rr(sK0(X6),sK1(X6)) | ~ rr(sK3(X5),X6) | cSatisfiable(sK2(X5)) | ~ cp1(sK2(X5)) ) ).

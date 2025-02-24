@@ -1,0 +1,11 @@
+fof(c_49,axiom,! [X0] : and(X0,n0) = n0 ).
+fof(c_50,axiom,! [X0] : and(X0,n1) = X0 ).
+fof(c_51,axiom,! [X0] : or(X0,n0) = X0 ).
+fof(c_52,axiom,! [X0] : or(X0,n1) = n1 ).
+fof(c_53,axiom,not(n0) = n1 ).
+fof(c_54,axiom,not(n1) = n0 ).
+fof(c_71,axiom,! [X0] : X0 = X0 ).
+fof(c_72,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | and(X2,X0) = and(X2,X1) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | or(X2,X0) = or(X2,X1) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ( X0 != X1 | not(X0) = not(X1) ) ).

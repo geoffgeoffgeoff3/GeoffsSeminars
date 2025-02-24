@@ -1,0 +1,20 @@
+fof(inject_f,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X5] : ( ( f(X1,X2,X3,X4,X5) & f(X6,X7,X8,X9,X5) ) => ( equalish(X1,X6) & equalish(X2,X7) & equalish(X3,X8) & equalish(X4,X9) ) ) ).
+fof(exists_f,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ( equalish(X1,X1) & equalish(X2,X2) & equalish(X3,X3) & equalish(X4,X4) ) => ? [X5] : f(X1,X2,X3,X4,X5) ) ).
+fof(n0_not_n1,axiom,~ equalish(n0,n1) & ~ equalish(n1,n0) ).
+fof(n0_and_n1_reflexive,axiom,equalish(n0,n0) & equalish(n1,n1) ).
+fof(c_0_4,axiom,! [X15] : ! [X16] : ! [X17] : ! [X18] : ! [X19] : ! [X20] : ! [X21] : ! [X22] : ! [X23] : ( ( equalish(X15,X19) | ~ f(X15,X16,X17,X18,X23) | ~ f(X19,X20,X21,X22,X23) ) & ( equalish(X16,X20) | ~ f(X15,X16,X17,X18,X23) | ~ f(X19,X20,X21,X22,X23) ) & ( equalish(X17,X21) | ~ f(X15,X16,X17,X18,X23) | ~ f(X19,X20,X21,X22,X23) ) & ( equalish(X18,X22) | ~ f(X15,X16,X17,X18,X23) | ~ f(X19,X20,X21,X22,X23) ) ) ).
+fof(c_0_5,axiom,! [X10] : ! [X11] : ! [X12] : ! [X13] : ( ~ equalish(X10,X10) | ~ equalish(X11,X11) | ~ equalish(X12,X12) | ~ equalish(X13,X13) | f(X10,X11,X12,X13,esk1_4(X10,X11,X12,X13)) ) ).
+fof(c_0_6,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( equalish(X1,X2) | ~ f(X1,X3,X4,X5,X6) | ~ f(X2,X7,X8,X9,X6) ) ).
+fof(c_0_7,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( f(X1,X2,X3,X4,esk1_4(X1,X2,X3,X4)) | ~ equalish(X1,X1) | ~ equalish(X2,X2) | ~ equalish(X3,X3) | ~ equalish(X4,X4) ) ).
+fof(c_0_8,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( equalish(X1,X2) | ~ f(X3,X1,X4,X5,X6) | ~ f(X7,X2,X8,X9,X6) ) ).
+fof(c_0_9,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( equalish(X1,X2) | ~ f(X3,X4,X1,X5,X6) | ~ f(X7,X8,X2,X9,X6) ) ).
+fof(c_0_10,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( equalish(X1,X2) | ~ f(X3,X4,X5,X1,X6) | ~ f(X7,X8,X9,X2,X6) ) ).
+fof(c_0_11,axiom,~ equalish(n0,n1) & ~ equalish(n1,n0) ).
+fof(c_0_12,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( equalish(X1,X2) | ~ f(X1,X3,X4,X5,esk1_4(X2,X6,X7,X8)) | ~ equalish(X8,X8) | ~ equalish(X7,X7) | ~ equalish(X6,X6) | ~ equalish(X2,X2) ) ).
+fof(c_0_13,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( equalish(X1,X2) | ~ f(X3,X1,X4,X5,esk1_4(X6,X2,X7,X8)) | ~ equalish(X8,X8) | ~ equalish(X7,X7) | ~ equalish(X2,X2) | ~ equalish(X6,X6) ) ).
+fof(c_0_14,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( equalish(X1,X2) | ~ f(X3,X4,X1,X5,esk1_4(X6,X7,X2,X8)) | ~ equalish(X8,X8) | ~ equalish(X2,X2) | ~ equalish(X7,X7) | ~ equalish(X6,X6) ) ).
+fof(c_0_15,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( equalish(X1,X2) | ~ f(X3,X4,X5,X1,esk1_4(X6,X7,X8,X2)) | ~ equalish(X2,X2) | ~ equalish(X8,X8) | ~ equalish(X7,X7) | ~ equalish(X6,X6) ) ).
+fof(c_0_16,axiom,~ equalish(n1,n0) ).
+fof(c_0_17,axiom,~ equalish(n0,n1) ).
+fof(c_0_18,axiom,equalish(n1,n1) ).
+fof(c_0_19,axiom,equalish(n0,n0) ).

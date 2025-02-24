@@ -1,0 +1,2 @@
+include('Saturations/SWV551-1.007/Saturations/E-SAT---3.0.ax').
+fof(hyp23,conjecture,e_46 = select(a_41,i5) ).

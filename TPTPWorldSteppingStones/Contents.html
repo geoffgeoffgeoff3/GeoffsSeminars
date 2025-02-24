@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+<TITLE> Stepping Stones in the TPTP World </TITLE>
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  var myIndex = 0;
+  var stoneImages = new Array();
+
+  stoneImages[0]     = new Image();
+  stoneImages[0].src = 'Dependencies.png';
+  stoneImages[1]     = new Image();
+  stoneImages[1].src = 'Dependencies.01-Language.png';
+  stoneImages[2]     = new Image();
+  stoneImages[2].src = 'Dependencies.02-TPTP.png';
+  stoneImages[3]     = new Image();
+  stoneImages[3].src = 'Dependencies.03-TSTP.png';
+  stoneImages[4]     = new Image();
+  stoneImages[4].src = 'Dependencies.04-SZS.png';
+  stoneImages[5]     = new Image();
+  stoneImages[5].src = 'Dependencies.05-SPCs.png';
+  stoneImages[6]     = new Image();
+  stoneImages[6].src = 'Dependencies.06-Ratings.png';
+  stoneImages[7]     = new Image();
+  stoneImages[7].src = 'Dependencies.07-SystemOnTPTP.png';
+  stoneImages[8]     = new Image();
+  stoneImages[8].src = 'Dependencies.08-StarExec.png';
+  stoneImages[9]     = new Image();
+  stoneImages[9].src = 'Dependencies.09-CASC.png';
+  stoneImages[10]     = new Image();
+  stoneImages[10].src = 'Dependencies.10-Users.png';
+
+  function putStoneImage (index) {
+      document.images['image'].src = stoneImages[index].src;
+      myIndex = 2;
+  }
+
+  images[0]     = new Image();
+  images[0].src = 'SteppingStonesRough.png';
+  images[1]     = new Image();
+  images[1].src = 'TPTPJungle.png';
+  images[2]     = new Image();
+  images[2].src = 'SteppingStonesNeat.png';
+  images[3]     = new Image();
+  images[3].src = 'Dependencies.png';
+  images[4]     = new Image();
+  images[4].src = 'TPTPWorld.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR> <!-- ------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Stepping Stones in the TPTP World </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="SteppingStonesRough.png" ALIGN=RIGHT WIDTH=40%></A>
+
+<H3> <A HREF="../TPTPWorld/TPTPWorld.html">The TPTP World</A> </H3>
+
+<H3> Core Components </H3>
+<UL>
+<LI> <A HREF="../TPTPLanguage/Summary.html">The TPTP Language</A>
+     <A HREF="" onClick="putStoneImage(1);return false">
+     <IMG SRC="Dependencies.01-Language.png" BORDER=0 WIDTH=20></A>
+<LI> <A HREF="../TPTP/Summary.html">The TPTP Problem Library</A>
+     <A HREF="" onClick="putStoneImage(2);return false">
+     <IMG SRC="Dependencies.02-TPTP.png" BORDER=0 WIDTH=20></A>
+<LI> <A HREF="../TSTP/Summary.html">The TSTP Solution Library</A>
+     <A HREF="" onClick="putStoneImage(3);return false">
+     <IMG SRC="Dependencies.03-TSTP.png" BORDER=0 WIDTH=20></A>
+</UL>
+
+<H3> Cool Components </H3>
+<UL>
+<LI> <A HREF="../SZSOntologies/Summary.html">SZS Ontologies</A>
+     <A HREF="" onClick="putStoneImage(4);return false">
+     <IMG SRC="Dependencies.04-SZS.png" BORDER=0 WIDTH=20></A>
+<LI> <A HREF="../SPCs/Summary.html">Specialist Problem Classes</A>
+     <A HREF="" onClick="putStoneImage(5);return false">
+     <IMG SRC="Dependencies.05-SPCs.png" BORDER=0 WIDTH=20></A>
+<LI> <A HREF="../Evaluate/Summary.html">Problem and System Ratings</A>
+     <A HREF="" onClick="putStoneImage(6);return false">
+     <IMG SRC="Dependencies.06-Ratings.png" BORDER=0 WIDTH=20></A>
+</UL>
+
+<H3> Computational Components </H3>
+<UL>
+<LI> <A HREF="../SystemOnTPTP/Online/Summary.html">SystemOnTPTP</A>
+     <A HREF="" onClick="putStoneImage(7);return false">
+     <IMG SRC="Dependencies.07-SystemOnTPTP.png" BORDER=0 WIDTH=20></A>
+<LI> <A HREF="../StarExecARC/StarExec.html">StarExec</A>
+     <A HREF="" onClick="putStoneImage(8);return false">
+     <IMG SRC="Dependencies.08-StarExec.png" BORDER=0 WIDTH=20></A>
+<LI> <A HREF="../CASC/Summary.html">CADE ATP System Competition</A>
+     <A HREF="" onClick="putStoneImage(9);return false">
+     <IMG SRC="Dependencies.09-CASC.png" BORDER=0 WIDTH=20></A>
+</UL>
+
+<H3> Conclusion </H3>
+
+<UL>
+<LI> <A HREF="../TPTPWorld/WorkInProgress.html">Work in Progress</A>
+<LI> <A HREF="Conclusion.html">Why Does it Work?</A>
+     <A HREF="" onClick="putStoneImage(10);return false">
+     <IMG SRC="Dependencies.10-Users.png" BORDER=0 WIDTH=20></A>
+</UL>
+
+<H3> The End - Any Questions? </H3>
+
+<H3>Advertisement: <A HREF="https://worldtour.tptp.org/">The TPTP World Tour</A></H3>
+
+<P>
+<HR> <!-- ------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

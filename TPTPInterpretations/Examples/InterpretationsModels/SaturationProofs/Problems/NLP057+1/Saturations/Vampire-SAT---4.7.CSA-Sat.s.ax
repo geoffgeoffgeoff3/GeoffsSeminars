@@ -1,0 +1,96 @@
+fof(u194,axiom,woman(sK0,sK1) ).
+fof(u198,axiom,mia_forename(sK0,sK2) ).
+fof(u202,axiom,forename(sK0,sK2) ).
+fof(u206,axiom,shake_beverage(sK0,sK3) ).
+fof(u210,axiom,event(sK0,sK4) ).
+fof(u214,axiom,nonreflexive(sK0,sK4) ).
+fof(u218,axiom,order(sK0,sK4) ).
+fof(u222,axiom,of(sK0,sK2,sK1) ).
+fof(u226,axiom,agent(sK0,sK4,sK1) ).
+fof(u230,axiom,patient(sK0,sK4,sK3) ).
+fof(u234,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(u238,axiom,! [X0] : ! [X1] : ( ~ nonliving(X0,X1) | ~ animate(X0,X1) ) ).
+fof(u242,axiom,! [X0] : ! [X1] : ( ~ relname(X0,X1) | relation(X0,X1) ) ).
+fof(u246,axiom,! [X0] : ! [X1] : ( ~ food(X0,X1) | substance_matter(X0,X1) ) ).
+fof(u250,axiom,! [X0] : ! [X1] : ( ~ beverage(X0,X1) | food(X0,X1) ) ).
+fof(u254,axiom,! [X0] : ! [X1] : ( ~ substance_matter(X0,X1) | object(X0,X1) ) ).
+fof(u258,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) | ~ relation(X0,X1) ) ).
+fof(u262,axiom,! [X0] : ! [X1] : ( ~ act(X0,X1) | event(X0,X1) ) ).
+fof(u266,axiom,! [X0] : ! [X1] : ( ~ nonliving(X0,X1) | ~ living(X0,X1) ) ).
+fof(u270,axiom,! [X0] : ! [X1] : ( ~ nonhuman(X0,X1) | ~ human(X0,X1) ) ).
+fof(u274,axiom,! [X0] : ! [X1] : ( ~ shake_beverage(X0,X1) | beverage(X0,X1) ) ).
+fof(u278,axiom,! [X0] : ! [X1] : ( forename(X0,X1) | ~ mia_forename(X0,X1) ) ).
+fof(u282,axiom,! [X0] : ! [X1] : ( female(X0,X1) | ~ woman(X0,X1) ) ).
+fof(u286,axiom,! [X0] : ! [X1] : ( animate(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(u290,axiom,! [X0] : ! [X1] : ( act(X0,X1) | ~ order(X0,X1) ) ).
+fof(u294,axiom,! [X0] : ! [X1] : ( human(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(u298,axiom,! [X0] : ! [X1] : ( living(X0,X1) | ~ organism(X0,X1) ) ).
+fof(u302,axiom,! [X0] : ! [X1] : ( human_person(X0,X1) | ~ woman(X0,X1) ) ).
+fof(u306,axiom,! [X0] : ! [X1] : ( organism(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(u310,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ organism(X0,X1) ) ).
+fof(u314,axiom,! [X0] : ! [X1] : ( event(X0,X1) | ~ order(X0,X1) ) ).
+fof(u318,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | nonexistent(X0,X1) ) ).
+fof(u322,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | nonliving(X0,X1) ) ).
+fof(u326,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | specific(X0,X1) ) ).
+fof(u330,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | entity(X0,X1) ) ).
+fof(u334,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(u338,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ object(X0,X1) ) ).
+fof(u342,axiom,! [X0] : ! [X1] : ( ~ general(X0,X1) | ~ specific(X0,X1) ) ).
+fof(u346,axiom,! [X0] : ! [X1] : ( general(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(u350,axiom,! [X0] : ! [X1] : ( existent(X0,X1) | ~ entity(X0,X1) ) ).
+fof(u354,axiom,! [X0] : ! [X1] : ( relname(X0,X1) | ~ forename(X0,X1) ) ).
+fof(u358,axiom,! [X0] : ! [X1] : ( nonhuman(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(u362,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ entity(X0,X1) ) ).
+fof(u366,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(u370,axiom,! [X0] : ! [X1] : ( ~ female(X0,X1) | ~ unisex(X0,X1) ) ).
+fof(u374,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | eventuality(X0,X1) ) ).
+fof(u379,axiom,beverage(sK0,sK3) ).
+fof(u384,axiom,food(sK0,sK3) ).
+fof(u389,axiom,substance_matter(sK0,sK3) ).
+fof(u394,axiom,object(sK0,sK3) ).
+fof(u400,axiom,nonliving(sK0,sK3) ).
+fof(u406,axiom,~ living(sK0,sK3) ).
+fof(u411,axiom,~ animate(sK0,sK3) ).
+fof(u417,axiom,entity(sK0,sK3) ).
+fof(u421,axiom,~ organism(sK0,sK3) ).
+fof(u426,axiom,~ human_person(sK0,sK3) ).
+fof(u431,axiom,~ woman(sK0,sK3) ).
+fof(u441,axiom,eventuality(sK0,sK4) ).
+fof(u448,axiom,unisex(sK0,sK4) ).
+fof(u452,axiom,! [X0] : ! [X1] : ! [X3] : ( ~ nonreflexive(X0,X1) | ~ agent(X0,X1,X3) | ~ patient(X0,X1,X3) ) ).
+fof(u456,axiom,specific(sK0,sK4) ).
+fof(u461,axiom,nonexistent(sK0,sK4) ).
+fof(u466,axiom,~ existent(sK0,sK4) ).
+fof(u470,axiom,! [X0] : ! [X3] : ! [X1] : ! [X2] : ( ~ of(X0,X3,X1) | ~ forename(X0,X2) | ~ of(X0,X2,X1) | ~ forename(X0,X3) | X2 = X3 | ~ entity(X0,X1) ) ).
+fof(u475,axiom,~ entity(sK0,sK4) ).
+fof(u482,axiom,~ organism(sK0,sK4) ).
+fof(u487,axiom,~ human_person(sK0,sK4) ).
+fof(u491,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | ~ specific(X0,X1) ) ).
+fof(u496,axiom,~ woman(sK0,sK4) ).
+fof(u501,axiom,! [X0] : ! [X1] : ( relation(X0,X1) | ~ forename(X0,X1) ) ).
+fof(u505,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | ~ human(X0,X1) ) ).
+fof(u510,axiom,! [X0] : ! [X1] : ( ~ woman(X0,X1) | ~ unisex(X0,X1) ) ).
+fof(u515,axiom,~ unisex(sK0,sK1) ).
+fof(u519,axiom,! [X0] : ! [X1] : ( ~ order(X0,X1) | eventuality(X0,X1) ) ).
+fof(u525,axiom,~ abstraction(sK0,sK1) ).
+fof(u531,axiom,~ object(sK0,sK1) ).
+fof(u535,axiom,~ relation(sK0,sK1) ).
+fof(u539,axiom,! [X0] : ( ~ patient(sK0,sK4,X0) | ~ agent(sK0,sK4,X0) ) ).
+fof(u544,axiom,~ forename(sK0,sK1) ).
+fof(u550,axiom,~ mia_forename(sK0,sK1) ).
+fof(u554,axiom,~ agent(sK0,sK4,sK3) ).
+fof(u561,axiom,! [X0] : ( ~ of(sK0,X0,sK1) | sK2 = X0 | ~ forename(sK0,X0) ) ).
+fof(u578,axiom,! [X0] : ! [X1] : ( ~ relation(X0,X1) | ~ specific(X0,X1) ) ).
+fof(u584,axiom,! [X0] : ! [X1] : ( ~ relation(X0,X1) | ~ human(X0,X1) ) ).
+fof(u589,axiom,! [X0] : ! [X1] : ( ~ specific(X0,X1) | ~ forename(X0,X1) ) ).
+fof(u595,axiom,~ forename(sK0,sK4) ).
+fof(u600,axiom,! [X0] : ! [X1] : ( ~ human(X0,X1) | ~ forename(X0,X1) ) ).
+fof(u604,axiom,~ mia_forename(sK0,sK4) ).
+fof(u609,axiom,! [X0] : ! [X1] : ( ~ forename(X0,X1) | ~ entity(X0,X1) ) ).
+fof(u615,axiom,~ entity(sK0,sK2) ).
+fof(u620,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | ~ forename(X0,X1) ) ).
+fof(u624,axiom,~ organism(sK0,sK2) ).
+fof(u629,axiom,~ human_person(sK0,sK2) ).
+fof(u635,axiom,~ woman(sK0,sK2) ).
+fof(u639,axiom,! [X0] : ! [X1] : ( ~ mia_forename(X0,X1) | ~ entity(X0,X1) ) ).
+fof(u644,axiom,! [X0] : ! [X1] : ( ~ woman(X0,X1) | ~ forename(X0,X1) ) ).

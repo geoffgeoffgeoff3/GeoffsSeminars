@@ -1,0 +1,20 @@
+fof(f3,axiom,! [X0] : ! [X1] : ( smaller(X0,X1) <=> greater(X1,X0) ) ).
+fof(f4,axiom,! [X0] : ! [X1] : ~ ( greater(X1,X0) & greater(X0,X1) ) ).
+fof(f5,axiom,! [X0] : ! [X1] : ! [X2] : ( ( greater(X1,X2) & greater(X0,X1) ) => greater(X0,X2) ) ).
+fof(f6,axiom,! [X0] : ! [X1] : ( greater(X0,X1) | X0 = X1 | smaller(X0,X1) ) ).
+fof(f7,axiom,! [X0] : ! [X1] : ( smaller(X0,X1) => greater(X1,X0) ) ).
+fof(f8,axiom,! [X0] : ! [X1] : ( greater(X1,X0) | ~ smaller(X0,X1) ) ).
+fof(f9,axiom,! [X0] : ! [X1] : ( ~ greater(X1,X0) | ~ greater(X0,X1) ) ).
+fof(f10,axiom,! [X0] : ! [X1] : ! [X2] : ( greater(X0,X2) | ~ greater(X1,X2) | ~ greater(X0,X1) ) ).
+fof(f11,axiom,! [X0] : ! [X1] : ! [X2] : ( greater(X0,X2) | ~ greater(X1,X2) | ~ greater(X0,X1) ) ).
+fof(f12,axiom,! [X0] : ! [X1] : ( greater(X1,X0) | ~ smaller(X0,X1) ) ).
+fof(f13,axiom,! [X0] : ! [X1] : ( ~ greater(X1,X0) | ~ greater(X0,X1) ) ).
+fof(f14,axiom,! [X2] : ! [X0] : ! [X1] : ( greater(X0,X2) | ~ greater(X1,X2) | ~ greater(X0,X1) ) ).
+fof(f15,axiom,! [X0] : ! [X1] : ( greater(X0,X1) | X0 = X1 | smaller(X0,X1) ) ).
+fof(c_49,axiom,! [X0] : ! [X1] : ( ~ smaller(X0,X1) | greater(X1,X0) ) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ( ~ greater(X0,X1) | ~ greater(X1,X0) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ greater(X0,X1) | ~ greater(X2,X0) | greater(X2,X1) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( X0 = X1 | greater(X0,X1) | smaller(X0,X1) ) ).
+fof(c_74,axiom,! [X0] : X0 = X0 ).
+fof(c_75,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_76,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).

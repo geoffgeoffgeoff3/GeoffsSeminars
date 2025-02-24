@@ -1,0 +1,5 @@
+fof(prove_something_exists,axiom,! [X0] : ~ there_exists(X0) ).
+fof(u15,axiom,! [X0] : ! [X1] : ~ equivalent(X0,X1) ).
+fof(u17,axiom,! [X0] : ! [X1] : X0 = X1 ).
+fof(compose_codomain,axiom,! [X0] : compose(codomain(X0),X0) = X0 ).
+fof(compose_domain,axiom,! [X0] : compose(X0,domain(X0)) = X0 ).

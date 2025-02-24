@@ -1,0 +1,68 @@
+fof(or_1_11,axiom,! [X1] : ( value(in(n1,X1),n1) | value(in(n2,X1),n1) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(out(n1,X1),n1) ) ).
+fof(and_0_00,axiom,! [X1] : ( value(in(n1,X1),n0) | value(in(n2,X1),n0) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(out(n1,X1),n0) ) ).
+fof(and_11_1,axiom,! [X1] : ( value(out(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(in(n1,X1),n1) | ~ value(in(n2,X1),n1) ) ).
+fof(or_00_0,axiom,! [X1] : ( value(out(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(in(n1,X1),n0) | ~ value(in(n2,X1),n0) ) ).
+fof(or_1x_1,axiom,! [X1] : ! [X2] : ( value(out(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(in(X2,X1),n1) ) ).
+fof(and_0x_0,axiom,! [X1] : ! [X2] : ( value(out(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(in(X2,X1),n0) ) ).
+fof(halfadder_connection_out1or1_in1_and1,axiom,! [X1] : ( connection(out(n1,or1(X1)),in(n1,and1(X1))) | ~ type(X1,halfadder) ) ).
+fof(halfadder_connection_out1not1_in2and1,axiom,! [X1] : ( connection(out(n1,not1(X1)),in(n2,and1(X1))) | ~ type(X1,halfadder) ) ).
+fof(not_0_1_fw,axiom,! [X1] : ( value(out(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,not) | ~ value(in(n1,X1),n0) ) ).
+fof(not_1_0_fw,axiom,! [X1] : ( value(out(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,not) | ~ value(in(n1,X1),n1) ) ).
+fof(and_1_x1,axiom,! [X1] : ( value(in(n2,X1),n1) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(out(n1,X1),n1) ) ).
+fof(or_0_01,axiom,! [X1] : ( value(in(n2,X1),n0) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(out(n1,X1),n0) ) ).
+fof(halfadder_connection_out1and2_in1not1,axiom,! [X1] : ( connection(out(n1,and2(X1)),in(n1,not1(X1))) | ~ type(X1,halfadder) ) ).
+fof(not_0_1_bw,axiom,! [X1] : ( value(in(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,not) | ~ value(out(n1,X1),n0) ) ).
+fof(and_1_1x,axiom,! [X1] : ( value(in(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(out(n1,X1),n1) ) ).
+fof(not_1_0_bw,axiom,! [X1] : ( value(in(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,not) | ~ value(out(n1,X1),n1) ) ).
+fof(or_0_0x,axiom,! [X1] : ( value(in(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(out(n1,X1),n0) ) ).
+fof(halfadder_connection_outc_out1and2,axiom,! [X1] : ( connection(out(c,X1),out(n1,and2(X1))) | ~ type(X1,halfadder) ) ).
+fof(halfadder_connection_outs_out1and1,axiom,! [X1] : ( connection(out(s,X1),out(n1,and1(X1))) | ~ type(X1,halfadder) ) ).
+fof(halfadder_connection_in2_in2or1,axiom,! [X1] : ( connection(in(n2,X1),in(n2,or1(X1))) | ~ type(X1,halfadder) ) ).
+fof(halfadder_connection_in2_in2and2,axiom,! [X1] : ( connection(in(n2,X1),in(n2,and2(X1))) | ~ type(X1,halfadder) ) ).
+fof(halfadder_connection_in1_in1or1,axiom,! [X1] : ( connection(in(n1,X1),in(n1,or1(X1))) | ~ type(X1,halfadder) ) ).
+fof(halfadder_connection_in1_in1and2,axiom,! [X1] : ( connection(in(n1,X1),in(n1,and2(X1))) | ~ type(X1,halfadder) ) ).
+fof(ok_or_abnormal,axiom,! [X1] : ! [X2] : ( mode(X1,ok) | mode(X1,abnormal) | ~ type(X1,X2) ) ).
+fof(unique_value,axiom,! [X2] : ! [X3] : ! [X1] : ( equal_value(X2,X3) | ~ value(X1,X2) | ~ value(X1,X3) ) ).
+fof(halfadder_or1,axiom,! [X1] : ( type(or1(X1),or) | ~ type(X1,halfadder) ) ).
+fof(value_propagation2,axiom,! [X1] : ! [X3] : ! [X2] : ( value(X1,X3) | ~ connection(X1,X2) | ~ value(X2,X3) ) ).
+fof(value_propagation1,axiom,! [X2] : ! [X3] : ! [X1] : ( value(X2,X3) | ~ connection(X1,X2) | ~ value(X1,X3) ) ).
+fof(halfadder_not1,axiom,! [X1] : ( type(not1(X1),not) | ~ type(X1,halfadder) ) ).
+fof(halfadder_and2,axiom,! [X1] : ( type(and2(X1),and) | ~ type(X1,halfadder) ) ).
+fof(halfadder_and1,axiom,! [X1] : ( type(and1(X1),and) | ~ type(X1,halfadder) ) ).
+fof(not_ok_and_abnormal,axiom,! [X1] : ( ~ mode(X1,ok) | ~ mode(X1,abnormal) ) ).
+fof(equal_value2,axiom,~ equal_value(n1,n0) ).
+fof(equal_value1,axiom,~ equal_value(n0,n1) ).
+fof(c_0_34,axiom,! [X1] : ( value(in(n1,X1),n1) | value(in(n2,X1),n1) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(out(n1,X1),n1) ) ).
+fof(c_0_35,axiom,! [X1] : ( value(in(n1,X1),n0) | value(in(n2,X1),n0) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(out(n1,X1),n0) ) ).
+fof(c_0_36,axiom,! [X1] : ( value(out(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(in(n1,X1),n1) | ~ value(in(n2,X1),n1) ) ).
+fof(c_0_37,axiom,! [X1] : ( value(out(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(in(n1,X1),n0) | ~ value(in(n2,X1),n0) ) ).
+fof(c_0_38,axiom,! [X1] : ! [X2] : ( value(out(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(in(X2,X1),n1) ) ).
+fof(c_0_39,axiom,! [X1] : ! [X2] : ( value(out(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(in(X2,X1),n0) ) ).
+fof(c_0_40,axiom,! [X1] : ( connection(out(n1,or1(X1)),in(n1,and1(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_41,axiom,! [X1] : ( connection(out(n1,not1(X1)),in(n2,and1(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_42,axiom,! [X1] : ( value(out(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,not) | ~ value(in(n1,X1),n0) ) ).
+fof(c_0_43,axiom,! [X1] : ( value(out(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,not) | ~ value(in(n1,X1),n1) ) ).
+fof(c_0_44,axiom,! [X1] : ( value(in(n2,X1),n1) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(out(n1,X1),n1) ) ).
+fof(c_0_45,axiom,! [X1] : ( value(in(n2,X1),n0) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(out(n1,X1),n0) ) ).
+fof(c_0_46,axiom,! [X1] : ( connection(out(n1,and2(X1)),in(n1,not1(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_47,axiom,! [X1] : ( value(in(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,not) | ~ value(out(n1,X1),n0) ) ).
+fof(c_0_48,axiom,! [X1] : ( value(in(n1,X1),n1) | ~ mode(X1,ok) | ~ type(X1,and) | ~ value(out(n1,X1),n1) ) ).
+fof(c_0_49,axiom,! [X1] : ( value(in(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,not) | ~ value(out(n1,X1),n1) ) ).
+fof(c_0_50,axiom,! [X1] : ( value(in(n1,X1),n0) | ~ mode(X1,ok) | ~ type(X1,or) | ~ value(out(n1,X1),n0) ) ).
+fof(c_0_51,axiom,! [X1] : ( connection(out(c,X1),out(n1,and2(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_52,axiom,! [X1] : ( connection(out(s,X1),out(n1,and1(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_53,axiom,! [X1] : ( connection(in(n2,X1),in(n2,or1(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_54,axiom,! [X1] : ( connection(in(n2,X1),in(n2,and2(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_55,axiom,! [X1] : ( connection(in(n1,X1),in(n1,or1(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_56,axiom,! [X1] : ( connection(in(n1,X1),in(n1,and2(X1))) | ~ type(X1,halfadder) ) ).
+fof(c_0_57,axiom,! [X1] : ! [X2] : ( mode(X1,ok) | mode(X1,abnormal) | ~ type(X1,X2) ) ).
+fof(c_0_58,axiom,! [X2] : ! [X3] : ! [X1] : ( equal_value(X2,X3) | ~ value(X1,X2) | ~ value(X1,X3) ) ).
+fof(c_0_59,axiom,! [X1] : ( type(or1(X1),or) | ~ type(X1,halfadder) ) ).
+fof(c_0_60,axiom,! [X1] : ! [X3] : ! [X2] : ( value(X1,X3) | ~ connection(X1,X2) | ~ value(X2,X3) ) ).
+fof(c_0_61,axiom,! [X2] : ! [X3] : ! [X1] : ( value(X2,X3) | ~ connection(X1,X2) | ~ value(X1,X3) ) ).
+fof(c_0_62,axiom,! [X1] : ( type(not1(X1),not) | ~ type(X1,halfadder) ) ).
+fof(c_0_63,axiom,! [X1] : ( type(and2(X1),and) | ~ type(X1,halfadder) ) ).
+fof(c_0_64,axiom,! [X1] : ( type(and1(X1),and) | ~ type(X1,halfadder) ) ).
+fof(c_0_65,axiom,! [X1] : ( ~ mode(X1,ok) | ~ mode(X1,abnormal) ) ).
+fof(c_0_66,axiom,~ equal_value(n1,n0) ).
+fof(c_0_67,axiom,~ equal_value(n0,n1) ).

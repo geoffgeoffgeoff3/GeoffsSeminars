@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<TITLE> Containerising ATP Systems </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var nextIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'ATPContainer.png';
+  images[1]     = new Image();
+  images[1].src = 'ATPContainerDAG.png';
+  images[2]     = new Image();
+  images[2].src = 'StarExecCloud.png';
+
+  function nextImage (whichImage) {
+      nextIndex = (nextIndex + 1) % images.length;
+      document.images[whichImage].src = images[nextIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+Containerising ATP Systems
+</H1>
+
+<A HREF="" onClick="nextImage('main_image');return false">
+<IMG NAME="main_image" SRC="ATPContainer.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> Base Containers </H3>
+<UL>
+<LI> <TT>ubuntu-arc</TT> = <TT>ubuntu:lastest</TT> + 
+     <TT>cmake</TT>, <TT>git</TT>, <TT>tcsh</TT>, <TT>python3</TT>, <TT>wget</TT> +
+     <TT>/artifacts</TT> 
+<LI> <TT>tptp-world</TT> = <TT>ubuntu-arc</TT> +
+     <TT>tptp4X</TT>, <TT>SPCForProblem</TT> +
+     <TT>runsolver</TT>/<TT>RLR</TT>
+</UL>
+
+<H3> <EM>ATP-system</EM> Containers </H3>
+<UL>
+<LI> <EM>ATP-system:version</EM> = <TT>ubuntu-arc</TT> + ATP + <TT>run_system</TT> 
+<LI> <EM>ATP-system:version</EM><TT>-RLR</TT> = <EM>ATP-system:version</EM> + <TT>tptp-world</TT>
+     <UL>
+     <LI> <TT>ENTRYPOINT</TT> = <TT>runsolver</TT>/<TT>RLR</TT>
+     </UL>
+<LI> <EM>*</EM><TT>-RLR</TT> pushed to 
+     <A HREF="https://hub.docker.com/repositories/tptpstarexec" TARGET="_blank">dockerhub</A>, 
+     with <TT>-arm64</TT>/<TT>-amd64</TT> suffix
+</UL>
+
+<H3> Running <EM>*</EM><TT>-RLR</TT> Containers </H3>
+<UL>
+<LI> Started with <TT>podman run</TT>
+<LI> Parameters for the ATP system passed (to <TT>run_system</TT>) in environment variables 
+     <UL>
+     <LI> <TT>RLR_CPU_LIMIT</TT> - CPU time limit,
+          <TT>RLR_WC_LIMIT</TT> - wall clock time limit,
+          <TT>RLR_MEM_LIMIT</TT> - memory limit 
+     <LI> <TT>RLR_INTENT</TT> - intent (<TT>THM</TT> or <TT>SAT</TT>),
+          <TT>RLR_INPUT_FILE</TT> - problem file name
+     </UL>
+<LI> Problem file is passed in using volume mounting
+<LI> <TT>run_image.py</TT> makes life easy
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

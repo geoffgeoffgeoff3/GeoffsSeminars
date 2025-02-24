@@ -1,0 +1,31 @@
+fof(mp_appearance_of_EP_36,axiom,! [X1] : ! [X0] : ( greater_or_equal(X1,appear(efficient_producers,X0)) | ~ in_environment(X0,X1) | greater(appear(efficient_producers,X0),X1) ) ).
+fof(mp_non_empty_means_organisations_32,axiom,! [X0] : ( greater_or_equal(end_time(X0),appear(an_organisation,X0)) | empty(X0) | ~ environment(X0) ) ).
+fof(t3_38,axiom,! [X1] : ! [X0] : ( ~ greater_or_equal(X1,appear(efficient_producers,X0)) | ~ greater(critical_point(X0),X1) | ~ in_environment(X0,critical_point(X0)) | selection_favors(first_movers,efficient_producers,X1) | ~ environment(X0) ) ).
+fof(mp_selection_favours_in_time_33,axiom,! [X1] : ! [X0] : ( ~ greater_or_equal(X1,appear(efficient_producers,X0)) | ~ greater(critical_point(X0),X1) | in_environment(X0,critical_point(X0)) | ~ environment(X0) | selection_favors(first_movers,efficient_producers,end_time(X0)) ) ).
+fof(t2_37,axiom,! [X1] : ! [X0] : ( ~ greater_or_equal(X1,appear(first_movers,X0)) | ~ in_environment(X0,X1) | selection_favors(first_movers,efficient_producers,X1) | ~ environment(X0) | ~ greater(appear(efficient_producers,X0),X1) ) ).
+fof(mp_greater_or_equal_35,axiom,! [X0] : ! [X1] : ( ~ greater_or_equal(X0,X1) | X0 = X1 | greater(X0,X1) ) ).
+fof(u44,axiom,! [X0] : ( greater(appear(efficient_producers,X0),end_time(X0)) | ~ environment(X0) | selection_favors(first_movers,efficient_producers,end_time(X0)) | in_environment(X0,critical_point(X0)) ) ).
+fof(u25,axiom,! [X0] : ! [X1] : ( greater(appear(efficient_producers,X0),X1) | greater(X1,appear(efficient_producers,X0)) | appear(efficient_producers,X0) = X1 | ~ in_environment(X0,X1) ) ).
+fof(mp_critical_point_not_before_opening_31,axiom,! [X0] : ( greater(critical_point(X0),end_time(X0)) | in_environment(X0,critical_point(X0)) | ~ environment(X0) ) ).
+fof(u21,axiom,! [X0] : ( greater(end_time(X0),appear(an_organisation,X0)) | ~ environment(X0) | end_time(X0) = appear(an_organisation,X0) | empty(X0) ) ).
+fof(u25_001,axiom,! [X0] : ! [X1] : ( greater(appear(efficient_producers,X0),X1) | greater(X1,appear(efficient_producers,X0)) | appear(efficient_producers,X0) = X1 | ~ in_environment(X0,X1) ) ).
+fof(u36,axiom,! [X0] : ! [X1] : ( ~ greater(critical_point(X0),X1) | ~ in_environment(X0,critical_point(X0)) | selection_favors(first_movers,efficient_producers,X1) | ~ environment(X0) | ~ in_environment(X0,X1) | greater(appear(efficient_producers,X0),X1) ) ).
+fof(u37,axiom,! [X0] : ! [X1] : ( ~ greater(critical_point(X0),X1) | in_environment(X0,critical_point(X0)) | ~ environment(X0) | selection_favors(first_movers,efficient_producers,end_time(X0)) | ~ in_environment(X0,X1) | greater(appear(efficient_producers,X0),X1) ) ).
+fof(u33,axiom,! [X0] : ( ~ empty(sk1(end_time(sk1(X0)))) | ~ observational_period(X0) | ~ observational_period(end_time(sk1(X0))) | extreme(end_time(sk1(X0))) | selection_favors(efficient_producers,first_movers,X0) ) ).
+fof(u22,axiom,! [X0] : ( ~ empty(end_time(X0)) | ~ environment(end_time(X0)) | extreme(X0) | ~ observational_period(X0) | ~ environment(X0) ) ).
+fof(prove_t9_41,axiom,~ extreme(sk2) ).
+fof(prove_t9_40,axiom,rapid_change(sk2) ).
+fof(u27,axiom,! [X0] : ( in_environment(X0,sk1(X0)) | ~ observational_period(X0) | selection_favors(efficient_producers,first_movers,X0) ) ).
+fof(mp_endpoint_in_environment_30,axiom,! [X0] : ( in_environment(X0,end_time(X0)) | ~ environment(X0) ) ).
+fof(u42,axiom,! [X1] : ! [X2] : ( ~ in_environment(X1,appear(efficient_producers,X2)) | ~ environment(X1) | selection_favors(first_movers,efficient_producers,end_time(X1)) | in_environment(X1,critical_point(X1)) | greater(appear(efficient_producers,X1),appear(efficient_producers,X2)) | greater(appear(efficient_producers,X2),critical_point(X1)) | critical_point(X1) = appear(efficient_producers,X2) | ~ in_environment(X2,critical_point(X1)) ) ).
+fof(u39,axiom,! [X1] : ! [X2] : ( ~ in_environment(X1,appear(efficient_producers,X2)) | selection_favors(first_movers,efficient_producers,appear(efficient_producers,X2)) | ~ environment(X1) | ~ in_environment(X1,critical_point(X1)) | greater(appear(efficient_producers,X1),appear(efficient_producers,X2)) | greater(appear(efficient_producers,X2),critical_point(X1)) | critical_point(X1) = appear(efficient_producers,X2) | ~ in_environment(X2,critical_point(X1)) ) ).
+fof(mp5_rapid_change_is_non_critical_26,axiom,! [X1] : ! [X0] : ( ~ in_environment(X1,critical_point(X1)) | ~ observational_period(X0) | ~ environment(X1) | ~ in_environment(X0,X1) | ~ rapid_change(X0) ) ).
+fof(mp6_not_extreme_change_means_not_empty_27,axiom,! [X0] : ! [X1] : ( ~ in_environment(X0,X1) | ~ observational_period(X0) | ~ environment(X1) | extreme(X0) | ~ empty(X1) ) ).
+fof(u24,axiom,! [X0] : ( selection_favors(efficient_producers,first_movers,X0) | environment(sk1(X0)) | ~ observational_period(X0) ) ).
+fof(u30,axiom,! [X0] : ( selection_favors(efficient_producers,first_movers,X0) | ~ observational_period(X0) | extreme(X0) | ~ empty(sk1(X0)) ) ).
+fof(u32,axiom,! [X0] : ( ~ selection_favors(efficient_producers,first_movers,end_time(sk1(X0))) | selection_favors(efficient_producers,first_movers,X0) | ~ observational_period(X0) ) ).
+fof(prove_t9_42,axiom,~ selection_favors(first_movers,efficient_producers,sk2) ).
+fof(u34,axiom,! [X1] : ( environment(sk1(end_time(sk1(X1)))) | ~ observational_period(X1) | selection_favors(efficient_producers,first_movers,X1) | ~ observational_period(end_time(sk1(X1))) ) ).
+fof(mp_organizational_sets2_29,axiom,propagation_strategy(efficient_producers) ).
+fof(mp_organizational_sets1_28,axiom,propagation_strategy(first_movers) ).
+fof(prove_t9_39,axiom,observational_period(sk2) ).

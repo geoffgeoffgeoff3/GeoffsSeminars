@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE> Motivating Puzzle </TITLE>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-------------------------------------------------------------------------------------------->
+<H1 ALIGN=CENTER> Motivating Puzzle </H1>
+
+<IMG SRC="AuntAgatha.png" ALIGN=RIGHT WIDTH=33% style="margin-left: 20px;">
+
+Someone who lives in Dreadbury Mansion killed Aunt Agatha.
+Agatha, the butler, and Charles live in Dreadbury Mansion, and are the only people who live 
+therein.
+The police needed to determine: <STRONG>Who killed Aunt Agatha?</STRONG>
+<P>
+The following facts are known about killers and the people who live in the mansion:
+<UL>
+<LI> A killer always hates their victim.
+<LI> A killer is never richer than their victim.
+<LI> Charles hates no one that Aunt Agatha hates. 
+<LI> Agatha hates everyone except the butler. 
+<LI> The butler hates everyone not richer than Aunt Agatha. 
+<LI> The butler hates everyone Aunt Agatha hates. 
+<LI> No one hates everyone. 
+</UL>
+
+Automated Theorem Proving was used to analyse this issue, and it turned out that 
+<A HREF="" onClick="hideshow('who');return false;">...</A>
+<SPAN ID="who" style="display:none"> Agatha committed suicide.</SPAN>
+<P>
+<A HREF="http://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">The
+TPTP version</A>
+
+<P>
+<HR><!-------------------------------------------------------------------------------------------->
+</BODY>
+</HTML>

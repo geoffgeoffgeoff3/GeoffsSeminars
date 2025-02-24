@@ -1,0 +1,14 @@
+fof(u14,axiom,! [X0] : ! [X1] : ( g(X0,X1) | f(X0,X1) ) ).
+fof(clause6,axiom,! [X0] : ! [X1] : ( g(z(X0,X1),z(X0,X1)) | g(X0,X1) ) ).
+fof(u20,axiom,! [X0] : ! [X1] : ( g(z(X0,X1),z(X0,X1)) | ~ f(X0,X1) ) ).
+fof(clause9,axiom,! [X1] : ! [X0] : ( g(X1,z(X0,X1)) | g(X0,X1) ) ).
+fof(clause10,axiom,! [X1] : ! [X0] : ( g(X1,z(X0,X1)) | ~ f(X1,X0) ) ).
+fof(clause8,axiom,! [X1] : ! [X0] : ( ~ g(X1,z(X0,X1)) | f(X1,X0) | ~ g(X0,X1) ) ).
+fof(clause4,axiom,! [X0] : ! [X1] : ( ~ g(z(X0,X1),z(X0,X1)) | f(X0,X1) ) ).
+fof(clause3,axiom,! [X0] : ! [X1] : ( f(z(X0,X1),z(X0,X1)) | f(X0,X1) ) ).
+fof(u22,axiom,! [X0] : ! [X1] : ( f(z(X0,X1),z(X0,X1)) | ~ g(X0,X1) ) ).
+fof(clause11,axiom,! [X0] : ! [X1] : ( f(z(X0,X1),X1) | f(X1,X0) ) ).
+fof(u19,axiom,! [X4] : ! [X5] : ( f(X4,z(X5,X4)) | ~ g(X5,X4) | f(X4,X5) ) ).
+fof(clause1,axiom,! [X0] : ! [X1] : f(X0,z(X0,X1)) ).
+fof(clause7,axiom,! [X0] : ! [X1] : ( ~ f(z(X0,X1),z(X0,X1)) | g(X0,X1) ) ).
+fof(clause12,axiom,! [X0] : ! [X1] : ( ~ f(z(X0,X1),X1) | ~ f(X1,X0) ) ).

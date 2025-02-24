@@ -1,0 +1,9 @@
+fof(ifeq_axiom,conjecture,! [A] : ! [B] : ! [C] : ifeq2(A,A,B,C) = B ).
+fof(ifeq_axiom_001,conjecture,! [A] : ! [B] : ! [C] : ifeq(A,A,B,C) = B ).
+fof(main,conjecture,r1(sK3_main_X,sK2_main_Y) = true ).
+fof(main_1,conjecture,r1(sK3_main_X,sK1_main_Y) = true ).
+fof(main_2,conjecture,! [X] : ifeq2(r1(sK2_main_Y,X),true,p1(X),true) = true ).
+fof(main_3,conjecture,! [X] : ifeq2(r1(sK1_main_Y,X),true,p1(X),true) = true ).
+fof(main_4,conjecture,ifeq(p1(sK2_main_Y),true,a,b) = b ).
+fof(main_5,conjecture,ifeq(p1(sK1_main_Y),true,a,b) = b ).
+fof(goal,conjecture,a != b ).

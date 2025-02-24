@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE> Slaney's Quasigroups </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT>
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'JohnSlaney.jpg';
+images[1]     = new Image();
+images[1].src = 'QuasiGroup.png';
+
+function putImage (index) {
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Slaney's Quasigroups </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="JohnSlaney.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<A HREF="" onClick="putImage(1);return false"><H3>About Quasigroups</H3></A>
+<UL>
+<LI> A cancellative monoid, i.e., 
+<LI> The operator forms a Latin Square, i.e., 
+<LI> Each row and column is a permutation of the elements
+<LI> Related to design theory
+<LI> Many hard combinatorial problems
+<LI> I'm just a logician who trusts mathematicians
+</UL>
+
+<H3>Using ATP</H3>
+<UL>
+<LI> Finite model finders: DDPP, FINDER, MGTP
+<LI> Questions asked and answered, e.g.,<BR>
+     Is there a Schr&ouml;der quasigroup order 12 - Yes!
+<LI> Questions asked and unanswered, e.g.,<BR>
+     Is there a (3,2,1)-COILS(12)? - Too hard :-(
+</UL>
+
+<H3>Is it Mathematics?</H3>
+<UL>
+<LI> Back then, a divided mathematical community
+<LI> Now, well accepted
+<LI> Famous results
+     <UL>
+     <LI> Appel and Haken's four colour theorem
+     <LI> Hales' proof of the Keppler conjecture
+     <LI> Heule's Schur number 5 (=161)
+     </UL>
+</UL>
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

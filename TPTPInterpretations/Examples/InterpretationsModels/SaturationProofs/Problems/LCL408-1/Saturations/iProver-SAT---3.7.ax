@@ -1,0 +1,19 @@
+fof(c_49,axiom,! [X0] : ! [X1] : implies(implies(X0,X1),X1) = big_V(X0,X1) ).
+fof(c_50,axiom,! [X0] : ! [X1] : not(big_V(not(X0),not(X1))) = big_hat(X0,X1) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ ordered(X0,X1) | implies(X0,X1) = truth ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( implies(X0,X1) != truth | ordered(X0,X1) ) ).
+fof(c_53,axiom,! [X0] : implies(truth,X0) = X0 ).
+fof(c_54,axiom,! [X0] : ! [X1] : ! [X2] : implies(implies(X0,X1),implies(implies(X1,X2),implies(X0,X2))) = truth ).
+fof(c_55,axiom,! [X0] : ! [X1] : implies(implies(X0,X1),X1) = implies(implies(X1,X0),X0) ).
+fof(c_56,axiom,! [X0] : ! [X1] : implies(implies(not(X0),not(X1)),implies(X1,X0)) = truth ).
+fof(c_64,axiom,! [X0] : ! [X1] : ( ordered(X0,X1) | implies(X0,X1) != truth ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ( implies(X0,X1) != truth | ordered(X0,X1) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( ~ ordered(X0,X1) | implies(X0,X1) = truth ) ).
+fof(c_106,axiom,! [X0] : ! [X1] : implies(implies(X0,X1),X1) = big_V(X1,X0) ).
+fof(c_107,axiom,! [X0] : ! [X1] : big_V(X0,X1) = big_V(X1,X0) ).
+fof(c_108,axiom,! [X0] : X0 = X0 ).
+fof(c_109,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_110,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_111,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | big_V(X0,X2) = big_V(X1,X3) ) ).
+fof(c_112,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | implies(X0,X2) = implies(X1,X3) ) ).
+fof(c_113,axiom,! [X0] : ! [X1] : ( X0 != X1 | not(X0) = not(X1) ) ).

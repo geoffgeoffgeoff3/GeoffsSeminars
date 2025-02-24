@@ -1,0 +1,2 @@
+include('Saturations/NLP071+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(ax40,conjecture,! [U] : ! [V] : ( six(U,V) <=> ? [W] : ( member(U,W,V) & ? [X] : ( member(U,X,V) & X != W & ? [Y] : ( member(U,Y,V) & Y != X & Y != W & ? [Z] : ( member(U,Z,V) & Z != Y & Z != X & Z != W & ? [X1] : ( member(U,X1,V) & X1 != Z & X1 != Y & X1 != X & X1 != W & ? [X2] : ( member(U,X2,V) & X2 != X1 & X2 != Z & X2 != Y & X2 != X & X2 != W & ! [X3] : ( member(U,X3,V) => ( X3 = X2 | X3 = X1 | X3 = Z | X3 = Y | X3 = X | X3 = W ) ) ) ) ) ) ) ) ) ).

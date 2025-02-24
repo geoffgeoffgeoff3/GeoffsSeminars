@@ -1,0 +1,446 @@
+fof(product_left_cancellation,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( equalish(X1,X4) | ~ product(X1,X2,X3) | ~ product(X4,X2,X3) ) ).
+fof(product_idempotence,axiom,! [X1] : product(X1,X1,X1) ).
+fof(product_right_cancellation,axiom,! [X2] : ! [X4] : ! [X1] : ! [X3] : ( equalish(X2,X4) | ~ product(X1,X2,X3) | ~ product(X1,X4,X3) ) ).
+fof(product_total_function1,axiom,! [X1] : ! [X2] : ( product(X1,X2,e_1) | product(X1,X2,e_2) | product(X1,X2,e_3) | product(X1,X2,e_4) | ~ group_element(X1) | ~ group_element(X2) ) ).
+fof(element_4,axiom,group_element(e_4) ).
+fof(e_3_is_not_e_4,axiom,~ equalish(e_3,e_4) ).
+fof(e_4_is_not_e_3,axiom,~ equalish(e_4,e_3) ).
+fof(qg1_2,axiom,! [X2] : ! [X5] : ! [X1] : ! [X3] : ! [X4] : ! [X6] : ( equalish(X2,X5) | ~ product(X1,X2,X3) | ~ product(X4,X5,X3) | ~ product(X6,X2,X1) | ~ product(X6,X5,X4) ) ).
+fof(element_3,axiom,group_element(e_3) ).
+fof(e_2_is_not_e_4,axiom,~ equalish(e_2,e_4) ).
+fof(e_4_is_not_e_2,axiom,~ equalish(e_4,e_2) ).
+fof(element_2,axiom,group_element(e_2) ).
+fof(element_1,axiom,group_element(e_1) ).
+fof(e_1_is_not_e_4,axiom,~ equalish(e_1,e_4) ).
+fof(e_4_is_not_e_1,axiom,~ equalish(e_4,e_1) ).
+fof(e_1_is_not_e_2,axiom,~ equalish(e_1,e_2) ).
+fof(e_2_is_not_e_1,axiom,~ equalish(e_2,e_1) ).
+fof(cycle6,axiom,! [X1] : ! [X2] : ( ~ cycle(X1,e_0) | ~ product(X1,e_1,X2) | ~ greater(X2,X1) ) ).
+fof(e_4_greater_e_2,axiom,greater(e_4,e_2) ).
+fof(cycle2,axiom,! [X1] : ( cycle(X1,e_0) | cycle(X1,e_1) | cycle(X1,e_2) | cycle(X1,e_3) | ~ group_element(X1) ) ).
+fof(e_2_is_not_e_3,axiom,~ equalish(e_2,e_3) ).
+fof(e_3_is_not_e_2,axiom,~ equalish(e_3,e_2) ).
+fof(e_1_is_not_e_3,axiom,~ equalish(e_1,e_3) ).
+fof(cycle7,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( equalish(X3,X4) | ~ cycle(X1,X2) | ~ product(X1,e_1,X3) | ~ greater(X2,e_0) | ~ next(X1,X4) ) ).
+fof(e_3_is_not_e_1,axiom,~ equalish(e_3,e_1) ).
+fof(e_3_greater_e_0,axiom,greater(e_3,e_0) ).
+fof(e_2_then_e_3,axiom,next(e_2,e_3) ).
+fof(e_2_greater_e_0,axiom,greater(e_2,e_0) ).
+fof(e_1_greater_e_0,axiom,greater(e_1,e_0) ).
+fof(e_4_greater_e_3,axiom,greater(e_4,e_3) ).
+fof(cycle4,axiom,! [X2] : ! [X5] : ! [X1] : ! [X3] : ! [X4] : ( equalish(X2,X5) | ~ cycle(X1,X2) | ~ cycle(X3,X4) | ~ next(X1,X3) | ~ greater(X2,e_0) | ~ next(X4,X5) ) ).
+fof(e_3_then_e_4,axiom,next(e_3,e_4) ).
+fof(cycle3,axiom,cycle(e_4,e_0) ).
+fof(e_0_then_e_1,axiom,next(e_0,e_1) ).
+fof(e_3_greater_e_2,axiom,greater(e_3,e_2) ).
+fof(e_1_then_e_2,axiom,next(e_1,e_2) ).
+fof(cycle5,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ cycle(X1,X2) | ~ cycle(X3,e_0) | ~ cycle(X4,X5) | ~ next(X3,X4) | ~ greater(X3,X1) | ~ greater(X2,X5) ) ).
+fof(qg1_1,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ! [X5] : ! [X6] : ( equalish(X1,X4) | ~ product(X1,X2,X3) | ~ product(X4,X5,X3) | ~ product(X6,X2,X1) | ~ product(X6,X5,X4) ) ).
+fof(product_total_function2,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( equalish(X3,X4) | ~ product(X1,X2,X3) | ~ product(X1,X2,X4) ) ).
+fof(e_4_greater_e_1,axiom,greater(e_4,e_1) ).
+fof(e_2_greater_e_1,axiom,greater(e_2,e_1) ).
+fof(cycle1,axiom,! [X2] : ! [X3] : ! [X1] : ( equalish(X2,X3) | ~ cycle(X1,X2) | ~ cycle(X1,X3) ) ).
+fof(e_4_greater_e_0,axiom,greater(e_4,e_0) ).
+fof(e_3_greater_e_1,axiom,greater(e_3,e_1) ).
+fof(c_0_44,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( equalish(X1,X4) | ~ product(X1,X2,X3) | ~ product(X4,X2,X3) ) ).
+fof(c_0_45,axiom,! [X1] : product(X1,X1,X1) ).
+fof(c_0_46,axiom,! [X2] : ! [X4] : ! [X1] : ! [X3] : ( equalish(X2,X4) | ~ product(X1,X2,X3) | ~ product(X1,X4,X3) ) ).
+fof(c_0_47,axiom,! [X1] : ! [X2] : ( product(X1,X2,e_1) | product(X1,X2,e_2) | product(X1,X2,e_3) | product(X1,X2,e_4) | ~ group_element(X1) | ~ group_element(X2) ) ).
+fof(c_0_48,axiom,group_element(e_4) ).
+fof(c_0_49,axiom,~ equalish(e_3,e_4) ).
+fof(c_0_50,axiom,! [X1] : ! [X2] : ( equalish(X1,X2) | ~ product(X1,X2,X2) ) ).
+fof(c_0_51,axiom,~ equalish(e_4,e_3) ).
+fof(c_0_52,axiom,! [X1] : ! [X2] : ( equalish(X1,X2) | ~ product(X2,X1,X2) ) ).
+fof(c_0_53,axiom,! [X2] : ! [X5] : ! [X1] : ! [X3] : ! [X4] : ! [X6] : ( equalish(X2,X5) | ~ product(X1,X2,X3) | ~ product(X4,X5,X3) | ~ product(X6,X2,X1) | ~ product(X6,X5,X4) ) ).
+fof(c_0_54,axiom,! [X1] : ( product(X1,e_4,e_4) | product(X1,e_4,e_3) | product(X1,e_4,e_2) | product(X1,e_4,e_1) | ~ group_element(X1) ) ).
+fof(c_0_55,axiom,group_element(e_3) ).
+fof(c_0_56,axiom,~ product(e_3,e_4,e_4) ).
+fof(c_0_57,axiom,~ product(e_3,e_4,e_3) ).
+fof(c_0_58,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( equalish(X1,X2) | ~ product(X2,X1,X3) | ~ product(X2,X2,X4) | ~ product(X3,X1,X4) ) ).
+fof(c_0_59,axiom,product(e_3,e_4,e_1) | product(e_3,e_4,e_2) ).
+fof(c_0_60,axiom,! [X1] : ( product(e_3,e_4,e_1) | ~ product(e_3,e_3,X1) | ~ product(e_2,e_4,X1) ) ).
+fof(c_0_61,axiom,~ equalish(e_2,e_4) ).
+fof(c_0_62,axiom,~ equalish(e_4,e_2) ).
+fof(c_0_63,axiom,product(e_3,e_4,e_1) | ~ product(e_2,e_4,e_3) ).
+fof(c_0_64,axiom,group_element(e_2) ).
+fof(c_0_65,axiom,~ product(e_2,e_4,e_4) ).
+fof(c_0_66,axiom,~ product(e_2,e_4,e_2) ).
+fof(c_0_67,axiom,group_element(e_1) ).
+fof(c_0_68,axiom,~ equalish(e_1,e_4) ).
+fof(c_0_69,axiom,~ equalish(e_4,e_1) ).
+fof(c_0_70,axiom,! [X1] : ( ~ product(e_2,e_4,e_3) | ~ product(e_3,e_3,X1) | ~ product(e_1,e_4,X1) ) ).
+fof(c_0_71,axiom,product(e_2,e_4,e_1) | product(e_2,e_4,e_3) ).
+fof(c_0_72,axiom,! [X1] : ( product(X1,e_1,e_4) | product(X1,e_1,e_3) | product(X1,e_1,e_2) | product(X1,e_1,e_1) | ~ group_element(X1) ) ).
+fof(c_0_73,axiom,~ product(e_4,e_1,e_4) ).
+fof(c_0_74,axiom,~ product(e_4,e_1,e_1) ).
+fof(c_0_75,axiom,~ equalish(e_1,e_2) ).
+fof(c_0_76,axiom,~ equalish(e_2,e_1) ).
+fof(c_0_77,axiom,! [X1] : ( product(e_2,e_4,e_1) | ~ product(e_3,e_3,X1) | ~ product(e_1,e_4,X1) ) ).
+fof(c_0_78,axiom,! [X1] : ( product(X1,e_3,e_4) | product(X1,e_3,e_3) | product(X1,e_3,e_2) | product(X1,e_3,e_1) | ~ group_element(X1) ) ).
+fof(c_0_79,axiom,~ product(e_4,e_3,e_4) ).
+fof(c_0_80,axiom,~ product(e_4,e_3,e_3) ).
+fof(c_0_81,axiom,product(e_4,e_1,e_2) | product(e_4,e_1,e_3) ).
+fof(c_0_82,axiom,~ product(e_2,e_1,e_2) ).
+fof(c_0_83,axiom,~ product(e_2,e_1,e_1) ).
+fof(c_0_84,axiom,product(e_2,e_4,e_1) | ~ product(e_1,e_4,e_3) ).
+fof(c_0_85,axiom,product(e_4,e_3,e_1) | product(e_4,e_3,e_2) ).
+fof(c_0_86,axiom,! [X1] : ( product(e_4,e_1,e_2) | ~ product(e_4,e_4,X1) | ~ product(e_3,e_1,X1) ) ).
+fof(c_0_87,axiom,! [X1] : ! [X2] : ( ~ cycle(X1,e_0) | ~ product(X1,e_1,X2) | ~ greater(X2,X1) ) ).
+fof(c_0_88,axiom,product(e_2,e_1,e_3) | product(e_2,e_1,e_4) ).
+fof(c_0_89,axiom,greater(e_4,e_2) ).
+fof(c_0_90,axiom,! [X1] : ( cycle(X1,e_0) | cycle(X1,e_1) | cycle(X1,e_2) | cycle(X1,e_3) | ~ group_element(X1) ) ).
+fof(c_0_91,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_1,e_4,e_3) | ~ product(e_2,X1,e_1) ) ).
+fof(c_0_92,axiom,~ product(e_1,e_4,e_4) ).
+fof(c_0_93,axiom,~ product(e_1,e_4,e_1) ).
+fof(c_0_94,axiom,~ equalish(e_2,e_3) ).
+fof(c_0_95,axiom,~ equalish(e_3,e_2) ).
+fof(c_0_96,axiom,! [X1] : ( product(e_4,e_3,e_1) | equalish(X1,e_3) | ~ product(e_4,X1,e_2) ) ).
+fof(c_0_97,axiom,product(e_4,e_1,e_2) | ~ product(e_3,e_1,e_4) ).
+fof(c_0_98,axiom,~ equalish(e_1,e_3) ).
+fof(c_0_99,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( equalish(X3,X4) | ~ cycle(X1,X2) | ~ product(X1,e_1,X3) | ~ greater(X2,e_0) | ~ next(X1,X4) ) ).
+fof(c_0_100,axiom,product(e_2,e_1,e_3) | ~ cycle(e_2,e_0) ).
+fof(c_0_101,axiom,cycle(e_2,e_3) | cycle(e_2,e_2) | cycle(e_2,e_1) | cycle(e_2,e_0) ).
+fof(c_0_102,axiom,~ product(e_1,e_4,e_3) | ~ product(e_2,e_3,e_1) ).
+fof(c_0_103,axiom,product(e_1,e_4,e_2) | product(e_1,e_4,e_3) ).
+fof(c_0_104,axiom,~ product(e_2,e_3,e_3) ).
+fof(c_0_105,axiom,~ product(e_2,e_3,e_2) ).
+fof(c_0_106,axiom,product(e_4,e_3,e_1) | ~ product(e_3,e_1,e_4) ).
+fof(c_0_107,axiom,~ equalish(e_3,e_1) ).
+fof(c_0_108,axiom,! [X1] : ( product(e_4,e_3,e_1) | ~ product(e_4,e_4,X1) | ~ product(e_2,e_3,X1) ) ).
+fof(c_0_109,axiom,! [X1] : ! [X2] : ( product(e_2,e_1,e_3) | equalish(e_4,X1) | ~ cycle(e_2,X2) | ~ greater(X2,e_0) | ~ next(e_2,X1) ) ).
+fof(c_0_110,axiom,product(e_2,e_1,e_3) | cycle(e_2,e_1) | cycle(e_2,e_2) | cycle(e_2,e_3) ).
+fof(c_0_111,axiom,greater(e_3,e_0) ).
+fof(c_0_112,axiom,product(e_1,e_4,e_2) | ~ product(e_2,e_3,e_1) ).
+fof(c_0_113,axiom,product(e_2,e_3,e_1) | product(e_2,e_3,e_4) ).
+fof(c_0_114,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_3,e_1,e_4) | ~ product(X1,e_3,e_1) ) ).
+fof(c_0_115,axiom,~ product(e_3,e_1,e_3) ).
+fof(c_0_116,axiom,~ product(e_3,e_1,e_1) ).
+fof(c_0_117,axiom,product(e_4,e_3,e_1) | ~ product(e_2,e_3,e_4) ).
+fof(c_0_118,axiom,! [X1] : ( product(e_2,e_1,e_3) | equalish(e_4,X1) | cycle(e_2,e_2) | cycle(e_2,e_1) | ~ next(e_2,X1) ) ).
+fof(c_0_119,axiom,next(e_2,e_3) ).
+fof(c_0_120,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_2,e_3,e_1) | ~ product(e_1,X1,e_2) ) ).
+fof(c_0_121,axiom,! [X1] : ( product(e_2,e_3,e_1) | equalish(X1,e_3) | ~ product(e_2,X1,e_4) ) ).
+fof(c_0_122,axiom,~ product(e_3,e_1,e_4) | ~ product(e_2,e_3,e_1) ).
+fof(c_0_123,axiom,product(e_3,e_1,e_2) | product(e_3,e_1,e_4) ).
+fof(c_0_124,axiom,! [X1] : ( ~ product(e_2,e_3,e_4) | ~ product(e_4,e_4,X1) | ~ product(e_1,e_3,X1) ) ).
+fof(c_0_125,axiom,product(e_2,e_1,e_3) | cycle(e_2,e_1) | cycle(e_2,e_2) ).
+fof(c_0_126,axiom,greater(e_2,e_0) ).
+fof(c_0_127,axiom,~ product(e_2,e_3,e_1) | ~ product(e_1,e_3,e_2) ).
+fof(c_0_128,axiom,product(e_2,e_1,e_3) | product(e_2,e_3,e_1) ).
+fof(c_0_129,axiom,product(e_3,e_1,e_2) | ~ product(e_2,e_3,e_1) ).
+fof(c_0_130,axiom,~ product(e_2,e_3,e_4) | ~ product(e_1,e_3,e_4) ).
+fof(c_0_131,axiom,~ product(e_1,e_3,e_3) ).
+fof(c_0_132,axiom,~ product(e_1,e_3,e_1) ).
+fof(c_0_133,axiom,! [X1] : ( product(e_2,e_1,e_3) | equalish(e_4,X1) | cycle(e_2,e_1) | ~ next(e_2,X1) ) ).
+fof(c_0_134,axiom,! [X1] : ( product(e_4,e_1,e_2) | equalish(X1,e_4) | ~ product(X1,e_1,e_3) ) ).
+fof(c_0_135,axiom,product(e_2,e_1,e_3) | ~ product(e_1,e_3,e_2) ).
+fof(c_0_136,axiom,! [X1] : ( ~ product(e_2,e_3,e_1) | ~ product(e_3,e_3,X1) | ~ product(e_2,e_1,X1) ) ).
+fof(c_0_137,axiom,product(e_2,e_3,e_1) | ~ product(e_1,e_3,e_4) ).
+fof(c_0_138,axiom,product(e_1,e_3,e_2) | product(e_1,e_3,e_4) ).
+fof(c_0_139,axiom,product(e_2,e_1,e_3) | cycle(e_2,e_1) ).
+fof(c_0_140,axiom,greater(e_1,e_0) ).
+fof(c_0_141,axiom,product(e_4,e_1,e_2) | ~ product(e_1,e_3,e_2) ).
+fof(c_0_142,axiom,~ product(e_2,e_3,e_1) | ~ product(e_2,e_1,e_3) ).
+fof(c_0_143,axiom,product(e_1,e_3,e_2) | product(e_2,e_3,e_1) ).
+fof(c_0_144,axiom,! [X1] : ( product(e_2,e_1,e_3) | equalish(e_4,X1) | ~ next(e_2,X1) ) ).
+fof(c_0_145,axiom,greater(e_4,e_3) ).
+fof(c_0_146,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_1,e_3,e_2) | ~ product(X1,e_1,e_2) ) ).
+fof(c_0_147,axiom,product(e_1,e_3,e_2) | ~ product(e_2,e_1,e_3) ).
+fof(c_0_148,axiom,product(e_2,e_1,e_3) ).
+fof(c_0_149,axiom,product(e_3,e_1,e_2) | ~ cycle(e_3,e_0) ).
+fof(c_0_150,axiom,cycle(e_3,e_3) | cycle(e_3,e_2) | cycle(e_3,e_1) | cycle(e_3,e_0) ).
+fof(c_0_151,axiom,~ product(e_1,e_3,e_2) | ~ product(e_3,e_1,e_2) ).
+fof(c_0_152,axiom,product(e_1,e_3,e_2) ).
+fof(c_0_153,axiom,! [X2] : ! [X5] : ! [X1] : ! [X3] : ! [X4] : ( equalish(X2,X5) | ~ cycle(X1,X2) | ~ cycle(X3,X4) | ~ next(X1,X3) | ~ greater(X2,e_0) | ~ next(X4,X5) ) ).
+fof(c_0_154,axiom,product(e_3,e_1,e_2) | cycle(e_3,e_1) | cycle(e_3,e_2) | cycle(e_3,e_3) ).
+fof(c_0_155,axiom,~ product(e_3,e_1,e_2) ).
+fof(c_0_156,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( equalish(e_3,X1) | ~ cycle(X2,e_3) | ~ cycle(X3,X4) | ~ next(X4,X1) | ~ next(X2,X3) ) ).
+fof(c_0_157,axiom,cycle(e_3,e_3) | cycle(e_3,e_2) | cycle(e_3,e_1) ).
+fof(c_0_158,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(e_3,X1) | cycle(e_3,e_1) | cycle(e_3,e_2) | ~ cycle(X2,X3) | ~ next(e_3,X2) | ~ next(X3,X1) ) ).
+fof(c_0_159,axiom,next(e_3,e_4) ).
+fof(c_0_160,axiom,! [X1] : ( product(X1,e_2,e_4) | product(X1,e_2,e_3) | product(X1,e_2,e_2) | product(X1,e_2,e_1) | ~ group_element(X1) ) ).
+fof(c_0_161,axiom,~ product(e_4,e_2,e_4) ).
+fof(c_0_162,axiom,~ product(e_4,e_2,e_2) ).
+fof(c_0_163,axiom,! [X1] : ! [X2] : ( equalish(e_3,X1) | cycle(e_3,e_2) | cycle(e_3,e_1) | ~ cycle(e_4,X2) | ~ next(X2,X1) ) ).
+fof(c_0_164,axiom,cycle(e_4,e_0) ).
+fof(c_0_165,axiom,product(e_4,e_2,e_1) | product(e_4,e_2,e_3) ).
+fof(c_0_166,axiom,! [X1] : ( equalish(e_3,X1) | cycle(e_3,e_1) | cycle(e_3,e_2) | ~ next(e_0,X1) ) ).
+fof(c_0_167,axiom,next(e_0,e_1) ).
+fof(c_0_168,axiom,~ product(e_3,e_2,e_3) ).
+fof(c_0_169,axiom,~ product(e_3,e_2,e_2) ).
+fof(c_0_170,axiom,! [X1] : ( product(e_4,e_2,e_1) | ~ product(e_4,e_4,X1) | ~ product(e_3,e_2,X1) ) ).
+fof(c_0_171,axiom,greater(e_3,e_2) ).
+fof(c_0_172,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( equalish(e_2,X1) | ~ cycle(X2,e_2) | ~ cycle(X3,X4) | ~ next(X4,X1) | ~ next(X2,X3) ) ).
+fof(c_0_173,axiom,cycle(e_3,e_2) | cycle(e_3,e_1) ).
+fof(c_0_174,axiom,product(e_3,e_2,e_1) | product(e_3,e_2,e_4) ).
+fof(c_0_175,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_2,e_4,e_3) | ~ product(e_3,X1,e_1) ) ).
+fof(c_0_176,axiom,product(e_4,e_2,e_1) | ~ product(e_3,e_2,e_4) ).
+fof(c_0_177,axiom,~ cycle(e_2,e_0) ).
+fof(c_0_178,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(e_2,X1) | cycle(e_3,e_1) | ~ cycle(X2,X3) | ~ next(e_3,X2) | ~ next(X3,X1) ) ).
+fof(c_0_179,axiom,! [X1] : ( product(e_3,e_2,e_1) | equalish(X1,e_2) | ~ product(e_3,X1,e_4) ) ).
+fof(c_0_180,axiom,~ product(e_2,e_4,e_3) | ~ product(e_3,e_2,e_1) ).
+fof(c_0_181,axiom,! [X1] : ( ~ product(e_3,e_2,e_4) | ~ product(e_4,e_4,X1) | ~ product(e_1,e_2,X1) ) ).
+fof(c_0_182,axiom,! [X1] : ( ~ product(e_3,e_1,e_4) | ~ product(e_4,e_4,X1) | ~ product(e_2,e_1,X1) ) ).
+fof(c_0_183,axiom,cycle(e_2,e_1) | cycle(e_2,e_2) | cycle(e_2,e_3) ).
+fof(c_0_184,axiom,! [X1] : ! [X2] : ( equalish(e_2,X1) | cycle(e_3,e_1) | ~ cycle(e_4,X2) | ~ next(X2,X1) ) ).
+fof(c_0_185,axiom,! [X1] : ( product(e_2,e_4,e_1) | equalish(X1,e_4) | ~ product(e_2,X1,e_3) ) ).
+fof(c_0_186,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_3,e_2,e_4) | ~ product(e_4,X1,e_1) ) ).
+fof(c_0_187,axiom,product(e_3,e_1,e_2) | product(e_3,e_2,e_1) ).
+fof(c_0_188,axiom,product(e_2,e_4,e_1) | ~ product(e_3,e_2,e_1) ).
+fof(c_0_189,axiom,~ product(e_3,e_2,e_4) | ~ product(e_1,e_2,e_4) ).
+fof(c_0_190,axiom,~ product(e_1,e_2,e_2) ).
+fof(c_0_191,axiom,~ product(e_1,e_2,e_1) ).
+fof(c_0_192,axiom,~ product(e_3,e_1,e_4) | ~ product(e_2,e_1,e_4) ).
+fof(c_0_193,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(e_3,X1) | cycle(e_2,e_2) | cycle(e_2,e_1) | ~ cycle(X2,X3) | ~ next(e_2,X2) | ~ next(X3,X1) ) ).
+fof(c_0_194,axiom,! [X1] : ( equalish(e_2,X1) | cycle(e_3,e_1) | ~ next(e_0,X1) ) ).
+fof(c_0_195,axiom,product(e_2,e_4,e_1) | ~ product(e_1,e_3,e_2) ).
+fof(c_0_196,axiom,! [X1] : ( product(e_3,e_2,e_1) | equalish(X1,e_2) | ~ product(e_4,X1,e_1) ) ).
+fof(c_0_197,axiom,product(e_4,e_3,e_1) | ~ product(e_1,e_3,e_2) ).
+fof(c_0_198,axiom,! [X1] : ( product(e_3,e_1,e_2) | ~ product(e_3,e_3,X1) | ~ product(e_1,e_2,X1) ) ).
+fof(c_0_199,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_3,e_2,e_1) | ~ product(e_2,X1,e_1) ) ).
+fof(c_0_200,axiom,product(e_3,e_2,e_1) | ~ product(e_1,e_2,e_4) ).
+fof(c_0_201,axiom,product(e_1,e_2,e_3) | product(e_1,e_2,e_4) ).
+fof(c_0_202,axiom,product(e_3,e_1,e_2) | ~ product(e_2,e_1,e_4) ).
+fof(c_0_203,axiom,! [X1] : ! [X2] : ( equalish(e_3,X1) | cycle(e_2,e_1) | cycle(e_2,e_2) | ~ cycle(e_3,X2) | ~ next(X2,X1) ) ).
+fof(c_0_204,axiom,cycle(e_3,e_1) ).
+fof(c_0_205,axiom,! [X1] : ( ~ product(e_1,e_3,e_2) | ~ product(e_2,e_2,X1) | ~ product(e_1,e_4,X1) ) ).
+fof(c_0_206,axiom,product(e_3,e_2,e_1) | ~ product(e_1,e_3,e_2) ).
+fof(c_0_207,axiom,product(e_3,e_1,e_2) | ~ product(e_1,e_2,e_3) ).
+fof(c_0_208,axiom,~ product(e_3,e_2,e_1) | ~ product(e_2,e_3,e_1) ).
+fof(c_0_209,axiom,product(e_1,e_2,e_3) | product(e_3,e_2,e_1) ).
+fof(c_0_210,axiom,! [X1] : ( ~ product(e_3,e_2,e_1) | ~ product(e_2,e_2,X1) | ~ product(e_1,e_4,X1) ) ).
+fof(c_0_211,axiom,! [X1] : ( product(e_3,e_4,e_1) | equalish(X1,e_4) | ~ product(e_3,X1,e_2) ) ).
+fof(c_0_212,axiom,product(e_2,e_1,e_3) | product(e_3,e_1,e_2) ).
+fof(c_0_213,axiom,! [X1] : ( equalish(e_3,X1) | cycle(e_2,e_2) | cycle(e_2,e_1) | ~ next(e_1,X1) ) ).
+fof(c_0_214,axiom,next(e_1,e_2) ).
+fof(c_0_215,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ cycle(X1,X2) | ~ cycle(X3,e_0) | ~ cycle(X4,X5) | ~ next(X3,X4) | ~ greater(X3,X1) | ~ greater(X2,X5) ) ).
+fof(c_0_216,axiom,! [X1] : ( ~ product(e_2,e_2,X1) | ~ product(e_1,e_4,X1) ) ).
+fof(c_0_217,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_1,e_3,e_2) | ~ product(X1,e_2,e_1) ) ).
+fof(c_0_218,axiom,! [X1] : ( ~ product(e_1,e_2,e_3) | ~ product(e_3,e_3,X1) | ~ product(e_2,e_1,X1) ) ).
+fof(c_0_219,axiom,product(e_1,e_2,e_3) | ~ product(e_2,e_3,e_1) ).
+fof(c_0_220,axiom,! [X1] : ( product(e_1,e_2,e_3) | ~ product(e_2,e_2,X1) | ~ product(e_1,e_4,X1) ) ).
+fof(c_0_221,axiom,! [X1] : ( product(e_1,e_4,e_2) | ~ product(e_1,e_1,X1) | ~ product(e_3,e_4,X1) ) ).
+fof(c_0_222,axiom,product(e_2,e_1,e_3) | product(e_3,e_4,e_1) ).
+fof(c_0_223,axiom,cycle(e_2,e_1) | cycle(e_2,e_2) ).
+fof(c_0_224,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ cycle(X1,X2) | ~ cycle(X3,X4) | ~ greater(e_4,X3) | ~ greater(X4,X2) | ~ next(e_4,X1) ) ).
+fof(c_0_225,axiom,~ product(e_1,e_4,e_2) ).
+fof(c_0_226,axiom,~ product(e_1,e_3,e_2) | ~ product(e_4,e_2,e_1) ).
+fof(c_0_227,axiom,~ product(e_1,e_2,e_3) | ~ product(e_2,e_1,e_3) ).
+fof(c_0_228,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ! [X5] : ! [X6] : ( equalish(X1,X4) | ~ product(X1,X2,X3) | ~ product(X4,X5,X3) | ~ product(X6,X2,X1) | ~ product(X6,X5,X4) ) ).
+fof(c_0_229,axiom,! [X1] : ( product(e_4,e_3,e_1) | equalish(X1,e_4) | ~ product(X1,e_3,e_2) ) ).
+fof(c_0_230,axiom,product(e_1,e_3,e_2) | product(e_1,e_2,e_3) ).
+fof(c_0_231,axiom,product(e_1,e_2,e_3) | ~ product(e_1,e_4,e_2) ).
+fof(c_0_232,axiom,product(e_2,e_1,e_3) | product(e_1,e_4,e_2) ).
+fof(c_0_233,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( equalish(e_1,X1) | ~ cycle(X2,e_1) | ~ cycle(X3,X4) | ~ next(X4,X1) | ~ next(X2,X3) ) ).
+fof(c_0_234,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( equalish(X3,X4) | ~ product(X1,X2,X3) | ~ product(X1,X2,X4) ) ).
+fof(c_0_235,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(e_2,X1) | cycle(e_2,e_1) | ~ cycle(X2,X3) | ~ next(e_2,X2) | ~ next(X3,X1) ) ).
+fof(c_0_236,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ cycle(e_2,X1) | ~ cycle(X2,X3) | ~ greater(X1,X3) | ~ next(e_4,X2) ) ).
+fof(c_0_237,axiom,! [X1] : ! [X2] : ( equalish(e_3,X1) | ~ product(e_1,e_3,e_2) | ~ cycle(e_2,X2) | ~ greater(X2,e_0) | ~ next(e_2,X1) ) ).
+fof(c_0_238,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ cycle(e_3,X1) | ~ cycle(X2,X3) | ~ greater(X1,X3) | ~ next(e_4,X2) ) ).
+fof(c_0_239,axiom,product(e_3,e_1,e_4) ).
+fof(c_0_240,axiom,product(e_1,e_4,e_3) ).
+fof(c_0_241,axiom,~ product(e_4,e_2,e_1) ).
+fof(c_0_242,axiom,~ product(e_2,e_3,e_1) ).
+fof(c_0_243,axiom,~ product(e_1,e_2,e_3) ).
+fof(c_0_244,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_3) | ~ product(e_1,e_3,e_2) | ~ product(e_3,e_1,X2) | ~ product(e_2,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_245,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_3,e_1,X2) | ~ product(e_2,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_246,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_1,e_4,X2) | ~ product(e_2,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_247,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_4) | ~ product(e_1,e_3,e_2) | ~ product(e_1,e_4,X2) | ~ product(e_2,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_248,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_2) | ~ product(e_1,e_3,e_2) | ~ product(e_2,e_1,X2) | ~ product(e_4,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_249,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_3) | ~ product(e_1,e_3,e_2) | ~ product(e_1,e_3,X2) | ~ product(e_4,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_250,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_2,e_1,X2) | ~ product(e_4,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_251,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_1,e_3,X2) | ~ product(e_4,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_252,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_1,e_2,X2) | ~ product(e_3,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_253,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_2) | ~ product(e_1,e_3,e_2) | ~ product(e_1,e_2,X2) | ~ product(e_3,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_254,axiom,product(e_1,e_2,e_3) | product(e_4,e_3,e_1) ).
+fof(c_0_255,axiom,! [X1] : ! [X2] : ( equalish(e_2,X1) | ~ product(e_1,e_3,e_2) | ~ cycle(e_4,X2) | ~ greater(X2,e_0) | ~ next(e_4,X1) ) ).
+fof(c_0_256,axiom,product(e_2,e_1,e_3) | product(e_1,e_2,e_3) ).
+fof(c_0_257,axiom,cycle(e_1,e_3) | cycle(e_1,e_2) | cycle(e_1,e_1) | cycle(e_1,e_0) ).
+fof(c_0_258,axiom,greater(e_4,e_1) ).
+fof(c_0_259,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(e_1,X1) | ~ cycle(X2,X3) | ~ next(e_3,X2) | ~ next(X3,X1) ) ).
+fof(c_0_260,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_1,e_3,e_2) | ~ product(e_2,e_1,X1) ) ).
+fof(c_0_261,axiom,! [X1] : ( ~ product(e_1,e_3,e_2) | ~ product(e_4,e_4,X1) | ~ product(e_1,e_3,X1) ) ).
+fof(c_0_262,axiom,! [X1] : ! [X2] : ( equalish(e_2,X1) | cycle(e_2,e_1) | ~ cycle(e_3,X2) | ~ next(X2,X1) ) ).
+fof(c_0_263,axiom,! [X1] : ! [X2] : ( cycle(e_2,e_1) | ~ cycle(X1,X2) | ~ greater(e_2,X2) | ~ next(e_4,X1) ) ).
+fof(c_0_264,axiom,greater(e_2,e_1) ).
+fof(c_0_265,axiom,! [X1] : ! [X2] : ( equalish(e_3,X1) | ~ cycle(e_2,X2) | ~ greater(X2,e_0) | ~ next(e_2,X1) ) ).
+fof(c_0_266,axiom,! [X2] : ! [X3] : ! [X1] : ( equalish(X2,X3) | ~ cycle(X1,X2) | ~ cycle(X1,X3) ) ).
+fof(c_0_267,axiom,! [X1] : ! [X2] : ( ~ cycle(X1,X2) | ~ greater(e_1,X2) | ~ next(e_4,X1) ) ).
+fof(c_0_268,axiom,! [X1] : ! [X2] : ( equalish(e_4,X1) | ~ cycle(e_3,X2) | ~ greater(X2,e_0) | ~ next(e_3,X1) ) ).
+fof(c_0_269,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_4) | ~ product(e_3,e_4,X2) | ~ product(e_1,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_270,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_3) | ~ product(e_3,e_4,X2) | ~ product(e_1,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_271,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_3,e_1,e_2) | equalish(X1,e_1) | ~ product(e_4,e_1,X2) | ~ product(e_3,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_272,axiom,product(e_4,e_1,e_2) ).
+fof(c_0_273,axiom,product(e_4,e_2,e_3) ).
+fof(c_0_274,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_3,e_1,e_2) | equalish(X1,e_4) | ~ product(e_4,e_1,X2) | ~ product(e_3,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_275,axiom,product(e_2,e_3,e_4) ).
+fof(c_0_276,axiom,product(e_1,e_2,e_4) ).
+fof(c_0_277,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_3) | ~ product(e_3,e_1,X2) | ~ product(e_2,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_278,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_3,e_1,X2) | ~ product(e_2,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_279,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_1,e_4,X2) | ~ product(e_2,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_280,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_4) | ~ product(e_1,e_4,X2) | ~ product(e_2,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_281,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_2) | ~ product(e_2,e_1,X2) | ~ product(e_4,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_282,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_3) | ~ product(e_1,e_3,X2) | ~ product(e_4,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_283,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_2,e_1,X2) | ~ product(e_4,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_284,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_1,e_3,X2) | ~ product(e_4,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_285,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_1,e_2,X2) | ~ product(e_3,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_286,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_2) | ~ product(e_1,e_2,X2) | ~ product(e_3,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_287,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_1,e_2,e_3) | equalish(X1,e_2) | ~ product(e_4,e_2,X2) | ~ product(e_1,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_288,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_1,e_2,e_3) | equalish(X1,e_4) | ~ product(e_4,e_2,X2) | ~ product(e_1,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_289,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_1,e_2,e_3) | equalish(X1,e_3) | ~ product(e_2,e_3,X2) | ~ product(e_1,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_290,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_1,e_2,e_3) | equalish(X1,e_2) | ~ product(e_2,e_3,X2) | ~ product(e_1,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_291,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_2,e_3,e_1) | equalish(X1,e_3) | ~ product(e_4,e_3,X2) | ~ product(e_2,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_292,axiom,product(e_4,e_3,e_1) ).
+fof(c_0_293,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_2,e_3,e_1) | equalish(X1,e_4) | ~ product(e_4,e_3,X2) | ~ product(e_2,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_294,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_4,e_2,e_1) | equalish(X1,e_2) | ~ product(e_3,e_2,X2) | ~ product(e_4,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_295,axiom,product(e_3,e_2,e_1) ).
+fof(c_0_296,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_4,e_2,e_1) | equalish(X1,e_3) | ~ product(e_3,e_2,X2) | ~ product(e_4,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_297,axiom,! [X1] : ! [X2] : ( equalish(e_2,X1) | ~ cycle(e_4,X2) | ~ greater(X2,e_0) | ~ next(e_4,X1) ) ).
+fof(c_0_298,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_1,e_3,e_2) | ~ product(e_3,X1,e_1) ) ).
+fof(c_0_299,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_2,e_4,X1) ) ).
+fof(c_0_300,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_1,e_3,e_2) | ~ product(X1,e_4,e_1) ) ).
+fof(c_0_301,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_1,e_3,e_2) | ~ product(e_4,e_1,X1) ) ).
+fof(c_0_302,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_4,e_3,X1) ) ).
+fof(c_0_303,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_4,X1,e_2) ) ).
+fof(c_0_304,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_1,e_3,e_2) | ~ product(e_2,X1,e_1) ) ).
+fof(c_0_305,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_1,e_3,e_2) | ~ product(e_4,X1,e_1) ) ).
+fof(c_0_306,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_1,e_3,e_2) | ~ product(X1,e_3,e_1) ) ).
+fof(c_0_307,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_1,e_3,e_2) | ~ product(e_3,e_2,X1) ) ).
+fof(c_0_308,axiom,! [X1] : ( ~ product(e_1,e_3,e_2) | ~ product(e_4,e_4,X1) | ~ product(e_2,e_1,X1) ) ).
+fof(c_0_309,axiom,! [X1] : ( ~ product(e_1,e_3,e_2) | ~ product(e_3,e_3,X1) | ~ product(e_1,e_2,X1) ) ).
+fof(c_0_310,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_3,e_4,e_1) | equalish(X1,e_4) | ~ product(e_2,e_4,X2) | ~ product(e_3,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_311,axiom,product(e_1,e_2,e_3) | product(e_2,e_4,e_1) ).
+fof(c_0_312,axiom,product(e_3,e_4,e_1) | ~ product(e_1,e_2,e_3) ).
+fof(c_0_313,axiom,! [X1] : ! [X2] : ! [X3] : ( product(e_3,e_4,e_1) | equalish(X1,e_2) | ~ product(e_2,e_4,X2) | ~ product(e_3,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_314,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( cycle(e_1,e_1) | cycle(e_1,e_2) | cycle(e_1,e_3) | ~ cycle(X1,X2) | ~ cycle(X3,X4) | ~ greater(e_1,X3) | ~ greater(X4,X2) | ~ next(e_1,X1) ) ).
+fof(c_0_315,axiom,! [X1] : ! [X2] : ( equalish(e_1,X1) | ~ cycle(e_1,X2) | ~ greater(X2,e_0) | ~ next(e_1,X1) ) ).
+fof(c_0_316,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ cycle(e_1,X1) | ~ cycle(X2,X3) | ~ greater(X1,X3) | ~ next(e_4,X2) ) ).
+fof(c_0_317,axiom,~ cycle(e_1,e_0) | ~ greater(e_1,e_1) ).
+fof(c_0_318,axiom,greater(e_4,e_0) ).
+fof(c_0_319,axiom,! [X1] : ! [X2] : ( equalish(e_1,X1) | ~ cycle(e_4,X2) | ~ next(X2,X1) ) ).
+fof(c_0_320,axiom,~ product(e_1,e_3,e_2) | ~ product(e_2,e_1,e_4) ).
+fof(c_0_321,axiom,~ product(e_1,e_3,e_2) | ~ product(e_1,e_3,e_4) ).
+fof(c_0_322,axiom,~ product(e_1,e_3,e_2) | ~ product(e_3,e_2,e_4) ).
+fof(c_0_323,axiom,~ product(e_1,e_3,e_2) | ~ greater(e_2,e_4) ).
+fof(c_0_324,axiom,! [X1] : ! [X2] : ( equalish(X1,X2) | ~ product(X2,X2,X1) ) ).
+fof(c_0_325,axiom,! [X1] : ! [X2] : ( equalish(X1,X1) | ~ product(X1,X1,X2) ) ).
+fof(c_0_326,axiom,! [X1] : ( equalish(e_2,X1) | cycle(e_2,e_1) | ~ next(e_1,X1) ) ).
+fof(c_0_327,axiom,! [X1] : ( cycle(e_2,e_1) | ~ cycle(X1,e_1) | ~ next(e_4,X1) ) ).
+fof(c_0_328,axiom,! [X1] : ( equalish(e_3,X1) | cycle(e_2,e_1) | ~ next(e_2,X1) ) ).
+fof(c_0_329,axiom,! [X1] : ( equalish(X1,e_2) | cycle(e_2,e_1) | ~ cycle(e_2,X1) ) ).
+fof(c_0_330,axiom,! [X1] : ( ~ cycle(X1,e_0) | ~ next(e_4,X1) ) ).
+fof(c_0_331,axiom,! [X1] : ( equalish(e_4,X1) | ~ next(e_3,X1) ) ).
+fof(c_0_332,axiom,! [X1] : ( equalish(X1,e_1) | ~ cycle(e_3,X1) ) ).
+fof(c_0_333,axiom,! [X1] : ! [X2] : ( product(e_3,e_4,e_1) | equalish(X1,e_4) | ~ product(e_1,X1,X2) | ~ product(X2,X1,e_2) ) ).
+fof(c_0_334,axiom,! [X1] : ! [X2] : ( product(e_3,e_4,e_1) | equalish(X1,e_3) | ~ product(e_1,X2,X1) | ~ product(X1,X2,e_2) ) ).
+fof(c_0_335,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_1) | ~ product(e_4,e_1,X2) | ~ product(e_3,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_336,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_4) | ~ product(e_4,e_1,X2) | ~ product(e_3,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_337,axiom,! [X1] : ! [X2] : ( equalish(X1,e_1) | ~ product(e_3,X1,X2) | ~ product(X2,X1,e_2) ) ).
+fof(c_0_338,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_2) | ~ product(e_3,e_2,X2) | ~ product(e_4,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_339,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_3) | ~ product(e_3,e_2,X2) | ~ product(e_4,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_340,axiom,! [X1] : ! [X2] : ( equalish(X1,e_4) | ~ product(e_3,X2,X1) | ~ product(X1,X2,e_2) ) ).
+fof(c_0_341,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_3) | ~ product(e_4,e_3,X2) | ~ product(e_2,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_342,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_4) | ~ product(e_4,e_3,X2) | ~ product(e_2,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_343,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_2) | ~ product(e_4,e_2,X2) | ~ product(e_1,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_344,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_4) | ~ product(e_4,e_2,X2) | ~ product(e_1,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_345,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_3) | ~ product(e_2,e_3,X2) | ~ product(e_1,X1,X3) | ~ product(X3,X1,X2) ) ).
+fof(c_0_346,axiom,! [X1] : ! [X2] : ! [X3] : ( equalish(X1,e_2) | ~ product(e_2,e_3,X2) | ~ product(e_1,X3,X1) | ~ product(X1,X3,X2) ) ).
+fof(c_0_347,axiom,! [X1] : ! [X2] : ( equalish(X1,e_3) | ~ product(e_2,X2,X1) | ~ product(X1,X2,e_4) ) ).
+fof(c_0_348,axiom,! [X1] : ! [X2] : ( equalish(X1,e_1) | ~ product(e_2,X1,X2) | ~ product(X2,X1,e_4) ) ).
+fof(c_0_349,axiom,! [X1] : ! [X2] : ( equalish(X1,e_1) | ~ product(e_2,X2,X1) | ~ product(X1,X2,e_3) ) ).
+fof(c_0_350,axiom,! [X1] : ! [X2] : ( equalish(X1,e_4) | ~ product(e_2,X1,X2) | ~ product(X2,X1,e_3) ) ).
+fof(c_0_351,axiom,! [X1] : ! [X2] : ( equalish(X1,e_2) | ~ product(e_4,X2,X1) | ~ product(X1,X2,e_3) ) ).
+fof(c_0_352,axiom,! [X1] : ! [X2] : ( equalish(X1,e_3) | ~ product(e_4,X1,X2) | ~ product(X2,X1,e_2) ) ).
+fof(c_0_353,axiom,! [X1] : ! [X2] : ( equalish(X1,e_1) | ~ product(e_4,X1,X2) | ~ product(X2,X1,e_3) ) ).
+fof(c_0_354,axiom,! [X1] : ! [X2] : ( equalish(X1,e_1) | ~ product(e_4,X2,X1) | ~ product(X1,X2,e_2) ) ).
+fof(c_0_355,axiom,! [X1] : ! [X2] : ( equalish(X1,e_1) | ~ product(e_3,X2,X1) | ~ product(X1,X2,e_4) ) ).
+fof(c_0_356,axiom,! [X1] : ! [X2] : ( equalish(X1,e_2) | ~ product(e_3,X1,X2) | ~ product(X2,X1,e_4) ) ).
+fof(c_0_357,axiom,! [X1] : ! [X2] : ( equalish(X1,e_2) | ~ product(e_1,X1,X2) | ~ product(X2,X1,e_3) ) ).
+fof(c_0_358,axiom,! [X1] : ! [X2] : ( equalish(X1,e_4) | ~ product(e_1,X2,X1) | ~ product(X1,X2,e_3) ) ).
+fof(c_0_359,axiom,! [X1] : ! [X2] : ( equalish(X1,e_3) | ~ product(e_1,X1,X2) | ~ product(X2,X1,e_4) ) ).
+fof(c_0_360,axiom,! [X1] : ! [X2] : ( equalish(X1,e_2) | ~ product(e_1,X2,X1) | ~ product(X1,X2,e_4) ) ).
+fof(c_0_361,axiom,! [X1] : ! [X2] : ( equalish(X1,e_3) | ~ product(e_2,X1,X2) | ~ product(X2,X1,e_1) ) ).
+fof(c_0_362,axiom,! [X1] : ! [X2] : ( equalish(X1,e_4) | ~ product(e_2,X2,X1) | ~ product(X1,X2,e_1) ) ).
+fof(c_0_363,axiom,! [X1] : ! [X2] : ( equalish(X1,e_2) | ~ product(e_4,X1,X2) | ~ product(X2,X1,e_1) ) ).
+fof(c_0_364,axiom,! [X1] : ! [X2] : ( equalish(X1,e_3) | ~ product(e_4,X2,X1) | ~ product(X1,X2,e_1) ) ).
+fof(c_0_365,axiom,! [X1] : ( equalish(e_2,X1) | ~ greater(e_0,e_0) | ~ next(e_4,X1) ) ).
+fof(c_0_366,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(X1,e_4,e_3) ) ).
+fof(c_0_367,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_1,e_4,X1) ) ).
+fof(c_0_368,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(X1,e_1,e_4) ) ).
+fof(c_0_369,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_3,X1,e_4) ) ).
+fof(c_0_370,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_4,X1,e_3) ) ).
+fof(c_0_371,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_4,e_2,X1) ) ).
+fof(c_0_372,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(X1,e_3,e_4) ) ).
+fof(c_0_373,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_2,X1,e_4) ) ).
+fof(c_0_374,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_1,X1,e_3) ) ).
+fof(c_0_375,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_3,e_1,X1) ) ).
+fof(c_0_376,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(X1,e_2,e_4) ) ).
+fof(c_0_377,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_1,X1,e_4) ) ).
+fof(c_0_378,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(X1,e_2,e_3) ) ).
+fof(c_0_379,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_2,e_3,X1) ) ).
+fof(c_0_380,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(X1,e_3,e_2) ) ).
+fof(c_0_381,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_1,e_3,X1) ) ).
+fof(c_0_382,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_3,X1,e_1) ) ).
+fof(c_0_383,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_2,e_4,X1) ) ).
+fof(c_0_384,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(X1,e_4,e_1) ) ).
+fof(c_0_385,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(e_4,e_1,X1) ) ).
+fof(c_0_386,axiom,! [X1] : ( equalish(X1,e_2) | ~ product(X1,e_1,e_3) ) ).
+fof(c_0_387,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_2,X1,e_3) ) ).
+fof(c_0_388,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_4,e_3,X1) ) ).
+fof(c_0_389,axiom,! [X1] : ( ~ product(e_1,e_1,X1) | ~ product(e_3,e_4,X1) ) ).
+fof(c_0_390,axiom,! [X1] : ( ~ product(e_3,e_3,X1) | ~ product(e_4,e_1,X1) ) ).
+fof(c_0_391,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_1,e_2,X1) ) ).
+fof(c_0_392,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_4,X1,e_2) ) ).
+fof(c_0_393,axiom,! [X1] : ( ~ product(e_4,e_4,X1) | ~ product(e_3,e_2,X1) ) ).
+fof(c_0_394,axiom,! [X1] : ( ~ product(e_2,e_2,X1) | ~ product(e_4,e_3,X1) ) ).
+fof(c_0_395,axiom,! [X1] : ( ~ product(e_1,e_1,X1) | ~ product(e_4,e_2,X1) ) ).
+fof(c_0_396,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_1,X1,e_2) ) ).
+fof(c_0_397,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(e_2,X1,e_1) ) ).
+fof(c_0_398,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(X1,e_1,e_2) ) ).
+fof(c_0_399,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_4,X1,e_1) ) ).
+fof(c_0_400,axiom,! [X1] : ( ~ product(e_1,e_1,X1) | ~ product(e_2,e_3,X1) ) ).
+fof(c_0_401,axiom,! [X1] : ( equalish(X1,e_4) | ~ product(X1,e_3,e_1) ) ).
+fof(c_0_402,axiom,! [X1] : ( equalish(X1,e_1) | ~ product(e_3,e_2,X1) ) ).
+fof(c_0_403,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(e_2,e_1,X1) ) ).
+fof(c_0_404,axiom,! [X1] : ( ~ product(e_4,e_4,X1) | ~ product(e_2,e_1,X1) ) ).
+fof(c_0_405,axiom,! [X1] : ( ~ product(e_4,e_4,X1) | ~ product(e_1,e_3,X1) ) ).
+fof(c_0_406,axiom,! [X1] : ( equalish(X1,e_3) | ~ product(X1,e_2,e_1) ) ).
+fof(c_0_407,axiom,! [X1] : ( ~ product(e_3,e_3,X1) | ~ product(e_1,e_2,X1) ) ).
+fof(c_0_408,axiom,! [X1] : ( ~ product(e_2,e_2,X1) | ~ product(e_3,e_1,X1) ) ).
+fof(c_0_409,axiom,! [X1] : ! [X2] : ( product(e_3,e_4,e_1) | equalish(X1,e_4) | ~ product(e_3,X1,X2) | ~ product(X2,X1,e_1) ) ).
+fof(c_0_410,axiom,! [X1] : ! [X2] : ( product(e_3,e_4,e_1) | equalish(X1,e_2) | ~ product(e_3,X2,X1) | ~ product(X1,X2,e_1) ) ).
+fof(c_0_411,axiom,! [X1] : ! [X2] : ! [X3] : ( cycle(e_1,e_3) | cycle(e_1,e_2) | cycle(e_1,e_1) | ~ cycle(e_0,X1) | ~ cycle(X2,X3) | ~ greater(X1,X3) | ~ next(e_1,X2) ) ).
+fof(c_0_412,axiom,! [X1] : ( product(e_3,e_4,e_1) | equalish(X1,e_3) | ~ product(X1,e_4,e_2) ) ).
+fof(c_0_413,axiom,! [X1] : ( product(e_3,e_4,e_1) | equalish(X1,e_2) | ~ product(e_3,e_4,X1) ) ).
+fof(c_0_414,axiom,! [X1] : ( equalish(e_1,X1) | cycle(e_1,e_1) | cycle(e_1,e_2) | cycle(e_1,e_3) | ~ greater(e_0,e_0) | ~ next(e_1,X1) ) ).
+fof(c_0_415,axiom,! [X1] : ( equalish(X1,e_0) | cycle(e_1,e_1) | cycle(e_1,e_2) | cycle(e_1,e_3) | ~ cycle(e_1,X1) ) ).
+fof(c_0_416,axiom,! [X1] : ! [X2] : ( cycle(e_1,e_1) | cycle(e_1,e_2) | cycle(e_1,e_3) | ~ cycle(X1,X2) | ~ greater(e_0,X2) | ~ next(e_4,X1) ) ).
+fof(c_0_417,axiom,cycle(e_1,e_1) | cycle(e_1,e_2) | cycle(e_1,e_3) | ~ greater(e_1,e_1) ).
+fof(c_0_418,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( equalish(X1,X2) | ~ product(X2,X3,X1) | ~ product(X2,X2,X4) | ~ product(X1,X3,X4) ) ).
+fof(c_0_419,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( equalish(e_4,X1) | ~ cycle(X2,e_4) | ~ cycle(X3,X4) | ~ next(X4,X1) | ~ next(X2,X3) ) ).
+fof(c_0_420,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ cycle(e_0,X1) | ~ cycle(X2,X3) | ~ greater(X1,X3) | ~ next(e_4,X2) ) ).
+fof(c_0_421,axiom,! [X1] : ( equalish(X1,e_0) | ~ cycle(e_4,X1) ) ).
+fof(c_0_422,axiom,~ cycle(e_4,e_1) ).
+fof(c_0_423,axiom,~ cycle(e_4,e_2) ).
+fof(c_0_424,axiom,~ cycle(e_4,e_3) ).
+fof(c_0_425,axiom,~ cycle(e_3,e_0) ).
+fof(c_0_426,axiom,~ product(e_2,e_4,e_3) ).
+fof(c_0_427,axiom,~ product(e_2,e_1,e_4) ).
+fof(c_0_428,axiom,~ product(e_1,e_3,e_4) ).
+fof(c_0_429,axiom,~ product(e_3,e_2,e_4) ).
+fof(c_0_430,axiom,~ greater(e_2,e_4) ).
+fof(c_0_431,axiom,~ product(e_2,e_2,e_1) ).
+fof(c_0_432,axiom,~ product(e_3,e_3,e_1) ).
+fof(c_0_433,axiom,~ product(e_4,e_4,e_1) ).
+fof(c_0_434,axiom,~ product(e_1,e_1,e_2) ).
+fof(c_0_435,axiom,~ product(e_3,e_3,e_2) ).
+fof(c_0_436,axiom,~ product(e_4,e_4,e_2) ).
+fof(c_0_437,axiom,~ product(e_1,e_1,e_3) ).
+fof(c_0_438,axiom,~ product(e_2,e_2,e_3) ).
+fof(c_0_439,axiom,~ product(e_4,e_4,e_3) ).
+fof(c_0_440,axiom,~ product(e_1,e_1,e_4) ).
+fof(c_0_441,axiom,~ product(e_2,e_2,e_4) ).
+fof(c_0_442,axiom,~ product(e_3,e_3,e_4) ).
+fof(c_0_443,axiom,product(e_2,e_4,e_1) ).
+fof(c_0_444,axiom,! [X1] : equalish(X1,X1) ).
+fof(c_0_445,axiom,greater(e_3,e_1) ).

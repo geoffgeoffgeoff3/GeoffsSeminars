@@ -1,0 +1,20 @@
+fof(c_49,axiom,! [X0] : ! [X1] : greatest_lower_bound(X0,X1) = greatest_lower_bound(X1,X0) ).
+fof(c_50,axiom,! [X0] : ! [X1] : least_upper_bound(X0,X1) = least_upper_bound(X1,X0) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ! [X2] : greatest_lower_bound(greatest_lower_bound(X0,X1),X2) = greatest_lower_bound(X0,greatest_lower_bound(X1,X2)) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ! [X2] : least_upper_bound(least_upper_bound(X0,X1),X2) = least_upper_bound(X0,least_upper_bound(X1,X2)) ).
+fof(c_53,axiom,! [X0] : least_upper_bound(X0,X0) = X0 ).
+fof(c_54,axiom,! [X0] : greatest_lower_bound(X0,X0) = X0 ).
+fof(c_55,axiom,! [X0] : ! [X1] : least_upper_bound(X0,greatest_lower_bound(X0,X1)) = X0 ).
+fof(c_56,axiom,! [X0] : ! [X1] : greatest_lower_bound(X0,least_upper_bound(X0,X1)) = X0 ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : least_upper_bound(multiply(X0,X1),multiply(X0,X2)) = multiply(X0,least_upper_bound(X1,X2)) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ! [X2] : greatest_lower_bound(multiply(X0,X1),multiply(X0,X2)) = multiply(X0,greatest_lower_bound(X1,X2)) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ! [X2] : least_upper_bound(multiply(X0,X1),multiply(X2,X1)) = multiply(least_upper_bound(X0,X2),X1) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ! [X2] : greatest_lower_bound(multiply(X0,X1),multiply(X2,X1)) = multiply(greatest_lower_bound(X0,X2),X1) ).
+fof(c_61,axiom,! [X0] : multiply(identity,X0) = X0 ).
+fof(c_62,axiom,! [X0] : multiply(inverse(X0),X0) = identity ).
+fof(c_63,axiom,! [X0] : ! [X1] : ! [X2] : multiply(multiply(X0,X1),X2) = multiply(X0,multiply(X1,X2)) ).
+fof(c_109,axiom,! [X0] : X0 = X0 ).
+fof(c_110,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_111,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | greatest_lower_bound(X0,X2) = greatest_lower_bound(X1,X3) ) ).
+fof(c_112,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | least_upper_bound(X0,X2) = least_upper_bound(X1,X3) ) ).
+fof(c_113,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | multiply(X0,X2) = multiply(X1,X3) ) ).

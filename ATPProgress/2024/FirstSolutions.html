@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<TITLE> First Solutions </TITLE>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Solutions.png';
+  images[1]     = new Image();
+  images[1].src = 'FirstSlaney.jpg';
+  images[2]     = new Image();
+  images[2].src = 'FirstMcCune.jpg';
+  images[3]     = new Image();
+  images[3].src = 'FirstSchulz.jpg';
+  images[4]     = new Image();
+  images[4].src = 'FirstKorovin.jpg';
+  images[5]     = new Image();
+  images[5].src = 'FirstWos.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+First Solutions
+</H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME="image" SRC="Solutions.png" ALIGN=RIGHT WIDTH=33%> 
+</A>
+
+<A HREF="" onClick="putImage(1);hideshow('p1');return false">
+<H3>The Existence of Quasigroups</H3> </A>
+<SPAN ID="p1" style="display:none">
+<UL> 
+<LI> John Slaney, Otter/Prover9, 1995
+<LI> TPTP <TT>GRP</TT> domain
+</UL>
+</SPAN>
+
+<A HREF="" onClick="putImage(2);hideshow('p2');return false">
+<H3>Solution of the Robbins Problem</H3>
+</A>
+<SPAN ID="p2" style="display:none">
+<UL> 
+<LI> Bill McCune, EQP, 1996
+<LI> TPTP <TT>ROB001-1</TT>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="putImage(3);hideshow('p3');return false">
+<H3>Inner Five-segment Theorem of Tarski’s Geometry</H3>
+</A>
+<SPAN ID="p3" style="display:none">
+<UL> 
+<LI> Stephan Schulz, E, 2019
+<LI> Posed by Art Quaife, 1989
+<LI> TPTP <TT>GEO033-2</TT>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="putImage(4);hideshow('p4');return false">
+<H3>Consistency of High School Biology</H3>
+</A>
+<SPAN ID="p4" style="display:none">
+<UL> 
+<LI> Kostya Korovin, iProver, 2021
+<LI> Encoded by Michael Wessel in 2013
+<LI> TPTP <TT>BIO001+1</TT>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="putImage(5);hideshow('p5');return false">
+<H3>Circle of Pure Moufang Proofs</H3>
+</A>
+<SPAN ID="p5" style="display:none">
+<UL> 
+<LI> Larry Wos, Otter, 2021
+<LI> TPTP <TT>RNG</TT> domain
+</UL>
+</SPAN>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

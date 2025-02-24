@@ -1,0 +1,13 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ( X0 = X1 | there_exists(X0) | there_exists(X1) ) ).
+fof(c_50,axiom,! [X0] : ~ there_exists(X0) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ equivalent(X0,X1) | there_exists(X0) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ equivalent(X0,X1) | X0 = X1 ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ there_exists(X0) | equivalent(X0,X1) ) ).
+fof(c_62,axiom,! [X0] : ( ~ there_exists(X0) | equivalent(X0,X0) ) ).
+fof(c_87,axiom,! [X0] : ! [X1] : ~ equivalent(X0,X1) ).
+fof(c_89,axiom,! [X0] : ! [X1] : ( X0 = X1 | there_exists(X1) ) ).
+fof(c_93,axiom,! [X0] : ~ there_exists(X0) ).
+fof(c_99,axiom,! [X0] : ! [X1] : X0 = X1 ).
+fof(c_106,axiom,! [X0] : X0 = X0 ).
+fof(c_107,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_108,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).

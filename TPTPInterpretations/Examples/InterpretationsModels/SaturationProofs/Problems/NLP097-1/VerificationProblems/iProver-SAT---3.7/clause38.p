@@ -1,0 +1,2 @@
+include('Saturations/NLP097-1/Saturations/iProver-SAT---3.7.ax').
+fof(clause38,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ( ~ coffee(U,V) | ~ see(U,W) | ~ nonreflexive(U,W) | ~ past(U,W) | ~ agent(U,W,skf17(U,X,V)) | ~ event(U,W) | ~ event(U,Y) | ~ patient(U,Y,V) | ~ past(U,Y) | ~ nonreflexive(U,Y) | ~ drink(U,Y) | ~ patient(U,W,Z) | ~ agent(U,Y,Z) | ~ human_person(U,Z) | ~ restaurant(U,X) | ~ actual_world(U) | ~ ssSkC0 ) ).

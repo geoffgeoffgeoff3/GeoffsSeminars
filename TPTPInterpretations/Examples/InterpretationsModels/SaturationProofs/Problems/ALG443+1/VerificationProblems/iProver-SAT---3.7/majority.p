@@ -1,0 +1,2 @@
+include('Saturations/ALG443+1/Saturations/iProver-SAT---3.7.ax').
+fof(majority,conjecture,! [X] : ! [Y] : f(X,X,Y) = X ).

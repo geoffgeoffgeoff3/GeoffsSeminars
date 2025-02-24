@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE> Symbolic Checking of Statistical Solutions </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT>
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'ChatGPT.png';
+images[1]     = new Image();
+images[1].src = 'LogicLLM.png';
+
+function putImage (index) {
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN-JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER>Symbolic Checking of Statistical Solutions</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME='image' SRC="ChatGPT.png" BORDER=0 ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> The Problem </H3>
+<UL>
+<LI> Statistical tools (ML, LLMs, etc) are probabilistic
+<LI> Wrong answers, inconsistent answers, uninformed answers
+<LI> Well spoken lies are not truths (ask any politician)
+</UL>
+
+<H3> A Solution (this is not all a new idea) </H3>
+<UL>
+<LI> Translate "scruffy" representations to logical formalisms<BR>
+     e.g., <A HREF="https://www.ontologyportal.org/">SUMO</A> 
+     comments to TFF, prompts to conjectures
+<LI> Use the statistical answer to select axioms, refine conjectures
+<LI> Check the statistical answer is a theorem
+<LI> A basis for verifiable and explainable AI
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

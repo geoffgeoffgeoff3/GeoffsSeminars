@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE> Contents </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+<!---------------------------------------------------------------------->
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'Tarski.jpg';
+images[1]     = new Image();
+images[1].src = 'Herbrand.jpg';
+images[2]     = new Image();
+images[2].src = 'Kripke.jpg';
+
+function putImage (index) {
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+TPTP World Standards and Tools for <BR>
+Tarskian and Kripke Interpretations
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="Tarski.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>The <A HREF="../TPTPWorld/Contents.html">TPTP World</A></H3>
+
+<H3>Interpretations and Models</H3>
+<UL>
+<LI> What do we <A HREF="NeedForInterpretations.html">Need</A>?</H3>
+<LI> What do we <A HREF="TypesOfInterpretations.html">Have</A>?</H3>
+</UL>
+
+<H3> Representing D+M Interpretations </H3>
+<UL>
+<LI> Tarskian Interpretations in <A HREF="TarskianInTF0.shtml">One TF0 Formula</A>
+<LI> Tarskian Interpretations in <A HREF="TarskianInTF0Split.shtml">One TF0 File</A>
+<LI> Tarskian Interpretations with <A HREF="TarskianInTF0SeparateDomains.shtml">Separate Domains</A>
+<LI> Kripke Interpretations in <A HREF="KripkeInTX0.shtml">One TX0 Formula</A>
+<LI> Kripke Interpretations in <A HREF="KripkeInTX0Split.shtml">One TX0 File</A>
+</UL>
+
+
+<H3>Tools for Interpretations</H3>
+<UL>
+<LI> The <A HREF="../AGMV/Summary.html">AGMV</A> Model Verifier
+<LI> The <A HREF="../IIV/Summary.html">IIV</A> Interactive Interpretation Viewer
+</UL>
+
+<H3><A HREF="Conclusion.html">Conclusion</A></H3>
+
+<CENTER>
+<H3>The End - Any Questions?</H3>
+</CENTER>
+
+<H3>Advertisement: <A HREF="https://worldtour.tptp.org/">The TPTP World Tour</A></H3>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

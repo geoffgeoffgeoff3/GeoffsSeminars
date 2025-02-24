@@ -1,0 +1,138 @@
+fof(u153,axiom,substitution_of_equivalents ).
+fof(u157,axiom,equivalence_3 ).
+fof(u161,axiom,equivalence_2 ).
+fof(u165,axiom,equivalence_1 ).
+fof(u169,axiom,or_3 ).
+fof(u173,axiom,or_2 ).
+fof(u177,axiom,or_1 ).
+fof(u181,axiom,and_3 ).
+fof(u185,axiom,and_2 ).
+fof(u189,axiom,and_1 ).
+fof(u193,axiom,implies_3 ).
+fof(u197,axiom,implies_2 ).
+fof(u201,axiom,implies_1 ).
+fof(u205,axiom,modus_tollens ).
+fof(u209,axiom,modus_ponens ).
+fof(u213,axiom,op_or ).
+fof(u217,axiom,op_implies_and ).
+fof(u221,axiom,op_equiv ).
+fof(u225,axiom,! [X0] : ! [X1] : is_a_theorem(implies(X0,or(X0,X1))) ).
+fof(u229,axiom,! [X1] : ! [X0] : is_a_theorem(implies(X1,or(X0,X1))) ).
+fof(u233,axiom,! [X0] : ! [X1] : is_a_theorem(implies(X0,implies(X1,X0))) ).
+fof(u237,axiom,! [X0] : ! [X1] : is_a_theorem(implies(and(X0,X1),X0)) ).
+fof(u241,axiom,! [X0] : ! [X1] : is_a_theorem(implies(and(X0,X1),X1)) ).
+fof(u245,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(equiv(X0,X1)) | X0 = X1 ) ).
+fof(u249,axiom,! [X0] : ! [X1] : is_a_theorem(implies(X0,implies(X1,and(X0,X1)))) ).
+fof(u253,axiom,! [X0] : ! [X1] : is_a_theorem(implies(equiv(X0,X1),implies(X0,X1))) ).
+fof(u257,axiom,! [X0] : ! [X1] : is_a_theorem(implies(equiv(X0,X1),implies(X1,X0))) ).
+fof(u261,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(implies(X0,X1)) | ~ is_a_theorem(X0) | is_a_theorem(X1) ) ).
+fof(u265,axiom,! [X0] : ! [X1] : implies(X0,X1) = not(and(X0,not(X1))) ).
+fof(u277,axiom,! [X0] : ! [X1] : or(X0,X1) = not(and(not(X0),not(X1))) ).
+fof(u281,axiom,! [X0] : ! [X1] : ( is_a_theorem(or(X0,X1)) | ~ is_a_theorem(X0) ) ).
+fof(u285,axiom,! [X3] : ! [X2] : ( is_a_theorem(or(X3,X2)) | ~ is_a_theorem(X2) ) ).
+fof(u289,axiom,! [X1] : ! [X0] : is_a_theorem(implies(implies(not(X1),not(X0)),implies(X0,X1))) ).
+fof(u293,axiom,! [X5] : ! [X4] : ( is_a_theorem(implies(X5,X4)) | ~ is_a_theorem(X4) ) ).
+fof(u298,axiom,! [X0] : ! [X1] : is_a_theorem(implies(implies(X0,implies(X0,X1)),implies(X0,X1))) ).
+fof(u302,axiom,! [X8] : ! [X9] : ( ~ is_a_theorem(and(X8,X9)) | is_a_theorem(X8) ) ).
+fof(u306,axiom,! [X10] : ! [X11] : ( ~ is_a_theorem(and(X10,X11)) | is_a_theorem(X11) ) ).
+fof(u311,axiom,! [X7] : ! [X6] : ( is_a_theorem(implies(X7,and(X6,X7))) | ~ is_a_theorem(X6) ) ).
+fof(u316,axiom,! [X0] : ! [X1] : equiv(X0,X1) = and(implies(X0,X1),implies(X1,X0)) ).
+fof(u320,axiom,! [X12] : ! [X13] : ( ~ is_a_theorem(equiv(X12,X13)) | is_a_theorem(implies(X12,X13)) ) ).
+fof(u324,axiom,! [X14] : ! [X15] : ( ~ is_a_theorem(equiv(X14,X15)) | is_a_theorem(implies(X15,X14)) ) ).
+fof(u338,axiom,! [X2] : ! [X3] : implies(not(X2),X3) = or(X2,X3) ).
+fof(u360,axiom,! [X10] : ! [X11] : is_a_theorem(or(X10,implies(X11,not(X10)))) ).
+fof(u370,axiom,! [X18] : ! [X19] : is_a_theorem(or(X18,or(not(X18),X19))) ).
+fof(u374,axiom,! [X0] : ! [X1] : is_a_theorem(implies(implies(X0,X1),implies(implies(X1,X0),equiv(X0,X1)))) ).
+fof(u383,axiom,! [X20] : ! [X21] : is_a_theorem(or(X20,or(X21,not(X20)))) ).
+fof(u392,axiom,! [X0] : ! [X1] : ! [X2] : is_a_theorem(implies(implies(X0,X1),implies(implies(X1,X2),implies(X0,X2)))) ).
+fof(u396,axiom,! [X0] : ! [X1] : ( is_a_theorem(and(X0,X1)) | ~ is_a_theorem(X1) | ~ is_a_theorem(X0) ) ).
+fof(u402,axiom,! [X2] : ! [X3] : ( ~ is_a_theorem(not(X2)) | ~ is_a_theorem(or(X2,X3)) | is_a_theorem(X3) ) ).
+fof(u420,axiom,! [X5] : ! [X4] : is_a_theorem(implies(equiv(X5,not(X4)),or(X4,X5))) ).
+fof(u430,axiom,! [X1] : ! [X0] : is_a_theorem(implies(or(X1,not(X0)),implies(X0,X1))) ).
+fof(u438,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(or(X0,not(X1))) | is_a_theorem(implies(X1,X0)) ) ).
+fof(u449,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(not(X0)) | is_a_theorem(implies(X0,X1)) ) ).
+fof(u455,axiom,! [X6] : ! [X7] : is_a_theorem(implies(equiv(not(X6),X7),or(X6,X7))) ).
+fof(u471,axiom,! [X12] : ! [X13] : is_a_theorem(or(X12,implies(X13,and(not(X12),X13)))) ).
+fof(u481,axiom,! [X0] : ! [X2] : ! [X1] : is_a_theorem(implies(implies(X0,X2),implies(implies(X1,X2),implies(or(X0,X1),X2)))) ).
+fof(u485,axiom,! [X14] : ! [X15] : ( is_a_theorem(or(X14,and(X15,not(X14)))) | ~ is_a_theorem(X15) ) ).
+fof(u494,axiom,! [X17] : ! [X16] : is_a_theorem(implies(X17,or(X16,and(X17,not(X16))))) ).
+fof(u508,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(equiv(X0,not(X1))) | is_a_theorem(or(X1,X0)) ) ).
+fof(u517,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(implies(X0,implies(X0,X1))) | is_a_theorem(implies(X0,X1)) ) ).
+fof(u532,axiom,! [X0] : is_a_theorem(implies(X0,X0)) ).
+fof(u538,axiom,! [X2] : ! [X0] : ! [X1] : implies(X2,and(X0,not(X1))) = not(and(X2,implies(X0,X1))) ).
+fof(u542,axiom,! [X0] : is_a_theorem(or(X0,not(X0))) ).
+fof(u552,axiom,! [X1] : is_a_theorem(implies(X1,and(X1,X1))) ).
+fof(u556,axiom,! [X0] : ! [X1] : ! [X2] : or(and(X0,not(X1)),X2) = implies(implies(X0,X1),X2) ).
+fof(u563,axiom,! [X0] : ( is_a_theorem(and(X0,X0)) | ~ is_a_theorem(X0) ) ).
+fof(u600,axiom,! [X0] : is_a_theorem(equiv(X0,X0)) ).
+fof(u608,axiom,! [X4] : is_a_theorem(implies(implies(X4,X4),equiv(X4,X4))) ).
+fof(u612,axiom,! [X1] : ! [X2] : ! [X0] : ( is_a_theorem(implies(implies(X1,X2),implies(X0,X2))) | ~ is_a_theorem(implies(X0,X1)) ) ).
+fof(u618,axiom,! [X0] : is_a_theorem(or(X0,and(not(X0),not(X0)))) ).
+fof(u636,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(equiv(not(X0),X1)) | is_a_theorem(or(X0,X1)) ) ).
+fof(u645,axiom,! [X0] : ! [X1] : is_a_theorem(implies(or(X0,or(X0,X1)),or(X0,X1))) ).
+fof(u677,axiom,! [X1] : ! [X0] : is_a_theorem(implies(or(X1,not(not(X0))),or(X0,X1))) ).
+fof(u690,axiom,! [X3] : ! [X4] : ! [X5] : or(and(not(X3),not(X4)),X5) = implies(or(X3,X4),X5) ).
+fof(u694,axiom,! [X6] : ! [X7] : is_a_theorem(implies(implies(X6,X7),implies(or(X6,X6),X7))) ).
+fof(u702,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(or(X0,or(X0,X1))) | is_a_theorem(or(X0,X1)) ) ).
+fof(u789,axiom,! [X1] : ! [X0] : is_a_theorem(or(X1,or(X0,and(not(X1),not(X0))))) ).
+fof(u815,axiom,! [X2] : ! [X0] : ! [X1] : is_a_theorem(implies(or(X2,implies(X0,X1)),implies(and(X0,not(X1)),X2))) ).
+fof(u819,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(or(X0,not(not(X1)))) | is_a_theorem(or(X1,X0)) ) ).
+fof(u834,axiom,! [X1] : ! [X2] : ( ~ is_a_theorem(not(not(X1))) | is_a_theorem(or(X1,X2)) ) ).
+fof(u853,axiom,! [X0] : ! [X1] : ( is_a_theorem(implies(or(X0,X0),X1)) | ~ is_a_theorem(implies(X0,X1)) ) ).
+fof(u864,axiom,! [X2] : ! [X0] : ! [X1] : or(X2,and(X0,not(X1))) = not(and(not(X2),implies(X0,X1))) ).
+fof(u868,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(or(X0,X0)) | ~ is_a_theorem(implies(X0,X1)) | is_a_theorem(X1) ) ).
+fof(u877,axiom,! [X0] : ! [X1] : ! [X2] : is_a_theorem(implies(and(X0,not(X1)),implies(implies(X0,X1),X2))) ).
+fof(u952,axiom,! [X6] : ! [X7] : ! [X8] : ( is_a_theorem(implies(implies(X6,X7),X8)) | ~ is_a_theorem(and(X6,not(X7))) ) ).
+fof(u959,axiom,! [X5] : ! [X3] : ! [X4] : or(X5,and(not(X3),not(X4))) = not(and(not(X5),or(X3,X4))) ).
+fof(u963,axiom,! [X0] : ! [X1] : ! [X2] : ( is_a_theorem(implies(and(X0,not(X1)),X2)) | ~ is_a_theorem(implies(X0,X1)) ) ).
+fof(u974,axiom,! [X0] : is_a_theorem(implies(or(X0,not(X0)),equiv(not(X0),not(X0)))) ).
+fof(u978,axiom,! [X4] : ! [X2] : ! [X3] : implies(X4,and(not(X2),not(X3))) = not(and(X4,or(X2,X3))) ).
+fof(u996,axiom,! [X2] : is_a_theorem(X2) ).
+fof(u1131,axiom,! [X5] : ! [X3] : ! [X4] : is_a_theorem(implies(or(X5,or(X3,X4)),implies(and(not(X3),not(X4)),X5))) ).
+fof(u1694,axiom,! [X9] : ! [X10] : is_a_theorem(not(and(and(not(X9),not(X10)),or(X9,X10)))) ).
+fof(u2361,axiom,! [X11] : ! [X10] : ( is_a_theorem(implies(implies(X11,X10),equiv(X10,X11))) | ~ is_a_theorem(implies(X10,X11)) ) ).
+fof(u2446,axiom,! [X0] : ! [X1] : ! [X2] : is_a_theorem(implies(or(X0,X1),implies(implies(X1,X2),or(X0,X2)))) ).
+fof(u2570,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(implies(implies(X0,X1),X0)) | is_a_theorem(implies(implies(X0,X1),X1)) ) ).
+fof(u2582,axiom,! [X4] : ! [X5] : ( is_a_theorem(implies(implies(X4,X5),X5)) | ~ is_a_theorem(X4) ) ).
+fof(u2618,axiom,! [X0] : ! [X1] : ( is_a_theorem(implies(or(X0,X1),X1)) | ~ is_a_theorem(not(X0)) ) ).
+fof(u2629,axiom,! [X2] : ! [X1] : ! [X0] : ( is_a_theorem(implies(implies(X2,X1),implies(or(X0,X2),X1))) | ~ is_a_theorem(implies(X0,X1)) ) ).
+fof(u2633,axiom,! [X3] : ! [X4] : ! [X2] : ( ~ is_a_theorem(implies(X3,X4)) | ~ is_a_theorem(implies(X2,X3)) | is_a_theorem(implies(X2,X4)) ) ).
+fof(u2676,axiom,! [X5] : ! [X7] : ! [X6] : ( is_a_theorem(implies(X5,implies(X7,X6))) | ~ is_a_theorem(implies(X5,X6)) ) ).
+fof(u2702,axiom,! [X11] : ! [X12] : ( is_a_theorem(implies(X11,and(X12,X12))) | ~ is_a_theorem(implies(X11,X12)) ) ).
+fof(u2773,axiom,! [X16] : ! [X17] : ! [X18] : ( is_a_theorem(implies(X16,or(X17,X18))) | ~ is_a_theorem(implies(X16,X17)) ) ).
+fof(u2785,axiom,! [X19] : ! [X21] : ! [X20] : ( is_a_theorem(implies(X19,or(X21,X20))) | ~ is_a_theorem(implies(X19,X20)) ) ).
+fof(u2789,axiom,! [X2] : ! [X1] : ! [X0] : ( is_a_theorem(implies(implies(X2,X1),or(X0,X1))) | ~ is_a_theorem(or(X0,X2)) ) ).
+fof(u2800,axiom,! [X70] : ! [X71] : ! [X72] : ( ~ is_a_theorem(implies(X70,and(X71,X72))) | is_a_theorem(implies(X70,X71)) ) ).
+fof(u2831,axiom,! [X8] : ! [X9] : ! [X7] : ( ~ is_a_theorem(and(X8,X9)) | is_a_theorem(implies(X7,X8)) ) ).
+fof(u2838,axiom,! [X16] : ! [X17] : ! [X18] : is_a_theorem(implies(and(and(X16,X17),X18),X16)) ).
+fof(u2842,axiom,! [X6] : ! [X7] : ! [X8] : is_a_theorem(implies(and(not(X6),not(X7)),implies(or(X6,X7),X8))) ).
+fof(u2851,axiom,! [X19] : ! [X20] : ! [X21] : is_a_theorem(implies(and(X19,and(X20,X21)),X20)) ).
+fof(u2884,axiom,! [X4] : ! [X5] : ! [X6] : ( ~ is_a_theorem(and(and(X4,X5),X6)) | is_a_theorem(X4) ) ).
+fof(u2891,axiom,! [X4] : ! [X5] : ! [X6] : ( ~ is_a_theorem(and(X4,and(X5,X6))) | is_a_theorem(X5) ) ).
+fof(u2895,axiom,! [X12] : ! [X13] : ! [X14] : ( ~ is_a_theorem(and(not(X12),not(X13))) | is_a_theorem(implies(or(X12,X13),X14)) ) ).
+fof(u2902,axiom,! [X73] : ! [X74] : ! [X75] : ( ~ is_a_theorem(implies(X73,and(X74,X75))) | is_a_theorem(implies(X73,X75)) ) ).
+fof(u2941,axiom,! [X9] : ! [X8] : ! [X7] : ( ~ is_a_theorem(and(X9,X8)) | is_a_theorem(implies(X7,X8)) ) ).
+fof(u2948,axiom,! [X16] : ! [X17] : ! [X18] : is_a_theorem(implies(and(and(X16,X17),X18),X17)) ).
+fof(u2952,axiom,! [X0] : ! [X1] : equiv(not(X0),X1) = and(or(X0,X1),implies(X1,not(X0))) ).
+fof(u2962,axiom,! [X19] : ! [X20] : ! [X21] : is_a_theorem(implies(and(X19,and(X20,X21)),X21)) ).
+fof(u3005,axiom,! [X4] : ! [X5] : ! [X6] : ( ~ is_a_theorem(and(and(X4,X5),X6)) | is_a_theorem(X5) ) ).
+fof(u3013,axiom,! [X4] : ! [X5] : ! [X6] : ( ~ is_a_theorem(and(X4,and(X5,X6))) | is_a_theorem(X6) ) ).
+fof(u3017,axiom,! [X1] : ! [X0] : equiv(X1,not(X0)) = and(implies(X1,not(X0)),or(X0,X1)) ).
+fof(u3025,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(not(X0)) | is_a_theorem(implies(or(X0,X0),X1)) ) ).
+fof(u3075,axiom,! [X6] : ! [X7] : ! [X8] : ( ~ is_a_theorem(implies(X6,X7)) | ~ is_a_theorem(X6) | is_a_theorem(implies(X8,X7)) ) ).
+fof(u3130,axiom,! [X73] : ! [X72] : is_a_theorem(implies(X73,equiv(X72,X72))) ).
+fof(u3134,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ is_a_theorem(or(X2,implies(X0,X1))) | is_a_theorem(implies(and(X0,not(X1)),X2)) ) ).
+fof(u3143,axiom,! [X0] : ! [X1] : is_a_theorem(or(X0,equiv(X1,X1))) ).
+fof(u3166,axiom,! [X0] : ! [X1] : is_a_theorem(implies(and(X0,not(not(X1))),X1)) ).
+fof(u3170,axiom,! [X2] : ! [X0] : ! [X1] : is_a_theorem(implies(implies(X2,not(X0)),implies(or(X0,X1),implies(X2,X1)))) ).
+fof(u3188,axiom,! [X6] : ! [X7] : ( ~ is_a_theorem(and(X6,not(not(X7)))) | is_a_theorem(X7) ) ).
+fof(u3222,axiom,! [X0] : ( ~ is_a_theorem(not(not(X0))) | is_a_theorem(X0) ) ).
+fof(u3231,axiom,! [X6] : ! [X7] : ! [X5] : ( is_a_theorem(implies(X6,implies(X7,X5))) | ~ is_a_theorem(X5) ) ).
+fof(u3235,axiom,! [X0] : ! [X1] : ! [X2] : ( is_a_theorem(implies(or(X0,X1),implies(X2,X1))) | ~ is_a_theorem(implies(X2,not(X0))) ) ).
+fof(u3247,axiom,! [X16] : ! [X15] : ( is_a_theorem(implies(X16,and(X15,X15))) | ~ is_a_theorem(X15) ) ).
+fof(u3273,axiom,! [X24] : ! [X23] : ! [X25] : ( is_a_theorem(implies(X24,or(X23,X25))) | ~ is_a_theorem(X23) ) ).
+fof(u3284,axiom,! [X27] : ! [X28] : ! [X26] : ( is_a_theorem(implies(X27,or(X28,X26))) | ~ is_a_theorem(X26) ) ).
+fof(u3288,axiom,! [X0] : ! [X1] : implies(implies(X0,X1),and(X1,not(X0))) = not(equiv(X0,X1)) ).
+fof(u3299,axiom,! [X8] : ! [X9] : is_a_theorem(implies(implies(equiv(X8,X8),X9),X9)) ).
+fof(u3403,axiom,! [X0] : ! [X1] : ! [X2] : ( is_a_theorem(or(X0,implies(X1,X2))) | ~ is_a_theorem(X2) ) ).
+fof(u3735,axiom,! [X0] : ! [X1] : X0 = X1 ).

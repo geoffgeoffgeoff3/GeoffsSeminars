@@ -1,0 +1,7 @@
+fof(clause2,axiom,! [X0] : ! [X1] : ( f(X0,z(X0,X1)) | f(a,a) ) ).
+fof(clause4,axiom,! [X0] : ! [X1] : ( f(X0,X1) | ~ f(a,a) ) ).
+fof(clause1,axiom,! [X0] : ! [X1] : ( f(a,z(X0,X1)) | f(a,a) ) ).
+fof(clause3,axiom,! [X1] : ( f(a,a) | ~ f(X1,a) ) ).
+fof(u8,axiom,! [X0] : ~ f(X0,a) ).
+fof(u7,axiom,~ f(a,a) ).
+fof(clause5,axiom,! [X0] : ! [X1] : ( ~ f(z(X0,X1),z(X0,X1)) | ~ f(a,a) ) ).

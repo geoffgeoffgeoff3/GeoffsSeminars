@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE> Solution of the Robbins Problem </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT>
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'Robbins.jpg';
+images[1]     = new Image();
+images[1].src = 'Huntington.jpg';
+images[2]     = new Image();
+images[2].src = 'Tarski.jpg';
+images[3]     = new Image();
+images[3].src = 'McCune.jpg';
+images[4]     = new Image();
+images[4].src = 'Winkler.png';
+
+function putImage (index) {
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Solution of the Robbins Problem </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="Robbins.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>The Problem</H3>
+<UL>
+<LI> Is every Robbins algebra Boolean?
+     [<A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=ROB&File=ROB001-1.p">Win90</A>]
+<LI> Posed by
+     <A HREF="" onClick="putImage(0);return false">Herbert Robbins</A> and
+     <A HREF="" onClick="putImage(1);return false">Edward Huntington</A> and
+<LI> Basically, can Robbins' axiom replace Huntington's axiom
+<LI> Unsolved despite efforts of <A HREF="" onClick="putImage(2);return false">Alfred Tarski</A>
+</UL>
+
+<H3>The Solution</H3>
+<UL>
+<LI> Every Robbins algebra is Booean!
+<LI> <A HREF="https://calculemus.org/MathUniversalis/4/6robbins.html">Solved</A> by 
+     <A HREF="" onClick="putImage(3);return false">Bill McCune</A> using 
+     <A HREF="https://www.mcs.anl.gov/research/projects/AR/eqp/" TARGET=_blank>EQP</A> in 1996
+<LI> Builds on work by <A HREF="" onClick="putImage(4);return false">Steve Winker</A>
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

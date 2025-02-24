@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE> GDV-LP </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var currentIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'GDV.png';
+  images[1]     = new Image();
+  images[1].src = 'GDV-LP.png';
+
+  function nextImage () {
+      currentIndex = (currentIndex + 1) % 3;
+      document.images['image'].src = images[currentIndex].src;
+  }
+
+  function showImage (index) {
+      currentIndex = index;
+      document.images['image'].src = images[currentIndex].src;
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> GDV + LambdaPi = GDV-LP </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="GDV.png" ALIGN=RIGHT WIDTH=45%>
+</A>
+
+<A HREF="" onClick="showImage(0);return false"><H3> GDV </H3></A>
+<UL>
+<LI> Relies on trusted ATP
+<LI> You don't trust ATP, but you trust Dedukti?
+</UL>
+
+<A HREF="" onClick="showImage(1);return false"><H3> GDV-LP </H3></A>
+<UL>
+<LI> Does all the GDV goodness
+<LI> Uses ZenonModulo as the trusted prover
+     <UL>
+     <LI> ZenonModulo generates LambdaPi terms
+     </UL>
+<LI> LambdaPi terms checked in the Dedukti framework
+     <UL>
+     <LI> Each LambdaPi file <TT>require</TT>s it's parent files
+     </UL>
+<LI> For CNF, FOF, and TFF (so far)
+</UL>
+
+<H3> Work in Progress </H3>
+<UL>
+<LI> Merging the LambdaPi terms
+<LI> Large scale testing
+<LI> Verification of <A HREF="Skolemization.html">Skolemization steps</A> 
+<LI> THF using Leo-III instead of ZenonModulo
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

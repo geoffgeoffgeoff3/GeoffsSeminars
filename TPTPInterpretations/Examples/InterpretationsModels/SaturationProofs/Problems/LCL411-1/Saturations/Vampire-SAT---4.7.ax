@@ -1,0 +1,8 @@
+fof(rule_3,axiom,! [X3] : ! [X5] : ! [X4] : ( theorem(or(not(X3),X5)) | ~ axiom(or(not(X3),X4)) | ~ theorem(or(not(X4),X5)) ) ).
+fof(rule_1,axiom,! [X3] : ( theorem(X3) | ~ axiom(X3) ) ).
+fof(rule_2,axiom,! [X3] : ! [X4] : ( theorem(X3) | ~ theorem(X4) | ~ axiom(or(not(X4),X3)) ) ).
+fof(axiom_1_3,axiom,! [X0] : ! [X1] : axiom(or(not(X0),or(X1,X0))) ).
+fof(axiom_1_6,axiom,! [X0] : ! [X1] : ! [X2] : axiom(or(not(or(not(X0),X1)),or(not(or(X2,X0)),or(X2,X1)))) ).
+fof(axiom_1_5,axiom,! [X0] : ! [X1] : ! [X2] : axiom(or(not(or(X0,or(X1,X2))),or(X1,or(X0,X2)))) ).
+fof(axiom_1_4,axiom,! [X0] : ! [X1] : axiom(or(not(or(X0,X1)),or(X1,X0))) ).
+fof(axiom_1_2,axiom,! [X0] : axiom(or(not(or(X0,X0)),X0)) ).

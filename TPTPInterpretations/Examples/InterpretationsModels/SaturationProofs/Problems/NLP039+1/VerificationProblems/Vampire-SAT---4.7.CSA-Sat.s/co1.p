@@ -1,0 +1,2 @@
+include('Saturations/NLP039+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ( ! [W] : ( member(U,W,V) => ? [X] : ? [Y] : ( table(U,X) & ! [Z] : ( member(U,Z,Y) => ? [X1] : ( event(U,X1) & agent(U,X1,W) & present(U,X1) & sit(U,X1) & at(U,X1,X) & with(U,X1,Z) ) ) & group(U,Y) & ! [X2] : ( member(U,X2,Y) => hamburger(U,X2) ) ) ) & three(U,V) & group(U,V) & ! [X3] : ( member(U,X3,V) => ( guy(U,X3) & young(U,X3) ) ) ) ) ) )).

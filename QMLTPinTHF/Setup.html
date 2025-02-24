@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE> Experimental Setup </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Experimental Setup </H1>
+
+<IMG SRC="StarExec.png" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> QMLTP Library </H3>
+<UL>
+<LI> Used <A HREF="http://www.iltp.de/qmltp/problems.html">
+     QMLTP library v1.1</A>
+<LI> Fixed (what we saw as) syntax and semantic errors
+<LI> 600 problems; domains in 5 groups
+     <UL>
+     <LI> APM - Mixed applications. 10 problems.
+     <LI> G?? - G&ouml;del encodings of TPTP problems. 245 problems.
+     <LI> MML - Multi-modal problems. 20 problems. One specified logic.
+     <LI> NLP and SET - Classical logic problems. 80 problems.
+     <LI> SYM - Syntactic problems. 245 problems.
+     </UL>
+<LI> Results for some semantic variations provided
+</UL>
+
+<H3> Process </H3>
+<UL>
+<LI> Convert from QMLTP syntax to NX0.
+<LI> Add 20 logic specifications (5 modal systems, 4 domain types) to 
+     non-MML<BR>
+     Add 1 specified logic to MML problems
+<LI> Translate the 11620 NX0 problems to THF 
+<LI> Run THF ATP systems on all problems
+      <UL>
+      <LI> agsyHOL 1.0, cvc5 1.0, E 2.6, HOLyHammer 0.21, lambdaE 22.03.23,<BR>
+           Leo-III 1.6.6, Satallax 3.5, Vampire 4.6.1, Zipperposition 2.1
+      <LI> StarExec Miami - Octa-core Intel Xeon @ 2.10GHz, 128GB memory
+      <LI> 180s CPU limit
+      </UL>
+<LI> Not all the 11620 THF problems are theorems
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

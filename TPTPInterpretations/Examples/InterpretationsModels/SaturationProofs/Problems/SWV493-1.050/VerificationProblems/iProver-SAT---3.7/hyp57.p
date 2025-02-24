@@ -1,0 +1,2 @@
+include('Saturations/SWV493-1.050/Saturations/iProver-SAT---3.7.ax').
+fof(hyp57,conjecture,i39 != i48 ).

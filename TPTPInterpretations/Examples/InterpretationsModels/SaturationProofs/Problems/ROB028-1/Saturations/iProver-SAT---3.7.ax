@@ -1,0 +1,7 @@
+fof(c_49,axiom,! [X0] : ! [X1] : add(X0,X1) = add(X1,X0) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : add(add(X0,X1),X2) = add(X0,add(X1,X2)) ).
+fof(c_51,axiom,! [X0] : ! [X1] : negate(add(negate(add(X0,X1)),negate(add(X0,negate(X1))))) = X0 ).
+fof(c_61,axiom,! [X0] : X0 = X0 ).
+fof(c_62,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | add(X0,X2) = add(X1,X3) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ( X0 != X1 | negate(X0) = negate(X1) ) ).

@@ -1,0 +1,2 @@
+include('Saturations/HWV042+2/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(pathAxiom_104,conjecture,nextState(constB104,constB105) ).

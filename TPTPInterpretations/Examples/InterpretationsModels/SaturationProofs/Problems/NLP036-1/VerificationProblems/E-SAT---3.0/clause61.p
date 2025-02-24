@@ -1,0 +1,2 @@
+include('Saturations/NLP036-1/Saturations/E-SAT---3.0.ax').
+fof(clause61,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ( ~ member(skc2,U,skf9(V)) | ~ member(skc2,V,skc3) | sit(skc2,skf10(W,X)) ) ).

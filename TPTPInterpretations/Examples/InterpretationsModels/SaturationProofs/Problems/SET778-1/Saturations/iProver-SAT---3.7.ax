@@ -1,0 +1,12 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ union(X0,X1,X2) | ~ member(X3,X2) | member(X3,X0) | member(X3,X1) ) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ union(X0,X1,X2) | ~ member(X3,X0) | member(X3,X2) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ union(X0,X1,X2) | ~ member(X3,X1) | member(X3,X2) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ! [X2] : ( member(g(X0,X1,X2),X0) | member(g(X0,X1,X2),X1) | member(g(X0,X1,X2),X2) | union(X0,X1,X2) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(g(X0,X1,X2),X0) | ~ member(g(X0,X1,X2),X2) | union(X0,X1,X2) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(g(X0,X1,X2),X1) | ~ member(g(X0,X1,X2),X2) | union(X0,X1,X2) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(X0,X1) | ~ subset(X1,X2) | member(X0,X2) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ( member(member_of_1_not_of_2(X0,X1),X0) | subset(X0,X1) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ( ~ member(member_of_1_not_of_2(X0,X1),X1) | subset(X0,X1) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ( ~ equal_sets(X0,X1) | subset(X0,X1) ) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ( ~ equal_sets(X0,X1) | subset(X1,X0) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ( ~ subset(X0,X1) | ~ subset(X1,X0) | equal_sets(X1,X0) ) ).

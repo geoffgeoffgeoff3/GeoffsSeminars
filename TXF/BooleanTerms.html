@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE> Boolean Terms </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Boolean Terms </H1>
+
+<IMG SRC="Boolean.jpg" BORDER=0 ALIGN=RIGHT WIDTH=30%>
+
+<H3> The Idea </H3>
+<UL>
+<LI> Variables of type <TT>$o</TT> as formulae 
+<LI> Formulae (including variables) as terms
+<LI> BNF: Atomic formulae as terms
+</UL>
+
+<H3> Examples </H3>
+<UL>
+<LI> <TT>! [X: $o]: (X | ~X)</TT>
+<LI> <TT>imply: ($o * $o) > $o</TT><BR>
+     <TT>! [X:$o,Y:$o]: (imply(X,Y) <=> (~X | Y))</TT>
+<LI> <TT>dom: $tType</TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TT>ran: $tType</TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <TT>p: (dom * ran) > $o</TT><BR>
+     <TT>! [X:dom,Y:ran,Z:ran]: imply(p(X,Y) & p(X,Z), Y = Z)</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

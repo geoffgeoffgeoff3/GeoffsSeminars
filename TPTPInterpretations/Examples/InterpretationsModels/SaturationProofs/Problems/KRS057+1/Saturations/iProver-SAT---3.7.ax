@@ -1,0 +1,38 @@
+fof(f8,axiom,! [X2] : ( ~ cowlNothing(X2) & cowlThing(X2) ) ).
+fof(f9,axiom,! [X2] : ( xsd_string(X2) <=> ~ xsd_integer(X2) ) ).
+fof(f11,axiom,! [X2] : ( ( iA = X2 <=> ~ cD(X2) ) & ( cC(X2) <=> ~ cD(X2) ) & ( cC(X2) <=> iA = X2 ) & ( cB(X2) <=> ~ cD(X2) ) & ( cB(X2) <=> iA = X2 ) & ( cB(X2) <=> cC(X2) ) ) ).
+fof(f12,axiom,! [X0] : ( ~ cowlNothing(X0) & cowlThing(X0) ) ).
+fof(f13,axiom,! [X0] : ( xsd_string(X0) <=> ~ xsd_integer(X0) ) ).
+fof(f14,axiom,! [X0] : ( ( iA = X0 <=> ~ cD(X0) ) & ( cC(X0) <=> ~ cD(X0) ) & ( cC(X0) <=> iA = X0 ) & ( cB(X0) <=> ~ cD(X0) ) & ( cB(X0) <=> iA = X0 ) & ( cB(X0) <=> cC(X0) ) ) ).
+fof(f29,axiom,! [X0] : ( ( xsd_string(X0) | xsd_integer(X0) ) & ( ~ xsd_integer(X0) | ~ xsd_string(X0) ) ) ).
+fof(f30,axiom,! [X0] : ( ( iA = X0 | cD(X0) ) & ( ~ cD(X0) | iA != X0 ) & ( cC(X0) | cD(X0) ) & ( ~ cD(X0) | ~ cC(X0) ) & ( cC(X0) | iA != X0 ) & ( iA = X0 | ~ cC(X0) ) & ( cB(X0) | cD(X0) ) & ( ~ cD(X0) | ~ cB(X0) ) & ( cB(X0) | iA != X0 ) & ( iA = X0 | ~ cB(X0) ) & ( cB(X0) | ~ cC(X0) ) & ( cC(X0) | ~ cB(X0) ) ) ).
+fof(f31,axiom,! [X0] : ( ( iA = X0 | cD(X0) ) & ( ~ cD(X0) | iA != X0 ) & ( cC(X0) | cD(X0) ) & ( ~ cD(X0) | ~ cC(X0) ) & ( cC(X0) | iA != X0 ) & ( iA = X0 | ~ cC(X0) ) & ( cB(X0) | cD(X0) ) & ( ~ cD(X0) | ~ cB(X0) ) & ( cB(X0) | iA != X0 ) & ( iA = X0 | ~ cB(X0) ) & ( cB(X0) | ~ cC(X0) ) & ( cC(X0) | ~ cB(X0) ) ) ).
+fof(f39,axiom,! [X0] : cowlThing(X0) ).
+fof(f40,axiom,! [X0] : ~ cowlNothing(X0) ).
+fof(f41,axiom,! [X0] : ( ~ xsd_integer(X0) | ~ xsd_string(X0) ) ).
+fof(f42,axiom,! [X0] : ( xsd_string(X0) | xsd_integer(X0) ) ).
+fof(f44,axiom,! [X0] : ( cC(X0) | ~ cB(X0) ) ).
+fof(f45,axiom,! [X0] : ( cB(X0) | ~ cC(X0) ) ).
+fof(f47,axiom,! [X0] : ( cB(X0) | iA != X0 ) ).
+fof(f48,axiom,! [X0] : ( ~ cD(X0) | ~ cB(X0) ) ).
+fof(f49,axiom,! [X0] : ( cB(X0) | cD(X0) ) ).
+fof(f51,axiom,! [X0] : ( cC(X0) | iA != X0 ) ).
+fof(f52,axiom,! [X0] : ( ~ cD(X0) | ~ cC(X0) ) ).
+fof(f53,axiom,! [X0] : ( cC(X0) | cD(X0) ) ).
+fof(f54,axiom,! [X0] : ( ~ cD(X0) | iA != X0 ) ).
+fof(f63,axiom,~ cD(iA) ).
+fof(f64,axiom,cC(iA) ).
+fof(f65,axiom,cB(iA) ).
+fof(c_49,axiom,! [X0] : ~ cowlNothing(X0) ).
+fof(c_50,axiom,! [X0] : cowlThing(X0) ).
+fof(c_51,axiom,! [X0] : ( xsd_string(X0) | xsd_integer(X0) ) ).
+fof(c_52,axiom,! [X0] : ( ~ xsd_string(X0) | ~ xsd_integer(X0) ) ).
+fof(c_55,axiom,~ cD(iA) ).
+fof(c_56,axiom,! [X0] : ( cD(X0) | cC(X0) ) ).
+fof(c_57,axiom,! [X0] : ( ~ cD(X0) | ~ cC(X0) ) ).
+fof(c_58,axiom,cC(iA) ).
+fof(c_60,axiom,! [X0] : ( cD(X0) | cB(X0) ) ).
+fof(c_61,axiom,! [X0] : ( ~ cD(X0) | ~ cB(X0) ) ).
+fof(c_62,axiom,cB(iA) ).
+fof(c_64,axiom,! [X0] : ( ~ cC(X0) | cB(X0) ) ).
+fof(c_65,axiom,! [X0] : ( ~ cB(X0) | cC(X0) ) ).

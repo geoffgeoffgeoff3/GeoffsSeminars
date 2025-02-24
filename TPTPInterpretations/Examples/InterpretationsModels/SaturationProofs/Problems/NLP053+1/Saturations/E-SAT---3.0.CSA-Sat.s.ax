@@ -1,0 +1,329 @@
+fof(ax50,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) => ~ multiple(X1,X2) ) ).
+fof(ax39,axiom,! [X1] : ! [X2] : ( thing(X1,X2) => singleton(X1,X2) ) ).
+fof(ax34,axiom,! [X1] : ! [X2] : ( set(X1,X2) => multiple(X1,X2) ) ).
+fof(ax43,axiom,! [X1] : ! [X2] : ( cash(X1,X2) => currency(X1,X2) ) ).
+fof(ax44,axiom,! [X1] : ! [X2] : ( dollar(X1,X2) => cash(X1,X2) ) ).
+fof(ax22,axiom,! [X1] : ! [X2] : ( beverage(X1,X2) => food(X1,X2) ) ).
+fof(ax23,axiom,! [X1] : ! [X2] : ( shake_beverage(X1,X2) => beverage(X1,X2) ) ).
+fof(ax51,axiom,! [X1] : ! [X2] : ( specific(X1,X2) => ~ general(X1,X2) ) ).
+fof(ax35,axiom,! [X1] : ! [X2] : ( group(X1,X2) => set(X1,X2) ) ).
+fof(ax42,axiom,! [X1] : ! [X2] : ( currency(X1,X2) => possession(X1,X2) ) ).
+fof(ax21,axiom,! [X1] : ! [X2] : ( food(X1,X2) => substance_matter(X1,X2) ) ).
+fof(ax37,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) => general(X1,X2) ) ).
+fof(ax46,axiom,! [X1] : ! [X2] : ( existent(X1,X2) => ~ nonexistent(X1,X2) ) ).
+fof(ax52,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) => ~ female(X1,X2) ) ).
+fof(ax40,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) => thing(X1,X2) ) ).
+fof(ax41,axiom,! [X1] : ! [X2] : ( possession(X1,X2) => abstraction(X1,X2) ) ).
+fof(ax11,axiom,! [X1] : ! [X2] : ( relname(X1,X2) => relation(X1,X2) ) ).
+fof(ax12,axiom,! [X1] : ! [X2] : ( forename(X1,X2) => relname(X1,X2) ) ).
+fof(ax6,axiom,! [X1] : ! [X2] : ( organism(X1,X2) => entity(X1,X2) ) ).
+fof(ax7,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) => organism(X1,X2) ) ).
+fof(ax20,axiom,! [X1] : ! [X2] : ( substance_matter(X1,X2) => object(X1,X2) ) ).
+fof(ax29,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) => specific(X1,X2) ) ).
+fof(ax17,axiom,! [X1] : ! [X2] : ( entity(X1,X2) => specific(X1,X2) ) ).
+fof(ax28,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) => nonexistent(X1,X2) ) ).
+fof(ax1,axiom,! [X1] : ! [X2] : ( woman(X1,X2) => female(X1,X2) ) ).
+fof(ax30,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) => thing(X1,X2) ) ).
+fof(co1,axiom,~ ( ? [X1] : ( actual_world(X1) & ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ( of(X1,X3,X2) & woman(X1,X2) & mia_forename(X1,X3) & forename(X1,X3) & shake_beverage(X1,X4) & event(X1,X5) & agent(X1,X5,X2) & patient(X1,X5,X4) & past(X1,X5) & nonreflexive(X1,X5) & order(X1,X5) & nonhuman(X1,X6) & ! [X7] : ( member(X1,X7,X6) => ? [X8] : ( event(X1,X8) & agent(X1,X8,X6) & patient(X1,X8,X7) & present(X1,X8) & nonreflexive(X1,X8) & cost(X1,X8) ) ) & five(X1,X6) & group(X1,X6) & ! [X9] : ( member(X1,X9,X6) => dollar(X1,X9) ) ) ) ) ).
+fof(ax10,axiom,! [X1] : ! [X2] : ( relation(X1,X2) => abstraction(X1,X2) ) ).
+fof(ax18,axiom,! [X1] : ! [X2] : ( entity(X1,X2) => thing(X1,X2) ) ).
+fof(ax8,axiom,! [X1] : ! [X2] : ( woman(X1,X2) => human_person(X1,X2) ) ).
+fof(ax19,axiom,! [X1] : ! [X2] : ( object(X1,X2) => entity(X1,X2) ) ).
+fof(ax31,axiom,! [X1] : ! [X2] : ( event(X1,X2) => eventuality(X1,X2) ) ).
+fof(ax16,axiom,! [X1] : ! [X2] : ( entity(X1,X2) => existent(X1,X2) ) ).
+fof(ax36,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) => unisex(X1,X2) ) ).
+fof(ax47,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) => ~ human(X1,X2) ) ).
+fof(ax48,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) => ~ living(X1,X2) ) ).
+fof(ax45,axiom,! [X1] : ! [X2] : ( animate(X1,X2) => ~ nonliving(X1,X2) ) ).
+fof(ax13,axiom,! [X1] : ! [X2] : ( object(X1,X2) => unisex(X1,X2) ) ).
+fof(ax27,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) => unisex(X1,X2) ) ).
+fof(ax3,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) => human(X1,X2) ) ).
+fof(ax38,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) => nonhuman(X1,X2) ) ).
+fof(ax33,axiom,! [X1] : ! [X2] : ( five(X1,X2) => group(X1,X2) ) ).
+fof(ax4,axiom,! [X1] : ! [X2] : ( organism(X1,X2) => living(X1,X2) ) ).
+fof(ax2,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) => animate(X1,X2) ) ).
+fof(ax53,axiom,! [X1] : ! [X2] : ! [X3] : ( ( entity(X1,X2) & forename(X1,X3) & of(X1,X3,X2) ) => ~ ( ? [X4] : ( forename(X1,X4) & X4 != X3 & of(X1,X4,X2) ) ) ) ).
+fof(ax54,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ( nonreflexive(X1,X2) & agent(X1,X2,X3) & patient(X1,X2,X4) ) => X3 != X4 ) ).
+fof(ax49,axiom,! [X1] : ! [X2] : ( present(X1,X2) => ~ past(X1,X2) ) ).
+fof(ax55,axiom,! [X1] : ! [X2] : ( five(X1,X2) <=> ? [X3] : ( member(X1,X3,X2) & ? [X4] : ( member(X1,X4,X2) & X4 != X3 & ? [X5] : ( member(X1,X5,X2) & X5 != X4 & X5 != X3 & ? [X6] : ( member(X1,X6,X2) & X6 != X5 & X6 != X4 & X6 != X3 & ? [X7] : ( member(X1,X7,X2) & X7 != X6 & X7 != X5 & X7 != X4 & X7 != X3 & ! [X8] : ( member(X1,X8,X2) => ( X8 = X7 | X8 = X6 | X8 = X5 | X8 = X4 | X8 = X3 ) ) ) ) ) ) ) ) ).
+fof(ax15,axiom,! [X1] : ! [X2] : ( object(X1,X2) => nonliving(X1,X2) ) ).
+fof(ax14,axiom,! [X1] : ! [X2] : ( object(X1,X2) => impartial(X1,X2) ) ).
+fof(ax5,axiom,! [X1] : ! [X2] : ( organism(X1,X2) => impartial(X1,X2) ) ).
+fof(ax26,axiom,! [X1] : ! [X2] : ( order(X1,X2) => act(X1,X2) ) ).
+fof(ax25,axiom,! [X1] : ! [X2] : ( act(X1,X2) => event(X1,X2) ) ).
+fof(ax32,axiom,! [X1] : ! [X2] : ( cost(X1,X2) => event(X1,X2) ) ).
+fof(ax24,axiom,! [X1] : ! [X2] : ( order(X1,X2) => event(X1,X2) ) ).
+fof(ax9,axiom,! [X1] : ! [X2] : ( mia_forename(X1,X2) => forename(X1,X2) ) ).
+fof(ax56,axiom,! [X1] : ~ ( ? [X2] : member(X1,X2,X2) ) ).
+fof(c_0_57,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) => ~ multiple(X1,X2) ) ).
+fof(c_0_58,axiom,! [X108] : ! [X109] : ( ~ singleton(X108,X109) | ~ multiple(X108,X109) ) ).
+fof(c_0_59,axiom,! [X86] : ! [X87] : ( ~ thing(X86,X87) | singleton(X86,X87) ) ).
+fof(c_0_60,axiom,! [X1] : ! [X2] : ( ~ singleton(X1,X2) | ~ multiple(X1,X2) ) ).
+fof(c_0_61,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) | ~ thing(X1,X2) ) ).
+fof(c_0_62,axiom,! [X76] : ! [X77] : ( ~ set(X76,X77) | multiple(X76,X77) ) ).
+fof(c_0_63,axiom,! [X94] : ! [X95] : ( ~ cash(X94,X95) | currency(X94,X95) ) ).
+fof(c_0_64,axiom,! [X96] : ! [X97] : ( ~ dollar(X96,X97) | cash(X96,X97) ) ).
+fof(c_0_65,axiom,! [X52] : ! [X53] : ( ~ beverage(X52,X53) | food(X52,X53) ) ).
+fof(c_0_66,axiom,! [X54] : ! [X55] : ( ~ shake_beverage(X54,X55) | beverage(X54,X55) ) ).
+fof(c_0_67,axiom,! [X1] : ! [X2] : ( specific(X1,X2) => ~ general(X1,X2) ) ).
+fof(c_0_68,axiom,! [X1] : ! [X2] : ( ~ multiple(X1,X2) | ~ thing(X1,X2) ) ).
+fof(c_0_69,axiom,! [X1] : ! [X2] : ( multiple(X1,X2) | ~ set(X1,X2) ) ).
+fof(c_0_70,axiom,! [X78] : ! [X79] : ( ~ group(X78,X79) | set(X78,X79) ) ).
+fof(c_0_71,axiom,! [X92] : ! [X93] : ( ~ currency(X92,X93) | possession(X92,X93) ) ).
+fof(c_0_72,axiom,! [X1] : ! [X2] : ( currency(X1,X2) | ~ cash(X1,X2) ) ).
+fof(c_0_73,axiom,! [X1] : ! [X2] : ( cash(X1,X2) | ~ dollar(X1,X2) ) ).
+fof(c_0_74,axiom,! [X50] : ! [X51] : ( ~ food(X50,X51) | substance_matter(X50,X51) ) ).
+fof(c_0_75,axiom,! [X1] : ! [X2] : ( food(X1,X2) | ~ beverage(X1,X2) ) ).
+fof(c_0_76,axiom,! [X1] : ! [X2] : ( beverage(X1,X2) | ~ shake_beverage(X1,X2) ) ).
+fof(c_0_77,axiom,! [X110] : ! [X111] : ( ~ specific(X110,X111) | ~ general(X110,X111) ) ).
+fof(c_0_78,axiom,! [X82] : ! [X83] : ( ~ abstraction(X82,X83) | general(X82,X83) ) ).
+fof(c_0_79,axiom,! [X1] : ! [X2] : ( existent(X1,X2) => ~ nonexistent(X1,X2) ) ).
+fof(c_0_80,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) => ~ female(X1,X2) ) ).
+fof(c_0_81,axiom,! [X1] : ! [X2] : ( ~ set(X1,X2) | ~ thing(X1,X2) ) ).
+fof(c_0_82,axiom,! [X1] : ! [X2] : ( set(X1,X2) | ~ group(X1,X2) ) ).
+fof(c_0_83,axiom,! [X88] : ! [X89] : ( ~ abstraction(X88,X89) | thing(X88,X89) ) ).
+fof(c_0_84,axiom,! [X90] : ! [X91] : ( ~ possession(X90,X91) | abstraction(X90,X91) ) ).
+fof(c_0_85,axiom,! [X1] : ! [X2] : ( possession(X1,X2) | ~ currency(X1,X2) ) ).
+fof(c_0_86,axiom,! [X1] : ! [X2] : ( currency(X1,X2) | ~ dollar(X1,X2) ) ).
+fof(c_0_87,axiom,! [X30] : ! [X31] : ( ~ relname(X30,X31) | relation(X30,X31) ) ).
+fof(c_0_88,axiom,! [X32] : ! [X33] : ( ~ forename(X32,X33) | relname(X32,X33) ) ).
+fof(c_0_89,axiom,! [X20] : ! [X21] : ( ~ organism(X20,X21) | entity(X20,X21) ) ).
+fof(c_0_90,axiom,! [X22] : ! [X23] : ( ~ human_person(X22,X23) | organism(X22,X23) ) ).
+fof(c_0_91,axiom,! [X48] : ! [X49] : ( ~ substance_matter(X48,X49) | object(X48,X49) ) ).
+fof(c_0_92,axiom,! [X1] : ! [X2] : ( substance_matter(X1,X2) | ~ food(X1,X2) ) ).
+fof(c_0_93,axiom,! [X1] : ! [X2] : ( food(X1,X2) | ~ shake_beverage(X1,X2) ) ).
+fof(c_0_94,axiom,! [X1] : ! [X2] : ( ~ specific(X1,X2) | ~ general(X1,X2) ) ).
+fof(c_0_95,axiom,! [X1] : ! [X2] : ( general(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_96,axiom,! [X66] : ! [X67] : ( ~ eventuality(X66,X67) | specific(X66,X67) ) ).
+fof(c_0_97,axiom,! [X42] : ! [X43] : ( ~ entity(X42,X43) | specific(X42,X43) ) ).
+fof(c_0_98,axiom,! [X100] : ! [X101] : ( ~ existent(X100,X101) | ~ nonexistent(X100,X101) ) ).
+fof(c_0_99,axiom,! [X64] : ! [X65] : ( ~ eventuality(X64,X65) | nonexistent(X64,X65) ) ).
+fof(c_0_100,axiom,! [X112] : ! [X113] : ( ~ unisex(X112,X113) | ~ female(X112,X113) ) ).
+fof(c_0_101,axiom,! [X10] : ! [X11] : ( ~ woman(X10,X11) | female(X10,X11) ) ).
+fof(c_0_102,axiom,! [X68] : ! [X69] : ( ~ eventuality(X68,X69) | thing(X68,X69) ) ).
+fof(c_0_103,axiom,! [X1] : ! [X2] : ( ~ group(X1,X2) | ~ thing(X1,X2) ) ).
+fof(c_0_104,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_105,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) | ~ possession(X1,X2) ) ).
+fof(c_0_106,axiom,! [X1] : ! [X2] : ( possession(X1,X2) | ~ dollar(X1,X2) ) ).
+fof(c_0_107,axiom,~ ( ~ ( ? [X1] : ( actual_world(X1) & ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ( of(X1,X3,X2) & woman(X1,X2) & mia_forename(X1,X3) & forename(X1,X3) & shake_beverage(X1,X4) & event(X1,X5) & agent(X1,X5,X2) & patient(X1,X5,X4) & past(X1,X5) & nonreflexive(X1,X5) & order(X1,X5) & nonhuman(X1,X6) & ! [X7] : ( member(X1,X7,X6) => ? [X8] : ( event(X1,X8) & agent(X1,X8,X6) & patient(X1,X8,X7) & present(X1,X8) & nonreflexive(X1,X8) & cost(X1,X8) ) ) & five(X1,X6) & group(X1,X6) & ! [X9] : ( member(X1,X9,X6) => dollar(X1,X9) ) ) ) ) ) ).
+fof(c_0_108,axiom,! [X28] : ! [X29] : ( ~ relation(X28,X29) | abstraction(X28,X29) ) ).
+fof(c_0_109,axiom,! [X1] : ! [X2] : ( relation(X1,X2) | ~ relname(X1,X2) ) ).
+fof(c_0_110,axiom,! [X1] : ! [X2] : ( relname(X1,X2) | ~ forename(X1,X2) ) ).
+fof(c_0_111,axiom,! [X44] : ! [X45] : ( ~ entity(X44,X45) | thing(X44,X45) ) ).
+fof(c_0_112,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_113,axiom,! [X1] : ! [X2] : ( organism(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_114,axiom,! [X24] : ! [X25] : ( ~ woman(X24,X25) | human_person(X24,X25) ) ).
+fof(c_0_115,axiom,! [X46] : ! [X47] : ( ~ object(X46,X47) | entity(X46,X47) ) ).
+fof(c_0_116,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ substance_matter(X1,X2) ) ).
+fof(c_0_117,axiom,! [X1] : ! [X2] : ( substance_matter(X1,X2) | ~ shake_beverage(X1,X2) ) ).
+fof(c_0_118,axiom,! [X1] : ! [X2] : ( ~ specific(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_119,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_120,axiom,! [X70] : ! [X71] : ( ~ event(X70,X71) | eventuality(X70,X71) ) ).
+fof(c_0_121,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_122,axiom,! [X1] : ! [X2] : ( ~ existent(X1,X2) | ~ nonexistent(X1,X2) ) ).
+fof(c_0_123,axiom,! [X1] : ! [X2] : ( nonexistent(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_124,axiom,! [X40] : ! [X41] : ( ~ entity(X40,X41) | existent(X40,X41) ) ).
+fof(c_0_125,axiom,! [X1] : ! [X2] : ( ~ unisex(X1,X2) | ~ female(X1,X2) ) ).
+fof(c_0_126,axiom,! [X1] : ! [X2] : ( female(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_127,axiom,! [X80] : ! [X81] : ( ~ abstraction(X80,X81) | unisex(X80,X81) ) ).
+fof(c_0_128,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) => ~ human(X1,X2) ) ).
+fof(c_0_129,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_130,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) => ~ living(X1,X2) ) ).
+fof(c_0_131,axiom,! [X1] : ! [X2] : ( animate(X1,X2) => ~ nonliving(X1,X2) ) ).
+fof(c_0_132,axiom,! [X1] : ! [X2] : ( ~ group(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_133,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) | ~ dollar(X1,X2) ) ).
+fof(c_0_134,axiom,! [X146] : ! [X148] : ( actual_world(esk7_0) & of(esk7_0,esk9_0,esk8_0) & woman(esk7_0,esk8_0) & mia_forename(esk7_0,esk9_0) & forename(esk7_0,esk9_0) & shake_beverage(esk7_0,esk10_0) & event(esk7_0,esk11_0) & agent(esk7_0,esk11_0,esk8_0) & patient(esk7_0,esk11_0,esk10_0) & past(esk7_0,esk11_0) & nonreflexive(esk7_0,esk11_0) & order(esk7_0,esk11_0) & nonhuman(esk7_0,esk12_0) & ( event(esk7_0,esk13_1(X146)) | ~ member(esk7_0,X146,esk12_0) ) & ( agent(esk7_0,esk13_1(X146),esk12_0) | ~ member(esk7_0,X146,esk12_0) ) & ( patient(esk7_0,esk13_1(X146),X146) | ~ member(esk7_0,X146,esk12_0) ) & ( present(esk7_0,esk13_1(X146)) | ~ member(esk7_0,X146,esk12_0) ) & ( nonreflexive(esk7_0,esk13_1(X146)) | ~ member(esk7_0,X146,esk12_0) ) & ( cost(esk7_0,esk13_1(X146)) | ~ member(esk7_0,X146,esk12_0) ) & five(esk7_0,esk12_0) & group(esk7_0,esk12_0) & ( ~ member(esk7_0,X148,esk12_0) | dollar(esk7_0,X148) ) ) ).
+fof(c_0_135,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) | ~ relation(X1,X2) ) ).
+fof(c_0_136,axiom,! [X1] : ! [X2] : ( relation(X1,X2) | ~ forename(X1,X2) ) ).
+fof(c_0_137,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_138,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_139,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_140,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_141,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ shake_beverage(X1,X2) ) ).
+fof(c_0_142,axiom,! [X1] : ! [X2] : ( ~ eventuality(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_143,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_144,axiom,! [X1] : ! [X2] : ( ~ abstraction(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_145,axiom,! [X1] : ! [X2] : ( ~ eventuality(X1,X2) | ~ existent(X1,X2) ) ).
+fof(c_0_146,axiom,! [X1] : ! [X2] : ( existent(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_147,axiom,! [X1] : ! [X2] : ( ~ unisex(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_148,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_149,axiom,! [X34] : ! [X35] : ( ~ object(X34,X35) | unisex(X34,X35) ) ).
+fof(c_0_150,axiom,! [X62] : ! [X63] : ( ~ eventuality(X62,X63) | unisex(X62,X63) ) ).
+fof(c_0_151,axiom,! [X102] : ! [X103] : ( ~ nonhuman(X102,X103) | ~ human(X102,X103) ) ).
+fof(c_0_152,axiom,! [X14] : ! [X15] : ( ~ human_person(X14,X15) | human(X14,X15) ) ).
+fof(c_0_153,axiom,! [X84] : ! [X85] : ( ~ abstraction(X84,X85) | nonhuman(X84,X85) ) ).
+fof(c_0_154,axiom,! [X1] : ! [X2] : ( ~ group(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_155,axiom,! [X74] : ! [X75] : ( ~ five(X74,X75) | group(X74,X75) ) ).
+fof(c_0_156,axiom,! [X104] : ! [X105] : ( ~ nonliving(X104,X105) | ~ living(X104,X105) ) ).
+fof(c_0_157,axiom,! [X16] : ! [X17] : ( ~ organism(X16,X17) | living(X16,X17) ) ).
+fof(c_0_158,axiom,! [X98] : ! [X99] : ( ~ animate(X98,X99) | ~ nonliving(X98,X99) ) ).
+fof(c_0_159,axiom,! [X12] : ! [X13] : ( ~ human_person(X12,X13) | animate(X12,X13) ) ).
+fof(c_0_160,axiom,! [X114] : ! [X115] : ! [X116] : ! [X117] : ( ~ entity(X114,X115) | ~ forename(X114,X116) | ~ of(X114,X116,X115) | ~ forename(X114,X117) | X117 = X116 | ~ of(X114,X117,X115) ) ).
+fof(c_0_161,axiom,! [X118] : ! [X119] : ! [X120] : ! [X121] : ( ~ nonreflexive(X118,X119) | ~ agent(X118,X119,X120) | ~ patient(X118,X119,X121) | X120 != X121 ) ).
+fof(c_0_162,axiom,! [X1] : ! [X2] : ( present(X1,X2) => ~ past(X1,X2) ) ).
+fof(c_0_163,axiom,! [X1] : ! [X2] : ( ~ dollar(X1,X2) | ~ group(X1,X2) ) ).
+fof(c_0_164,axiom,! [X1] : ( dollar(esk7_0,X1) | ~ member(esk7_0,X1,esk12_0) ) ).
+fof(c_0_165,axiom,! [X122] : ! [X123] : ! [X129] : ! [X130] : ! [X131] : ! [X132] : ! [X133] : ! [X134] : ! [X135] : ! [X136] : ( ( member(X122,esk1_2(X122,X123),X123) | ~ five(X122,X123) ) & ( member(X122,esk2_2(X122,X123),X123) | ~ five(X122,X123) ) & ( esk2_2(X122,X123) != esk1_2(X122,X123) | ~ five(X122,X123) ) & ( member(X122,esk3_2(X122,X123),X123) | ~ five(X122,X123) ) & ( esk3_2(X122,X123) != esk2_2(X122,X123) | ~ five(X122,X123) ) & ( esk3_2(X122,X123) != esk1_2(X122,X123) | ~ five(X122,X123) ) & ( member(X122,esk4_2(X122,X123),X123) | ~ five(X122,X123) ) & ( esk4_2(X122,X123) != esk3_2(X122,X123) | ~ five(X122,X123) ) & ( esk4_2(X122,X123) != esk2_2(X122,X123) | ~ five(X122,X123) ) & ( esk4_2(X122,X123) != esk1_2(X122,X123) | ~ five(X122,X123) ) & ( member(X122,esk5_2(X122,X123),X123) | ~ five(X122,X123) ) & ( esk5_2(X122,X123) != esk4_2(X122,X123) | ~ five(X122,X123) ) & ( esk5_2(X122,X123) != esk3_2(X122,X123) | ~ five(X122,X123) ) & ( esk5_2(X122,X123) != esk2_2(X122,X123) | ~ five(X122,X123) ) & ( esk5_2(X122,X123) != esk1_2(X122,X123) | ~ five(X122,X123) ) & ( ~ member(X122,X129,X123) | X129 = esk5_2(X122,X123) | X129 = esk4_2(X122,X123) | X129 = esk3_2(X122,X123) | X129 = esk2_2(X122,X123) | X129 = esk1_2(X122,X123) | ~ five(X122,X123) ) & ( member(X130,esk6_7(X130,X131,X132,X133,X134,X135,X136),X131) | ~ member(X130,X136,X131) | X136 = X135 | X136 = X134 | X136 = X133 | X136 = X132 | ~ member(X130,X135,X131) | X135 = X134 | X135 = X133 | X135 = X132 | ~ member(X130,X134,X131) | X134 = X133 | X134 = X132 | ~ member(X130,X133,X131) | X133 = X132 | ~ member(X130,X132,X131) | five(X130,X131) ) & ( esk6_7(X130,X131,X132,X133,X134,X135,X136) != X136 | ~ member(X130,X136,X131) | X136 = X135 | X136 = X134 | X136 = X133 | X136 = X132 | ~ member(X130,X135,X131) | X135 = X134 | X135 = X133 | X135 = X132 | ~ member(X130,X134,X131) | X134 = X133 | X134 = X132 | ~ member(X130,X133,X131) | X133 = X132 | ~ member(X130,X132,X131) | five(X130,X131) ) & ( esk6_7(X130,X131,X132,X133,X134,X135,X136) != X135 | ~ member(X130,X136,X131) | X136 = X135 | X136 = X134 | X136 = X133 | X136 = X132 | ~ member(X130,X135,X131) | X135 = X134 | X135 = X133 | X135 = X132 | ~ member(X130,X134,X131) | X134 = X133 | X134 = X132 | ~ member(X130,X133,X131) | X133 = X132 | ~ member(X130,X132,X131) | five(X130,X131) ) & ( esk6_7(X130,X131,X132,X133,X134,X135,X136) != X134 | ~ member(X130,X136,X131) | X136 = X135 | X136 = X134 | X136 = X133 | X136 = X132 | ~ member(X130,X135,X131) | X135 = X134 | X135 = X133 | X135 = X132 | ~ member(X130,X134,X131) | X134 = X133 | X134 = X132 | ~ member(X130,X133,X131) | X133 = X132 | ~ member(X130,X132,X131) | five(X130,X131) ) & ( esk6_7(X130,X131,X132,X133,X134,X135,X136) != X133 | ~ member(X130,X136,X131) | X136 = X135 | X136 = X134 | X136 = X133 | X136 = X132 | ~ member(X130,X135,X131) | X135 = X134 | X135 = X133 | X135 = X132 | ~ member(X130,X134,X131) | X134 = X133 | X134 = X132 | ~ member(X130,X133,X131) | X133 = X132 | ~ member(X130,X132,X131) | five(X130,X131) ) & ( esk6_7(X130,X131,X132,X133,X134,X135,X136) != X132 | ~ member(X130,X136,X131) | X136 = X135 | X136 = X134 | X136 = X133 | X136 = X132 | ~ member(X130,X135,X131) | X135 = X134 | X135 = X133 | X135 = X132 | ~ member(X130,X134,X131) | X134 = X133 | X134 = X132 | ~ member(X130,X133,X131) | X133 = X132 | ~ member(X130,X132,X131) | five(X130,X131) ) ) ).
+fof(c_0_166,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) | ~ forename(X1,X2) ) ).
+fof(c_0_167,axiom,! [X1] : ! [X2] : ( ~ group(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_168,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_169,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ shake_beverage(X1,X2) ) ).
+fof(c_0_170,axiom,! [X1] : ! [X2] : ( ~ event(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_171,axiom,! [X1] : ! [X2] : ( ~ dollar(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_172,axiom,! [X1] : ! [X2] : ( ~ eventuality(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_173,axiom,! [X1] : ! [X2] : ( ~ abstraction(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_174,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_175,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_176,axiom,! [X1] : ! [X2] : ( ~ nonhuman(X1,X2) | ~ human(X1,X2) ) ).
+fof(c_0_177,axiom,! [X1] : ! [X2] : ( human(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_178,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_179,axiom,! [X1] : ! [X2] : ( ~ group(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_180,axiom,! [X1] : ! [X2] : ( group(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_181,axiom,! [X1] : ! [X2] : ( ~ nonliving(X1,X2) | ~ living(X1,X2) ) ).
+fof(c_0_182,axiom,! [X1] : ! [X2] : ( living(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_183,axiom,! [X38] : ! [X39] : ( ~ object(X38,X39) | nonliving(X38,X39) ) ).
+fof(c_0_184,axiom,! [X1] : ! [X2] : ( ~ animate(X1,X2) | ~ nonliving(X1,X2) ) ).
+fof(c_0_185,axiom,! [X1] : ! [X2] : ( animate(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_186,axiom,! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X4 = X3 | ~ entity(X1,X2) | ~ forename(X1,X3) | ~ of(X1,X3,X2) | ~ forename(X1,X4) | ~ of(X1,X4,X2) ) ).
+fof(c_0_187,axiom,of(esk7_0,esk9_0,esk8_0) ).
+fof(c_0_188,axiom,forename(esk7_0,esk9_0) ).
+fof(c_0_189,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ nonreflexive(X1,X2) | ~ agent(X1,X2,X3) | ~ patient(X1,X2,X4) | X3 != X4 ) ).
+fof(c_0_190,axiom,! [X106] : ! [X107] : ( ~ present(X106,X107) | ~ past(X106,X107) ) ).
+fof(c_0_191,axiom,! [X1] : ( ~ member(esk7_0,X1,esk12_0) | ~ group(esk7_0,X1) ) ).
+fof(c_0_192,axiom,! [X1] : ! [X2] : ( member(X1,esk1_2(X1,X2),X2) | ~ five(X1,X2) ) ).
+fof(c_0_193,axiom,five(esk7_0,esk12_0) ).
+fof(c_0_194,axiom,! [X1] : ! [X2] : ( member(X1,esk2_2(X1,X2),X2) | ~ five(X1,X2) ) ).
+fof(c_0_195,axiom,! [X1] : ! [X2] : ( member(X1,esk3_2(X1,X2),X2) | ~ five(X1,X2) ) ).
+fof(c_0_196,axiom,! [X1] : ! [X2] : ( member(X1,esk4_2(X1,X2),X2) | ~ five(X1,X2) ) ).
+fof(c_0_197,axiom,! [X1] : ! [X2] : ( member(X1,esk5_2(X1,X2),X2) | ~ five(X1,X2) ) ).
+fof(c_0_198,axiom,! [X1] : ! [X2] : ( ~ group(X1,X2) | ~ forename(X1,X2) ) ).
+fof(c_0_199,axiom,! [X1] : ! [X2] : ( ~ group(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_200,axiom,! [X1] : ! [X2] : ( ~ group(X1,X2) | ~ shake_beverage(X1,X2) ) ).
+fof(c_0_201,axiom,shake_beverage(esk7_0,esk10_0) ).
+fof(c_0_202,axiom,! [X1] : ! [X2] : ( ~ dollar(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_203,axiom,! [X1] : ! [X2] : ( ~ dollar(X1,X2) | ~ shake_beverage(X1,X2) ) ).
+fof(c_0_204,axiom,! [X1] : ! [X2] : ( ~ forename(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_205,axiom,! [X1] : ! [X2] : ( ~ event(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_206,axiom,! [X1] : ! [X2] : ( ~ dollar(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_207,axiom,! [X1] : ! [X2] : ( ~ object(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_208,axiom,! [X1] : ! [X2] : ( ~ eventuality(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_209,axiom,! [X1] : ! [X2] : ( ~ nonhuman(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_210,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) | ~ dollar(X1,X2) ) ).
+fof(c_0_211,axiom,! [X1] : ! [X2] : ( ~ five(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_212,axiom,! [X1] : ( event(esk7_0,esk13_1(X1)) | ~ member(esk7_0,X1,esk12_0) ) ).
+fof(c_0_213,axiom,! [X1] : ! [X2] : ( ~ nonliving(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_214,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_215,axiom,! [X1] : ! [X2] : ( ~ nonliving(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_216,axiom,! [X1] : ( X1 = esk9_0 | ~ of(esk7_0,X1,esk8_0) | ~ forename(esk7_0,X1) | ~ entity(esk7_0,esk8_0) ) ).
+fof(c_0_217,axiom,woman(esk7_0,esk8_0) ).
+fof(c_0_218,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ patient(X1,X2,X3) | ~ agent(X1,X2,X3) | ~ nonreflexive(X1,X2) ) ).
+fof(c_0_219,axiom,! [X1] : ( patient(esk7_0,esk13_1(X1),X1) | ~ member(esk7_0,X1,esk12_0) ) ).
+fof(c_0_220,axiom,! [X1] : ( nonreflexive(esk7_0,esk13_1(X1)) | ~ member(esk7_0,X1,esk12_0) ) ).
+fof(c_0_221,axiom,! [X1] : ! [X2] : ( ~ present(X1,X2) | ~ past(X1,X2) ) ).
+fof(c_0_222,axiom,! [X1] : ( present(esk7_0,esk13_1(X1)) | ~ member(esk7_0,X1,esk12_0) ) ).
+fof(c_0_223,axiom,! [X36] : ! [X37] : ( ~ object(X36,X37) | impartial(X36,X37) ) ).
+fof(c_0_224,axiom,! [X18] : ! [X19] : ( ~ organism(X18,X19) | impartial(X18,X19) ) ).
+fof(c_0_225,axiom,! [X60] : ! [X61] : ( ~ order(X60,X61) | act(X60,X61) ) ).
+fof(c_0_226,axiom,! [X58] : ! [X59] : ( ~ act(X58,X59) | event(X58,X59) ) ).
+fof(c_0_227,axiom,! [X72] : ! [X73] : ( ~ cost(X72,X73) | event(X72,X73) ) ).
+fof(c_0_228,axiom,! [X56] : ! [X57] : ( ~ order(X56,X57) | event(X56,X57) ) ).
+fof(c_0_229,axiom,! [X26] : ! [X27] : ( ~ mia_forename(X26,X27) | forename(X26,X27) ) ).
+fof(c_0_230,axiom,~ group(esk7_0,esk1_2(esk7_0,esk12_0)) ).
+fof(c_0_231,axiom,~ group(esk7_0,esk2_2(esk7_0,esk12_0)) ).
+fof(c_0_232,axiom,~ group(esk7_0,esk3_2(esk7_0,esk12_0)) ).
+fof(c_0_233,axiom,~ group(esk7_0,esk4_2(esk7_0,esk12_0)) ).
+fof(c_0_234,axiom,~ group(esk7_0,esk5_2(esk7_0,esk12_0)) ).
+fof(c_0_235,axiom,event(esk7_0,esk11_0) ).
+fof(c_0_236,axiom,group(esk7_0,esk12_0) ).
+fof(c_0_237,axiom,! [X1] : ! [X2] : ( ~ five(X1,X2) | ~ forename(X1,X2) ) ).
+fof(c_0_238,axiom,! [X1] : ! [X2] : ( ~ five(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_239,axiom,~ group(esk7_0,esk10_0) ).
+fof(c_0_240,axiom,! [X1] : ( ~ member(esk7_0,X1,esk12_0) | ~ event(esk7_0,X1) ) ).
+fof(c_0_241,axiom,! [X1] : ! [X2] : ( ~ event(X1,X2) | ~ forename(X1,X2) ) ).
+fof(c_0_242,axiom,! [X1] : ( ~ member(esk7_0,X1,esk12_0) | ~ shake_beverage(esk7_0,X1) ) ).
+fof(c_0_243,axiom,! [X1] : ! [X2] : ( ~ shake_beverage(X1,X2) | ~ forename(X1,X2) ) ).
+fof(c_0_244,axiom,! [X1] : ! [X2] : ( ~ event(X1,X2) | ~ shake_beverage(X1,X2) ) ).
+fof(c_0_245,axiom,! [X1] : ( ~ member(esk7_0,X1,esk12_0) | ~ woman(esk7_0,X1) ) ).
+fof(c_0_246,axiom,! [X1] : ! [X2] : ( ~ shake_beverage(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_247,axiom,! [X1] : ! [X2] : ( ~ event(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_248,axiom,! [X1] : ! [X2] : ( ~ forename(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_249,axiom,! [X1] : ! [X2] : ( ~ nonhuman(X1,X2) | ~ woman(X1,X2) ) ).
+fof(c_0_250,axiom,nonhuman(esk7_0,esk12_0) ).
+fof(c_0_251,axiom,patient(esk7_0,esk11_0,esk10_0) ).
+fof(c_0_252,axiom,nonreflexive(esk7_0,esk11_0) ).
+fof(c_0_253,axiom,! [X138] : ! [X139] : ~ member(X138,X139,X139) ).
+fof(c_0_254,axiom,! [X1] : ( nonhuman(esk7_0,X1) | ~ member(esk7_0,X1,esk12_0) ) ).
+fof(c_0_255,axiom,! [X1] : ( ~ member(esk7_0,X1,esk12_0) | ~ five(esk7_0,esk13_1(X1)) ) ).
+fof(c_0_256,axiom,! [X1] : ! [X2] : ( ~ object(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_257,axiom,! [X1] : ! [X2] : ( ~ object(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_258,axiom,! [X1] : ( X1 = esk9_0 | ~ of(esk7_0,X1,esk8_0) | ~ forename(esk7_0,X1) ) ).
+fof(c_0_259,axiom,! [X1] : ( ~ member(esk7_0,X1,esk12_0) | ~ agent(esk7_0,esk13_1(X1),X1) ) ).
+fof(c_0_260,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) | ~ forename(X1,X2) ) ).
+fof(c_0_261,axiom,! [X1] : ( ~ member(esk7_0,X1,esk12_0) | ~ past(esk7_0,esk13_1(X1)) ) ).
+fof(c_0_262,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( member(X1,esk6_7(X1,X2,X3,X4,X5,X6,X7),X2) | X7 = X6 | X7 = X5 | X7 = X4 | X7 = X3 | X6 = X5 | X6 = X4 | X6 = X3 | X5 = X4 | X5 = X3 | X4 = X3 | five(X1,X2) | ~ member(X1,X7,X2) | ~ member(X1,X6,X2) | ~ member(X1,X5,X2) | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_263,axiom,! [X7] : ! [X6] : ! [X5] : ! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X7 = X6 | X7 = X5 | X7 = X4 | X7 = X3 | X6 = X5 | X6 = X4 | X6 = X3 | X5 = X4 | X5 = X3 | X4 = X3 | five(X1,X2) | esk6_7(X1,X2,X3,X4,X5,X6,X7) != X3 | ~ member(X1,X7,X2) | ~ member(X1,X6,X2) | ~ member(X1,X5,X2) | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_264,axiom,! [X7] : ! [X6] : ! [X5] : ! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X7 = X6 | X7 = X5 | X7 = X4 | X7 = X3 | X6 = X5 | X6 = X4 | X6 = X3 | X5 = X4 | X5 = X3 | X4 = X3 | five(X1,X2) | esk6_7(X1,X2,X3,X4,X5,X6,X7) != X4 | ~ member(X1,X7,X2) | ~ member(X1,X6,X2) | ~ member(X1,X5,X2) | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_265,axiom,! [X7] : ! [X6] : ! [X5] : ! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X7 = X6 | X7 = X5 | X7 = X4 | X7 = X3 | X6 = X5 | X6 = X4 | X6 = X3 | X5 = X4 | X5 = X3 | X4 = X3 | five(X1,X2) | esk6_7(X1,X2,X3,X4,X5,X6,X7) != X5 | ~ member(X1,X7,X2) | ~ member(X1,X6,X2) | ~ member(X1,X5,X2) | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_266,axiom,! [X7] : ! [X6] : ! [X5] : ! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X7 = X6 | X7 = X5 | X7 = X4 | X7 = X3 | X6 = X5 | X6 = X4 | X6 = X3 | X5 = X4 | X5 = X3 | X4 = X3 | five(X1,X2) | esk6_7(X1,X2,X3,X4,X5,X6,X7) != X6 | ~ member(X1,X7,X2) | ~ member(X1,X6,X2) | ~ member(X1,X5,X2) | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_267,axiom,! [X7] : ! [X6] : ! [X5] : ! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X7 = X6 | X7 = X5 | X7 = X4 | X7 = X3 | X6 = X5 | X6 = X4 | X6 = X3 | X5 = X4 | X5 = X3 | X4 = X3 | five(X1,X2) | esk6_7(X1,X2,X3,X4,X5,X6,X7) != X7 | ~ member(X1,X7,X2) | ~ member(X1,X6,X2) | ~ member(X1,X5,X2) | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_268,axiom,! [X2] : ! [X1] : ! [X3] : ( X2 = esk5_2(X1,X3) | X2 = esk4_2(X1,X3) | X2 = esk3_2(X1,X3) | X2 = esk2_2(X1,X3) | X2 = esk1_2(X1,X3) | ~ member(X1,X2,X3) | ~ five(X1,X3) ) ).
+fof(c_0_269,axiom,! [X1] : ! [X2] : ( esk5_2(X1,X2) != esk4_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_270,axiom,! [X1] : ! [X2] : ( esk5_2(X1,X2) != esk3_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_271,axiom,! [X1] : ! [X2] : ( esk5_2(X1,X2) != esk2_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_272,axiom,! [X1] : ! [X2] : ( esk5_2(X1,X2) != esk1_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_273,axiom,! [X1] : ! [X2] : ( esk4_2(X1,X2) != esk3_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_274,axiom,! [X1] : ! [X2] : ( esk4_2(X1,X2) != esk2_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_275,axiom,! [X1] : ! [X2] : ( esk4_2(X1,X2) != esk1_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_276,axiom,! [X1] : ! [X2] : ( esk3_2(X1,X2) != esk2_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_277,axiom,! [X1] : ! [X2] : ( esk3_2(X1,X2) != esk1_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_278,axiom,! [X1] : ! [X2] : ( esk2_2(X1,X2) != esk1_2(X1,X2) | ~ five(X1,X2) ) ).
+fof(c_0_279,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_280,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_281,axiom,! [X1] : ! [X2] : ( act(X1,X2) | ~ order(X1,X2) ) ).
+fof(c_0_282,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ act(X1,X2) ) ).
+fof(c_0_283,axiom,! [X1] : ( agent(esk7_0,esk13_1(X1),esk12_0) | ~ member(esk7_0,X1,esk12_0) ) ).
+fof(c_0_284,axiom,! [X1] : ( cost(esk7_0,esk13_1(X1)) | ~ member(esk7_0,X1,esk12_0) ) ).
+fof(c_0_285,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ cost(X1,X2) ) ).
+fof(c_0_286,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ order(X1,X2) ) ).
+fof(c_0_287,axiom,! [X1] : ! [X2] : ( forename(X1,X2) | ~ mia_forename(X1,X2) ) ).
+fof(c_0_288,axiom,~ five(esk7_0,esk1_2(esk7_0,esk12_0)) ).
+fof(c_0_289,axiom,~ five(esk7_0,esk2_2(esk7_0,esk12_0)) ).
+fof(c_0_290,axiom,~ five(esk7_0,esk3_2(esk7_0,esk12_0)) ).
+fof(c_0_291,axiom,~ five(esk7_0,esk4_2(esk7_0,esk12_0)) ).
+fof(c_0_292,axiom,~ five(esk7_0,esk5_2(esk7_0,esk12_0)) ).
+fof(c_0_293,axiom,~ five(esk7_0,esk11_0) ).
+fof(c_0_294,axiom,~ event(esk7_0,esk12_0) ).
+fof(c_0_295,axiom,~ five(esk7_0,esk9_0) ).
+fof(c_0_296,axiom,~ forename(esk7_0,esk12_0) ).
+fof(c_0_297,axiom,~ five(esk7_0,esk8_0) ).
+fof(c_0_298,axiom,~ five(esk7_0,esk10_0) ).
+fof(c_0_299,axiom,~ event(esk7_0,esk1_2(esk7_0,esk12_0)) ).
+fof(c_0_300,axiom,~ event(esk7_0,esk2_2(esk7_0,esk12_0)) ).
+fof(c_0_301,axiom,~ event(esk7_0,esk3_2(esk7_0,esk12_0)) ).
+fof(c_0_302,axiom,~ event(esk7_0,esk4_2(esk7_0,esk12_0)) ).
+fof(c_0_303,axiom,~ event(esk7_0,esk5_2(esk7_0,esk12_0)) ).
+fof(c_0_304,axiom,~ event(esk7_0,esk9_0) ).
+fof(c_0_305,axiom,~ member(esk7_0,esk10_0,esk12_0) ).
+fof(c_0_306,axiom,~ forename(esk7_0,esk10_0) ).
+fof(c_0_307,axiom,~ event(esk7_0,esk10_0) ).
+fof(c_0_308,axiom,~ woman(esk7_0,esk1_2(esk7_0,esk12_0)) ).
+fof(c_0_309,axiom,~ woman(esk7_0,esk2_2(esk7_0,esk12_0)) ).
+fof(c_0_310,axiom,~ woman(esk7_0,esk3_2(esk7_0,esk12_0)) ).
+fof(c_0_311,axiom,~ woman(esk7_0,esk4_2(esk7_0,esk12_0)) ).
+fof(c_0_312,axiom,~ woman(esk7_0,esk5_2(esk7_0,esk12_0)) ).
+fof(c_0_313,axiom,~ woman(esk7_0,esk10_0) ).
+fof(c_0_314,axiom,~ event(esk7_0,esk8_0) ).
+fof(c_0_315,axiom,~ forename(esk7_0,esk8_0) ).
+fof(c_0_316,axiom,~ woman(esk7_0,esk12_0) ).
+fof(c_0_317,axiom,~ agent(esk7_0,esk11_0,esk10_0) ).
+fof(c_0_318,axiom,! [X1] : ! [X2] : ~ member(X1,X2,X2) ).
+fof(c_0_319,axiom,nonhuman(esk7_0,esk1_2(esk7_0,esk12_0)) ).
+fof(c_0_320,axiom,nonhuman(esk7_0,esk2_2(esk7_0,esk12_0)) ).
+fof(c_0_321,axiom,nonhuman(esk7_0,esk3_2(esk7_0,esk12_0)) ).
+fof(c_0_322,axiom,nonhuman(esk7_0,esk4_2(esk7_0,esk12_0)) ).
+fof(c_0_323,axiom,nonhuman(esk7_0,esk5_2(esk7_0,esk12_0)) ).
+fof(c_0_324,axiom,agent(esk7_0,esk11_0,esk8_0) ).
+fof(c_0_325,axiom,past(esk7_0,esk11_0) ).
+fof(c_0_326,axiom,order(esk7_0,esk11_0) ).
+fof(c_0_327,axiom,mia_forename(esk7_0,esk9_0) ).
+fof(c_0_328,axiom,actual_world(esk7_0) ).

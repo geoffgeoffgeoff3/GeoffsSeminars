@@ -1,0 +1,15 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ( ~ less_equal(X0,X1) | divide(X0,X1) = zero ) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ( divide(X0,X1) != zero | less_equal(X0,X1) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : less_equal(divide(X0,X1),X0) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ! [X2] : less_equal(divide(divide(X0,X1),divide(X2,X1)),divide(divide(X0,X2),X1)) ).
+fof(c_53,axiom,! [X0] : less_equal(zero,X0) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ less_equal(X0,X1) | ~ less_equal(X1,X0) | X0 = X1 ) ).
+fof(c_55,axiom,! [X0] : less_equal(X0,identity) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( less_equal(X0,X1) | divide(X0,X1) != zero ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( divide(X0,X1) != zero | less_equal(X0,X1) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ( ~ less_equal(X0,X1) | divide(X0,X1) = zero ) ).
+fof(c_112,axiom,! [X0] : X0 = X0 ).
+fof(c_113,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_114,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_115,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ less_equal(X1,X3) | less_equal(X0,X2) ) ).
+fof(c_116,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | divide(X0,X2) = divide(X1,X3) ) ).

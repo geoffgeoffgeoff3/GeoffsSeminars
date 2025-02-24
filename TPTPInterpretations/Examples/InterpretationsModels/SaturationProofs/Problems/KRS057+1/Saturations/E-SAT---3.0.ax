@@ -1,0 +1,27 @@
+fof(axiom_3,axiom,! [X3] : ( ( cB(X3) <=> cC(X3) ) & ( cB(X3) <=> X3 = iA ) & ( cB(X3) <=> ~ cD(X3) ) & ( cC(X3) <=> X3 = iA ) & ( cC(X3) <=> ~ cD(X3) ) & ( X3 = iA <=> ~ cD(X3) ) ) ).
+fof(axiom_1,axiom,! [X3] : ( xsd_string(X3) <=> ~ xsd_integer(X3) ) ).
+fof(axiom_0,axiom,! [X3] : ( cowlThing(X3) & ~ cowlNothing(X3) ) ).
+fof(c_0_3,axiom,! [X3] : ( ( cB(X3) <=> cC(X3) ) & ( cB(X3) <=> X3 = iA ) & ( cB(X3) <=> ~ cD(X3) ) & ( cC(X3) <=> X3 = iA ) & ( cC(X3) <=> ~ cD(X3) ) & ( X3 = iA <=> ~ cD(X3) ) ) ).
+fof(c_0_4,axiom,! [X3] : ( xsd_string(X3) <=> ~ xsd_integer(X3) ) ).
+fof(c_0_5,axiom,! [X20] : ( ( ~ cB(X20) | cC(X20) ) & ( ~ cC(X20) | cB(X20) ) & ( ~ cB(X20) | X20 = iA ) & ( X20 != iA | cB(X20) ) & ( ~ cB(X20) | ~ cD(X20) ) & ( cD(X20) | cB(X20) ) & ( ~ cC(X20) | X20 = iA ) & ( X20 != iA | cC(X20) ) & ( ~ cC(X20) | ~ cD(X20) ) & ( cD(X20) | cC(X20) ) & ( X20 != iA | ~ cD(X20) ) & ( cD(X20) | X20 = iA ) ) ).
+fof(c_0_6,axiom,! [X3] : ( cowlThing(X3) & ~ cowlNothing(X3) ) ).
+fof(c_0_7,axiom,! [X19] : ( ( ~ xsd_string(X19) | ~ xsd_integer(X19) ) & ( xsd_integer(X19) | xsd_string(X19) ) ) ).
+fof(c_0_8,axiom,! [X1] : ( X1 != iA | ~ cD(X1) ) ).
+fof(c_0_9,axiom,! [X18] : ( cowlThing(X18) & ~ cowlNothing(X18) ) ).
+fof(c_0_10,axiom,! [X1] : ( cC(X1) | X1 != iA ) ).
+fof(c_0_11,axiom,! [X1] : ( cB(X1) | X1 != iA ) ).
+fof(c_0_12,axiom,! [X1] : ( xsd_integer(X1) | xsd_string(X1) ) ).
+fof(c_0_13,axiom,! [X1] : ( cD(X1) | cC(X1) ) ).
+fof(c_0_14,axiom,! [X1] : ( cD(X1) | cB(X1) ) ).
+fof(c_0_15,axiom,! [X1] : ( X1 = iA | ~ cC(X1) ) ).
+fof(c_0_16,axiom,! [X1] : ( cC(X1) | ~ cB(X1) ) ).
+fof(c_0_17,axiom,! [X1] : ( cB(X1) | ~ cC(X1) ) ).
+fof(c_0_18,axiom,! [X1] : ( X1 = iA | ~ cB(X1) ) ).
+fof(c_0_19,axiom,! [X1] : ( cD(X1) | X1 = iA ) ).
+fof(c_0_20,axiom,! [X1] : ( ~ xsd_string(X1) | ~ xsd_integer(X1) ) ).
+fof(c_0_21,axiom,! [X1] : ( ~ cC(X1) | ~ cD(X1) ) ).
+fof(c_0_22,axiom,! [X1] : ( ~ cB(X1) | ~ cD(X1) ) ).
+fof(c_0_23,axiom,~ cD(iA) ).
+fof(c_0_24,axiom,! [X1] : ~ cowlNothing(X1) ).
+fof(c_0_25,axiom,cC(iA) ).
+fof(c_0_26,axiom,cB(iA) ).

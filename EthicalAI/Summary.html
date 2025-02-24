@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE> Ethical AI </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+
+  var images = new Array();
+  var imageIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'EthicalAI.png';
+  images[1]     = new Image();
+  images[1].src = 'WorkNot.png';
+
+  function nextImage() {
+      imageIndex = (imageIndex + 1) % 2;
+      document.images['image'].src = images[imageIndex].src;
+  }
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Ethical AI </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME='image' SRC="EthicalAI.png" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Where do Ethics come from? </H3>
+<UL>
+<LI> Humans experience events that influence their ethics
+<LI> The influence is discounted by "munge distance"
+<LI> Influences decay over time
+<LI> Human ethics is the accumulation of decayed influences
+</UL>
+
+<H3> Can AI Systems' Ethics use that Model? </H3>
+<UL>
+<LI> What events should be used?
+<LI> What is the discount for "munge distance"?
+<LI> What is the decay function?
+<LI> How can the influences be accumulated?
+<LI> How should this be represented?
+</UL>
+
+<H3> AI Ethics in Action </H3>
+<UL>
+<LI> User's ethics?
+<LI> Society's ethics?
+<LI> AI system's ethics?
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

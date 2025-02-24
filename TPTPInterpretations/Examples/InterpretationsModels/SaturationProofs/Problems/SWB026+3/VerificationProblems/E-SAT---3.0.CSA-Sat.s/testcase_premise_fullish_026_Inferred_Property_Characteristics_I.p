@@ -1,0 +1,2 @@
+include('Saturations/SWB026+3/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
+fof(testcase_premise_fullish_026_Inferred_Property_Characteristics_I,conjecture,? [BNODE_x1] : ? [BNODE_x2] : ? [BNODE_l1] : ? [BNODE_l2] : ( iext(uri_rdfs_domain,uri_ex_p,BNODE_x1) & iext(uri_owl_oneOf,BNODE_x1,BNODE_l1) & iext(uri_rdf_first,BNODE_l1,uri_ex_w) & iext(uri_rdf_rest,BNODE_l1,uri_rdf_nil) & iext(uri_rdfs_range,uri_ex_p,BNODE_x2) & iext(uri_owl_oneOf,BNODE_x2,BNODE_l2) & iext(uri_rdf_first,BNODE_l2,uri_ex_u) & iext(uri_rdf_rest,BNODE_l2,uri_rdf_nil) ) ).

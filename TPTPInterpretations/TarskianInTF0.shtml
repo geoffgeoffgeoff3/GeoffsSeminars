@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP format for Tarskian Interpretations </TITLE>
+</HEAD>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Tarski.jpg';
+  images[1]     = new Image();
+  images[1].src = 'GarfieldProblem.png';
+  images[2]     = new Image();
+  images[2].src = 'Garfield.png';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+TPTP format for Tarskian Interpretations
+</H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME='image' SRC="Tarski.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> The Format (replacing the 
+<A HREF="https://tptp.org/UserDocs/QuickGuide/FiniteInterpretations.html">old one</A>) </H3>
+<UL>
+<LI> The <A HREF="" onClick="putImage(1);return false">Garfield problem</A>
+<LI> Written in TF0
+<LI> Keep <A HREF="" onClick="hideshow('p6');return false;">problem types</A>
+     <SPAN ID="p6" style="display:none">
+     <PRE>
+tff(human_type,type,      human: $tType ).
+tff(cat_type,type,        cat: $tType ).
+tff(jon_decl,type,        jon: human ).
+tff(garfield_decl,type,   garfield: cat ).
+tff(arlene_decl,type,     arlene: cat ).
+tff(nermal_decl,type,     nermal: cat ).
+tff(loves_decl,type,      loves: cat > cat ).
+tff(owns_decl,type,       owns: ( human * cat ) > $o ). </PRE>
+     </SPAN>
+<LI> Use problem types as domain types, or declare new domain types
+<LI> Declare <A HREF="" onClick="hideshow('p2');return false;">domain elements</A> 
+     <SPAN ID="p2" style="display:none">
+     <PRE>
+tff(d_jon_decl,type,      d_jon: human ).
+tff(d_garfield_decl,type, d_garfield: cat ).
+tff(d_arlene_decl,type,   d_arlene: cat ).
+tff(d_nermal_decl,type,   d_nermal: cat ). </PRE>
+     </SPAN>
+<LI> New role <A HREF="" onClick="hideshow('p_interpretation');return false;">
+     <TT>interpretation</TT></A>
+     <SPAN ID="p_interpretation" style="display:none">
+     <PRE>
+tff(garfield,interpretation, </PRE>
+     </SPAN>
+<LI> Specify <A HREF="" onClick="hideshow('p_domains');return false;">domains</A>
+     <SPAN ID="p_domains" style="display:none">
+     <PRE>
+( ! [DH: human] : ( DH = d_jon )
+& ! [DC: cat]: ( DC = d_garfield | DC = d_arlene | DC = d_nermal )
+& $distinct(d_garfield,d_arlene,d_nermal) ) </PRE>
+     </SPAN>
+<LI> Interpret <A HREF="" onClick="hideshow('p4');return false;">functions</A>
+     <SPAN ID="p4" style="display:none">
+     <PRE>
+( jon = d_jon
+& garfield = d_garfield
+& arlene = d_arlene
+& nermal = d_nermal
+& loves(d_garfield) = d_garfield
+& loves(d_arlene) = d_garfield
+& loves(d_nermal) = d_garfield ) </PRE>
+     </SPAN>
+<LI> Interpret <A HREF="" onClick="hideshow('p5');return false;">predicates</A>
+     <SPAN ID="p5" style="display:none">
+     <PRE>
+( owns(d_jon,d_garfield)
+& ~ owns(d_jon,d_arlene)
+& ~ owns(d_jon,d_nermal) ) </PRE>
+     </SPAN>
+</UL>
+
+<H3>Example - 
+<A HREF="" onClick="hideshow('exampleFinite');putImage(2);return false;">
+Jon Owns Garfield's Lovers - Finite Countermodel </A> </H3>
+<SPAN ID="exampleFinite" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Jon Owns Garfield's Lovers
+     <TH WIDTH=50%> Finite Countermodel
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/TFF_Finite.p"-->
+</PRE>
+     <TD>
+<PRE>
+<!--#include file="Examples/TFF_Finite.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

@@ -1,0 +1,18 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ! [X2] : sep(X0,sep(X1,X2)) = sep(X1,sep(X0,X2)) ).
+fof(c_50,axiom,! [X0] : ! [X1] : sep(lseg(X0,X0),X1) = X1 ).
+fof(c_51,axiom,! [X0] : ! [X1] : ~ heap(sep(next(nil,X0),X1)) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ heap(sep(lseg(nil,X0),X1)) | X0 = nil ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ~ heap(sep(next(X0,X1),sep(next(X0,X2),X3))) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ heap(sep(next(X0,X1),sep(lseg(X0,X2),X3))) | X0 = X2 ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ heap(sep(lseg(X0,X1),sep(lseg(X0,X2),X3))) | X0 = X1 | X0 = X2 ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ heap(sep(next(X0,X1),sep(lseg(X1,X2),X3))) | X0 = X1 | heap(sep(lseg(X0,X2),X3)) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ heap(sep(lseg(X0,X1),sep(lseg(X1,nil),X2))) | heap(sep(lseg(X0,nil),X2)) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ heap(sep(lseg(X0,X1),sep(lseg(X1,X2),sep(next(X2,X3),X4)))) | heap(sep(lseg(X0,X2),sep(next(X2,X3),X4))) ) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ heap(sep(lseg(X0,X1),sep(lseg(X1,X2),sep(lseg(X2,X3),X4)))) | X2 = X3 | heap(sep(lseg(X0,X2),sep(lseg(X2,X3),X4))) ) ).
+fof(c_144,axiom,! [X0] : X0 = X0 ).
+fof(c_145,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_146,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_147,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | sep(X0,X2) = sep(X1,X3) ) ).
+fof(c_148,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | lseg(X0,X2) = lseg(X1,X3) ) ).
+fof(c_149,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | next(X0,X2) = next(X1,X2) ) ).
+fof(c_150,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ heap(X1) | heap(X0) ) ).

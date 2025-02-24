@@ -1,0 +1,87 @@
+fof(u39,axiom,greater(sk2,appear(efficient_producers,sk1)) ).
+fof(u42,axiom,sk2 != appear(efficient_producers,sk1) ).
+fof(u52,axiom,environment(sk1) ).
+fof(u56,axiom,in_environment(sk1,critical_point(sk1)) ).
+fof(u61,axiom,greater_or_equal(critical_point(sk1),sk2) ).
+fof(u71,axiom,~ subpopulations(first_movers,efficient_producers,sk1,sk2) ).
+fof(u76,axiom,~ in_environment(sk1,sk2) ).
+fof(u93,axiom,~ greater_or_equal(sk2,start_time(sk1)) ).
+fof(u104,axiom,in_environment(sk1,start_time(sk1)) ).
+fof(u121,axiom,subpopulations(first_movers,efficient_producers,sk1,critical_point(sk1)) ).
+fof(u124,axiom,greater_or_equal(critical_point(sk1),critical_point(sk1)) ).
+fof(u145,axiom,~ greater(growth_rate(efficient_producers,critical_point(sk1)),growth_rate(first_movers,critical_point(sk1))) ).
+fof(u150,axiom,greater(growth_rate(first_movers,critical_point(sk1)),growth_rate(efficient_producers,critical_point(sk1))) ).
+fof(u153,axiom,zero != difference(growth_rate(first_movers,critical_point(sk1)),growth_rate(efficient_producers,critical_point(sk1))) ).
+fof(u170,axiom,selection_favors(first_movers,efficient_producers,critical_point(sk1)) ).
+fof(u182,axiom,decreases(zero) ).
+fof(u215,axiom,~ greater(zero,zero) ).
+fof(u219,axiom,greater_or_equal(zero,zero) ).
+fof(u244,axiom,~ greater_or_equal(appear(efficient_producers,sk1),start_time(sk1)) ).
+fof(u250,axiom,greater(critical_point(sk1),appear(efficient_producers,sk1)) ).
+fof(u268,axiom,! [X2] : ( greater(difference(growth_rate(first_movers,X2),growth_rate(efficient_producers,X2)),zero) | ~ greater(critical_point(sk1),X2) | ~ greater_or_equal(X2,appear(efficient_producers,sk1)) | ~ subpopulations(first_movers,efficient_producers,sk1,X2) ) ).
+fof(u280,axiom,! [X1] : ( greater(difference(growth_rate(first_movers,X1),growth_rate(efficient_producers,X1)),zero) | ~ greater(critical_point(sk1),X1) | ~ subpopulations(first_movers,efficient_producers,sk1,X1) ) ).
+fof(u291,axiom,! [X0] : ( ~ greater(critical_point(sk1),X0) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) | selection_favors(first_movers,efficient_producers,X0) ) ).
+fof(u307,axiom,~ subpopulations(first_movers,efficient_producers,sk1,appear(efficient_producers,sk1)) ).
+fof(prove_t3_56,axiom,greater_or_equal(sk2,appear(efficient_producers,sk1)) ).
+fof(mp_no_FM_before_opening_43,axiom,! [X0] : ( greater_or_equal(appear(first_movers,X0),start_time(X0)) | ~ environment(X0) ) ).
+fof(u234,axiom,greater_or_equal(critical_point(sk1),appear(efficient_producers,sk1)) ).
+fof(u111,axiom,! [X0] : ( greater_or_equal(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)),zero) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) | greater(zero,difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) ) ).
+fof(mp_greater_or_equal_47,axiom,! [X0] : ! [X1] : ( greater_or_equal(X0,X1) | ~ greater(X0,X1) ) ).
+fof(u31,axiom,! [X1] : greater_or_equal(X1,X1) ).
+fof(u81,axiom,! [X3] : ! [X2] : ( ~ greater_or_equal(start_time(sk1),X3) | ~ greater_or_equal(X3,X2) | ~ in_environment(sk1,X2) | in_environment(sk1,X3) ) ).
+fof(u84,axiom,! [X1] : ( ~ greater_or_equal(critical_point(sk1),X1) | ~ greater_or_equal(X1,start_time(sk1)) | in_environment(sk1,X1) ) ).
+fof(u193,axiom,! [X0] : ! [X1] : ( ~ greater_or_equal(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)),zero) | ~ greater(X0,X1) | ~ greater_or_equal(X1,appear(efficient_producers,sk1)) | ~ subpopulations(first_movers,efficient_producers,sk1,X1) | ~ in_environment(sk1,X0) | greater(difference(growth_rate(first_movers,X1),growth_rate(efficient_producers,X1)),zero) ) ).
+fof(u82,axiom,! [X0] : ( ~ greater_or_equal(X0,critical_point(sk1)) | ~ greater_or_equal(critical_point(sk1),X0) | in_environment(sk1,X0) ) ).
+fof(u115,axiom,! [X0] : ( ~ greater_or_equal(X0,critical_point(sk1)) | ~ greater_or_equal(critical_point(sk1),X0) | subpopulations(first_movers,efficient_producers,sk1,X0) ) ).
+fof(mp_greater_or_equal_46,axiom,! [X0] : ! [X1] : ( ~ greater_or_equal(X0,X1) | X0 = X1 | greater(X0,X1) ) ).
+fof(mp_opening_time_in_duration_42,axiom,! [X0] : ( in_environment(X0,start_time(X0)) | ~ environment(X0) ) ).
+fof(prove_t3_55,axiom,in_environment(sk1,critical_point(sk1)) ).
+fof(u78,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ in_environment(sk1,X0) | ~ in_environment(sk1,X1) | ~ greater_or_equal(X2,X1) | ~ greater_or_equal(X0,X2) | in_environment(sk1,X2) ) ).
+fof(u79,axiom,! [X0] : ! [X1] : ( ~ in_environment(sk1,X0) | ~ greater_or_equal(X1,X0) | ~ greater_or_equal(critical_point(sk1),X1) | in_environment(sk1,X1) ) ).
+fof(mp_FM_and_EP_when_EP_appears_34,axiom,! [X0] : ( ~ in_environment(X0,appear(efficient_producers,X0)) | ~ environment(X0) | subpopulations(first_movers,efficient_producers,X0,appear(efficient_producers,X0)) ) ).
+fof(u137,axiom,! [X0] : ( decreases(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) ) ).
+fof(u98,axiom,! [X0] : ( decreases(difference(disbanding_rate(first_movers,X0),disbanding_rate(efficient_producers,X0))) | decreases(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) ) ).
+fof(u67,axiom,! [X0] : ( decreases(difference(founding_rate(first_movers,X0),founding_rate(efficient_producers,X0))) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) ) ).
+fof(mp_decreasing_function_35,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ decreases(difference(growth_rate(first_movers,X2),growth_rate(efficient_producers,X2))) | ~ in_environment(X0,X1) | ~ greater(X1,X2) | ~ greater_or_equal(X2,appear(efficient_producers,X0)) | ~ environment(X0) | ~ greater_or_equal(difference(growth_rate(first_movers,X1),growth_rate(efficient_producers,X1)),zero) | greater(difference(growth_rate(first_movers,X2),growth_rate(efficient_producers,X2)),zero) ) ).
+fof(mp_difference_between_founding_rates_36,axiom,! [X0] : ( ~ decreases(difference(founding_rate(first_movers,X0),founding_rate(efficient_producers,X0))) | decreases(difference(disbanding_rate(first_movers,X0),disbanding_rate(efficient_producers,X0))) | decreases(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) ) ).
+fof(l3_32,axiom,! [X1] : ! [X0] : ( ~ decreases(difference(disbanding_rate(first_movers,X1),disbanding_rate(efficient_producers,X1))) | ~ subpopulations(first_movers,efficient_producers,X0,X1) | ~ environment(X0) ) ).
+fof(prove_t3_58,axiom,~ selection_favors(first_movers,efficient_producers,sk2) ).
+fof(u135,axiom,! [X0] : ( greater(zero,difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) | zero = difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) | greater(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)) ) ).
+fof(u35,axiom,! [X3] : ( greater(appear(first_movers,X3),start_time(X3)) | appear(first_movers,X3) = start_time(X3) | ~ environment(X3) ) ).
+fof(prove_t3_57,axiom,greater(critical_point(sk1),sk2) ).
+fof(u230,axiom,greater(difference(growth_rate(first_movers,critical_point(sk1)),growth_rate(efficient_producers,critical_point(sk1))),zero) ).
+fof(u130,axiom,! [X0] : ( greater(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)),zero) | greater(zero,difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) | zero = difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) ) ).
+fof(u271,axiom,! [X2] : ( greater(growth_rate(first_movers,X2),growth_rate(efficient_producers,X2)) | ~ greater_or_equal(X2,appear(efficient_producers,sk1)) | ~ subpopulations(first_movers,efficient_producers,sk1,X2) | ~ greater(critical_point(sk1),X2) ) ).
+fof(u283,axiom,! [X2] : ( greater(growth_rate(first_movers,X2),growth_rate(efficient_producers,X2)) | ~ subpopulations(first_movers,efficient_producers,sk1,X2) | ~ greater(critical_point(sk1),X2) ) ).
+fof(u95,axiom,~ greater(sk2,start_time(sk1)) ).
+fof(u100,axiom,! [X1] : ! [X2] : ( ~ greater(start_time(sk1),X1) | ~ in_environment(sk1,X2) | in_environment(sk1,X1) | ~ greater_or_equal(X1,X2) ) ).
+fof(mp_negative_growth_rate_difference_37,axiom,! [X0] : ( ~ greater(zero,difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) | greater(growth_rate(efficient_producers,X0),growth_rate(first_movers,X0)) ) ).
+fof(u246,axiom,~ greater(appear(efficient_producers,sk1),start_time(sk1)) ).
+fof(u89,axiom,! [X0] : ( ~ greater(critical_point(sk1),X0) | in_environment(sk1,X0) | ~ greater_or_equal(X0,start_time(sk1)) ) ).
+fof(u282,axiom,! [X0] : ! [X1] : ( ~ greater(critical_point(sk1),X0) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) | ~ greater_or_equal(X1,appear(efficient_producers,sk1)) | ~ subpopulations(first_movers,efficient_producers,sk1,X1) | ~ in_environment(sk1,X0) | greater(difference(growth_rate(first_movers,X1),growth_rate(efficient_producers,X1)),zero) | ~ greater(X0,X1) ) ).
+fof(mp_positive_growth_rate_difference_39,axiom,! [X0] : ( ~ greater(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)),zero) | greater(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)) ) ).
+fof(u259,axiom,! [X2] : ! [X3] : ( ~ greater(difference(growth_rate(first_movers,X2),growth_rate(efficient_producers,X2)),zero) | ~ greater_or_equal(X3,appear(efficient_producers,sk1)) | ~ subpopulations(first_movers,efficient_producers,sk1,X3) | ~ in_environment(sk1,X2) | greater(difference(growth_rate(first_movers,X3),growth_rate(efficient_producers,X3)),zero) | ~ greater(X2,X3) ) ).
+fof(mp1_high_growth_rates_31,axiom,! [X2] : ! [X3] : ! [X1] : ! [X0] : ( ~ greater(growth_rate(X2,X3),growth_rate(X1,X3)) | selection_favors(X2,X1,X3) | ~ subpopulations(X1,X2,X0,X3) | ~ environment(X0) ) ).
+fof(mp_positive_growth_rate_difference_40,axiom,! [X0] : ( ~ greater(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)) | greater(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)),zero) ) ).
+fof(mp_negative_growth_rate_difference_38,axiom,! [X0] : ( ~ greater(growth_rate(efficient_producers,X0),growth_rate(first_movers,X0)) | greater(zero,difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) ) ).
+fof(u29,axiom,! [X0] : ( ~ greater(growth_rate(efficient_producers,critical_point(X0)),growth_rate(first_movers,critical_point(X0))) | ~ environment(X0) ) ).
+fof(u86,axiom,! [X0] : ( ~ greater(X0,critical_point(sk1)) | in_environment(sk1,X0) | ~ greater_or_equal(critical_point(sk1),X0) ) ).
+fof(u117,axiom,! [X0] : ( ~ greater(X0,critical_point(sk1)) | subpopulations(first_movers,efficient_producers,sk1,X0) | ~ greater_or_equal(critical_point(sk1),X0) ) ).
+fof(u30,axiom,! [X2] : ! [X0] : ( ~ greater(X2,critical_point(X0)) | ~ environment(X0) | ~ subpopulations(first_movers,efficient_producers,X0,X2) | greater(growth_rate(efficient_producers,X2),growth_rate(first_movers,X2)) ) ).
+fof(mp_symmetry_of_FM_and_EP_44,axiom,! [X0] : ! [X1] : ( subpopulations(efficient_producers,first_movers,X0,X1) | ~ subpopulations(first_movers,efficient_producers,X0,X1) | ~ environment(X0) ) ).
+fof(mp_critical_point_means_FM_and_EP_33,axiom,! [X0] : ( subpopulations(first_movers,efficient_producers,X0,critical_point(X0)) | ~ in_environment(X0,critical_point(X0)) | ~ environment(X0) ) ).
+fof(u286,axiom,! [X0] : ( ~ subpopulations(efficient_producers,first_movers,sk1,X0) | selection_favors(first_movers,efficient_producers,X0) | ~ greater(critical_point(sk1),X0) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) ) ).
+fof(u96,axiom,! [X2] : ! [X1] : ! [X0] : ( ~ subpopulations(first_movers,efficient_producers,sk1,X2) | ~ greater_or_equal(X1,X2) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) | ~ greater_or_equal(X0,X1) | subpopulations(first_movers,efficient_producers,sk1,X1) ) ).
+fof(u113,axiom,! [X1] : ! [X0] : ( ~ subpopulations(first_movers,efficient_producers,sk1,X1) | ~ greater_or_equal(X0,critical_point(sk1)) | ~ greater_or_equal(X1,X0) | subpopulations(first_movers,efficient_producers,sk1,X0) ) ).
+fof(u139,axiom,! [X0] : ( ~ subpopulations(first_movers,efficient_producers,sk1,X0) | zero = difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)) | greater(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)) | greater(growth_rate(efficient_producers,X0),growth_rate(first_movers,X0)) ) ).
+fof(u46,axiom,! [X0] : ( ~ subpopulations(first_movers,efficient_producers,sk1,X0) | greater_or_equal(X0,appear(efficient_producers,sk1)) ) ).
+fof(u258,axiom,! [X0] : ! [X1] : ( ~ subpopulations(first_movers,efficient_producers,sk1,X0) | ~ greater_or_equal(X1,appear(efficient_producers,sk1)) | ~ subpopulations(first_movers,efficient_producers,sk1,X1) | ~ in_environment(sk1,X0) | greater(difference(growth_rate(first_movers,X1),growth_rate(efficient_producers,X1)),zero) | ~ greater(X0,X1) | greater(zero,difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) ) ).
+fof(prove_t3_54,axiom,environment(sk1) ).
+fof(u285,axiom,! [X2] : ! [X1] : ( ~ environment(X2) | ~ greater(critical_point(sk1),X1) | selection_favors(first_movers,efficient_producers,X1) | ~ subpopulations(efficient_producers,first_movers,X2,X1) | ~ subpopulations(first_movers,efficient_producers,sk1,X1) ) ).
+fof(u138,axiom,! [X1] : ! [X2] : ! [X0] : ( ~ environment(X1) | ~ in_environment(X1,X2) | ~ greater(X2,X0) | ~ greater_or_equal(X0,appear(efficient_producers,X1)) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) | ~ greater_or_equal(difference(growth_rate(first_movers,X2),growth_rate(efficient_producers,X2)),zero) | greater(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0)),zero) ) ).
+fof(u134,axiom,! [X1] : ! [X0] : ( ~ environment(X1) | ~ subpopulations(first_movers,efficient_producers,sk1,X0) | ~ subpopulations(first_movers,efficient_producers,X1,X0) | decreases(difference(growth_rate(first_movers,X0),growth_rate(efficient_producers,X0))) ) ).
+fof(a11_53,axiom,! [X0] : ! [X1] : ( ~ environment(X0) | ~ subpopulations(first_movers,efficient_producers,X0,X1) | decreases(difference(founding_rate(first_movers,X1),founding_rate(efficient_producers,X1))) ) ).
+fof(a10_50,axiom,! [X0] : ! [X2] : ! [X3] : ! [X1] : ( ~ environment(X0) | ~ greater_or_equal(X2,X3) | ~ greater_or_equal(X3,X1) | ~ subpopulations(first_movers,efficient_producers,X0,X2) | ~ subpopulations(first_movers,efficient_producers,X0,X1) | subpopulations(first_movers,efficient_producers,X0,X3) ) ).
+fof(mp_relationship_of_growth_rates_49,axiom,! [X0] : ! [X1] : ( ~ environment(X0) | ~ subpopulations(first_movers,efficient_producers,X0,X1) | greater_or_equal(difference(growth_rate(first_movers,X1),growth_rate(efficient_producers,X1)),zero) | greater(zero,difference(growth_rate(first_movers,X1),growth_rate(efficient_producers,X1))) ) ).
+fof(mp_FM_and_EP_members_EP_appeared_45,axiom,! [X0] : ! [X1] : ( ~ environment(X0) | ~ subpopulations(first_movers,efficient_producers,X0,X1) | greater_or_equal(X1,appear(efficient_producers,X0)) ) ).
+fof(mp_durations_are_time_intervals_41,axiom,! [X0] : ! [X2] : ! [X1] : ! [X3] : ( ~ environment(X0) | ~ in_environment(X0,X2) | ~ in_environment(X0,X1) | ~ greater_or_equal(X3,X1) | ~ greater_or_equal(X2,X3) | in_environment(X0,X3) ) ).

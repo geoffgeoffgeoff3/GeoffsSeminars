@@ -1,0 +1,2 @@
+include('Saturations/NLP025-1/Saturations/iProver-SAT---3.7.ax').
+fof(clause96,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ( ~ vincent_forename(U,V) | ~ forename(U,V) | ~ man(U,W) | ~ of(U,V,W) | ~ present(U,X) | ~ desire_want(U,X) | ~ accessible_world(U,Y) | ~ theme(U,X,Y) | ~ proposition(U,Y) | ~ mia_forename(U,Z) | ~ forename(U,Z) | ~ dance(Y,X1) | ~ present(Y,X1) | ~ agent(Y,X1,X2) | ~ event(Y,X1) | ~ agent(U,X,X2) | ~ woman(U,X2) | ~ of(U,Z,X2) | ~ actual_world(U) | present(skf4(W,X3),skf5(X3,W)) ) ).

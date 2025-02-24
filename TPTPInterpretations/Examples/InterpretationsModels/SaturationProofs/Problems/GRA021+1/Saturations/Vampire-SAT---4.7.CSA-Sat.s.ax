@@ -1,0 +1,473 @@
+fof(u39,axiom,! [X0] : ! [X1] : ( ~ green(X0,X1) | ~ red(X0,X1) ) ).
+fof(u42,axiom,~ goal ).
+fof(u60,axiom,~ green(n1,n2) ).
+fof(u65,axiom,red(n1,n2) ).
+fof(u80,axiom,~ green(n2,n3) ).
+fof(u85,axiom,red(n2,n3) ).
+fof(u90,axiom,! [X3] : ! [X4] : ! [X0] : ! [X1] : ! [X2] : ( ~ green(X3,X4) | ~ green(X0,X1) | ~ green(X0,X2) | ~ green(X1,X2) | ~ green(X0,X3) | ~ green(X1,X3) | ~ green(X2,X3) | ~ green(X0,X4) | ~ green(X1,X4) | ~ green(X2,X4) ) ).
+fof(u94,axiom,~ green(n3,n4) ).
+fof(u99,axiom,red(n3,n4) ).
+fof(u107,axiom,green(n4,n5) ).
+fof(u110,axiom,~ red(n4,n5) ).
+fof(u117,axiom,! [X3] : ! [X4] : ! [X0] : ! [X1] : ! [X2] : ( ~ red(X3,X4) | ~ red(X0,X1) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,X3) | ~ red(X1,X3) | ~ red(X2,X3) | ~ red(X0,X4) | ~ red(X1,X4) | ~ red(X2,X4) ) ).
+fof(u121,axiom,~ green(n5,n6) ).
+fof(u126,axiom,red(n5,n6) ).
+fof(u133,axiom,~ green(n6,n7) ).
+fof(u138,axiom,red(n6,n7) ).
+fof(u145,axiom,green(n7,n8) ).
+fof(u155,axiom,~ green(n8,n9) ).
+fof(u160,axiom,red(n8,n9) ).
+fof(u166,axiom,~ green(n9,n10) ).
+fof(u171,axiom,red(n9,n10) ).
+fof(u178,axiom,green(n10,n11) ).
+fof(u181,axiom,~ red(n10,n11) ).
+fof(u188,axiom,~ green(n11,n12) ).
+fof(u193,axiom,red(n11,n12) ).
+fof(u386,axiom,~ green(n1,n3) ).
+fof(u391,axiom,red(n1,n3) ).
+fof(u400,axiom,green(n2,n4) ).
+fof(u403,axiom,~ red(n2,n4) ).
+fof(u414,axiom,green(n3,n5) ).
+fof(u417,axiom,~ red(n3,n5) ).
+fof(u428,axiom,~ green(n4,n6) ).
+fof(u433,axiom,red(n4,n6) ).
+fof(u445,axiom,green(n5,n7) ).
+fof(u448,axiom,~ red(n5,n7) ).
+fof(u461,axiom,~ green(n6,n8) ).
+fof(u466,axiom,red(n6,n8) ).
+fof(u480,axiom,green(n7,n9) ).
+fof(u483,axiom,~ red(n7,n9) ).
+fof(u499,axiom,green(n8,n10) ).
+fof(u502,axiom,~ red(n8,n10) ).
+fof(u518,axiom,~ green(n9,n11) ).
+fof(u523,axiom,red(n9,n11) ).
+fof(u539,axiom,~ green(n10,n12) ).
+fof(u544,axiom,red(n10,n12) ).
+fof(u552,axiom,~ green(n2,n2) ).
+fof(u560,axiom,~ green(n3,n3) ).
+fof(u568,axiom,green(n1,n4) ).
+fof(u580,axiom,~ green(n4,n4) ).
+fof(u589,axiom,~ green(n5,n5) ).
+fof(u597,axiom,green(n2,n5) ).
+fof(u600,axiom,~ red(n2,n5) ).
+fof(u609,axiom,~ red(n1,n1) ).
+fof(u619,axiom,~ green(n6,n6) ).
+fof(u627,axiom,green(n3,n6) ).
+fof(u639,axiom,~ green(n7,n7) ).
+fof(u650,axiom,~ green(n8,n8) ).
+fof(u658,axiom,green(n4,n7) ).
+fof(u661,axiom,~ red(n4,n7) ).
+fof(u670,axiom,~ green(n9,n9) ).
+fof(u682,axiom,~ green(n10,n10) ).
+fof(u689,axiom,~ green(n5,n8) ).
+fof(u694,axiom,red(n5,n8) ).
+fof(u702,axiom,~ green(n11,n11) ).
+fof(u715,axiom,green(n6,n9) ).
+fof(u718,axiom,~ red(n6,n9) ).
+fof(u732,axiom,~ green(n7,n10) ).
+fof(u737,axiom,red(n7,n10) ).
+fof(u752,axiom,green(n8,n11) ).
+fof(u772,axiom,green(n9,n12) ).
+fof(u787,axiom,~ green(n1,n5) ).
+fof(u792,axiom,red(n1,n5) ).
+fof(u807,axiom,~ green(n2,n6) ).
+fof(u812,axiom,red(n2,n6) ).
+fof(u820,axiom,~ red(n2,n2) ).
+fof(u834,axiom,~ green(n3,n7) ).
+fof(u839,axiom,red(n3,n7) ).
+fof(u852,axiom,~ red(n3,n3) ).
+fof(u859,axiom,~ green(n4,n8) ).
+fof(u864,axiom,red(n4,n8) ).
+fof(u883,axiom,green(n5,n9) ).
+fof(u886,axiom,~ red(n5,n9) ).
+fof(u895,axiom,~ red(n4,n4) ).
+fof(u913,axiom,green(n6,n10) ).
+fof(u933,axiom,~ red(n5,n5) ).
+fof(u941,axiom,green(n7,n11) ).
+fof(u967,axiom,green(n8,n12) ).
+fof(u979,axiom,~ red(n6,n6) ).
+fof(u992,axiom,green(n1,n6) ).
+fof(u995,axiom,~ red(n1,n6) ).
+fof(u1006,axiom,~ red(n8,n8) ).
+fof(u1013,axiom,~ green(n2,n7) ).
+fof(u1018,axiom,red(n2,n7) ).
+fof(u1026,axiom,~ green(n3,n8) ).
+fof(u1031,axiom,red(n3,n8) ).
+fof(u1048,axiom,~ green(n4,n9) ).
+fof(u1053,axiom,red(n4,n9) ).
+fof(u1058,axiom,~ red(n9,n9) ).
+fof(u1079,axiom,green(n5,n10) ).
+fof(u1082,axiom,~ red(n5,n10) ).
+fof(u1090,axiom,~ red(n10,n10) ).
+fof(u1103,axiom,green(n6,n11) ).
+fof(u1125,axiom,green(n7,n12) ).
+fof(u1128,axiom,~ red(n7,n12) ).
+fof(u1140,axiom,~ green(n1,n7) ).
+fof(u1145,axiom,red(n1,n7) ).
+fof(u1157,axiom,~ green(n2,n8) ).
+fof(u1162,axiom,red(n2,n8) ).
+fof(u1185,axiom,green(n3,n9) ).
+fof(u1204,axiom,~ green(n4,n10) ).
+fof(u1209,axiom,red(n4,n10) ).
+fof(u1225,axiom,~ green(n5,n11) ).
+fof(u1230,axiom,red(n5,n11) ).
+fof(u1253,axiom,~ green(n6,n12) ).
+fof(u1258,axiom,red(n6,n12) ).
+fof(u1267,axiom,~ green(n1,n1) ).
+fof(u1275,axiom,green(n1,n8) ).
+fof(u1301,axiom,green(n2,n9) ).
+fof(u1313,axiom,~ red(n11,n11) ).
+fof(u1323,axiom,~ green(n7,n6) ).
+fof(u1328,axiom,green(n3,n10) ).
+fof(u1352,axiom,green(n4,n11) ).
+fof(u1371,axiom,~ green(n5,n12) ).
+fof(u1376,axiom,red(n5,n12) ).
+fof(u1394,axiom,~ green(n1,n9) ).
+fof(u1399,axiom,red(n1,n9) ).
+fof(u1416,axiom,green(n2,n10) ).
+fof(u1419,axiom,~ red(n2,n10) ).
+fof(u1437,axiom,green(n3,n11) ).
+fof(u1462,axiom,green(n4,n12) ).
+fof(u1477,axiom,~ green(n1,n10) ).
+fof(u1482,axiom,red(n1,n10) ).
+fof(u1490,axiom,~ red(n7,n7) ).
+fof(u1505,axiom,green(n2,n11) ).
+fof(u1534,axiom,green(n3,n12) ).
+fof(u1550,axiom,~ green(n1,n11) ).
+fof(u1555,axiom,red(n1,n11) ).
+fof(u1567,axiom,green(n2,n12) ).
+fof(u1579,axiom,! [X1] : ! [X0] : ( ~ green(X1,n5) | ~ green(X0,X1) | ~ green(X0,n5) | ~ green(X0,n4) | ~ green(X1,n2) | ~ green(X0,n2) | ~ green(X1,n4) ) ).
+fof(u1607,axiom,green(n1,n12) ).
+fof(u1677,axiom,! [X5] : ! [X4] : ( ~ green(X5,n9) | ~ green(X4,X5) | ~ green(X4,n9) | ~ green(X4,n7) | ~ green(X5,n5) | ~ green(X4,n5) | ~ green(X5,n7) ) ).
+fof(u1757,axiom,! [X1] : ! [X0] : ( ~ red(X1,n11) | ~ red(X0,X1) | ~ red(X0,n11) | ~ red(X0,n10) | ~ red(X1,n9) | ~ red(X0,n9) | ~ red(X1,n10) ) ).
+fof(u1813,axiom,! [X1] : ! [X0] : ( ~ red(X1,n12) | ~ red(X0,X1) | ~ red(X0,n12) | ~ red(X0,n11) | ~ red(X1,n10) | ~ red(X0,n10) | ~ red(X1,n11) ) ).
+fof(u1822,axiom,~ green(n2,n1) ).
+fof(u1830,axiom,~ green(n3,n2) ).
+fof(u1838,axiom,~ green(n4,n3) ).
+fof(u1846,axiom,~ green(n5,n4) ).
+fof(u1849,axiom,! [X9] : ! [X8] : ( ~ green(X9,n7) | ~ green(X8,X9) | ~ green(X8,n7) | ~ green(X8,n4) | ~ green(X9,n5) | ~ green(X8,n5) | ~ green(X9,n4) ) ).
+fof(u1853,axiom,! [X7] : ! [X6] : ( ~ green(X7,n11) | ~ green(X6,X7) | ~ green(X6,n11) | ~ green(X6,n8) | ~ green(X7,n7) | ~ green(X6,n7) | ~ green(X7,n8) ) ).
+fof(u1884,axiom,! [X3] : ! [X2] : ( ~ red(X3,n8) | ~ red(X2,X3) | ~ red(X2,n8) | ~ red(X2,n6) | ~ red(X3,n5) | ~ red(X2,n5) | ~ red(X3,n6) ) ).
+fof(u1895,axiom,~ red(n9,n7) ).
+fof(u1899,axiom,! [X1] : ! [X0] : ( ~ red(X1,n8) | ~ red(X0,X1) | ~ red(X0,n8) | ~ red(X0,n5) | ~ red(X1,n4) | ~ red(X0,n4) | ~ red(X1,n5) ) ).
+fof(u1910,axiom,~ red(n6,n5) ).
+fof(u1914,axiom,~ red(n6,n4) ).
+fof(u1947,axiom,! [X1] : ( ~ green(X1,n9) | ~ green(X1,n5) | ~ green(X1,n7) | ~ green(X1,n2) ) ).
+fof(u1957,axiom,! [X0] : ( ~ red(X0,n8) | ~ red(X0,n5) | ~ red(X0,n6) | ~ red(X0,n2) ) ).
+fof(u1965,axiom,! [X1] : ! [X0] : ( ~ red(X1,n6) | ~ red(X0,X1) | ~ red(X0,n6) | ~ red(X0,n5) | ~ red(X1,n2) | ~ red(X0,n2) | ~ red(X1,n5) ) ).
+fof(u1973,axiom,! [X1] : ! [X0] : ( ~ red(X1,n5) | ~ red(X0,X1) | ~ red(X0,n5) | ~ red(X0,n2) | ~ red(X1,n1) | ~ red(X0,n1) | ~ red(X1,n2) ) ).
+fof(u1988,axiom,! [X1] : ! [X0] : ( ~ green(X1,n6) | ~ green(X0,X1) | ~ green(X0,n6) | ~ green(X0,n4) | ~ green(X1,n1) | ~ green(X0,n1) | ~ green(X1,n4) ) ).
+fof(u2022,axiom,~ red(n4,n2) ).
+fof(u2026,axiom,~ red(n4,n1) ).
+fof(u2037,axiom,! [X3] : ! [X2] : ( ~ green(X3,n9) | ~ green(X2,X3) | ~ green(X2,n9) | ~ green(X2,n7) | ~ green(X3,n4) | ~ green(X2,n4) | ~ green(X3,n7) ) ).
+fof(u2050,axiom,! [X1] : ( ~ green(X1,n9) | ~ green(X1,n4) | ~ green(X1,n7) | ~ green(X1,n2) ) ).
+fof(u2061,axiom,! [X1] : ! [X0] : ( ~ green(X1,n6) | ~ green(X0,X1) | ~ green(X0,n6) | ~ green(X0,n3) | ~ green(X1,n1) | ~ green(X0,n1) | ~ green(X1,n3) ) ).
+fof(u2078,axiom,! [X3] : ! [X2] : ( ~ green(X3,n7) | ~ green(X2,X3) | ~ green(X2,n7) | ~ green(X2,n4) | ~ green(X3,n2) | ~ green(X2,n2) | ~ green(X3,n4) ) ).
+fof(u2087,axiom,! [X7] : ! [X6] : ( ~ green(X7,n9) | ~ green(X6,X7) | ~ green(X6,n9) | ~ green(X6,n6) | ~ green(X7,n4) | ~ green(X6,n4) | ~ green(X7,n6) ) ).
+fof(u2108,axiom,! [X0] : ( ~ green(X0,n9) | ~ green(X0,n4) | ~ green(X0,n6) | ~ green(X0,n1) ) ).
+fof(u2128,axiom,! [X5] : ! [X4] : ( ~ green(X5,n12) | ~ green(X4,X5) | ~ green(X4,n12) | ~ green(X4,n9) | ~ green(X5,n7) | ~ green(X4,n7) | ~ green(X5,n9) ) ).
+fof(u2166,axiom,! [X3] : ( ~ green(X3,n12) | ~ green(X3,n7) | ~ green(X3,n9) | ~ green(X3,n4) ) ).
+fof(u2186,axiom,~ green(n6,n5) ).
+fof(u2197,axiom,~ green(n8,n6) ).
+fof(u2204,axiom,! [X13] : ! [X12] : ( ~ green(X13,n12) | ~ green(X12,X13) | ~ green(X12,n12) | ~ green(X12,n8) | ~ green(X13,n7) | ~ green(X12,n7) | ~ green(X13,n8) ) ).
+fof(u2224,axiom,~ green(n9,n8) ).
+fof(u2235,axiom,! [X7] : ! [X6] : ( ~ red(X7,n8) | ~ red(X6,X7) | ~ red(X6,n8) | ~ red(X6,n4) | ~ red(X7,n6) | ~ red(X6,n6) | ~ red(X7,n4) ) ).
+fof(u2239,axiom,! [X1] : ! [X0] : ( ~ red(X1,n7) | ~ red(X0,X1) | ~ red(X0,n7) | ~ red(X0,n6) | ~ red(X1,n2) | ~ red(X0,n2) | ~ red(X1,n6) ) ).
+fof(u2253,axiom,! [X3] : ! [X2] : ( ~ red(X3,n7) | ~ red(X2,X3) | ~ red(X2,n7) | ~ red(X2,n3) | ~ red(X3,n2) | ~ red(X2,n2) | ~ red(X3,n3) ) ).
+fof(u2264,axiom,~ red(n6,n3) ).
+fof(u2268,axiom,~ red(n6,n2) ).
+fof(u2275,axiom,! [X5] : ! [X4] : ( ~ green(X5,n9) | ~ green(X4,X5) | ~ green(X4,n9) | ~ green(X4,n6) | ~ green(X5,n3) | ~ green(X4,n3) | ~ green(X5,n6) ) ).
+fof(u2288,axiom,! [X0] : ( ~ green(X0,n9) | ~ green(X0,n3) | ~ green(X0,n6) | ~ green(X0,n1) ) ).
+fof(u2311,axiom,! [X1] : ! [X0] : ( ~ red(X1,n8) | ~ red(X0,X1) | ~ red(X0,n8) | ~ red(X0,n6) | ~ red(X1,n2) | ~ red(X0,n2) | ~ red(X1,n6) ) ).
+fof(u2330,axiom,! [X5] : ! [X4] : ( ~ green(X5,n9) | ~ green(X4,X5) | ~ green(X4,n9) | ~ green(X4,n5) | ~ green(X5,n3) | ~ green(X4,n3) | ~ green(X5,n5) ) ).
+fof(u2344,axiom,~ green(n7,n5) ).
+fof(u2348,axiom,~ green(n7,n3) ).
+fof(u2377,axiom,~ green(n4,n2) ).
+fof(u2399,axiom,! [X5] : ! [X4] : ( ~ red(X5,n7) | ~ red(X4,X5) | ~ red(X4,n7) | ~ red(X4,n6) | ~ red(X5,n4) | ~ red(X4,n4) | ~ red(X5,n6) ) ).
+fof(u2411,axiom,~ red(n5,n4) ).
+fof(u2429,axiom,~ red(n4,n3) ).
+fof(u2455,axiom,! [X1] : ! [X0] : ( ~ red(X1,n9) | ~ red(X0,X1) | ~ red(X0,n9) | ~ red(X0,n8) | ~ red(X1,n4) | ~ red(X0,n4) | ~ red(X1,n8) ) ).
+fof(u2495,axiom,! [X3] : ! [X2] : ( ~ red(X3,n8) | ~ red(X2,X3) | ~ red(X2,n8) | ~ red(X2,n4) | ~ red(X3,n3) | ~ red(X2,n3) | ~ red(X3,n4) ) ).
+fof(u2530,axiom,~ green(n8,n5) ).
+fof(u2537,axiom,! [X3] : ! [X2] : ( ~ red(X3,n10) | ~ red(X2,X3) | ~ red(X2,n10) | ~ red(X2,n9) | ~ red(X3,n4) | ~ red(X2,n4) | ~ red(X3,n9) ) ).
+fof(u2559,axiom,! [X1] : ! [X0] : ( ~ red(X1,n7) | ~ red(X0,X1) | ~ red(X0,n7) | ~ red(X0,n2) | ~ red(X1,n1) | ~ red(X0,n1) | ~ red(X1,n2) ) ).
+fof(u2570,axiom,~ red(n3,n2) ).
+fof(u2574,axiom,~ red(n3,n1) ).
+fof(u2577,axiom,! [X2] : ( ~ red(X2,n7) | ~ red(X2,n1) | ~ red(X2,n2) | ~ red(X2,n3) ) ).
+fof(u2585,axiom,~ red(n6,n1) ).
+fof(u2598,axiom,! [X1] : ! [X0] : ( ~ red(X1,n8) | ~ red(X0,X1) | ~ red(X0,n8) | ~ red(X0,n3) | ~ red(X1,n2) | ~ red(X0,n2) | ~ red(X1,n3) ) ).
+fof(u2610,axiom,~ red(n5,n3) ).
+fof(u2614,axiom,~ red(n5,n2) ).
+fof(u2632,axiom,! [X3] : ! [X2] : ( ~ green(X3,n9) | ~ green(X2,X3) | ~ green(X2,n9) | ~ green(X2,n5) | ~ green(X3,n2) | ~ green(X2,n2) | ~ green(X3,n5) ) ).
+fof(u2644,axiom,! [X5] : ! [X4] : ( ~ green(X5,n10) | ~ green(X4,X5) | ~ green(X4,n10) | ~ green(X4,n6) | ~ green(X5,n3) | ~ green(X4,n3) | ~ green(X5,n6) ) ).
+fof(u2675,axiom,! [X7] : ! [X6] : ( ~ green(X7,n11) | ~ green(X6,X7) | ~ green(X6,n11) | ~ green(X6,n7) | ~ green(X7,n4) | ~ green(X6,n4) | ~ green(X7,n7) ) ).
+fof(u2694,axiom,~ green(n8,n7) ).
+fof(u2698,axiom,~ green(n8,n4) ).
+fof(u2705,axiom,! [X4] : ! [X3] : ( ~ red(X4,n12) | ~ red(X3,X4) | ~ red(X3,n12) | ~ red(X3,n11) | ~ red(X4,n5) | ~ red(X3,n5) | ~ red(X4,n11) ) ).
+fof(u2720,axiom,~ red(n10,n5) ).
+fof(u2732,axiom,! [X5] : ! [X4] : ( ~ green(X5,n10) | ~ green(X4,X5) | ~ green(X4,n10) | ~ green(X4,n5) | ~ green(X5,n3) | ~ green(X4,n3) | ~ green(X5,n5) ) ).
+fof(u2768,axiom,! [X5] : ! [X4] : ( ~ red(X5,n7) | ~ red(X4,X5) | ~ red(X4,n7) | ~ red(X4,n1) | ~ red(X5,n3) | ~ red(X4,n3) | ~ red(X5,n1) ) ).
+fof(u2776,axiom,! [X1] : ! [X0] : ( ~ red(X1,n12) | ~ red(X0,X1) | ~ red(X0,n12) | ~ red(X0,n6) | ~ red(X1,n5) | ~ red(X0,n5) | ~ red(X1,n6) ) ).
+fof(u2787,axiom,~ red(n10,n6) ).
+fof(u2795,axiom,~ red(n11,n6) ).
+fof(u2807,axiom,~ red(n9,n5) ).
+fof(u2815,axiom,~ red(n7,n4) ).
+fof(u2822,axiom,! [X1] : ! [X0] : ( ~ green(X1,n9) | ~ green(X0,X1) | ~ green(X0,n9) | ~ green(X0,n6) | ~ green(X1,n1) | ~ green(X0,n1) | ~ green(X1,n6) ) ).
+fof(u2877,axiom,! [X3] : ! [X2] : ( ~ green(X3,n10) | ~ green(X2,X3) | ~ green(X2,n10) | ~ green(X2,n5) | ~ green(X3,n2) | ~ green(X2,n2) | ~ green(X3,n5) ) ).
+fof(u2886,axiom,! [X5] : ! [X4] : ( ~ green(X5,n11) | ~ green(X4,X5) | ~ green(X4,n11) | ~ green(X4,n6) | ~ green(X5,n3) | ~ green(X4,n3) | ~ green(X5,n6) ) ).
+fof(u2899,axiom,! [X0] : ( ~ green(X0,n11) | ~ green(X0,n3) | ~ green(X0,n6) | ~ green(X0,n1) ) ).
+fof(u2913,axiom,! [X7] : ! [X6] : ( ~ green(X7,n12) | ~ green(X6,X7) | ~ green(X6,n12) | ~ green(X6,n7) | ~ green(X7,n4) | ~ green(X6,n4) | ~ green(X7,n7) ) ).
+fof(u2925,axiom,~ red(n7,n6) ).
+fof(u3000,axiom,~ green(n7,n1) ).
+fof(u3016,axiom,~ green(n6,n2) ).
+fof(u3029,axiom,~ green(n7,n2) ).
+fof(u3037,axiom,~ green(n8,n3) ).
+fof(u3042,axiom,~ green(n6,n4) ).
+fof(u3053,axiom,! [X1] : ! [X0] : ( ~ green(X1,n12) | ~ green(X0,X1) | ~ green(X0,n12) | ~ green(X0,n9) | ~ green(X1,n3) | ~ green(X0,n3) | ~ green(X1,n9) ) ).
+fof(u3080,axiom,! [X2] : ! [X1] : ( ~ red(X2,n10) | ~ red(X1,X2) | ~ red(X1,n10) | ~ red(X1,n7) | ~ red(X2,n1) | ~ red(X1,n1) | ~ red(X2,n7) ) ).
+fof(u3090,axiom,! [X4] : ! [X3] : ( ~ red(X4,n10) | ~ red(X3,X4) | ~ red(X3,n10) | ~ red(X3,n9) | ~ red(X4,n1) | ~ red(X3,n1) | ~ red(X4,n9) ) ).
+fof(u3161,axiom,! [X3] : ! [X2] : ( ~ green(X3,n11) | ~ green(X2,X3) | ~ green(X2,n11) | ~ green(X2,n4) | ~ green(X3,n2) | ~ green(X2,n2) | ~ green(X3,n4) ) ).
+fof(u3175,axiom,~ green(n8,n2) ).
+fof(u3187,axiom,~ green(n9,n4) ).
+fof(u3195,axiom,~ red(n8,n1) ).
+fof(u3211,axiom,! [X4] : ( ~ red(X4,n11) | ~ red(X4,n9) | ~ red(X4,n10) | ~ red(X4,n1) ) ).
+fof(u3226,axiom,! [X1] : ! [X0] : ( ~ green(X1,n12) | ~ green(X0,X1) | ~ green(X0,n12) | ~ green(X0,n9) | ~ green(X1,n2) | ~ green(X0,n2) | ~ green(X1,n9) ) ).
+fof(u3247,axiom,! [X3] : ! [X2] : ( ~ green(X3,n12) | ~ green(X2,X3) | ~ green(X2,n12) | ~ green(X2,n4) | ~ green(X3,n2) | ~ green(X2,n2) | ~ green(X3,n4) ) ).
+fof(u3260,axiom,! [X1] : ! [X0] : ( ~ red(X1,n11) | ~ red(X0,X1) | ~ red(X0,n11) | ~ red(X0,n5) | ~ red(X1,n1) | ~ red(X0,n1) | ~ red(X1,n5) ) ).
+fof(u3275,axiom,! [X3] : ! [X2] : ( ~ red(X3,n11) | ~ red(X2,X3) | ~ red(X2,n11) | ~ red(X2,n9) | ~ red(X3,n1) | ~ red(X2,n1) | ~ red(X3,n9) ) ).
+fof(u3304,axiom,~ green(n10,n1) ).
+fof(u3308,axiom,~ green(n10,n6) ).
+fof(u3317,axiom,~ green(n10,n8) ).
+fof(u3321,axiom,~ green(n10,n7) ).
+fof(u3337,axiom,~ green(n10,n4) ).
+fof(u3344,axiom,! [X14] : ( ~ green(X14,n11) | ~ green(X14,n3) | ~ green(X14,n6) | ~ green(X14,n10) ) ).
+fof(u3356,axiom,! [X1] : ! [X0] : ( ~ green(X1,n11) | ~ green(X0,X1) | ~ green(X0,n11) | ~ green(X0,n10) | ~ green(X1,n8) | ~ green(X0,n8) | ~ green(X1,n10) ) ).
+fof(u3369,axiom,! [X7] : ! [X6] : ( ~ green(X7,n11) | ~ green(X6,X7) | ~ green(X6,n11) | ~ green(X6,n10) | ~ green(X7,n6) | ~ green(X6,n6) | ~ green(X7,n10) ) ).
+fof(u3390,axiom,! [X3] : ! [X2] : ( ~ green(X3,n11) | ~ green(X2,X3) | ~ green(X2,n11) | ~ green(X2,n10) | ~ green(X3,n3) | ~ green(X2,n3) | ~ green(X3,n10) ) ).
+fof(u3403,axiom,! [X1] : ! [X0] : ( ~ green(X1,n11) | ~ green(X0,X1) | ~ green(X0,n11) | ~ green(X0,n10) | ~ green(X1,n2) | ~ green(X0,n2) | ~ green(X1,n10) ) ).
+fof(u3416,axiom,! [X1] : ! [X0] : ( ~ green(X1,n12) | ~ green(X0,X1) | ~ green(X0,n12) | ~ green(X0,n8) | ~ green(X1,n1) | ~ green(X0,n1) | ~ green(X1,n8) ) ).
+fof(u3437,axiom,! [X1] : ! [X0] : ( ~ green(X1,n12) | ~ green(X0,X1) | ~ green(X0,n12) | ~ green(X0,n4) | ~ green(X1,n1) | ~ green(X0,n1) | ~ green(X1,n4) ) ).
+fof(u3460,axiom,! [X1] : ! [X0] : ( ~ red(X1,n3) | ~ red(X0,X1) | ~ red(X0,n3) | ~ red(X0,n2) | ~ red(X1,n1) | ~ red(X0,n1) | ~ red(X1,n2) ) ).
+fof(u3492,axiom,~ green(n3,n1) ).
+fof(u3497,axiom,~ green(n9,n1) ).
+fof(u1615,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ green(X6,n12) | ~ green(X4,X6) | ~ green(X5,X6) | ~ green(X4,n1) | ~ green(X5,n1) | ~ green(X6,n1) | ~ green(X4,n12) | ~ green(X5,n12) | ~ green(X4,X5) ) ).
+fof(u1575,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ green(X6,n12) | ~ green(X4,X6) | ~ green(X5,X6) | ~ green(X4,n2) | ~ green(X5,n2) | ~ green(X6,n2) | ~ green(X4,n12) | ~ green(X5,n12) | ~ green(X4,X5) ) ).
+fof(u1546,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ green(X6,n12) | ~ green(X4,X6) | ~ green(X5,X6) | ~ green(X4,n3) | ~ green(X5,n3) | ~ green(X6,n3) | ~ green(X4,n12) | ~ green(X5,n12) | ~ green(X4,X5) ) ).
+fof(u1470,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ green(X6,n12) | ~ green(X4,X6) | ~ green(X5,X6) | ~ green(X4,n4) | ~ green(X5,n4) | ~ green(X6,n4) | ~ green(X4,n12) | ~ green(X5,n12) | ~ green(X4,X5) ) ).
+fof(u1132,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n12) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n7) | ~ green(X3,n7) | ~ green(X4,n7) | ~ green(X2,n12) | ~ green(X3,n12) | ~ green(X2,X3) ) ).
+fof(u974,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n12) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n8) | ~ green(X3,n8) | ~ green(X4,n8) | ~ green(X2,n12) | ~ green(X3,n12) | ~ green(X2,X3) ) ).
+fof(u779,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n12) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n9) | ~ green(X3,n9) | ~ green(X4,n9) | ~ green(X2,n12) | ~ green(X3,n12) | ~ green(X2,X3) ) ).
+fof(u1519,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ green(X6,n11) | ~ green(X4,X6) | ~ green(X5,X6) | ~ green(X4,n2) | ~ green(X5,n2) | ~ green(X6,n2) | ~ green(X4,n11) | ~ green(X5,n11) | ~ green(X4,X5) ) ).
+fof(u1452,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ green(X6,n11) | ~ green(X4,X6) | ~ green(X5,X6) | ~ green(X4,n3) | ~ green(X5,n3) | ~ green(X6,n3) | ~ green(X4,n11) | ~ green(X5,n11) | ~ green(X4,X5) ) ).
+fof(u1359,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n11) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n4) | ~ green(X3,n4) | ~ green(X4,n4) | ~ green(X2,n11) | ~ green(X3,n11) | ~ green(X2,X3) ) ).
+fof(u1111,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ green(X2,n11) | ~ green(X0,X2) | ~ green(X1,X2) | ~ green(X0,n6) | ~ green(X1,n6) | ~ green(X2,n6) | ~ green(X0,n11) | ~ green(X1,n11) | ~ green(X0,X1) ) ).
+fof(u948,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n11) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n7) | ~ green(X3,n7) | ~ green(X4,n7) | ~ green(X2,n11) | ~ green(X3,n11) | ~ green(X2,X3) ) ).
+fof(u759,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n11) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n8) | ~ green(X3,n8) | ~ green(X4,n8) | ~ green(X2,n11) | ~ green(X3,n11) | ~ green(X2,X3) ) ).
+fof(u184,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ green(X2,n11) | ~ green(X0,X2) | ~ green(X1,X2) | ~ green(X0,n10) | ~ green(X1,n10) | ~ green(X2,n10) | ~ green(X0,n11) | ~ green(X1,n11) | ~ green(X0,X1) ) ).
+fof(u1423,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n10) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n2) | ~ green(X3,n2) | ~ green(X4,n2) | ~ green(X2,n10) | ~ green(X3,n10) | ~ green(X2,X3) ) ).
+fof(u1335,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n10) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n3) | ~ green(X3,n3) | ~ green(X4,n3) | ~ green(X2,n10) | ~ green(X3,n10) | ~ green(X2,X3) ) ).
+fof(u1085,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ green(X2,n10) | ~ green(X0,X2) | ~ green(X1,X2) | ~ green(X0,n5) | ~ green(X1,n5) | ~ green(X2,n5) | ~ green(X0,n10) | ~ green(X1,n10) | ~ green(X0,X1) ) ).
+fof(u922,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n10) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n6) | ~ green(X3,n6) | ~ green(X4,n6) | ~ green(X2,n10) | ~ green(X3,n10) | ~ green(X2,X3) ) ).
+fof(u506,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n10) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n8) | ~ green(X3,n8) | ~ green(X4,n8) | ~ green(X2,n10) | ~ green(X3,n10) | ~ green(X2,X3) ) ).
+fof(u1308,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n9) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n2) | ~ green(X3,n2) | ~ green(X4,n2) | ~ green(X2,n9) | ~ green(X3,n9) | ~ green(X2,X3) ) ).
+fof(u1191,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ green(X2,n9) | ~ green(X0,X2) | ~ green(X1,X2) | ~ green(X0,n3) | ~ green(X1,n3) | ~ green(X2,n3) | ~ green(X0,n9) | ~ green(X1,n9) | ~ green(X0,X1) ) ).
+fof(u890,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n9) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n5) | ~ green(X3,n5) | ~ green(X4,n5) | ~ green(X2,n9) | ~ green(X3,n9) | ~ green(X2,X3) ) ).
+fof(u722,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n9) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n6) | ~ green(X3,n6) | ~ green(X4,n6) | ~ green(X2,n9) | ~ green(X3,n9) | ~ green(X2,X3) ) ).
+fof(u487,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n9) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n7) | ~ green(X3,n7) | ~ green(X4,n7) | ~ green(X2,n9) | ~ green(X3,n9) | ~ green(X2,X3) ) ).
+fof(u151,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ green(X2,n8) | ~ green(X0,X2) | ~ green(X1,X2) | ~ green(X0,n7) | ~ green(X1,n7) | ~ green(X2,n7) | ~ green(X0,n8) | ~ green(X1,n8) | ~ green(X0,X1) ) ).
+fof(u1288,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ green(X6,n8) | ~ green(X4,X6) | ~ green(X5,X6) | ~ green(X4,n1) | ~ green(X5,n1) | ~ green(X6,n1) | ~ green(X4,n8) | ~ green(X5,n8) | ~ green(X4,X5) ) ).
+fof(u452,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n7) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n5) | ~ green(X3,n5) | ~ green(X4,n5) | ~ green(X2,n7) | ~ green(X3,n7) | ~ green(X2,X3) ) ).
+fof(u665,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n7) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n4) | ~ green(X3,n4) | ~ green(X4,n4) | ~ green(X2,n7) | ~ green(X3,n7) | ~ green(X2,X3) ) ).
+fof(u634,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n6) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n3) | ~ green(X3,n3) | ~ green(X4,n3) | ~ green(X2,n6) | ~ green(X3,n6) | ~ green(X2,X3) ) ).
+fof(u1000,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ green(X2,n6) | ~ green(X0,X2) | ~ green(X1,X2) | ~ green(X0,n1) | ~ green(X1,n1) | ~ green(X2,n1) | ~ green(X0,n6) | ~ green(X1,n6) | ~ green(X0,X1) ) ).
+fof(u421,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n5) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n3) | ~ green(X3,n3) | ~ green(X4,n3) | ~ green(X2,n5) | ~ green(X3,n5) | ~ green(X2,X3) ) ).
+fof(u604,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n5) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n2) | ~ green(X3,n2) | ~ green(X4,n2) | ~ green(X2,n5) | ~ green(X3,n5) | ~ green(X2,X3) ) ).
+fof(u113,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ green(X2,n5) | ~ green(X0,X2) | ~ green(X1,X2) | ~ green(X0,n4) | ~ green(X1,n4) | ~ green(X2,n4) | ~ green(X0,n5) | ~ green(X1,n5) | ~ green(X0,X1) ) ).
+fof(u575,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n4) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n1) | ~ green(X3,n1) | ~ green(X4,n1) | ~ green(X2,n4) | ~ green(X3,n4) | ~ green(X2,X3) ) ).
+fof(u407,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ green(X4,n4) | ~ green(X2,X4) | ~ green(X3,X4) | ~ green(X2,n2) | ~ green(X3,n2) | ~ green(X4,n2) | ~ green(X2,n4) | ~ green(X3,n4) | ~ green(X2,X3) ) ).
+fof(u20,axiom,~ goal ).
+fof(u780,axiom,~ red(n9,n12) ).
+fof(u975,axiom,~ red(n8,n12) ).
+fof(u760,axiom,~ red(n8,n11) ).
+fof(u949,axiom,~ red(n7,n11) ).
+fof(u152,axiom,~ red(n7,n8) ).
+fof(u1112,axiom,~ red(n6,n11) ).
+fof(u923,axiom,~ red(n6,n10) ).
+fof(u1471,axiom,~ red(n4,n12) ).
+fof(u1360,axiom,~ red(n4,n11) ).
+fof(u1547,axiom,~ red(n3,n12) ).
+fof(u1453,axiom,~ red(n3,n11) ).
+fof(u1336,axiom,~ red(n3,n10) ).
+fof(u1192,axiom,~ red(n3,n9) ).
+fof(u635,axiom,~ red(n3,n6) ).
+fof(u1576,axiom,~ red(n2,n12) ).
+fof(u1520,axiom,~ red(n2,n11) ).
+fof(u1309,axiom,~ red(n2,n9) ).
+fof(u1616,axiom,~ red(n1,n12) ).
+fof(u1289,axiom,~ red(n1,n8) ).
+fof(u576,axiom,~ red(n1,n4) ).
+fof(u2308,axiom,! [X7] : ! [X5] : ! [X6] : ( ~ red(X7,n12) | ~ red(X5,X7) | ~ red(X6,X7) | ~ red(X5,n6) | ~ red(X6,n6) | ~ red(X7,n6) | ~ red(X5,n12) | ~ red(X6,n12) | ~ red(X5,X6) ) ).
+fof(u2158,axiom,! [X7] : ! [X5] : ! [X6] : ( ~ red(X7,n12) | ~ red(X5,X7) | ~ red(X6,X7) | ~ red(X5,n5) | ~ red(X6,n5) | ~ red(X7,n5) | ~ red(X5,n12) | ~ red(X6,n12) | ~ red(X5,X6) ) ).
+fof(u1810,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n12) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n10) | ~ red(X3,n10) | ~ red(X4,n10) | ~ red(X2,n12) | ~ red(X3,n12) | ~ red(X2,X3) ) ).
+fof(u1294,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n12) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n11) | ~ red(X1,n11) | ~ red(X2,n11) | ~ red(X0,n12) | ~ red(X1,n12) | ~ red(X0,X1) ) ).
+fof(u3208,axiom,! [X9] : ! [X7] : ! [X8] : ( ~ red(X9,n11) | ~ red(X7,X9) | ~ red(X8,X9) | ~ red(X7,n1) | ~ red(X8,n1) | ~ red(X9,n1) | ~ red(X7,n11) | ~ red(X8,n11) | ~ red(X7,X8) ) ).
+fof(u2471,axiom,! [X7] : ! [X5] : ! [X6] : ( ~ red(X7,n11) | ~ red(X5,X7) | ~ red(X6,X7) | ~ red(X5,n5) | ~ red(X6,n5) | ~ red(X7,n5) | ~ red(X5,n11) | ~ red(X6,n11) | ~ red(X5,X6) ) ).
+fof(u1752,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n11) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n9) | ~ red(X3,n9) | ~ red(X4,n9) | ~ red(X2,n11) | ~ red(X3,n11) | ~ red(X2,X3) ) ).
+fof(u2672,axiom,! [X7] : ! [X5] : ! [X6] : ( ~ red(X7,n10) | ~ red(X5,X7) | ~ red(X6,X7) | ~ red(X5,n1) | ~ red(X6,n1) | ~ red(X7,n1) | ~ red(X5,n10) | ~ red(X6,n10) | ~ red(X5,X6) ) ).
+fof(u2518,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ red(X6,n10) | ~ red(X4,X6) | ~ red(X5,X6) | ~ red(X4,n4) | ~ red(X5,n4) | ~ red(X6,n4) | ~ red(X4,n10) | ~ red(X5,n10) | ~ red(X4,X5) ) ).
+fof(u1342,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n10) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n7) | ~ red(X3,n7) | ~ red(X4,n7) | ~ red(X2,n10) | ~ red(X3,n10) | ~ red(X2,X3) ) ).
+fof(u1037,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n10) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n9) | ~ red(X1,n9) | ~ red(X2,n9) | ~ red(X0,n10) | ~ red(X1,n10) | ~ red(X0,X1) ) ).
+fof(u988,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n9) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n8) | ~ red(X1,n8) | ~ red(X2,n8) | ~ red(X0,n9) | ~ red(X1,n9) | ~ red(X0,X1) ) ).
+fof(u2425,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n9) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n4) | ~ red(X3,n4) | ~ red(X4,n4) | ~ red(X2,n9) | ~ red(X3,n9) | ~ red(X2,X3) ) ).
+fof(u2868,axiom,! [X7] : ! [X5] : ! [X6] : ( ~ red(X7,n9) | ~ red(X5,X7) | ~ red(X6,X7) | ~ red(X5,n1) | ~ red(X6,n1) | ~ red(X7,n1) | ~ red(X5,n9) | ~ red(X6,n9) | ~ red(X5,X6) ) ).
+fof(u2492,axiom,! [X12] : ! [X10] : ! [X11] : ( ~ red(X12,n8) | ~ red(X10,X12) | ~ red(X11,X12) | ~ red(X10,n3) | ~ red(X11,n3) | ~ red(X12,n3) | ~ red(X10,n8) | ~ red(X11,n8) | ~ red(X10,X11) ) ).
+fof(u1875,axiom,! [X6] : ! [X4] : ! [X5] : ( ~ red(X6,n8) | ~ red(X4,X6) | ~ red(X5,X6) | ~ red(X4,n2) | ~ red(X5,n2) | ~ red(X6,n2) | ~ red(X4,n8) | ~ red(X5,n8) | ~ red(X4,X5) ) ).
+fof(u1690,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n8) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n6) | ~ red(X3,n6) | ~ red(X4,n6) | ~ red(X2,n8) | ~ red(X3,n8) | ~ red(X2,X3) ) ).
+fof(u1501,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n8) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n4) | ~ red(X3,n4) | ~ red(X4,n4) | ~ red(X2,n8) | ~ red(X3,n8) | ~ red(X2,X3) ) ).
+fof(u1285,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n8) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n5) | ~ red(X1,n5) | ~ red(X2,n5) | ~ red(X0,n8) | ~ red(X1,n8) | ~ red(X0,X1) ) ).
+fof(u2178,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n7) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n2) | ~ red(X3,n2) | ~ red(X4,n2) | ~ red(X2,n7) | ~ red(X3,n7) | ~ red(X2,X3) ) ).
+fof(u1881,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n7) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n1) | ~ red(X3,n1) | ~ red(X4,n1) | ~ red(X2,n7) | ~ red(X3,n7) | ~ red(X2,X3) ) ).
+fof(u1669,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n7) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n3) | ~ red(X3,n3) | ~ red(X4,n3) | ~ red(X2,n7) | ~ red(X3,n7) | ~ red(X2,X3) ) ).
+fof(u954,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n7) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n6) | ~ red(X1,n6) | ~ red(X2,n6) | ~ red(X0,n7) | ~ red(X1,n7) | ~ red(X0,X1) ) ).
+fof(u909,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n6) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n5) | ~ red(X1,n5) | ~ red(X2,n5) | ~ red(X0,n6) | ~ red(X1,n6) | ~ red(X0,X1) ) ).
+fof(u1635,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n6) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n2) | ~ red(X3,n2) | ~ red(X4,n2) | ~ red(X2,n6) | ~ red(X3,n6) | ~ red(X2,X3) ) ).
+fof(u1625,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n6) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n4) | ~ red(X3,n4) | ~ red(X4,n4) | ~ red(X2,n6) | ~ red(X3,n6) | ~ red(X2,X3) ) ).
+fof(u1600,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n5) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n1) | ~ red(X3,n1) | ~ red(X4,n1) | ~ red(X2,n5) | ~ red(X3,n5) | ~ red(X2,X3) ) ).
+fof(u831,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n4) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n3) | ~ red(X1,n3) | ~ red(X2,n3) | ~ red(X0,n4) | ~ red(X1,n4) | ~ red(X0,X1) ) ).
+fof(u801,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n3) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n2) | ~ red(X1,n2) | ~ red(X2,n2) | ~ red(X0,n3) | ~ red(X1,n3) | ~ red(X0,X1) ) ).
+fof(u3457,axiom,! [X4] : ! [X2] : ! [X3] : ( ~ red(X4,n3) | ~ red(X2,X4) | ~ red(X3,X4) | ~ red(X2,n1) | ~ red(X3,n1) | ~ red(X4,n1) | ~ red(X2,n3) | ~ red(X3,n3) | ~ red(X2,X3) ) ).
+fof(u130,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ red(X2,n2) | ~ red(X0,X2) | ~ red(X1,X2) | ~ red(X0,n1) | ~ red(X1,n1) | ~ red(X2,n1) | ~ red(X0,n2) | ~ red(X1,n2) | ~ red(X0,X1) ) ).
+fof(u31,axiom,less_than(n11,n12) ).
+fof(u272,axiom,less_than(n10,n12) ).
+fof(u30,axiom,less_than(n10,n11) ).
+fof(u271,axiom,less_than(n9,n12) ).
+fof(u262,axiom,less_than(n9,n11) ).
+fof(u29,axiom,less_than(n9,n10) ).
+fof(u270,axiom,less_than(n8,n12) ).
+fof(u261,axiom,less_than(n8,n11) ).
+fof(u252,axiom,less_than(n8,n10) ).
+fof(u28,axiom,less_than(n8,n9) ).
+fof(u282,axiom,less_than(n7,n12) ).
+fof(u260,axiom,less_than(n7,n11) ).
+fof(u251,axiom,less_than(n7,n10) ).
+fof(u242,axiom,less_than(n7,n9) ).
+fof(u27,axiom,less_than(n7,n8) ).
+fof(u306,axiom,less_than(n6,n12) ).
+fof(u277,axiom,less_than(n6,n11) ).
+fof(u250,axiom,less_than(n6,n10) ).
+fof(u241,axiom,less_than(n6,n9) ).
+fof(u232,axiom,less_than(n6,n8) ).
+fof(u26,axiom,less_than(n6,n7) ).
+fof(u327,axiom,less_than(n5,n12) ).
+fof(u303,axiom,less_than(n5,n11) ).
+fof(u267,axiom,less_than(n5,n10) ).
+fof(u240,axiom,less_than(n5,n9) ).
+fof(u231,axiom,less_than(n5,n8) ).
+fof(u222,axiom,less_than(n5,n7) ).
+fof(u25,axiom,less_than(n5,n6) ).
+fof(u345,axiom,less_than(n4,n12) ).
+fof(u324,axiom,less_than(n4,n11) ).
+fof(u298,axiom,less_than(n4,n10) ).
+fof(u257,axiom,less_than(n4,n9) ).
+fof(u230,axiom,less_than(n4,n8) ).
+fof(u221,axiom,less_than(n4,n7) ).
+fof(u212,axiom,less_than(n4,n6) ).
+fof(u24,axiom,less_than(n4,n5) ).
+fof(u358,axiom,less_than(n3,n12) ).
+fof(u340,axiom,less_than(n3,n11) ).
+fof(u319,axiom,less_than(n3,n10) ).
+fof(u295,axiom,less_than(n3,n9) ).
+fof(u247,axiom,less_than(n3,n8) ).
+fof(u220,axiom,less_than(n3,n7) ).
+fof(u211,axiom,less_than(n3,n6) ).
+fof(u202,axiom,less_than(n3,n5) ).
+fof(u23,axiom,less_than(n3,n4) ).
+fof(u368,axiom,less_than(n2,n12) ).
+fof(u355,axiom,less_than(n2,n11) ).
+fof(u337,axiom,less_than(n2,n10) ).
+fof(u316,axiom,less_than(n2,n9) ).
+fof(u292,axiom,less_than(n2,n8) ).
+fof(u237,axiom,less_than(n2,n7) ).
+fof(u215,axiom,less_than(n2,n6) ).
+fof(u203,axiom,less_than(n2,n5) ).
+fof(u201,axiom,less_than(n2,n4) ).
+fof(u22,axiom,less_than(n2,n3) ).
+fof(u375,axiom,less_than(n1,n12) ).
+fof(u365,axiom,less_than(n1,n11) ).
+fof(u350,axiom,less_than(n1,n10) ).
+fof(u334,axiom,less_than(n1,n9) ).
+fof(u313,axiom,less_than(n1,n8) ).
+fof(u287,axiom,less_than(n1,n7) ).
+fof(u227,axiom,less_than(n1,n6) ).
+fof(u208,axiom,less_than(n1,n5) ).
+fof(u200,axiom,less_than(n1,n4) ).
+fof(u197,axiom,less_than(n1,n3) ).
+fof(u21,axiom,less_than(n1,n2) ).
+fof(u77,axiom,! [X10] : ( ~ less_than(X10,n11) | less_than(X10,n12) ) ).
+fof(u76,axiom,! [X9] : ( ~ less_than(X9,n10) | less_than(X9,n11) ) ).
+fof(u273,axiom,! [X0] : ( ~ less_than(X0,n10) | less_than(X0,n12) ) ).
+fof(u75,axiom,! [X8] : ( ~ less_than(X8,n9) | less_than(X8,n10) ) ).
+fof(u263,axiom,! [X0] : ( ~ less_than(X0,n9) | less_than(X0,n11) ) ).
+fof(u275,axiom,! [X0] : ( ~ less_than(X0,n9) | less_than(X0,n12) ) ).
+fof(u74,axiom,! [X7] : ( ~ less_than(X7,n8) | less_than(X7,n9) ) ).
+fof(u253,axiom,! [X0] : ( ~ less_than(X0,n8) | less_than(X0,n10) ) ).
+fof(u265,axiom,! [X0] : ( ~ less_than(X0,n8) | less_than(X0,n11) ) ).
+fof(u285,axiom,! [X0] : ( ~ less_than(X0,n8) | less_than(X0,n12) ) ).
+fof(u73,axiom,! [X6] : ( ~ less_than(X6,n7) | less_than(X6,n8) ) ).
+fof(u243,axiom,! [X0] : ( ~ less_than(X0,n7) | less_than(X0,n9) ) ).
+fof(u255,axiom,! [X0] : ( ~ less_than(X0,n7) | less_than(X0,n10) ) ).
+fof(u283,axiom,! [X0] : ( ~ less_than(X0,n7) | less_than(X0,n11) ) ).
+fof(u309,axiom,! [X0] : ( ~ less_than(X0,n7) | less_than(X0,n12) ) ).
+fof(u72,axiom,! [X5] : ( ~ less_than(X5,n6) | less_than(X5,n7) ) ).
+fof(u233,axiom,! [X0] : ( ~ less_than(X0,n6) | less_than(X0,n8) ) ).
+fof(u245,axiom,! [X0] : ( ~ less_than(X0,n6) | less_than(X0,n9) ) ).
+fof(u278,axiom,! [X0] : ( ~ less_than(X0,n6) | less_than(X0,n10) ) ).
+fof(u307,axiom,! [X0] : ( ~ less_than(X0,n6) | less_than(X0,n11) ) ).
+fof(u330,axiom,! [X0] : ( ~ less_than(X0,n6) | less_than(X0,n12) ) ).
+fof(u348,axiom,! [X0] : ( ~ less_than(X0,n5) | less_than(X0,n12) ) ).
+fof(u328,axiom,! [X0] : ( ~ less_than(X0,n5) | less_than(X0,n11) ) ).
+fof(u304,axiom,! [X0] : ( ~ less_than(X0,n5) | less_than(X0,n10) ) ).
+fof(u268,axiom,! [X0] : ( ~ less_than(X0,n5) | less_than(X0,n9) ) ).
+fof(u235,axiom,! [X0] : ( ~ less_than(X0,n5) | less_than(X0,n8) ) ).
+fof(u223,axiom,! [X0] : ( ~ less_than(X0,n5) | less_than(X0,n7) ) ).
+fof(u71,axiom,! [X4] : ( ~ less_than(X4,n5) | less_than(X4,n6) ) ).
+fof(u361,axiom,! [X0] : ( ~ less_than(X0,n4) | less_than(X0,n12) ) ).
+fof(u346,axiom,! [X0] : ( ~ less_than(X0,n4) | less_than(X0,n11) ) ).
+fof(u325,axiom,! [X0] : ( ~ less_than(X0,n4) | less_than(X0,n10) ) ).
+fof(u299,axiom,! [X0] : ( ~ less_than(X0,n4) | less_than(X0,n9) ) ).
+fof(u258,axiom,! [X0] : ( ~ less_than(X0,n4) | less_than(X0,n8) ) ).
+fof(u225,axiom,! [X0] : ( ~ less_than(X0,n4) | less_than(X0,n7) ) ).
+fof(u213,axiom,! [X0] : ( ~ less_than(X0,n4) | less_than(X0,n6) ) ).
+fof(u70,axiom,! [X3] : ( ~ less_than(X3,n4) | less_than(X3,n5) ) ).
+fof(u371,axiom,! [X0] : ( ~ less_than(X0,n3) | less_than(X0,n12) ) ).
+fof(u359,axiom,! [X0] : ( ~ less_than(X0,n3) | less_than(X0,n11) ) ).
+fof(u341,axiom,! [X0] : ( ~ less_than(X0,n3) | less_than(X0,n10) ) ).
+fof(u320,axiom,! [X0] : ( ~ less_than(X0,n3) | less_than(X0,n9) ) ).
+fof(u296,axiom,! [X0] : ( ~ less_than(X0,n3) | less_than(X0,n8) ) ).
+fof(u248,axiom,! [X0] : ( ~ less_than(X0,n3) | less_than(X0,n7) ) ).
+fof(u218,axiom,! [X0] : ( ~ less_than(X0,n3) | less_than(X0,n6) ) ).
+fof(u206,axiom,! [X0] : ( ~ less_than(X0,n3) | less_than(X0,n5) ) ).
+fof(u69,axiom,! [X2] : ( ~ less_than(X2,n3) | less_than(X2,n4) ) ).
+fof(u378,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n12) ) ).
+fof(u369,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n11) ) ).
+fof(u356,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n10) ) ).
+fof(u338,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n9) ) ).
+fof(u317,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n8) ) ).
+fof(u293,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n7) ) ).
+fof(u238,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n6) ) ).
+fof(u216,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n5) ) ).
+fof(u204,axiom,! [X0] : ( ~ less_than(X0,n2) | less_than(X0,n4) ) ).
+fof(u68,axiom,! [X1] : ( ~ less_than(X1,n2) | less_than(X1,n3) ) ).
+fof(u380,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n12) ) ).
+fof(u376,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n11) ) ).
+fof(u366,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n10) ) ).
+fof(u351,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n9) ) ).
+fof(u335,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n8) ) ).
+fof(u314,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n7) ) ).
+fof(u288,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n6) ) ).
+fof(u228,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n5) ) ).
+fof(u209,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n4) ) ).
+fof(u198,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n3) ) ).
+fof(u67,axiom,! [X0] : ( ~ less_than(X0,n1) | less_than(X0,n2) ) ).
+fof(u32,axiom,! [X0] : ! [X1] : ( ~ less_than(X0,X1) | red(X0,X1) | green(X0,X1) ) ).
+fof(u34,axiom,! [X1] : ! [X2] : ! [X0] : ( ~ less_than(X1,X2) | less_than(X0,X2) | ~ less_than(X0,X1) ) ).

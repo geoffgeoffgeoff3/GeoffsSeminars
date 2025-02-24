@@ -1,0 +1,70 @@
+fof(symmetry_of_differ,axiom,! [X1] : ! [X2] : ( differ(X1,X2) | ~ differ(X2,X1) ) ).
+fof(differ_a_table,axiom,differ(a,table) ).
+fof(differ_a_b,axiom,differ(a,b) ).
+fof(differ_a_c,axiom,differ(a,c) ).
+fof(differ_a_d,axiom,differ(a,d) ).
+fof(differ_b_table,axiom,differ(b,table) ).
+fof(differ_b_c,axiom,differ(b,c) ).
+fof(differ_b_d,axiom,differ(b,d) ).
+fof(differ_c_table,axiom,differ(c,table) ).
+fof(differ_c_d,axiom,differ(c,d) ).
+fof(differ_d_table,axiom,differ(d,table) ).
+fof(pickup_2,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(clear(X1),do(pickup(X2),X3)) | ~ holds(on(X2,X1),X3) | ~ holds(clear(X2),X3) | ~ holds(empty,X3) ) ).
+fof(putdown_2,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(on(X1,X2),do(putdown(X1,X2),X3)) | ~ holds(holding(X1),X3) | ~ holds(clear(X2),X3) ) ).
+fof(pickup_1,axiom,! [X1] : ! [X2] : ( holds(holding(X1),do(pickup(X1),X2)) | ~ holds(empty,X2) | ~ holds(clear(X1),X2) | ~ differ(X1,table) ) ).
+fof(putdown_3,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(clear(X1),do(putdown(X1,X2),X3)) | ~ holds(holding(X1),X3) | ~ holds(clear(X2),X3) ) ).
+fof(pickup_3,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( holds(on(X1,X2),do(pickup(X3),X4)) | ~ holds(on(X1,X2),X4) | ~ differ(X1,X3) ) ).
+fof(putdown_4,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( holds(on(X1,X2),do(putdown(X3,X4),X5)) | ~ holds(on(X1,X2),X5) ) ).
+fof(putdown_5,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( holds(clear(X1),do(putdown(X2,X3),X4)) | ~ holds(clear(X1),X4) | ~ differ(X1,X3) ) ).
+fof(putdown_1,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(empty,do(putdown(X1,X2),X3)) | ~ holds(holding(X1),X3) | ~ holds(clear(X2),X3) ) ).
+fof(pickup_4,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(clear(X1),do(pickup(X2),X3)) | ~ holds(clear(X1),X3) | ~ differ(X1,X2) ) ).
+fof(and_definition,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(and(X1,X2),X3) | ~ holds(X1,X3) | ~ holds(X2,X3) ) ).
+fof(initial_state4,axiom,holds(on(d,table),s0) ).
+fof(initial_state3,axiom,holds(on(c,d),s0) ).
+fof(initial_state2,axiom,holds(on(b,table),s0) ).
+fof(initial_state1,axiom,holds(on(a,table),s0) ).
+fof(initial_state7,axiom,holds(clear(c),s0) ).
+fof(initial_state6,axiom,holds(clear(b),s0) ).
+fof(initial_state5,axiom,holds(clear(a),s0) ).
+fof(clear_table,axiom,! [X1] : holds(clear(table),X1) ).
+fof(initial_state8,axiom,holds(empty,s0) ).
+fof(c_0_30,axiom,! [X1] : ! [X2] : ( differ(X1,X2) | ~ differ(X2,X1) ) ).
+fof(c_0_31,axiom,differ(a,table) ).
+fof(c_0_32,axiom,differ(a,b) ).
+fof(c_0_33,axiom,differ(a,c) ).
+fof(c_0_34,axiom,differ(a,d) ).
+fof(c_0_35,axiom,differ(b,table) ).
+fof(c_0_36,axiom,differ(b,c) ).
+fof(c_0_37,axiom,differ(b,d) ).
+fof(c_0_38,axiom,differ(c,table) ).
+fof(c_0_39,axiom,differ(c,d) ).
+fof(c_0_40,axiom,differ(d,table) ).
+fof(c_0_41,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(clear(X1),do(pickup(X2),X3)) | ~ holds(on(X2,X1),X3) | ~ holds(clear(X2),X3) | ~ holds(empty,X3) ) ).
+fof(c_0_42,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(on(X1,X2),do(putdown(X1,X2),X3)) | ~ holds(holding(X1),X3) | ~ holds(clear(X2),X3) ) ).
+fof(c_0_43,axiom,! [X1] : ! [X2] : ( holds(holding(X1),do(pickup(X1),X2)) | ~ holds(empty,X2) | ~ holds(clear(X1),X2) | ~ differ(X1,table) ) ).
+fof(c_0_44,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(clear(X1),do(putdown(X1,X2),X3)) | ~ holds(holding(X1),X3) | ~ holds(clear(X2),X3) ) ).
+fof(c_0_45,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( holds(on(X1,X2),do(pickup(X3),X4)) | ~ holds(on(X1,X2),X4) | ~ differ(X1,X3) ) ).
+fof(c_0_46,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( holds(on(X1,X2),do(putdown(X3,X4),X5)) | ~ holds(on(X1,X2),X5) ) ).
+fof(c_0_47,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( holds(clear(X1),do(putdown(X2,X3),X4)) | ~ holds(clear(X1),X4) | ~ differ(X1,X3) ) ).
+fof(c_0_48,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(empty,do(putdown(X1,X2),X3)) | ~ holds(holding(X1),X3) | ~ holds(clear(X2),X3) ) ).
+fof(c_0_49,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(clear(X1),do(pickup(X2),X3)) | ~ holds(clear(X1),X3) | ~ differ(X1,X2) ) ).
+fof(c_0_50,axiom,! [X1] : ! [X2] : ! [X3] : ( holds(and(X1,X2),X3) | ~ holds(X1,X3) | ~ holds(X2,X3) ) ).
+fof(c_0_51,axiom,differ(table,a) ).
+fof(c_0_52,axiom,differ(b,a) ).
+fof(c_0_53,axiom,differ(c,a) ).
+fof(c_0_54,axiom,differ(d,a) ).
+fof(c_0_55,axiom,differ(table,b) ).
+fof(c_0_56,axiom,holds(on(d,table),s0) ).
+fof(c_0_57,axiom,holds(on(c,d),s0) ).
+fof(c_0_58,axiom,holds(on(b,table),s0) ).
+fof(c_0_59,axiom,holds(on(a,table),s0) ).
+fof(c_0_60,axiom,differ(c,b) ).
+fof(c_0_61,axiom,holds(clear(c),s0) ).
+fof(c_0_62,axiom,differ(d,b) ).
+fof(c_0_63,axiom,differ(table,c) ).
+fof(c_0_64,axiom,differ(d,c) ).
+fof(c_0_65,axiom,differ(table,d) ).
+fof(c_0_66,axiom,holds(clear(b),s0) ).
+fof(c_0_67,axiom,holds(clear(a),s0) ).
+fof(c_0_68,axiom,! [X1] : holds(clear(table),X1) ).
+fof(c_0_69,axiom,holds(empty,s0) ).

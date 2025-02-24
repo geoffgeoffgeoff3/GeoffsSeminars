@@ -1,0 +1,29 @@
+fof(u137,axiom,! [X0] : ( xsd_string(X0) | xsd_integer(X0) ) ).
+fof(u138,axiom,! [X0] : ( ~ xsd_string(X0) | ~ xsd_integer(X0) ) ).
+fof(u152,axiom,! [X0] : ! [X1] : ( rrxa(X0,X1) | ~ rrx4a(X0,X1) ) ).
+fof(u154,axiom,! [X0] : ! [X1] : ( rrxa(X0,X1) | ~ rrx3a(X0,X1) ) ).
+fof(u145,axiom,! [X0] : ( rrx4a(X0,sK0(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u184,axiom,! [X0] : ! [X2] : ! [X1] : ( ~ rrx4a(X0,X2) | ~ rrx4a(X0,X1) | X1 = X2 ) ).
+fof(u220,axiom,! [X0] : ! [X1] : ( ~ rrx4a(X0,X1) | sK0(X0) = X1 | ~ cSatisfiable(X0) ) ).
+fof(u149,axiom,! [X0] : ! [X1] : ( ~ rrx4(X0,X1) | rrx(X0,X1) ) ).
+fof(u183,axiom,! [X0] : ! [X2] : ! [X1] : ( ~ rrx4(X0,X2) | ~ rrx4(X0,X1) | X1 = X2 ) ).
+fof(u143,axiom,! [X0] : ( rrx3a(X0,sK1(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u139,axiom,! [X0] : ! [X1] : ( ~ rrx3a(X0,X1) | ~ cc1(X1) | ~ cc2(X1) | ~ cSatisfiable(X0) ) ).
+fof(u185,axiom,! [X0] : ! [X2] : ! [X1] : ( ~ rrx3a(X0,X2) | ~ rrx3a(X0,X1) | X1 = X2 ) ).
+fof(u223,axiom,! [X0] : ! [X1] : ( ~ rrx3a(X0,X1) | sK1(X0) = X1 | ~ cSatisfiable(X0) ) ).
+fof(u150,axiom,! [X0] : ! [X1] : ( ~ rrx3(X0,X1) | rrx(X0,X1) ) ).
+fof(u182,axiom,! [X0] : ! [X2] : ! [X1] : ( ~ rrx3(X0,X2) | ~ rrx3(X0,X1) | X1 = X2 ) ).
+fof(u151,axiom,! [X0] : ! [X1] : ( rrx2a(X0,X1) | ~ rrx4a(X0,X1) ) ).
+fof(u147,axiom,! [X0] : ! [X1] : ( rrx2(X0,X1) | ~ rrx4(X0,X1) ) ).
+fof(u153,axiom,! [X0] : ! [X1] : ( rrx1a(X0,X1) | ~ rrx3a(X0,X1) ) ).
+fof(u148,axiom,! [X0] : ! [X1] : ( rrx1(X0,X1) | ~ rrx3(X0,X1) ) ).
+fof(u186,axiom,! [X0] : ! [X2] : ! [X1] : ( ~ rrx(X0,X2) | ~ rrx(X0,X1) | X1 = X2 ) ).
+fof(u135,axiom,! [X0] : cowlThing(X0) ).
+fof(u136,axiom,! [X0] : ~ cowlNothing(X0) ).
+fof(u142,axiom,! [X0] : ! [X3] : ! [X2] : ( cc2(sK2(X0)) | ~ cc2(X3) | ~ rrx3a(X0,X2) | ~ cc1(X2) | ~ rrx4a(X0,X3) | cSatisfiable(X0) ) ).
+fof(u146,axiom,! [X0] : ( cc2(sK0(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u217,axiom,! [X0] : ( ~ cc2(sK1(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u141,axiom,! [X0] : ! [X3] : ! [X2] : ( cc1(sK2(X0)) | ~ cc2(X3) | ~ rrx3a(X0,X2) | ~ cc1(X2) | ~ rrx4a(X0,X3) | cSatisfiable(X0) ) ).
+fof(u144,axiom,! [X0] : ( cc1(sK1(X0)) | ~ cSatisfiable(X0) ) ).
+fof(u140,axiom,! [X0] : ! [X3] : ! [X2] : ( cSatisfiable(X0) | ~ cc2(X3) | ~ rrx3a(X0,X2) | ~ cc1(X2) | rrx3a(X0,sK2(X0)) | ~ rrx4a(X0,X3) ) ).
+fof(u134,axiom,cSatisfiable(i2003_11_14_17_15_19316) ).

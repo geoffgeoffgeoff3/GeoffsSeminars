@@ -1,0 +1,122 @@
+fof(esa,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) <=> ? [X4] : model(X4,X2) ) <=> status(X1,X2,esa) ) ).
+fof(sap,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) => ? [X4] : model(X4,X2) ) <=> status(X1,X2,sap) ) ).
+fof(unp,axiom,! [X1] : ! [X2] : ( ( ~ ( ? [X3] : model(X3,X1) ) => ~ ( ? [X4] : model(X4,X2) ) ) <=> status(X1,X2,unp) ) ).
+fof(thm,axiom,! [X1] : ! [X2] : ( ! [X3] : ( model(X3,X1) => model(X3,X2) ) <=> status(X1,X2,thm) ) ).
+fof(cax,axiom,! [X1] : ! [X2] : ( ~ ( ? [X3] : model(X3,X1) ) <=> status(X1,X2,cax) ) ).
+fof(wth,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ! [X4] : ( model(X4,X1) => model(X4,X2) ) & ? [X5] : ( model(X5,X2) & ~ model(X5,X1) ) & ? [X6] : ~ model(X6,X2) ) <=> status(X1,X2,wth) ) ).
+fof(eth,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ? [X4] : ~ model(X4,X1) & ! [X5] : ( model(X5,X1) <=> model(X5,X2) ) ) <=> status(X1,X2,eth) ) ).
+fof(wec,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ! [X4] : ( model(X4,X1) => model(X4,X2) ) & ? [X5] : ( model(X5,X2) & ~ model(X5,X1) ) ) <=> status(X1,X2,wec) ) ).
+fof(wca,axiom,! [X1] : ! [X2] : ( ( ~ ( ? [X3] : model(X3,X1) ) & ? [X4] : model(X4,X2) & ? [X5] : ~ model(X5,X2) ) <=> status(X1,X2,wca) ) ).
+fof(wtc,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ? [X4] : ~ model(X4,X1) & ! [X5] : model(X5,X2) ) <=> status(X1,X2,wtc) ) ).
+fof(eqv,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ! [X4] : ( model(X4,X1) <=> model(X4,X2) ) ) <=> status(X1,X2,eqv) ) ).
+fof(noc,axiom,! [X1] : ! [X2] : ( ( ? [X3] : ( model(X3,X1) & model(X3,X2) ) & ? [X4] : ( model(X4,X1) & model(X4,not(X2)) ) ) <=> status(X1,X2,noc) ) ).
+fof(tca,axiom,! [X1] : ! [X2] : ( ( ~ ( ? [X3] : model(X3,X1) ) & ! [X4] : model(X4,X2) ) <=> status(X1,X2,tca) ) ).
+fof(sca,axiom,! [X1] : ! [X2] : ( ( ~ ( ? [X3] : model(X3,X1) ) & ? [X4] : model(X4,X2) ) <=> status(X1,X2,sca) ) ).
+fof(uns,axiom,! [X1] : ! [X2] : ( ( ! [X3] : model(X3,X1) & ! [X4] : model(X4,not(X2)) ) <=> status(X1,X2,uns) ) ).
+fof(tau,axiom,! [X1] : ! [X2] : ( ! [X3] : ( model(X3,X1) & model(X3,X2) ) <=> status(X1,X2,tau) ) ).
+fof(tac,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ! [X4] : model(X4,X2) ) <=> status(X1,X2,tac) ) ).
+fof(csa,axiom,! [X1] : ! [X2] : ( ? [X3] : ( model(X3,X1) & model(X3,not(X2)) ) <=> status(X1,X2,csa) ) ).
+fof(sat,axiom,! [X1] : ! [X2] : ( ? [X3] : ( model(X3,X1) & model(X3,X2) ) <=> status(X1,X2,sat) ) ).
+fof(c_0_19,axiom,! [X23] : ! [X24] : ! [X25] : ! [X26] : ! [X29] : ! [X30] : ! [X31] : ! [X33] : ( ( ~ model(X25,X23) | ~ model(X26,X24) | status(X23,X24,esa) ) & ( model(esk5_2(X23,X24),X23) | model(esk6_2(X23,X24),X24) | status(X23,X24,esa) ) & ( ~ model(X31,X29) | model(esk7_2(X29,X30),X30) | ~ status(X29,X30,esa) ) & ( ~ model(X33,X30) | model(esk8_2(X29,X30),X29) | ~ status(X29,X30,esa) ) ) ).
+fof(c_0_20,axiom,! [X15] : ! [X16] : ! [X18] : ! [X19] : ! [X20] : ! [X21] : ( ( model(esk3_2(X15,X16),X15) | status(X15,X16,sap) ) & ( ~ model(X18,X16) | status(X15,X16,sap) ) & ( ~ status(X19,X20,sap) | ~ model(X21,X19) | model(esk4_2(X19,X20),X20) ) ) ).
+fof(c_0_21,axiom,! [X7] : ! [X8] : ! [X9] : ! [X11] : ! [X12] : ! [X14] : ( ( ~ model(X9,X7) | status(X7,X8,unp) ) & ( model(esk1_2(X7,X8),X8) | status(X7,X8,unp) ) & ( ~ status(X11,X12,unp) | model(esk2_2(X11,X12),X11) | ~ model(X14,X12) ) ) ).
+fof(c_0_22,axiom,! [X41] : ! [X42] : ! [X44] : ! [X45] : ! [X46] : ( ( model(esk10_2(X41,X42),X41) | status(X41,X42,thm) ) & ( ~ model(esk10_2(X41,X42),X42) | status(X41,X42,thm) ) & ( ~ status(X44,X45,thm) | ~ model(X46,X44) | model(X46,X45) ) ) ).
+fof(c_0_23,axiom,! [X115] : ! [X117] : ! [X118] : ! [X119] : ! [X120] : ( ( model(esk30_1(X115),X115) | status(X115,X117,cax) ) & ( ~ status(X118,X119,cax) | ~ model(X120,X118) ) ) ).
+fof(c_0_24,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ! [X4] : ( model(X4,X1) => model(X4,X2) ) & ? [X5] : ( model(X5,X2) & ~ model(X5,X1) ) & ? [X6] : ~ model(X6,X2) ) <=> status(X1,X2,wth) ) ).
+fof(c_0_25,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ? [X4] : ~ model(X4,X1) & ! [X5] : ( model(X5,X1) <=> model(X5,X2) ) ) <=> status(X1,X2,eth) ) ).
+fof(c_0_26,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ! [X4] : ( model(X4,X1) => model(X4,X2) ) & ? [X5] : ( model(X5,X2) & ~ model(X5,X1) ) ) <=> status(X1,X2,wec) ) ).
+fof(c_0_27,axiom,! [X1] : ! [X2] : ( ( ~ ( ? [X3] : model(X3,X1) ) & ? [X4] : model(X4,X2) & ? [X5] : ~ model(X5,X2) ) <=> status(X1,X2,wca) ) ).
+fof(c_0_28,axiom,! [X1] : ! [X2] : ( ( ? [X3] : model(X3,X1) & ? [X4] : ~ model(X4,X1) & ! [X5] : model(X5,X2) ) <=> status(X1,X2,wtc) ) ).
+fof(c_0_29,axiom,! [X3] : ! [X2] : ! [X1] : ( model(esk8_2(X3,X2),X3) | ~ model(X1,X2) | ~ status(X3,X2,esa) ) ).
+fof(c_0_30,axiom,! [X1] : ! [X2] : ( model(esk5_2(X1,X2),X1) | model(esk6_2(X1,X2),X2) | status(X1,X2,esa) ) ).
+fof(c_0_31,axiom,! [X2] : ! [X3] : ! [X1] : ( model(esk7_2(X2,X3),X3) | ~ model(X1,X2) | ~ status(X2,X3,esa) ) ).
+fof(c_0_32,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk4_2(X1,X2),X2) | ~ status(X1,X2,sap) | ~ model(X3,X1) ) ).
+fof(c_0_33,axiom,! [X1] : ! [X2] : ( model(esk3_2(X1,X2),X1) | status(X1,X2,sap) ) ).
+fof(c_0_34,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk2_2(X1,X2),X1) | ~ status(X1,X2,unp) | ~ model(X3,X2) ) ).
+fof(c_0_35,axiom,! [X1] : ! [X2] : ( model(esk1_2(X1,X2),X2) | status(X1,X2,unp) ) ).
+fof(c_0_36,axiom,! [X3] : ! [X2] : ! [X1] : ( model(X3,X2) | ~ status(X1,X2,thm) | ~ model(X3,X1) ) ).
+fof(c_0_37,axiom,! [X1] : ! [X2] : ( model(esk10_2(X1,X2),X1) | status(X1,X2,thm) ) ).
+fof(c_0_38,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ status(X1,X2,cax) | ~ model(X3,X1) ) ).
+fof(c_0_39,axiom,! [X1] : ! [X2] : ( model(esk30_1(X1),X1) | status(X1,X2,cax) ) ).
+fof(c_0_40,axiom,! [X103] : ! [X104] : ! [X105] : ! [X107] : ! [X108] : ! [X109] : ! [X110] : ! [X112] : ( ( model(esk26_2(X103,X104),X103) | ~ model(X105,X103) | ~ model(X107,X104) | model(X107,X103) | model(X108,X104) | status(X103,X104,wth) ) & ( ~ model(esk26_2(X103,X104),X104) | ~ model(X105,X103) | ~ model(X107,X104) | model(X107,X103) | model(X108,X104) | status(X103,X104,wth) ) & ( model(esk27_2(X109,X110),X109) | ~ status(X109,X110,wth) ) & ( ~ model(X112,X109) | model(X112,X110) | ~ status(X109,X110,wth) ) & ( model(esk28_2(X109,X110),X110) | ~ status(X109,X110,wth) ) & ( ~ model(esk28_2(X109,X110),X109) | ~ status(X109,X110,wth) ) & ( ~ model(esk29_2(X109,X110),X110) | ~ status(X109,X110,wth) ) ) ).
+fof(c_0_41,axiom,! [X74] : ! [X75] : ! [X76] : ! [X77] : ! [X79] : ! [X80] : ! [X83] : ! [X84] : ( ( ~ model(esk18_2(X74,X75),X74) | ~ model(esk18_2(X74,X75),X75) | ~ model(X76,X74) | model(X77,X74) | status(X74,X75,eth) ) & ( model(esk18_2(X74,X75),X74) | model(esk18_2(X74,X75),X75) | ~ model(X76,X74) | model(X77,X74) | status(X74,X75,eth) ) & ( model(esk19_2(X79,X80),X79) | ~ status(X79,X80,eth) ) & ( ~ model(esk20_2(X79,X80),X79) | ~ status(X79,X80,eth) ) & ( ~ model(X83,X79) | model(X83,X80) | ~ status(X79,X80,eth) ) & ( ~ model(X84,X80) | model(X84,X79) | ~ status(X79,X80,eth) ) ) ).
+fof(c_0_42,axiom,! [X47] : ! [X48] : ! [X49] : ! [X51] : ! [X52] : ! [X54] : ! [X55] : ( ( ~ model(esk11_2(X47,X48),X47) | ~ model(esk11_2(X47,X48),X48) | ~ model(X49,X47) | status(X47,X48,eqv) ) & ( model(esk11_2(X47,X48),X47) | model(esk11_2(X47,X48),X48) | ~ model(X49,X47) | status(X47,X48,eqv) ) & ( model(esk12_2(X51,X52),X51) | ~ status(X51,X52,eqv) ) & ( ~ model(X54,X51) | model(X54,X52) | ~ status(X51,X52,eqv) ) & ( ~ model(X55,X52) | model(X55,X51) | ~ status(X51,X52,eqv) ) ) ).
+fof(c_0_43,axiom,! [X64] : ! [X65] : ! [X66] : ! [X68] : ! [X69] : ! [X70] : ! [X72] : ( ( model(esk15_2(X64,X65),X64) | ~ model(X66,X64) | ~ model(X68,X65) | model(X68,X64) | status(X64,X65,wec) ) & ( ~ model(esk15_2(X64,X65),X65) | ~ model(X66,X64) | ~ model(X68,X65) | model(X68,X64) | status(X64,X65,wec) ) & ( model(esk16_2(X69,X70),X69) | ~ status(X69,X70,wec) ) & ( ~ model(X72,X69) | model(X72,X70) | ~ status(X69,X70,wec) ) & ( model(esk17_2(X69,X70),X70) | ~ status(X69,X70,wec) ) & ( ~ model(esk17_2(X69,X70),X69) | ~ status(X69,X70,wec) ) ) ).
+fof(c_0_44,axiom,! [X137] : ! [X138] : ! [X140] : ! [X141] : ! [X142] : ! [X143] : ! [X144] : ( ( model(esk35_2(X137,X138),X137) | ~ model(X140,X138) | model(X141,X138) | status(X137,X138,wca) ) & ( ~ model(X144,X142) | ~ status(X142,X143,wca) ) & ( model(esk36_2(X142,X143),X143) | ~ status(X142,X143,wca) ) & ( ~ model(esk37_2(X142,X143),X143) | ~ status(X142,X143,wca) ) ) ).
+fof(c_0_45,axiom,! [X161] : ! [X162] : ! [X163] : ! [X164] : ! [X165] : ! [X166] : ( ( ~ model(X163,X161) | ~ model(X163,X162) | ~ model(X164,X161) | ~ model(X164,not(X162)) | status(X161,X162,noc) ) & ( model(esk41_2(X165,X166),X165) | ~ status(X165,X166,noc) ) & ( model(esk41_2(X165,X166),X166) | ~ status(X165,X166,noc) ) & ( model(esk42_2(X165,X166),X165) | ~ status(X165,X166,noc) ) & ( model(esk42_2(X165,X166),not(X166)) | ~ status(X165,X166,noc) ) ) ).
+fof(c_0_46,axiom,! [X93] : ! [X94] : ! [X95] : ! [X96] : ! [X98] : ! [X99] : ! [X102] : ( ( ~ model(X95,X93) | model(X96,X93) | ~ model(esk23_2(X93,X94),X94) | status(X93,X94,wtc) ) & ( model(esk24_2(X98,X99),X98) | ~ status(X98,X99,wtc) ) & ( ~ model(esk25_2(X98,X99),X98) | ~ status(X98,X99,wtc) ) & ( model(X102,X99) | ~ status(X98,X99,wtc) ) ) ).
+fof(c_0_47,axiom,! [X129] : ! [X130] : ! [X133] : ! [X134] : ! [X135] : ! [X136] : ( ( model(esk33_2(X129,X130),X129) | ~ model(esk34_2(X129,X130),X130) | status(X129,X130,tca) ) & ( ~ model(X135,X133) | ~ status(X133,X134,tca) ) & ( model(X136,X134) | ~ status(X133,X134,tca) ) ) ).
+fof(c_0_48,axiom,! [X121] : ! [X122] : ! [X124] : ! [X125] : ! [X126] : ! [X127] : ( ( model(esk31_2(X121,X122),X121) | ~ model(X124,X122) | status(X121,X122,sca) ) & ( ~ model(X127,X125) | ~ status(X125,X126,sca) ) & ( model(esk32_2(X125,X126),X126) | ~ status(X125,X126,sca) ) ) ).
+fof(c_0_49,axiom,! [X153] : ! [X154] : ! [X157] : ! [X158] : ! [X159] : ! [X160] : ( ( ~ model(esk39_2(X153,X154),X153) | ~ model(esk40_2(X153,X154),not(X154)) | status(X153,X154,uns) ) & ( model(X159,X157) | ~ status(X157,X158,uns) ) & ( model(X160,not(X158)) | ~ status(X157,X158,uns) ) ) ).
+fof(c_0_50,axiom,! [X85] : ! [X86] : ! [X89] : ! [X90] : ! [X91] : ! [X92] : ( ( ~ model(esk21_2(X85,X86),X85) | ~ model(esk22_2(X85,X86),X86) | status(X85,X86,tau) ) & ( model(X91,X89) | ~ status(X89,X90,tau) ) & ( model(X92,X90) | ~ status(X89,X90,tau) ) ) ).
+fof(c_0_51,axiom,! [X56] : ! [X57] : ! [X58] : ! [X60] : ! [X61] : ! [X63] : ( ( ~ model(X58,X56) | ~ model(esk13_2(X56,X57),X57) | status(X56,X57,tac) ) & ( model(esk14_2(X60,X61),X60) | ~ status(X60,X61,tac) ) & ( model(X63,X61) | ~ status(X60,X61,tac) ) ) ).
+fof(c_0_52,axiom,! [X147] : ! [X148] : ! [X149] : ! [X150] : ! [X151] : ( ( ~ model(X149,X147) | ~ model(X149,not(X148)) | status(X147,X148,csa) ) & ( model(esk38_2(X150,X151),X150) | ~ status(X150,X151,csa) ) & ( model(esk38_2(X150,X151),not(X151)) | ~ status(X150,X151,csa) ) ) ).
+fof(c_0_53,axiom,! [X35] : ! [X36] : ! [X37] : ! [X38] : ! [X39] : ( ( ~ model(X37,X35) | ~ model(X37,X36) | status(X35,X36,sat) ) & ( model(esk9_2(X38,X39),X38) | ~ status(X38,X39,sat) ) & ( model(esk9_2(X38,X39),X39) | ~ status(X38,X39,sat) ) ) ).
+fof(c_0_54,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk6_2(X1,X2),X2) | model(esk5_2(X1,X2),X1) | model(esk8_2(X1,X2),X1) | ~ model(X3,X2) ) ).
+fof(c_0_55,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk6_2(X1,X2),X2) | model(esk5_2(X1,X2),X1) | model(esk7_2(X1,X2),X2) | ~ model(X3,X1) ) ).
+fof(c_0_56,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk3_2(X1,X2),X1) | model(esk4_2(X1,X2),X2) | ~ model(X3,X1) ) ).
+fof(c_0_57,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk1_2(X1,X2),X2) | model(esk2_2(X1,X2),X1) | ~ model(X3,X2) ) ).
+fof(c_0_58,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk10_2(X1,X2),X1) | model(X3,X2) | ~ model(X3,X1) ) ).
+fof(c_0_59,axiom,! [X1] : ! [X2] : ( model(esk30_1(X1),X1) | ~ model(X2,X1) ) ).
+fof(c_0_60,axiom,! [X1] : ! [X2] : ! [X4] : ! [X5] : ! [X3] : ( model(esk26_2(X1,X2),X1) | model(X4,X1) | model(X5,X2) | status(X1,X2,wth) | ~ model(X3,X1) | ~ model(X4,X2) ) ).
+fof(c_0_61,axiom,! [X4] : ! [X1] : ! [X5] : ! [X2] : ! [X3] : ( model(X4,X1) | model(X5,X2) | status(X1,X2,wth) | ~ model(esk26_2(X1,X2),X2) | ~ model(X3,X1) | ~ model(X4,X2) ) ).
+fof(c_0_62,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( model(esk18_2(X1,X2),X1) | model(esk18_2(X1,X2),X2) | model(X4,X1) | status(X1,X2,eth) | ~ model(X3,X1) ) ).
+fof(c_0_63,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk11_2(X1,X2),X1) | model(esk11_2(X1,X2),X2) | status(X1,X2,eqv) | ~ model(X3,X1) ) ).
+fof(c_0_64,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( model(esk15_2(X1,X2),X1) | model(X4,X1) | status(X1,X2,wec) | ~ model(X3,X1) | ~ model(X4,X2) ) ).
+fof(c_0_65,axiom,! [X4] : ! [X1] : ! [X2] : ! [X3] : ( model(X4,X1) | status(X1,X2,eth) | ~ model(esk18_2(X1,X2),X1) | ~ model(esk18_2(X1,X2),X2) | ~ model(X3,X1) ) ).
+fof(c_0_66,axiom,! [X4] : ! [X1] : ! [X2] : ! [X3] : ( model(X4,X1) | status(X1,X2,wec) | ~ model(esk15_2(X1,X2),X2) | ~ model(X3,X1) | ~ model(X4,X2) ) ).
+fof(c_0_67,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( model(esk35_2(X1,X2),X1) | model(X4,X2) | status(X1,X2,wca) | ~ model(X3,X2) ) ).
+fof(c_0_68,axiom,! [X2] : ! [X3] : ! [X1] : ! [X4] : ( status(X2,X3,noc) | ~ model(X1,X2) | ~ model(X1,X3) | ~ model(X4,X2) | ~ model(X4,not(X3)) ) ).
+fof(c_0_69,axiom,! [X1] : ! [X2] : ! [X3] : ( status(X1,X2,eqv) | ~ model(esk11_2(X1,X2),X1) | ~ model(esk11_2(X1,X2),X2) | ~ model(X3,X1) ) ).
+fof(c_0_70,axiom,! [X3] : ! [X2] : ! [X4] : ! [X1] : ( model(X3,X2) | status(X2,X4,wtc) | ~ model(X1,X2) | ~ model(esk23_2(X2,X4),X4) ) ).
+fof(c_0_71,axiom,! [X1] : ! [X2] : ( model(esk33_2(X1,X2),X1) | status(X1,X2,tca) | ~ model(esk34_2(X1,X2),X2) ) ).
+fof(c_0_72,axiom,! [X1] : ! [X2] : ! [X3] : ( model(esk31_2(X1,X2),X1) | status(X1,X2,sca) | ~ model(X3,X2) ) ).
+fof(c_0_73,axiom,! [X1] : ! [X2] : ( status(X1,X2,uns) | ~ model(esk39_2(X1,X2),X1) | ~ model(esk40_2(X1,X2),not(X2)) ) ).
+fof(c_0_74,axiom,! [X1] : ! [X2] : ( status(X1,X2,tau) | ~ model(esk21_2(X1,X2),X1) | ~ model(esk22_2(X1,X2),X2) ) ).
+fof(c_0_75,axiom,! [X2] : ! [X3] : ! [X1] : ( status(X2,X3,tac) | ~ model(X1,X2) | ~ model(esk13_2(X2,X3),X3) ) ).
+fof(c_0_76,axiom,! [X2] : ! [X3] : ! [X1] : ( status(X2,X3,csa) | ~ model(X1,X2) | ~ model(X1,not(X3)) ) ).
+fof(c_0_77,axiom,! [X2] : ! [X3] : ! [X1] : ( status(X2,X3,sat) | ~ model(X1,X2) | ~ model(X1,X3) ) ).
+fof(c_0_78,axiom,! [X1] : ! [X2] : ( model(esk42_2(X1,X2),not(X2)) | ~ status(X1,X2,noc) ) ).
+fof(c_0_79,axiom,! [X1] : ! [X2] : ( model(esk38_2(X1,X2),not(X2)) | ~ status(X1,X2,csa) ) ).
+fof(c_0_80,axiom,! [X1] : ! [X2] : ( model(esk42_2(X1,X2),X1) | ~ status(X1,X2,noc) ) ).
+fof(c_0_81,axiom,! [X1] : ! [X2] : ( model(esk41_2(X1,X2),X1) | ~ status(X1,X2,noc) ) ).
+fof(c_0_82,axiom,! [X1] : ! [X2] : ( model(esk41_2(X1,X2),X2) | ~ status(X1,X2,noc) ) ).
+fof(c_0_83,axiom,! [X1] : ! [X2] : ( model(esk38_2(X1,X2),X1) | ~ status(X1,X2,csa) ) ).
+fof(c_0_84,axiom,! [X1] : ! [X2] : ( model(esk36_2(X1,X2),X2) | ~ status(X1,X2,wca) ) ).
+fof(c_0_85,axiom,! [X2] : ! [X4] : ! [X1] : ! [X3] : ( status(X2,X4,esa) | ~ model(X1,X2) | ~ model(X3,X4) ) ).
+fof(c_0_86,axiom,! [X1] : ! [X2] : ( model(esk32_2(X1,X2),X2) | ~ status(X1,X2,sca) ) ).
+fof(c_0_87,axiom,! [X1] : ! [X2] : ( model(esk28_2(X1,X2),X2) | ~ status(X1,X2,wth) ) ).
+fof(c_0_88,axiom,! [X1] : ! [X2] : ( model(esk27_2(X1,X2),X1) | ~ status(X1,X2,wth) ) ).
+fof(c_0_89,axiom,! [X1] : ! [X2] : ( model(esk24_2(X1,X2),X1) | ~ status(X1,X2,wtc) ) ).
+fof(c_0_90,axiom,! [X1] : ! [X2] : ( model(esk19_2(X1,X2),X1) | ~ status(X1,X2,eth) ) ).
+fof(c_0_91,axiom,! [X1] : ! [X2] : ( model(esk17_2(X1,X2),X2) | ~ status(X1,X2,wec) ) ).
+fof(c_0_92,axiom,! [X1] : ! [X3] : ! [X2] : ( model(X1,X3) | ~ model(X1,X2) | ~ status(X2,X3,wth) ) ).
+fof(c_0_93,axiom,! [X1] : ! [X3] : ! [X2] : ( model(X1,X3) | ~ model(X1,X2) | ~ status(X2,X3,eth) ) ).
+fof(c_0_94,axiom,! [X1] : ! [X3] : ! [X2] : ( model(X1,X3) | ~ model(X1,X2) | ~ status(X2,X3,wec) ) ).
+fof(c_0_95,axiom,! [X1] : ! [X2] : ( status(X1,X2,thm) | ~ model(esk10_2(X1,X2),X2) ) ).
+fof(c_0_96,axiom,! [X1] : ! [X2] : ( model(esk16_2(X1,X2),X1) | ~ status(X1,X2,wec) ) ).
+fof(c_0_97,axiom,! [X1] : ! [X2] : ( model(esk14_2(X1,X2),X1) | ~ status(X1,X2,tac) ) ).
+fof(c_0_98,axiom,! [X1] : ! [X2] : ( model(esk12_2(X1,X2),X1) | ~ status(X1,X2,eqv) ) ).
+fof(c_0_99,axiom,! [X1] : ! [X2] : ( model(esk9_2(X1,X2),X1) | ~ status(X1,X2,sat) ) ).
+fof(c_0_100,axiom,! [X1] : ! [X2] : ( model(esk9_2(X1,X2),X2) | ~ status(X1,X2,sat) ) ).
+fof(c_0_101,axiom,! [X1] : ! [X3] : ! [X2] : ( model(X1,X3) | ~ model(X1,X2) | ~ status(X2,X3,eqv) ) ).
+fof(c_0_102,axiom,! [X1] : ! [X3] : ! [X2] : ( model(X1,X3) | ~ model(X1,X2) | ~ status(X3,X2,eth) ) ).
+fof(c_0_103,axiom,! [X1] : ! [X3] : ! [X2] : ( model(X1,X3) | ~ model(X1,X2) | ~ status(X3,X2,eqv) ) ).
+fof(c_0_104,axiom,! [X1] : ! [X2] : ! [X3] : ( model(X1,not(X2)) | ~ status(X3,X2,uns) ) ).
+fof(c_0_105,axiom,! [X1] : ! [X2] : ( ~ model(esk37_2(X1,X2),X2) | ~ status(X1,X2,wca) ) ).
+fof(c_0_106,axiom,! [X1] : ! [X2] : ( ~ model(esk29_2(X1,X2),X2) | ~ status(X1,X2,wth) ) ).
+fof(c_0_107,axiom,! [X1] : ! [X2] : ! [X3] : ( model(X1,X2) | ~ status(X2,X3,uns) ) ).
+fof(c_0_108,axiom,! [X1] : ! [X2] : ! [X3] : ( model(X1,X2) | ~ status(X2,X3,tau) ) ).
+fof(c_0_109,axiom,! [X1] : ! [X2] : ( ~ model(esk28_2(X1,X2),X1) | ~ status(X1,X2,wth) ) ).
+fof(c_0_110,axiom,! [X1] : ! [X2] : ( ~ model(esk25_2(X1,X2),X1) | ~ status(X1,X2,wtc) ) ).
+fof(c_0_111,axiom,! [X1] : ! [X2] : ( ~ model(esk20_2(X1,X2),X1) | ~ status(X1,X2,eth) ) ).
+fof(c_0_112,axiom,! [X1] : ! [X2] : ( ~ model(esk17_2(X1,X2),X1) | ~ status(X1,X2,wec) ) ).
+fof(c_0_113,axiom,! [X2] : ! [X3] : ! [X1] : ( status(X2,X3,unp) | ~ model(X1,X2) ) ).
+fof(c_0_114,axiom,! [X1] : ! [X2] : ! [X3] : ( model(X1,X2) | ~ status(X3,X2,tca) ) ).
+fof(c_0_115,axiom,! [X1] : ! [X2] : ! [X3] : ( model(X1,X2) | ~ status(X3,X2,wtc) ) ).
+fof(c_0_116,axiom,! [X1] : ! [X2] : ! [X3] : ( model(X1,X2) | ~ status(X3,X2,tau) ) ).
+fof(c_0_117,axiom,! [X1] : ! [X2] : ! [X3] : ( model(X1,X2) | ~ status(X3,X2,tac) ) ).
+fof(c_0_118,axiom,! [X3] : ! [X2] : ! [X1] : ( status(X3,X2,sap) | ~ model(X1,X2) ) ).
+fof(c_0_119,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ model(X1,X2) | ~ status(X2,X3,wca) ) ).
+fof(c_0_120,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ model(X1,X2) | ~ status(X2,X3,tca) ) ).
+fof(c_0_121,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ model(X1,X2) | ~ status(X2,X3,sca) ) ).

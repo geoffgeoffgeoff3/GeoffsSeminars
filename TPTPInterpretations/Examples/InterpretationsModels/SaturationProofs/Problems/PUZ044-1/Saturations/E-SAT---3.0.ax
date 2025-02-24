@@ -1,0 +1,13 @@
+fof(liars_are_told_by_liars,axiom,! [X1] : ! [X2] : ( a_truth(X1) | a_truth(liar(X2)) | ~ a_truth(says(X2,X1)) ) ).
+fof(truths_are_told_by_truthtellers,axiom,! [X2] : ! [X1] : ( a_truth(truthteller(X2)) | ~ a_truth(X1) | ~ a_truth(says(X2,X1)) ) ).
+fof(truthtellers_tell_truth,axiom,! [X2] : ! [X1] : ( a_truth(X2) | ~ a_truth(truthteller(X1)) | ~ a_truth(says(X1,X2)) ) ).
+fof(truthteller_or_liar,axiom,! [X1] : ( a_truth(truthteller(X1)) | a_truth(liar(X1)) ) ).
+fof(liars_lie,axiom,! [X1] : ! [X2] : ( ~ a_truth(liar(X1)) | ~ a_truth(says(X1,X2)) | ~ a_truth(X2) ) ).
+fof(not_both,axiom,! [X1] : ( ~ a_truth(truthteller(X1)) | ~ a_truth(liar(X1)) ) ).
+fof(c_0_6,axiom,! [X1] : ! [X2] : ( a_truth(X1) | a_truth(liar(X2)) | ~ a_truth(says(X2,X1)) ) ).
+fof(c_0_7,axiom,! [X1] : ( a_truth(liar(X1)) | ~ a_truth(says(X1,liar(X1))) ) ).
+fof(c_0_8,axiom,! [X2] : ! [X1] : ( a_truth(truthteller(X2)) | ~ a_truth(X1) | ~ a_truth(says(X2,X1)) ) ).
+fof(c_0_9,axiom,! [X2] : ! [X1] : ( a_truth(X2) | ~ a_truth(truthteller(X1)) | ~ a_truth(says(X1,X2)) ) ).
+fof(c_0_10,axiom,! [X1] : ( a_truth(truthteller(X1)) | a_truth(liar(X1)) ) ).
+fof(c_0_11,axiom,! [X1] : ! [X2] : ( ~ a_truth(liar(X1)) | ~ a_truth(says(X1,X2)) | ~ a_truth(X2) ) ).
+fof(c_0_12,axiom,! [X1] : ( ~ a_truth(truthteller(X1)) | ~ a_truth(liar(X1)) ) ).

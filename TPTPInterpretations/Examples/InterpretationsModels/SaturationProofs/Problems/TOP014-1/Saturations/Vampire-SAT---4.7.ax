@@ -1,0 +1,119 @@
+fof(compact_set_109,axiom,! [X3] : ! [X4] : ! [X5] : ( compact_set(X3,X4,X5) | ~ topological_space(X4,X5) | ~ subset_sets(X3,X4) | ~ compact_space(X3,subspace_topology(X4,X5,X3)) ) ).
+fof(compact_space_101,axiom,! [X4] : ! [X5] : ! [X23] : ( finite(f23(X4,X5,X23)) | ~ open_covering(X23,X4,X5) | ~ compact_space(X4,X5) ) ).
+fof(compact_space_105,axiom,! [X4] : ! [X5] : ! [X24] : ( compact_space(X4,X5) | ~ topological_space(X4,X5) | ~ finite(X24) | ~ open_covering(X24,X4,X5) | ~ subset_collections(X24,f24(X4,X5)) ) ).
+fof(compact_set_108,axiom,! [X3] : ! [X4] : ! [X5] : ( compact_space(X3,subspace_topology(X4,X5,X3)) | ~ compact_set(X3,X4,X5) ) ).
+fof(compact_space_103,axiom,! [X4] : ! [X5] : ! [X23] : ( open_covering(f23(X4,X5,X23),X4,X5) | ~ open_covering(X23,X4,X5) | ~ compact_space(X4,X5) ) ).
+fof(open_covering_99,axiom,! [X1] : ! [X4] : ! [X5] : ( open_covering(X1,X4,X5) | ~ topological_space(X4,X5) | ~ equal_sets(union_of_members(X1),X4) | ~ subset_collections(X1,X5) ) ).
+fof(compact_space_104,axiom,! [X4] : ! [X5] : ( open_covering(f24(X4,X5),X4,X5) | compact_space(X4,X5) | ~ topological_space(X4,X5) ) ).
+fof(connected_set_95,axiom,! [X3] : ! [X4] : ! [X5] : ( connected_set(X3,X4,X5) | ~ topological_space(X4,X5) | ~ subset_sets(X3,X4) | ~ connected_space(X3,subspace_topology(X4,X5,X3)) ) ).
+fof(u118,axiom,! [X2] : ! [X3] : ( connected_space(X2,X3) | ~ topological_space(X2,X3) | ~ equal_sets(f22(X2,X3),empty_set) ) ).
+fof(u119,axiom,! [X4] : ! [X5] : ( connected_space(X4,X5) | ~ topological_space(X4,X5) | ~ equal_sets(f21(X4,X5),empty_set) ) ).
+fof(connected_set_94,axiom,! [X3] : ! [X4] : ! [X5] : ( connected_space(X3,subspace_topology(X4,X5,X3)) | ~ connected_set(X3,X4,X5) ) ).
+fof(separation_88,axiom,! [X21] : ! [X22] : ! [X4] : ! [X5] : ( separation(X21,X22,X4,X5) | ~ element_of_collection(X22,X5) | ~ element_of_collection(X21,X5) | ~ topological_space(X4,X5) | equal_sets(X21,empty_set) | equal_sets(X22,empty_set) | ~ equal_sets(union_of_sets(X21,X22),X4) | ~ disjoint_s(X21,X22) ) ).
+fof(connected_space_91,axiom,! [X4] : ! [X5] : ( separation(f21(X4,X5),f22(X4,X5),X4,X5) | connected_space(X4,X5) | ~ topological_space(X4,X5) ) ).
+fof(separation_82,axiom,! [X21] : ! [X22] : ! [X4] : ! [X5] : ( ~ separation(X21,X22,X4,X5) | ~ equal_sets(X21,empty_set) ) ).
+fof(separation_83,axiom,! [X21] : ! [X22] : ! [X4] : ! [X5] : ( ~ separation(X21,X22,X4,X5) | ~ equal_sets(X22,empty_set) ) ).
+fof(connected_space_90,axiom,! [X21] : ! [X22] : ! [X4] : ! [X5] : ( ~ separation(X21,X22,X4,X5) | ~ connected_space(X4,X5) ) ).
+fof(hausdorff_76,axiom,! [X4] : ! [X5] : ! [X17] : ! [X18] : ( disjoint_s(f17(X4,X5,X17,X18),f18(X4,X5,X17,X18)) | ~ element_of_set(X17,X4) | ~ element_of_set(X18,X4) | eq_p(X17,X18) | ~ hausdorff(X4,X5) ) ).
+fof(separation_87,axiom,! [X21] : ! [X22] : ! [X4] : ! [X5] : ( disjoint_s(X21,X22) | ~ separation(X21,X22,X4,X5) ) ).
+fof(hausdorff_79,axiom,! [X4] : ! [X5] : ( hausdorff(X4,X5) | ~ topological_space(X4,X5) | ~ eq_p(f19(X4,X5),f20(X4,X5)) ) ).
+fof(hausdorff_80,axiom,! [X4] : ! [X5] : ! [X19] : ! [X20] : ( hausdorff(X4,X5) | ~ topological_space(X4,X5) | ~ disjoint_s(X19,X20) | ~ neighborhood(X20,f20(X4,X5),X4,X5) | ~ neighborhood(X19,f19(X4,X5),X4,X5) ) ).
+fof(limit_point_68,axiom,! [X16] : ! [X7] : ! [X4] : ! [X5] : ! [X6] : ( eq_p(X16,X7) | ~ topological_space(X4,X5) | ~ subset_sets(X6,X4) | limit_point(X7,X6,X4,X5) | ~ element_of_set(X16,intersection_of_sets(f16(X7,X6,X4,X5),X6)) ) ).
+fof(limit_point_66,axiom,! [X7] : ! [X6] : ! [X4] : ! [X5] : ! [X0] : ( ~ eq_p(f15(X7,X6,X4,X5,X0),X7) | ~ neighborhood(X0,X7,X4,X5) | ~ limit_point(X7,X6,X4,X5) ) ).
+fof(u123,axiom,! [X3] : ! [X2] : ! [X0] : ! [X1] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( limit_point(X3,X2,X0,X1) | ~ subset_sets(X2,X0) | ~ topological_space(X0,X1) | ~ element_of_set(f15(X3,X4,X5,X6,X7),intersection_of_sets(f16(X3,X2,X0,X1),X2)) | ~ neighborhood(X7,X3,X5,X6) | ~ limit_point(X3,X4,X5,X6) ) ).
+fof(hausdorff_75,axiom,! [X4] : ! [X5] : ! [X17] : ! [X18] : ( neighborhood(f18(X4,X5,X17,X18),X18,X4,X5) | ~ element_of_set(X17,X4) | ~ element_of_set(X18,X4) | eq_p(X17,X18) | ~ hausdorff(X4,X5) ) ).
+fof(hausdorff_74,axiom,! [X4] : ! [X5] : ! [X17] : ! [X18] : ( neighborhood(f17(X4,X5,X17,X18),X17,X4,X5) | ~ element_of_set(X17,X4) | ~ element_of_set(X18,X4) | eq_p(X17,X18) | ~ hausdorff(X4,X5) ) ).
+fof(limit_point_67,axiom,! [X7] : ! [X6] : ! [X4] : ! [X5] : ( neighborhood(f16(X7,X6,X4,X5),X7,X4,X5) | ~ topological_space(X4,X5) | limit_point(X7,X6,X4,X5) | ~ subset_sets(X6,X4) ) ).
+fof(neighborhood_62,axiom,! [X0] : ! [X6] : ! [X4] : ! [X5] : ( neighborhood(X0,X6,X4,X5) | ~ topological_space(X4,X5) | ~ open(X0,X4,X5) | ~ element_of_set(X6,X0) ) ).
+fof(problem_9_143,axiom,subset_sets(a,cx) ).
+fof(interior_50,axiom,! [X6] : ! [X4] : ! [X5] : ! [X0] : ( subset_sets(f13(X6,X4,X5,X0),X6) | ~ element_of_set(X0,interior(X6,X4,X5)) ) ).
+fof(topology_generated_39,axiom,! [X1] : ! [X0] : ! [X4] : ( subset_sets(f10(X1,X0,X4),X0) | ~ element_of_collection(X0,top_of_basis(X1)) | ~ element_of_set(X4,X0) ) ).
+fof(basis_for_topology_31,axiom,! [X4] : ! [X1] : ! [X6] : ! [X9] : ! [X10] : ( subset_sets(f6(X4,X1,X6,X9,X10),intersection_of_sets(X9,X10)) | ~ element_of_collection(X9,X1) | ~ element_of_collection(X10,X1) | ~ element_of_set(X6,X4) | ~ element_of_set(X6,intersection_of_sets(X9,X10)) | ~ basis(X4,X1) ) ).
+fof(closure_56,axiom,! [X6] : ! [X4] : ! [X5] : ! [X0] : ( subset_sets(X6,f14(X6,X4,X5,X0)) | ~ topological_space(X4,X5) | element_of_set(X0,closure(X6,X4,X5)) | ~ subset_sets(X6,X4) ) ).
+fof(connected_set_93,axiom,! [X3] : ! [X4] : ! [X5] : ( subset_sets(X3,X4) | ~ connected_set(X3,X4,X5) ) ).
+fof(compact_set_107,axiom,! [X3] : ! [X4] : ! [X5] : ( subset_sets(X3,X4) | ~ compact_set(X3,X4,X5) ) ).
+fof(limit_point_64,axiom,! [X6] : ! [X4] : ! [X7] : ! [X5] : ( subset_sets(X6,X4) | ~ limit_point(X7,X6,X4,X5) ) ).
+fof(subspace_topology_43,axiom,! [X6] : ! [X4] : ! [X0] : ! [X5] : ( subset_sets(X6,X4) | ~ element_of_collection(X0,subspace_topology(X4,X5,X6)) ) ).
+fof(interior_48,axiom,! [X6] : ! [X4] : ! [X0] : ! [X5] : ( subset_sets(X6,X4) | ~ element_of_set(X0,interior(X6,X4,X5)) ) ).
+fof(closure_54,axiom,! [X6] : ! [X4] : ! [X0] : ! [X5] : ( subset_sets(X6,X4) | ~ element_of_set(X0,closure(X6,X4,X5)) ) ).
+fof(basis_for_topology_36,axiom,! [X4] : ! [X1] : ! [X11] : ( basis(X4,X1) | ~ element_of_collection(X11,X1) | ~ equal_sets(union_of_members(X1),X4) | ~ element_of_set(f7(X4,X1),X11) | ~ subset_sets(X11,intersection_of_sets(f8(X4,X1),f9(X4,X1))) ) ).
+fof(finer_topology_27,axiom,! [X5] : ! [X8] : ! [X4] : ( finer(X5,X8,X4) | ~ topological_space(X4,X8) | ~ topological_space(X4,X5) | ~ subset_collections(X8,X5) ) ).
+fof(closure_57,axiom,! [X6] : ! [X4] : ! [X5] : ! [X0] : ( closed(f14(X6,X4,X5,X0),X4,X5) | ~ topological_space(X4,X5) | element_of_set(X0,closure(X6,X4,X5)) | ~ subset_sets(X6,X4) ) ).
+fof(closed_set_23,axiom,! [X0] : ! [X4] : ! [X5] : ( closed(X0,X4,X5) | ~ topological_space(X4,X5) | ~ open(relative_complement_sets(X0,X4),X4,X5) ) ).
+fof(interior_51,axiom,! [X6] : ! [X4] : ! [X5] : ! [X0] : ( open(f13(X6,X4,X5,X0),X4,X5) | ~ element_of_set(X0,interior(X6,X4,X5)) ) ).
+fof(closed_set_22,axiom,! [X0] : ! [X4] : ! [X5] : ( open(relative_complement_sets(X0,X4),X4,X5) | ~ closed(X0,X4,X5) ) ).
+fof(neighborhood_60,axiom,! [X0] : ! [X4] : ! [X5] : ! [X6] : ( open(X0,X4,X5) | ~ neighborhood(X0,X6,X4,X5) ) ).
+fof(open_set_20,axiom,! [X0] : ! [X4] : ! [X5] : ( open(X0,X4,X5) | ~ topological_space(X4,X5) | ~ element_of_collection(X0,X5) ) ).
+fof(topological_space_12,axiom,! [X4] : ! [X5] : ( subset_collections(f5(X4,X5),X5) | ~ element_of_collection(empty_set,X5) | topological_space(X4,X5) | ~ equal_sets(union_of_members(X5),X4) | ~ element_of_collection(X4,X5) | element_of_collection(f3(X4,X5),X5) ) ).
+fof(topological_space_14,axiom,! [X4] : ! [X5] : ( subset_collections(f5(X4,X5),X5) | ~ element_of_collection(empty_set,X5) | topological_space(X4,X5) | ~ equal_sets(union_of_members(X5),X4) | ~ element_of_collection(X4,X5) | element_of_collection(f4(X4,X5),X5) ) ).
+fof(topological_space_16,axiom,! [X4] : ! [X5] : ( subset_collections(f5(X4,X5),X5) | ~ element_of_collection(empty_set,X5) | topological_space(X4,X5) | ~ equal_sets(union_of_members(X5),X4) | ~ element_of_collection(X4,X5) | ~ element_of_collection(intersection_of_sets(f3(X4,X5),f4(X4,X5)),X5) ) ).
+fof(compact_space_102,axiom,! [X4] : ! [X5] : ! [X23] : ( subset_collections(f23(X4,X5,X23),X23) | ~ open_covering(X23,X4,X5) | ~ compact_space(X4,X5) ) ).
+fof(finer_topology_26,axiom,! [X8] : ! [X5] : ! [X4] : ( subset_collections(X8,X5) | ~ finer(X5,X8,X4) ) ).
+fof(open_covering_97,axiom,! [X1] : ! [X5] : ! [X4] : ( subset_collections(X1,X5) | ~ open_covering(X1,X4,X5) ) ).
+fof(problem_9_145,axiom,equal_sets(a,interior(a,cx,ct)) | open(a,cx,ct) | ~ equal_sets(a,closure(a,cx,ct)) | ~ closed(a,cx,ct) ).
+fof(problem_9_144,axiom,equal_sets(a,closure(a,cx,ct)) | open(a,cx,ct) | equal_sets(a,interior(a,cx,ct)) | closed(a,cx,ct) ).
+fof(problem_9_146,axiom,equal_sets(a,closure(a,cx,ct)) | closed(a,cx,ct) | ~ equal_sets(a,interior(a,cx,ct)) | ~ open(a,cx,ct) ).
+fof(separation_86,axiom,! [X21] : ! [X22] : ! [X4] : ! [X5] : ( equal_sets(union_of_sets(X21,X22),X4) | ~ separation(X21,X22,X4,X5) ) ).
+fof(topological_space_7,axiom,! [X5] : ! [X4] : ( equal_sets(union_of_members(X5),X4) | ~ topological_space(X4,X5) ) ).
+fof(basis_for_topology_28,axiom,! [X1] : ! [X4] : ( equal_sets(union_of_members(X1),X4) | ~ basis(X4,X1) ) ).
+fof(open_covering_98,axiom,! [X1] : ! [X4] : ! [X5] : ( equal_sets(union_of_members(X1),X4) | ~ open_covering(X1,X4,X5) ) ).
+fof(u124,axiom,! [X2] : ! [X1] : ! [X3] : ! [X0] : ( equal_sets(X2,empty_set) | ~ element_of_collection(X2,X1) | ~ topological_space(X3,X1) | ~ element_of_collection(X0,X1) | equal_sets(X0,empty_set) | ~ equal_sets(union_of_sets(X2,X0),X3) | ~ disjoint_s(X2,X0) | ~ connected_space(X3,X1) ) ).
+fof(subspace_topology_45,axiom,! [X0] : ! [X6] : ! [X4] : ! [X5] : ( equal_sets(X0,intersection_of_sets(X6,f12(X4,X5,X6,X0))) | ~ element_of_collection(X0,subspace_topology(X4,X5,X6)) ) ).
+fof(problem_9_147,axiom,~ equal_sets(a,closure(a,cx,ct)) | ~ open(a,cx,ct) | ~ equal_sets(a,interior(a,cx,ct)) | ~ closed(a,cx,ct) ).
+fof(compact_set_106,axiom,! [X4] : ! [X5] : ! [X3] : ( topological_space(X4,X5) | ~ compact_set(X3,X4,X5) ) ).
+fof(compact_space_100,axiom,! [X4] : ! [X5] : ( topological_space(X4,X5) | ~ compact_space(X4,X5) ) ).
+fof(open_covering_96,axiom,! [X4] : ! [X5] : ! [X1] : ( topological_space(X4,X5) | ~ open_covering(X1,X4,X5) ) ).
+fof(connected_set_92,axiom,! [X4] : ! [X5] : ! [X3] : ( topological_space(X4,X5) | ~ connected_set(X3,X4,X5) ) ).
+fof(connected_space_89,axiom,! [X4] : ! [X5] : ( topological_space(X4,X5) | ~ connected_space(X4,X5) ) ).
+fof(separation_81,axiom,! [X4] : ! [X5] : ! [X21] : ! [X22] : ( topological_space(X4,X5) | ~ separation(X21,X22,X4,X5) ) ).
+fof(hausdorff_73,axiom,! [X4] : ! [X5] : ( topological_space(X4,X5) | ~ hausdorff(X4,X5) ) ).
+fof(boundary_69,axiom,! [X4] : ! [X5] : ! [X0] : ! [X6] : ( topological_space(X4,X5) | ~ element_of_set(X0,boundary(X6,X4,X5)) ) ).
+fof(limit_point_63,axiom,! [X4] : ! [X5] : ! [X7] : ! [X6] : ( topological_space(X4,X5) | ~ limit_point(X7,X6,X4,X5) ) ).
+fof(neighborhood_59,axiom,! [X4] : ! [X5] : ! [X0] : ! [X6] : ( topological_space(X4,X5) | ~ neighborhood(X0,X6,X4,X5) ) ).
+fof(closure_53,axiom,! [X4] : ! [X5] : ! [X0] : ! [X6] : ( topological_space(X4,X5) | ~ element_of_set(X0,closure(X6,X4,X5)) ) ).
+fof(interior_47,axiom,! [X4] : ! [X5] : ! [X0] : ! [X6] : ( topological_space(X4,X5) | ~ element_of_set(X0,interior(X6,X4,X5)) ) ).
+fof(subspace_topology_42,axiom,! [X4] : ! [X5] : ! [X0] : ! [X6] : ( topological_space(X4,X5) | ~ element_of_collection(X0,subspace_topology(X4,X5,X6)) ) ).
+fof(finer_topology_25,axiom,! [X4] : ! [X8] : ! [X5] : ( topological_space(X4,X8) | ~ finer(X5,X8,X4) ) ).
+fof(finer_topology_24,axiom,! [X4] : ! [X5] : ! [X8] : ( topological_space(X4,X5) | ~ finer(X5,X8,X4) ) ).
+fof(closed_set_21,axiom,! [X4] : ! [X5] : ! [X0] : ( topological_space(X4,X5) | ~ closed(X0,X4,X5) ) ).
+fof(open_set_18,axiom,! [X4] : ! [X5] : ! [X0] : ( topological_space(X4,X5) | ~ open(X0,X4,X5) ) ).
+fof(topological_space_17,axiom,! [X4] : ! [X5] : ( topological_space(X4,X5) | ~ element_of_collection(empty_set,X5) | ~ element_of_collection(X4,X5) | ~ equal_sets(union_of_members(X5),X4) | ~ element_of_collection(union_of_members(f5(X4,X5)),X5) | ~ element_of_collection(intersection_of_sets(f3(X4,X5),f4(X4,X5)),X5) ) ).
+fof(problem_9_142,axiom,topological_space(cx,ct) ).
+fof(subspace_topology_44,axiom,! [X4] : ! [X5] : ! [X6] : ! [X0] : ( element_of_collection(f12(X4,X5,X6,X0),X5) | ~ element_of_collection(X0,subspace_topology(X4,X5,X6)) ) ).
+fof(topology_generated_38,axiom,! [X1] : ! [X0] : ! [X4] : ( element_of_collection(f10(X1,X0,X4),X1) | ~ element_of_collection(X0,top_of_basis(X1)) | ~ element_of_set(X4,X0) ) ).
+fof(basis_for_topology_34,axiom,! [X4] : ! [X1] : ( element_of_collection(f9(X4,X1),X1) | ~ equal_sets(union_of_members(X1),X4) | basis(X4,X1) ) ).
+fof(basis_for_topology_33,axiom,! [X4] : ! [X1] : ( element_of_collection(f8(X4,X1),X1) | ~ equal_sets(union_of_members(X1),X4) | basis(X4,X1) ) ).
+fof(basis_for_topology_30,axiom,! [X4] : ! [X1] : ! [X6] : ! [X9] : ! [X10] : ( element_of_collection(f6(X4,X1,X6,X9,X10),X1) | ~ element_of_collection(X9,X1) | ~ element_of_collection(X10,X1) | ~ element_of_set(X6,X4) | ~ element_of_set(X6,intersection_of_sets(X9,X10)) | ~ basis(X4,X1) ) ).
+fof(topological_space_15,axiom,! [X4] : ! [X5] : ( element_of_collection(f4(X4,X5),X5) | ~ element_of_collection(empty_set,X5) | topological_space(X4,X5) | ~ equal_sets(union_of_members(X5),X4) | ~ element_of_collection(X4,X5) | ~ element_of_collection(union_of_members(f5(X4,X5)),X5) ) ).
+fof(topological_space_13,axiom,! [X4] : ! [X5] : ( element_of_collection(f3(X4,X5),X5) | ~ element_of_collection(empty_set,X5) | topological_space(X4,X5) | ~ equal_sets(union_of_members(X5),X4) | ~ element_of_collection(X4,X5) | ~ element_of_collection(union_of_members(f5(X4,X5)),X5) ) ).
+fof(topological_space_10,axiom,! [X6] : ! [X7] : ! [X5] : ! [X4] : ( element_of_collection(intersection_of_sets(X6,X7),X5) | ~ element_of_collection(X7,X5) | ~ topological_space(X4,X5) | ~ element_of_collection(X6,X5) ) ).
+fof(topological_space_8,axiom,! [X5] : ! [X4] : ( element_of_collection(empty_set,X5) | ~ topological_space(X4,X5) ) ).
+fof(intersection_of_members_5,axiom,! [X1] : ! [X0] : ( element_of_collection(f2(X1,X0),X1) | element_of_set(X0,intersection_of_members(X1)) ) ).
+fof(union_of_members_2,axiom,! [X1] : ! [X0] : ( element_of_collection(f1(X1,X0),X1) | ~ element_of_set(X0,union_of_members(X1)) ) ).
+fof(topological_space_11,axiom,! [X1] : ! [X5] : ! [X4] : ( element_of_collection(union_of_members(X1),X5) | ~ topological_space(X4,X5) | ~ subset_collections(X1,X5) ) ).
+fof(subspace_topology_46,axiom,! [X0] : ! [X4] : ! [X5] : ! [X6] : ! [X13] : ( element_of_collection(X0,subspace_topology(X4,X5,X6)) | ~ element_of_collection(X13,X5) | ~ topological_space(X4,X5) | ~ equal_sets(X0,intersection_of_sets(X6,X13)) | ~ subset_sets(X6,X4) ) ).
+fof(topology_generated_41,axiom,! [X0] : ! [X1] : ! [X12] : ( element_of_collection(X0,top_of_basis(X1)) | ~ element_of_collection(X12,X1) | ~ subset_sets(X12,X0) | ~ element_of_set(f11(X1,X0),X12) ) ).
+fof(topological_space_9,axiom,! [X4] : ! [X5] : ( element_of_collection(X4,X5) | ~ topological_space(X4,X5) ) ).
+fof(open_set_19,axiom,! [X0] : ! [X5] : ! [X4] : ( element_of_collection(X0,X5) | ~ open(X0,X4,X5) ) ).
+fof(separation_84,axiom,! [X21] : ! [X5] : ! [X22] : ! [X4] : ( element_of_collection(X21,X5) | ~ separation(X21,X22,X4,X5) ) ).
+fof(separation_85,axiom,! [X22] : ! [X5] : ! [X21] : ! [X4] : ( element_of_collection(X22,X5) | ~ separation(X21,X22,X4,X5) ) ).
+fof(hausdorff_78,axiom,! [X4] : ! [X5] : ( element_of_set(f20(X4,X5),X4) | hausdorff(X4,X5) | ~ topological_space(X4,X5) ) ).
+fof(hausdorff_77,axiom,! [X4] : ! [X5] : ( element_of_set(f19(X4,X5),X4) | hausdorff(X4,X5) | ~ topological_space(X4,X5) ) ).
+fof(limit_point_65,axiom,! [X7] : ! [X6] : ! [X4] : ! [X5] : ! [X0] : ( element_of_set(f15(X7,X6,X4,X5,X0),intersection_of_sets(X0,X6)) | ~ neighborhood(X0,X7,X4,X5) | ~ limit_point(X7,X6,X4,X5) ) ).
+fof(topology_generated_40,axiom,! [X1] : ! [X0] : ( element_of_set(f11(X1,X0),X0) | element_of_collection(X0,top_of_basis(X1)) ) ).
+fof(basis_for_topology_35,axiom,! [X4] : ! [X1] : ( element_of_set(f7(X4,X1),intersection_of_sets(f8(X4,X1),f9(X4,X1))) | ~ equal_sets(union_of_members(X1),X4) | basis(X4,X1) ) ).
+fof(basis_for_topology_32,axiom,! [X4] : ! [X1] : ( element_of_set(f7(X4,X1),X4) | ~ equal_sets(union_of_members(X1),X4) | basis(X4,X1) ) ).
+fof(u116,axiom,! [X0] : ! [X6] : ! [X4] : ! [X5] : ( element_of_set(X0,boundary(X6,X4,X5)) | ~ element_of_set(X0,closure(X6,X4,X5)) | ~ element_of_set(X0,closure(relative_complement_sets(X6,X4),X4,X5)) ) ).
+fof(boundary_71,axiom,! [X0] : ! [X6] : ! [X4] : ! [X5] : ( element_of_set(X0,closure(relative_complement_sets(X6,X4),X4,X5)) | ~ element_of_set(X0,boundary(X6,X4,X5)) ) ).
+fof(boundary_70,axiom,! [X0] : ! [X6] : ! [X4] : ! [X5] : ( element_of_set(X0,closure(X6,X4,X5)) | ~ element_of_set(X0,boundary(X6,X4,X5)) ) ).
+fof(closure_58,axiom,! [X0] : ! [X6] : ! [X4] : ! [X5] : ( element_of_set(X0,closure(X6,X4,X5)) | ~ topological_space(X4,X5) | ~ subset_sets(X6,X4) | ~ element_of_set(X0,f14(X6,X4,X5,X0)) ) ).
+fof(interior_49,axiom,! [X0] : ! [X6] : ! [X4] : ! [X5] : ( element_of_set(X0,f13(X6,X4,X5,X0)) | ~ element_of_set(X0,interior(X6,X4,X5)) ) ).
+fof(interior_52,axiom,! [X0] : ! [X6] : ! [X4] : ! [X5] : ! [X14] : ( element_of_set(X0,interior(X6,X4,X5)) | ~ subset_sets(X14,X6) | ~ element_of_set(X0,X14) | ~ topological_space(X4,X5) | ~ open(X14,X4,X5) | ~ subset_sets(X6,X4) ) ).
+fof(topology_generated_37,axiom,! [X4] : ! [X1] : ! [X0] : ( element_of_set(X4,f10(X1,X0,X4)) | ~ element_of_collection(X0,top_of_basis(X1)) | ~ element_of_set(X4,X0) ) ).
+fof(basis_for_topology_29,axiom,! [X6] : ! [X4] : ! [X1] : ! [X9] : ! [X10] : ( element_of_set(X6,f6(X4,X1,X6,X9,X10)) | ~ element_of_collection(X9,X1) | ~ element_of_collection(X10,X1) | ~ element_of_set(X6,X4) | ~ element_of_set(X6,intersection_of_sets(X9,X10)) | ~ basis(X4,X1) ) ).
+fof(intersection_of_members_6,axiom,! [X0] : ! [X1] : ( element_of_set(X0,intersection_of_members(X1)) | ~ element_of_set(X0,f2(X1,X0)) ) ).
+fof(union_of_members_1,axiom,! [X0] : ! [X1] : ( element_of_set(X0,f1(X1,X0)) | ~ element_of_set(X0,union_of_members(X1)) ) ).
+fof(union_of_members_3,axiom,! [X0] : ! [X1] : ! [X2] : ( element_of_set(X0,union_of_members(X1)) | ~ element_of_set(X0,X2) | ~ element_of_collection(X2,X1) ) ).
+fof(neighborhood_61,axiom,! [X6] : ! [X0] : ! [X4] : ! [X5] : ( element_of_set(X6,X0) | ~ neighborhood(X0,X6,X4,X5) ) ).
+fof(intersection_of_members_4,axiom,! [X0] : ! [X3] : ! [X1] : ( element_of_set(X0,X3) | ~ element_of_collection(X3,X1) | ~ element_of_set(X0,intersection_of_members(X1)) ) ).
+fof(closure_55,axiom,! [X0] : ! [X15] : ! [X6] : ! [X4] : ! [X5] : ( element_of_set(X0,X15) | ~ subset_sets(X6,X15) | ~ closed(X15,X4,X5) | ~ element_of_set(X0,closure(X6,X4,X5)) ) ).

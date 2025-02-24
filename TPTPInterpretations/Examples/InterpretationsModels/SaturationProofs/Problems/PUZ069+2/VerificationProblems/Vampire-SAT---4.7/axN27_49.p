@@ -1,0 +1,2 @@
+include('Saturations/PUZ069+2/Saturations/Vampire-SAT---4.7.ax').
+fof(axN27_49,conjecture,p(n2,n7,n4) => ~ p(n2,n7,n9) ).

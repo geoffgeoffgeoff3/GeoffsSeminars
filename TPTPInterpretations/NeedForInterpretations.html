@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<TITLE> What do we Need? </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'WhatWeNeed.png';
+images[1]     = new Image();
+images[1].src = 'Interpretation2nd1.jpg';
+images[2]     = new Image();
+images[2].src = 'Interpretation2nd2.jpg';
+images[3]     = new Image();
+images[3].src = 'Interpretation2nd3.jpg';
+
+function putImage (index) {
+    myIndex = index;
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+What do we Need?
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="WhatWeNeed.png" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>Model Existence
+<A HREF="" onClick="putImage(1);return false">
+<IMG SRC="Interpretation2nd1.jpg" BORDER=0 HEIGHT=20></A> </H3>
+<UL>
+<LI> Consistency of axiomatizations, to avoid CAX [ATP process]
+<LI> Use as a yes/no subroutine in more complex reasoning [Steen], including ...
+<LI> Axiom selection [SRASS]
+<LI> Existence of bugs in verification, but frustrating [McCune]
+</UL>
+<EM> Model finder has to be trusted </EM>
+
+<H3>Explicit Models
+<A HREF="" onClick="putImage(2);return false">
+<IMG SRC="Interpretation2nd2.jpg" BORDER=0 HEIGHT=20></A> </H3>
+<UL>
+<LI> Identification of bugs in verification [Claessen]
+<LI> A solution to a problem encoded as a model finding problem [Claessen]
+<LI> Inspecting outcomes of student's experiments [Steen]
+<LI> Evaluating formulae wrt the model [Sutcliffe]
+<LI> Machine learning from models [~Barbosa]
+<LI> Improve model finders [~Barbosa]
+</UL>
+<EM> Models can be verified </EM>
+
+<H3>Properties of Explicit Interpretations
+<A HREF="" onClick="putImage(3);return false">
+<IMG SRC="Interpretation2nd3.jpg" BORDER=0 HEIGHT=20></A> </H3>
+<UL>
+<LI> Verifiable [Zhang]
+<LI> Comprehensible for manual inspection, e.g., Intel [Korovin]
+<LI> ^C-tolerable evaluation of formulae [Sutcliffe]
+</UL>
+<EM> In the language of the input! </EM>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

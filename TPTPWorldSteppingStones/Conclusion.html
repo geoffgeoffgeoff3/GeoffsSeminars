@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<TITLE> Why Does it Work? </TITLE>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Smile.GIF';
+  images[1]     = new Image();
+  images[1].src = 'SlaneyInvitedTalk.png',
+  images[2]     = new Image();
+  images[2].src = 'CADE-12_Seats.jpg';
+  images[3]     = new Image();
+  images[3].src = 'CADE-12_WaterJets.jpg';
+  images[4]     = new Image();
+  images[4].src = 'CADE-12_Tree.png';
+  images[5]     = new Image();
+  images[5].src = 'ChristianSuttner.png';
+  images[6]     = new Image();
+  images[6].src = 'SteppingStonesJungle.jpg';
+  images[7]     = new Image();
+  images[7].src = 'TPTPWorld.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+      myIndex = index;
+  }
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Why Does it Work? </H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME='image' SRC="Smile.GIF" BORDER=0 ALIGN=RIGHT WIDTH=40%></A>
+
+<H3> CADE-12, 30 Years Ago </H3>
+<UL>
+<LI> An <A HREF="" onClick="putImage(1);return false">invited talk</A>
+<LI> A question <A HREF="" onClick="putImage(2);return false">after lunch</A>
+<LI> Wet pants <A HREF="" onClick="putImage(3);return false">at night</A>
+<LI> An idea <A HREF="" onClick="putImage(4);return false">in the park</A>
+</UL>
+
+<H3> A Focus on Users and Developers </H3>
+<UL>
+<LI> Many users, many developers, many contributions
+<LI> Feedback always welcome
+<LI> Special thanks to <A HREF="" onClick="putImage(5);return false">Christian Suttner</A>
+</UL>
+
+<H3> A Homogeneous Environment </H3>
+<UL>
+<LI> Standards:
+     <A HREF="../TPTPLanguage/Summary.html">TPTP language</A>, 
+     <A HREF="../SZSOntologies/Summary.html">SZS ontologies</A>,
+     <A HREF="../SPCs/Summary.html">SPCs</A>,
+     <A HREF="../TPTPProofsAndModels/Derivations.html">Derivations</A>,
+     <A HREF="../TPTPInterpretations/Contents.html">Interpretations</A>
+<LI> Core components:
+     <A HREF="../TPTP/Summary.html">TPTP library</A>, 
+     <A HREF="../TSTP/Summary.html">TSTP library</A>, 
+     <A HREF="../Evaluate/Summary.html">Ratings</A>
+<LI> Services:
+     <A HREF="../SystemOnTPTP/Online/Summary.html">SystemOnTPTP</A>,
+     <A HREF="../StarExecARC/StarExec.html">StarExec</A>,
+     <A HREF="../CASC/Summary.html">CASC</A>
+<LI> TPTP compliance 
+     <UL>
+     <LI> <A HREF="https://www.amazon.com/Craft-Prolog-Logic-Programming/dp/0262512270" TARGET=_blank>
+          <EM>Elegance is not optional</EM></A> - 
+          <A HREF="http://www.cs.otago.ac.nz/staffpriv/ok/">Richard O'Keefe</A>
+     <LI> <EM>TPTP compliance is not optional</EM> - 
+          <A HREF="https://www.cs.miami.edu/home/geoff/">Geoff Sutcliffe</A>
+     <LI> A <A HREF="../TPTPWorld/TPTPUsers.html">curious effect</A>
+     </UL>
+</UL>
+
+<H3> Who will lay the
+     <A HREF="" onClick="putImage(6);return false">Stepping Stones</A> to the Future
+     <A HREF="" onClick="putImage(7);return false">TPTP World</A>? </H3>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

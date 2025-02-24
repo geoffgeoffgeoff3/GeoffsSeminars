@@ -1,0 +1,106 @@
+fof(f15,axiom,! [X3] : ( ~ cowlNothing(X3) & cowlThing(X3) ) ).
+fof(f16,axiom,! [X3] : ( xsd_string(X3) <=> ~ xsd_integer(X3) ) ).
+fof(f17,axiom,! [X3] : ( cSatisfiable(X3) <=> ? [X4] : ( ! [X6] : ! [X7] : ( ( rr(X4,X7) & rr(X4,X6) ) => X6 = X7 ) & ? [X5] : ( cp1(X5) & rr(X4,X5) ) & rinvR(X3,X4) ) ) ).
+fof(f18,axiom,! [X3] : ( cp1(X3) => ~ ( cp3(X3) | cp4(X3) | cp5(X3) | cp2(X3) ) ) ).
+fof(f19,axiom,! [X3] : ( cp2(X3) => ~ ( cp3(X3) | cp4(X3) | cp5(X3) ) ) ).
+fof(f20,axiom,! [X3] : ( cp3(X3) => ~ ( cp4(X3) | cp5(X3) ) ) ).
+fof(f21,axiom,! [X3] : ( cp4(X3) => ~ cp5(X3) ) ).
+fof(f22,axiom,! [X3] : ! [X4] : ( rinvR(X3,X4) <=> rr(X4,X3) ) ).
+fof(f23,axiom,cSatisfiable(i2003_11_14_17_15_22537) ).
+fof(f24,axiom,! [X0] : ( ~ cowlNothing(X0) & cowlThing(X0) ) ).
+fof(f25,axiom,! [X0] : ( xsd_string(X0) <=> ~ xsd_integer(X0) ) ).
+fof(f26,axiom,! [X0] : ( cSatisfiable(X0) <=> ? [X1] : ( ! [X2] : ! [X3] : ( ( rr(X1,X3) & rr(X1,X2) ) => X2 = X3 ) & ? [X4] : ( cp1(X4) & rr(X1,X4) ) & rinvR(X0,X1) ) ) ).
+fof(f27,axiom,! [X0] : ( cp1(X0) => ~ ( cp3(X0) | cp4(X0) | cp5(X0) | cp2(X0) ) ) ).
+fof(f28,axiom,! [X0] : ( cp2(X0) => ~ ( cp3(X0) | cp4(X0) | cp5(X0) ) ) ).
+fof(f29,axiom,! [X0] : ( cp3(X0) => ~ ( cp4(X0) | cp5(X0) ) ) ).
+fof(f30,axiom,! [X0] : ( cp4(X0) => ~ cp5(X0) ) ).
+fof(f31,axiom,! [X0] : ! [X1] : ( rinvR(X0,X1) <=> rr(X1,X0) ) ).
+fof(f60,axiom,! [X0] : ( cSatisfiable(X0) <=> ? [X1] : ( ! [X2] : ! [X3] : ( X2 = X3 | ~ rr(X1,X3) | ~ rr(X1,X2) ) & ? [X4] : ( cp1(X4) & rr(X1,X4) ) & rinvR(X0,X1) ) ) ).
+fof(f61,axiom,! [X0] : ( cSatisfiable(X0) <=> ? [X1] : ( ! [X2] : ! [X3] : ( X2 = X3 | ~ rr(X1,X3) | ~ rr(X1,X2) ) & ? [X4] : ( cp1(X4) & rr(X1,X4) ) & rinvR(X0,X1) ) ) ).
+fof(f62,axiom,! [X0] : ( ( ~ cp3(X0) & ~ cp4(X0) & ~ cp5(X0) & ~ cp2(X0) ) | ~ cp1(X0) ) ).
+fof(f63,axiom,! [X0] : ( ( ~ cp3(X0) & ~ cp4(X0) & ~ cp5(X0) ) | ~ cp2(X0) ) ).
+fof(f64,axiom,! [X0] : ( ( ~ cp4(X0) & ~ cp5(X0) ) | ~ cp3(X0) ) ).
+fof(f65,axiom,! [X0] : ( ~ cp5(X0) | ~ cp4(X0) ) ).
+fof(f66,axiom,! [X0] : ( ( xsd_string(X0) | xsd_integer(X0) ) & ( ~ xsd_integer(X0) | ~ xsd_string(X0) ) ) ).
+fof(f67,axiom,! [X0] : ( ( cSatisfiable(X0) | ! [X1] : ( ? [X2] : ? [X3] : ( X2 != X3 & rr(X1,X3) & rr(X1,X2) ) | ! [X4] : ( ~ cp1(X4) | ~ rr(X1,X4) ) | ~ rinvR(X0,X1) ) ) & ( ? [X1] : ( ! [X2] : ! [X3] : ( X2 = X3 | ~ rr(X1,X3) | ~ rr(X1,X2) ) & ? [X4] : ( cp1(X4) & rr(X1,X4) ) & rinvR(X0,X1) ) | ~ cSatisfiable(X0) ) ) ).
+fof(f68,axiom,! [X0] : ( ( cSatisfiable(X0) | ! [X1] : ( ? [X2] : ? [X3] : ( X2 != X3 & rr(X1,X3) & rr(X1,X2) ) | ! [X4] : ( ~ cp1(X4) | ~ rr(X1,X4) ) | ~ rinvR(X0,X1) ) ) & ( ? [X5] : ( ! [X6] : ! [X7] : ( X6 = X7 | ~ rr(X5,X7) | ~ rr(X5,X6) ) & ? [X8] : ( cp1(X8) & rr(X5,X8) ) & rinvR(X0,X5) ) | ~ cSatisfiable(X0) ) ) ).
+fof(f69,axiom,! [X1] : ( ? [X2] : ? [X3] : ( X2 != X3 & rr(X1,X3) & rr(X1,X2) ) => ( sK0(X1) != sK1(X1) & rr(X1,sK1(X1)) & rr(X1,sK0(X1)) ) ) ).
+fof(f70,axiom,! [X0] : ( ? [X5] : ( ! [X6] : ! [X7] : ( X6 = X7 | ~ rr(X5,X7) | ~ rr(X5,X6) ) & ? [X8] : ( cp1(X8) & rr(X5,X8) ) & rinvR(X0,X5) ) => ( ! [X7] : ! [X6] : ( X6 = X7 | ~ rr(sK2(X0),X7) | ~ rr(sK2(X0),X6) ) & ? [X8] : ( cp1(X8) & rr(sK2(X0),X8) ) & rinvR(X0,sK2(X0)) ) ) ).
+fof(f71,axiom,! [X0] : ( ? [X8] : ( cp1(X8) & rr(sK2(X0),X8) ) => ( cp1(sK3(X0)) & rr(sK2(X0),sK3(X0)) ) ) ).
+fof(f72,axiom,! [X0] : ( ( cSatisfiable(X0) | ! [X1] : ( ( sK0(X1) != sK1(X1) & rr(X1,sK1(X1)) & rr(X1,sK0(X1)) ) | ! [X4] : ( ~ cp1(X4) | ~ rr(X1,X4) ) | ~ rinvR(X0,X1) ) ) & ( ( ! [X6] : ! [X7] : ( X6 = X7 | ~ rr(sK2(X0),X7) | ~ rr(sK2(X0),X6) ) & cp1(sK3(X0)) & rr(sK2(X0),sK3(X0)) & rinvR(X0,sK2(X0)) ) | ~ cSatisfiable(X0) ) ) ).
+fof(f73,axiom,! [X0] : ! [X1] : ( ( rinvR(X0,X1) | ~ rr(X1,X0) ) & ( rr(X1,X0) | ~ rinvR(X0,X1) ) ) ).
+fof(f88,axiom,! [X0] : cowlThing(X0) ).
+fof(f89,axiom,! [X0] : ~ cowlNothing(X0) ).
+fof(f90,axiom,! [X0] : ( ~ xsd_integer(X0) | ~ xsd_string(X0) ) ).
+fof(f91,axiom,! [X0] : ( xsd_string(X0) | xsd_integer(X0) ) ).
+fof(f92,axiom,! [X0] : ( rinvR(X0,sK2(X0)) | ~ cSatisfiable(X0) ) ).
+fof(f93,axiom,! [X0] : ( rr(sK2(X0),sK3(X0)) | ~ cSatisfiable(X0) ) ).
+fof(f94,axiom,! [X0] : ( cp1(sK3(X0)) | ~ cSatisfiable(X0) ) ).
+fof(f95,axiom,! [X6] : ! [X0] : ! [X7] : ( X6 = X7 | ~ rr(sK2(X0),X7) | ~ rr(sK2(X0),X6) | ~ cSatisfiable(X0) ) ).
+fof(f96,axiom,! [X4] : ! [X0] : ! [X1] : ( cSatisfiable(X0) | rr(X1,sK0(X1)) | ~ cp1(X4) | ~ rr(X1,X4) | ~ rinvR(X0,X1) ) ).
+fof(f97,axiom,! [X4] : ! [X0] : ! [X1] : ( cSatisfiable(X0) | rr(X1,sK1(X1)) | ~ cp1(X4) | ~ rr(X1,X4) | ~ rinvR(X0,X1) ) ).
+fof(f98,axiom,! [X4] : ! [X0] : ! [X1] : ( cSatisfiable(X0) | sK0(X1) != sK1(X1) | ~ cp1(X4) | ~ rr(X1,X4) | ~ rinvR(X0,X1) ) ).
+fof(f99,axiom,! [X0] : ( ~ cp2(X0) | ~ cp1(X0) ) ).
+fof(f100,axiom,! [X0] : ( ~ cp5(X0) | ~ cp1(X0) ) ).
+fof(f101,axiom,! [X0] : ( ~ cp4(X0) | ~ cp1(X0) ) ).
+fof(f102,axiom,! [X0] : ( ~ cp3(X0) | ~ cp1(X0) ) ).
+fof(f103,axiom,! [X0] : ( ~ cp5(X0) | ~ cp2(X0) ) ).
+fof(f104,axiom,! [X0] : ( ~ cp4(X0) | ~ cp2(X0) ) ).
+fof(f105,axiom,! [X0] : ( ~ cp3(X0) | ~ cp2(X0) ) ).
+fof(f106,axiom,! [X0] : ( ~ cp5(X0) | ~ cp3(X0) ) ).
+fof(f107,axiom,! [X0] : ( ~ cp4(X0) | ~ cp3(X0) ) ).
+fof(f108,axiom,! [X0] : ( ~ cp5(X0) | ~ cp4(X0) ) ).
+fof(f109,axiom,! [X0] : ! [X1] : ( rr(X1,X0) | ~ rinvR(X0,X1) ) ).
+fof(f110,axiom,! [X0] : ! [X1] : ( rinvR(X0,X1) | ~ rr(X1,X0) ) ).
+fof(f111,axiom,cSatisfiable(i2003_11_14_17_15_22537) ).
+fof(c_49,axiom,! [X0] : ~ cowlNothing(X0) ).
+fof(c_50,axiom,! [X0] : cowlThing(X0) ).
+fof(c_51,axiom,! [X0] : ( xsd_string(X0) | xsd_integer(X0) ) ).
+fof(c_52,axiom,! [X0] : ( ~ xsd_string(X0) | ~ xsd_integer(X0) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : ( sK0(X0) != sK1(X0) | ~ rr(X0,X1) | ~ rinvR(X2,X0) | ~ cp1(X1) | cSatisfiable(X2) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ rr(X0,X1) | ~ rinvR(X2,X0) | ~ cp1(X1) | rr(X0,sK1(X0)) | cSatisfiable(X2) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ rr(X0,X1) | ~ rinvR(X2,X0) | ~ cp1(X1) | rr(X0,sK0(X0)) | cSatisfiable(X2) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ rr(sK2(X0),X1) | ~ rr(sK2(X0),X2) | ~ cSatisfiable(X0) | X1 = X2 ) ).
+fof(c_57,axiom,! [X0] : ( ~ cSatisfiable(X0) | cp1(sK3(X0)) ) ).
+fof(c_58,axiom,! [X0] : ( ~ cSatisfiable(X0) | rr(sK2(X0),sK3(X0)) ) ).
+fof(c_59,axiom,! [X0] : ( ~ cSatisfiable(X0) | rinvR(X0,sK2(X0)) ) ).
+fof(c_60,axiom,! [X0] : ( ~ cp1(X0) | ~ cp3(X0) ) ).
+fof(c_61,axiom,! [X0] : ( ~ cp1(X0) | ~ cp4(X0) ) ).
+fof(c_62,axiom,! [X0] : ( ~ cp1(X0) | ~ cp5(X0) ) ).
+fof(c_63,axiom,! [X0] : ( ~ cp1(X0) | ~ cp2(X0) ) ).
+fof(c_64,axiom,! [X0] : ( ~ cp3(X0) | ~ cp2(X0) ) ).
+fof(c_65,axiom,! [X0] : ( ~ cp4(X0) | ~ cp2(X0) ) ).
+fof(c_66,axiom,! [X0] : ( ~ cp5(X0) | ~ cp2(X0) ) ).
+fof(c_67,axiom,! [X0] : ( ~ cp3(X0) | ~ cp4(X0) ) ).
+fof(c_68,axiom,! [X0] : ( ~ cp3(X0) | ~ cp5(X0) ) ).
+fof(c_69,axiom,! [X0] : ( ~ cp4(X0) | ~ cp5(X0) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( ~ rr(X0,X1) | rinvR(X1,X0) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ( ~ rinvR(X0,X1) | rr(X1,X0) ) ).
+fof(c_72,axiom,cSatisfiable(i2003_11_14_17_15_22537) ).
+fof(c_93,axiom,! [X0] : ( ~ xsd_integer(X0) | ~ xsd_string(X0) ) ).
+fof(c_94,axiom,! [X0] : ( ~ xsd_string(X0) | ~ xsd_integer(X0) ) ).
+fof(c_95,axiom,! [X0] : ( xsd_integer(X0) | xsd_string(X0) ) ).
+fof(c_96,axiom,! [X0] : ( xsd_string(X0) | xsd_integer(X0) ) ).
+fof(c_97,axiom,! [X0] : ! [X1] : ( ~ rinvR(X0,X1) | rr(X1,X0) ) ).
+fof(c_99,axiom,! [X0] : ( ~ cSatisfiable(X0) | cp1(sK3(X0)) ) ).
+fof(c_101,axiom,! [X0] : ( ~ cSatisfiable(X0) | rr(sK2(X0),sK3(X0)) ) ).
+fof(c_103,axiom,! [X0] : ( ~ cSatisfiable(X0) | rinvR(X0,sK2(X0)) ) ).
+fof(c_105,axiom,! [X0] : ! [X1] : ( ~ rr(X0,X1) | rinvR(X1,X0) ) ).
+fof(c_107,axiom,! [X0] : ( ~ cp3(X0) | ~ cp1(X0) ) ).
+fof(c_108,axiom,! [X0] : ( ~ cp1(X0) | ~ cp3(X0) ) ).
+fof(c_109,axiom,! [X0] : ( ~ cp3(X0) | ~ cp4(X0) ) ).
+fof(c_111,axiom,! [X0] : ( ~ cp3(X0) | ~ cp5(X0) ) ).
+fof(c_113,axiom,! [X0] : ( ~ cp3(X0) | ~ cp2(X0) ) ).
+fof(c_117,axiom,! [X0] : ( ~ cp1(X0) | ~ cp4(X0) ) ).
+fof(c_119,axiom,! [X0] : ( ~ cp1(X0) | ~ cp5(X0) ) ).
+fof(c_121,axiom,! [X0] : ( ~ cp1(X0) | ~ cp2(X0) ) ).
+fof(c_127,axiom,! [X0] : ( ~ cp4(X0) | ~ cp5(X0) ) ).
+fof(c_129,axiom,! [X0] : ( ~ cp4(X0) | ~ cp2(X0) ) ).
+fof(c_137,axiom,! [X0] : ( ~ cp5(X0) | ~ cp2(X0) ) ).
+fof(c_404,axiom,! [X0] : X0 = X0 ).
+fof(c_405,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_406,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_407,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ cSatisfiable(X1) | cSatisfiable(X0) ) ).
+fof(c_408,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ cp1(X1) | cp1(X0) ) ).
+fof(c_409,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ rr(X1,X3) | rr(X0,X2) ) ).
+fof(c_410,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ rinvR(X2,X1) | rinvR(X2,X0) ) ).

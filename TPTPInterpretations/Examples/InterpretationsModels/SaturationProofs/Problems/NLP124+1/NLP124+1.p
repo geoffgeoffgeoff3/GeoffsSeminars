@@ -1,0 +1,36 @@
+fof(ax1,conjecture,! [U] : ! [V] : ( instrumentality(U,V) => artifact(U,V) ) ).
+fof(ax2,conjecture,! [U] : ! [V] : ( transport(U,V) => instrumentality(U,V) ) ).
+fof(ax3,conjecture,! [U] : ! [V] : ( vehicle(U,V) => transport(U,V) ) ).
+fof(ax4,conjecture,! [U] : ! [V] : ( car(U,V) => vehicle(U,V) ) ).
+fof(ax5,conjecture,! [U] : ! [V] : ( chevy(U,V) => car(U,V) ) ).
+fof(ax6,conjecture,! [U] : ! [V] : ( location(U,V) => object(U,V) ) ).
+fof(ax7,conjecture,! [U] : ! [V] : ( city(U,V) => location(U,V) ) ).
+fof(ax8,conjecture,! [U] : ! [V] : ( hollywood_placename(U,V) => placename(U,V) ) ).
+fof(ax9,conjecture,! [U] : ! [V] : ( abstraction(U,V) => unisex(U,V) ) ).
+fof(ax10,conjecture,! [U] : ! [V] : ( abstraction(U,V) => general(U,V) ) ).
+fof(ax11,conjecture,! [U] : ! [V] : ( abstraction(U,V) => nonhuman(U,V) ) ).
+fof(ax12,conjecture,! [U] : ! [V] : ( abstraction(U,V) => thing(U,V) ) ).
+fof(ax13,conjecture,! [U] : ! [V] : ( relation(U,V) => abstraction(U,V) ) ).
+fof(ax14,conjecture,! [U] : ! [V] : ( relname(U,V) => relation(U,V) ) ).
+fof(ax15,conjecture,! [U] : ! [V] : ( placename(U,V) => relname(U,V) ) ).
+fof(ax16,conjecture,! [U] : ! [V] : ( object(U,V) => unisex(U,V) ) ).
+fof(ax17,conjecture,! [U] : ! [V] : ( object(U,V) => impartial(U,V) ) ).
+fof(ax18,conjecture,! [U] : ! [V] : ( object(U,V) => nonliving(U,V) ) ).
+fof(ax19,conjecture,! [U] : ! [V] : ( entity(U,V) => existent(U,V) ) ).
+fof(ax20,conjecture,! [U] : ! [V] : ( entity(U,V) => specific(U,V) ) ).
+fof(ax21,conjecture,! [U] : ! [V] : ( entity(U,V) => thing(U,V) ) ).
+fof(ax22,conjecture,! [U] : ! [V] : ( object(U,V) => entity(U,V) ) ).
+fof(ax23,conjecture,! [U] : ! [V] : ( artifact(U,V) => object(U,V) ) ).
+fof(ax24,conjecture,! [U] : ! [V] : ( way(U,V) => artifact(U,V) ) ).
+fof(ax25,conjecture,! [U] : ! [V] : ( street(U,V) => way(U,V) ) ).
+fof(ax26,conjecture,! [U] : ! [V] : ( eventuality(U,V) => unisex(U,V) ) ).
+fof(ax27,conjecture,! [U] : ! [V] : ( eventuality(U,V) => nonexistent(U,V) ) ).
+fof(ax28,conjecture,! [U] : ! [V] : ( eventuality(U,V) => specific(U,V) ) ).
+fof(ax29,conjecture,! [U] : ! [V] : ( thing(U,V) => singleton(U,V) ) ).
+fof(ax30,conjecture,! [U] : ! [V] : ( eventuality(U,V) => thing(U,V) ) ).
+fof(ax31,conjecture,! [U] : ! [V] : ( event(U,V) => eventuality(U,V) ) ).
+fof(ax32,conjecture,! [U] : ! [V] : ( barrel(U,V) => event(U,V) ) ).
+fof(ax33,conjecture,! [U] : ! [V] : ( existent(U,V) => ~ nonexistent(U,V) ) ).
+fof(ax34,conjecture,! [U] : ! [V] : ( specific(U,V) => ~ general(U,V) ) ).
+fof(ax35,conjecture,! [U] : ! [V] : ! [W] : ( ( entity(U,V) & placename(U,W) & of(U,W,V) ) => ~ ( ? [X] : ( placename(U,X) & X != W & of(U,X,V) ) ) ) ).
+fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ? [W] : ? [X] : ? [Y] : ? [Z] : ( of(U,W,V) & city(U,V) & hollywood_placename(U,W) & placename(U,W) & street(U,X) & lonely(U,X) & chevy(U,Y) & white(U,Y) & dirty(U,Y) & old(U,Y) & event(U,Z) & agent(U,Z,Y) & present(U,Z) & barrel(U,Z) & down(U,Z,X) & in(U,Z,V) ) ) ) )).

@@ -1,0 +1,2 @@
+include('Saturations/AGT042-10/Saturations/E-SAT---3.0.ax').
+fof(deduced_223,conjecture,accept_population(countryamedicalorganization,christian,n24) = true ).

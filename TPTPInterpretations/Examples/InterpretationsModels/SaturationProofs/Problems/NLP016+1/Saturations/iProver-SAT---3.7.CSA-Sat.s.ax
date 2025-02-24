@@ -1,0 +1,238 @@
+fof(f2,axiom,! [X0] : ( man(X0) => human(X0) ) ).
+fof(f3,axiom,! [X0] : ( human(X0) => organism(X0) ) ).
+fof(f4,axiom,! [X0] : ( organism(X0) => entity(X0) ) ).
+fof(f5,axiom,! [X0] : ( organism(X0) => ~ object(X0) ) ).
+fof(f6,axiom,! [X0] : ( front(X0) => nonhuman(X0) ) ).
+fof(f8,axiom,! [X0] : ( furniture(X0) => instrumentality(X0) ) ).
+fof(f9,axiom,! [X0] : ( furniture(X0) => ~ transport(X0) ) ).
+fof(f11,axiom,! [X0] : ( way(X0) => artifact(X0) ) ).
+fof(f12,axiom,! [X0] : ( way(X0) => ~ instrumentality(X0) ) ).
+fof(f14,axiom,! [X0] : ( car(X0) => vehicle(X0) ) ).
+fof(f15,axiom,! [X0] : ( vehicle(X0) => transport(X0) ) ).
+fof(f16,axiom,! [X0] : ( transport(X0) => instrumentality(X0) ) ).
+fof(f17,axiom,! [X0] : ( instrumentality(X0) => artifact(X0) ) ).
+fof(f18,axiom,! [X0] : ( artifact(X0) => object(X0) ) ).
+fof(f19,axiom,! [X0] : ( artifact(X0) => ~ location(X0) ) ).
+fof(f20,axiom,! [X0] : ( event(X0) => eventuality(X0) ) ).
+fof(f22,axiom,! [X0] : ( city(X0) => location(X0) ) ).
+fof(f23,axiom,! [X0] : ( location(X0) => object(X0) ) ).
+fof(f24,axiom,! [X0] : ( object(X0) => entity(X0) ) ).
+fof(f26,axiom,! [X0] : ( eventuality(X0) => ~ entity(X0) ) ).
+fof(f36,axiom,! [X0] : ( nonhuman(X0) => entity(X0) ) ).
+fof(f37,axiom,! [X0] : ( human(X0) => ~ nonhuman(X0) ) ).
+fof(f38,axiom,! [X0] : ! [X1] : ! [X2] : ( ( human(X1) & have(X0,X1,X2) ) <=> ( of(X1,X2) & owner(X1) ) ) ).
+fof(f39,axiom,! [X0] : ! [X1] : ! [X2] : ( ( nonhuman(X2) & nonhuman(X1) & have(X0,X1,X2) ) => partof(X2,X1) ) ).
+fof(f40,axiom,! [X0] : ! [X1] : ! [X2] : ( ( have(X0,X1,X2) & event(X0) ) => of(X1,X2) ) ).
+fof(f41,axiom,! [X0] : ! [X1] : ( of(X1,X0) => ? [X2] : ( have(X2,X0,X1) & event(X2) ) ) ).
+fof(f42,axiom,! [X0] : ! [X1] : ! [X2] : ( ( partof(X0,X2) & partof(X0,X1) ) => X1 = X2 ) ).
+fof(f43,axiom,~ ( ? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( in(X8,X6) & X5 = X8 & in(X7,X6) & X4 = X7 & young(X5) & man(X5) & fellow(X5) & young(X4) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & in(X1,X0) & down(X1,X3) & barrel(X1,X2) & lonely(X3) & way(X3) & street(X3) & old(X2) & dirty(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ) ).
+fof(f44,axiom,~ ( ~ ( ? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( in(X8,X6) & X5 = X8 & in(X7,X6) & X4 = X7 & young(X5) & man(X5) & fellow(X5) & young(X4) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & in(X1,X0) & down(X1,X3) & barrel(X1,X2) & lonely(X3) & way(X3) & street(X3) & old(X2) & dirty(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ) ) ).
+fof(f45,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( in(X8,X6) & X5 = X8 & in(X7,X6) & X4 = X7 & young(X5) & man(X5) & fellow(X5) & young(X4) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & in(X1,X0) & down(X1,X3) & barrel(X1,X2) & lonely(X3) & way(X3) & street(X3) & old(X2) & dirty(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f46,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( in(X8,X6) & X5 = X8 & in(X7,X6) & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & in(X1,X0) & down(X1,X3) & barrel(X1,X2) & lonely(X3) & way(X3) & street(X3) & old(X2) & dirty(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f47,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( X5 = X8 & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & down(X1,X3) & barrel(X1,X2) & lonely(X3) & way(X3) & street(X3) & old(X2) & dirty(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f48,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( X5 = X8 & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & barrel(X1,X2) & lonely(X3) & way(X3) & street(X3) & old(X2) & dirty(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f49,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( X5 = X8 & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & lonely(X3) & way(X3) & street(X3) & old(X2) & dirty(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f50,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( X5 = X8 & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & way(X3) & street(X3) & old(X2) & dirty(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f51,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( X5 = X8 & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & way(X3) & street(X3) & old(X2) & white(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f52,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( X5 = X8 & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & way(X3) & street(X3) & old(X2) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f60,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( X5 = X8 & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & way(X3) & street(X3) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) ).
+fof(f62,axiom,! [X0] : ( human(X0) | ~ man(X0) ) ).
+fof(f63,axiom,! [X0] : ( organism(X0) | ~ human(X0) ) ).
+fof(f64,axiom,! [X0] : ( entity(X0) | ~ organism(X0) ) ).
+fof(f65,axiom,! [X0] : ( ~ object(X0) | ~ organism(X0) ) ).
+fof(f66,axiom,! [X0] : ( nonhuman(X0) | ~ front(X0) ) ).
+fof(f68,axiom,! [X0] : ( instrumentality(X0) | ~ furniture(X0) ) ).
+fof(f69,axiom,! [X0] : ( ~ transport(X0) | ~ furniture(X0) ) ).
+fof(f71,axiom,! [X0] : ( artifact(X0) | ~ way(X0) ) ).
+fof(f72,axiom,! [X0] : ( ~ instrumentality(X0) | ~ way(X0) ) ).
+fof(f74,axiom,! [X0] : ( vehicle(X0) | ~ car(X0) ) ).
+fof(f75,axiom,! [X0] : ( transport(X0) | ~ vehicle(X0) ) ).
+fof(f76,axiom,! [X0] : ( instrumentality(X0) | ~ transport(X0) ) ).
+fof(f77,axiom,! [X0] : ( artifact(X0) | ~ instrumentality(X0) ) ).
+fof(f78,axiom,! [X0] : ( object(X0) | ~ artifact(X0) ) ).
+fof(f79,axiom,! [X0] : ( ~ location(X0) | ~ artifact(X0) ) ).
+fof(f80,axiom,! [X0] : ( eventuality(X0) | ~ event(X0) ) ).
+fof(f82,axiom,! [X0] : ( location(X0) | ~ city(X0) ) ).
+fof(f83,axiom,! [X0] : ( object(X0) | ~ location(X0) ) ).
+fof(f84,axiom,! [X0] : ( entity(X0) | ~ object(X0) ) ).
+fof(f85,axiom,! [X0] : ( ~ entity(X0) | ~ eventuality(X0) ) ).
+fof(f88,axiom,! [X0] : ( entity(X0) | ~ nonhuman(X0) ) ).
+fof(f89,axiom,! [X0] : ( ~ nonhuman(X0) | ~ human(X0) ) ).
+fof(f90,axiom,! [X0] : ! [X1] : ! [X2] : ( partof(X2,X1) | ~ nonhuman(X2) | ~ nonhuman(X1) | ~ have(X0,X1,X2) ) ).
+fof(f91,axiom,! [X0] : ! [X1] : ! [X2] : ( partof(X2,X1) | ~ nonhuman(X2) | ~ nonhuman(X1) | ~ have(X0,X1,X2) ) ).
+fof(f92,axiom,! [X0] : ! [X1] : ! [X2] : ( of(X1,X2) | ~ have(X0,X1,X2) | ~ event(X0) ) ).
+fof(f93,axiom,! [X0] : ! [X1] : ! [X2] : ( of(X1,X2) | ~ have(X0,X1,X2) | ~ event(X0) ) ).
+fof(f94,axiom,! [X0] : ! [X1] : ( ? [X2] : ( have(X2,X0,X1) & event(X2) ) | ~ of(X1,X0) ) ).
+fof(f95,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ partof(X0,X2) | ~ partof(X0,X1) ) ).
+fof(f96,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ partof(X0,X2) | ~ partof(X0,X1) ) ).
+fof(f97,axiom,! [X0] : ! [X1] : ! [X2] : ( ( ( human(X1) & have(X0,X1,X2) ) | ~ of(X1,X2) | ~ owner(X1) ) & ( ( of(X1,X2) & owner(X1) ) | ~ human(X1) | ~ have(X0,X1,X2) ) ) ).
+fof(f98,axiom,! [X0] : ! [X1] : ! [X2] : ( ( ( human(X1) & have(X0,X1,X2) ) | ~ of(X1,X2) | ~ owner(X1) ) & ( ( of(X1,X2) & owner(X1) ) | ~ human(X1) | ~ have(X0,X1,X2) ) ) ).
+fof(f99,axiom,! [X1] : ! [X0] : ( ? [X2] : ( have(X2,X0,X1) & event(X2) ) => ( have(sK0(X0,X1),X0,X1) & event(sK0(X0,X1)) ) ) ).
+fof(f100,axiom,! [X0] : ! [X1] : ( ( have(sK0(X0,X1),X0,X1) & event(sK0(X0,X1)) ) | ~ of(X1,X0) ) ).
+fof(f101,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ? [X8] : ( X5 = X8 & X4 = X7 & man(X5) & fellow(X5) & man(X4) & fellow(X4) & X4 != X5 & front(X6) & furniture(X6) & seat(X6) & way(X3) & street(X3) & car(X2) & chevy(X2) & event(X1) & city(X0) & hollywood(X0) ) => ( sK6 = sK9 & sK5 = sK8 & man(sK6) & fellow(sK6) & man(sK5) & fellow(sK5) & sK5 != sK6 & front(sK7) & furniture(sK7) & seat(sK7) & way(sK4) & street(sK4) & car(sK3) & chevy(sK3) & event(sK2) & city(sK1) & hollywood(sK1) ) ).
+fof(f102,axiom,sK6 = sK9 & sK5 = sK8 & man(sK6) & fellow(sK6) & man(sK5) & fellow(sK5) & sK5 != sK6 & front(sK7) & furniture(sK7) & seat(sK7) & way(sK4) & street(sK4) & car(sK3) & chevy(sK3) & event(sK2) & city(sK1) & hollywood(sK1) ).
+fof(f104,axiom,! [X0] : ( human(X0) | ~ man(X0) ) ).
+fof(f105,axiom,! [X0] : ( organism(X0) | ~ human(X0) ) ).
+fof(f106,axiom,! [X0] : ( entity(X0) | ~ organism(X0) ) ).
+fof(f107,axiom,! [X0] : ( ~ object(X0) | ~ organism(X0) ) ).
+fof(f108,axiom,! [X0] : ( nonhuman(X0) | ~ front(X0) ) ).
+fof(f110,axiom,! [X0] : ( instrumentality(X0) | ~ furniture(X0) ) ).
+fof(f111,axiom,! [X0] : ( ~ transport(X0) | ~ furniture(X0) ) ).
+fof(f113,axiom,! [X0] : ( artifact(X0) | ~ way(X0) ) ).
+fof(f114,axiom,! [X0] : ( ~ instrumentality(X0) | ~ way(X0) ) ).
+fof(f116,axiom,! [X0] : ( vehicle(X0) | ~ car(X0) ) ).
+fof(f117,axiom,! [X0] : ( transport(X0) | ~ vehicle(X0) ) ).
+fof(f118,axiom,! [X0] : ( instrumentality(X0) | ~ transport(X0) ) ).
+fof(f119,axiom,! [X0] : ( artifact(X0) | ~ instrumentality(X0) ) ).
+fof(f120,axiom,! [X0] : ( object(X0) | ~ artifact(X0) ) ).
+fof(f121,axiom,! [X0] : ( ~ location(X0) | ~ artifact(X0) ) ).
+fof(f122,axiom,! [X0] : ( eventuality(X0) | ~ event(X0) ) ).
+fof(f124,axiom,! [X0] : ( location(X0) | ~ city(X0) ) ).
+fof(f125,axiom,! [X0] : ( object(X0) | ~ location(X0) ) ).
+fof(f126,axiom,! [X0] : ( entity(X0) | ~ object(X0) ) ).
+fof(f127,axiom,! [X0] : ( ~ entity(X0) | ~ eventuality(X0) ) ).
+fof(f130,axiom,! [X0] : ( entity(X0) | ~ nonhuman(X0) ) ).
+fof(f131,axiom,! [X0] : ( ~ nonhuman(X0) | ~ human(X0) ) ).
+fof(f132,axiom,! [X2] : ! [X0] : ! [X1] : ( owner(X1) | ~ human(X1) | ~ have(X0,X1,X2) ) ).
+fof(f133,axiom,! [X2] : ! [X0] : ! [X1] : ( of(X1,X2) | ~ human(X1) | ~ have(X0,X1,X2) ) ).
+fof(f134,axiom,! [X2] : ! [X0] : ! [X1] : ( have(X0,X1,X2) | ~ of(X1,X2) | ~ owner(X1) ) ).
+fof(f135,axiom,! [X2] : ! [X1] : ( human(X1) | ~ of(X1,X2) | ~ owner(X1) ) ).
+fof(f136,axiom,! [X2] : ! [X0] : ! [X1] : ( partof(X2,X1) | ~ nonhuman(X2) | ~ nonhuman(X1) | ~ have(X0,X1,X2) ) ).
+fof(f137,axiom,! [X2] : ! [X0] : ! [X1] : ( of(X1,X2) | ~ have(X0,X1,X2) | ~ event(X0) ) ).
+fof(f138,axiom,! [X0] : ! [X1] : ( event(sK0(X0,X1)) | ~ of(X1,X0) ) ).
+fof(f139,axiom,! [X0] : ! [X1] : ( have(sK0(X0,X1),X0,X1) | ~ of(X1,X0) ) ).
+fof(f140,axiom,! [X2] : ! [X0] : ! [X1] : ( X1 = X2 | ~ partof(X0,X2) | ~ partof(X0,X1) ) ).
+fof(f142,axiom,city(sK1) ).
+fof(f143,axiom,event(sK2) ).
+fof(f145,axiom,car(sK3) ).
+fof(f147,axiom,way(sK4) ).
+fof(f149,axiom,furniture(sK7) ).
+fof(f150,axiom,front(sK7) ).
+fof(f151,axiom,sK5 != sK6 ).
+fof(f153,axiom,man(sK5) ).
+fof(f155,axiom,man(sK6) ).
+fof(f156,axiom,sK5 = sK8 ).
+fof(f157,axiom,sK6 = sK9 ).
+fof(c_50,axiom,! [X0] : ( ~ man(X0) | human(X0) ) ).
+fof(c_51,axiom,! [X0] : ( ~ human(X0) | organism(X0) ) ).
+fof(c_52,axiom,! [X0] : ( ~ organism(X0) | entity(X0) ) ).
+fof(c_53,axiom,! [X0] : ( ~ organism(X0) | ~ object(X0) ) ).
+fof(c_54,axiom,! [X0] : ( ~ front(X0) | nonhuman(X0) ) ).
+fof(c_56,axiom,! [X0] : ( ~ furniture(X0) | instrumentality(X0) ) ).
+fof(c_57,axiom,! [X0] : ( ~ furniture(X0) | ~ transport(X0) ) ).
+fof(c_59,axiom,! [X0] : ( ~ way(X0) | artifact(X0) ) ).
+fof(c_60,axiom,! [X0] : ( ~ instrumentality(X0) | ~ way(X0) ) ).
+fof(c_62,axiom,! [X0] : ( ~ car(X0) | vehicle(X0) ) ).
+fof(c_63,axiom,! [X0] : ( ~ vehicle(X0) | transport(X0) ) ).
+fof(c_64,axiom,! [X0] : ( ~ transport(X0) | instrumentality(X0) ) ).
+fof(c_65,axiom,! [X0] : ( ~ instrumentality(X0) | artifact(X0) ) ).
+fof(c_66,axiom,! [X0] : ( ~ artifact(X0) | object(X0) ) ).
+fof(c_67,axiom,! [X0] : ( ~ artifact(X0) | ~ location(X0) ) ).
+fof(c_68,axiom,! [X0] : ( ~ event(X0) | eventuality(X0) ) ).
+fof(c_70,axiom,! [X0] : ( ~ city(X0) | location(X0) ) ).
+fof(c_71,axiom,! [X0] : ( ~ location(X0) | object(X0) ) ).
+fof(c_72,axiom,! [X0] : ( ~ object(X0) | entity(X0) ) ).
+fof(c_73,axiom,! [X0] : ( ~ entity(X0) | ~ eventuality(X0) ) ).
+fof(c_76,axiom,! [X0] : ( ~ nonhuman(X0) | entity(X0) ) ).
+fof(c_77,axiom,! [X0] : ( ~ human(X0) | ~ nonhuman(X0) ) ).
+fof(c_78,axiom,! [X0] : ! [X1] : ( ~ of(X0,X1) | ~ owner(X0) | human(X0) ) ).
+fof(c_79,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ of(X0,X1) | ~ owner(X0) | have(X2,X0,X1) ) ).
+fof(c_80,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ human(X1) | of(X1,X2) ) ).
+fof(c_81,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ human(X1) | owner(X1) ) ).
+fof(c_82,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ nonhuman(X1) | ~ nonhuman(X2) | partof(X2,X1) ) ).
+fof(c_83,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ event(X0) | of(X1,X2) ) ).
+fof(c_84,axiom,! [X0] : ! [X1] : ( ~ of(X0,X1) | have(sK0(X1,X0),X1,X0) ) ).
+fof(c_85,axiom,! [X0] : ! [X1] : ( ~ of(X0,X1) | event(sK0(X1,X0)) ) ).
+fof(c_86,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ partof(X0,X1) | ~ partof(X0,X2) | X1 = X2 ) ).
+fof(c_87,axiom,sK6 = sK9 ).
+fof(c_88,axiom,sK5 = sK8 ).
+fof(c_89,axiom,man(sK6) ).
+fof(c_91,axiom,man(sK5) ).
+fof(c_93,axiom,sK6 != sK5 ).
+fof(c_94,axiom,front(sK7) ).
+fof(c_95,axiom,furniture(sK7) ).
+fof(c_97,axiom,way(sK4) ).
+fof(c_99,axiom,car(sK3) ).
+fof(c_101,axiom,event(sK2) ).
+fof(c_102,axiom,city(sK1) ).
+fof(c_512,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ man(X1) | man(X0) ) ).
+fof(c_513,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ fellow(X1) | fellow(X0) ) ).
+fof(c_514,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ front(X1) | front(X0) ) ).
+fof(c_515,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ furniture(X1) | furniture(X0) ) ).
+fof(c_516,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ seat(X1) | seat(X0) ) ).
+fof(c_517,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ way(X1) | way(X0) ) ).
+fof(c_518,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ street(X1) | street(X0) ) ).
+fof(c_519,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ car(X1) | car(X0) ) ).
+fof(c_520,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ chevy(X1) | chevy(X0) ) ).
+fof(c_521,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ event(X1) | event(X0) ) ).
+fof(c_522,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ city(X1) | city(X0) ) ).
+fof(c_523,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ hollywood(X1) | hollywood(X0) ) ).
+fof(c_524,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | ~ have(X1,X2,X3) | have(X0,X2,X3) ) ).
+fof(c_525,axiom,! [X0] : ( X0 != sK7 | nonhuman(X0) ) ).
+fof(c_526,axiom,nonhuman(sK7) ).
+fof(c_537,axiom,! [X0] : ( X0 != sK3 | vehicle(X0) ) ).
+fof(c_538,axiom,vehicle(sK3) ).
+fof(c_543,axiom,! [X0] : ( X0 != sK3 | transport(X0) ) ).
+fof(c_544,axiom,transport(sK3) ).
+fof(c_549,axiom,! [X0] : ( X0 != sK2 | eventuality(X0) ) ).
+fof(c_550,axiom,eventuality(sK2) ).
+fof(c_555,axiom,! [X0] : ( X0 != sK2 | ~ entity(X0) ) ).
+fof(c_556,axiom,~ entity(sK2) ).
+fof(c_563,axiom,! [X0] : ( X0 != sK1 | location(X0) ) ).
+fof(c_564,axiom,location(sK1) ).
+fof(c_573,axiom,! [X0] : ( X0 != sK7 | ~ human(X0) ) ).
+fof(c_574,axiom,~ human(sK7) ).
+fof(c_578,axiom,! [X0] : ( X0 != sK7 | entity(X0) ) ).
+fof(c_579,axiom,entity(sK7) ).
+fof(c_585,axiom,! [X0] : ( X0 != sK2 | ~ object(X0) ) ).
+fof(c_586,axiom,~ object(sK2) ).
+fof(c_590,axiom,! [X0] : ( X0 != sK2 | ~ organism(X0) ) ).
+fof(c_591,axiom,~ organism(sK2) ).
+fof(c_595,axiom,sK7 != sK2 ).
+fof(c_602,axiom,! [X0] : ( X0 != sK7 | ~ transport(X0) ) ).
+fof(c_603,axiom,~ transport(sK7) ).
+fof(c_607,axiom,! [X0] : ( X0 != sK7 | instrumentality(X0) ) ).
+fof(c_608,axiom,instrumentality(sK7) ).
+fof(c_614,axiom,! [X0] : ( X0 != sK3 | instrumentality(X0) ) ).
+fof(c_615,axiom,instrumentality(sK3) ).
+fof(c_619,axiom,sK7 != sK3 ).
+fof(c_625,axiom,! [X0] : ( X0 != sK4 | ~ instrumentality(X0) ) ).
+fof(c_626,axiom,~ instrumentality(sK4) ).
+fof(c_630,axiom,! [X0] : ( X0 != sK4 | artifact(X0) ) ).
+fof(c_631,axiom,artifact(sK4) ).
+fof(c_637,axiom,! [X0] : ( X0 != sK7 | artifact(X0) ) ).
+fof(c_638,axiom,artifact(sK7) ).
+fof(c_642,axiom,! [X0] : ( X0 != sK3 | artifact(X0) ) ).
+fof(c_643,axiom,artifact(sK3) ).
+fof(c_647,axiom,sK7 != sK4 ).
+fof(c_651,axiom,sK4 != sK3 ).
+fof(c_659,axiom,! [X0] : ( X0 != sK1 | object(X0) ) ).
+fof(c_660,axiom,object(sK1) ).
+fof(c_664,axiom,! [X0] : ( X0 != sK1 | ~ artifact(X0) ) ).
+fof(c_665,axiom,~ artifact(sK1) ).
+fof(c_673,axiom,! [X0] : ( X0 != sK6 | human(X0) ) ).
+fof(c_674,axiom,human(sK6) ).
+fof(c_678,axiom,! [X0] : ( X0 != sK5 | human(X0) ) ).
+fof(c_679,axiom,human(sK5) ).
+fof(c_685,axiom,! [X0] : ( X0 != sK5 | organism(X0) ) ).
+fof(c_686,axiom,organism(sK5) ).
+fof(c_690,axiom,! [X0] : ( X0 != sK6 | organism(X0) ) ).
+fof(c_691,axiom,organism(sK6) ).
+fof(c_695,axiom,sK5 != sK7 ).
+fof(c_699,axiom,sK6 != sK7 ).
+fof(c_707,axiom,! [X0] : ( X0 != sK5 | ~ object(X0) ) ).
+fof(c_708,axiom,~ object(sK5) ).
+fof(c_712,axiom,! [X0] : ( X0 != sK6 | ~ object(X0) ) ).
+fof(c_713,axiom,~ object(sK6) ).
+fof(c_717,axiom,sK5 != sK2 ).
+fof(c_721,axiom,sK6 != sK2 ).
+fof(c_729,axiom,! [X0] : ( X0 != sK5 | ~ artifact(X0) ) ).
+fof(c_730,axiom,~ artifact(sK5) ).
+fof(c_734,axiom,! [X0] : ( X0 != sK2 | ~ artifact(X0) ) ).
+fof(c_735,axiom,~ artifact(sK2) ).
+fof(c_739,axiom,! [X0] : ( X0 != sK6 | ~ artifact(X0) ) ).
+fof(c_740,axiom,~ artifact(sK6) ).
+fof(c_744,axiom,sK5 != sK1 ).
+fof(c_748,axiom,sK2 != sK1 ).
+fof(c_752,axiom,sK6 != sK1 ).
+fof(c_905,axiom,! [X0_1] : X0_1 = X0_1 ).

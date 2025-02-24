@@ -1,0 +1,222 @@
+<HTML>
+<HEAD>
+<TITLE>TPTP Format for Derivations</TITLE>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'DerivationStress.png';
+  images[1]     = new Image();
+  images[1].src = 'SampleFormulae00.All.png';
+  images[2]     = new Image();
+  images[2].src = 'SampleFormulae01.Leaves.png';
+  images[3]     = new Image();
+  images[3].src = 'SampleFormulae02.Inferred.png';
+  images[4]     = new Image();
+  images[4].src = 'SampleFormulae03.Root.png';
+  images[5]     = new Image();
+  images[5].src = 'SampleFormulae04.Useful.png';
+  images[6]     = new Image();
+  images[6].src = 'SampleFormulae05.RuleName.png';
+  images[7]     = new Image();
+  images[7].src = 'SampleFormulae06.ParentNames.png';
+  images[8]     = new Image();
+  images[8].src = 'SampleFormulae07.Nested.png';
+  images[9]     = new Image();
+  images[9].src = 'SampleFormulae08.SZS.png';
+  images[10]     = new Image();
+  images[10].src = 'SampleFormulae09.Other.png';
+  images[11]     = new Image();
+  images[11].src = '../SZSOntologies/Success.jpg';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<CENTER>
+<H1>TPTP Format for Derivations </H1>
+</CENTER>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME='image' SRC="DerivationStress.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> What is a Derivation? </H3>
+<UL>
+<LI> A directed acyclic graph (DAG) 
+<LI> Leaf formulae from problem, or assumed (and discharged)
+<LI> Non-leaf formulae inferred from parent formulae
+<LI> Root formulae are the final derived formulae
+<LI> Useful: Formulae roles; Inference rule + usage; Semantics
+</UL>
+
+<H3> Specifying a TPTP Format Derivation </H3>
+<UL>
+<LI> Recall the <A HREF="../TPTPLanguage/Summary.html" onClick="putImage(1);return false">
+     TPTP language</A>
+<LI> A <A HREF="" onClick="putImage(1);return false">list of annotated formulae</A>
+     <UL>
+     <LI> File source or <TT>assumption</TT> role for 
+          <A HREF="" onClick="putImage(2);return false">leaf formulae</A>
+     <LI> <TT>plain</TT>/<TT>lemma</TT>/<TT>theorem</TT> role for 
+          <A HREF="" onClick="putImage(3);return false">inferred formulae</A>
+     <LI> The <A HREF="" onClick="putImage(4);return false">root formula</A> is <TT>$false</TT>
+          for refutations
+     <LI> Inference source for inferred formulae
+     </UL>
+<LI> Inference source contains ...
+     <UL>
+     <LI> <A HREF="" onClick="putImage(6);return false">Inference rule name</A>
+     <LI> <A HREF="" onClick="putImage(7);return false">Parent annotated formulae names</A> and 
+          <A HREF="" onClick="putImage(8);return false">nested inferences</A>
+     <LI> <A HREF="../SZSOntologies/Summary.html">SZS</A> 
+          <A HREF="" onClick="putImage(9);return false">relationship with parents</A>
+          (often <TT>status(thm)</TT>)
+     <LI> Other <A HREF="" onClick="putImage(10);return false">useful information</A>, e.g., 
+          new symbols, theories, splitting
+     </UL>
+</UL>
+
+<A HREF="" onClick="hideshow('example');return false;"><H3>Example</H3></A>
+<SPAN ID="example" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Another student
+     <TH WIDTH=50%> Refutation (by E)
+<TR VALIGN=TOP> <TD>
+<PRE>
+%------------------------------------------------------------------------ 
+%----All (hu)men are created equal. John is a human. John got an F grade. 
+%----There is someone (a human) who got an A grade. An A grade is not 
+%----equal to an F grade. Grades are not human. Therefore there is a 
+%----human other than John. 
+
+fof(all_created_equal,axiom,( 
+    ! [H1,H2] : 
+      ( ( human(H1) 
+         & human(H2) ) 
+     => created_equal(H1,H2) ) )). 
+
+fof(john,axiom,( 
+    human(john) )). 
+
+fof(john_failed,axiom,( 
+    grade(john) = f )). 
+
+fof(someone_got_an_a,axiom,( 
+    ? [H] : 
+      ( human(H) 
+      & grade(H) = a ) )). 
+
+fof(distinct_grades,axiom,( 
+    a != f )). 
+
+fof(grades_not_human,axiom,( 
+    ! [G] : ~ human(grade(G)) )). 
+
+fof(someone_not_john,conjecture,( 
+    ? [H] : 
+      ( human(H) 
+      & H != john ) )). 
+%-------------------------------------------------------------------- 
+</PRE>
+     <TD>
+<PRE>
+%-------------------------------------------------------------------- 
+fof(3,axiom,( 
+    grade(john) = f ), 
+    file('CreatedEqual.p',john_failed)). 
+
+fof(4,axiom,( 
+    ? [X3] : 
+      ( human(X3) 
+      & grade(X3) = a ) ), 
+    file('CreatedEqual.p',someone_got_an_a)). 
+
+fof(5,axiom,( 
+    a != f ), 
+    file('CreatedEqual.p',distinct_grades)). 
+
+fof(7,conjecture,( 
+    ? [X3] : 
+      ( human(X3) 
+      & X3 != john ) ), 
+    file('CreatedEqual.p',someone_not_john)). 
+
+fof(8,negated_conjecture,( 
+    ~ ? [X3] : 
+        ( human(X3) 
+        & X3 != john ) ), 
+    inference(assume_negation,[status(cth)],[7])). 
+
+cnf(14,plain, 
+    ( grade(john) = f ), 
+    inference(split_conjunct,[status(thm)],[3])). 
+
+fof(16,plain, 
+    ( human(esk1_0) 
+    & grade(esk1_0) = a ), 
+    inference(skolemize,[status(sap)],[4])). 
+
+cnf(17,plain, 
+    ( grade(esk1_0) = a ), 
+    inference(split_conjunct,[status(thm)],[16])). 
+
+cnf(18,plain, 
+    ( human(esk1_0) ), 
+    inference(split_conjunct,[status(thm)],[16])). 
+
+cnf(19,plain, 
+    ( a != f ), 
+    inference(split_conjunct,[status(thm)],[5])). 
+
+fof(22,negated_conjecture,( 
+    ! [X3] : 
+      ( ~ human(X3) 
+      | X3 = john ) ), 
+    inference(fof_nnf,[status(thm)],[8])). 
+
+cnf(24,negated_conjecture, 
+    ( X1 = john 
+    | ~ human(X1) ), 
+    inference(split_conjunct,[status(thm)],[22])). 
+
+cnf(25,negated_conjecture, 
+    ( john = esk1_0 ), 
+    inference(spm,[status(thm)],[24,18])). 
+
+cnf(28,plain, 
+    ( f = a ), 
+    inference(rw,[status(thm)],[inference(rw,[status(thm)],[17,25]),14])). 
+
+cnf(29,plain, 
+    ( $false ), 
+    inference(sr,[status(thm)],[28,19])). 
+%--------------------------------------------------------------------
+</PRE>
+     </SPAN>
+</TABLE>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

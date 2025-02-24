@@ -1,0 +1,16 @@
+fof(axiom_1,axiom,! [X1] : ( xsd_string(X1) <=> ~ xsd_integer(X1) ) ).
+fof(axiom_0,axiom,! [X1] : ( cowlThing(X1) & ~ cowlNothing(X1) ) ).
+fof(axiom_2_AndLHS,axiom,! [X1] : ( rp(ii,X1) => ca(X1) ) ).
+fof(axiom_2_AndRHS,axiom,? [X1] : ( rq(ii,X1) & cs(X1) ) ).
+fof(c_0_4,axiom,! [X1] : ( xsd_string(X1) <=> ~ xsd_integer(X1) ) ).
+fof(c_0_5,axiom,! [X1] : ( cowlThing(X1) & ~ cowlNothing(X1) ) ).
+fof(c_0_6,axiom,! [X3] : ( ( ~ xsd_string(X3) | ~ xsd_integer(X3) ) & ( xsd_integer(X3) | xsd_string(X3) ) ) ).
+fof(c_0_7,axiom,! [X4] : ( ~ rp(ii,X4) | ca(X4) ) ).
+fof(c_0_8,axiom,! [X2] : ( cowlThing(X2) & ~ cowlNothing(X2) ) ).
+fof(c_0_9,axiom,rq(ii,esk1_0) & cs(esk1_0) ).
+fof(c_0_10,axiom,! [X1] : ( xsd_integer(X1) | xsd_string(X1) ) ).
+fof(c_0_11,axiom,! [X1] : ( ca(X1) | ~ rp(ii,X1) ) ).
+fof(c_0_12,axiom,! [X1] : ( ~ xsd_string(X1) | ~ xsd_integer(X1) ) ).
+fof(c_0_13,axiom,! [X1] : ~ cowlNothing(X1) ).
+fof(c_0_14,axiom,rq(ii,esk1_0) ).
+fof(c_0_15,axiom,cs(esk1_0) ).

@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP World </TITLE>
+<LINK REL="icon" HREF="https://tptp.org/Logos/TPTPWorld.png" type="image/png" />
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'https://tptp.org/Logos/TPTPWorld.png';
+  images[1]     = new Image();
+  images[1].src = 'TPTPOctopus.jpg';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> TPTP World </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME='image' SRC="TPTPWorld.png" ALIGN=RIGHT HSPACE=10 WIDTH=33%>
+</A>
+
+<H3><EM>
+There is a well established infrastructure that supports research, development, and deployment  
+of Automated Reasoning systems, stemming from the Thousands of Problems for Theorem Provers 
+(TPTP) problem library.
+</EM> </H3>
+
+<H3><EM>
+The TPTP syntax ... has become a de facto standard for formulating and exchanging logical problems 
+for automated theorem provers.
+</EM> </H3>
+
+<H3><EM>
+The SZS ontology provides a fine grained ontology of result and output forms that are used to 
+specify what has been established about a given ATP problem.
+</EM> </H3>
+
+<H3><EM>
+Evaluating ATP problems is important as it simplifies problem selection according to a user's 
+intentions, and over the years, changes in problem ratings provide a quantitative indicator of 
+advancement in ATP.
+</EM> </H3>
+
+<H3><EM>
+It is widely accepted that CASC has been a catalyst for the impressive progress that has taken 
+place since then in the development of the current high-performance provers. 
+</EM> </H3>
+
+<CENTER>
+<H3> <A HREF="../ATP/Poison.html">But not everyone agreed</A> </H3>
+</CENTER>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

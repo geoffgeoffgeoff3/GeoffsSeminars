@@ -1,0 +1,75 @@
+fof(cld5,axiom,! [X2] : ! [X3] : ! [X6] : ( ~ unequally_directed_lines(X2,reverse_line(X3)) & ( ~ unequally_directed_lines(X2,reverse_line(X6)) => ~ unequally_directed_lines(X3,X6) ) ) ).
+fof(oag8,axiom,! [X2] : ! [X3] : ( ( line(X2) & line(X3) ) => ( unequally_directed_lines(X2,X3) | unequally_directed_lines(X2,reverse_line(X3)) ) ) ).
+fof(oagco3,axiom,! [X2] : ! [X1] : ( ( point(X1) & line(X2) ) => line(parallel_through_point(X2,X1)) ) ).
+fof(bf_def,axiom,! [X2] : ! [X1] : ! [X4] : ( before_on_line(X2,X1,X4) <=> ( distinct_points(X1,X4) & ~ ( left_apart_point(X1,X2) | left_apart_point(X1,reverse_line(X2)) ) & ~ ( left_apart_point(X4,X2) | left_apart_point(X4,reverse_line(X2)) ) & ~ unequally_directed_lines(X2,line_connecting(X1,X4)) ) ) ).
+fof(oagco1,axiom,! [X1] : ! [X4] : ( ( point(X1) & point(X4) & distinct_points(X1,X4) ) => line(line_connecting(X1,X4)) ) ).
+fof(oag10,axiom,! [X1] : ! [X2] : ~ ( left_apart_point(X1,X2) | left_apart_point(X1,reverse_line(X2)) ) ).
+fof(oaguc1,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( ( distinct_points(X1,X4) & distinct_lines(X2,X3) ) => ( left_apart_point(X1,X2) | left_apart_point(X4,X2) | left_apart_point(X1,X3) | left_apart_point(X4,X3) | left_apart_point(X1,reverse_line(X2)) | left_apart_point(X4,reverse_line(X2)) | left_apart_point(X1,reverse_line(X3)) | left_apart_point(X4,reverse_line(X3)) ) ) ).
+fof(div_def,axiom,! [X1] : ! [X4] : ! [X2] : ( divides_points(X2,X1,X4) <=> ( ( left_apart_point(X1,X2) & left_apart_point(X4,reverse_line(X2)) ) | ( left_apart_point(X1,reverse_line(X2)) & left_apart_point(X4,X2) ) ) ) ).
+fof(apt_def,axiom,! [X1] : ! [X2] : ( apart_point_and_line(X1,X2) <=> ( left_apart_point(X1,X2) | left_apart_point(X1,reverse_line(X2)) ) ) ).
+fof(con_def,axiom,! [X2] : ! [X3] : ( convergent_lines(X2,X3) <=> ( unequally_directed_lines(X2,X3) & unequally_directed_lines(X2,reverse_line(X3)) ) ) ).
+fof(oagco8,axiom,! [X2] : ~ distinct_lines(X2,reverse_line(X2)) ).
+fof(oag3,axiom,! [X2] : ~ distinct_lines(X2,X2) ).
+fof(oag1,axiom,! [X1] : ~ distinct_points(X1,X1) ).
+fof(bet_def,axiom,! [X2] : ! [X1] : ! [X4] : ! [X5] : ( between_on_line(X2,X1,X4,X5) <=> ( ( before_on_line(X2,X1,X4) & before_on_line(X2,X4,X5) ) | ( before_on_line(X2,X5,X4) & before_on_line(X2,X4,X1) ) ) ) ).
+fof(oag4,axiom,! [X2] : ! [X3] : ! [X6] : ( distinct_lines(X2,X3) => ( distinct_lines(X2,X6) | distinct_lines(X3,X6) ) ) ).
+fof(oag2,axiom,! [X1] : ! [X4] : ! [X5] : ( distinct_points(X1,X4) => ( distinct_points(X1,X5) | distinct_points(X4,X5) ) ) ).
+fof(oagco4,axiom,! [X2] : ( line(X2) => line(reverse_line(X2)) ) ).
+fof(oag11,axiom,! [X2] : ! [X3] : ~ ( left_convergent_lines(X2,X3) | left_convergent_lines(X2,reverse_line(X3)) ) ).
+fof(c_0_18,axiom,! [X2] : ! [X3] : ! [X6] : ( ~ unequally_directed_lines(X2,reverse_line(X3)) & ( ~ unequally_directed_lines(X2,reverse_line(X6)) => ~ unequally_directed_lines(X3,X6) ) ) ).
+fof(c_0_19,axiom,! [X89] : ! [X90] : ! [X91] : ( ~ unequally_directed_lines(X89,reverse_line(X90)) & ( unequally_directed_lines(X89,reverse_line(X91)) | ~ unequally_directed_lines(X90,X91) ) ) ).
+fof(c_0_20,axiom,! [X36] : ! [X37] : ( ~ line(X36) | ~ line(X37) | unequally_directed_lines(X36,X37) | unequally_directed_lines(X36,reverse_line(X37)) ) ).
+fof(c_0_21,axiom,! [X1] : ! [X2] : ! [X3] : ( unequally_directed_lines(X1,reverse_line(X2)) | ~ unequally_directed_lines(X3,X2) ) ).
+fof(c_0_22,axiom,! [X1] : ! [X2] : ~ unequally_directed_lines(X1,reverse_line(X2)) ).
+fof(c_0_23,axiom,! [X48] : ! [X49] : ( ~ point(X49) | ~ line(X48) | line(parallel_through_point(X48,X49)) ) ).
+fof(c_0_24,axiom,! [X1] : ! [X2] : ( unequally_directed_lines(X1,X2) | unequally_directed_lines(X1,reverse_line(X2)) | ~ line(X1) | ~ line(X2) ) ).
+fof(c_0_25,axiom,! [X1] : ! [X2] : ~ unequally_directed_lines(X1,X2) ).
+fof(c_0_26,axiom,! [X2] : ! [X1] : ! [X4] : ( before_on_line(X2,X1,X4) <=> ( distinct_points(X1,X4) & ~ ( left_apart_point(X1,X2) | left_apart_point(X1,reverse_line(X2)) ) & ~ ( left_apart_point(X4,X2) | left_apart_point(X4,reverse_line(X2)) ) & ~ unequally_directed_lines(X2,line_connecting(X1,X4)) ) ) ).
+fof(c_0_27,axiom,! [X44] : ! [X45] : ( ~ point(X44) | ~ point(X45) | ~ distinct_points(X44,X45) | line(line_connecting(X44,X45)) ) ).
+fof(c_0_28,axiom,! [X2] : ! [X1] : ( line(parallel_through_point(X2,X1)) | ~ point(X1) | ~ line(X2) ) ).
+fof(c_0_29,axiom,! [X1] : ! [X2] : ( ~ line(X1) | ~ line(X2) ) ).
+fof(c_0_30,axiom,! [X14] : ! [X15] : ! [X16] : ( ( distinct_points(X15,X16) | ~ before_on_line(X14,X15,X16) ) & ( ~ left_apart_point(X15,X14) | ~ before_on_line(X14,X15,X16) ) & ( ~ left_apart_point(X15,reverse_line(X14)) | ~ before_on_line(X14,X15,X16) ) & ( ~ left_apart_point(X16,X14) | ~ before_on_line(X14,X15,X16) ) & ( ~ left_apart_point(X16,reverse_line(X14)) | ~ before_on_line(X14,X15,X16) ) & ( ~ unequally_directed_lines(X14,line_connecting(X15,X16)) | ~ before_on_line(X14,X15,X16) ) & ( ~ distinct_points(X15,X16) | left_apart_point(X15,X14) | left_apart_point(X15,reverse_line(X14)) | left_apart_point(X16,X14) | left_apart_point(X16,reverse_line(X14)) | unequally_directed_lines(X14,line_connecting(X15,X16)) | before_on_line(X14,X15,X16) ) ) ).
+fof(c_0_31,axiom,! [X40] : ! [X41] : ( ~ left_apart_point(X40,X41) & ~ left_apart_point(X40,reverse_line(X41)) ) ).
+fof(c_0_32,axiom,! [X62] : ! [X63] : ! [X64] : ! [X65] : ( ~ distinct_points(X62,X63) | ~ distinct_lines(X64,X65) | left_apart_point(X62,X64) | left_apart_point(X63,X64) | left_apart_point(X62,X65) | left_apart_point(X63,X65) | left_apart_point(X62,reverse_line(X64)) | left_apart_point(X63,reverse_line(X64)) | left_apart_point(X62,reverse_line(X65)) | left_apart_point(X63,reverse_line(X65)) ) ).
+fof(c_0_33,axiom,! [X11] : ! [X12] : ! [X13] : ( ( left_apart_point(X11,reverse_line(X13)) | left_apart_point(X11,X13) | ~ divides_points(X13,X11,X12) ) & ( left_apart_point(X12,X13) | left_apart_point(X11,X13) | ~ divides_points(X13,X11,X12) ) & ( left_apart_point(X11,reverse_line(X13)) | left_apart_point(X12,reverse_line(X13)) | ~ divides_points(X13,X11,X12) ) & ( left_apart_point(X12,X13) | left_apart_point(X12,reverse_line(X13)) | ~ divides_points(X13,X11,X12) ) & ( ~ left_apart_point(X11,X13) | ~ left_apart_point(X12,reverse_line(X13)) | divides_points(X13,X11,X12) ) & ( ~ left_apart_point(X11,reverse_line(X13)) | ~ left_apart_point(X12,X13) | divides_points(X13,X11,X12) ) ) ).
+fof(c_0_34,axiom,! [X7] : ! [X8] : ( ( ~ apart_point_and_line(X7,X8) | left_apart_point(X7,X8) | left_apart_point(X7,reverse_line(X8)) ) & ( ~ left_apart_point(X7,X8) | apart_point_and_line(X7,X8) ) & ( ~ left_apart_point(X7,reverse_line(X8)) | apart_point_and_line(X7,X8) ) ) ).
+fof(c_0_35,axiom,! [X9] : ! [X10] : ( ( unequally_directed_lines(X9,X10) | ~ convergent_lines(X9,X10) ) & ( unequally_directed_lines(X9,reverse_line(X10)) | ~ convergent_lines(X9,X10) ) & ( ~ unequally_directed_lines(X9,X10) | ~ unequally_directed_lines(X9,reverse_line(X10)) | convergent_lines(X9,X10) ) ) ).
+fof(c_0_36,axiom,! [X2] : ~ distinct_lines(X2,reverse_line(X2)) ).
+fof(c_0_37,axiom,! [X2] : ~ distinct_lines(X2,X2) ).
+fof(c_0_38,axiom,! [X1] : ~ distinct_points(X1,X1) ).
+fof(c_0_39,axiom,! [X17] : ! [X18] : ! [X19] : ! [X20] : ( ( before_on_line(X17,X20,X19) | before_on_line(X17,X18,X19) | ~ between_on_line(X17,X18,X19,X20) ) & ( before_on_line(X17,X19,X18) | before_on_line(X17,X18,X19) | ~ between_on_line(X17,X18,X19,X20) ) & ( before_on_line(X17,X20,X19) | before_on_line(X17,X19,X20) | ~ between_on_line(X17,X18,X19,X20) ) & ( before_on_line(X17,X19,X18) | before_on_line(X17,X19,X20) | ~ between_on_line(X17,X18,X19,X20) ) & ( ~ before_on_line(X17,X18,X19) | ~ before_on_line(X17,X19,X20) | between_on_line(X17,X18,X19,X20) ) & ( ~ before_on_line(X17,X20,X19) | ~ before_on_line(X17,X19,X18) | between_on_line(X17,X18,X19,X20) ) ) ).
+fof(c_0_40,axiom,! [X26] : ! [X27] : ! [X28] : ( ~ distinct_lines(X26,X27) | distinct_lines(X26,X28) | distinct_lines(X27,X28) ) ).
+fof(c_0_41,axiom,! [X22] : ! [X23] : ! [X24] : ( ~ distinct_points(X22,X23) | distinct_points(X22,X24) | distinct_points(X23,X24) ) ).
+fof(c_0_42,axiom,! [X1] : ! [X2] : ( line(line_connecting(X1,X2)) | ~ point(X1) | ~ point(X2) | ~ distinct_points(X1,X2) ) ).
+fof(c_0_43,axiom,! [X1] : ! [X2] : ( ~ point(X1) | ~ line(X2) ) ).
+fof(c_0_44,axiom,! [X1] : ! [X3] : ! [X2] : ( left_apart_point(X1,X3) | left_apart_point(X1,reverse_line(X3)) | left_apart_point(X2,X3) | left_apart_point(X2,reverse_line(X3)) | unequally_directed_lines(X3,line_connecting(X1,X2)) | before_on_line(X3,X1,X2) | ~ distinct_points(X1,X2) ) ).
+fof(c_0_45,axiom,! [X1] : ! [X2] : ~ left_apart_point(X1,X2) ).
+fof(c_0_46,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( left_apart_point(X1,X3) | left_apart_point(X2,X3) | left_apart_point(X1,X4) | left_apart_point(X2,X4) | left_apart_point(X1,reverse_line(X3)) | left_apart_point(X2,reverse_line(X3)) | left_apart_point(X1,reverse_line(X4)) | left_apart_point(X2,reverse_line(X4)) | ~ distinct_points(X1,X2) | ~ distinct_lines(X3,X4) ) ).
+fof(c_0_47,axiom,! [X50] : ( ~ line(X50) | line(reverse_line(X50)) ) ).
+fof(c_0_48,axiom,! [X1] : ! [X2] : ! [X3] : ( left_apart_point(X1,X2) | left_apart_point(X3,X2) | ~ divides_points(X2,X3,X1) ) ).
+fof(c_0_49,axiom,! [X1] : ! [X2] : ( left_apart_point(X1,X2) | left_apart_point(X1,reverse_line(X2)) | ~ apart_point_and_line(X1,X2) ) ).
+fof(c_0_50,axiom,! [X1] : ! [X2] : ( unequally_directed_lines(X1,reverse_line(X2)) | ~ convergent_lines(X1,X2) ) ).
+fof(c_0_51,axiom,! [X57] : ~ distinct_lines(X57,reverse_line(X57)) ).
+fof(c_0_52,axiom,! [X42] : ! [X43] : ( ~ left_convergent_lines(X42,X43) & ~ left_convergent_lines(X42,reverse_line(X43)) ) ).
+fof(c_0_53,axiom,! [X25] : ~ distinct_lines(X25,X25) ).
+fof(c_0_54,axiom,! [X21] : ~ distinct_points(X21,X21) ).
+fof(c_0_55,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( before_on_line(X1,X2,X3) | before_on_line(X1,X2,X4) | ~ between_on_line(X1,X3,X2,X4) ) ).
+fof(c_0_56,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( before_on_line(X1,X2,X3) | before_on_line(X1,X3,X2) | ~ between_on_line(X1,X3,X2,X4) ) ).
+fof(c_0_57,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( before_on_line(X1,X2,X3) | before_on_line(X1,X3,X2) | ~ between_on_line(X1,X4,X3,X2) ) ).
+fof(c_0_58,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( before_on_line(X1,X2,X3) | before_on_line(X1,X4,X3) | ~ between_on_line(X1,X4,X3,X2) ) ).
+fof(c_0_59,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( between_on_line(X1,X2,X3,X4) | ~ before_on_line(X1,X2,X3) | ~ before_on_line(X1,X3,X4) ) ).
+fof(c_0_60,axiom,! [X1] : ! [X4] : ! [X3] : ! [X2] : ( between_on_line(X1,X4,X3,X2) | ~ before_on_line(X1,X2,X3) | ~ before_on_line(X1,X3,X4) ) ).
+fof(c_0_61,axiom,! [X1] : ! [X3] : ! [X2] : ( distinct_lines(X1,X3) | distinct_lines(X2,X3) | ~ distinct_lines(X1,X2) ) ).
+fof(c_0_62,axiom,! [X1] : ! [X3] : ! [X2] : ( distinct_points(X1,X3) | distinct_points(X2,X3) | ~ distinct_points(X1,X2) ) ).
+fof(c_0_63,axiom,! [X1] : ! [X2] : ( ~ point(X1) | ~ point(X2) | ~ distinct_points(X2,X1) ) ).
+fof(c_0_64,axiom,! [X1] : ! [X2] : ! [X3] : ( before_on_line(X1,X2,X3) | ~ distinct_points(X2,X3) ) ).
+fof(c_0_65,axiom,! [X1] : ! [X2] : ! [X3] : ( distinct_points(X1,X2) | ~ before_on_line(X3,X1,X2) ) ).
+fof(c_0_66,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ distinct_lines(X1,X2) | ~ distinct_points(X3,X4) ) ).
+fof(c_0_67,axiom,! [X1] : ( line(reverse_line(X1)) | ~ line(X1) ) ).
+fof(c_0_68,axiom,! [X1] : ! [X2] : ! [X3] : ~ divides_points(X1,X2,X3) ).
+fof(c_0_69,axiom,! [X1] : ! [X2] : ~ apart_point_and_line(X1,X2) ).
+fof(c_0_70,axiom,! [X1] : ! [X2] : ~ convergent_lines(X1,X2) ).
+fof(c_0_71,axiom,! [X1] : ~ distinct_lines(X1,reverse_line(X1)) ).
+fof(c_0_72,axiom,! [X1] : ! [X2] : ~ left_convergent_lines(X1,X2) ).
+fof(c_0_73,axiom,! [X1] : ~ distinct_lines(X1,X1) ).
+fof(c_0_74,axiom,! [X1] : ~ distinct_points(X1,X1) ).

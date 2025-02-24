@@ -1,0 +1,2 @@
+include('Saturations/KRS007-1/Saturations/Vampire-SAT---4.7.ax').
+fof(clause_11,conjecture,! [X3] : ! [X2] : ! [X1] : ( equalish(X3,X2) | ~ s1most(X1) | ~ s(X1,X3) | ~ s(X1,X2) ) ).

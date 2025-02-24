@@ -1,0 +1,2 @@
+include('Saturations/PUZ138+2/Saturations/Vampire-SAT---4.7.ax').
+fof(ax3_9,conjecture,p(n3,n1,n9) | p(n3,n2,n9) | p(n3,n3,n9) | p(n3,n4,n9) | p(n3,n5,n9) | p(n3,n6,n9) | p(n3,n7,n9) | p(n3,n8,n9) | p(n3,n9,n9) ).

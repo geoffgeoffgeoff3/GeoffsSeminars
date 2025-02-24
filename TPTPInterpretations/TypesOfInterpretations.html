@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<TITLE> What do we Have? </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+<!---------------------------------------------------------------------->
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'InterpretiveDance1.jpg';
+images[1]     = new Image();
+images[1].src = 'InterpretiveDance2.jpg';
+images[2]     = new Image();
+images[2].src = 'InterpretiveDance3.jpg';
+images[3]     = new Image();
+images[3].src = 'InterpretiveDance4.jpg';
+
+function putImage (index) {
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+What do we Have?
+</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="InterpretiveDance1.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>Finite Domains + Mappings
+<A HREF="" style="text-decoration: none" onClick="hideshow('p1');nextImage();return false;">
+&#9758;</A></H3>
+<SPAN ID="p1" style="display:none">
+<UL>
+<LI> Enumeration of domains' elements
+<LI> Mappings for all symbols - ground or quantified
+<LI> Examples: Paradox, FMDarwin, Vampire
+</UL>
+</SPAN>
+<UL>
+<LI> <EM> Verifiable<SPAN style="color:green">&check;</SPAN> 
+     Comprehensible<SPAN style="color:green">&check;</SPAN> 
+     ^C-tolerable<SPAN style="color:green">&check;</SPAN> </EM>
+</UL>
+
+<H3>Infinite Domains + Mappings
+<A HREF="" style="text-decoration: none" onClick="hideshow('p2');nextImage();return false;">
+&#9758;</A></H3>
+<SPAN ID="p2" style="display:none">
+<UL>
+<LI> Specification of domains' elements - terms, e.g., Peano, or defined, e.g., <TT>$int</TT>
+<LI> Mappings for all symbols - quantified, might be partial
+<LI> Examples: cvc5, Z3
+</UL>
+</SPAN>
+<UL>
+<LI> <EM> Verifiable<SPAN style="color:green">&check;</SPAN> 
+     Comprehensible<SPAN style="color:green">&check;</SPAN> 
+     ^C-tolerable<SPAN style="color:red">&cross;</SPAN> </EM>
+</UL>
+
+<H3>Saturations as Herbrand Interpretations
+<A HREF="" style="text-decoration: none" onClick="hideshow('p3');nextImage();return false;">
+&#9758;</A></H3>
+<SPAN ID="p3" style="display:none">
+<UL>
+<LI> Set of clauses
+<LI> Has the same models as the input - can derive input
+     <!-- Andrei: Cannot derive input from saturation (Theory!) -->
+<LI> Examples: SPASS, E, Vampire
+</UL>
+</SPAN>
+<UL>
+<LI> <EM> Verifiable<SPAN style="color:green">&check;</SPAN> 
+     Comprehensible<SPAN style="color:red">&cross;</SPAN> 
+     ^C-tolerable<SPAN style="color:red">&cross;</SPAN> </EM>
+</UL>
+
+<H3>Formulae as Herbrand Interpretations
+<A HREF="" style="text-decoration: none" onClick="hideshow('p4');nextImage();return false;">
+&#9758;</A></H3>
+<SPAN ID="p4" style="display:none">
+<UL>
+<LI> Predicate definitions over the term algebra (old DIGs)
+<LI> Define truth for Herbrand Base
+<LI> Examples: iProver
+<LI> Compact, quite some work to produce them
+</UL>
+</SPAN>
+<UL>
+<LI> <EM> Verifiable<SPAN style="color:green">&check;</SPAN> 
+     Comprehensible<SPAN style="color:orange">&quest;</SPAN> 
+     ^C-tolerable<SPAN style="color:orange">&quest;</SPAN> </EM>
+</UL>
+
+<H3>Kripke Interpretations
+<A HREF="" style="text-decoration: none" onClick="hideshow('p5');nextImage();return false;">
+&#9758;</A></H3>
+<SPAN ID="p5" style="display:none">
+<UL>
+<LI> Worlds - finite or infinite
+<LI> Interpretation in a world - see above
+<LI> Accessibility relation - ground or quantified
+</UL>
+</SPAN>
+<UL>
+<LI> <EM> Verifiable<SPAN style="color:orange">&quest;</SPAN> 
+     Comprehensible<SPAN style="color:orange">&quest;</SPAN> 
+     ^C-tolerable<SPAN style="color:orange">&quest;</SPAN> </EM>
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

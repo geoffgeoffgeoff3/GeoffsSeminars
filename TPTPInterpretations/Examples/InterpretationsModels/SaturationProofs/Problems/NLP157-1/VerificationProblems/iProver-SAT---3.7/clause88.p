@@ -1,0 +1,2 @@
+include('Saturations/NLP157-1/Saturations/iProver-SAT---3.7.ax').
+fof(clause88,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ( ~ event(U,V) | ~ present(U,V) | ~ barrel(U,V) | ~ down(U,V,W) | ~ lonely(U,W) | ~ street(U,W) | ~ in(U,V,X) | ~ agent(U,V,X) | ~ old(U,X) | ~ dirty(U,X) | ~ white(U,X) | ~ chevy(U,X) | ~ city(U,X) | ~ of(U,Y,X) | ~ hollywood_placename(U,Y) | ~ placename(U,Y) | ~ young(U,skf5(U,Z)) | ~ fellow(U,skf5(U,Z)) | ~ group(U,X1) | ~ two(U,X1) | ~ ssSkP0(X1,U) | ~ actual_world(U) ) ).

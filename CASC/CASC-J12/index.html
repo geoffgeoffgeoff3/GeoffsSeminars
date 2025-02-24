@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<TITLE> CASC-J12 </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = '../T-Shirt-J12.png'; 
+  images[1]     = new Image();
+  images[1].src = 'HendrixWoodstock.jpg';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }  
+  //-->
+
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<CENTER>
+<H1> CASC-J12 </H1>
+<H2> The 12th IJCAR ATP System Competition </H2>
+</CENTER>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME='image' SRC="../T-Shirt-J12.png" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> <A HREF="../Summary.html">History and Motivations</A> </H3>
+
+<H3> CASC-J12 </H3>
+<UL>
+<LI> The 29th CASC!
+<LI> <A HREF="Divisions.html">7 Divisions</A>
+<LI> <A HREF="Entrants.html">19 Entrants</A>
+<LI> <A HREF="http://tptp.org/CASC/J12/WWWFiles/DivisionSummary1.html">48 Results</A>
+<LI> The <A HREF="https://tptp.org/CASC/J12/WWWFiles/ICUMatrix.html">ICU Matrix</A>
+</UL>
+
+<A HREF="" onClick="hideshow('p1');return false;">
+<H3> Was it Worth the Gamble? You Bet it Was!</H3>
+</A>
+<SPAN ID="p1" style="display:none">
+<UL>
+<LI> Random Horse Division - 51 entries (FOF Guess/Result/500)
+     <UL>
+     <LI> 1st: $125 - Simon G. - Prover9 1109a (pessimistic by 3)
+     <LI> 2nd: $83 - Stephan S. - CSI_E    1.0 (optimistic by 4)
+     <LI> 3rd: $27 - Christoph B. - Vampire    4.9 (pessimistic by 7)
+     </UL>
+<!--
+<P>
+<LI> Chosen Horse Division - NN entries (FOF Guess/Result/500)
+     <UL>
+     <LI> 1st: &euro;12 - Martin R. - Vampire 4.6 440/448/500
+     <LI> 2nd: &euro;8 - John H. - Prover9 1109a 130/138/500
+     <LI> 3rd: &euro;5 - Tanel T. - Vampire 4.6 432/448/500
+     </UL>
+-->
+</UL>
+</SPAN>
+
+<A HREF="" onClick="hideshow('p4');return false;">
+<H3> Things Keep Getting Better! </H3>
+</A>
+<SPAN ID="p4" style="display:none">
+<UL>
+<LI> Keep pushing the TFA/TFN barrow - the world needs it
+<LI> Keep the ICU challenge - it is fun!
+<LI> Return of the EPR division? - it will be SPASS!
+<LI> CASC at CADE, ICProVer at IJCAR
+</UL>
+</SPAN>
+
+<H3> To Conclude ... </H3>
+<UL>
+<LI> <A HREF="Thanks.html">Thanks</A>
+<LI> <A HREF="Conclusion.html">Conclusion</A>
+</UL>
+
+<H3> The End ... Questions? </H3>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

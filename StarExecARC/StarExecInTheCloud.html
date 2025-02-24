@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE> StarExec in the Cloud </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var nextIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'StarExecCloud.png';
+  images[1]     = new Image();
+  images[1].src = 'ArchitectureK.png';
+  images[2]     = new Image();
+  images[2].src = 'ArchitectureAWS.png';
+
+  function nextImage (whichImage) {
+      nextIndex = (nextIndex + 1) % images.length;
+      document.images[whichImage].src = images[nextIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+StarExec in the Cloud
+</H1>
+
+<A HREF="" onClick="nextImage('main_image');return false">
+<IMG NAME="main_image" SRC="StarExecCloud.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> In Kubernetes </H3>
+<UL>
+<LI> Containerised ATP systems in a public repository
+<LI> Abstraction layer eliminating MariaDB-specific bindings
+<LI> Head node &rarr; Kubernetes service
+<LI> Compute nodes &rarr; Kubernetes jobs
+<LI> Kubernetes job scheduling
+</UL>
+
+<H3> On AWS </H3>
+<UL>
+<LI> Kubernetes control plane &rarr; AWS Elastic Kubernetes Service
+<LI> Head and compute nodes &rarr; Amazon EC2 instances
+<LI> Database &rarr; Amazon Relational Database (RDS)
+<LI> File system &rarr; Amazon Elastic File System
+<LI> ATP systems containerisation &rarr; Amazon Trusted Solver format
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

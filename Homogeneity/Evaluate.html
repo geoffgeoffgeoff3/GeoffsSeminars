@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE> System and Problem Evaluation </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'Fruit.GIF';
+  images[1]     = new Image();
+  images[1].src = 'Bananas.GIF';
+  images[2]     = new Image();
+  images[2].src = 'Blank.GIF';
+  images[3]     = new Image();
+  images[3].src = 'HomoWords.GIF';
+
+  var currentImageIndex = 0;
+
+  function swapImage () {
+      currentImageIndex = (currentImageIndex + 1) % 2;
+      document.images['image'].src = images[currentImageIndex].src;
+      document.images['words'].src = images[currentImageIndex+2].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> System and Problem Evaluation </H1>
+
+<A HREF="Evaluate.html" onMouseOver="swapImage()" onMouseOut="swapImage()">
+<IMG NAME="image" SRC="Fruit.GIF" ALIGN=RIGHT BORDER=0 WIDTH=33%></A>
+
+<H3> Take a representative set of problems ... </H3>
+<UL>
+<LI> The <A HREF="../TPTP/Summary.html">TPTP Problem Library</A>
+</UL>
+
+<H3> Divide into different types of problems ... </H3>
+<UL>
+<LI> <A HREF="../Evaluate/SPCs.html">Specialist Problem Classes</A>
+</UL>
+
+<H3> Evaluate ... </H3>
+<UL>
+<LI> <A HREF="../Evaluate/WithBiasedGIF.html"><IMG SRC="../Evaluate/WithBiased.GIF" HEIGHT=5%></A>
+</UL>
+
+<P>
+<CENTER>
+<IMG NAME="words" SRC="Blank.GIF" BORDER=0>
+</CENTER>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

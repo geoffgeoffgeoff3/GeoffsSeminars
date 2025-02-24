@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE> AGMV </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'AGMVQuestion.png';
+  images[1]     = new Image();
+  images[1].src = 'GCMV.png';
+  images[2]     = new Image();
+  images[2].src = 'AGMMV.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> AGMV - Semantic Model Verification</H1>
+
+<IMG NAME='image' SRC="AGMVQuestion.png" BORDER=0 ALIGN=RIGHT WIDTH=45%>
+
+<H3> What, Why, How? 
+<A HREF="" onClick="putImage(0);return false">
+<IMG SRC="AGMVQuestion.png" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL>
+<LI> Incompleteness, Soundness, Correctness
+<LI> Complexity and experience indicates bugs
+</UL>
+
+<H3> Tarskian Model Verification 
+<A HREF="" onClick="putImage(1);return false">
+<IMG SRC="GCMV.png" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL>
+<LI> The <A HREF="../TPTPInterpretations/VerificationMethod.html">complete method</A> ...
+     <UL>
+     <LI> Check syntax and satisfiability of the model
+     <LI> Combine model, each problem axiom/~conjecture as a conjecture
+     <LI> Prove each with a trusted theorem prover
+     </UL>
+<LI> Works <A HREF="../TPTPInterpretations/VerificationProof.html">because</A> ...<BR>
+     if<BR>
+     <TT>&nbsp;&nbsp;</TT>TPTP axiom &#8872; Problem formulae
+     <BR>then<BR>
+     <TT>&nbsp;&nbsp;</TT>Domain & mappings &#8866; Problem formulae.
+<LI> Works for <A HREF="../TPTPInterpretations/TypesOfInterpretations.html">all types</A> of model
+     <BR>(including saturations - 89% success with Vampire/E saturations)
+</UL>
+
+<H3> Kripke Model Verification 
+<A HREF="" onClick="putImage(2);return false">
+<IMG SRC="AGMMV.png" BORDER=0 HEIGHT=20></A>
+</H3>
+<UL>
+<LI> Check syntax and satisfiability of the model
+<LI> Combine logic specification, types, model, all problem axioms and ~conjecture as conjectures
+<LI> Convert to a NXF proof problem
+<LI> Prove it with a trusted (modal) theorem prover
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

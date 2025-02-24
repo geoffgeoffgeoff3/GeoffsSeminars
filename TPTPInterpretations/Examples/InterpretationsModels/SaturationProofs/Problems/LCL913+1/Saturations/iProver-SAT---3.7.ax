@@ -1,0 +1,124 @@
+fof(f1,axiom,op_or => ! [X0] : ! [X1] : or(X0,X1) = not(and(not(X0),not(X1))) ).
+fof(f5,axiom,op_equiv => ! [X0] : ! [X1] : equiv(X0,X1) = and(implies(X0,X1),implies(X1,X0)) ).
+fof(f7,axiom,modus_ponens_strict_implies <=> ! [X0] : ! [X1] : ( ( is_a_theorem(strict_implies(X0,X1)) & is_a_theorem(X0) ) => is_a_theorem(X1) ) ).
+fof(f8,axiom,adjunction <=> ! [X0] : ! [X1] : ( ( is_a_theorem(X1) & is_a_theorem(X0) ) => is_a_theorem(and(X0,X1)) ) ).
+fof(f9,axiom,substitution_strict_equiv <=> ! [X0] : ! [X1] : ( is_a_theorem(strict_equiv(X0,X1)) => X0 = X1 ) ).
+fof(f19,axiom,axiom_m1 <=> ! [X0] : ! [X1] : is_a_theorem(strict_implies(and(X0,X1),and(X1,X0))) ).
+fof(f20,axiom,axiom_m2 <=> ! [X0] : ! [X1] : is_a_theorem(strict_implies(and(X0,X1),X0)) ).
+fof(f21,axiom,axiom_m3 <=> ! [X0] : ! [X1] : ! [X2] : is_a_theorem(strict_implies(and(and(X0,X1),X2),and(X0,and(X1,X2)))) ).
+fof(f22,axiom,axiom_m4 <=> ! [X0] : is_a_theorem(strict_implies(X0,and(X0,X0))) ).
+fof(f23,axiom,axiom_m5 <=> ! [X0] : ! [X1] : ! [X2] : is_a_theorem(strict_implies(and(strict_implies(X0,X1),strict_implies(X1,X2)),strict_implies(X0,X2))) ).
+fof(f29,axiom,op_possibly => ! [X0] : possibly(X0) = not(necessarily(not(X0))) ).
+fof(f31,axiom,op_strict_implies => ! [X0] : ! [X1] : strict_implies(X0,X1) = necessarily(implies(X0,X1)) ).
+fof(f32,axiom,op_strict_equiv => ! [X0] : ! [X1] : strict_equiv(X0,X1) = and(strict_implies(X0,X1),strict_implies(X1,X0)) ).
+fof(f33,axiom,op_possibly ).
+fof(f34,axiom,op_or ).
+fof(f36,axiom,op_strict_implies ).
+fof(f37,axiom,op_equiv ).
+fof(f38,axiom,op_strict_equiv ).
+fof(f39,axiom,modus_ponens_strict_implies ).
+fof(f40,axiom,substitution_strict_equiv ).
+fof(f41,axiom,adjunction ).
+fof(f42,axiom,axiom_m1 ).
+fof(f43,axiom,axiom_m2 ).
+fof(f44,axiom,axiom_m3 ).
+fof(f45,axiom,axiom_m4 ).
+fof(f46,axiom,axiom_m5 ).
+fof(f50,axiom,axiom_m5 => ! [X0] : ! [X1] : ! [X2] : is_a_theorem(strict_implies(and(strict_implies(X0,X1),strict_implies(X1,X2)),strict_implies(X0,X2))) ).
+fof(f51,axiom,axiom_m4 => ! [X0] : is_a_theorem(strict_implies(X0,and(X0,X0))) ).
+fof(f52,axiom,axiom_m3 => ! [X0] : ! [X1] : ! [X2] : is_a_theorem(strict_implies(and(and(X0,X1),X2),and(X0,and(X1,X2)))) ).
+fof(f53,axiom,axiom_m2 => ! [X0] : ! [X1] : is_a_theorem(strict_implies(and(X0,X1),X0)) ).
+fof(f54,axiom,axiom_m1 => ! [X0] : ! [X1] : is_a_theorem(strict_implies(and(X0,X1),and(X1,X0))) ).
+fof(f55,axiom,substitution_strict_equiv => ! [X0] : ! [X1] : ( is_a_theorem(strict_equiv(X0,X1)) => X0 = X1 ) ).
+fof(f56,axiom,adjunction => ! [X0] : ! [X1] : ( ( is_a_theorem(X1) & is_a_theorem(X0) ) => is_a_theorem(and(X0,X1)) ) ).
+fof(f57,axiom,modus_ponens_strict_implies => ! [X0] : ! [X1] : ( ( is_a_theorem(strict_implies(X0,X1)) & is_a_theorem(X0) ) => is_a_theorem(X1) ) ).
+fof(f63,axiom,! [X0] : ! [X1] : or(X0,X1) = not(and(not(X0),not(X1))) | ~ op_or ).
+fof(f64,axiom,! [X0] : ! [X1] : equiv(X0,X1) = and(implies(X0,X1),implies(X1,X0)) | ~ op_equiv ).
+fof(f65,axiom,! [X0] : ! [X1] : ( is_a_theorem(X1) | ~ is_a_theorem(strict_implies(X0,X1)) | ~ is_a_theorem(X0) ) | ~ modus_ponens_strict_implies ).
+fof(f66,axiom,! [X0] : ! [X1] : ( is_a_theorem(X1) | ~ is_a_theorem(strict_implies(X0,X1)) | ~ is_a_theorem(X0) ) | ~ modus_ponens_strict_implies ).
+fof(f67,axiom,! [X0] : ! [X1] : ( is_a_theorem(and(X0,X1)) | ~ is_a_theorem(X1) | ~ is_a_theorem(X0) ) | ~ adjunction ).
+fof(f68,axiom,! [X0] : ! [X1] : ( is_a_theorem(and(X0,X1)) | ~ is_a_theorem(X1) | ~ is_a_theorem(X0) ) | ~ adjunction ).
+fof(f69,axiom,! [X0] : ! [X1] : ( X0 = X1 | ~ is_a_theorem(strict_equiv(X0,X1)) ) | ~ substitution_strict_equiv ).
+fof(f70,axiom,! [X0] : ! [X1] : is_a_theorem(strict_implies(and(X0,X1),and(X1,X0))) | ~ axiom_m1 ).
+fof(f71,axiom,! [X0] : ! [X1] : is_a_theorem(strict_implies(and(X0,X1),X0)) | ~ axiom_m2 ).
+fof(f72,axiom,! [X0] : ! [X1] : ! [X2] : is_a_theorem(strict_implies(and(and(X0,X1),X2),and(X0,and(X1,X2)))) | ~ axiom_m3 ).
+fof(f73,axiom,! [X0] : is_a_theorem(strict_implies(X0,and(X0,X0))) | ~ axiom_m4 ).
+fof(f74,axiom,! [X0] : ! [X1] : ! [X2] : is_a_theorem(strict_implies(and(strict_implies(X0,X1),strict_implies(X1,X2)),strict_implies(X0,X2))) | ~ axiom_m5 ).
+fof(f75,axiom,! [X0] : possibly(X0) = not(necessarily(not(X0))) | ~ op_possibly ).
+fof(f76,axiom,! [X0] : ! [X1] : strict_implies(X0,X1) = necessarily(implies(X0,X1)) | ~ op_strict_implies ).
+fof(f77,axiom,! [X0] : ! [X1] : strict_equiv(X0,X1) = and(strict_implies(X0,X1),strict_implies(X1,X0)) | ~ op_strict_equiv ).
+fof(f78,axiom,! [X0] : ! [X1] : ( or(X0,X1) = not(and(not(X0),not(X1))) | ~ op_or ) ).
+fof(f79,axiom,! [X0] : ! [X1] : ( equiv(X0,X1) = and(implies(X0,X1),implies(X1,X0)) | ~ op_equiv ) ).
+fof(f80,axiom,! [X0] : ! [X1] : ( is_a_theorem(X1) | ~ is_a_theorem(strict_implies(X0,X1)) | ~ is_a_theorem(X0) | ~ modus_ponens_strict_implies ) ).
+fof(f81,axiom,! [X0] : ! [X1] : ( is_a_theorem(and(X0,X1)) | ~ is_a_theorem(X1) | ~ is_a_theorem(X0) | ~ adjunction ) ).
+fof(f82,axiom,! [X0] : ! [X1] : ( X0 = X1 | ~ is_a_theorem(strict_equiv(X0,X1)) | ~ substitution_strict_equiv ) ).
+fof(f83,axiom,! [X0] : ! [X1] : ( is_a_theorem(strict_implies(and(X0,X1),and(X1,X0))) | ~ axiom_m1 ) ).
+fof(f84,axiom,! [X0] : ! [X1] : ( is_a_theorem(strict_implies(and(X0,X1),X0)) | ~ axiom_m2 ) ).
+fof(f85,axiom,! [X2] : ! [X0] : ! [X1] : ( is_a_theorem(strict_implies(and(and(X0,X1),X2),and(X0,and(X1,X2)))) | ~ axiom_m3 ) ).
+fof(f86,axiom,! [X0] : ( is_a_theorem(strict_implies(X0,and(X0,X0))) | ~ axiom_m4 ) ).
+fof(f87,axiom,! [X2] : ! [X0] : ! [X1] : ( is_a_theorem(strict_implies(and(strict_implies(X0,X1),strict_implies(X1,X2)),strict_implies(X0,X2))) | ~ axiom_m5 ) ).
+fof(f88,axiom,! [X0] : ( possibly(X0) = not(necessarily(not(X0))) | ~ op_possibly ) ).
+fof(f89,axiom,! [X0] : ! [X1] : ( strict_implies(X0,X1) = necessarily(implies(X0,X1)) | ~ op_strict_implies ) ).
+fof(f90,axiom,! [X0] : ! [X1] : ( strict_equiv(X0,X1) = and(strict_implies(X0,X1),strict_implies(X1,X0)) | ~ op_strict_equiv ) ).
+fof(f91,axiom,op_possibly ).
+fof(f92,axiom,op_or ).
+fof(f93,axiom,op_strict_implies ).
+fof(f94,axiom,op_equiv ).
+fof(f95,axiom,op_strict_equiv ).
+fof(f96,axiom,modus_ponens_strict_implies ).
+fof(f97,axiom,substitution_strict_equiv ).
+fof(f98,axiom,adjunction ).
+fof(f99,axiom,axiom_m1 ).
+fof(f100,axiom,axiom_m2 ).
+fof(f101,axiom,axiom_m3 ).
+fof(f102,axiom,axiom_m4 ).
+fof(f103,axiom,axiom_m5 ).
+fof(c_49,axiom,! [X0] : ! [X1] : ( ~ op_or | not(and(not(X0),not(X1))) = or(X0,X1) ) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ( ~ op_equiv | and(implies(X0,X1),implies(X1,X0)) = equiv(X0,X1) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(strict_implies(X0,X1)) | ~ is_a_theorem(X0) | ~ modus_ponens_strict_implies | is_a_theorem(X1) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(X0) | ~ is_a_theorem(X1) | ~ adjunction | is_a_theorem(and(X0,X1)) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(strict_equiv(X0,X1)) | ~ substitution_strict_equiv | X0 = X1 ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ axiom_m1 | is_a_theorem(strict_implies(and(X0,X1),and(X1,X0))) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ axiom_m2 | is_a_theorem(strict_implies(and(X0,X1),X0)) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ axiom_m3 | is_a_theorem(strict_implies(and(and(X0,X1),X2),and(X0,and(X1,X2)))) ) ).
+fof(c_57,axiom,! [X0] : ( ~ axiom_m4 | is_a_theorem(strict_implies(X0,and(X0,X0))) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ axiom_m5 | is_a_theorem(strict_implies(and(strict_implies(X0,X1),strict_implies(X1,X2)),strict_implies(X0,X2))) ) ).
+fof(c_59,axiom,! [X0] : ( ~ op_possibly | not(necessarily(not(X0))) = possibly(X0) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ( ~ op_strict_implies | necessarily(implies(X0,X1)) = strict_implies(X0,X1) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ op_strict_equiv | and(strict_implies(X0,X1),strict_implies(X1,X0)) = strict_equiv(X0,X1) ) ).
+fof(c_62,axiom,op_possibly ).
+fof(c_63,axiom,op_or ).
+fof(c_64,axiom,op_strict_implies ).
+fof(c_65,axiom,op_equiv ).
+fof(c_66,axiom,op_strict_equiv ).
+fof(c_67,axiom,modus_ponens_strict_implies ).
+fof(c_68,axiom,substitution_strict_equiv ).
+fof(c_69,axiom,adjunction ).
+fof(c_70,axiom,axiom_m1 ).
+fof(c_71,axiom,axiom_m2 ).
+fof(c_72,axiom,axiom_m3 ).
+fof(c_73,axiom,axiom_m4 ).
+fof(c_74,axiom,axiom_m5 ).
+fof(c_87,axiom,! [X0] : is_a_theorem(strict_implies(X0,and(X0,X0))) ).
+fof(c_90,axiom,! [X0] : ! [X1] : is_a_theorem(strict_implies(and(X0,X1),X0)) ).
+fof(c_93,axiom,! [X0] : not(necessarily(not(X0))) = possibly(X0) ).
+fof(c_96,axiom,! [X0] : ! [X1] : is_a_theorem(strict_implies(and(X0,X1),and(X1,X0))) ).
+fof(c_99,axiom,! [X0] : ! [X1] : necessarily(implies(X0,X1)) = strict_implies(X0,X1) ).
+fof(c_102,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(strict_equiv(X0,X1)) | X0 = X1 ) ).
+fof(c_105,axiom,! [X1] : ! [X0] : ( ~ is_a_theorem(X1) | ~ is_a_theorem(X0) | is_a_theorem(and(X0,X1)) ) ).
+fof(c_106,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(X0) | ~ is_a_theorem(X1) | is_a_theorem(and(X0,X1)) ) ).
+fof(c_108,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(X0) | ~ is_a_theorem(strict_implies(X0,X1)) | is_a_theorem(X1) ) ).
+fof(c_109,axiom,! [X0] : ! [X1] : ( ~ is_a_theorem(strict_implies(X0,X1)) | ~ is_a_theorem(X0) | is_a_theorem(X1) ) ).
+fof(c_110,axiom,! [X0] : ! [X1] : not(and(not(X0),not(X1))) = or(X0,X1) ).
+fof(c_113,axiom,! [X0] : ! [X1] : and(strict_implies(X0,X1),strict_implies(X1,X0)) = strict_equiv(X0,X1) ).
+fof(c_116,axiom,! [X0] : ! [X1] : ! [X2] : is_a_theorem(strict_implies(and(strict_implies(X0,X1),strict_implies(X1,X2)),strict_implies(X0,X2))) ).
+fof(c_119,axiom,! [X0] : ! [X1] : ! [X2] : is_a_theorem(strict_implies(and(and(X0,X1),X2),and(X0,and(X1,X2)))) ).
+fof(c_122,axiom,! [X0] : ! [X1] : and(implies(X0,X1),implies(X1,X0)) = equiv(X0,X1) ).
+fof(c_201,axiom,! [X0] : X0 = X0 ).
+fof(c_202,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_203,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_204,axiom,! [X0] : ! [X1] : ( X0 != X1 | not(X0) = not(X1) ) ).
+fof(c_205,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | and(X0,X2) = and(X1,X3) ) ).
+fof(c_206,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ is_a_theorem(X1) | is_a_theorem(X0) ) ).
+fof(c_207,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | strict_implies(X0,X2) = strict_implies(X1,X3) ) ).
+fof(c_208,axiom,! [X0] : ! [X1] : ( X0 != X1 | necessarily(X0) = necessarily(X1) ) ).

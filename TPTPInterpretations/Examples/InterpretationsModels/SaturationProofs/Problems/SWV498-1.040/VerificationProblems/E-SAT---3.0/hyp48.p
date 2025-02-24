@@ -1,0 +1,2 @@
+include('Saturations/SWV498-1.040/Saturations/E-SAT---3.0.ax').
+fof(hyp48,conjecture,a_1407 = store(a_1406,i6,e6) ).

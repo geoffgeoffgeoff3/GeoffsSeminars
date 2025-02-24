@@ -1,0 +1,2 @@
+include('Saturations/MGT034-1/Saturations/E-SAT---3.0.ax').
+fof(mp_decreasing_function_35,conjecture,! [A] : ! [B] : ! [C] : ( ~ environment(A) | ~ in_environment(A,B) | ~ greater_or_equal(difference(growth_rate(first_movers,B),growth_rate(efficient_producers,B)),zero) | ~ greater_or_equal(C,appear(efficient_producers,A)) | ~ greater(B,C) | ~ decreases(difference(growth_rate(first_movers,C),growth_rate(efficient_producers,C))) | greater(difference(growth_rate(first_movers,C),growth_rate(efficient_producers,C)),zero) ) ).

@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE> Examples </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Examples </H1>
+
+<IMG SRC="Examples.jpg" BORDER=0 ALIGN=RIGHT WIDTH=30%>
+
+<H3> Mixing tuples, Conditional and Let Expressions </H3>
+<PRE>
+tff(v1_type,type,v1: $int).
+tff(v2_type,type,v2: $int).
+tff(ordered_p,axiom,
+    $let([large: $int,small: $int],
+         [large,small]:= $ite($greater(v1,v2),[v1,v2],[v2,v1]),
+         p(large,small)) ).
+</PRE>
+
+<H3> if (x > y) { t := x; x := y; y := t; } assert x <= y; </H3>
+<PRE>
+</<F5>ff(x,type,x:$int).
+tff(y,type,y:$int).
+tff(t,type,t:$int).
+tff(x_leq_y,conjecture,
+    $let([x:$int,y:$int,t:$int],
+         [x,y,t] := $ite($greater(x,y),
+                         $let(t:$int, t := x,
+                         $let(x:$int, x := y,
+                         $let(y:$int, y := t,
+                              [x,y,t]))),
+                         [x,y,t]),
+         $lesseq(x,y))).
+</PRE>
+
+<H3> Who is the Truthteller? </H3>
+<PRE>
+tff(a_type,type, a: $i ).
+tff(b_type,type, b: $i ).
+tff(c_type,type, c: $i ).
+tff(exactly_one_truthteller_type,type, exactly_one_truthteller: $o ).
+tff(says,type, says: ( $i * $o ) > $o ).
+
+%----Each person is either a truthteller or a liar
+tff(island,axiom, ! [P: $i] : ( says(P,$true) <~> says(P,$false) ) ).
+tff(exactly_one_truthteller,axiom,
+    ( exactly_one_truthteller
+  <=> ( ? [P: $i] : says(P,$true)
+      & ! [P1: $i,P2: $i] :
+          ( ( says(P1,$true) & says(P2,$true) )
+         => P1 = P2 ) ) )).
+
+%----B said that A said that there is exactly one truthteller on the island
+tff(b_says,hypothesis, says(b,says(a,exactly_one_truthteller)) ).
+
+%----C said that what B said is false
+tff(c_says,hypothesis, says(c,says(b,$false)) ).
+</PRE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

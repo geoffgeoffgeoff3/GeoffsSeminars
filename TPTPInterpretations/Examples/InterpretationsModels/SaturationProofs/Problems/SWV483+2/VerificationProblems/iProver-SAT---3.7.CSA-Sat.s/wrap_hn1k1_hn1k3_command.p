@@ -1,0 +1,2 @@
+include('Saturations/SWV483+2/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
+fof(wrap_hn1k1_hn1k3_command,conjecture,! [X22] : ! [X21] : ! [X19] : ! [X18] : ! [X17] : ! [X16] : ! [X15] : ! [X14] : ! [A] : ! [B] : ! [C] : ! [X11] : ! [X10] : ! [X9] : ! [X8] : ! [X7] : ! [D] : ! [E] : ! [F] : ! [G] : ! [H] : ! [I] : ! [J] : ! [X5] : ! [X4] : ! [X3] : ! [X2] : ! [X1] : ( p(n1,n1,X1,X2,X3,X4,X5,J,I,H,G,F,E,D,n1,X7,X8,X9,X10,X11,n1,C,B,A,X14,X15,X16,X17,X18,X19,n0,X21,X22) => p(n1,n1,X1,X2,X3,X4,X5,J,I,H,G,F,E,D,n1,X7,X8,X9,X10,X11,n1,C,B,A,X14,X15,X16,X17,X18,X19,n1,X21,X22) ) ).

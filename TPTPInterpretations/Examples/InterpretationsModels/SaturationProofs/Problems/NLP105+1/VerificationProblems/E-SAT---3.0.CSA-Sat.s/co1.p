@@ -1,0 +1,2 @@
+include('Saturations/NLP105+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
+fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ! [V] : ! [W] : ( ( customer(U,V) & restaurant(U,W) & in(U,V,W) ) => ? [X] : ? [Y] : ? [Z] : ? [X1] : ( human_person(U,X) & coffee(U,Y) & event(U,Z) & agent(U,Z,X) & patient(U,Z,Y) & past(U,Z) & nonreflexive(U,Z) & drink(U,Z) & event(U,X1) & agent(U,X1,V) & patient(U,X1,X) & past(U,X1) & nonreflexive(U,X1) & see(U,X1) ) ) ) ) )).

@@ -1,0 +1,53 @@
+fof(c_49,axiom,finite_set(first_movers) ).
+fof(c_50,axiom,! [X0] : ( ~ environment(X0) | ~ stable(X0) | in_environment(X0,appear(first_movers,X0)) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ contracts_from(X0,X1) | ~ finite_set(X1) | greater(sk1(X0,X1),X0) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ contracts_from(X0,X1) | ~ finite_set(X1) | cardinality_at_time(s,t2) = zero ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ in_environment(X0,X1) | ~ greater(X2,X1) | ~ environment(X0) | ~ stable(X0) | in_environment(X0,X2) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ greater(X0,X1) | ~ greater(X1,X2) | greater(X0,X2) ) ).
+fof(c_55,axiom,! [X0] : ( ~ environment(X0) | ~ stable(X0) | greater(sk2(X0),appear(efficient_producers,X0)) ) ).
+fof(c_56,axiom,! [X0] : ( ~ environment(X0) | ~ stable(X0) | contracts_from(sk2(X0),first_movers) ) ).
+fof(c_57,axiom,! [X0] : ( ~ environment(X0) | greater(appear(efficient_producers,e),appear(first_movers,X0)) ) ).
+fof(c_58,axiom,environment(sk3) ).
+fof(c_59,axiom,stable(sk3) ).
+fof(c_60,axiom,! [X0] : ( cardinality_at_time(first_movers,to) != zero | ~ greater(X0,appear(first_movers,sk3)) | ~ in_environment(sk3,X0) ) ).
+fof(c_187,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ finite_set(X1) | finite_set(X0) ) ).
+fof(c_188,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ environment(X1) | environment(X0) ) ).
+fof(c_189,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ stable(X1) | stable(X0) ) ).
+fof(c_192,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ contracts_from(X1,X3) | contracts_from(X0,X2) ) ).
+fof(c_195,axiom,! [X0] : ! [X1] : ( X0 != first_movers | ~ contracts_from(X1,X0) | cardinality_at_time(s,t2) = zero ) ).
+fof(c_196,axiom,! [X0] : ( ~ contracts_from(X0,first_movers) | cardinality_at_time(s,t2) = zero ) ).
+fof(c_204,axiom,! [X0] : ! [X1] : ( X0 != first_movers | ~ contracts_from(X1,X0) | greater(sk1(X1,X0),X1) ) ).
+fof(c_205,axiom,! [X0] : ( ~ contracts_from(X0,first_movers) | greater(sk1(X0,first_movers),X0) ) ).
+fof(c_247,axiom,! [X0] : ( X0 != sk3 | ~ environment(X0) | contracts_from(sk2(X0),first_movers) ) ).
+fof(c_248,axiom,~ environment(sk3) | contracts_from(sk2(sk3),first_movers) ).
+fof(c_249,axiom,contracts_from(sk2(sk3),first_movers) ).
+fof(c_254,axiom,! [X0] : ( X0 != sk3 | ~ environment(X0) | greater(sk2(X0),appear(efficient_producers,X0)) ) ).
+fof(c_255,axiom,~ environment(sk3) | greater(sk2(sk3),appear(efficient_producers,sk3)) ).
+fof(c_256,axiom,greater(sk2(sk3),appear(efficient_producers,sk3)) ).
+fof(c_261,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sk3 | ~ in_environment(X0,X1) | ~ greater(X2,X1) | ~ environment(X0) | in_environment(X0,X2) ) ).
+fof(c_262,axiom,! [X0] : ! [X1] : ( ~ greater(X0,X1) | ~ in_environment(sk3,X1) | ~ environment(sk3) | in_environment(sk3,X0) ) ).
+fof(c_263,axiom,! [X1] : ! [X0] : ( ~ in_environment(sk3,X1) | ~ greater(X0,X1) | in_environment(sk3,X0) ) ).
+fof(c_264,axiom,! [X0] : ! [X1] : ( ~ greater(X0,X1) | ~ in_environment(sk3,X1) | in_environment(sk3,X0) ) ).
+fof(c_274,axiom,! [X0] : ( X0 != sk3 | ~ environment(X0) | in_environment(X0,appear(first_movers,X0)) ) ).
+fof(c_275,axiom,~ environment(sk3) | in_environment(sk3,appear(first_movers,sk3)) ).
+fof(c_276,axiom,in_environment(sk3,appear(first_movers,sk3)) ).
+fof(c_287,axiom,! [X0] : ( X0 != sk3 | greater(appear(efficient_producers,e),appear(first_movers,X0)) ) ).
+fof(c_288,axiom,greater(appear(efficient_producers,e),appear(first_movers,sk3)) ).
+fof(c_293,axiom,! [X0] : ( sk2(sk3) != X0 | first_movers != first_movers | greater(sk1(X0,first_movers),X0) ) ).
+fof(c_294,axiom,greater(sk1(sk2(sk3),first_movers),sk2(sk3)) ).
+fof(c_298,axiom,! [X0] : ( sk2(sk3) != X0 | first_movers != first_movers | cardinality_at_time(s,t2) = zero ) ).
+fof(c_299,axiom,cardinality_at_time(s,t2) = zero ).
+fof(c_358,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_531,axiom,~ in_environment(sk3,appear(efficient_producers,sk3)) | in_environment(sk3,sk2(sk3)) ).
+fof(c_532,axiom,~ in_environment(sk3,appear(first_movers,sk3)) | in_environment(sk3,appear(efficient_producers,e)) ).
+fof(c_535,axiom,in_environment(sk3,appear(efficient_producers,e)) ).
+fof(c_536,axiom,~ in_environment(sk3,sk2(sk3)) | in_environment(sk3,sk1(sk2(sk3),first_movers)) ).
+fof(c_549,axiom,! [X0] : ( ~ greater(appear(efficient_producers,sk3),X0) | greater(sk2(sk3),X0) ) ).
+fof(c_550,axiom,! [X0] : ( ~ greater(appear(first_movers,sk3),X0) | greater(appear(efficient_producers,e),X0) ) ).
+fof(c_551,axiom,! [X0] : ( ~ greater(sk2(sk3),X0) | greater(sk1(sk2(sk3),first_movers),X0) ) ).
+fof(c_573,axiom,! [X0] : ! [X1] : ( ~ greater(sk2(sk3),X0) | ~ greater(X0,X1) | greater(sk1(sk2(sk3),first_movers),X1) ) ).
+fof(c_574,axiom,! [X0] : ( ~ greater(sk2(sk3),X0) | ~ in_environment(sk3,X0) | in_environment(sk3,sk1(sk2(sk3),first_movers)) ) ).
+fof(c_592,axiom,! [X0] : ( ~ greater(appear(efficient_producers,sk3),X0) | greater(sk1(sk2(sk3),first_movers),X0) ) ).
+fof(c_600,axiom,! [X0] : ! [X1] : ( ~ greater(appear(efficient_producers,sk3),X0) | ~ greater(X0,X1) | greater(sk1(sk2(sk3),first_movers),X1) ) ).
+fof(c_601,axiom,! [X0] : ( ~ greater(appear(efficient_producers,sk3),X0) | ~ in_environment(sk3,X0) | in_environment(sk3,sk1(sk2(sk3),first_movers)) ) ).
+fof(c_615,axiom,~ in_environment(sk3,appear(efficient_producers,sk3)) | in_environment(sk3,sk1(sk2(sk3),first_movers)) ).

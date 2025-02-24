@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE> The Model Verification Method </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'ModelTrain.png';
+  images[1]     = new Image();
+  images[1].src = 'AGMVQuestion.png';
+  images[2]     = new Image();
+  images[2].src = 'GCMV.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The Model Verification Method</H1>
+
+<IMG NAME='image' SRC="AGMVQuestion.png" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> The Interpretation Formula must ... </H3>
+</H3>
+<OL>
+<LI> ... be syntactically correct, well-typed
+<LI> ... be satisfiable
+<LI> ... represent the model that was found
+<LI> ... represent a model of the problem formulae
+     <A HREF="" onClick="putImage(1);return false">
+     <IMG SRC="AGMVQuestion.png" BORDER=0 HEIGHT=20></A>
+</OL>
+
+<H3> These things can be checked by ... </H3>
+<OL>
+<LI> ... standard parsing and type checking
+<LI> ... a trusted model finder
+<LI> ... faith in the implementation
+     <A HREF="" onClick="putImage(0);return false">
+     <IMG SRC="ModelTrain.png" BORDER=0 HEIGHT=20></A>
+<LI> ... proving that if ...<BR>
+     <TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>
+     TPTP axiom</EM>&nbsp;&#8872;&nbsp;Problem formulae
+     <BR><TT>&nbsp;&nbsp;</TT>then<BR>
+     <TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>
+     Domain & Mappings</EM>&nbsp;&#8866;&nbsp;Problem formulae
+     <A HREF="" onClick="putImage(2);return false">
+     <IMG SRC="GCMV.png" BORDER=0 HEIGHT=20></A>
+     <BR>... and using a trusted theorem prover to show ...<BR>
+     <TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>
+     TPTP axiom&nbsp;&#8872;&nbsp;Problem formulae
+</OL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

@@ -1,0 +1,17 @@
+fof(f1,axiom,! [X0] : ! [X1] : f(X0,X0,X1) = X0 ).
+fof(f2,axiom,! [X0] : ! [X1] : ! [X2] : f(X0,X1,X2) = f(X2,X0,X1) ).
+fof(f3,axiom,! [X0] : ! [X1] : ! [X2] : f(X0,X1,X2) = f(X0,X2,X1) ).
+fof(f4,axiom,! [X3] : ! [X0] : ! [X1] : ! [X2] : f(f(X0,X3,X1),X3,X2) = f(X0,X3,f(X1,X3,X2)) ).
+fof(f5,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : f(f(X1,X0,X2),X0,X3) = f(X1,X0,f(X2,X0,X3)) ).
+fof(f6,axiom,! [X0] : ! [X1] : f(X0,X0,X1) = X0 ).
+fof(f7,axiom,! [X2] : ! [X0] : ! [X1] : f(X0,X1,X2) = f(X2,X0,X1) ).
+fof(f8,axiom,! [X2] : ! [X0] : ! [X1] : f(X0,X1,X2) = f(X0,X2,X1) ).
+fof(f9,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : f(f(X1,X0,X2),X0,X3) = f(X1,X0,f(X2,X0,X3)) ).
+fof(c_49,axiom,! [X0] : ! [X1] : f(X0,X0,X1) = X0 ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : f(X0,X1,X2) = f(X1,X2,X0) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ! [X2] : f(X0,X1,X2) = f(X0,X2,X1) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : f(f(X0,X1,X2),X1,X3) = f(X0,X1,f(X2,X1,X3)) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : f(X0,X1,f(X2,X0,X3)) = f(X2,X0,f(X3,X0,X1)) ).
+fof(c_65,axiom,! [X0] : X0 = X0 ).
+fof(c_66,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | f(X2,X3,X0) = f(X2,X3,X1) ) ).

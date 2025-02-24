@@ -1,0 +1,7 @@
+fof(c_49,axiom,! [X0] : product(identity,X0,X0) ).
+fof(c_50,axiom,! [X0] : product(inverse(X0),X0,identity) ).
+fof(c_51,axiom,! [X0] : ! [X1] : product(X0,X1,multiply(X0,X1)) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ product(X0,X1,X2) | ~ product(X0,X1,X3) | equalish(X2,X3) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ product(X0,X1,X2) | ~ product(X1,X3,X4) | ~ product(X2,X3,X5) | product(X0,X4,X5) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ product(X0,X1,X2) | ~ product(X0,X3,X4) | ~ product(X1,X5,X3) | product(X2,X5,X4) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ product(X0,X1,X2) | ~ equalish(X2,X3) | product(X0,X1,X3) ) ).

@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE> Compatibility Graphs and Cliques </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+<!--
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'SimpleCompat.GIF';
+  images[1]     = new Image();
+  images[1].src = 'SimpleClique.GIF';
+
+  var currentImageIndex = 0;
+
+  function swapImage () {
+      currentImageIndex = (currentImageIndex + 1) % 2;
+      document.images['image'].src = images[currentImageIndex].src;
+  }
+  //-->
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Compatibility Graphs and Cliques </H1>
+
+<H3> Compatibility Graphs </H3>
+<UL>
+<LI> Performance vector for each problem
+<LI> Vertex for each performance vector + sets of problems
+<LI> Edges between vertices with compatible vectors
+</UL>
+
+<CENTER>
+<A HREF="Compat.htm" onClick="swapImage();return false">
+<IMG NAME="image" SRC="SimpleCompat.GIF" BORDER=0 HEIGHT=50%></A>
+</CENTER>
+
+<H3> Cliques </H3>
+<UL>
+<LI> Represent homogeneous sets of problems
+<LI> Maximal clique measures homogeneity wrt systems
+     <UL>
+     <LI> Measure fraction of problems (56%)
+     <LI> Measure fraction of nodes (60%)
+     </UL>
+<LI> Greedy search used to approimately find the maximal clique
+     <UL>
+     <LI> Successively remove nodes of minimal degree and size
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

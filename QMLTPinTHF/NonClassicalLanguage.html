@@ -1,0 +1,174 @@
+<HTML>
+<HEAD>
+<TITLE> The TPTP Non-classical Typed Form (NTF) </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT language="JavaScript">
+  var images = new Array();
+
+  images[0]     = new Image();
+  images[0].src = 'ClassicalLanguages.jpg';
+  images[1]     = new Image();
+  images[1].src = 'TPTPForms.png';
+
+  function putImage(index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> The TPTP Non-classical Typed Form (NTF) </H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME='image' SRC="ClassicalLanguages.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> Requirements </H3>
+<UL>
+<LI> A TPTP language - minimal effort to update systems and tools
+<LI> Retain Prolog compatibility
+<LI> <A HREF="" onClick="putImage(1);return false">Base on TXF and THF</A>, 
+     but TXF defaults support FOF non-classical
+</UL>
+
+<H3> Non-classical Connectives </H3>
+<UL>
+<LI> <TT>{$</TT><EM>connective_name</EM><TT>(</TT><EM>parameters</EM><TT>)}</TT>
+<LI> <EM>parameters</EM> ... <TT>#</TT><EM>index</EM>, <EM>key</EM><TT>:=</TT><EM>value</EM>
+<LI> <A HREF="" onClick="hideshow('Examples');return false;">Example formulae</A> (not a coherent problem)
+     <SPAN ID="Examples" style="display:none">
+<PRE>
+tff(possible_dog_bit_owner,axiom,
+    {$possible} @ (? [D: dog] : bit(D,owner_of(D),1)) ).
+
+tff(jon_says_necessary_truth,axiom,
+    ! [S: $o] : ( says(jon,S) => {$necessary} @ (S) ) ).
+
+tff(alice_knows_its_possible_odie_bit_jon,axiom,
+    {$knows(#alice)} @ ({$dia} @ (bit(odie,jon,1)) ).
+
+tff(jon_says_common_knowledge,axiom,
+    ! [S: $o] :
+      ( says(jon,S) => {$common($agents:=[alice,bob,claire])} @ (S) ) ).
+
+
+thf(possible_jon_owns_biter,axiom,
+    ! [D: dog] :
+      ( ( bit @ D @ jon @ 1 )
+     => ( {$dia} @ ( owns @ jon @ D ) ) ) ).
+
+thf(jon_says_he_must_feed_odie,axiom,
+    says @ jon @ ({$box} @ (feeds @ jon @ odie)) ).
+
+thf(alice_knows_jon_owns_a_dog,axiom,
+    {$knows(#alice)} @
+      ? [D: dog] : ( owns @ jon @ D ) ).
+
+thf(alice_and_bob_know_jon_might_lie,axiom,
+    ! [S: $o] :
+      ( (says @ jon @ S )
+     => {$common($agents:=[alice,bob])} @ ({$dia} @ ~ S) ) ).
+</PRE>
+     </SPAN>
+<LI> Several (essentially modal)
+     <A HREF="https://tptp.org/NonClassicalLogic/index.html#TPTPLogics">
+     non-classical languages defined</A>
+</UL>
+
+<H3> Logic specifications </H3>
+<UL>
+<LI> Specify logic to be used, with properties
+<LI> <A HREF="" onClick="hideshow('ExampleLogicSpecification');return false;">
+     Example
+     </A> <SPAN ID="ExampleLogicSpecification" style="display:none">
+<PRE>
+   tff(simple_spec,logic,
+       $modal == [
+         $constants == $rigid,
+         $quantification == [ $constant, some_user_type == $varying ],
+         $modalities == $modal_system_S5 ] ).
+</PRE>
+<LI> By default <TT>axiom</TT>s are global, <TT>hypothesis</TT>es are local,
+     <TT>conjecture</TT>s are local; can override.
+</UL>
+
+<H3> <A HREF="" onClick="hideshow('CompleteExample');return false;">
+     Complete example
+     </A> 
+     (that current tools cannot solve &#128546;) </H3>
+     <SPAN ID="CompleteExample" style="display:none">
+<PRE>
+tff(garfield,logic,
+        $modal == [
+          $constants == $rigid,
+          $quantification == $constant,
+          $modalities == $modal_system_S5 ] ).
+
+tff(dog_decl,type,      dog: $tType ).
+tff(human_decl,type,    human: $tType ).
+tff(odie_decl,type,     odie: dog ).
+tff(jon_decl,type,      jon: human ).
+tff(owner_of_decl,type, owner_of: dog > human ).
+tff(bit_decl,type,      bit: (dog * human * $int) > $o ).
+tff(hates_decl,type,    hates: (human * human) > $o ).
+tff(feeds_decl,type,    feeds: (human * dog) > $o ).
+tff(chases_decl,type,   chases: (human * dog) > $o ).
+tff(says_decl,type,     says: (human * $o) > $o ).
+
+tff(jon_owns_odie,axiom-local,
+    jon = owner_of(odie) ).
+
+tff(odie_bit_jon_twice,axiom-local,
+    bit(odie,jon,2) ).
+
+tff(hate_the_multi_biter_dog,axiom,
+    ! [D: dog,H: human,N: $int] :
+      ( ( H != owner_of(D)
+        & bit(D,H,N) 
+        & $greater(N,1) )
+     => {$necessary(#arlene)} @ (hates(H,owner_of(D))) ) ).
+
+tff(feed_the_non_biter_dog,axiom,
+    ! [D: dog,H: human] :
+      $ite(
+        ? [N: $int] :
+          ( bit(D,H,N)
+          & $greater(N,0) ),
+        chases(H,D),
+        feeds(H,D)) ).
+
+tff(jon_says_a_dog_bit_him_twice,axiom-local,
+    ? [D: dog] :
+      ( D != odie
+      & jon != owner_of(D)
+      & says(jon,bit(D,jon,2)) ) ).
+
+tff(jon_says_truth,axiom,
+    ! [S: $o] :
+      ( says(jon,S)
+     => S ) ).
+
+tff(jon_chases_and_hates,conjecture,
+    ? [D: dog,H: human] :
+      ( {$possible(#garfield)} @ (chases(jon,D))
+      & H != jon
+      & hates(jon,H) ) ).
+</PRE>
+     </SPAN>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

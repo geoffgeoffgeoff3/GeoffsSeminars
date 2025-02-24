@@ -1,0 +1,83 @@
+fof(two_different_balls_out_one_white_in,axiom,! [X1] : ! [X2] : ( p(s(X1),X2) | ~ p(s(X1),s(X2)) ) ).
+fof(initial_state,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(s(s(s(s(s(s(s(n0)))))))))) ).
+fof(two_blacks_out_one_black_in,axiom,! [X1] : ! [X2] : ( p(X1,s(X2)) | ~ p(X1,s(s(X2))) ) ).
+fof(two_whites_out_one_black_in,axiom,! [X1] : ! [X2] : ( p(X1,s(X2)) | ~ p(s(s(X1)),X2) ) ).
+fof(goal_state,axiom,~ p(s(n0),n0) ).
+fof(c_0_5,axiom,! [X1] : ! [X2] : ( p(s(X1),X2) | ~ p(s(X1),s(X2)) ) ).
+fof(c_0_6,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(s(s(s(s(s(s(s(n0)))))))))) ).
+fof(c_0_7,axiom,! [X1] : ! [X2] : ( p(X1,s(X2)) | ~ p(X1,s(s(X2))) ) ).
+fof(c_0_8,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(s(s(s(s(s(s(n0))))))))) ).
+fof(c_0_9,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(s(s(s(s(s(n0)))))))) ).
+fof(c_0_10,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(s(s(s(s(n0))))))) ).
+fof(c_0_11,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(s(s(s(n0)))))) ).
+fof(c_0_12,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(s(s(n0))))) ).
+fof(c_0_13,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(s(n0)))) ).
+fof(c_0_14,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(s(n0))) ).
+fof(c_0_15,axiom,! [X1] : ! [X2] : ( p(X1,s(X2)) | ~ p(s(s(X1)),X2) ) ).
+fof(c_0_16,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),s(n0)) ).
+fof(c_0_17,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(n0))) ).
+fof(c_0_18,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(n0)) ).
+fof(c_0_19,axiom,p(s(s(s(s(s(s(n0)))))),s(s(n0))) ).
+fof(c_0_20,axiom,p(s(s(s(s(s(s(n0)))))),s(n0)) ).
+fof(c_0_21,axiom,p(s(s(s(s(n0)))),s(s(n0))) ).
+fof(c_0_22,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(s(s(s(s(s(s(s(s(n0))))))))))) ).
+fof(c_0_23,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(s(s(s(s(s(s(s(n0)))))))))) ).
+fof(c_0_24,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(s(s(s(s(s(s(n0))))))))) ).
+fof(c_0_25,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(s(s(s(s(s(n0)))))))) ).
+fof(c_0_26,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(s(s(s(s(n0))))))) ).
+fof(c_0_27,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(s(s(s(n0)))))) ).
+fof(c_0_28,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(s(s(n0))))) ).
+fof(c_0_29,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),s(s(s(n0)))) ).
+fof(c_0_30,axiom,p(s(s(s(s(n0)))),s(n0)) ).
+fof(c_0_31,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(s(s(s(s(s(s(s(s(n0)))))))))))) ).
+fof(c_0_32,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(s(s(s(s(s(s(s(n0))))))))))) ).
+fof(c_0_33,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(s(s(s(s(s(s(n0)))))))))) ).
+fof(c_0_34,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(s(s(s(s(s(n0))))))))) ).
+fof(c_0_35,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(s(s(s(s(n0)))))))) ).
+fof(c_0_36,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(s(s(s(n0))))))) ).
+fof(c_0_37,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(s(s(n0)))))) ).
+fof(c_0_38,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(s(n0))))) ).
+fof(c_0_39,axiom,p(s(s(s(s(s(s(n0)))))),s(s(s(n0)))) ).
+fof(c_0_40,axiom,p(s(s(n0)),s(s(n0))) ).
+fof(c_0_41,axiom,p(s(s(s(s(n0)))),s(s(s(s(s(s(s(s(s(s(s(s(n0))))))))))))) ).
+fof(c_0_42,axiom,p(s(s(s(s(n0)))),s(s(s(s(s(s(s(s(s(s(s(n0)))))))))))) ).
+fof(c_0_43,axiom,p(s(s(s(s(n0)))),s(s(s(s(s(s(s(s(s(s(n0))))))))))) ).
+fof(c_0_44,axiom,p(s(s(s(s(n0)))),s(s(s(s(s(s(s(s(s(n0)))))))))) ).
+fof(c_0_45,axiom,p(s(s(s(s(n0)))),s(s(s(s(s(s(s(s(n0))))))))) ).
+fof(c_0_46,axiom,p(s(s(s(s(n0)))),s(s(s(s(s(s(s(n0)))))))) ).
+fof(c_0_47,axiom,p(s(s(s(s(n0)))),s(s(s(s(s(s(n0))))))) ).
+fof(c_0_48,axiom,p(s(s(s(s(n0)))),s(s(s(s(s(n0)))))) ).
+fof(c_0_49,axiom,p(s(s(s(s(n0)))),s(s(s(s(n0))))) ).
+fof(c_0_50,axiom,p(s(s(s(s(n0)))),s(s(s(n0)))) ).
+fof(c_0_51,axiom,p(s(s(n0)),s(n0)) ).
+fof(c_0_52,axiom,p(s(s(n0)),s(s(s(s(s(s(s(s(s(s(s(s(s(n0)))))))))))))) ).
+fof(c_0_53,axiom,p(s(s(n0)),s(s(s(s(s(s(s(s(s(s(s(s(n0))))))))))))) ).
+fof(c_0_54,axiom,p(s(s(n0)),s(s(s(s(s(s(s(s(s(s(s(n0)))))))))))) ).
+fof(c_0_55,axiom,p(s(s(n0)),s(s(s(s(s(s(s(s(s(s(n0))))))))))) ).
+fof(c_0_56,axiom,p(s(s(n0)),s(s(s(s(s(s(s(s(s(n0)))))))))) ).
+fof(c_0_57,axiom,p(s(s(n0)),s(s(s(s(s(s(s(s(n0))))))))) ).
+fof(c_0_58,axiom,p(s(s(n0)),s(s(s(s(s(s(s(n0)))))))) ).
+fof(c_0_59,axiom,p(s(s(n0)),s(s(s(s(s(s(n0))))))) ).
+fof(c_0_60,axiom,p(s(s(n0)),s(s(s(s(s(n0)))))) ).
+fof(c_0_61,axiom,p(s(s(n0)),s(s(s(s(n0))))) ).
+fof(c_0_62,axiom,p(s(s(n0)),s(s(s(n0)))) ).
+fof(c_0_63,axiom,p(n0,s(s(n0))) ).
+fof(c_0_64,axiom,~ p(s(n0),n0) ).
+fof(c_0_65,axiom,p(n0,s(s(s(s(s(s(s(s(s(s(s(s(s(s(n0))))))))))))))) ).
+fof(c_0_66,axiom,p(n0,s(s(s(s(s(s(s(s(s(s(s(s(s(n0)))))))))))))) ).
+fof(c_0_67,axiom,p(n0,s(s(s(s(s(s(s(s(s(s(s(s(n0))))))))))))) ).
+fof(c_0_68,axiom,p(n0,s(s(s(s(s(s(s(s(s(s(s(n0)))))))))))) ).
+fof(c_0_69,axiom,p(n0,s(s(s(s(s(s(s(s(s(s(n0))))))))))) ).
+fof(c_0_70,axiom,p(n0,s(s(s(s(s(s(s(s(s(n0)))))))))) ).
+fof(c_0_71,axiom,p(n0,s(s(s(s(s(s(s(s(n0))))))))) ).
+fof(c_0_72,axiom,p(n0,s(s(s(s(s(s(s(n0)))))))) ).
+fof(c_0_73,axiom,p(s(s(s(s(s(s(s(s(s(s(n0)))))))))),n0) ).
+fof(c_0_74,axiom,p(n0,s(s(s(s(s(s(n0))))))) ).
+fof(c_0_75,axiom,p(s(s(s(s(s(s(s(s(n0)))))))),n0) ).
+fof(c_0_76,axiom,p(n0,s(s(s(s(s(n0)))))) ).
+fof(c_0_77,axiom,p(s(s(s(s(s(s(n0)))))),n0) ).
+fof(c_0_78,axiom,p(n0,s(s(s(s(n0))))) ).
+fof(c_0_79,axiom,p(s(s(s(s(n0)))),n0) ).
+fof(c_0_80,axiom,p(n0,s(s(s(n0)))) ).
+fof(c_0_81,axiom,p(s(s(n0)),n0) ).
+fof(c_0_82,axiom,p(n0,s(n0)) ).

@@ -1,0 +1,204 @@
+<HTML>
+<HEAD>
+<TITLE> Separate Domains </TITLE>
+</HEAD>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Pain.jpg';
+  images[1]     = new Image();
+  images[1].src = 'TypeConflicts.png';
+  images[2]     = new Image();
+  images[2].src = 'Promotion.png';
+  images[3]     = new Image();
+  images[3].src = 'DT.png';
+  images[4]     = new Image();
+  images[4].src = 'GarfieldProblem.png';
+  images[5]     = new Image();
+  images[5].src = 'GarfieldFriends.png';
+  images[6]     = new Image();
+  images[6].src = 'PeoplePlayPiano.jpg';
+  images[7]     = new Image();
+  images[7].src = 'PeopleCount.png';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Separate Domains </H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME='image' SRC="Promotion.png" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<A HREF="" onClick="hideshow('pain');putImage(0);return false;"><H3> Various Types of Pain </H3></A>
+<SPAN ID="pain" style="display:none">
+<UL>
+<LI> For each symbol <TT>f</TT> with argument types <TT>T<SUB>i</SUB></TT>,
+     <TT>T<SUB>i</SUB></TT> interpreted in <TT>D<SUB>i</SUB></TT><BR>
+     <UL>
+     <LI> Define <TT>f'</TT> with argument types <TT>D<SUB>i</SUB></TT>
+     </UL>
+<LI> Avoid <TT>f'</TT> using <TT>f</TT> with argument types <TT>D<SUB>i</SUB></TT>
+     <A HREF="" onClick="putImage(1);return false">??? - not well typed</A>
+<LI> For each type <TT>T</TT> in the input interpreted in the domain <TT>D</TT>
+     <UL>
+     <LI> Define a "<A HREF="" onClick="putImage(2);return false">type promotion</A>" bijection 
+          <TT>D2T</TT>, <TT>D &rarr; T</TT>
+     <LI> Define <TT>f(D2T(d<SUB>1</SUB>),...D2T(d<SUB>n</SUB>))</TT>
+     <LI> <TT>D2T(d<SUB>i</SUB>)</TT> are never "evaluated" ... what a
+          <A HREF="" onClick="putImage(3);return false">pain</A>
+     </UL>
+</UL>
+</SPAN>
+
+<H3> Format for Separate Domains with Promotion Functions </H3>
+<UL>
+<LI> The <A HREF="" onClick="putImage(4);return false">Garfield problem</A>
+<LI> Keep <A HREF="" onClick="hideshow('p6');return false;">problem types</A>
+     <SPAN ID="p6" style="display:none">
+     <PRE>
+tff(human_type,type,      human: $tType ).
+tff(cat_type,type,        cat: $tType ).
+tff(jon_decl,type,        jon: human ).
+tff(garfield_decl,type,   garfield: cat ).
+tff(arlene_decl,type,     arlene: cat ).
+tff(nermal_decl,type,     nermal: cat ).
+tff(loves_decl,type,      loves: cat > cat ).
+tff(owns_decl,type,       owns: ( human * cat ) > $o ). </PRE>
+     </SPAN>
+<LI> Declare <A HREF="" onClick="hideshow('p1');return false;">domain types and 
+     promotion functions</A>
+     <SPAN ID="p1" style="display:none">
+     <PRE>
+tff(d_human_type,type,    d_human: $tType ).
+tff(d_cat_type,type,      d_cat: $tType ).
+tff(d2human_decl,type,    d2human: d_human > human ).
+tff(d2cat_decl,type,      d2cat: d_cat > cat ). </PRE>
+     </SPAN>
+<LI> Declare <A HREF="" onClick="hideshow('p2');return false;">domain elements</A> 
+     <SPAN ID="p2" style="display:none">
+     <PRE>
+tff(d_jon_decl,type,      d_jon: d_human ).
+tff(d_garfield_decl,type, d_garfield: d_cat ).
+tff(d_arlene_decl,type,   d_arlene: d_cat ).
+tff(d_nermal_decl,type,   d_nermal: d_cat ). </PRE>
+     </SPAN>
+<LI> New role <A HREF="" onClick="hideshow('p_interpretation');return false;">
+     <TT>interpretation</TT></A>
+     <SPAN ID="p_interpretation" style="display:none">
+     <PRE>
+tff(garfield,interpretation, </PRE>
+     </SPAN>
+<LI> Specify <A HREF="" onClick="hideshow('p_domains');return false;">domains</A>
+     <SPAN ID="p_domains" style="display:none">
+     <PRE>
+( ! [H: human] : ? [DH: d_human] : H = d2human(DH)
+& ! [DH: d_human] : ( DH = d_jon )
+& ! [DH1: d_human,DH2: d_human] :
+    ( d2human(DH1) = d2human(DH2) => DH1 = DH2 )
+& ! [C: cat] : ? [DC: d_cat] : C = d2cat(DC)
+& ! [DC: d_cat]: 
+    ( DC = d_garfield | DC = d_arlene | DC = d_nermal )
+& $distinct(d_garfield,d_arlene,d_nermal)
+& ! [DC1: d_cat,DC2: d_cat] : 
+    ( d2cat(DC1) = d2cat(DC2) => DC1 = DC2 ) ) </PRE>
+     </SPAN>
+<LI> Interpret <A HREF="" onClick="hideshow('p4');return false;">functions</A>
+     <SPAN ID="p4" style="display:none">
+     <PRE>
+( jon = d2human(d_jon)
+& garfield = d2cat(d_garfield)
+& arlene = d2cat(d_arlene)
+& nermal = d2cat(d_nermal)
+& loves(d2cat(d_garfield)) = d2cat(d_garfiel)d
+& loves(d2cat(d_arlene)) = d2cat(d_garfield)
+& loves(d2cat(d_nermal)) = d2cat(d_garfield)) ) </PRE>
+     </SPAN>
+<LI> Interpret <A HREF="" onClick="hideshow('p5');return false;">predicates</A>
+     <SPAN ID="p5" style="display:none">
+     <PRE>
+( owns(d2human(d_jon),d2cat(d_garfield))
+& ~ owns(d2human(d_jon),d2cat(d_arlene))
+& ~ owns(d2human(d_jon),d2cat(d_nermal)) ) </PRE>
+     </SPAN>
+</UL>
+
+<H3>Example - 
+<A HREF="" onClick="hideshow('exampleCompact');putImage(5);return false;">
+Jon Owns Garfield's Lovers - Finite Countermodel - Compact </A> </H3>
+<SPAN ID="exampleCompact" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Jon Owns Garfield's Lovers
+     <TH WIDTH=50%> Finite Countermodel - Compact
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/TFF_Finite.p"-->
+</PRE>
+     <TD>
+<PRE>
+<!--#include file="Examples/TFF_Finite_Compact.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>Example -
+<A HREF="" onClick="hideshow('examplePeano');putImage(6);return false;">
+Descendants Play the Peano - Infinite Term Model </A> </H3>
+<SPAN ID="examplePeano" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Descendants Play the Peano
+     <TH WIDTH=50%> Infinite Term Model
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/TFF_Infinite.p"-->
+</PRE>
+     <TD>
+<PRE>
+<!--#include file="Examples/TFF_Peano.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>Example - 
+<A HREF="" onClick="hideshow('exampleInt');putImage(7);return false;">
+Descendants Count Forever - Infinite Integer Model </A> </H3>
+<SPAN ID="exampleInt" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Descendants Count Forever
+     <TH WIDTH=50%> Infinite Integer Model
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/TFF_Infinite.p"-->
+</PRE>
+     <TD>
+<PRE>
+<!--#include file="Examples/TFF_Integer.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

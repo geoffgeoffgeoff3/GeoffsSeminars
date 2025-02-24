@@ -1,0 +1,43 @@
+fof(ax1,conjecture,! [U] : ! [V] : ( artifact(U,V) => object(U,V) ) ).
+fof(ax2,conjecture,! [U] : ! [V] : ( instrumentality(U,V) => artifact(U,V) ) ).
+fof(ax3,conjecture,! [U] : ! [V] : ( furniture(U,V) => instrumentality(U,V) ) ).
+fof(ax4,conjecture,! [U] : ! [V] : ( table(U,V) => furniture(U,V) ) ).
+fof(ax5,conjecture,! [U] : ! [V] : ( eventuality(U,V) => unisex(U,V) ) ).
+fof(ax6,conjecture,! [U] : ! [V] : ( eventuality(U,V) => nonexistent(U,V) ) ).
+fof(ax7,conjecture,! [U] : ! [V] : ( eventuality(U,V) => specific(U,V) ) ).
+fof(ax8,conjecture,! [U] : ! [V] : ( eventuality(U,V) => thing(U,V) ) ).
+fof(ax9,conjecture,! [U] : ! [V] : ( event(U,V) => eventuality(U,V) ) ).
+fof(ax10,conjecture,! [U] : ! [V] : ( sit(U,V) => event(U,V) ) ).
+fof(ax11,conjecture,! [U] : ! [V] : ( object(U,V) => unisex(U,V) ) ).
+fof(ax12,conjecture,! [U] : ! [V] : ( object(U,V) => impartial(U,V) ) ).
+fof(ax13,conjecture,! [U] : ! [V] : ( object(U,V) => nonliving(U,V) ) ).
+fof(ax14,conjecture,! [U] : ! [V] : ( object(U,V) => entity(U,V) ) ).
+fof(ax15,conjecture,! [U] : ! [V] : ( substance_matter(U,V) => object(U,V) ) ).
+fof(ax16,conjecture,! [U] : ! [V] : ( food(U,V) => substance_matter(U,V) ) ).
+fof(ax17,conjecture,! [U] : ! [V] : ( meat(U,V) => food(U,V) ) ).
+fof(ax18,conjecture,! [U] : ! [V] : ( burger(U,V) => meat(U,V) ) ).
+fof(ax19,conjecture,! [U] : ! [V] : ( hamburger(U,V) => burger(U,V) ) ).
+fof(ax20,conjecture,! [U] : ! [V] : ( three(U,V) => group(U,V) ) ).
+fof(ax21,conjecture,! [U] : ! [V] : ( set(U,V) => multiple(U,V) ) ).
+fof(ax22,conjecture,! [U] : ! [V] : ( group(U,V) => set(U,V) ) ).
+fof(ax23,conjecture,! [U] : ! [V] : ( man(U,V) => male(U,V) ) ).
+fof(ax24,conjecture,! [U] : ! [V] : ( human_person(U,V) => animate(U,V) ) ).
+fof(ax25,conjecture,! [U] : ! [V] : ( human_person(U,V) => human(U,V) ) ).
+fof(ax26,conjecture,! [U] : ! [V] : ( organism(U,V) => living(U,V) ) ).
+fof(ax27,conjecture,! [U] : ! [V] : ( organism(U,V) => impartial(U,V) ) ).
+fof(ax28,conjecture,! [U] : ! [V] : ( entity(U,V) => existent(U,V) ) ).
+fof(ax29,conjecture,! [U] : ! [V] : ( entity(U,V) => specific(U,V) ) ).
+fof(ax30,conjecture,! [U] : ! [V] : ( thing(U,V) => singleton(U,V) ) ).
+fof(ax31,conjecture,! [U] : ! [V] : ( entity(U,V) => thing(U,V) ) ).
+fof(ax32,conjecture,! [U] : ! [V] : ( organism(U,V) => entity(U,V) ) ).
+fof(ax33,conjecture,! [U] : ! [V] : ( human_person(U,V) => organism(U,V) ) ).
+fof(ax34,conjecture,! [U] : ! [V] : ( man(U,V) => human_person(U,V) ) ).
+fof(ax35,conjecture,! [U] : ! [V] : ( guy(U,V) => man(U,V) ) ).
+fof(ax36,conjecture,! [U] : ! [V] : ( animate(U,V) => ~ nonliving(U,V) ) ).
+fof(ax37,conjecture,! [U] : ! [V] : ( existent(U,V) => ~ nonexistent(U,V) ) ).
+fof(ax38,conjecture,! [U] : ! [V] : ( nonliving(U,V) => ~ living(U,V) ) ).
+fof(ax39,conjecture,! [U] : ! [V] : ( singleton(U,V) => ~ multiple(U,V) ) ).
+fof(ax40,conjecture,! [U] : ! [V] : ( unisex(U,V) => ~ male(U,V) ) ).
+fof(ax41,conjecture,! [U] : ! [V] : ( three(U,V) <=> ? [W] : ( member(U,W,V) & ? [X] : ( member(U,X,V) & X != W & ? [Y] : ( member(U,Y,V) & Y != X & Y != W & ! [Z] : ( member(U,Z,V) => ( Z = Y | Z = X | Z = W ) ) ) ) ) ) ).
+fof(ax42,conjecture,! [U] : ~ ( ? [V] : member(U,V,V) ) ).
+fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ( ! [W] : ( member(U,W,V) => ? [X] : ? [Y] : ( table(U,X) & ! [Z] : ( member(U,Z,Y) => ? [X1] : ( event(U,X1) & agent(U,X1,W) & present(U,X1) & sit(U,X1) & at(U,X1,X) & with(U,X1,Z) ) ) & group(U,Y) & ! [X2] : ( member(U,X2,Y) => hamburger(U,X2) ) ) ) & three(U,V) & group(U,V) & ! [X3] : ( member(U,X3,V) => ( guy(U,X3) & young(U,X3) ) ) ) ) ) )).

@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE> The Analysis </TITLE>
+</HEAD>
+<BODY ALIGN-JUSTIFY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER>The Analysis</H1>
+
+<A HREF="https://tptp.org/cgi-bin/SystemOnTPTPFormReply?SubmitButton=ProcessSolution&ProblemSource=FORMULAE&FORMULAEProblem=fof(a0,axiom, %3F [X] : ( lives(X) %26 killed(X,agatha) ) ).  fof(a1_1,axiom, ( lives(agatha) %26 lives(butler) %26 lives(charles) ) ).  fof(a1_2,axiom, ! [X] : ( lives(X) => ( X = agatha | X = butler | X = charles ) ) ).  fof(a2_1,axiom, ! [X,Y] : ( killed(X,Y) => hates(X,Y) ) ).  fof(a2_2,axiom, ! [X,Y] : ( killed(X,Y) => ~ richer(X,Y) ) ).  fof(a3,axiom, ! [X] : ( hates(agatha,X) => ~ hates(charles,X) ) ).  fof(a4,axiom, ! [X] : ( X != butler => hates(agatha,X) ) ).  fof(a5,axiom, ! [X] : ( ~ richer(X,agatha) => hates(butler,X) ) ).  fof(a6,axiom, ! [X] : ( hates(agatha,X) => hates(butler,X) ) ).  fof(a7,axiom, ! [X] : %3F [Y] : ~ hates(X,Y) ).  fof(a8,axiom, agatha != butler ).  fof(a9,axiom, agatha != charles ).  fof(a10,axiom, charles != butler ).  fof(i1,plain, hates(agatha,charles), inference(bard,[status(thm)],[a4,a10]) ).  fof(i2,plain, ~ hates(charles,agatha), inference(bard,[status(thm)],[a3,i1]) ).  fof(i3,plain, ~ killed(charles,agatha), inference(bard,[status(thm)],[a2_1,i2]) ).  fof(i4,plain, hates(butler,charles), inference(bard,[status(thm)],[a5,a6,a4,a10]) ).  fof(i5,plain, ~ hates(butler,agatha), inference(bard,[status(thm)],[a7,i4]) ).  fof(i6,plain, ~ killed(butler,agatha), inference(bard,[status(thm)],[i5,a2_1]) ).  fof(i7,plain, killed(agatha,agatha), inference(bard,[status(thm)],[i3,i6,a9,a10,a0,a1_1,a1_2]) ).&System___IDV---0.0=IDV---0.0&TimeLimit___IDV---0.0=60&QuietFlag=-q01" TARGET="_blank">
+<IMG NAME='image' SRC="IDV.png" BORDER=0 ALIGN=RIGHT WIDTH=45%>
+</A>
+
+<H3>IDV Analysis</H3>
+<UL>
+<LI> Not useful at first
+<LI> Useful after GDV analysis
+</UL>
+
+<H3>GDV Analysis</H3>
+<div style="width:50%;height:33%;overflow:auto;">
+<PRE>
+SUCCESS: Derivation has unique formula names
+SUCCESS: All derived formulae have parents and inference information
+SUCCESS: Derivation is acyclic
+SUCCESS: Assumptions are propagated
+SUCCESS: Assumptions are discharged
+ RESULT: axioms.sat_model.dis - Paradox---4.0 says Satisfiable - CPU = 0.00
+SUCCESS: Leaf axioms are satisfiable
+ RESULT: i1.thm.dis - Otter---3.3 says Theorem - CPU = 1.80
+SUCCESS: i1 is a thm of a4 a10
+ RESULT: addi1.thm.dis - Otter---3.3 says Theorem - CPU = 1.85
+SUCCESS: addi1 is a thm of a3 i1
+ RESULT: i2.thm.dis - Otter---3.3 says GaveUp - CPU = 1.87
+ RESULT: i2.thm.dis - Paradox---4.0 says CounterSatisfiable - CPU = 0.00
+FAILURE: i2 is not a thm of a3 i1
+ RESULT: i3.thm.dis - Otter---3.3 says Theorem - CPU = 1.82
+SUCCESS: i3 is a thm of a2_1 i2
+ RESULT: i4.thm.dis - Otter---3.3 says Theorem - CPU = 1.85
+SUCCESS: i4 is a thm of a10 a5 a6 a4
+ RESULT: i5.thm.dis - Otter---3.3 says GaveUp - CPU = 1.88
+ RESULT: i5.thm.dis - Paradox---4.0 says CounterSatisfiable - CPU = 0.00
+FAILURE: i5 is not a thm of a7 i4
+ RESULT: i6.thm.dis - Otter---3.3 says Theorem - CPU = 1.92
+SUCCESS: i6 is a thm of i5 a2_1
+ RESULT: i7.thm.dis - Otter---3.3 says Theorem - CPU = 1.86
+SUCCESS: i7 is a thm of i3 i6 a9 a10 a0 a1_1 a1_2
+CPUTIME: 18.44
+FAILURE: Not verifiedSZS status NotVerified </PRE>
+</DIV>
+
+<UL>
+<LI> <STRONG><TT>i2</TT> is unsound</STRONG>.
+     The correct inference is <TT>~ hates(charles,charles)</TT>
+<LI> <STRONG><TT>i5</TT> is unsound</STRONG>.
+     A sound inference is <TT>~ hates(butler,butler)</TT> from <TT>a4</TT>, 
+     <TT>a6</TT>, <TT>a7</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

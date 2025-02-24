@@ -1,0 +1,48 @@
+fof(f1,axiom,! [X0] : ! [X1] : join(X0,X1) = join(X1,X0) ).
+fof(f2,axiom,! [X0] : ! [X1] : ! [X2] : join(X0,join(X1,X2)) = join(join(X0,X1),X2) ).
+fof(f3,axiom,! [X0] : ! [X1] : join(complement(join(complement(X0),complement(X1))),complement(join(complement(X0),X1))) = X0 ).
+fof(f4,axiom,! [X0] : ! [X1] : complement(join(complement(X0),complement(X1))) = meet(X0,X1) ).
+fof(f5,axiom,! [X0] : ! [X1] : ! [X2] : composition(X0,composition(X1,X2)) = composition(composition(X0,X1),X2) ).
+fof(f6,axiom,! [X0] : composition(X0,one) = X0 ).
+fof(f7,axiom,! [X0] : ! [X1] : ! [X2] : composition(join(X0,X1),X2) = join(composition(X0,X2),composition(X1,X2)) ).
+fof(f8,axiom,! [X0] : converse(converse(X0)) = X0 ).
+fof(f9,axiom,! [X0] : ! [X1] : converse(join(X0,X1)) = join(converse(X0),converse(X1)) ).
+fof(f10,axiom,! [X0] : ! [X1] : converse(composition(X0,X1)) = composition(converse(X1),converse(X0)) ).
+fof(f11,axiom,! [X0] : ! [X1] : complement(X1) = join(composition(converse(X0),complement(composition(X0,X1))),complement(X1)) ).
+fof(f12,axiom,! [X0] : top = join(X0,complement(X0)) ).
+fof(f13,axiom,! [X0] : zero = meet(X0,complement(X0)) ).
+fof(f14,axiom,! [X0] : ! [X1] : join(X0,X1) = join(X1,X0) ).
+fof(f15,axiom,! [X2] : ! [X0] : ! [X1] : join(X0,join(X1,X2)) = join(join(X0,X1),X2) ).
+fof(f16,axiom,! [X0] : ! [X1] : join(complement(join(complement(X0),complement(X1))),complement(join(complement(X0),X1))) = X0 ).
+fof(f17,axiom,! [X0] : ! [X1] : complement(join(complement(X0),complement(X1))) = meet(X0,X1) ).
+fof(f18,axiom,! [X2] : ! [X0] : ! [X1] : composition(X0,composition(X1,X2)) = composition(composition(X0,X1),X2) ).
+fof(f19,axiom,! [X0] : composition(X0,one) = X0 ).
+fof(f20,axiom,! [X2] : ! [X0] : ! [X1] : composition(join(X0,X1),X2) = join(composition(X0,X2),composition(X1,X2)) ).
+fof(f21,axiom,! [X0] : converse(converse(X0)) = X0 ).
+fof(f22,axiom,! [X0] : ! [X1] : converse(join(X0,X1)) = join(converse(X0),converse(X1)) ).
+fof(f23,axiom,! [X0] : ! [X1] : converse(composition(X0,X1)) = composition(converse(X1),converse(X0)) ).
+fof(f24,axiom,! [X0] : ! [X1] : complement(X1) = join(composition(converse(X0),complement(composition(X0,X1))),complement(X1)) ).
+fof(f25,axiom,! [X0] : top = join(X0,complement(X0)) ).
+fof(f26,axiom,! [X0] : zero = meet(X0,complement(X0)) ).
+fof(f27,axiom,! [X0] : zero = complement(join(complement(X0),complement(complement(X0)))) ).
+fof(c_49,axiom,! [X0] : ! [X1] : join(X0,X1) = join(X1,X0) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : join(join(X0,X1),X2) = join(X0,join(X1,X2)) ).
+fof(c_51,axiom,! [X0] : ! [X1] : join(complement(join(complement(X0),complement(X1))),complement(join(complement(X0),X1))) = X0 ).
+fof(c_52,axiom,! [X0] : ! [X1] : ! [X2] : composition(composition(X0,X1),X2) = composition(X0,composition(X1,X2)) ).
+fof(c_53,axiom,! [X0] : composition(X0,one) = X0 ).
+fof(c_54,axiom,! [X0] : ! [X1] : ! [X2] : join(composition(X0,X1),composition(X2,X1)) = composition(join(X0,X2),X1) ).
+fof(c_55,axiom,! [X0] : converse(converse(X0)) = X0 ).
+fof(c_56,axiom,! [X0] : ! [X1] : join(converse(X0),converse(X1)) = converse(join(X0,X1)) ).
+fof(c_57,axiom,! [X0] : ! [X1] : composition(converse(X0),converse(X1)) = converse(composition(X1,X0)) ).
+fof(c_58,axiom,! [X0] : ! [X1] : join(composition(converse(X0),complement(composition(X0,X1))),complement(X1)) = complement(X1) ).
+fof(c_59,axiom,! [X0] : join(X0,complement(X0)) = top ).
+fof(c_60,axiom,! [X0] : complement(join(complement(X0),complement(complement(X0)))) = zero ).
+fof(c_73,axiom,! [X0] : ! [X1] : join(complement(join(complement(X0),X1)),complement(join(complement(X0),complement(X1)))) = X0 ).
+fof(c_74,axiom,! [X0] : ! [X1] : join(complement(X0),composition(converse(X1),complement(composition(X1,X0)))) = complement(X0) ).
+fof(c_101,axiom,complement(top) = zero ).
+fof(c_102,axiom,! [X0] : X0 = X0 ).
+fof(c_103,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_104,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | join(X0,X2) = join(X1,X3) ) ).
+fof(c_105,axiom,! [X0] : ! [X1] : ( X0 != X1 | complement(X0) = complement(X1) ) ).
+fof(c_106,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | composition(X0,X2) = composition(X1,X3) ) ).
+fof(c_107,axiom,! [X0] : ! [X1] : ( X0 != X1 | converse(X0) = converse(X1) ) ).

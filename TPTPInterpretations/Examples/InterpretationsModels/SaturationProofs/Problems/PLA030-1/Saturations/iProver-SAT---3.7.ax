@@ -1,0 +1,30 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ( ~ differ(X0,X1) | differ(X1,X0) ) ).
+fof(c_50,axiom,differ(a,b) ).
+fof(c_51,axiom,differ(a,c) ).
+fof(c_52,axiom,differ(a,d) ).
+fof(c_53,axiom,differ(a,table) ).
+fof(c_54,axiom,differ(b,c) ).
+fof(c_55,axiom,differ(b,d) ).
+fof(c_56,axiom,differ(b,table) ).
+fof(c_57,axiom,differ(c,d) ).
+fof(c_58,axiom,differ(c,table) ).
+fof(c_59,axiom,differ(d,table) ).
+fof(c_60,axiom,holds(on(a,table),s0) ).
+fof(c_61,axiom,holds(on(b,table),s0) ).
+fof(c_62,axiom,holds(on(c,d),s0) ).
+fof(c_63,axiom,holds(on(d,table),s0) ).
+fof(c_64,axiom,holds(clear(a),s0) ).
+fof(c_65,axiom,holds(clear(b),s0) ).
+fof(c_66,axiom,holds(clear(c),s0) ).
+fof(c_67,axiom,holds(empty,s0) ).
+fof(c_68,axiom,! [X0] : holds(clear(table),X0) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ holds(X0,X1) | ~ holds(X2,X1) | holds(and(X0,X2),X1) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( ~ holds(clear(X0),X1) | ~ differ(X0,table) | ~ holds(empty,X1) | holds(holding(X0),do(pickup(X0),X1)) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ holds(on(X0,X1),X2) | ~ holds(clear(X0),X2) | ~ holds(empty,X2) | holds(clear(X1),do(pickup(X0),X2)) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ holds(on(X0,X1),X2) | ~ differ(X0,X3) | holds(on(X0,X1),do(pickup(X3),X2)) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ holds(clear(X0),X1) | ~ differ(X0,X2) | holds(clear(X0),do(pickup(X2),X1)) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ holds(clear(X0),X1) | ~ holds(holding(X2),X1) | holds(empty,do(putdown(X2,X0),X1)) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ holds(clear(X0),X1) | ~ holds(holding(X2),X1) | holds(on(X2,X0),do(putdown(X2,X0),X1)) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ holds(clear(X0),X1) | ~ holds(holding(X2),X1) | holds(clear(X2),do(putdown(X2,X0),X1)) ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ holds(on(X0,X1),X2) | holds(on(X0,X1),do(putdown(X3,X4),X2)) ) ).
+fof(c_78,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ holds(clear(X0),X1) | ~ differ(X0,X2) | holds(clear(X0),do(putdown(X3,X2),X1)) ) ).

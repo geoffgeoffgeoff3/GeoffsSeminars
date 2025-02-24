@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<TITLE> TPTP vs Others </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> TPTP vs Others </H1>
+
+<TABLE>
+<TR> <TD> <H3> XML </H3>
+     <TD> <H3> SMT2 </H3>
+     <TD> <H3> TPTP </H3>
+<TR VALIGN=TOP>
+     <TD> <SMALL><PRE>
+&lt;scl:formula  xmlns:scl="http://scluripart">
+  &lt;scl:quantifier scl:name="exists" 
+  scl:variable="x">
+     &lt;scl:connective scl:name="implies">
+        &lt;scl:predicate scl:name="p">
+            &lt;scl:term scl:name="X"/>
+            &lt;scl:term scl:name="a"/>
+        &lt;/scl:predicate>  
+        &lt;scl:predicate scl:name="equal">
+            &lt;scl:term scl:name="a"/>
+            &lt;scl:term scl:name="X"/>
+        &lt;/scl:predicate>        
+     &lt;/scl:connective>                      
+  &lt;/scl:quantifier>
+&lt;/scl:formula> </PRE></SMALL>
+     <TD> <PRE>
+(set-logic UF)
+(declare-sort sort1 0)
+(declare-fun a ( ) sort1)
+(declare-fun p ( sort1 sort1 ) Bool)
+(assert 
+    (exists ((?X sort1))
+      (=> (p ?X a)
+          (p a ?X))))
+     <TD> <PRE>
+fof(the_name,axiom,
+    ? [X] :
+      ( p(X,1)
+     => equal(X,1) ) ). </PRE>
+<TR VALIGN=TOP>
+     <TD> <H3> Pros </H3>
+          <UL>
+          <LI> Free parser with every language
+          <LI> Parsers build you a data structure
+          <LI> Extensible, without affecting tools
+          </UL>
+     <TD> <H3> Pros </H3>
+          <UL>
+          <LI> Machine readable, writable (LISP)
+          <LI> Focussed, but extensible
+          <LI> Low storage overhead
+          </UL>
+     <TD> <H3> Pros </H3>
+          <UL>
+          <LI> Human and machine readable, writable (Prolog)
+          <LI> Focussed, but extensible
+          <LI> Medium storage overhead
+          <LI> Identifiers (for proofs)
+          <LI> Formula roles (to help ATPs)
+          </UL>
+<TR VALIGN=TOP>
+     <TD> <H3> Cons </H3>
+          <UL>
+          <LI> High storage overhead
+          <LI> Not focussed on logic - too generic
+          </UL>
+     <TD> <H3> Cons </H3>
+          <UL>
+          <LI> Not really human readable, writable
+          <LI> No unsorted variant
+          <LI> No formula identifiers (for proofs)
+          <LI> No formula roles (to help ATPs)
+          </UL>
+     <TD> <H3> Cons </H3>
+          <UL>
+          <LI> Medium storage overhead
+          <LI> Too verbose (for some)
+          </UL>
+</TABLE>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

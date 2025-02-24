@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE> Containers in the Cloud </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var nextIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'ContainersInCloud.png';
+  images[1]     = new Image();
+  images[1].src = 'KubernetesInCloud.png';
+  images[2]     = new Image();
+  images[2].src = 'StarExecCloud.png';
+
+  function nextImage (whichImage) {
+      nextIndex = (nextIndex + 1) % images.length;
+      document.images[whichImage].src = images[nextIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+Containers in the Cloud
+</H1>
+
+<A HREF="" onClick="nextImage('main_image');return false">
+<IMG NAME="main_image" SRC="ContainersInCloud.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> Containers </H3>
+<UL>
+<LI> Encapsulate applications and dependencies in a <EM>image</EM>
+<LI> Execute an image in a <EM>container</EM>
+<LI> Share the host OS kernel
+<LI> Flexible, portable, secure, observable
+<LI> Containerisation platforms: Docker, Podman, LXD, and rkt
+</UL>
+
+<H3> Clouds </H3>
+<UL>
+<LI> Cloud-native apps scale effectively, dynamically allocate resources
+<LI> One way - use containers
+<LI> Kubernetes container orchestration: deployment, scaling, management 
+</UL>
+
+<H3> StarExec in the Cloud </H3>
+<UL>
+<LI> Cloud-native through containerisation and Kubernetes
+<LI> Open distribution model
+<LI> Deployable by developers, users 
+<LI> Make ATP easily usable by anyone, anywhere
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

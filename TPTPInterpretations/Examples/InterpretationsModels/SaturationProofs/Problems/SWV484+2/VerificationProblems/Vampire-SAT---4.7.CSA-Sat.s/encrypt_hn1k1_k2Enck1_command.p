@@ -1,0 +1,2 @@
+include('Saturations/SWV484+2/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(encrypt_hn1k1_k2Enck1_command,conjecture,! [X14] : ! [X12] : ! [X11] : ! [X9] : ! [A] : ! [B] : ! [C] : ! [D] : ! [E] : ! [F] : ! [G] : ! [H] : ! [I] : ! [J] : ! [K] : ! [L] : ! [M] : ! [N] : ! [O] : ! [P] : ! [Q] : ! [R] : ! [S] : ! [T] : ! [U] : ! [X5] : ! [X4] : ! [X3] : ! [X1] : ! [X0] : ( p(n1,X0,X1,n1,X3,X4,X5,U,T,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,D,C,B,A,X9,n1,X11,X12,n0,X14) => p(n1,X0,X1,n1,X3,X4,X5,U,T,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,D,C,B,A,X9,n1,X11,X12,n1,X14) ) ).

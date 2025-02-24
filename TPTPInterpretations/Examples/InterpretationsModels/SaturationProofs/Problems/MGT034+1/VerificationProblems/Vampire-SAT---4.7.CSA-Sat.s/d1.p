@@ -1,0 +1,2 @@
+include('Saturations/MGT034+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(d1,conjecture,! [E] : ! [Tc] : ( ( environment(E) & Tc = critical_point(E) ) => ( ~ greater(growth_rate(efficient_producers,Tc),growth_rate(first_movers,Tc)) & ! [T] : ( ( subpopulations(first_movers,efficient_producers,E,T) & greater(T,Tc) ) => greater(growth_rate(efficient_producers,T),growth_rate(first_movers,T)) ) ) ) ).

@@ -1,0 +1,551 @@
+fof(no_more_answers,axiom,? [X1] : ? [X2] : ? [X8] : ( p(X1,X2,X8) & ( ld__(X1,k) | ld__(X2,lkg) | ld__(X8,hill) ) & ( ld__(X1,h(d)) | ld__(X2,g(e,e)) | ld__(X8,k) ) & ( ld__(X1,a) | ld__(X2,b) | ld__(X8,c) ) & ( ld__(X1,g(e,e)) | ld__(X2,w) | ld__(X8,b) ) & ( ld__(X1,h(d)) | ld__(X2,g(a,c)) | ld__(X8,g(b,b)) ) & ( ld__(X1,a) | ld__(X2,a) | ld__(X8,a) ) ) ).
+fof(ld__symmetry,axiom,! [X1] : ! [X2] : ( ld__(X1,X2) => ld__(X2,X1) ) ).
+fof(ld__a_h,axiom,! [X3] : ld__(a,h(X3)) ).
+fof(ld__k_h,axiom,! [X3] : ld__(k,h(X3)) ).
+fof(ld__g,axiom,! [X3] : ! [X4] : ! [X6] : ! [X7] : ( ( ld__(X3,X4) | ld__(X6,X7) ) => ld__(g(X3,X6),g(X4,X7)) ) ).
+fof(ld__a_g,axiom,! [X3] : ! [X4] : ld__(a,g(X3,X4)) ).
+fof(ld__g_h,axiom,! [X3] : ! [X4] : ! [X5] : ld__(h(X5),g(X3,X4)) ).
+fof(ld__k_b,axiom,ld__(k,b) ).
+fof(ld__hill_b,axiom,ld__(hill,b) ).
+fof(ld__h,axiom,! [X3] : ! [X4] : ( ld__(X3,X4) => ld__(h(X3),h(X4)) ) ).
+fof(hgg,axiom,p(h(d),g(a,c),g(b,b)) ).
+fof(ld__k_g,axiom,! [X3] : ! [X4] : ld__(k,g(X3,X4)) ).
+fof(ld__k_a,axiom,ld__(k,a) ).
+fof(ld__k_c,axiom,ld__(k,c) ).
+fof(gwb,axiom,p(g(e,e),w,b) ).
+fof(ld__w_b,axiom,ld__(w,b) ).
+fof(ld__w_g,axiom,! [X3] : ! [X4] : ld__(w,g(X3,X4)) ).
+fof(ld__hill_c,axiom,ld__(hill,c) ).
+fof(ld__a_pet,axiom,! [X3] : ld__(a,pet(X3)) ).
+fof(ld__lkg_b,axiom,ld__(lkg,b) ).
+fof(ld__e_c,axiom,ld__(e,c) ).
+fof(abc,axiom,p(a,b,c) ).
+fof(ld__c_g,axiom,! [X3] : ! [X4] : ld__(c,g(X3,X4)) ).
+fof(ld__b_c,axiom,ld__(b,c) ).
+fof(ld__a_b,axiom,ld__(a,b) ).
+fof(ld__w_a,axiom,ld__(w,a) ).
+fof(ld__g_pet,axiom,! [X3] : ! [X4] : ! [X5] : ld__(pet(X5),g(X3,X4)) ).
+fof(ld__h_pet,axiom,! [X3] : ! [X5] : ld__(pet(X5),h(X3)) ).
+fof(ld__lkg_g,axiom,! [X3] : ! [X4] : ld__(lkg,g(X3,X4)) ).
+fof(ld__lkg_h,axiom,! [X3] : ld__(lkg,h(X3)) ).
+fof(ld__hill_g,axiom,! [X3] : ! [X4] : ld__(hill,g(X3,X4)) ).
+fof(ld__hill_h,axiom,! [X3] : ld__(hill,h(X3)) ).
+fof(ld__lilly_g,axiom,! [X3] : ! [X4] : ld__(lilly,g(X3,X4)) ).
+fof(ld__lilly_h,axiom,! [X3] : ld__(lilly,h(X3)) ).
+fof(ld__b_g,axiom,! [X3] : ! [X4] : ld__(b,g(X3,X4)) ).
+fof(ld__b_h,axiom,! [X3] : ld__(b,h(X3)) ).
+fof(ld__c_h,axiom,! [X3] : ld__(c,h(X3)) ).
+fof(ld__a_c,axiom,ld__(a,c) ).
+fof(ld__e_g,axiom,! [X3] : ! [X4] : ld__(e,g(X3,X4)) ).
+fof(ld__e_h,axiom,! [X3] : ld__(e,h(X3)) ).
+fof(ld__w_h,axiom,! [X3] : ld__(w,h(X3)) ).
+fof(ld__d_g,axiom,! [X3] : ! [X4] : ld__(d,g(X3,X4)) ).
+fof(ld__d_h,axiom,! [X3] : ld__(d,h(X3)) ).
+fof(ld__pig_g,axiom,! [X3] : ! [X4] : ld__(pig,g(X3,X4)) ).
+fof(ld__pig_h,axiom,! [X3] : ld__(pig,h(X3)) ).
+fof(ld__horse_g,axiom,! [X3] : ! [X4] : ld__(horse,g(X3,X4)) ).
+fof(ld__horse_h,axiom,! [X3] : ld__(horse,h(X3)) ).
+fof(ld__cow_g,axiom,! [X3] : ! [X4] : ld__(cow,g(X3,X4)) ).
+fof(ld__cow_h,axiom,! [X3] : ld__(cow,h(X3)) ).
+fof(ld__aparna_g,axiom,! [X3] : ! [X4] : ld__(aparna,g(X3,X4)) ).
+fof(ld__aparna_h,axiom,! [X3] : ld__(aparna,h(X3)) ).
+fof(ld__hill_pet,axiom,! [X3] : ld__(hill,pet(X3)) ).
+fof(ld__lkg_pet,axiom,! [X3] : ld__(lkg,pet(X3)) ).
+fof(ld__k_pet,axiom,! [X3] : ld__(k,pet(X3)) ).
+fof(ld__hill_a,axiom,ld__(hill,a) ).
+fof(ld__d_pet,axiom,! [X3] : ld__(d,pet(X3)) ).
+fof(ld__w_pet,axiom,! [X3] : ld__(w,pet(X3)) ).
+fof(ld__e_pet,axiom,! [X3] : ld__(e,pet(X3)) ).
+fof(ld__c_pet,axiom,! [X3] : ld__(c,pet(X3)) ).
+fof(ld__b_pet,axiom,! [X3] : ld__(b,pet(X3)) ).
+fof(hgk,axiom,p(h(d),g(e,e),k) ).
+fof(klh,axiom,p(k,lkg,hill) ).
+fof(ld__hill_k,axiom,ld__(hill,k) ).
+fof(ld__lkg_a,axiom,ld__(lkg,a) ).
+fof(ld__lilly_a,axiom,ld__(lilly,a) ).
+fof(ld__e_a,axiom,ld__(e,a) ).
+fof(ld__d_a,axiom,ld__(d,a) ).
+fof(ld__pig_a,axiom,ld__(pig,a) ).
+fof(ld__horse_a,axiom,ld__(horse,a) ).
+fof(ld__cow_a,axiom,ld__(cow,a) ).
+fof(ld__aparna_a,axiom,ld__(aparna,a) ).
+fof(aaa,axiom,p(a,a,a) ).
+fof(ld__lkg_k,axiom,ld__(lkg,k) ).
+fof(ld__lkg_hill,axiom,ld__(lkg,hill) ).
+fof(ld__lilly_k,axiom,ld__(lilly,k) ).
+fof(ld__lilly_lkg,axiom,ld__(lilly,lkg) ).
+fof(ld__lilly_hill,axiom,ld__(lilly,hill) ).
+fof(ld__pig_k,axiom,ld__(pig,k) ).
+fof(ld__pig_lkg,axiom,ld__(pig,lkg) ).
+fof(ld__pig_hill,axiom,ld__(pig,hill) ).
+fof(ld__horse_k,axiom,ld__(horse,k) ).
+fof(ld__horse_lkg,axiom,ld__(horse,lkg) ).
+fof(ld__horse_hill,axiom,ld__(horse,hill) ).
+fof(ld__cow_k,axiom,ld__(cow,k) ).
+fof(ld__cow_lkg,axiom,ld__(cow,lkg) ).
+fof(ld__cow_hill,axiom,ld__(cow,hill) ).
+fof(ld__aparna_k,axiom,ld__(aparna,k) ).
+fof(ld__aparna_lkg,axiom,ld__(aparna,lkg) ).
+fof(ld__aparna_hill,axiom,ld__(aparna,hill) ).
+fof(ld__k_e,axiom,ld__(k,e) ).
+fof(ld__k_w,axiom,ld__(k,w) ).
+fof(ld__k_d,axiom,ld__(k,d) ).
+fof(ld__lkg_c,axiom,ld__(lkg,c) ).
+fof(ld__lkg_e,axiom,ld__(lkg,e) ).
+fof(ld__lkg_w,axiom,ld__(lkg,w) ).
+fof(ld__lkg_d,axiom,ld__(lkg,d) ).
+fof(ld__hill_e,axiom,ld__(hill,e) ).
+fof(ld__hill_w,axiom,ld__(hill,w) ).
+fof(ld__hill_d,axiom,ld__(hill,d) ).
+fof(ld__lilly_b,axiom,ld__(lilly,b) ).
+fof(ld__lilly_c,axiom,ld__(lilly,c) ).
+fof(ld__lilly_e,axiom,ld__(lilly,e) ).
+fof(ld__lilly_w,axiom,ld__(lilly,w) ).
+fof(ld__lilly_d,axiom,ld__(lilly,d) ).
+fof(ld__pig_b,axiom,ld__(pig,b) ).
+fof(ld__pig_c,axiom,ld__(pig,c) ).
+fof(ld__pig_e,axiom,ld__(pig,e) ).
+fof(ld__pig_w,axiom,ld__(pig,w) ).
+fof(ld__pig_d,axiom,ld__(pig,d) ).
+fof(ld__horse_b,axiom,ld__(horse,b) ).
+fof(ld__horse_c,axiom,ld__(horse,c) ).
+fof(ld__horse_e,axiom,ld__(horse,e) ).
+fof(ld__horse_w,axiom,ld__(horse,w) ).
+fof(ld__horse_d,axiom,ld__(horse,d) ).
+fof(ld__cow_b,axiom,ld__(cow,b) ).
+fof(ld__cow_c,axiom,ld__(cow,c) ).
+fof(ld__cow_e,axiom,ld__(cow,e) ).
+fof(ld__cow_w,axiom,ld__(cow,w) ).
+fof(ld__cow_d,axiom,ld__(cow,d) ).
+fof(ld__aparna_b,axiom,ld__(aparna,b) ).
+fof(ld__aparna_c,axiom,ld__(aparna,c) ).
+fof(ld__aparna_e,axiom,ld__(aparna,e) ).
+fof(ld__aparna_w,axiom,ld__(aparna,w) ).
+fof(ld__aparna_d,axiom,ld__(aparna,d) ).
+fof(ld__e_b,axiom,ld__(e,b) ).
+fof(ld__e_w,axiom,ld__(e,w) ).
+fof(ld__w_c,axiom,ld__(w,c) ).
+fof(ld__d_b,axiom,ld__(d,b) ).
+fof(ld__d_c,axiom,ld__(d,c) ).
+fof(ld__d_e,axiom,ld__(d,e) ).
+fof(ld__d_w,axiom,ld__(d,w) ).
+fof(pet,axiom,animal(pet(aparna)) ).
+fof(cow,axiom,animal(cow) ).
+fof(horse,axiom,animal(horse) ).
+fof(pig,axiom,animal(pig) ).
+fof(lilly,axiom,flower(lilly) ).
+fof(c_0_136,axiom,! [X1] : ! [X2] : ! [X8] : ( epred1_3(X8,X2,X1) <=> ( p(X1,X2,X8) & ( ld__(X1,k) | ld__(X2,lkg) | ld__(X8,hill) ) & ( ld__(X1,h(d)) | ld__(X2,g(e,e)) | ld__(X8,k) ) & ( ld__(X1,a) | ld__(X2,b) | ld__(X8,c) ) ) ) ).
+fof(c_0_137,axiom,~ ( ? [X1] : ? [X2] : ? [X8] : ( epred1_3(X8,X2,X1) & ( ld__(X1,g(e,e)) | ld__(X2,w) | ld__(X8,b) ) & ( ld__(X1,h(d)) | ld__(X2,g(a,c)) | ld__(X8,g(b,b)) ) & ( ld__(X1,a) | ld__(X2,a) | ld__(X8,a) ) ) ) ).
+fof(c_0_138,axiom,! [X1] : ! [X2] : ! [X8] : ( ( p(X1,X2,X8) & ( ld__(X1,k) | ld__(X2,lkg) | ld__(X8,hill) ) & ( ld__(X1,h(d)) | ld__(X2,g(e,e)) | ld__(X8,k) ) & ( ld__(X1,a) | ld__(X2,b) | ld__(X8,c) ) ) => epred1_3(X8,X2,X1) ) ).
+fof(c_0_139,axiom,! [X9] : ! [X10] : ( ~ ld__(X9,X10) | ld__(X10,X9) ) ).
+fof(c_0_140,axiom,! [X46] : ld__(a,h(X46)) ).
+fof(c_0_141,axiom,! [X75] : ld__(k,h(X75)) ).
+fof(c_0_142,axiom,! [X76] : ! [X77] : ! [X78] : ( ( ~ ld__(X76,a) | ~ ld__(X76,h(d)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X76,h(d)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X76,h(d)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X76,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X76,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X76,g(e,e)) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X76,a) | ~ ld__(X76,h(d)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X76,h(d)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X76,h(d)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X76,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X76,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X77,w) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X76,a) | ~ ld__(X76,h(d)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X76,h(d)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X76,h(d)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X76,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X77,g(a,c)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X76,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X77,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) & ( ~ ld__(X78,a) | ~ ld__(X78,g(b,b)) | ~ ld__(X78,b) | ~ epred1_3(X78,X77,X76) ) ) ).
+fof(c_0_143,axiom,! [X40] : ! [X41] : ! [X42] : ! [X43] : ( ( ~ ld__(X40,X41) | ld__(g(X40,X42),g(X41,X43)) ) & ( ~ ld__(X42,X43) | ld__(g(X40,X42),g(X41,X43)) ) ) ).
+fof(c_0_144,axiom,! [X47] : ! [X48] : ld__(a,g(X47,X48)) ).
+fof(c_0_145,axiom,! [X79] : ! [X80] : ! [X81] : ( ( ~ ld__(X79,a) | ~ ld__(X79,h(d)) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X79,h(d)) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X79,h(d)) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X79,a) | ~ ld__(X80,g(e,e)) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X80,g(e,e)) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X80,g(e,e)) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X79,a) | ~ ld__(X81,k) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X81,k) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X81,k) | ~ ld__(X79,k) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X79,a) | ~ ld__(X79,h(d)) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X79,h(d)) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X79,h(d)) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X79,a) | ~ ld__(X80,g(e,e)) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X80,g(e,e)) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X80,g(e,e)) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X79,a) | ~ ld__(X81,k) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X81,k) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X81,k) | ~ ld__(X80,lkg) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X79,a) | ~ ld__(X79,h(d)) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X79,h(d)) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X79,h(d)) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X79,a) | ~ ld__(X80,g(e,e)) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X80,g(e,e)) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X80,g(e,e)) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X79,a) | ~ ld__(X81,k) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X80,b) | ~ ld__(X81,k) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) & ( ~ ld__(X81,c) | ~ ld__(X81,k) | ~ ld__(X81,hill) | ~ p(X79,X80,X81) | epred1_3(X81,X80,X79) ) ) ).
+fof(c_0_146,axiom,! [X2] : ! [X1] : ( ld__(X2,X1) | ~ ld__(X1,X2) ) ).
+fof(c_0_147,axiom,! [X1] : ld__(a,h(X1)) ).
+fof(c_0_148,axiom,! [X1] : ld__(k,h(X1)) ).
+fof(c_0_149,axiom,! [X61] : ! [X62] : ! [X63] : ld__(h(X63),g(X61,X62)) ).
+fof(c_0_150,axiom,ld__(k,b) ).
+fof(c_0_151,axiom,ld__(hill,b) ).
+fof(c_0_152,axiom,! [X44] : ! [X45] : ( ~ ld__(X44,X45) | ld__(h(X44),h(X45)) ) ).
+fof(c_0_153,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,h(d)) | ~ ld__(X1,g(e,e)) | ~ epred1_3(X2,X3,X1) ) ).
+fof(c_0_154,axiom,! [X3] : ! [X1] : ! [X4] : ! [X2] : ( ld__(g(X3,X1),g(X4,X2)) | ~ ld__(X1,X2) ) ).
+fof(c_0_155,axiom,! [X1] : ! [X2] : ld__(a,g(X1,X2)) ).
+fof(c_0_156,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( ld__(g(X1,X3),g(X2,X4)) | ~ ld__(X1,X2) ) ).
+fof(c_0_157,axiom,! [X2] : ! [X3] : ! [X1] : ( epred1_3(X2,X3,X1) | ~ ld__(X1,a) | ~ ld__(X2,k) | ~ ld__(X1,k) | ~ p(X1,X3,X2) ) ).
+fof(c_0_158,axiom,p(h(d),g(a,c),g(b,b)) ).
+fof(c_0_159,axiom,! [X1] : ld__(h(X1),a) ).
+fof(c_0_160,axiom,! [X1] : ld__(h(X1),k) ).
+fof(c_0_161,axiom,! [X66] : ! [X67] : ld__(k,g(X66,X67)) ).
+fof(c_0_162,axiom,! [X3] : ! [X2] : ! [X1] : ( epred1_3(X3,X2,X1) | ~ ld__(X1,a) | ~ ld__(X2,g(e,e)) | ~ ld__(X1,k) | ~ p(X1,X2,X3) ) ).
+fof(c_0_163,axiom,! [X1] : ! [X2] : ! [X3] : ld__(h(X1),g(X2,X3)) ).
+fof(c_0_164,axiom,ld__(k,a) ).
+fof(c_0_165,axiom,ld__(k,c) ).
+fof(c_0_166,axiom,! [X2] : ! [X1] : ! [X3] : ( epred1_3(X2,X1,X3) | ~ ld__(X1,b) | ~ ld__(X2,k) | ~ ld__(X2,hill) | ~ p(X3,X1,X2) ) ).
+fof(c_0_167,axiom,p(g(e,e),w,b) ).
+fof(c_0_168,axiom,ld__(b,k) ).
+fof(c_0_169,axiom,ld__(b,hill) ).
+fof(c_0_170,axiom,ld__(w,b) ).
+fof(c_0_171,axiom,! [X64] : ! [X65] : ld__(w,g(X64,X65)) ).
+fof(c_0_172,axiom,ld__(hill,c) ).
+fof(c_0_173,axiom,! [X11] : ld__(a,pet(X11)) ).
+fof(c_0_174,axiom,ld__(lkg,b) ).
+fof(c_0_175,axiom,! [X1] : ! [X2] : ( ld__(h(X1),h(X2)) | ~ ld__(X1,X2) ) ).
+fof(c_0_176,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(g(X3,X4),h(d)) | ~ ld__(g(X3,X4),a) | ~ ld__(X4,e) ) ).
+fof(c_0_177,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),a) ).
+fof(c_0_178,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(g(X3,X4),h(d)) | ~ ld__(g(X3,X4),a) | ~ ld__(X3,e) ) ).
+fof(c_0_179,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(b,b)) | ~ ld__(X1,g(e,e)) | ~ epred1_3(X2,X3,X1) ) ).
+fof(c_0_180,axiom,epred1_3(g(b,b),g(a,c),h(d)) | ~ ld__(g(b,b),k) ).
+fof(c_0_181,axiom,! [X1] : ! [X2] : ld__(k,g(X1,X2)) ).
+fof(c_0_182,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(a,c)) | ~ ld__(X1,g(e,e)) | ~ epred1_3(X3,X2,X1) ) ).
+fof(c_0_183,axiom,epred1_3(g(b,b),g(a,c),h(d)) | ~ ld__(g(a,c),g(e,e)) ).
+fof(c_0_184,axiom,ld__(e,c) ).
+fof(c_0_185,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ epred1_3(X1,X2,h(X3)) | ~ ld__(h(X3),h(d)) ) ).
+fof(c_0_186,axiom,! [X3] : ! [X2] : ! [X1] : ( epred1_3(X3,X2,X1) | ~ ld__(X1,a) | ~ ld__(X1,h(d)) | ~ ld__(X1,k) | ~ p(X1,X2,X3) ) ).
+fof(c_0_187,axiom,! [X1] : ! [X3] : ! [X2] : ( epred1_3(X1,X3,X2) | ~ ld__(X1,c) | ~ ld__(X1,k) | ~ ld__(X2,k) | ~ p(X2,X3,X1) ) ).
+fof(c_0_188,axiom,p(a,b,c) ).
+fof(c_0_189,axiom,ld__(a,k) ).
+fof(c_0_190,axiom,ld__(c,k) ).
+fof(c_0_191,axiom,! [X52] : ! [X53] : ld__(c,g(X52,X53)) ).
+fof(c_0_192,axiom,ld__(b,c) ).
+fof(c_0_193,axiom,ld__(a,b) ).
+fof(c_0_194,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,g(a,c)) | ~ ld__(X2,g(e,e)) | ~ epred1_3(X3,X1,X2) ) ).
+fof(c_0_195,axiom,epred1_3(b,w,g(e,e)) ).
+fof(c_0_196,axiom,! [X1] : ! [X2] : ld__(w,g(X1,X2)) ).
+fof(c_0_197,axiom,ld__(w,a) ).
+fof(c_0_198,axiom,! [X3] : ! [X1] : ! [X2] : ( epred1_3(X3,X1,X2) | ~ ld__(X1,b) | ~ ld__(X2,h(d)) | ~ ld__(X3,hill) | ~ p(X2,X1,X3) ) ).
+fof(c_0_199,axiom,ld__(c,hill) ).
+fof(c_0_200,axiom,! [X24] : ! [X25] : ! [X26] : ld__(pet(X26),g(X24,X25)) ).
+fof(c_0_201,axiom,! [X33] : ! [X34] : ld__(pet(X34),h(X33)) ).
+fof(c_0_202,axiom,! [X1] : ld__(a,pet(X1)) ).
+fof(c_0_203,axiom,! [X68] : ! [X69] : ld__(lkg,g(X68,X69)) ).
+fof(c_0_204,axiom,! [X72] : ld__(lkg,h(X72)) ).
+fof(c_0_205,axiom,! [X70] : ! [X71] : ld__(hill,g(X70,X71)) ).
+fof(c_0_206,axiom,! [X73] : ld__(hill,h(X73)) ).
+fof(c_0_207,axiom,! [X22] : ! [X23] : ld__(lilly,g(X22,X23)) ).
+fof(c_0_208,axiom,! [X32] : ld__(lilly,h(X32)) ).
+fof(c_0_209,axiom,! [X49] : ! [X50] : ld__(b,g(X49,X50)) ).
+fof(c_0_210,axiom,! [X51] : ld__(b,h(X51)) ).
+fof(c_0_211,axiom,! [X54] : ld__(c,h(X54)) ).
+fof(c_0_212,axiom,ld__(a,c) ).
+fof(c_0_213,axiom,! [X59] : ! [X60] : ld__(e,g(X59,X60)) ).
+fof(c_0_214,axiom,! [X58] : ld__(e,h(X58)) ).
+fof(c_0_215,axiom,! [X74] : ld__(w,h(X74)) ).
+fof(c_0_216,axiom,! [X55] : ! [X56] : ld__(d,g(X55,X56)) ).
+fof(c_0_217,axiom,! [X57] : ld__(d,h(X57)) ).
+fof(c_0_218,axiom,! [X27] : ! [X28] : ld__(pig,g(X27,X28)) ).
+fof(c_0_219,axiom,! [X35] : ld__(pig,h(X35)) ).
+fof(c_0_220,axiom,! [X20] : ! [X21] : ld__(horse,g(X20,X21)) ).
+fof(c_0_221,axiom,! [X31] : ld__(horse,h(X31)) ).
+fof(c_0_222,axiom,! [X18] : ! [X19] : ld__(cow,g(X18,X19)) ).
+fof(c_0_223,axiom,! [X30] : ld__(cow,h(X30)) ).
+fof(c_0_224,axiom,! [X16] : ! [X17] : ld__(aparna,g(X16,X17)) ).
+fof(c_0_225,axiom,! [X29] : ld__(aparna,h(X29)) ).
+fof(c_0_226,axiom,! [X2] : ! [X3] : ! [X1] : ( epred1_3(X2,X3,X1) | ~ ld__(X1,a) | ~ ld__(X2,k) | ~ ld__(X3,lkg) | ~ p(X1,X3,X2) ) ).
+fof(c_0_227,axiom,ld__(b,lkg) ).
+fof(c_0_228,axiom,! [X36] : ld__(hill,pet(X36)) ).
+fof(c_0_229,axiom,! [X38] : ld__(lkg,pet(X38)) ).
+fof(c_0_230,axiom,! [X37] : ld__(k,pet(X37)) ).
+fof(c_0_231,axiom,ld__(hill,a) ).
+fof(c_0_232,axiom,! [X14] : ld__(d,pet(X14)) ).
+fof(c_0_233,axiom,! [X39] : ld__(w,pet(X39)) ).
+fof(c_0_234,axiom,! [X15] : ld__(e,pet(X15)) ).
+fof(c_0_235,axiom,! [X13] : ld__(c,pet(X13)) ).
+fof(c_0_236,axiom,! [X12] : ld__(b,pet(X12)) ).
+fof(c_0_237,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ld__(g(X1,X2),g(X3,X4)) | ~ ld__(X3,X1) ) ).
+fof(c_0_238,axiom,! [X1] : ! [X2] : ! [X3] : ld__(g(X1,X2),h(X3)) ).
+fof(c_0_239,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ld__(g(X1,X2),g(X3,X4)) | ~ ld__(X4,X2) ) ).
+fof(c_0_240,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,h(d)) | ~ ld__(X2,w) | ~ epred1_3(X3,X2,X1) ) ).
+fof(c_0_241,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,h(d)) | ~ ld__(X2,b) | ~ epred1_3(X2,X3,X1) ) ).
+fof(c_0_242,axiom,! [X1] : ! [X2] : ( ld__(h(X1),h(X2)) | ~ ld__(X2,X1) ) ).
+fof(c_0_243,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(g(X3,X4),h(d)) | ~ ld__(X4,e) ) ).
+fof(c_0_244,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(g(X3,X4),h(d)) | ~ ld__(X3,e) ) ).
+fof(c_0_245,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,h(d)) | ~ ld__(X2,g(e,e)) | ~ epred1_3(X1,X3,X2) ) ).
+fof(c_0_246,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,h(d)) | ~ ld__(X2,g(e,e)) | ~ epred1_3(X3,X1,X2) ) ).
+fof(c_0_247,axiom,p(h(d),g(e,e),k) ).
+fof(c_0_248,axiom,~ ld__(g(b,b),g(b,b)) | ~ ld__(g(b,b),k) ).
+fof(c_0_249,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),k) ).
+fof(c_0_250,axiom,~ ld__(g(a,c),g(a,c)) | ~ ld__(g(a,c),g(e,e)) ).
+fof(c_0_251,axiom,ld__(c,e) ).
+fof(c_0_252,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ epred1_3(X1,X2,h(X3)) | ~ ld__(X3,d) ) ).
+fof(c_0_253,axiom,epred1_3(g(b,b),g(a,c),h(d)) | ~ ld__(h(d),h(d)) ).
+fof(c_0_254,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(b,b)) | ~ ld__(X2,b) | ~ epred1_3(X2,X1,X3) ) ).
+fof(c_0_255,axiom,epred1_3(c,b,a) | ~ ld__(c,c) ).
+fof(c_0_256,axiom,! [X1] : ! [X2] : ld__(c,g(X1,X2)) ).
+fof(c_0_257,axiom,ld__(c,b) ).
+fof(c_0_258,axiom,ld__(b,a) ).
+fof(c_0_259,axiom,~ ld__(g(e,e),g(e,e)) ).
+fof(c_0_260,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(a,c)) | ~ ld__(X2,w) | ~ epred1_3(X1,X2,X3) ) ).
+fof(c_0_261,axiom,epred1_3(c,b,a) | ~ ld__(b,b) ).
+fof(c_0_262,axiom,p(k,lkg,hill) ).
+fof(c_0_263,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,k) ).
+fof(c_0_264,axiom,! [X3] : ! [X2] : ! [X1] : ( epred1_3(X3,X2,X1) | ~ ld__(X1,a) | ~ ld__(X1,h(d)) | ~ ld__(X2,lkg) | ~ p(X1,X2,X3) ) ).
+fof(c_0_265,axiom,! [X1] : ! [X2] : ! [X3] : ld__(pet(X1),g(X2,X3)) ).
+fof(c_0_266,axiom,! [X1] : ! [X2] : ld__(pet(X1),h(X2)) ).
+fof(c_0_267,axiom,! [X1] : ld__(pet(X1),a) ).
+fof(c_0_268,axiom,ld__(hill,k) ).
+fof(c_0_269,axiom,! [X1] : ! [X2] : ld__(lkg,g(X1,X2)) ).
+fof(c_0_270,axiom,! [X1] : ld__(lkg,h(X1)) ).
+fof(c_0_271,axiom,ld__(lkg,a) ).
+fof(c_0_272,axiom,! [X1] : ! [X2] : ld__(hill,g(X1,X2)) ).
+fof(c_0_273,axiom,! [X1] : ld__(hill,h(X1)) ).
+fof(c_0_274,axiom,! [X1] : ! [X2] : ld__(lilly,g(X1,X2)) ).
+fof(c_0_275,axiom,! [X1] : ld__(lilly,h(X1)) ).
+fof(c_0_276,axiom,ld__(lilly,a) ).
+fof(c_0_277,axiom,! [X1] : ! [X2] : ld__(b,g(X1,X2)) ).
+fof(c_0_278,axiom,! [X1] : ld__(b,h(X1)) ).
+fof(c_0_279,axiom,! [X1] : ld__(c,h(X1)) ).
+fof(c_0_280,axiom,ld__(c,a) ).
+fof(c_0_281,axiom,! [X1] : ! [X2] : ld__(e,g(X1,X2)) ).
+fof(c_0_282,axiom,! [X1] : ld__(e,h(X1)) ).
+fof(c_0_283,axiom,ld__(e,a) ).
+fof(c_0_284,axiom,! [X1] : ld__(w,h(X1)) ).
+fof(c_0_285,axiom,! [X1] : ! [X2] : ld__(d,g(X1,X2)) ).
+fof(c_0_286,axiom,! [X1] : ld__(d,h(X1)) ).
+fof(c_0_287,axiom,ld__(d,a) ).
+fof(c_0_288,axiom,! [X1] : ! [X2] : ld__(pig,g(X1,X2)) ).
+fof(c_0_289,axiom,! [X1] : ld__(pig,h(X1)) ).
+fof(c_0_290,axiom,ld__(pig,a) ).
+fof(c_0_291,axiom,! [X1] : ! [X2] : ld__(horse,g(X1,X2)) ).
+fof(c_0_292,axiom,! [X1] : ld__(horse,h(X1)) ).
+fof(c_0_293,axiom,ld__(horse,a) ).
+fof(c_0_294,axiom,! [X1] : ! [X2] : ld__(cow,g(X1,X2)) ).
+fof(c_0_295,axiom,! [X1] : ld__(cow,h(X1)) ).
+fof(c_0_296,axiom,ld__(cow,a) ).
+fof(c_0_297,axiom,! [X1] : ! [X2] : ld__(aparna,g(X1,X2)) ).
+fof(c_0_298,axiom,! [X1] : ld__(aparna,h(X1)) ).
+fof(c_0_299,axiom,ld__(aparna,a) ).
+fof(c_0_300,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(a,c)) | ~ ld__(X3,b) | ~ epred1_3(X3,X2,X1) ) ).
+fof(c_0_301,axiom,epred1_3(c,b,a) | ~ ld__(a,a) ).
+fof(c_0_302,axiom,! [X1] : ld__(hill,pet(X1)) ).
+fof(c_0_303,axiom,! [X1] : ld__(lkg,pet(X1)) ).
+fof(c_0_304,axiom,! [X1] : ld__(k,pet(X1)) ).
+fof(c_0_305,axiom,p(a,a,a) ).
+fof(c_0_306,axiom,ld__(a,hill) ).
+fof(c_0_307,axiom,! [X1] : ld__(d,pet(X1)) ).
+fof(c_0_308,axiom,! [X1] : ld__(w,pet(X1)) ).
+fof(c_0_309,axiom,! [X1] : ld__(e,pet(X1)) ).
+fof(c_0_310,axiom,! [X1] : ld__(c,pet(X1)) ).
+fof(c_0_311,axiom,! [X1] : ld__(b,pet(X1)) ).
+fof(c_0_312,axiom,ld__(lkg,k) ).
+fof(c_0_313,axiom,ld__(lkg,hill) ).
+fof(c_0_314,axiom,ld__(lilly,k) ).
+fof(c_0_315,axiom,ld__(lilly,lkg) ).
+fof(c_0_316,axiom,ld__(lilly,hill) ).
+fof(c_0_317,axiom,ld__(pig,k) ).
+fof(c_0_318,axiom,ld__(pig,lkg) ).
+fof(c_0_319,axiom,ld__(pig,hill) ).
+fof(c_0_320,axiom,ld__(horse,k) ).
+fof(c_0_321,axiom,ld__(horse,lkg) ).
+fof(c_0_322,axiom,ld__(horse,hill) ).
+fof(c_0_323,axiom,ld__(cow,k) ).
+fof(c_0_324,axiom,ld__(cow,lkg) ).
+fof(c_0_325,axiom,ld__(cow,hill) ).
+fof(c_0_326,axiom,ld__(aparna,k) ).
+fof(c_0_327,axiom,ld__(aparna,lkg) ).
+fof(c_0_328,axiom,ld__(aparna,hill) ).
+fof(c_0_329,axiom,ld__(k,e) ).
+fof(c_0_330,axiom,ld__(k,w) ).
+fof(c_0_331,axiom,ld__(k,d) ).
+fof(c_0_332,axiom,ld__(lkg,c) ).
+fof(c_0_333,axiom,ld__(lkg,e) ).
+fof(c_0_334,axiom,ld__(lkg,w) ).
+fof(c_0_335,axiom,ld__(lkg,d) ).
+fof(c_0_336,axiom,ld__(hill,e) ).
+fof(c_0_337,axiom,ld__(hill,w) ).
+fof(c_0_338,axiom,ld__(hill,d) ).
+fof(c_0_339,axiom,ld__(lilly,b) ).
+fof(c_0_340,axiom,ld__(lilly,c) ).
+fof(c_0_341,axiom,ld__(lilly,e) ).
+fof(c_0_342,axiom,ld__(lilly,w) ).
+fof(c_0_343,axiom,ld__(lilly,d) ).
+fof(c_0_344,axiom,ld__(pig,b) ).
+fof(c_0_345,axiom,ld__(pig,c) ).
+fof(c_0_346,axiom,ld__(pig,e) ).
+fof(c_0_347,axiom,ld__(pig,w) ).
+fof(c_0_348,axiom,ld__(pig,d) ).
+fof(c_0_349,axiom,ld__(horse,b) ).
+fof(c_0_350,axiom,ld__(horse,c) ).
+fof(c_0_351,axiom,ld__(horse,e) ).
+fof(c_0_352,axiom,ld__(horse,w) ).
+fof(c_0_353,axiom,ld__(horse,d) ).
+fof(c_0_354,axiom,ld__(cow,b) ).
+fof(c_0_355,axiom,ld__(cow,c) ).
+fof(c_0_356,axiom,ld__(cow,e) ).
+fof(c_0_357,axiom,ld__(cow,w) ).
+fof(c_0_358,axiom,ld__(cow,d) ).
+fof(c_0_359,axiom,ld__(aparna,b) ).
+fof(c_0_360,axiom,ld__(aparna,c) ).
+fof(c_0_361,axiom,ld__(aparna,e) ).
+fof(c_0_362,axiom,ld__(aparna,w) ).
+fof(c_0_363,axiom,ld__(aparna,d) ).
+fof(c_0_364,axiom,ld__(e,b) ).
+fof(c_0_365,axiom,ld__(e,w) ).
+fof(c_0_366,axiom,ld__(w,c) ).
+fof(c_0_367,axiom,ld__(d,b) ).
+fof(c_0_368,axiom,ld__(d,c) ).
+fof(c_0_369,axiom,ld__(d,e) ).
+fof(c_0_370,axiom,ld__(d,w) ).
+fof(c_0_371,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(e,X3) ) ).
+fof(c_0_372,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(e,X4) ) ).
+fof(c_0_373,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(X2,w) ) ).
+fof(c_0_374,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(X1,b) ) ).
+fof(c_0_375,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ epred1_3(X1,X2,h(X3)) | ~ ld__(d,X3) ) ).
+fof(c_0_376,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(X4,e) ) ).
+fof(c_0_377,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ epred1_3(X1,X2,g(X3,X4)) | ~ ld__(X3,e) ) ).
+fof(c_0_378,axiom,! [X1] : ! [X2] : ! [X3] : ( epred1_3(X1,X2,X3) | ~ ld__(X1,c) | ~ ld__(X2,g(e,e)) | ~ ld__(X1,hill) | ~ p(X3,X2,X1) ) ).
+fof(c_0_379,axiom,! [X1] : ! [X2] : ! [X3] : ( epred1_3(X1,X2,X3) | ~ ld__(X1,c) | ~ ld__(X2,g(e,e)) | ~ ld__(X2,lkg) | ~ p(X3,X2,X1) ) ).
+fof(c_0_380,axiom,! [X1] : ! [X2] : ! [X3] : ( epred1_3(X1,X2,X3) | ~ ld__(X1,c) | ~ ld__(X2,g(e,e)) | ~ ld__(X3,k) | ~ p(X3,X2,X1) ) ).
+fof(c_0_381,axiom,! [X2] : ! [X1] : ! [X3] : ( epred1_3(X2,X1,X3) | ~ ld__(X1,b) | ~ ld__(X1,g(e,e)) | ~ ld__(X2,hill) | ~ p(X3,X1,X2) ) ).
+fof(c_0_382,axiom,! [X3] : ! [X1] : ! [X2] : ( epred1_3(X3,X1,X2) | ~ ld__(X1,b) | ~ ld__(X1,g(e,e)) | ~ ld__(X1,lkg) | ~ p(X2,X1,X3) ) ).
+fof(c_0_383,axiom,! [X3] : ! [X1] : ! [X2] : ( epred1_3(X3,X1,X2) | ~ ld__(X1,b) | ~ ld__(X1,g(e,e)) | ~ ld__(X2,k) | ~ p(X2,X1,X3) ) ).
+fof(c_0_384,axiom,! [X3] : ! [X2] : ! [X1] : ( epred1_3(X3,X2,X1) | ~ ld__(X1,a) | ~ ld__(X2,g(e,e)) | ~ ld__(X2,lkg) | ~ p(X1,X2,X3) ) ).
+fof(c_0_385,axiom,! [X3] : ! [X2] : ! [X1] : ( epred1_3(X3,X2,X1) | ~ ld__(X1,a) | ~ ld__(X2,g(e,e)) | ~ ld__(X3,hill) | ~ p(X1,X2,X3) ) ).
+fof(c_0_386,axiom,! [X1] : ! [X3] : ! [X2] : ( epred1_3(X1,X3,X2) | ~ ld__(X1,c) | ~ ld__(X2,h(d)) | ~ ld__(X1,hill) | ~ p(X2,X3,X1) ) ).
+fof(c_0_387,axiom,! [X1] : ! [X3] : ! [X2] : ( epred1_3(X1,X3,X2) | ~ ld__(X1,c) | ~ ld__(X2,h(d)) | ~ ld__(X2,k) | ~ p(X2,X3,X1) ) ).
+fof(c_0_388,axiom,! [X1] : ! [X3] : ! [X2] : ( epred1_3(X1,X3,X2) | ~ ld__(X1,c) | ~ ld__(X2,h(d)) | ~ ld__(X3,lkg) | ~ p(X2,X3,X1) ) ).
+fof(c_0_389,axiom,! [X2] : ! [X3] : ! [X1] : ( epred1_3(X2,X3,X1) | ~ ld__(X1,a) | ~ ld__(X1,h(d)) | ~ ld__(X2,hill) | ~ p(X1,X3,X2) ) ).
+fof(c_0_390,axiom,! [X3] : ! [X1] : ! [X2] : ( epred1_3(X3,X1,X2) | ~ ld__(X1,b) | ~ ld__(X2,h(d)) | ~ ld__(X1,lkg) | ~ p(X2,X1,X3) ) ).
+fof(c_0_391,axiom,! [X1] : ! [X2] : ! [X3] : ( epred1_3(X1,X2,X3) | ~ ld__(X1,c) | ~ ld__(X1,k) | ~ ld__(X2,lkg) | ~ p(X3,X2,X1) ) ).
+fof(c_0_392,axiom,! [X1] : ! [X3] : ! [X2] : ( epred1_3(X1,X3,X2) | ~ ld__(X1,c) | ~ ld__(X1,k) | ~ ld__(X1,hill) | ~ p(X2,X3,X1) ) ).
+fof(c_0_393,axiom,! [X2] : ! [X1] : ! [X3] : ( epred1_3(X2,X1,X3) | ~ ld__(X1,b) | ~ ld__(X2,k) | ~ ld__(X1,lkg) | ~ p(X3,X1,X2) ) ).
+fof(c_0_394,axiom,! [X2] : ! [X1] : ! [X3] : ( epred1_3(X2,X1,X3) | ~ ld__(X1,b) | ~ ld__(X2,k) | ~ ld__(X3,k) | ~ p(X3,X1,X2) ) ).
+fof(c_0_395,axiom,! [X3] : ! [X1] : ! [X2] : ( epred1_3(X3,X1,X2) | ~ ld__(X1,b) | ~ ld__(X2,h(d)) | ~ ld__(X2,k) | ~ p(X2,X1,X3) ) ).
+fof(c_0_396,axiom,! [X1] : ! [X2] : ( ~ epred1_3(X1,X2,a) | ~ ld__(X1,a) ) ).
+fof(c_0_397,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(a,c)) | ~ ld__(X3,g(e,e)) | ~ epred1_3(X1,X2,X3) ) ).
+fof(c_0_398,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,g(b,b)) | ~ ld__(X2,g(e,e)) | ~ epred1_3(X1,X3,X2) ) ).
+fof(c_0_399,axiom,! [X1] : ! [X2] : ( ~ epred1_3(X1,X2,a) | ~ ld__(X2,a) ) ).
+fof(c_0_400,axiom,! [X2] : ! [X3] : ! [X1] : ( epred1_3(X2,X3,X1) | ~ ld__(X1,a) | ~ ld__(X2,k) | ~ ld__(X2,hill) | ~ p(X1,X3,X2) ) ).
+fof(c_0_401,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(b,b)) | ~ ld__(X3,g(e,e)) | ~ epred1_3(X2,X1,X3) ) ).
+fof(c_0_402,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,h(d)) | ~ ld__(X1,w) | ~ epred1_3(X3,X1,X2) ) ).
+fof(c_0_403,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,h(d)) | ~ ld__(X1,b) | ~ epred1_3(X1,X3,X2) ) ).
+fof(c_0_404,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,h(d)) | ~ ld__(X3,w) | ~ epred1_3(X1,X3,X2) ) ).
+fof(c_0_405,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,h(d)) | ~ ld__(X3,b) | ~ epred1_3(X3,X1,X2) ) ).
+fof(c_0_406,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,g(a,c)) | ~ ld__(X1,w) | ~ epred1_3(X2,X1,X3) ) ).
+fof(c_0_407,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(b,b)) | ~ ld__(X1,w) | ~ epred1_3(X2,X1,X3) ) ).
+fof(c_0_408,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,g(b,b)) | ~ ld__(X1,b) | ~ epred1_3(X1,X2,X3) ) ).
+fof(c_0_409,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(a,c)) | ~ ld__(X1,b) | ~ epred1_3(X1,X2,X3) ) ).
+fof(c_0_410,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,g(b,b)) | ~ ld__(X2,w) | ~ epred1_3(X1,X2,X3) ) ).
+fof(c_0_411,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(a,c)) | ~ ld__(X2,w) | ~ epred1_3(X3,X2,X1) ) ).
+fof(c_0_412,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X1,g(a,c)) | ~ ld__(X2,b) | ~ epred1_3(X2,X1,X3) ) ).
+fof(c_0_413,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(b,b)) | ~ ld__(X2,b) | ~ epred1_3(X2,X3,X1) ) ).
+fof(c_0_414,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ ld__(X1,a) | ~ ld__(X2,g(b,b)) | ~ ld__(X3,w) | ~ epred1_3(X2,X3,X1) ) ).
+fof(c_0_415,axiom,~ ld__(h(d),h(d)) ).
+fof(c_0_416,axiom,~ ld__(g(b,b),g(b,b)) ).
+fof(c_0_417,axiom,~ ld__(g(a,c),g(a,c)) ).
+fof(c_0_418,axiom,~ ld__(d,d) ).
+fof(c_0_419,axiom,~ ld__(c,c) ).
+fof(c_0_420,axiom,~ ld__(e,e) ).
+fof(c_0_421,axiom,~ ld__(w,w) ).
+fof(c_0_422,axiom,~ ld__(b,b) ).
+fof(c_0_423,axiom,~ ld__(hill,hill) ).
+fof(c_0_424,axiom,~ ld__(lkg,lkg) ).
+fof(c_0_425,axiom,! [X1] : ! [X2] : ! [X3] : ~ epred1_3(X1,X2,pet(X3)) ).
+fof(c_0_426,axiom,~ ld__(k,k) ).
+fof(c_0_427,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,lkg) ).
+fof(c_0_428,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,hill) ).
+fof(c_0_429,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,lilly) ).
+fof(c_0_430,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,b) ).
+fof(c_0_431,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,c) ).
+fof(c_0_432,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,e) ).
+fof(c_0_433,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,w) ).
+fof(c_0_434,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,d) ).
+fof(c_0_435,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,pig) ).
+fof(c_0_436,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,horse) ).
+fof(c_0_437,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,cow) ).
+fof(c_0_438,axiom,! [X1] : ! [X2] : ~ epred1_3(X1,X2,aparna) ).
+fof(c_0_439,axiom,~ ld__(a,a) ).
+fof(c_0_440,axiom,! [X1] : ! [X2] : ! [X3] : ld__(g(X1,X2),pet(X3)) ).
+fof(c_0_441,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),aparna) ).
+fof(c_0_442,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),cow) ).
+fof(c_0_443,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),horse) ).
+fof(c_0_444,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),pig) ).
+fof(c_0_445,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),lilly) ).
+fof(c_0_446,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),hill) ).
+fof(c_0_447,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),lkg) ).
+fof(c_0_448,axiom,epred1_3(g(b,b),g(a,c),h(d)) ).
+fof(c_0_449,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),d) ).
+fof(c_0_450,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),w) ).
+fof(c_0_451,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),e) ).
+fof(c_0_452,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),c) ).
+fof(c_0_453,axiom,! [X1] : ! [X2] : ld__(g(X1,X2),b) ).
+fof(c_0_454,axiom,! [X1] : ! [X2] : ld__(h(X1),pet(X2)) ).
+fof(c_0_455,axiom,! [X1] : ld__(pet(X1),hill) ).
+fof(c_0_456,axiom,! [X1] : ld__(pet(X1),lkg) ).
+fof(c_0_457,axiom,! [X1] : ld__(pet(X1),k) ).
+fof(c_0_458,axiom,! [X1] : ld__(h(X1),aparna) ).
+fof(c_0_459,axiom,! [X1] : ld__(h(X1),cow) ).
+fof(c_0_460,axiom,! [X1] : ld__(h(X1),horse) ).
+fof(c_0_461,axiom,! [X1] : ld__(h(X1),pig) ).
+fof(c_0_462,axiom,epred1_3(a,a,a) ).
+fof(c_0_463,axiom,! [X1] : ld__(h(X1),lilly) ).
+fof(c_0_464,axiom,! [X1] : ld__(h(X1),hill) ).
+fof(c_0_465,axiom,! [X1] : ld__(h(X1),lkg) ).
+fof(c_0_466,axiom,! [X1] : ld__(pet(X1),d) ).
+fof(c_0_467,axiom,! [X1] : ld__(pet(X1),w) ).
+fof(c_0_468,axiom,! [X1] : ld__(pet(X1),e) ).
+fof(c_0_469,axiom,! [X1] : ld__(pet(X1),c) ).
+fof(c_0_470,axiom,! [X1] : ld__(pet(X1),b) ).
+fof(c_0_471,axiom,ld__(k,lkg) ).
+fof(c_0_472,axiom,ld__(hill,lkg) ).
+fof(c_0_473,axiom,ld__(k,hill) ).
+fof(c_0_474,axiom,ld__(k,lilly) ).
+fof(c_0_475,axiom,ld__(lkg,lilly) ).
+fof(c_0_476,axiom,ld__(hill,lilly) ).
+fof(c_0_477,axiom,ld__(k,pig) ).
+fof(c_0_478,axiom,ld__(lkg,pig) ).
+fof(c_0_479,axiom,ld__(hill,pig) ).
+fof(c_0_480,axiom,ld__(k,horse) ).
+fof(c_0_481,axiom,ld__(lkg,horse) ).
+fof(c_0_482,axiom,ld__(hill,horse) ).
+fof(c_0_483,axiom,ld__(k,cow) ).
+fof(c_0_484,axiom,ld__(lkg,cow) ).
+fof(c_0_485,axiom,ld__(hill,cow) ).
+fof(c_0_486,axiom,ld__(k,aparna) ).
+fof(c_0_487,axiom,ld__(lkg,aparna) ).
+fof(c_0_488,axiom,! [X1] : ld__(h(X1),b) ).
+fof(c_0_489,axiom,! [X1] : ld__(h(X1),c) ).
+fof(c_0_490,axiom,! [X1] : ld__(h(X1),e) ).
+fof(c_0_491,axiom,! [X1] : ld__(h(X1),w) ).
+fof(c_0_492,axiom,ld__(hill,aparna) ).
+fof(c_0_493,axiom,! [X1] : ld__(h(X1),d) ).
+fof(c_0_494,axiom,ld__(e,k) ).
+fof(c_0_495,axiom,ld__(w,k) ).
+fof(c_0_496,axiom,ld__(d,k) ).
+fof(c_0_497,axiom,ld__(a,lkg) ).
+fof(c_0_498,axiom,ld__(c,lkg) ).
+fof(c_0_499,axiom,ld__(e,lkg) ).
+fof(c_0_500,axiom,ld__(w,lkg) ).
+fof(c_0_501,axiom,ld__(d,lkg) ).
+fof(c_0_502,axiom,ld__(e,hill) ).
+fof(c_0_503,axiom,ld__(w,hill) ).
+fof(c_0_504,axiom,ld__(d,hill) ).
+fof(c_0_505,axiom,ld__(a,lilly) ).
+fof(c_0_506,axiom,ld__(b,lilly) ).
+fof(c_0_507,axiom,ld__(c,lilly) ).
+fof(c_0_508,axiom,ld__(e,lilly) ).
+fof(c_0_509,axiom,ld__(w,lilly) ).
+fof(c_0_510,axiom,ld__(d,lilly) ).
+fof(c_0_511,axiom,ld__(a,pig) ).
+fof(c_0_512,axiom,ld__(b,pig) ).
+fof(c_0_513,axiom,ld__(c,pig) ).
+fof(c_0_514,axiom,ld__(e,pig) ).
+fof(c_0_515,axiom,ld__(w,pig) ).
+fof(c_0_516,axiom,ld__(d,pig) ).
+fof(c_0_517,axiom,ld__(a,horse) ).
+fof(c_0_518,axiom,ld__(b,horse) ).
+fof(c_0_519,axiom,ld__(c,horse) ).
+fof(c_0_520,axiom,ld__(e,horse) ).
+fof(c_0_521,axiom,ld__(w,horse) ).
+fof(c_0_522,axiom,ld__(d,horse) ).
+fof(c_0_523,axiom,ld__(a,cow) ).
+fof(c_0_524,axiom,ld__(b,cow) ).
+fof(c_0_525,axiom,ld__(c,cow) ).
+fof(c_0_526,axiom,ld__(e,cow) ).
+fof(c_0_527,axiom,ld__(w,cow) ).
+fof(c_0_528,axiom,ld__(d,cow) ).
+fof(c_0_529,axiom,ld__(a,aparna) ).
+fof(c_0_530,axiom,ld__(b,aparna) ).
+fof(c_0_531,axiom,ld__(c,aparna) ).
+fof(c_0_532,axiom,ld__(e,aparna) ).
+fof(c_0_533,axiom,ld__(w,aparna) ).
+fof(c_0_534,axiom,ld__(d,aparna) ).
+fof(c_0_535,axiom,ld__(a,e) ).
+fof(c_0_536,axiom,ld__(b,e) ).
+fof(c_0_537,axiom,ld__(w,e) ).
+fof(c_0_538,axiom,ld__(a,w) ).
+fof(c_0_539,axiom,ld__(b,w) ).
+fof(c_0_540,axiom,ld__(c,w) ).
+fof(c_0_541,axiom,ld__(a,d) ).
+fof(c_0_542,axiom,ld__(b,d) ).
+fof(c_0_543,axiom,ld__(c,d) ).
+fof(c_0_544,axiom,ld__(e,d) ).
+fof(c_0_545,axiom,ld__(w,d) ).
+fof(c_0_546,axiom,animal(pet(aparna)) ).
+fof(c_0_547,axiom,animal(cow) ).
+fof(c_0_548,axiom,animal(horse) ).
+fof(c_0_549,axiom,animal(pig) ).
+fof(c_0_550,axiom,flower(lilly) ).

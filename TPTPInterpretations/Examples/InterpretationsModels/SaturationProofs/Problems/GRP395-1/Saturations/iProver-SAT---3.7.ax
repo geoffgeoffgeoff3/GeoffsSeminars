@@ -1,0 +1,16 @@
+fof(c_49,axiom,! [X0] : group_member(identity_for(X0),X0) ).
+fof(c_50,axiom,! [X0] : ! [X1] : product(X0,identity_for(X0),X1,X1) ).
+fof(c_51,axiom,! [X0] : ! [X1] : product(X0,X1,identity_for(X0),X1) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ group_member(X0,X1) | group_member(inverse(X1,X0),X1) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : product(X0,inverse(X0,X1),X1,identity_for(X0)) ).
+fof(c_54,axiom,! [X0] : ! [X1] : product(X0,X1,inverse(X0,X1),identity_for(X0)) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ group_member(X0,X1) | ~ group_member(X2,X1) | product(X1,X0,X2,multiply(X1,X0,X2)) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ group_member(X0,X1) | ~ group_member(X2,X1) | group_member(multiply(X1,X0,X2),X1) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ product(X0,X1,X2,X3) | ~ product(X0,X1,X2,X4) | X3 = X4 ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ product(X0,X1,X2,X3) | ~ product(X0,X2,X4,X5) | ~ product(X0,X3,X4,X6) | product(X0,X1,X5,X6) ) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ product(X0,X1,X2,X3) | ~ product(X0,X1,X4,X5) | ~ product(X0,X2,X6,X4) | product(X0,X3,X6,X5) ) ).
+fof(c_153,axiom,! [X0] : X0 = X0 ).
+fof(c_154,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_155,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_156,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ group_member(X1,X2) | group_member(X0,X2) ) ).
+fof(c_157,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( X0 != X1 | X2 != X3 | X4 != X5 | ~ product(X6,X1,X3,X5) | product(X6,X0,X2,X4) ) ).

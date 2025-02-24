@@ -1,0 +1,15 @@
+fof(u22,axiom,! [X0] : ! [X1] : ( big_g(X0,X1) | big_f(X0,X1) ) ).
+fof(u13,axiom,! [X0] : ! [X1] : ( big_g(sK0(X0,X1),sK0(X0,X1)) | big_g(X0,X1) ) ).
+fof(u12,axiom,! [X0] : ! [X1] : ( big_g(sK0(X0,X1),sK0(X0,X1)) | ~ big_f(sK0(X0,X1),sK0(X0,X1)) | ~ big_f(X0,X1) ) ).
+fof(u16,axiom,! [X1] : ! [X0] : ( big_g(X1,sK0(X0,X1)) | big_g(X0,X1) ) ).
+fof(u17,axiom,! [X1] : ! [X0] : ( big_g(X1,sK0(X0,X1)) | ~ big_f(X1,X0) ) ).
+fof(u18,axiom,! [X1] : ! [X0] : ( ~ big_g(X1,sK0(X0,X1)) | ~ big_g(X0,X1) | big_f(X1,X0) ) ).
+fof(u11,axiom,! [X0] : ! [X1] : ( ~ big_g(sK0(X0,X1),sK0(X0,X1)) | big_f(X0,X1) ) ).
+fof(u15,axiom,! [X0] : ! [X1] : ( ~ big_g(sK0(X0,X1),sK0(X0,X1)) | big_f(sK0(X0,X1),sK0(X0,X1)) | ~ big_g(X0,X1) ) ).
+fof(u10,axiom,! [X0] : ! [X1] : ( big_f(sK0(X0,X1),sK0(X0,X1)) | big_f(X0,X1) ) ).
+fof(u32,axiom,! [X4] : ! [X5] : ( big_f(sK0(X4,X5),sK0(X4,X5)) | ~ big_g(X4,X5) ) ).
+fof(u19,axiom,! [X0] : ! [X1] : ( big_f(sK0(X0,X1),X1) | big_f(X1,X0) ) ).
+fof(u27,axiom,! [X5] : ! [X4] : ( big_f(X5,sK0(X4,X5)) | big_f(X5,X4) | ~ big_g(X4,X5) ) ).
+fof(u9,axiom,! [X0] : ! [X1] : big_f(X0,sK0(X0,X1)) ).
+fof(u14,axiom,! [X0] : ! [X1] : ( ~ big_f(sK0(X0,X1),sK0(X0,X1)) | big_g(X0,X1) ) ).
+fof(u20,axiom,! [X0] : ! [X1] : ( ~ big_f(sK0(X0,X1),X1) | ~ big_f(X1,X0) ) ).

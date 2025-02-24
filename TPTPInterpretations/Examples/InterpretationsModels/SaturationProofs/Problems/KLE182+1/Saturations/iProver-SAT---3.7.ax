@@ -1,0 +1,74 @@
+fof(f1,axiom,! [X0] : ! [X1] : addition(X0,X1) = addition(X1,X0) ).
+fof(f2,axiom,! [X2] : ! [X1] : ! [X0] : addition(X0,addition(X1,X2)) = addition(addition(X0,X1),X2) ).
+fof(f3,axiom,! [X0] : addition(X0,zero) = X0 ).
+fof(f4,axiom,! [X0] : addition(X0,X0) = X0 ).
+fof(f5,axiom,! [X0] : ! [X1] : ! [X2] : multiplication(X0,multiplication(X1,X2)) = multiplication(multiplication(X0,X1),X2) ).
+fof(f6,axiom,! [X0] : multiplication(X0,one) = X0 ).
+fof(f7,axiom,! [X0] : multiplication(one,X0) = X0 ).
+fof(f8,axiom,! [X0] : ! [X1] : ! [X2] : multiplication(X0,addition(X1,X2)) = addition(multiplication(X0,X1),multiplication(X0,X2)) ).
+fof(f9,axiom,! [X0] : ! [X1] : ! [X2] : multiplication(addition(X0,X1),X2) = addition(multiplication(X0,X2),multiplication(X1,X2)) ).
+fof(f10,axiom,! [X0] : zero = multiplication(zero,X0) ).
+fof(f11,axiom,! [X0] : star(X0) = addition(one,multiplication(X0,star(X0))) ).
+fof(f12,axiom,! [X0] : star(X0) = addition(one,multiplication(star(X0),X0)) ).
+fof(f13,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(addition(multiplication(X0,X2),X1),X2) => leq(multiplication(star(X0),X1),X2) ) ).
+fof(f14,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(addition(multiplication(X2,X0),X1),X2) => leq(multiplication(X1,star(X0)),X2) ) ).
+fof(f15,axiom,! [X0] : strong_iteration(X0) = addition(multiplication(X0,strong_iteration(X0)),one) ).
+fof(f16,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(X2,addition(multiplication(X0,X2),X1)) => leq(X2,multiplication(strong_iteration(X0),X1)) ) ).
+fof(f17,axiom,! [X0] : strong_iteration(X0) = addition(star(X0),multiplication(strong_iteration(X0),zero)) ).
+fof(f18,axiom,! [X0] : ! [X1] : ( leq(X0,X1) <=> addition(X0,X1) = X1 ) ).
+fof(f19,axiom,! [X0] : ! [X1] : ! [X2] : addition(X2,addition(X1,X0)) = addition(addition(X2,X1),X0) ).
+fof(f20,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(multiplication(star(X0),X1),X2) | ~ leq(addition(multiplication(X0,X2),X1),X2) ) ).
+fof(f21,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(multiplication(X1,star(X0)),X2) | ~ leq(addition(multiplication(X2,X0),X1),X2) ) ).
+fof(f22,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(X2,multiplication(strong_iteration(X0),X1)) | ~ leq(X2,addition(multiplication(X0,X2),X1)) ) ).
+fof(f23,axiom,! [X0] : ! [X1] : ( ( leq(X0,X1) | addition(X0,X1) != X1 ) & ( addition(X0,X1) = X1 | ~ leq(X0,X1) ) ) ).
+fof(f24,axiom,! [X0] : ! [X1] : addition(X0,X1) = addition(X1,X0) ).
+fof(f25,axiom,! [X2] : ! [X0] : ! [X1] : addition(X2,addition(X1,X0)) = addition(addition(X2,X1),X0) ).
+fof(f26,axiom,! [X0] : addition(X0,zero) = X0 ).
+fof(f27,axiom,! [X0] : addition(X0,X0) = X0 ).
+fof(f28,axiom,! [X2] : ! [X0] : ! [X1] : multiplication(X0,multiplication(X1,X2)) = multiplication(multiplication(X0,X1),X2) ).
+fof(f29,axiom,! [X0] : multiplication(X0,one) = X0 ).
+fof(f30,axiom,! [X0] : multiplication(one,X0) = X0 ).
+fof(f31,axiom,! [X2] : ! [X0] : ! [X1] : multiplication(X0,addition(X1,X2)) = addition(multiplication(X0,X1),multiplication(X0,X2)) ).
+fof(f32,axiom,! [X2] : ! [X0] : ! [X1] : multiplication(addition(X0,X1),X2) = addition(multiplication(X0,X2),multiplication(X1,X2)) ).
+fof(f33,axiom,! [X0] : zero = multiplication(zero,X0) ).
+fof(f34,axiom,! [X0] : star(X0) = addition(one,multiplication(X0,star(X0))) ).
+fof(f35,axiom,! [X0] : star(X0) = addition(one,multiplication(star(X0),X0)) ).
+fof(f36,axiom,! [X2] : ! [X0] : ! [X1] : ( leq(multiplication(star(X0),X1),X2) | ~ leq(addition(multiplication(X0,X2),X1),X2) ) ).
+fof(f37,axiom,! [X2] : ! [X0] : ! [X1] : ( leq(multiplication(X1,star(X0)),X2) | ~ leq(addition(multiplication(X2,X0),X1),X2) ) ).
+fof(f38,axiom,! [X0] : strong_iteration(X0) = addition(multiplication(X0,strong_iteration(X0)),one) ).
+fof(f39,axiom,! [X2] : ! [X0] : ! [X1] : ( leq(X2,multiplication(strong_iteration(X0),X1)) | ~ leq(X2,addition(multiplication(X0,X2),X1)) ) ).
+fof(f40,axiom,! [X0] : strong_iteration(X0) = addition(star(X0),multiplication(strong_iteration(X0),zero)) ).
+fof(f41,axiom,! [X0] : ! [X1] : ( addition(X0,X1) = X1 | ~ leq(X0,X1) ) ).
+fof(f42,axiom,! [X0] : ! [X1] : ( leq(X0,X1) | addition(X0,X1) != X1 ) ).
+fof(c_49,axiom,! [X0] : ! [X1] : addition(X0,X1) = addition(X1,X0) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : addition(addition(X0,X1),X2) = addition(X0,addition(X1,X2)) ).
+fof(c_51,axiom,! [X0] : addition(X0,zero) = X0 ).
+fof(c_52,axiom,! [X0] : addition(X0,X0) = X0 ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : multiplication(multiplication(X0,X1),X2) = multiplication(X0,multiplication(X1,X2)) ).
+fof(c_54,axiom,! [X0] : multiplication(X0,one) = X0 ).
+fof(c_55,axiom,! [X0] : multiplication(one,X0) = X0 ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : addition(multiplication(X0,X1),multiplication(X0,X2)) = multiplication(X0,addition(X1,X2)) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : addition(multiplication(X0,X1),multiplication(X2,X1)) = multiplication(addition(X0,X2),X1) ).
+fof(c_58,axiom,! [X0] : multiplication(zero,X0) = zero ).
+fof(c_59,axiom,! [X0] : addition(one,multiplication(X0,star(X0))) = star(X0) ).
+fof(c_60,axiom,! [X0] : addition(one,multiplication(star(X0),X0)) = star(X0) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(addition(multiplication(X0,X1),X2),X1) | leq(multiplication(star(X0),X2),X1) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(addition(multiplication(X0,X1),X2),X0) | leq(multiplication(X2,star(X1)),X0) ) ).
+fof(c_63,axiom,! [X0] : addition(multiplication(X0,strong_iteration(X0)),one) = strong_iteration(X0) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(X0,addition(multiplication(X1,X0),X2)) | leq(X0,multiplication(strong_iteration(X1),X2)) ) ).
+fof(c_65,axiom,! [X0] : addition(star(X0),multiplication(strong_iteration(X0),zero)) = strong_iteration(X0) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( addition(X0,X1) != X1 | leq(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ leq(X0,X1) | addition(X0,X1) = X1 ) ).
+fof(c_85,axiom,! [X0] : addition(one,multiplication(X0,strong_iteration(X0))) = strong_iteration(X0) ).
+fof(c_86,axiom,! [X0] : ! [X1] : ( leq(X0,X1) | addition(X0,X1) != X1 ) ).
+fof(c_87,axiom,! [X0] : ! [X1] : ( addition(X0,X1) != X1 | leq(X0,X1) ) ).
+fof(c_88,axiom,! [X0] : ! [X1] : ( ~ leq(X0,X1) | addition(X0,X1) = X1 ) ).
+fof(c_90,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(addition(multiplication(X0,X1),X2),X1) | leq(multiplication(star(X0),X2),X1) ) ).
+fof(c_92,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(addition(multiplication(X0,X1),X2),X0) | leq(multiplication(X2,star(X1)),X0) ) ).
+fof(c_94,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(X0,addition(multiplication(X1,X0),X2)) | leq(X0,multiplication(strong_iteration(X1),X2)) ) ).
+fof(c_195,axiom,! [X0] : X0 = X0 ).
+fof(c_196,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_197,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_198,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | addition(X0,X2) = addition(X1,X3) ) ).
+fof(c_199,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | multiplication(X0,X2) = multiplication(X1,X3) ) ).
+fof(c_200,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ leq(X1,X3) | leq(X0,X2) ) ).

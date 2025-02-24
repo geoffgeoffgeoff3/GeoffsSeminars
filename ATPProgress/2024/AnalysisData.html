@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+<TITLE> Analysis Data </TITLE>
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'ProblemsAndSolutions.png';
+  images[1]     = new Image();
+  images[1].src = 'CleaningBias.jpg';
+  images[2]     = new Image();
+  images[2].src = 'CleaningBugfixes.png';
+  images[3]     = new Image();
+  images[3].src = 'CleaningPast.png';
+  images[4]     = new Image();
+  images[4].src = 'CleaningChange.png';
+  images[5]     = new Image();
+  images[5].src = 'CoherentSPCSetUEQ.png';
+  images[6]     = new Image();
+  images[6].src = 'CoherentSPCSetCNFUNS.png';
+  images[7]     = new Image();
+  images[7].src = 'CoherentSPCSetCNFSAT.png';
+  images[8]     = new Image();
+  images[8].src = 'CoherentSPCSetEPR.png';
+  images[9]     = new Image();
+  images[9].src = 'CoherentSPCSetFOFTHM.png';
+  images[10]     = new Image();
+  images[10].src = 'CoherentSPCSetFOFCSA.png';
+  images[11]     = new Image();
+  images[11].src = 'CoherentSPCSetTF0NAR.png';
+  images[12]     = new Image();
+  images[12].src = 'CoherentSPCSetTF0ARI.png';
+  images[13]     = new Image();
+  images[13].src = 'CoherentSPCSetTH0.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+Analysis Data
+</H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME="image" SRC="ProblemsAndSolutions.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3>Data from the TPTP and TSTP</H3>
+<UL>
+<LI> From TPTP v6.3.0, released on 28th November 2015 
+<LI> To TPTP v8.2.0, released on 13th June 2023
+<LI> From the <TT>ProblemAndSolutionStatistics</TT> file
+</UL>
+
+<H3>Data Cleaning</H3>
+<UL>
+<LI> Cleaning for <A HREF="" onClick="putImage(1);return false">bias</A> - unfair data
+<LI> Cleaning for <A HREF="" onClick="putImage(2);return false">bugfixes</A> - discontinued data
+<LI> Cleaning for <A HREF="" onClick="putImage(3);return false">the past</A> - assuming the past
+<LI> Cleaning for <A HREF="" onClick="putImage(4);return false">change</A> - strange new data
+</UL>
+
+<H3>Coherent SPC Sets</H3>
+<UL>
+<LI> CNF unit equality (<A HREF="" onClick="putImage(5);return false">UEQ</A>)
+     1140 problems
+<LI> CNF unsatisfiable (<A HREF="" onClick="putImage(6);return false">CNF UNS</A>)
+     4441 problems
+<LI> CNF satisfiable (<A HREF="" onClick="putImage(7);return false">CNF SAT</A>)
+     1042 problems
+<LI> Effectively propositional (<A HREF="" onClick="putImage(8);return false">EPR</A>)
+     1425 problems
+<LI> FOF theorems (<A HREF="" onClick="putImage(9);return false">FOF THM</A>)
+     7202 problems
+<LI> FOF non-theorems (<A HREF="" onClick="putImage(10);return false">FOF CSA/SAT</A>)
+     1028 problems
+<LI> TF0 theorems without arithmetic (<A HREF="" onClick="putImage(11);return false">TF0 NAR</A>)
+     397 problems
+<LI> TF0 theorems with arithmetic (<A HREF="" onClick="putImage(12);return false">TF0 ARI</A>)
+     1087 problems
+<LI> TH0 theorems (<A HREF="" onClick="putImage(13);return false">TH0</A>)
+     3183 problems
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

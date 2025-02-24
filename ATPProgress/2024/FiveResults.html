@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+<TITLE> Five Data-based Results </TITLE>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'FamousFive.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Plot_CNF_UNS_RFO_UEQ.png';
+  images[2]     = new Image();
+  images[2].src = 'Plot_CNF_UNS_RFO_NUE.png';
+  images[3]     = new Image();
+  images[3].src = 'Plot_CNF_SAT_RFO.png';
+  images[4]     = new Image();
+  images[4].src = 'Plot_FOF_CNF_EPR.png';
+  images[5]     = new Image();
+  images[5].src = 'Plot_FOF_THM_RFO.png';
+  images[6]     = new Image();
+  images[6].src = 'Plot_FOF_CSA_SAT_RFO.png';
+  images[7]     = new Image();
+  images[7].src = 'Plot_TF0_THM_NAR.png';
+  images[8]     = new Image();
+  images[8].src = 'Plot_TF0_THM_ARI.png';
+  images[9]     = new Image();
+  images[9].src = 'Plot_TH0_THM_NAR.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+Five Data-based Results
+</H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME="image" SRC="FamousFive.jpg" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3>Overall</H3>
+<UL>
+<LI> 25325 problems analysed 
+<LI> 19762 (78%) solved in v6.3.0, 20227 (80%) in v8.2.0
+<LI> 5563 (22%) unsolved when added, 1009 (4%) solved by v8.2.0 
+<LI> 8984 (35%) rated 0.00 in v8.2.0, 2965 (12%) rated higher before
+<LI> Contributions vary across the coherent SPC sets
+</UL>
+
+<H3>Coherent SPC Sets</H3>
+<UL>
+<LI> CNF unit equality (<A HREF="" onClick="putImage(1);hideshow('p1');return false">UEQ</A>)
+     <SPAN ID="p1" style="display:none">
+     <UL>
+     <LI> 1140 problems - N:120-86 S:1020-1049 A:38-233
+     <LI> Progress in v6.4.0 due to Twee 2.0, Waldmeister 710 (5 newly solved)
+     <LI> Progress in v7.4.0 due to E 2.5 
+     <LI> Progress in v8.1.0 due to Twee 2.4, CSE_E 1.3
+     <LI> Waldmeister 710 had the highest Shapley values 
+     <LI> Least problems solved in v7.5.0 and v8.0.0
+     </UL>
+     <P>
+     </SPAN>
+<LI> CNF unsatisfiable (<A HREF="" onClick="putImage(2);hideshow('p2');return false">CNF UNS</A>)
+     <SPAN ID="p2" style="display:none">
+     <UL>
+     <LI> 4441 problems - N:569-391 S:3873-3966 A:1004-1780
+     <LI> Small consistent decline in ratings
+     <LI> Progress in v7.0.0 due to Vampire 4.2 (33 newly solved) 
+     <LI> Progress in v8.2.0 due to SnakeForV 1.0 (26 newly solved)
+     <LI> Progress in CNF &rarr; progress elsewhere
+     </UL>
+     <P>
+     </SPAN>
+<LI> CNF satisfiable (<A HREF="" onClick="putImage(3);hideshow('p3');return false">CNF SAT</A>)
+     <SPAN ID="p3" style="display:none">
+     <UL>
+     <LI> 1042 problems - N:155-147 S:887-889 A:476-598
+     <LI> Progress in v6.4.0 due to Vampire 4.0.5 (4 newly solved) 
+     <LI> Less problems solved in v7.0.0 due to missing Prover9 1105 data 
+          <UL> 
+          <LI> Reason is lost in the mists of time 
+          <LI> Interesting that Prover9 could uniquely solve some problems 
+          </UL>
+     </UL>
+     <P>
+     </SPAN>
+<LI> Effectively propositional (<A HREF="" onClick="putImage(4);hideshow('p4');return false">EPR</A>)
+     <SPAN ID="p4" style="display:none">
+     <UL>
+     <LI> 1425 problems - N:78-43 S:1347-1360 A:1027-1311
+     <LI> Progress in v7.0.0 due to iProver 2.6
+     <LI> Progress in v7.3.0 due to iProver 3.0
+     <LI> Regress in v8.2.0 due to iProver 3.7, SnakeForV 1.0, Vampire 4.7
+          <UL>
+          <LI> Maybe the common FOF to CNF translator?
+          </UL>
+     </UL>
+     <P>
+     </SPAN>
+<LI> FOF theorems (<A HREF="" onClick="putImage(5);hideshow('p5');return false">FOF THM</A>)
+     <SPAN ID="p5" style="display:none">
+     <UL>
+     <LI> 7202 problems - N:1116-818 S:6086-6235 A:696-971
+     <LI> The best known FOF problems, most systems
+     <LI> Ratings quite flat 
+     <LI> Number of problems solved increases 
+     <LI> Progress in v7.0.0 due to Vampire 4.2 (72 newly solved), ET 0.2
+     <LI> Progress in v7.4.0 due to Enigma 0.4, Vampire 4.5 
+     </UL>
+     <P>
+     </SPAN>
+<LI> FOF non-theorems (<A HREF="" onClick="putImage(6);hideshow('p6');return false">FOF CSA/SAT</A>)
+     <SPAN ID="p6" style="display:none">
+     <UL>
+     <LI> 1028 problems - N:282-256 S:746-753 A:481-709
+     <LI> Progress in v6.4.0 due to Vampire 4.0.5 (10 newly solved), iProver 2.5 
+     </UL>
+     <P>
+     </SPAN>
+<LI> TF0 theorems without arithmetic (<A HREF="" onClick="putImage(7);hideshow('p7');return false">TF0 NAR</A>)
+     <SPAN ID="p7" style="display:none">
+     <UL>
+     <LI> 397 problems - N:120-103 S:277-268 A:117-123
+     <LI> Progress in v7.0.0 due to Vampire 4.2, CVC4 1.5.2 
+     <LI> Progress in v8.2.0 due to SnakeForV 1.0 
+     <LI> Less problems solved between v7.4.0 and v8.1.0
+     </UL>
+     <P>
+     </SPAN>
+<LI> TF0 theorems with arithmetic (<A HREF="" onClick="putImage(8);hideshow('p8');return false">TF0 ARI</A>)
+     <SPAN ID="p8" style="display:none">
+     <UL>
+     <LI> 1087 problems - N:172-58 S:915-1022 A:763-785
+     <LI> Simplest TPTP language that includes arithmetic 
+     <LI> Progress in v6.4.0 due to Vampire 4.0.5, CVC4 1.5, Princess 150706
+     </UL>
+     <P>
+     </SPAN>
+<LI> TH0 theorems (<A HREF="" onClick="putImage(9);hideshow('p9');return false">TH0</A>)
+     <SPAN ID="p9" style="display:none">
+     <UL>
+     <LI> 3183 problems - N:461-305 S:2722-2814 A:617-1244
+     <LI> Ratings decline moderately 
+     <LI> Progress in v7.0.0 due to Satallax 3.2
+     <LI> Progress in v7.5.0 due to Zipperposition 2.0 (18 newly solved)
+     </UL>
+     </SPAN>
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

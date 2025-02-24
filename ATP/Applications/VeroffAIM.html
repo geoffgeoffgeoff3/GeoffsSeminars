@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE> Loops with Abelian Inner Mapping Groups </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT>
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'WosBook.jpg';
+images[1]     = new Image();
+images[1].src = 'BobVeroff.jpg';
+images[2]     = new Image();
+images[2].src = 'MichaelKinyon.jpg';
+images[3]     = new Image();
+images[3].src = 'PetrVojtechovsky.jpg';
+
+function putImage (index) {
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Loops with Abelian Inner Mapping Groups </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="WosBook.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>The Aim of AIM</H3>
+<UL>
+<LI> If Q is a loop with commuting inner mappings ...
+     <UL>
+     <LI> Is Q modulo its center a group?
+     <LI> Is Q modulo its nucleus an abelian group?
+     </UL>
+<LI> True for several varieties of loops
+<LI> I'm just a logician who trusts mathematicians
+</UL>
+
+<H3>Using ATP</H3>
+<UL>
+<LI> Done using Prover9
+<LI> Requires sophisticated ATP, e.g., proof sketches
+<LI> Proofs are very long (viewed with IDV)
+<LI> Often no higher level human proofs available
+</UL>
+
+<H3>Two Mathematicians and a Computer Scientist Walk into a Bar </H3>
+<UL>
+<LI> <A HREF="https://mysite.du.edu/~mkinyon/">Michael Kinyon</A>
+<LI> <A HREF="https://www.cs.du.edu/~petr/">Petr Vojtěchovský</A>
+<LI> <A HREF="https://www.cs.unm.edu/~veroff/">Robert Veroff</A>
+</UL>
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

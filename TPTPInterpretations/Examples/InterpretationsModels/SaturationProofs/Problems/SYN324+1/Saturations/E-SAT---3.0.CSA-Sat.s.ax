@@ -1,0 +1,7 @@
+fof(church_46_9_1,axiom,? [X1] : ! [X2] : ( ( big_f(X1,X2) <=> big_f(X1,X1) ) => ( big_f(X1,X2) <=> big_f(X2,X2) ) ) ).
+fof(c_0_1,axiom,~ ( ? [X1] : ! [X2] : ( ( big_f(X1,X2) <=> big_f(X1,X1) ) => ( big_f(X1,X2) <=> big_f(X2,X2) ) ) ) ).
+fof(c_0_2,axiom,! [X3] : ( ( ~ big_f(X3,esk1_1(X3)) | big_f(X3,X3) ) & ( ~ big_f(X3,X3) | big_f(X3,esk1_1(X3)) ) & ( ~ big_f(X3,esk1_1(X3)) | ~ big_f(esk1_1(X3),esk1_1(X3)) ) & ( big_f(X3,esk1_1(X3)) | big_f(esk1_1(X3),esk1_1(X3)) ) ) ).
+fof(c_0_3,axiom,! [X1] : ( big_f(X1,esk1_1(X1)) | big_f(esk1_1(X1),esk1_1(X1)) ) ).
+fof(c_0_4,axiom,! [X1] : ( big_f(X1,X1) | ~ big_f(X1,esk1_1(X1)) ) ).
+fof(c_0_5,axiom,! [X1] : ( big_f(X1,esk1_1(X1)) | ~ big_f(X1,X1) ) ).
+fof(c_0_6,axiom,! [X1] : ( ~ big_f(X1,esk1_1(X1)) | ~ big_f(esk1_1(X1),esk1_1(X1)) ) ).

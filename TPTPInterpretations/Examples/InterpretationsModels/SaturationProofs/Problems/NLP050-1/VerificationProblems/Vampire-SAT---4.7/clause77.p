@@ -1,0 +1,2 @@
+include('Saturations/NLP050-1/Saturations/Vampire-SAT---4.7.ax').
+fof(clause77,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( skf18(U,V,W,X,Y,Z,X1) != U | ~ member(X2,U,X3) | ~ member(X2,X4,X3) | ~ member(X2,X5,X3) | ~ member(X2,X6,X3) | ~ member(X2,X7,X3) | five(X2,X3) | U = X7 | U = X6 | U = X5 | U = X4 | X4 = X7 | X4 = X6 | X4 = X5 | X5 = X7 | X5 = X6 | X6 = X7 ) ).

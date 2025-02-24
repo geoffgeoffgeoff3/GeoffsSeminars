@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<TITLE> The Answer Encoding </TITLE>
+</HEAD>
+<BODY ALIGN-JUSTIFY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER>The Answer Encoding</H1>
+
+<IMG NAME='image' SRC="AgathaSuicide.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+
+<H3> TPTP Derivation Format </H3>
+<div style="width:50%;height:33%;overflow:auto;">
+<PRE>
+%----Someone who lives in Dreadbury Mansion killed Aunt Agatha.
+fof(a0,axiom, ? [X] : ( lives(X) & killed(X,agatha) ) ).
+
+%----1. Agatha, the butler, and Charles live in Dreadbury Mansion,
+fof(a1_1,axiom,
+    ( lives(agatha) & lives(butler) & lives(charles) ) ).
+
+%----and are the only people who live therein.
+fof(a1_2,axiom,
+    ! [X] : ( lives(X) => ( X = agatha | X = butler | X = charles ) ) ).
+
+%----2. A killer always hates his victim,
+fof(a2_1,axiom,
+    ! [X,Y] : ( killed(X,Y) => hates(X,Y) ) ).
+
+%----and is never richer than his victim.
+fof(a2_2,axiom, ! [X,Y] : ( killed(X,Y) => ~ richer(X,Y) ) ).
+
+%----3. Charles hates no one that Aunt Agatha hates.
+fof(a3,axiom, ! [X] : ( hates(agatha,X) => ~ hates(charles,X) ) ).
+
+%----4. Agatha hates everyone except the butler.
+fof(a4,axiom, ! [X] : ( X != butler => hates(agatha,X) ) ).
+
+%----5. The butler hates everyone not richer than Aunt Agatha.
+fof(a5,axiom, ! [X] : ( ~ richer(X,agatha) => hates(butler,X) ) ).
+
+%----6. The butler hates everyone Aunt Agatha hates.
+fof(a6,axiom, ! [X] : ( hates(agatha,X) => hates(butler,X) ) ).
+
+%----7. No one hates everyone.
+fof(a7,axiom, ! [X] : ? [Y] : ~ hates(X,Y) ).
+
+%----8. Agatha is not the butler.
+fof(a8,axiom, agatha != butler ).
+
+%----9. Agatha is not Charles.
+fof(a9,axiom, agatha != charles ).
+
+%----10. Charles is not the butler.
+fof(a10,axiom, charles != butler ).
+
+%----From point 4, we know Agatha hates Charles.
+fof(i1,plain,
+    hates(agatha,charles),
+    inference(bard,[status(thm)],[a4,a10]) ).
+
+%----Since Charles hates no one that Aunt Agatha hates (point 3), Charles
+%----does not hate Aunt Agatha.
+fof(i2,plain,
+    ~ hates(charles,agatha),
+    inference(bard,[status(thm)],[a3,i1]) ).
+
+%----Thus, Charles cannot be the killer since a killer hates his victim.
+fof(i3,plain,
+    ~ killed(charles,agatha),
+    inference(bard,[status(thm)],[a2_1,i2]) ).
+
+%----From points 5 and 6, we know the butler hates everyone not richer than
+%----Aunt Agatha and everyone that Aunt Agatha hates. Since Agatha hates
+%----everyone except the butler (point 4), the butler hates Charles.
+fof(i4,plain,
+    hates(butler,charles),
+    inference(bard,[status(thm)],[a5,a6,a4,a10]) ).
+
+%----According to point 7, no one hates everyone, so the butler doesn't hate
+%----Agatha.
+fof(i5,plain,
+    ~ hates(butler,agatha),
+    inference(bard,[status(thm)],[a7,i4]) ).
+
+%----The only person left is Aunt Agatha. Since we know that Charles and the
+%----butler cannot be the killers
+fof(i6,plain,
+    ~ killed(butler,agatha),
+    inference(bard,[status(thm)],[i5,a2_1]) ).
+
+%----Agatha is not Charles and Charles is not the butler, it implies
+%----that Agatha must have killed herself.
+fof(i7,plain,
+    killed(agatha,agatha),
+    inference(bard,[status(thm)],[i3,i6,a9,a10,a0,a1_1,a1_2]) ). </PRE>
+</DIV>
+
+<H3>Notes</H3>
+<UL>
+<LI> For <TT>i1</TT>, <TT>a10</TT> is used but not mentioned
+<LI> For <TT>i4</TT>, <TT>a10</TT> is used but not mentioned,
+     <TT>a5</TT> is mentioned but not needed 
+<LI> For <TT>i7</TT>, <TT>a0</TT>, <TT>a1_1</TT>, <TT>a1_2</TT> are not 
+     mentioned but are implicitly necessary
+<LI> <TT>a7</TT> often interpreted as "no one hates everyone else"
+     <UL>
+     <LI> Contributes to the unsound inference of <TT>i5</TT>
+     <LI> But <TT>! [X] : ? [Y] : ( X != Y & ~ hates(X,Y))</TT> is CAX
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

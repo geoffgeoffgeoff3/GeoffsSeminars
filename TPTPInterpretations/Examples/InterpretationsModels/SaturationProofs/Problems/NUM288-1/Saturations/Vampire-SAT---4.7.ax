@@ -1,0 +1,12 @@
+fof(divides_if_less,axiom,! [X0] : ! [X1] : ( divides(X0,X1) | ~ less(X0,X1) ) ).
+fof(divides_if_equal,axiom,! [X0] : ! [X1] : ( divides(X0,X1) | ~ equalish(X0,X1) ) ).
+fof(transitivity_of_less,axiom,! [X2] : ! [X1] : ! [X0] : ( less(X2,X1) | ~ less(X2,X0) | ~ less(X0,X1) ) ).
+fof(smaller_number,axiom,! [X1] : ! [X2] : ! [X0] : ( less(X1,X2) | ~ equalish(add(successor(X0),X1),X2) ) ).
+fof(divides_only_less_or_equal,axiom,! [X0] : ! [X1] : ( less(X0,X1) | ~ divides(X0,X1) | equalish(X0,X1) ) ).
+fof(times,axiom,! [X0] : ! [X1] : equalish(multiply(X0,successor(X1)),add(multiply(X0,X1),X0)) ).
+fof(times_zero,axiom,! [X0] : equalish(multiply(X0,n0),n0) ).
+fof(successor_substitution,axiom,! [X0] : ! [X1] : ( equalish(successor(X0),successor(X1)) | ~ equalish(X0,X1) ) ).
+fof(less_lemma,axiom,! [X1] : ! [X0] : ( equalish(add(successor(predecessor_of_1st_minus_2nd(X1,X0)),X0),X1) | ~ less(X0,X1) ) ).
+fof(addition,axiom,! [X0] : ! [X1] : equalish(add(X0,successor(X1)),successor(add(X0,X1))) ).
+fof(adding_zero,axiom,! [X0] : equalish(add(X0,n0),X0) ).
+fof(successor_equality1,axiom,! [X0] : ! [X1] : ( equalish(X0,X1) | ~ equalish(successor(X0),successor(X1)) ) ).

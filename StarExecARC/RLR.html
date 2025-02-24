@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE> Resource Limited Run </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var nextIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'LimitedResources.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Evil.png';
+  images[2]     = new Image();
+  images[2].src = 'RLRBeer.png';
+
+  function nextImage (whichImage) {
+      nextIndex = (nextIndex + 1) % images.length;
+      document.images[whichImage].src = images[nextIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+Resource Limited Run
+</H1>
+
+<A HREF="" onClick="nextImage('main_image');return false">
+<IMG NAME="main_image" SRC="LimitedResources.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> ATP Systems are Evil </H3>
+
+<H3> History </H3>
+<UL>
+<LI> <TT>TreeLimitedRun</TT>, in C, uses process tree hacking
+<LI> <TT>runsolver</TT>, in C++, uses process tree hacking
+<LI> <TT>BenchExec</TT>, in Python, uses cgroups
+</UL>
+
+<H3> <TT>ResourceLimitedRun</TT> </H3>
+<LI> In C
+<LI> Uses cgroups
+<LI> Compatible with <TT>runsolver</TT>
+</UL>
+
+<H3> Please Clone and Test ... </H3>
+<CENTER>
+<H2><A HREF="https://github.com/StarExecMiami/StarExec-ARC">
+<TT>https://github.com/StarExecMiami/StarExec-ARC</TT></A><H2>
+</CENTER>
+
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

@@ -1,0 +1,2 @@
+include('Saturations/SYO593-1/Saturations/Vampire-SAT---4.7.ax').
+fof(i_0_733,conjecture,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( ~ esk73_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk75_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk71_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk76_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk69_7(X1,X2,X3,X4,X5,X6,X7) | esk56_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk67_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk72_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk68_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk74_7(X1,X2,X3,X4,X5,X6,X7) | ~ esk70_7(X1,X2,X3,X4,X5,X6,X7) ) ).

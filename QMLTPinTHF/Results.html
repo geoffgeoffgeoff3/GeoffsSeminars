@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE> Results </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!------------------------------------------------------------------------>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Results </H1>
+
+<IMG SRC="Winner.GIF" BORDER=0 ALIGN=RIGHT WIDTH=32%>
+
+<H3> Overall
+<A HREF="" onClick="hideshow('overall');return false;">
+<SUP><FONT SIZE=-3>Table</FONT></SUP></A> </H3>
+     <SPAN ID="overall" style="display:none">
+     <IMG SRC="ResultsOverall.png" BORDER=0 HEIGHT=50%>
+     </SPAN>
+<UL>
+<LI> Compare non-MML by number proved vs. union
+<LI> Zipperposition best, lambdaE most unique
+</UL>
+
+<H3> By Semantics
+<A HREF="" onClick="hideshow('semantics');return false;">
+<SUP><FONT SIZE=-3>Table</FONT></SUP></A> </H3>
+     <SPAN ID="semantics" style="display:none">
+     <IMG SRC="ResultsSemantics.png" BORDER=0 HEIGHT=50%>
+     </SPAN>
+<UL>
+<LI> As expected, stronger logic solves more problems
+</UL>
+
+<H3> Comparison with Native Modal ATP
+<A HREF="" onClick="hideshow('compare');return false;">
+<SUP><FONT SIZE=-3>Table</FONT></SUP></A> </H3>
+     <SPAN ID="compare" style="display:none">
+     <IMG SRC="ResultsComparison.png" BORDER=0 HEIGHT=50%>
+     </SPAN>
+<UL>
+<LI> Slightly different setups, but meaningful comparison
+<LI> nanoCoP and MleanCoP are most effective
+<LI> Native is superior to embedding
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

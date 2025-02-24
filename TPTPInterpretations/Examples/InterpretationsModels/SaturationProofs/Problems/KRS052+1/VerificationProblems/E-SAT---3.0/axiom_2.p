@@ -1,0 +1,2 @@
+include('Saturations/KRS052+1/Saturations/E-SAT---3.0.ax').
+fof(axiom_2,conjecture,! [X] : ( ccardinality_N(X) <=> ( ? [Y0] : ? [Y1] : ? [Y2] : ( rinvQ_1_to_M(X,Y0) & rinvQ_1_to_M(X,Y1) & rinvQ_1_to_M(X,Y2) & Y0 != Y1 & Y0 != Y2 & Y1 != Y2 ) & ! [Y0] : ! [Y1] : ! [Y2] : ! [Y3] : ( ( rinvQ_1_to_M(X,Y0) & rinvQ_1_to_M(X,Y1) & rinvQ_1_to_M(X,Y2) & rinvQ_1_to_M(X,Y3) ) => ( Y0 = Y1 | Y0 = Y2 | Y0 = Y3 | Y1 = Y2 | Y1 = Y3 | Y2 = Y3 ) ) ) ) ).

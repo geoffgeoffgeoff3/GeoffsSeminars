@@ -1,0 +1,307 @@
+fof(u870,axiom,ic(sK1) ).
+fof(u839,axiom,ic(sK0) ).
+fof(u815,axiom,ic(uri_rdfs_Statement) ).
+fof(u269,axiom,ic(uri_rdfs_Class) ).
+fof(u256,axiom,ic(uri_rdfs_Datatype) ).
+fof(u252,axiom,ic(uri_rdf_XMLLiteral) ).
+fof(u255,axiom,ic(uri_rdfs_Seq) ).
+fof(u251,axiom,ic(uri_rdfs_ContainerMembershipProperty) ).
+fof(u253,axiom,ic(uri_rdf_Bag) ).
+fof(u266,axiom,ic(uri_rdfs_Container) ).
+fof(u254,axiom,ic(uri_rdf_Alt) ).
+fof(u265,axiom,ic(uri_rdfs_Literal) ).
+fof(u558,axiom,ic(uri_rdfs_Resource) ).
+fof(u783,axiom,ic(uri_rdf_List) ).
+fof(u264,axiom,ic(uri_rdf_Property) ).
+fof(u197,axiom,! [X0] : ( ~ ic(X0) | icext(uri_rdfs_Class,X0) ) ).
+fof(u189,axiom,! [X0] : ( ~ ic(X0) | iext(uri_rdfs_subClassOf,X0,X0) ) ).
+fof(u190,axiom,! [X0] : ( ~ ic(X0) | iext(uri_rdfs_subClassOf,X0,uri_rdfs_Resource) ) ).
+fof(u838,axiom,icext(uri_rdfs_Class,sK1) ).
+fof(u814,axiom,icext(uri_rdfs_Class,sK0) ).
+fof(u801,axiom,icext(uri_rdfs_Class,uri_rdfs_Statement) ).
+fof(u363,axiom,icext(uri_rdfs_Class,uri_rdfs_Class) ).
+fof(u351,axiom,icext(uri_rdfs_Class,uri_rdfs_Datatype) ).
+fof(u272,axiom,icext(uri_rdfs_Class,uri_rdf_XMLLiteral) ).
+fof(u348,axiom,icext(uri_rdfs_Class,uri_rdfs_Seq) ).
+fof(u263,axiom,icext(uri_rdfs_Class,uri_rdfs_ContainerMembershipProperty) ).
+fof(u275,axiom,icext(uri_rdfs_Class,uri_rdf_Bag) ).
+fof(u360,axiom,icext(uri_rdfs_Class,uri_rdfs_Container) ).
+fof(u278,axiom,icext(uri_rdfs_Class,uri_rdf_Alt) ).
+fof(u357,axiom,icext(uri_rdfs_Class,uri_rdfs_Literal) ).
+fof(u563,axiom,icext(uri_rdfs_Class,uri_rdfs_Resource) ).
+fof(u768,axiom,icext(uri_rdfs_Class,uri_rdf_List) ).
+fof(u369,axiom,icext(uri_rdfs_Class,uri_rdf_Property) ).
+fof(u381,axiom,icext(uri_rdfs_Datatype,uri_rdf_XMLLiteral) ).
+fof(u376,axiom,icext(uri_rdfs_ContainerMembershipProperty,uri_rdf__3) ).
+fof(u374,axiom,icext(uri_rdfs_ContainerMembershipProperty,uri_rdf__2) ).
+fof(u372,axiom,icext(uri_rdfs_ContainerMembershipProperty,uri_rdf__1) ).
+fof(u221,axiom,! [X0] : icext(uri_rdfs_Resource,X0) ).
+fof(u545,axiom,icext(uri_rdf_List,sK3) ).
+fof(u544,axiom,icext(uri_rdf_List,sK2) ).
+fof(u370,axiom,icext(uri_rdf_List,uri_rdf_nil) ).
+fof(u910,axiom,icext(uri_rdf_Property,uri_owl_oneOf) ).
+fof(u610,axiom,icext(uri_rdf_Property,uri_ex_p) ).
+fof(u609,axiom,icext(uri_rdf_Property,uri_rdf_predicate) ).
+fof(u608,axiom,icext(uri_rdf_Property,uri_rdfs_member) ).
+fof(u607,axiom,icext(uri_rdf_Property,uri_rdfs_subClassOf) ).
+fof(u606,axiom,icext(uri_rdf_Property,uri_rdfs_label) ).
+fof(u542,axiom,icext(uri_rdf_Property,uri_rdfs_seeAlso) ).
+fof(u604,axiom,icext(uri_rdf_Property,uri_rdfs_subPropertyOf) ).
+fof(u532,axiom,icext(uri_rdf_Property,uri_rdfs_isDefinedBy) ).
+fof(u602,axiom,icext(uri_rdf_Property,uri_rdfs_range) ).
+fof(u601,axiom,icext(uri_rdf_Property,uri_rdfs_comment) ).
+fof(u600,axiom,icext(uri_rdf_Property,uri_rdfs_domain) ).
+fof(u380,axiom,icext(uri_rdf_Property,uri_rdf_subject) ).
+fof(u379,axiom,icext(uri_rdf_Property,uri_rdf_value) ).
+fof(u378,axiom,icext(uri_rdf_Property,uri_rdf_object) ).
+fof(u377,axiom,icext(uri_rdf_Property,uri_rdf__3) ).
+fof(u375,axiom,icext(uri_rdf_Property,uri_rdf__2) ).
+fof(u373,axiom,icext(uri_rdf_Property,uri_rdf__1) ).
+fof(u371,axiom,icext(uri_rdf_Property,uri_rdf_rest) ).
+fof(u368,axiom,icext(uri_rdf_Property,uri_rdf_first) ).
+fof(u367,axiom,icext(uri_rdf_Property,uri_rdf_type) ).
+fof(u206,axiom,! [X1] : ! [X0] : ( ~ icext(X1,X0) | iext(uri_rdf_type,X0,X1) ) ).
+fof(u196,axiom,! [X0] : ( ~ icext(uri_rdfs_Class,X0) | ic(X0) ) ).
+fof(u192,axiom,! [X0] : ( ~ icext(uri_rdfs_Datatype,X0) | iext(uri_rdfs_subClassOf,X0,uri_rdfs_Literal) ) ).
+fof(u387,axiom,! [X5] : ( ~ icext(uri_rdfs_Datatype,X5) | icext(uri_rdfs_Class,X5) ) ).
+fof(u383,axiom,! [X1] : ( ~ icext(uri_rdf_XMLLiteral,X1) | icext(uri_rdfs_Literal,X1) ) ).
+fof(u386,axiom,! [X4] : ( ~ icext(uri_rdfs_Seq,X4) | icext(uri_rdfs_Container,X4) ) ).
+fof(u193,axiom,! [X0] : ( ~ icext(uri_rdfs_ContainerMembershipProperty,X0) | iext(uri_rdfs_subPropertyOf,X0,uri_rdfs_member) ) ).
+fof(u382,axiom,! [X0] : ( ~ icext(uri_rdfs_ContainerMembershipProperty,X0) | icext(uri_rdf_Property,X0) ) ).
+fof(u384,axiom,! [X2] : ( ~ icext(uri_rdf_Bag,X2) | icext(uri_rdfs_Container,X2) ) ).
+fof(u385,axiom,! [X3] : ( ~ icext(uri_rdf_Alt,X3) | icext(uri_rdfs_Container,X3) ) ).
+fof(u194,axiom,! [X0] : ( ~ icext(uri_rdfs_Literal,X0) | lv(X0) ) ).
+fof(u187,axiom,! [X0] : ir(X0) ).
+fof(u344,axiom,ip(uri_owl_oneOf) ).
+fof(u1011,axiom,ip(uri_ex_p) ).
+fof(u1005,axiom,ip(uri_rdf_predicate) ).
+fof(u925,axiom,ip(uri_rdfs_member) ).
+fof(u338,axiom,ip(uri_rdfs_subClassOf) ).
+fof(u995,axiom,ip(uri_rdfs_label) ).
+fof(u244,axiom,ip(uri_rdfs_seeAlso) ).
+fof(u337,axiom,ip(uri_rdfs_subPropertyOf) ).
+fof(u237,axiom,ip(uri_rdfs_isDefinedBy) ).
+fof(u318,axiom,ip(uri_rdfs_range) ).
+fof(u989,axiom,ip(uri_rdfs_comment) ).
+fof(u298,axiom,ip(uri_rdfs_domain) ).
+fof(u230,axiom,ip(uri_rdf_subject) ).
+fof(u229,axiom,ip(uri_rdf_value) ).
+fof(u228,axiom,ip(uri_rdf_object) ).
+fof(u227,axiom,ip(uri_rdf__3) ).
+fof(u226,axiom,ip(uri_rdf__2) ).
+fof(u225,axiom,ip(uri_rdf__1) ).
+fof(u224,axiom,ip(uri_rdf_rest) ).
+fof(u223,axiom,ip(uri_rdf_first) ).
+fof(u222,axiom,ip(uri_rdf_type) ).
+fof(u191,axiom,! [X0] : ( ~ ip(X0) | iext(uri_rdfs_subPropertyOf,X0,X0) ) ).
+fof(u198,axiom,! [X0] : ( ~ ip(X0) | iext(uri_rdf_type,X0,uri_rdf_Property) ) ).
+fof(u218,axiom,iext(uri_owl_oneOf,sK1,sK3) ).
+fof(u214,axiom,iext(uri_owl_oneOf,sK0,sK2) ).
+fof(u873,axiom,iext(uri_rdfs_subClassOf,sK1,sK1) ).
+fof(u842,axiom,iext(uri_rdfs_subClassOf,sK0,sK0) ).
+fof(u818,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Statement,uri_rdfs_Statement) ).
+fof(u362,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Class,uri_rdfs_Class) ).
+fof(u131,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Datatype,uri_rdfs_Class) ).
+fof(u350,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Datatype,uri_rdfs_Datatype) ).
+fof(u271,axiom,iext(uri_rdfs_subClassOf,uri_rdf_XMLLiteral,uri_rdf_XMLLiteral) ).
+fof(u347,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Seq,uri_rdfs_Seq) ).
+fof(u262,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_ContainerMembershipProperty,uri_rdfs_ContainerMembershipProperty) ).
+fof(u274,axiom,iext(uri_rdfs_subClassOf,uri_rdf_Bag,uri_rdf_Bag) ).
+fof(u129,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Seq,uri_rdfs_Container) ).
+fof(u127,axiom,iext(uri_rdfs_subClassOf,uri_rdf_Bag,uri_rdfs_Container) ).
+fof(u359,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Container,uri_rdfs_Container) ).
+fof(u128,axiom,iext(uri_rdfs_subClassOf,uri_rdf_Alt,uri_rdfs_Container) ).
+fof(u277,axiom,iext(uri_rdfs_subClassOf,uri_rdf_Alt,uri_rdf_Alt) ).
+fof(u356,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Literal,uri_rdfs_Literal) ).
+fof(u130,axiom,iext(uri_rdfs_subClassOf,uri_rdf_XMLLiteral,uri_rdfs_Literal) ).
+fof(u872,axiom,iext(uri_rdfs_subClassOf,sK1,uri_rdfs_Resource) ).
+fof(u841,axiom,iext(uri_rdfs_subClassOf,sK0,uri_rdfs_Resource) ).
+fof(u817,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Statement,uri_rdfs_Resource) ).
+fof(u361,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Class,uri_rdfs_Resource) ).
+fof(u349,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Datatype,uri_rdfs_Resource) ).
+fof(u270,axiom,iext(uri_rdfs_subClassOf,uri_rdf_XMLLiteral,uri_rdfs_Resource) ).
+fof(u346,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Seq,uri_rdfs_Resource) ).
+fof(u261,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_ContainerMembershipProperty,uri_rdfs_Resource) ).
+fof(u273,axiom,iext(uri_rdfs_subClassOf,uri_rdf_Bag,uri_rdfs_Resource) ).
+fof(u358,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Container,uri_rdfs_Resource) ).
+fof(u276,axiom,iext(uri_rdfs_subClassOf,uri_rdf_Alt,uri_rdfs_Resource) ).
+fof(u355,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Literal,uri_rdfs_Resource) ).
+fof(u561,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_Resource,uri_rdfs_Resource) ).
+fof(u785,axiom,iext(uri_rdfs_subClassOf,uri_rdf_List,uri_rdfs_Resource) ).
+fof(u352,axiom,iext(uri_rdfs_subClassOf,uri_rdf_Property,uri_rdfs_Resource) ).
+fof(u786,axiom,iext(uri_rdfs_subClassOf,uri_rdf_List,uri_rdf_List) ).
+fof(u353,axiom,iext(uri_rdfs_subClassOf,uri_rdf_Property,uri_rdf_Property) ).
+fof(u132,axiom,iext(uri_rdfs_subClassOf,uri_rdfs_ContainerMembershipProperty,uri_rdf_Property) ).
+fof(u442,axiom,iext(uri_rdfs_subPropertyOf,uri_owl_oneOf,uri_owl_oneOf) ).
+fof(u1019,axiom,iext(uri_rdfs_subPropertyOf,uri_ex_p,uri_ex_p) ).
+fof(u1010,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf_predicate,uri_rdf_predicate) ).
+fof(u931,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_member,uri_rdfs_member) ).
+fof(u440,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_subClassOf,uri_rdfs_subClassOf) ).
+fof(u1000,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_label,uri_rdfs_label) ).
+fof(u260,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_seeAlso,uri_rdfs_seeAlso) ).
+fof(u438,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_subPropertyOf,uri_rdfs_subPropertyOf) ).
+fof(u258,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_isDefinedBy,uri_rdfs_isDefinedBy) ).
+fof(u126,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_isDefinedBy,uri_rdfs_seeAlso) ).
+fof(u430,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_range,uri_rdfs_range) ).
+fof(u994,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_comment,uri_rdfs_comment) ).
+fof(u365,axiom,iext(uri_rdfs_subPropertyOf,uri_rdfs_domain,uri_rdfs_domain) ).
+fof(u250,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf_subject,uri_rdf_subject) ).
+fof(u248,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf_value,uri_rdf_value) ).
+fof(u246,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf_object,uri_rdf_object) ).
+fof(u455,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf__3,uri_rdfs_member) ).
+fof(u243,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf__3,uri_rdf__3) ).
+fof(u452,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf__2,uri_rdfs_member) ).
+fof(u241,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf__2,uri_rdf__2) ).
+fof(u449,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf__1,uri_rdfs_member) ).
+fof(u239,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf__1,uri_rdf__1) ).
+fof(u236,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf_rest,uri_rdf_rest) ).
+fof(u234,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf_first,uri_rdf_first) ).
+fof(u232,axiom,iext(uri_rdfs_subPropertyOf,uri_rdf_type,uri_rdf_type) ).
+fof(u217,axiom,iext(uri_rdfs_range,uri_ex_p,sK1) ).
+fof(u176,axiom,iext(uri_rdfs_range,uri_rdfs_subClassOf,uri_rdfs_Class) ).
+fof(u180,axiom,iext(uri_rdfs_range,uri_rdfs_range,uri_rdfs_Class) ).
+fof(u181,axiom,iext(uri_rdfs_range,uri_rdfs_domain,uri_rdfs_Class) ).
+fof(u179,axiom,iext(uri_rdfs_range,uri_rdf_type,uri_rdfs_Class) ).
+fof(u136,axiom,iext(uri_rdfs_range,uri_rdfs_comment,uri_rdfs_Literal) ).
+fof(u135,axiom,iext(uri_rdfs_range,uri_rdfs_label,uri_rdfs_Literal) ).
+fof(u147,axiom,iext(uri_rdfs_range,uri_rdf_predicate,uri_rdfs_Resource) ).
+fof(u154,axiom,iext(uri_rdfs_range,uri_rdfs_member,uri_rdfs_Resource) ).
+fof(u146,axiom,iext(uri_rdfs_range,uri_rdfs_seeAlso,uri_rdfs_Resource) ).
+fof(u148,axiom,iext(uri_rdfs_range,uri_rdfs_isDefinedBy,uri_rdfs_Resource) ).
+fof(u153,axiom,iext(uri_rdfs_range,uri_rdf_subject,uri_rdfs_Resource) ).
+fof(u151,axiom,iext(uri_rdfs_range,uri_rdf_value,uri_rdfs_Resource) ).
+fof(u167,axiom,iext(uri_rdfs_range,uri_rdf__3,uri_rdfs_Resource) ).
+fof(u166,axiom,iext(uri_rdfs_range,uri_rdf__2,uri_rdfs_Resource) ).
+fof(u165,axiom,iext(uri_rdfs_range,uri_rdf__1,uri_rdfs_Resource) ).
+fof(u173,axiom,iext(uri_rdfs_range,uri_rdf_first,uri_rdfs_Resource) ).
+fof(u169,axiom,iext(uri_rdfs_range,uri_rdf_rest,uri_rdf_List) ).
+fof(u175,axiom,iext(uri_rdfs_range,uri_rdfs_subPropertyOf,uri_rdf_Property) ).
+fof(u213,axiom,iext(uri_rdfs_domain,uri_ex_p,sK0) ).
+fof(u140,axiom,iext(uri_rdfs_domain,uri_rdf_predicate,uri_rdfs_Statement) ).
+fof(u152,axiom,iext(uri_rdfs_domain,uri_rdfs_member,uri_rdfs_Resource) ).
+fof(u177,axiom,iext(uri_rdfs_domain,uri_rdfs_subClassOf,uri_rdfs_Class) ).
+fof(u139,axiom,iext(uri_rdfs_domain,uri_rdfs_label,uri_rdfs_Resource) ).
+fof(u145,axiom,iext(uri_rdfs_domain,uri_rdfs_seeAlso,uri_rdfs_Resource) ).
+fof(u174,axiom,iext(uri_rdfs_domain,uri_rdfs_subPropertyOf,uri_rdf_Property) ).
+fof(u149,axiom,iext(uri_rdfs_domain,uri_rdfs_isDefinedBy,uri_rdfs_Resource) ).
+fof(u182,axiom,iext(uri_rdfs_domain,uri_rdfs_range,uri_rdf_Property) ).
+fof(u138,axiom,iext(uri_rdfs_domain,uri_rdfs_comment,uri_rdfs_Resource) ).
+fof(u184,axiom,iext(uri_rdfs_domain,uri_rdfs_domain,uri_rdf_Property) ).
+fof(u141,axiom,iext(uri_rdfs_domain,uri_rdf_subject,uri_rdfs_Statement) ).
+fof(u155,axiom,iext(uri_rdfs_domain,uri_rdf_value,uri_rdfs_Resource) ).
+fof(u134,axiom,iext(uri_rdfs_domain,uri_rdf_object,uri_rdfs_Statement) ).
+fof(u162,axiom,iext(uri_rdfs_domain,uri_rdf__3,uri_rdfs_Resource) ).
+fof(u163,axiom,iext(uri_rdfs_domain,uri_rdf__2,uri_rdfs_Resource) ).
+fof(u164,axiom,iext(uri_rdfs_domain,uri_rdf__1,uri_rdfs_Resource) ).
+fof(u170,axiom,iext(uri_rdfs_domain,uri_rdf_rest,uri_rdf_List) ).
+fof(u168,axiom,iext(uri_rdfs_domain,uri_rdf_first,uri_rdf_List) ).
+fof(u186,axiom,iext(uri_rdfs_domain,uri_rdf_type,uri_rdfs_Resource) ).
+fof(u220,axiom,iext(uri_rdf_rest,sK3,uri_rdf_nil) ).
+fof(u216,axiom,iext(uri_rdf_rest,sK2,uri_rdf_nil) ).
+fof(u219,axiom,iext(uri_rdf_first,sK3,uri_ex_u) ).
+fof(u215,axiom,iext(uri_rdf_first,sK2,uri_ex_w) ).
+fof(u547,axiom,iext(uri_rdf_type,sK3,uri_rdf_List) ).
+fof(u546,axiom,iext(uri_rdf_type,sK2,uri_rdf_List) ).
+fof(u871,axiom,iext(uri_rdf_type,sK1,uri_rdfs_Class) ).
+fof(u840,axiom,iext(uri_rdf_type,sK0,uri_rdfs_Class) ).
+fof(u441,axiom,iext(uri_rdf_type,uri_owl_oneOf,uri_rdf_Property) ).
+fof(u650,axiom,iext(uri_rdf_type,uri_ex_p,uri_rdf_Property) ).
+fof(u649,axiom,iext(uri_rdf_type,uri_rdf_predicate,uri_rdf_Property) ).
+fof(u816,axiom,iext(uri_rdf_type,uri_rdfs_Statement,uri_rdfs_Class) ).
+fof(u485,axiom,iext(uri_rdf_type,uri_rdfs_Class,uri_rdfs_Class) ).
+fof(u479,axiom,iext(uri_rdf_type,uri_rdfs_Datatype,uri_rdfs_Class) ).
+fof(u466,axiom,iext(uri_rdf_type,uri_rdf_XMLLiteral,uri_rdfs_Class) ).
+fof(u133,axiom,iext(uri_rdf_type,uri_rdf_XMLLiteral,uri_rdfs_Datatype) ).
+fof(u474,axiom,iext(uri_rdf_type,uri_rdfs_Seq,uri_rdfs_Class) ).
+fof(u648,axiom,iext(uri_rdf_type,uri_rdfs_member,uri_rdf_Property) ).
+fof(u464,axiom,iext(uri_rdf_type,uri_rdfs_ContainerMembershipProperty,uri_rdfs_Class) ).
+fof(u470,axiom,iext(uri_rdf_type,uri_rdf_Bag,uri_rdfs_Class) ).
+fof(u483,axiom,iext(uri_rdf_type,uri_rdfs_Container,uri_rdfs_Class) ).
+fof(u472,axiom,iext(uri_rdf_type,uri_rdf_Alt,uri_rdfs_Class) ).
+fof(u439,axiom,iext(uri_rdf_type,uri_rdfs_subClassOf,uri_rdf_Property) ).
+fof(u634,axiom,iext(uri_rdf_type,uri_rdfs_label,uri_rdf_Property) ).
+fof(u259,axiom,iext(uri_rdf_type,uri_rdfs_seeAlso,uri_rdf_Property) ).
+fof(u437,axiom,iext(uri_rdf_type,uri_rdfs_subPropertyOf,uri_rdf_Property) ).
+fof(u257,axiom,iext(uri_rdf_type,uri_rdfs_isDefinedBy,uri_rdf_Property) ).
+fof(u481,axiom,iext(uri_rdf_type,uri_rdfs_Literal,uri_rdfs_Class) ).
+fof(u429,axiom,iext(uri_rdf_type,uri_rdfs_range,uri_rdf_Property) ).
+fof(u565,axiom,iext(uri_rdf_type,uri_rdfs_Resource,uri_rdfs_Class) ).
+fof(u612,axiom,iext(uri_rdf_type,uri_rdfs_comment,uri_rdf_Property) ).
+fof(u364,axiom,iext(uri_rdf_type,uri_rdfs_domain,uri_rdf_Property) ).
+fof(u144,axiom,iext(uri_rdf_type,uri_rdf_subject,uri_rdf_Property) ).
+fof(u143,axiom,iext(uri_rdf_type,uri_rdf_value,uri_rdf_Property) ).
+fof(u137,axiom,iext(uri_rdf_type,uri_rdf_object,uri_rdf_Property) ).
+fof(u161,axiom,iext(uri_rdf_type,uri_rdf__3,uri_rdf_Property) ).
+fof(u156,axiom,iext(uri_rdf_type,uri_rdf__3,uri_rdfs_ContainerMembershipProperty) ).
+fof(u159,axiom,iext(uri_rdf_type,uri_rdf__2,uri_rdf_Property) ).
+fof(u157,axiom,iext(uri_rdf_type,uri_rdf__2,uri_rdfs_ContainerMembershipProperty) ).
+fof(u160,axiom,iext(uri_rdf_type,uri_rdf__1,uri_rdf_Property) ).
+fof(u158,axiom,iext(uri_rdf_type,uri_rdf__1,uri_rdfs_ContainerMembershipProperty) ).
+fof(u172,axiom,iext(uri_rdf_type,uri_rdf_rest,uri_rdf_Property) ).
+fof(u784,axiom,iext(uri_rdf_type,uri_rdf_List,uri_rdfs_Class) ).
+fof(u142,axiom,iext(uri_rdf_type,uri_rdf_nil,uri_rdf_List) ).
+fof(u178,axiom,iext(uri_rdf_type,uri_rdf_Property,uri_rdfs_Class) ).
+fof(u171,axiom,iext(uri_rdf_type,uri_rdf_first,uri_rdf_Property) ).
+fof(u183,axiom,iext(uri_rdf_type,uri_rdf_type,uri_rdf_Property) ).
+fof(u366,axiom,! [X0] : iext(uri_rdf_type,X0,uri_rdfs_Resource) ).
+fof(u407,axiom,! [X38] : ! [X39] : ( ~ iext(uri_ex_p,X38,X39) | icext(sK0,X38) ) ).
+fof(u426,axiom,! [X36] : ! [X37] : ( ~ iext(uri_ex_p,X36,X37) | icext(sK1,X37) ) ).
+fof(u406,axiom,! [X36] : ! [X37] : ( ~ iext(uri_rdf_predicate,X36,X37) | icext(uri_rdfs_Statement,X36) ) ).
+fof(u436,axiom,! [X5] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Class,X5) | iext(uri_rdfs_subClassOf,uri_rdfs_Datatype,X5) ) ).
+fof(u433,axiom,! [X2] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Container,X2) | iext(uri_rdfs_subClassOf,uri_rdf_Bag,X2) ) ).
+fof(u434,axiom,! [X3] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Container,X3) | iext(uri_rdfs_subClassOf,uri_rdf_Alt,X3) ) ).
+fof(u435,axiom,! [X4] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Container,X4) | iext(uri_rdfs_subClassOf,uri_rdfs_Seq,X4) ) ).
+fof(u432,axiom,! [X1] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Literal,X1) | iext(uri_rdfs_subClassOf,uri_rdf_XMLLiteral,X1) ) ).
+fof(u1082,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,sK1,X0) ) ).
+fof(u1068,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,sK0,X0) ) ).
+fof(u1053,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdfs_Statement,X0) ) ).
+fof(u1038,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdf_List,X0) ) ).
+fof(u750,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdfs_Class,X0) ) ).
+fof(u738,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdfs_Container,X0) ) ).
+fof(u726,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdfs_Literal,X0) ) ).
+fof(u714,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdf_Property,X0) ) ).
+fof(u700,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdfs_Datatype,X0) ) ).
+fof(u676,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdfs_Seq,X0) ) ).
+fof(u664,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdf_Alt,X0) ) ).
+fof(u581,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdf_Bag,X0) ) ).
+fof(u571,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdf_XMLLiteral,X0) ) ).
+fof(u556,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdfs_Resource,X0) | iext(uri_rdfs_subClassOf,uri_rdfs_ContainerMembershipProperty,X0) ) ).
+fof(u431,axiom,! [X0] : ( ~ iext(uri_rdfs_subClassOf,uri_rdf_Property,X0) | iext(uri_rdfs_subClassOf,uri_rdfs_ContainerMembershipProperty,X0) ) ).
+fof(u204,axiom,! [X0] : ! [X1] : ( ~ iext(uri_rdfs_subClassOf,X0,X1) | ic(X0) ) ).
+fof(u205,axiom,! [X0] : ! [X1] : ( ~ iext(uri_rdfs_subClassOf,X0,X1) | ic(X1) ) ).
+fof(u203,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ iext(uri_rdfs_subClassOf,X0,X1) | ~ icext(X0,X2) | icext(X1,X2) ) ).
+fof(u210,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ iext(uri_rdfs_subClassOf,X0,X1) | ~ iext(uri_rdfs_subClassOf,X1,X2) | iext(uri_rdfs_subClassOf,X0,X2) ) ).
+fof(u404,axiom,! [X32] : ! [X33] : ( ~ iext(uri_rdfs_subClassOf,X32,X33) | icext(uri_rdfs_Class,X32) ) ).
+fof(u425,axiom,! [X34] : ! [X35] : ( ~ iext(uri_rdfs_subClassOf,X34,X35) | icext(uri_rdfs_Class,X35) ) ).
+fof(u420,axiom,! [X24] : ! [X25] : ( ~ iext(uri_rdfs_label,X24,X25) | icext(uri_rdfs_Literal,X25) ) ).
+fof(u923,axiom,! [X0] : ( ~ iext(uri_rdfs_subPropertyOf,uri_rdfs_member,X0) | iext(uri_rdfs_subPropertyOf,uri_rdf__1,X0) ) ).
+fof(u934,axiom,! [X0] : ( ~ iext(uri_rdfs_subPropertyOf,uri_rdfs_member,X0) | iext(uri_rdfs_subPropertyOf,uri_rdf__2,X0) ) ).
+fof(u941,axiom,! [X0] : ( ~ iext(uri_rdfs_subPropertyOf,uri_rdfs_member,X0) | iext(uri_rdfs_subPropertyOf,uri_rdf__3,X0) ) ).
+fof(u428,axiom,! [X0] : ( ~ iext(uri_rdfs_subPropertyOf,uri_rdfs_seeAlso,X0) | iext(uri_rdfs_subPropertyOf,uri_rdfs_isDefinedBy,X0) ) ).
+fof(u201,axiom,! [X0] : ! [X1] : ( ~ iext(uri_rdfs_subPropertyOf,X0,X1) | ip(X0) ) ).
+fof(u202,axiom,! [X0] : ! [X1] : ( ~ iext(uri_rdfs_subPropertyOf,X0,X1) | ip(X1) ) ).
+fof(u200,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ iext(uri_rdfs_subPropertyOf,X0,X1) | ~ iext(X0,X2,X3) | iext(X1,X2,X3) ) ).
+fof(u209,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ iext(uri_rdfs_subPropertyOf,X0,X1) | ~ iext(uri_rdfs_subPropertyOf,X1,X2) | iext(uri_rdfs_subPropertyOf,X0,X2) ) ).
+fof(u401,axiom,! [X26] : ! [X27] : ( ~ iext(uri_rdfs_subPropertyOf,X26,X27) | icext(uri_rdf_Property,X26) ) ).
+fof(u408,axiom,! [X0] : ! [X1] : ( ~ iext(uri_rdfs_subPropertyOf,X0,X1) | icext(uri_rdf_Property,X1) ) ).
+fof(u427,axiom,! [X0] : ! [X1] : ( ~ iext(uri_rdfs_isDefinedBy,X0,X1) | iext(uri_rdfs_seeAlso,X0,X1) ) ).
+fof(u212,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ iext(uri_rdfs_range,X0,X1) | ~ iext(X0,X2,X3) | icext(X1,X3) ) ).
+fof(u399,axiom,! [X22] : ! [X23] : ( ~ iext(uri_rdfs_range,X22,X23) | icext(uri_rdf_Property,X22) ) ).
+fof(u424,axiom,! [X32] : ! [X33] : ( ~ iext(uri_rdfs_range,X32,X33) | icext(uri_rdfs_Class,X33) ) ).
+fof(u421,axiom,! [X26] : ! [X27] : ( ~ iext(uri_rdfs_comment,X26,X27) | icext(uri_rdfs_Literal,X27) ) ).
+fof(u211,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ iext(uri_rdfs_domain,X0,X1) | ~ iext(X0,X2,X3) | icext(X1,X2) ) ).
+fof(u397,axiom,! [X18] : ! [X19] : ( ~ iext(uri_rdfs_domain,X18,X19) | icext(uri_rdf_Property,X18) ) ).
+fof(u423,axiom,! [X30] : ! [X31] : ( ~ iext(uri_rdfs_domain,X30,X31) | icext(uri_rdfs_Class,X31) ) ).
+fof(u396,axiom,! [X16] : ! [X17] : ( ~ iext(uri_rdf_subject,X16,X17) | icext(uri_rdfs_Statement,X16) ) ).
+fof(u394,axiom,! [X12] : ! [X13] : ( ~ iext(uri_rdf_object,X12,X13) | icext(uri_rdfs_Statement,X12) ) ).
+fof(u942,axiom,! [X1] : ! [X2] : ( ~ iext(uri_rdf__3,X1,X2) | iext(uri_rdfs_member,X1,X2) ) ).
+fof(u935,axiom,! [X1] : ! [X2] : ( ~ iext(uri_rdf__2,X1,X2) | iext(uri_rdfs_member,X1,X2) ) ).
+fof(u924,axiom,! [X1] : ! [X2] : ( ~ iext(uri_rdf__1,X1,X2) | iext(uri_rdfs_member,X1,X2) ) ).
+fof(u390,axiom,! [X4] : ! [X5] : ( ~ iext(uri_rdf_rest,X4,X5) | icext(uri_rdf_List,X4) ) ).
+fof(u409,axiom,! [X2] : ! [X3] : ( ~ iext(uri_rdf_rest,X2,X3) | icext(uri_rdf_List,X3) ) ).
+fof(u389,axiom,! [X2] : ! [X3] : ( ~ iext(uri_rdf_first,X2,X3) | icext(uri_rdf_List,X2) ) ).
+fof(u207,axiom,! [X0] : ! [X1] : ( ~ iext(uri_rdf_type,X0,X1) | icext(X1,X0) ) ).
+fof(u422,axiom,! [X28] : ! [X29] : ( ~ iext(uri_rdf_type,X28,X29) | icext(uri_rdfs_Class,X29) ) ).
+fof(u199,axiom,! [X0] : ( ~ iext(uri_rdf_type,X0,uri_rdf_Property) | ip(X0) ) ).
+fof(u125,axiom,~ iext(uri_rdf_type,uri_ex_p,uri_owl_InverseFunctionalProperty) ).
+fof(u208,axiom,! [X1] : ! [X0] : ! [X2] : ( ~ iext(X1,X0,X2) | ip(X1) ) ).

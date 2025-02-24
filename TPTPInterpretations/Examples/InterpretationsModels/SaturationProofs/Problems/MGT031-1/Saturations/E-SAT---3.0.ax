@@ -1,0 +1,42 @@
+fof(mp_greater_or_equal_27,axiom,! [X1] : ! [X2] : ( greater(X1,X2) | X1 = X2 | ~ greater_or_equal(X1,X2) ) ).
+fof(mp_FM_not_precede_first_25,axiom,! [X1] : ( greater_or_equal(appear(first_movers,X1),appear(an_organisation,X1)) | ~ environment(X1) ) ).
+fof(prove_l13_32,axiom,environment(sk2) ).
+fof(prove_l13_34,axiom,appear(an_organisation,sk2) != appear(first_movers,sk2) ).
+fof(a9_30,axiom,! [X2] : ! [X1] : ! [X3] : ( X2 = efficient_producers | X2 = first_movers | ~ environment(X1) | ~ subpopulation(X2,X1,X3) | ~ greater(cardinality_at_time(X2,X3),zero) ) ).
+fof(mp_number_mean_non_empty_22,axiom,! [X2] : ! [X1] : ( greater(cardinality_at_time(sk1(X2,X1),X2),zero) | ~ environment(X1) | ~ greater(number_of_organizations(X1,X2),zero) ) ).
+fof(mp_greater_transitivity_26,axiom,! [X1] : ! [X3] : ! [X2] : ( greater(X1,X3) | ~ greater(X1,X2) | ~ greater(X2,X3) ) ).
+fof(mp_number_mean_non_empty_21,axiom,! [X2] : ! [X1] : ( subpopulation(sk1(X2,X1),X1,X2) | ~ environment(X1) | ~ greater(number_of_organizations(X1,X2),zero) ) ).
+fof(mp_positive_number_when_appear_20,axiom,! [X1] : ( greater(number_of_organizations(e,appear(an_organisation,X1)),zero) | ~ environment(X1) ) ).
+fof(a13_31,axiom,! [X1] : ( greater(appear(efficient_producers,e),appear(first_movers,X1)) | ~ environment(X1) ) ).
+fof(mp_greater_or_equal_29,axiom,! [X1] : ! [X2] : ( greater_or_equal(X1,X2) | X1 != X2 ) ).
+fof(mp_no_FM_before_appearance_24,axiom,! [X1] : ! [X2] : ( ~ environment(X1) | ~ in_environment(X1,X2) | ~ greater(appear(first_movers,X1),X2) | ~ greater(cardinality_at_time(first_movers,X2),zero) ) ).
+fof(mp_no_EP_before_appearance_23,axiom,! [X1] : ! [X2] : ( ~ environment(X1) | ~ in_environment(X1,X2) | ~ greater(appear(efficient_producers,X1),X2) | ~ greater(cardinality_at_time(efficient_producers,X2),zero) ) ).
+fof(mp_greater_or_equal_28,axiom,! [X1] : ! [X2] : ( greater_or_equal(X1,X2) | ~ greater(X1,X2) ) ).
+fof(prove_l13_33,axiom,in_environment(sk2,appear(an_organisation,sk2)) ).
+fof(c_0_15,axiom,! [X1] : ! [X2] : ( greater(X1,X2) | X1 = X2 | ~ greater_or_equal(X1,X2) ) ).
+fof(c_0_16,axiom,! [X1] : ( greater_or_equal(appear(first_movers,X1),appear(an_organisation,X1)) | ~ environment(X1) ) ).
+fof(c_0_17,axiom,! [X1] : ( appear(an_organisation,X1) = appear(first_movers,X1) | greater(appear(first_movers,X1),appear(an_organisation,X1)) | ~ environment(X1) ) ).
+fof(c_0_18,axiom,environment(sk2) ).
+fof(c_0_19,axiom,appear(an_organisation,sk2) != appear(first_movers,sk2) ).
+fof(c_0_20,axiom,! [X2] : ! [X1] : ! [X3] : ( X2 = efficient_producers | X2 = first_movers | ~ environment(X1) | ~ subpopulation(X2,X1,X3) | ~ greater(cardinality_at_time(X2,X3),zero) ) ).
+fof(c_0_21,axiom,! [X2] : ! [X1] : ( greater(cardinality_at_time(sk1(X2,X1),X2),zero) | ~ environment(X1) | ~ greater(number_of_organizations(X1,X2),zero) ) ).
+fof(c_0_22,axiom,! [X1] : ! [X3] : ! [X2] : ( greater(X1,X3) | ~ greater(X1,X2) | ~ greater(X2,X3) ) ).
+fof(c_0_23,axiom,greater(appear(first_movers,sk2),appear(an_organisation,sk2)) ).
+fof(c_0_24,axiom,! [X1] : ! [X2] : ! [X3] : ( sk1(X1,X2) = first_movers | sk1(X1,X2) = efficient_producers | ~ subpopulation(sk1(X1,X2),X3,X1) | ~ greater(number_of_organizations(X2,X1),zero) | ~ environment(X3) | ~ environment(X2) ) ).
+fof(c_0_25,axiom,! [X2] : ! [X1] : ( subpopulation(sk1(X2,X1),X1,X2) | ~ environment(X1) | ~ greater(number_of_organizations(X1,X2),zero) ) ).
+fof(c_0_26,axiom,! [X1] : ( greater(X1,appear(an_organisation,sk2)) | ~ greater(X1,appear(first_movers,sk2)) ) ).
+fof(c_0_27,axiom,! [X1] : ! [X2] : ( sk1(X1,X2) = efficient_producers | sk1(X1,X2) = first_movers | ~ greater(number_of_organizations(X2,X1),zero) | ~ environment(X2) ) ).
+fof(c_0_28,axiom,! [X1] : ( greater(number_of_organizations(e,appear(an_organisation,X1)),zero) | ~ environment(X1) ) ).
+fof(c_0_29,axiom,! [X1] : ( greater(appear(efficient_producers,e),appear(first_movers,X1)) | ~ environment(X1) ) ).
+fof(c_0_30,axiom,! [X1] : ! [X2] : ( greater(X1,appear(an_organisation,sk2)) | ~ greater(X2,appear(first_movers,sk2)) | ~ greater(X1,X2) ) ).
+fof(c_0_31,axiom,! [X1] : ! [X2] : ( greater_or_equal(X1,X2) | X1 != X2 ) ).
+fof(c_0_32,axiom,! [X1] : ( sk1(appear(an_organisation,X1),e) = first_movers | sk1(appear(an_organisation,X1),e) = efficient_producers | ~ environment(e) | ~ environment(X1) ) ).
+fof(c_0_33,axiom,! [X1] : ! [X2] : ! [X3] : ( greater(X1,zero) | ~ greater(X1,cardinality_at_time(sk1(X2,X3),X2)) | ~ greater(number_of_organizations(X3,X2),zero) | ~ environment(X3) ) ).
+fof(c_0_34,axiom,! [X1] : ! [X2] : ( greater(X1,zero) | ~ greater(X1,number_of_organizations(e,appear(an_organisation,X2))) | ~ environment(X2) ) ).
+fof(c_0_35,axiom,! [X1] : ! [X2] : ( greater(X1,appear(first_movers,X2)) | ~ greater(X1,appear(efficient_producers,e)) | ~ environment(X2) ) ).
+fof(c_0_36,axiom,! [X1] : ( greater(X1,appear(an_organisation,sk2)) | ~ greater(X1,appear(efficient_producers,e)) ) ).
+fof(c_0_37,axiom,! [X1] : ! [X2] : ( ~ environment(X1) | ~ in_environment(X1,X2) | ~ greater(appear(first_movers,X1),X2) | ~ greater(cardinality_at_time(first_movers,X2),zero) ) ).
+fof(c_0_38,axiom,! [X1] : ! [X2] : ( ~ environment(X1) | ~ in_environment(X1,X2) | ~ greater(appear(efficient_producers,X1),X2) | ~ greater(cardinality_at_time(efficient_producers,X2),zero) ) ).
+fof(c_0_39,axiom,! [X1] : ! [X2] : ( greater_or_equal(X1,X2) | ~ greater(X1,X2) ) ).
+fof(c_0_40,axiom,! [X1] : greater_or_equal(X1,X1) ).
+fof(c_0_41,axiom,in_environment(sk2,appear(an_organisation,sk2)) ).

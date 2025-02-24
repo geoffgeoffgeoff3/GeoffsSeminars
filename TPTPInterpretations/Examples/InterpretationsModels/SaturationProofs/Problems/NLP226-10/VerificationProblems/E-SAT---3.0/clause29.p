@@ -1,0 +1,2 @@
+include('Saturations/NLP226-10/Saturations/E-SAT---3.0.ax').
+fof(clause29,conjecture,! [U] : ! [V] : ifeq2(proposition(U,V),true,relation(U,V),true) = true ).

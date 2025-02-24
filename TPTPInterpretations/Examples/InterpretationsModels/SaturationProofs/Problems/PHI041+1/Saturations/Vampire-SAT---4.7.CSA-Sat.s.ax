@@ -1,0 +1,65 @@
+fof(u128,axiom,! [X0] : ! [X2] : ( sP6(X0) | existsIn(X0,X2) ) ).
+fof(u129,axiom,! [X0] : ! [X1] : ( ~ sP6(X0) | ~ mode(X0) | modification(X0,X1) ) ).
+fof(u126,axiom,! [X1] : ( sP5 | substance(X1) ) ).
+fof(u124,axiom,! [X0] : ! [X2] : ( sP4(X0) | conceivedThru(X0,X2) ) ).
+fof(u125,axiom,! [X0] : ! [X1] : ( ~ sP4(X0) | ~ mode(X0) | modification(X0,X1) ) ).
+fof(u122,axiom,! [X1] : ( sP3 | substance(X1) ) ).
+fof(u69,axiom,! [X0] : ( ~ hasEssence(X0) | exists(X0) | ~ essenceInvExistence(X0) ) ).
+fof(u71,axiom,! [X0] : ( ~ existConcFollowFromDefEternal(X0) | eternity(X0) ) ).
+fof(u70,axiom,! [X0] : ( ~ eternity(X0) | existConcFollowFromDefEternal(X0) ) ).
+fof(u62,axiom,isMethodExistence(sK1) | isMethodAction(sK1) | necessary(sK0) ).
+fof(u61,axiom,determinedByDefiniteMethod(sK0,sK1) | necessary(sK0) ).
+fof(u63,axiom,~ determinedByDefiniteMethod(sK0,sK1) | ~ isMethodAction(sK1) | ~ determinedByFixedMethod(sK0,sK1) | ~ externalTo(sK1,sK0) | ~ necessary(sK0) ).
+fof(u64,axiom,~ determinedByDefiniteMethod(sK0,sK1) | ~ isMethodExistence(sK1) | ~ determinedByFixedMethod(sK0,sK1) | ~ externalTo(sK1,sK0) | ~ necessary(sK0) ).
+fof(u60,axiom,determinedByFixedMethod(sK0,sK1) | necessary(sK0) ).
+fof(u59,axiom,externalTo(sK1,sK0) | necessary(sK0) ).
+fof(u96,axiom,! [X1] : ! [X0] : ( ~ determinedByItselfAlone(X1,X0) | free(X0) | ~ existsOnlyByNecessityOfOwnNature(X0) ) ).
+fof(u95,axiom,! [X1] : ! [X0] : ( actionOf(X1,X0) | free(X0) | ~ existsOnlyByNecessityOfOwnNature(X0) ) ).
+fof(u94,axiom,! [X1] : ! [X0] : ( ~ actionOf(X1,X0) | determinedByItselfAlone(X1,X0) | ~ free(X0) ) ).
+fof(u93,axiom,! [X0] : ( ~ free(X0) | existsOnlyByNecessityOfOwnNature(X0) ) ).
+fof(u121,axiom,! [X1] : ( ~ expressesInfiniteEssentiality(X1) | ~ expressesEternalEssentiality(X1) | ~ sP2 ) ).
+fof(u104,axiom,! [X1] : ! [X0] : ( attributeOf(X1,X0) | absolutelyInfinite(X0) | ~ constInInfAttributes(X0) | ~ substance(X0) ) ).
+fof(u102,axiom,! [X1] : ! [X0] : ( ~ attributeOf(X1,X0) | expressesEternalEssentiality(X1) | ~ absolutelyInfinite(X0) ) ).
+fof(u103,axiom,! [X1] : ! [X0] : ( ~ attributeOf(X1,X0) | expressesInfiniteEssentiality(X1) | ~ absolutelyInfinite(X0) ) ).
+fof(u120,axiom,! [X0] : ( ~ constInInfAttributes(X0) | absolutelyInfinite(X0) | ~ substance(X0) | sP2 ) ).
+fof(u100,axiom,! [X0] : ( ~ absolutelyInfinite(X0) | substance(X0) ) ).
+fof(u101,axiom,! [X0] : ( ~ absolutelyInfinite(X0) | constInInfAttributes(X0) ) ).
+fof(u76,axiom,! [X0] : ( ~ absolutelyInfinite(X0) | god(X0) | ~ being(X0) ) ).
+fof(u68,axiom,! [X0] : ( ~ being(X0) | hasEssence(X0) ) ).
+fof(u74,axiom,! [X0] : ( ~ god(X0) | being(X0) ) ).
+fof(u75,axiom,! [X0] : ( ~ god(X0) | absolutelyInfinite(X0) ) ).
+fof(u131,axiom,! [X0] : ! [X1] : ! [X2] : ( modification(X0,X1) | ~ mode(X0) | conceivedThru(X0,X2) ) ).
+fof(u132,axiom,! [X0] : ! [X1] : ! [X2] : ( modification(X0,X1) | ~ mode(X0) | existsIn(X0,X2) ) ).
+fof(u116,axiom,! [X0] : ! [X1] : ( ~ modification(X0,X1) | ~ substance(X1) | mode(X0) ) ).
+fof(u123,axiom,! [X0] : ! [X2] : ( ~ mode(X0) | conceivedThru(X0,X2) | ~ sP3 ) ).
+fof(u127,axiom,! [X0] : ! [X2] : ( ~ mode(X0) | existsIn(X0,X2) | ~ sP5 ) ).
+fof(u73,axiom,! [X0] : ( ~ intPercAsConstEssSub(X0) | attribute(X0) ) ).
+fof(u72,axiom,! [X0] : ( ~ attribute(X0) | intPercAsConstEssSub(X0) ) ).
+fof(u79,axiom,! [X0] : ( ~ conceivedThruItself(X0) | substance(X0) | ~ inItself(X0) ) ).
+fof(u66,axiom,! [X0] : ( ~ inItself(X0) | selfCaused(X0) ) ).
+fof(u67,axiom,! [X0] : ( ~ substance(X0) | being(X0) ) ).
+fof(u77,axiom,! [X0] : ( ~ substance(X0) | inItself(X0) ) ).
+fof(u78,axiom,! [X0] : ( ~ substance(X0) | conceivedThruItself(X0) ) ).
+fof(u98,axiom,! [X0] : ! [X1] : ( sameKind(X0,X1) | ~ finiteAfterItsKind(X0) ) ).
+fof(u99,axiom,! [X0] : ! [X1] : ( ~ sameKind(X0,X1) | finiteAfterItsKind(X0) | ~ canBeLimitedBy(X0,X1) ) ).
+fof(u97,axiom,! [X0] : ! [X1] : ( canBeLimitedBy(X0,X1) | ~ finiteAfterItsKind(X0) ) ).
+fof(u82,axiom,! [X0] : ( ~ natureConcOnlyByExistence(X0) | selfCaused(X0) | ~ essenceInvExistence(X0) ) ).
+fof(u80,axiom,! [X0] : ( ~ selfCaused(X0) | essenceInvExistence(X0) ) ).
+fof(u81,axiom,! [X0] : ( ~ selfCaused(X0) | natureConcOnlyByExistence(X0) ) ).
+fof(u65,axiom,! [X0] : ( ~ essenceInvExistence(X0) | ~ canBeConceivedAsNonExisting(X0) ) ).
+fof(u84,axiom,! [X1] : ! [X0] : ( objectOf(X1,X0) | ideateOf(X1,X0) | ~ trueIdea(X0) ) ).
+fof(u83,axiom,! [X0] : ! [X1] : ( correspondWith(X0,X1) | ~ trueIdea(X0) ) ).
+fof(u91,axiom,! [X0] : ! [X1] : ( ~ conceptionInvolves(X0,X1) | ~ haveNothingInCommon(X0,X1) ) ).
+fof(u92,axiom,! [X1] : ! [X0] : ( ~ conceptionInvolves(X1,X0) | ~ haveNothingInCommon(X0,X1) ) ).
+fof(u89,axiom,! [X0] : ! [X1] : ( ~ canBeUnderstoodInTermsOf(X0,X1) | ~ haveNothingInCommon(X0,X1) ) ).
+fof(u90,axiom,! [X1] : ! [X0] : ( ~ canBeUnderstoodInTermsOf(X1,X0) | ~ haveNothingInCommon(X0,X1) ) ).
+fof(u111,axiom,! [X0] : ! [X1] : ( ~ knowledgeOfACause(X0) | knowledgeOfEffect(X0,X1) ) ).
+fof(u110,axiom,! [X0] : ! [X1] : ( ~ knowledgeOfEffect(X0,X1) | knowledgeOfACause(X0) ) ).
+fof(u85,axiom,! [X1] : ! [X0] : ( effectNecessarilyFollowsFrom(X1,X0) | ~ definiteCause(X0) ) ).
+fof(u118,axiom,! [X1] : conceivedThru(X1,X1) ).
+fof(u117,axiom,! [X0] : ! [X2] : ( ~ conceivedThru(X0,X2) | mode(X0) | ~ existsIn(X0,X2) ) ).
+fof(u119,axiom,! [X1] : ( existsIn(X1,X1) | ~ exists(X1) ) ).
+fof(u109,axiom,! [X0] : ! [X1] : ( ~ existsIn(X0,X1) | X0 = X1 | exists(X0) ) ).
+fof(u108,axiom,! [X0] : ( ~ existsIn(X0,X0) | exists(X0) ) ).
+fof(u136,axiom,! [X0] : ( ~ existsIn(X0,X0) | mode(X0) ) ).
+fof(u137,axiom,! [X0] : ( ~ exists(X0) | mode(X0) ) ).

@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE> Skolemization </TITLE>
+<!------------------------------------------------------------------------>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var currentIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'MAAN.png';
+  images[1]     = new Image();
+  images[1].src = 'SkWeak.png';
+  images[2]     = new Image();
+  images[2].src = 'SkEpsilon.png';
+  images[3]     = new Image();
+  images[3].src = 'SkASk.png';
+
+  function nextImage () {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.images['image'].src = images[currentIndex].src;
+  }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+<!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Skolemization </H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME='image' SRC="MAAN.png" BORDER=0 ALIGN=RIGHT WIDTH=45%></A>
+
+<H3><A HREF="" onClick="putImage(1);return false">The Weak GDV Way</A></H3>
+<UL>
+<LI> Try prove <TT>I<SUB>Sk</SUB></TT> from <TT>I<SUB>Ax</SUB></TT> 
+     <UL> 
+     <LI> Almost inevitably fails
+     </UL>
+<LI> Prove <TT>I<SUB>Ax</SUB></TT> from <TT>I<SUB>Sk</SUB></TT> 
+     <UL>
+     <LI> Typically succeeds
+     <LI> Incomplete verification, but catches stupid mistakes
+     </UL>
+</UL>
+
+<H3><A HREF="" onClick="putImage(2);return false">The Principled Way</A></H3>
+<UL>
+<LI> Generate an &epsilon;-term for the Skolem symbol
+     <UL>
+     <LI> Will ATP system developers do that?
+     </UL>
+<LI> Prove <TT>I<SUB>Sk</SUB></TT> from <TT>{ I<SUB>Ax</SUB>, &epsilon;<SUB>Sk</SUB> }</TT>
+     <UL>
+     <LI> It can be done
+     <LI> &epsilon;-term provides meaning, e.g., looking at proofs
+     <LI> Relies on a meta-argument
+     </UL>
+</UL>
+
+<H3><A HREF="" onClick="putImage(3);return false">The Pragmatic Way</A></H3>
+<UL>
+<LI> Use a trusted Skolemizer to generate a trusted Skolemization <TT>T<SUB>Sk</SUB></TT>
+     <UL>
+     <LI> Skolemize same variable, same symbol,
+     <LI> It can be (is being!) done
+     </UL>
+<LI> Prove <TT>I<SUB>Sk</SUB></TT> from <TT>T<SUB>Sk</SUB></TT>
+     <UL>
+     <LI> Likely to succeed
+     <LI> Vulnerable to optimizations
+     </UL>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

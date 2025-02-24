@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+<TITLE> Work in Progress </TITLE>
+<LINK REL="icon" HREF="https://tptp.org/Logos/TPTPWorld.png" type="image/png" />
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+
+  var images = new Array();
+  var imageIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Work.png';
+  images[1]     = new Image();
+  images[1].src = 'WorkNot.png';
+
+  function nextImage() {
+      imageIndex = (imageIndex + 1) % 2;
+      document.images['image'].src = images[imageIndex].src;
+  }
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Work in Progress</H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME='image' SRC="Work.png" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<!--
+<H3> Automated Reasoning requires Intelligence </H3>
+<UL>
+<LI> Throw away (apparently) unnecessary axioms
+<LI> Do the (apparently) right inferences
+<LI> Explain the proof/counterexample to people
+</UL>
+
+<H3> Tons of Data for Theorem Provers (TDTP) </H3>
+<UL>
+<LI> Machine Learning is a game changer, for ATP too
+<LI> ML (for ATP) needs lots of clean data;
+     ML for ATP needs meta-data
+<LI> ATP view ala TPTP and TSTP
+<LI> ML view via meta-data
+</UL>
+-->
+
+<H3> Derivations and Interpretations </H3>
+<UL>
+<LI> Propogate the new format for finite and infinite
+     <A HREF="../TPTPInterpretations/Contents.html">interpretations</A>
+<LI> Derivation <A HREF="../GDV/GDV-LP.html">verification with LambdaPi</A>
+<LI> Representation of other proof forms, e.g., 
+     <A HREF="https://easychair.org/publications/paper/MKr" TARGET=_blank>tableau<a/>,
+     <A HREF="https://paar2024.github.io/accepted.html" TARGET=_blank>sequent</A>,
+     and <A HREF="https://ceur-ws.org/Vol-3613/AReCCa2023_paper6.pdf" TARGET=_blank>connection</A> 
+     calculi (work!)
+<LI> IIV for Kripke interpretations (student needed)
+</UL>
+
+<H3> StarExec <A HREF="../StarExecARC/StarExecInTheCloud.html">in the Cloud</A> </H3>
+
+<H3> Reasoning in Reality </H3>
+<UL>
+<LI> ATP is <A HREF="" onClick="hideshow('other');return false;">NOT</A> just verification
+     <SPAN ID="other" style="display:none">
+     <UL>
+     <LI> Encoding the world - 
+          <A HREF="https://www.ontologyportal.org">Ontologies</A>
+     <LI> Political argumentation - 
+          <A HREF="https://portal.volkswagenstiftung.de/search/projectDetails.do?siteLanguage=en&ref=93678">The CRAP Project</A>
+     <LI> Automating ethical decisions - 
+          <A HREF="../MoralMachine/Contents.html">The Moral Machine</A>
+     <LI> Formalizing religion - 
+          <A HREF="https://www.spiegel.de/international/germany/scientists-use-computer-to-mathematically-prove-goedel-god-theorem-a-928668.html">The Ontological Argument</A>
+     <LI> Testing <A HREF="https://spp.iitd.ac.in/">Public Policy</A>
+     <LI> <A HREF="https://daselab.cs.ksu.edu/content/neuro-symbolic-integration-and-explainable-artificial-intelligence">Explainable AI</A>,
+          <A HREF="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">Trustworthy AI</A>,
+          <A HREF="https://berkeleylearnverify.github.io/VerifiedAIWebsite/">
+          Verified AI</A>
+     </UL>
+     </SPAN>
+<LI> More <A HREF="" onClick="hideshow('local');return false;">expressive logics</A>
+     <SPAN ID="local" style="display:none">
+     <UL>
+     <LI> <A HREF="../FDE/Motivation.html">More truth values</A>
+     <LI> <A HREF="../NonClassical/Contents.html">Modalities</A>, e.g., 
+          <A HREF="https://plato.stanford.edu/entries/logic-modal/#WhaModLog">Modal</A>,
+          <A HREF="https://plato.stanford.edu/entries/logic-deontic/">Deontic</A>,
+          <A HREF="https://plato.stanford.edu/entries/logic-epistemic/">Epistemic</A>,
+          <A HREF="https://plato.stanford.edu/entries/dynamic-epistemic/">Dynamic</A>,
+          ... logics.
+     </UL>
+     </SPAN>
+<LI> Reasoning in real-time, updating axioms (student needed)
+<LI> <A HREF="https://tptp.org/Proposals/AnswerExtraction.html">Answer Extraction</A>
+</UL>
+
+<H3> CASC vs. ProoVer </H3>
+<UL>
+<LI> CASC will run at CADE
+<LI> ProoVer will run at IJCAR
+     <UL>
+     <LI> The IJCAR Proof Verification Competition
+     <LI> With Julie Callier and Simon Guilloud
+     <LI> Technical matters to be resolved
+     </UL>
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

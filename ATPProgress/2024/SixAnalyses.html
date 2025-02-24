@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE> Six Analyses </TITLE>
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'FirstSolutions.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Plot_FOF_THM_RFO_0S.png';
+  images[2]     = new Image();
+  images[2].src = 'Plot_FOF_THM_RFO_1ADR.png';
+  images[3]     = new Image();
+  images[3].src = 'Plot_FOF_THM_RFO_2AMDR.png';
+  images[4]     = new Image();
+  images[4].src = 'Plot_FOF_THM_RFO_3NS.png';
+  images[5]     = new Image();
+  images[5].src = 'Plot_FOF_THM_RFO_4AE.png';
+  images[6]     = new Image();
+  images[6].src = 'Plot_FOF_THM_RFO_5SV.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+Six Analyses
+</H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME="image" SRC="FirstSolutions.jpg" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3>First Solutions</H3>
+<UL>
+<LI> Practitioners solve individual problems 
+<LI> Problems that have resisted manual approaches 
+<LI> Sparsity makes successes noteworthy
+<LI> Detected by rating decreasing from 1.00, and <BR>
+     the problem is of interest to some humans
+</UL>
+
+<H3>From Analysis Data</H3>
+<UL>
+<LI> <A HREF="" onClick="putImage(1);return false">Solved</A> - more is better
+<LI> <A HREF="" onClick="putImage(4);return false">Never-solved</A> - less is better
+<LI> Average <A HREF="" onClick="putImage(2);return false">Difficulty Rating</A> 
+     - lower is better<BR>
+     Average <A HREF="" onClick="putImage(3);return false">Monotonic Difficulty Rating</A> 
+     - lower is better
+<LI> <A HREF="" onClick="putImage(5);return false">Always-easy</A> - more is better
+<LI> <A HREF="" onClick="putImage(6);return false">Shapley value</A> - higher is better
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

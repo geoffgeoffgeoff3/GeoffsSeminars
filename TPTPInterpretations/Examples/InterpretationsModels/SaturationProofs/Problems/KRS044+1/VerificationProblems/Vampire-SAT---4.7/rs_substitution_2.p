@@ -1,0 +1,2 @@
+include('Saturations/KRS044+1/Saturations/Vampire-SAT---4.7.ax').
+fof(rs_substitution_2,conjecture,! [A] : ! [B] : ! [C] : ( ( A = B & rs(C,A) ) => rs(C,B) ) ).

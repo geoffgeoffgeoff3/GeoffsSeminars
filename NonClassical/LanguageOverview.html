@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<TITLE> The NXF and NHF Languages </TITLE>
+</HEAD>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+<BODY ALIGN=JUSTIFY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> 
+The NXF and NHF Languages
+</H1>
+
+<IMG SRC="LogicJoke.png" ALIGN=RIGHT WIDTH=33%></A>
+
+<H3> Within the 
+     <A HREF="../TXF">TXF</A> and 
+     <A HREF="../THF/THFLanguage.html">THF</A> Languages
+
+<H3> Connectives </H3>
+<UL>
+<LI> <A HREF="" onClick="hideshow('p1');return false;">Long form</A>, e.g., 
+     <TT>{$necessary}</TT>, <TT>{$possible}</TT>.
+     <SPAN ID="p1" style="display:none">
+     <PRE>
+tff(no_flying_pigs,axiom,(
+    ~ ( {$possible} @ (pigs_might_fly) ) )).
+
+thf(flying_pigs,axiom,(
+    {$necessary} @ pigs_might_fly )).  </PRE>
+     </SPAN>
+<LI> <A HREF="" onClick="hideshow('p2');return false;">Short form</A>, e.g.,
+     <TT>[.]</TT>, <TT><.></TT>
+     <SPAN ID="p2" style="display:none">
+     <PRE>
+tff(flying_pigs,axiom,(
+    [.](pigs_might_fly) )).
+
+thf(no_flying_pigs,axiom,(
+    ~ ( <.> @ pigs_might_fly ) )).  </PRE>
+<LI> <A HREF="" onClick="hideshow('p3');return false;">Indexed</A>, e.g.,
+     <TT>{$necessary:#<EM>index</EM>}</TT>, <TT><#<EM>index</EM>></TT>
+     <SPAN ID="p3" style="display:none">
+     <PRE>
+tff(for_me_it_is_possible,axiom,(
+    {$possible(#me)} @ (pigs_might_fly) )).
+
+thf(for_me_somthing_is_possible,axiom,(
+    ? [P: $o] : ( {$possible(#me)} @ P ) )).  </PRE>
+<LI> <A HREF="" onClick="hideshow('p4');return false;">Parameterised</A>, e.g.,
+     <TT>$common:$group:=[<EM>group members</EM>]</TT>
+     <SPAN ID="p4" style="display:none">
+     <PRE>
+tff(common_knowledge,axiom,(
+    {$common($group:=[jane,albert,mary])} @ (something_known_by_all_three) )).  </PRE>
+</UL>
+
+<H3> Kripke Worlds </H3>
+<UL>
+<LI> By default, <TT>axiom</TT>s hold in all worlds
+<LI> By default, <TT>hypothesis</TT>s hold in the current world
+<LI> By default, <TT>conjecture</TT>s are proved in the current world
+<LI> <A HREF="" onClick="hideshow('p7');return false;">Subroles</A>
+     <TT>-local</TT> or <TT>-global</TT> override the defaults
+     <SPAN ID="p7" style="display:none">
+     <PRE>
+tff(for_me_here_it_is_possible,axiom-local,(
+    {$possible(#me)} @ (pigs_might_fly) )).
+
+thf(somthing_is_always_possible,conjecture-global,(
+    ? [P: $o] : ( {$possible} @ P ) )).  </PRE>
+</UL>
+
+<H3> Logic Specifications </H3>
+<UL>
+<LI> Specify the semantic framework to be used for reasoning
+<LI> For logics interpreted using Kripke semantics
+     <UL>
+     <LI> Rigid or flexible constants
+     <LI> Constant, varying, cumulative, or decreasing domains
+     <LI> Local or global extension
+     <LI> Modal system (by name, or maybe by axioms)
+     </UL>
+<LI> <A HREF="" onClick="hideshow('p5');return false;">Simple S5</A>
+     <SPAN ID="p5" style="display:none">
+     <PRE>
+tff(simple_s5,logic,(
+    $modal ==
+      [ $rigidity == $rigid,
+        $domains == $constant,
+        $locality == $local,
+        $modalities == $modal_system_S5 ] )).  </PRE>
+<LI> <A HREF="" onClick="hideshow('p6');return false;">With defaults</A>
+     <SPAN ID="p6" style="display:none">
+     <PRE>
+thf(with_defaults,logic,(
+    $modal ==
+      [ $rigidity == $rigid,
+        $domains ==
+          [ $constant,
+            plushie == $varying ],
+        $locality == $local,
+        $modalities == 
+          [ $modal_system_S4,
+            #king_of_france == $modal_system_S5 ] ] )).  </PRE>
+</UL>
+
+<H3> Examples </H3>
+<UL>
+<LI> <A HREF="NXFMonoModalTHMExample.p">Work to get Rich</A>
+<LI> <A HREF="NXFMultiModalExample.p">Bank Tellers Know</A>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

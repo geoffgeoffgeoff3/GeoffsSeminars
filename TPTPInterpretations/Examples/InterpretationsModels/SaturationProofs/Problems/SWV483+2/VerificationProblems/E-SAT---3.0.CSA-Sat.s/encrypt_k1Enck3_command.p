@@ -1,0 +1,2 @@
+include('Saturations/SWV483+2/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
+fof(encrypt_k1Enck3_command,conjecture,! [X14] : ! [X13] : ! [X12] : ! [X11] : ! [X10] : ! [X9] : ! [X7] : ! [X6] : ! [X4] : ! [A] : ! [B] : ! [C] : ! [D] : ! [E] : ! [F] : ! [G] : ! [H] : ! [I] : ! [J] : ! [K] : ! [L] : ! [M] : ! [N] : ! [O] : ! [P] : ! [Q] : ! [R] : ! [S] : ! [T] : ! [U] : ( p(U,T,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,D,C,B,A,n1,X4,n1,X6,X7,n0,X9,X10,X11,X12,X13,X14) => p(U,T,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,D,C,B,A,n1,X4,n1,X6,X7,n1,X9,X10,X11,X12,X13,X14) ) ).

@@ -1,0 +1,2 @@
+include('Saturations/NLP074-1/Saturations/E-SAT---3.0.ax').
+fof(clause65,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ! [X2] : ( ~ member(U,V,W) | ~ member(U,X,W) | ~ member(U,Y,W) | ~ member(U,Z,W) | ~ member(U,X1,W) | ~ member(U,X2,W) | six(U,W) | member(U,skf23(V,X,Y,Z,X1,X2,W,U),W) | V = X2 | V = X1 | V = Z | V = Y | V = X | X = X2 | X = X1 | X = Z | X = Y | Y = X2 | Y = X1 | Y = Z | Z = X2 | Z = X1 | X1 = X2 ) ).

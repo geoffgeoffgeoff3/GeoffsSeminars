@@ -1,0 +1,115 @@
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | eventuality(X0,X1) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | thing(X0,X1) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | singleton(X0,X1) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | specific(X0,X1) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | nonexistent(X0,X1) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ( ~ shake_beverage(X0,X1) | beverage(X0,X1) ) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ( ~ beverage(X0,X1) | food(X0,X1) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ( ~ food(X0,X1) | substance_matter(X0,X1) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ substance_matter(X0,X1) | object(X0,X1) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | entity(X0,X1) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | thing(X0,X1) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | specific(X0,X1) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | existent(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | impartial(X0,X1) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | unisex(X0,X1) ) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ( ~ forename(X0,X1) | relname(X0,X1) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( ~ relname(X0,X1) | relation(X0,X1) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ( ~ relation(X0,X1) | abstraction(X0,X1) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | thing(X0,X1) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | general(X0,X1) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | unisex(X0,X1) ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ( ~ woman(X0,X1) | human_person(X0,X1) ) ).
+fof(c_78,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | organism(X0,X1) ) ).
+fof(c_79,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | entity(X0,X1) ) ).
+fof(c_80,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | impartial(X0,X1) ) ).
+fof(c_84,axiom,! [X0] : ! [X1] : ( ~ woman(X0,X1) | female(X0,X1) ) ).
+fof(c_85,axiom,! [X0] : ! [X1] : ( ~ unisex(X0,X1) | ~ female(X0,X1) ) ).
+fof(c_86,axiom,! [X0] : ! [X1] : ( ~ specific(X0,X1) | ~ general(X0,X1) ) ).
+fof(c_89,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(c_92,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ of(X0,X1,X2) | ~ of(X0,X3,X2) | ~ entity(X0,X2) | ~ forename(X0,X1) | ~ forename(X0,X3) | X1 = X3 ) ).
+fof(c_93,axiom,actual_world(skc5) ).
+fof(c_94,axiom,woman(skc5,skc9) ).
+fof(c_95,axiom,shake_beverage(skc5,skc7) ).
+fof(c_98,axiom,past(skc5,skc6) ).
+fof(c_99,axiom,event(skc5,skc6) ).
+fof(c_100,axiom,forename(skc5,skc8) ).
+fof(c_102,axiom,of(skc5,skc8,skc9) ).
+fof(c_546,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ order(X1,X3) | order(X0,X2) ) ).
+fof(c_547,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ event(X1,X3) | event(X0,X2) ) ).
+fof(c_548,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ shake_beverage(X1,X3) | shake_beverage(X0,X2) ) ).
+fof(c_550,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ mia_forename(X1,X3) | mia_forename(X0,X2) ) ).
+fof(c_551,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ woman(X1,X3) | woman(X0,X2) ) ).
+fof(c_552,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ nonreflexive(X1,X3) | nonreflexive(X0,X2) ) ).
+fof(c_553,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( X0 != X1 | X2 != X3 | X4 != X5 | ~ patient(X1,X3,X5) | patient(X0,X2,X4) ) ).
+fof(c_556,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ actual_world(X1) | actual_world(X0) ) ).
+fof(c_557,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ past(X1,X3) | past(X0,X2) ) ).
+fof(c_558,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc7 | beverage(X0,X1) ) ).
+fof(c_559,axiom,beverage(skc5,skc7) ).
+fof(c_564,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc7 | food(X0,X1) ) ).
+fof(c_565,axiom,food(skc5,skc7) ).
+fof(c_570,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc7 | substance_matter(X0,X1) ) ).
+fof(c_571,axiom,substance_matter(skc5,skc7) ).
+fof(c_576,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc7 | object(X0,X1) ) ).
+fof(c_577,axiom,object(skc5,skc7) ).
+fof(c_594,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc6 | eventuality(X0,X1) ) ).
+fof(c_595,axiom,eventuality(skc5,skc6) ).
+fof(c_600,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ eventuality(X0,X2) | ~ existent(X1,X3) ) ).
+fof(c_601,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | ~ existent(X0,X1) ) ).
+fof(c_611,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ eventuality(X1,X3) | ~ entity(X0,X2) ) ).
+fof(c_612,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | ~ entity(X0,X1) ) ).
+fof(c_622,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ forename(X0,X2) | relation(X1,X3) ) ).
+fof(c_623,axiom,! [X0] : ! [X1] : ( ~ forename(X0,X1) | relation(X0,X1) ) ).
+fof(c_633,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ forename(X0,X2) | abstraction(X1,X3) ) ).
+fof(c_634,axiom,! [X0] : ! [X1] : ( ~ forename(X0,X1) | abstraction(X0,X1) ) ).
+fof(c_655,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ specific(X1,X3) | ~ abstraction(X0,X2) ) ).
+fof(c_656,axiom,! [X0] : ! [X1] : ( ~ specific(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(c_666,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc9 | female(X0,X1) ) ).
+fof(c_667,axiom,female(skc5,skc9) ).
+fof(c_671,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc9 | human_person(X0,X1) ) ).
+fof(c_672,axiom,human_person(skc5,skc9) ).
+fof(c_678,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc9 | ~ unisex(X0,X1) ) ).
+fof(c_679,axiom,~ unisex(skc5,skc9) ).
+fof(c_747,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc6 | ~ entity(X0,X1) ) ).
+fof(c_748,axiom,~ entity(skc5,skc6) ).
+fof(c_752,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc6 | unisex(X0,X1) ) ).
+fof(c_753,axiom,unisex(skc5,skc6) ).
+fof(c_757,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc6 | specific(X0,X1) ) ).
+fof(c_758,axiom,specific(skc5,skc6) ).
+fof(c_765,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc9 | ~ abstraction(X0,X1) ) ).
+fof(c_766,axiom,~ abstraction(skc5,skc9) ).
+fof(c_770,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc9 | ~ object(X0,X1) ) ).
+fof(c_771,axiom,~ object(skc5,skc9) ).
+fof(c_775,axiom,skc5 != skc5 | skc9 != skc6 ).
+fof(c_791,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc7 | entity(X0,X1) ) ).
+fof(c_792,axiom,entity(skc5,skc7) ).
+fof(c_796,axiom,skc5 != skc5 | skc9 != skc7 ).
+fof(c_821,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc9 | organism(X0,X1) ) ).
+fof(c_822,axiom,organism(skc5,skc9) ).
+fof(c_828,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc9 | entity(X0,X1) ) ).
+fof(c_829,axiom,entity(skc5,skc9) ).
+fof(c_835,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ entity(X0,X2) | ~ abstraction(X1,X3) ) ).
+fof(c_836,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(c_844,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc6 | ~ abstraction(X0,X1) ) ).
+fof(c_845,axiom,~ abstraction(skc5,skc6) ).
+fof(c_852,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ entity(X1,X3) | ~ forename(X0,X2) ) ).
+fof(c_853,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | ~ forename(X0,X1) ) ).
+fof(c_861,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc9 | ~ forename(X0,X1) ) ).
+fof(c_862,axiom,~ forename(skc5,skc9) ).
+fof(c_866,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc6 | ~ forename(X0,X1) ) ).
+fof(c_867,axiom,~ forename(skc5,skc6) ).
+fof(c_875,axiom,! [X0] : ! [X1] : ( X0 != skc5 | X1 != skc7 | ~ forename(X0,X1) ) ).
+fof(c_876,axiom,~ forename(skc5,skc7) ).
+fof(c_882,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != skc5 | X1 != skc7 | ~ of(X0,X2,X1) | ~ of(X0,X3,X1) | ~ forename(X0,X2) | ~ forename(X0,X3) | X2 = X3 ) ).
+fof(c_883,axiom,! [X0] : ! [X1] : ( ~ of(skc5,X0,skc7) | ~ of(skc5,X1,skc7) | ~ forename(skc5,X0) | ~ forename(skc5,X1) | X0 = X1 ) ).
+fof(c_900,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != skc5 | X1 != skc9 | ~ of(X0,X2,X1) | ~ of(X0,X3,X1) | ~ forename(X0,X2) | ~ forename(X0,X3) | X2 = X3 ) ).
+fof(c_901,axiom,! [X0] : ! [X1] : ( ~ of(skc5,X0,skc9) | ~ of(skc5,X1,skc9) | ~ forename(skc5,X0) | ~ forename(skc5,X1) | X0 = X1 ) ).
+fof(c_918,axiom,skc5 != skc5 | skc7 != skc6 ).
+fof(c_939,axiom,skc7 != skc6 ).
+fof(c_940,axiom,skc9 != skc7 ).
+fof(c_941,axiom,skc9 != skc6 ).
+fof(c_1001,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( X0 != X1 | X2 != X3 | X4 != X5 | ~ agent(X1,X3,X5) | agent(X0,X2,X4) ) ).
+fof(c_1061,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_1198,axiom,! [X0] : ( ~ of(skc5,X0,skc9) | ~ forename(skc5,X0) | ~ forename(skc5,skc8) | X0 = skc8 ) ).
+fof(c_1199,axiom,! [X0] : ( ~ of(skc5,X0,skc9) | ~ forename(skc5,X0) | X0 = skc8 ) ).

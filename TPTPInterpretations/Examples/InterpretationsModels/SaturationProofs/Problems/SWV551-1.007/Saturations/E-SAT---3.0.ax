@@ -1,0 +1,163 @@
+fof(hyp13,axiom,a_55 = store(a_51,i7,e_54) ).
+fof(hyp28,axiom,a_53 = a_55 ).
+fof(a1,axiom,! [X1] : ! [X2] : ! [X3] : select(store(X1,X2,X3),X2) = X3 ).
+fof(hyp12,axiom,a_53 = store(a_49,i7,e_52) ).
+fof(a2,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X1 = X2 | select(store(X3,X1,X4),X2) = select(X3,X2) ) ).
+fof(hyp10,axiom,a_49 = store(a_45,i6,e_48) ).
+fof(hyp11,axiom,a_51 = store(a_47,i6,e_50) ).
+fof(hyp8,axiom,a_45 = store(a_41,i5,e_44) ).
+fof(hyp9,axiom,a_47 = store(a_43,i5,e_46) ).
+fof(hyp6,axiom,a_41 = store(a_37,i4,e_40) ).
+fof(hyp7,axiom,a_43 = store(a_39,i4,e_42) ).
+fof(hyp4,axiom,a_37 = store(a_33,i3,e_36) ).
+fof(hyp27,axiom,e_54 = select(a_49,i7) ).
+fof(hyp5,axiom,a_39 = store(a_35,i3,e_38) ).
+fof(hyp26,axiom,e_52 = select(a_51,i7) ).
+fof(hyp2,axiom,a_33 = store(a_29,i2,e_32) ).
+fof(hyp25,axiom,e_50 = select(a_45,i6) ).
+fof(hyp24,axiom,e_48 = select(a_47,i6) ).
+fof(hyp3,axiom,a_35 = store(a_31,i2,e_34) ).
+fof(hyp23,axiom,e_46 = select(a_41,i5) ).
+fof(hyp22,axiom,e_44 = select(a_43,i5) ).
+fof(hyp0,axiom,a_29 = store(a1,i1,e_28) ).
+fof(hyp1,axiom,a_31 = store(a2,i1,e_30) ).
+fof(hyp21,axiom,e_42 = select(a_37,i4) ).
+fof(hyp20,axiom,e_40 = select(a_39,i4) ).
+fof(hyp19,axiom,e_38 = select(a_33,i3) ).
+fof(hyp18,axiom,e_36 = select(a_35,i3) ).
+fof(hyp17,axiom,e_34 = select(a_29,i2) ).
+fof(hyp16,axiom,e_32 = select(a_31,i2) ).
+fof(goal,axiom,a1 != a2 ).
+fof(hyp15,axiom,e_30 = select(a1,i1) ).
+fof(hyp14,axiom,e_28 = select(a2,i1) ).
+fof(c_0_32,axiom,a_55 = store(a_51,i7,e_54) ).
+fof(c_0_33,axiom,a_53 = a_55 ).
+fof(c_0_34,axiom,! [X1] : ! [X2] : ! [X3] : select(store(X1,X2,X3),X2) = X3 ).
+fof(c_0_35,axiom,store(a_51,i7,e_54) = a_53 ).
+fof(c_0_36,axiom,a_53 = store(a_49,i7,e_52) ).
+fof(c_0_37,axiom,select(a_53,i7) = e_54 ).
+fof(c_0_38,axiom,e_54 = e_52 ).
+fof(c_0_39,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X1 = X2 | select(store(X3,X1,X4),X2) = select(X3,X2) ) ).
+fof(c_0_40,axiom,store(a_51,i7,e_52) = a_53 ).
+fof(c_0_41,axiom,a_49 = store(a_45,i6,e_48) ).
+fof(c_0_42,axiom,! [X1] : ( select(a_53,X1) = select(a_49,X1) | i7 = X1 ) ).
+fof(c_0_43,axiom,! [X1] : ( select(a_53,X1) = select(a_51,X1) | i7 = X1 ) ).
+fof(c_0_44,axiom,a_51 = store(a_47,i6,e_50) ).
+fof(c_0_45,axiom,! [X1] : ( select(a_49,X1) = select(a_45,X1) | i6 = X1 ) ).
+fof(c_0_46,axiom,! [X1] : ( select(a_49,X1) = select(a_51,X1) | i7 = X1 ) ).
+fof(c_0_47,axiom,a_45 = store(a_41,i5,e_44) ).
+fof(c_0_48,axiom,! [X1] : ( select(a_51,X1) = select(a_47,X1) | i6 = X1 ) ).
+fof(c_0_49,axiom,! [X1] : ( select(a_51,X1) = select(a_45,X1) | i7 = X1 | i6 = X1 ) ).
+fof(c_0_50,axiom,a_47 = store(a_43,i5,e_46) ).
+fof(c_0_51,axiom,! [X1] : ( select(a_45,X1) = select(a_41,X1) | i5 = X1 ) ).
+fof(c_0_52,axiom,! [X1] : ( select(a_45,X1) = select(a_47,X1) | i7 = X1 | i6 = X1 ) ).
+fof(c_0_53,axiom,a_41 = store(a_37,i4,e_40) ).
+fof(c_0_54,axiom,! [X1] : ( select(a_47,X1) = select(a_43,X1) | i5 = X1 ) ).
+fof(c_0_55,axiom,! [X1] : ( select(a_47,X1) = select(a_41,X1) | i6 = X1 | i7 = X1 | i5 = X1 ) ).
+fof(c_0_56,axiom,a_43 = store(a_39,i4,e_42) ).
+fof(c_0_57,axiom,! [X1] : ( select(a_41,X1) = select(a_37,X1) | i4 = X1 ) ).
+fof(c_0_58,axiom,! [X1] : ( select(a_41,X1) = select(a_43,X1) | i7 = X1 | i6 = X1 | i5 = X1 ) ).
+fof(c_0_59,axiom,a_37 = store(a_33,i3,e_36) ).
+fof(c_0_60,axiom,! [X1] : ( select(a_43,X1) = select(a_39,X1) | i4 = X1 ) ).
+fof(c_0_61,axiom,! [X1] : ( select(a_43,X1) = select(a_37,X1) | i5 = X1 | i6 = X1 | i7 = X1 | i4 = X1 ) ).
+fof(c_0_62,axiom,e_54 = select(a_49,i7) ).
+fof(c_0_63,axiom,a_39 = store(a_35,i3,e_38) ).
+fof(c_0_64,axiom,! [X1] : ( select(a_37,X1) = select(a_33,X1) | i3 = X1 ) ).
+fof(c_0_65,axiom,! [X1] : ( select(a_37,X1) = select(a_39,X1) | i7 = X1 | i6 = X1 | i5 = X1 | i4 = X1 ) ).
+fof(c_0_66,axiom,select(a_49,i7) = e_52 ).
+fof(c_0_67,axiom,e_52 = select(a_51,i7) ).
+fof(c_0_68,axiom,a_33 = store(a_29,i2,e_32) ).
+fof(c_0_69,axiom,! [X1] : ( select(a_39,X1) = select(a_35,X1) | i3 = X1 ) ).
+fof(c_0_70,axiom,! [X1] : ( select(a_39,X1) = select(a_33,X1) | i4 = X1 | i5 = X1 | i6 = X1 | i7 = X1 | i3 = X1 ) ).
+fof(c_0_71,axiom,select(a_45,i7) = e_52 | i7 = i6 ).
+fof(c_0_72,axiom,select(a_47,i7) = e_52 | i7 = i6 ).
+fof(c_0_73,axiom,e_50 = select(a_45,i6) ).
+fof(c_0_74,axiom,e_48 = select(a_47,i6) ).
+fof(c_0_75,axiom,a_35 = store(a_31,i2,e_34) ).
+fof(c_0_76,axiom,! [X1] : ( select(a_33,X1) = select(a_29,X1) | i2 = X1 ) ).
+fof(c_0_77,axiom,! [X1] : ( select(a_33,X1) = select(a_35,X1) | i7 = X1 | i6 = X1 | i5 = X1 | i4 = X1 | i3 = X1 ) ).
+fof(c_0_78,axiom,select(a_41,i7) = e_52 | i7 = i5 | i7 = i6 ).
+fof(c_0_79,axiom,select(a_43,i7) = e_52 | i7 = i5 | i7 = i6 ).
+fof(c_0_80,axiom,select(a_41,i6) = e_50 | i6 = i5 ).
+fof(c_0_81,axiom,select(a_43,i6) = e_48 | i6 = i5 ).
+fof(c_0_82,axiom,e_46 = select(a_41,i5) ).
+fof(c_0_83,axiom,e_44 = select(a_43,i5) ).
+fof(c_0_84,axiom,a_29 = store(a1,i1,e_28) ).
+fof(c_0_85,axiom,! [X1] : ( select(a_35,X1) = select(a_31,X1) | i2 = X1 ) ).
+fof(c_0_86,axiom,! [X1] : ( select(a_35,X1) = select(a_29,X1) | i3 = X1 | i4 = X1 | i5 = X1 | i6 = X1 | i7 = X1 | i2 = X1 ) ).
+fof(c_0_87,axiom,a_31 = store(a2,i1,e_30) ).
+fof(c_0_88,axiom,select(a_37,i7) = e_52 | i7 = i6 | i7 = i5 | i7 = i4 ).
+fof(c_0_89,axiom,select(a_39,i7) = e_52 | i7 = i4 | i7 = i6 | i7 = i5 ).
+fof(c_0_90,axiom,select(a_37,i6) = e_50 | i6 = i4 | i6 = i5 ).
+fof(c_0_91,axiom,select(a_39,i6) = e_48 | i6 = i4 | i6 = i5 ).
+fof(c_0_92,axiom,select(a_37,i5) = e_46 | i5 = i4 ).
+fof(c_0_93,axiom,select(a_39,i5) = e_44 | i5 = i4 ).
+fof(c_0_94,axiom,e_42 = select(a_37,i4) ).
+fof(c_0_95,axiom,e_40 = select(a_39,i4) ).
+fof(c_0_96,axiom,! [X1] : ( select(a_29,X1) = select(a1,X1) | i1 = X1 ) ).
+fof(c_0_97,axiom,! [X1] : ( select(a_29,X1) = select(a_31,X1) | i7 = X1 | i6 = X1 | i5 = X1 | i4 = X1 | i3 = X1 | i2 = X1 ) ).
+fof(c_0_98,axiom,select(a_29,i1) = e_28 ).
+fof(c_0_99,axiom,select(a_31,i1) = e_30 ).
+fof(c_0_100,axiom,select(a_33,i2) = e_32 ).
+fof(c_0_101,axiom,select(a_35,i2) = e_34 ).
+fof(c_0_102,axiom,select(a_33,i7) = e_52 | i7 = i4 | i7 = i5 | i7 = i6 | i7 = i3 ).
+fof(c_0_103,axiom,select(a_35,i7) = e_52 | i7 = i5 | i7 = i6 | i7 = i4 | i7 = i3 ).
+fof(c_0_104,axiom,select(a_37,i3) = e_36 ).
+fof(c_0_105,axiom,select(a_39,i3) = e_38 ).
+fof(c_0_106,axiom,select(a_33,i6) = e_50 | i6 = i3 | i6 = i5 | i6 = i4 ).
+fof(c_0_107,axiom,select(a_35,i6) = e_48 | i6 = i3 | i6 = i5 | i6 = i4 ).
+fof(c_0_108,axiom,select(a_41,i4) = e_40 ).
+fof(c_0_109,axiom,select(a_43,i4) = e_42 ).
+fof(c_0_110,axiom,select(a_33,i5) = e_46 | i5 = i3 | i5 = i4 ).
+fof(c_0_111,axiom,select(a_35,i5) = e_44 | i5 = i3 | i5 = i4 ).
+fof(c_0_112,axiom,select(a_45,i5) = e_44 ).
+fof(c_0_113,axiom,select(a_47,i5) = e_46 ).
+fof(c_0_114,axiom,select(a_33,i4) = e_42 | i4 = i3 ).
+fof(c_0_115,axiom,select(a_35,i4) = e_40 | i4 = i3 ).
+fof(c_0_116,axiom,select(a_49,i6) = e_48 ).
+fof(c_0_117,axiom,select(a_51,i6) = e_50 ).
+fof(c_0_118,axiom,e_38 = select(a_33,i3) ).
+fof(c_0_119,axiom,e_36 = select(a_35,i3) ).
+fof(c_0_120,axiom,! [X1] : ( select(a_31,X1) = select(a2,X1) | i1 = X1 ) ).
+fof(c_0_121,axiom,! [X1] : ( select(a_31,X1) = select(a1,X1) | i2 = X1 | i3 = X1 | i4 = X1 | i5 = X1 | i6 = X1 | i7 = X1 | i1 = X1 ) ).
+fof(c_0_122,axiom,i2 = i1 | i3 = i1 | i4 = i1 | i5 = i1 | i6 = i1 | i7 = i1 | e_30 = e_28 ).
+fof(c_0_123,axiom,i3 = i2 | i4 = i2 | i5 = i2 | i6 = i2 | i7 = i2 | e_34 = e_32 ).
+fof(c_0_124,axiom,select(a_29,i7) = e_52 | i7 = i3 | i7 = i6 | i7 = i5 | i7 = i4 | i7 = i2 ).
+fof(c_0_125,axiom,select(a_31,i7) = e_52 | i7 = i3 | i7 = i4 | i7 = i6 | i7 = i5 | i7 = i2 ).
+fof(c_0_126,axiom,i4 = i3 | i5 = i3 | i6 = i3 | i7 = i3 | e_38 = e_36 ).
+fof(c_0_127,axiom,select(a_29,i6) = e_50 | i6 = i4 | i6 = i5 | i6 = i3 | i6 = i2 ).
+fof(c_0_128,axiom,select(a_31,i6) = e_48 | i6 = i4 | i6 = i5 | i6 = i3 | i6 = i2 ).
+fof(c_0_129,axiom,i5 = i4 | i6 = i4 | i7 = i4 | e_42 = e_40 ).
+fof(c_0_130,axiom,select(a_29,i5) = e_46 | i5 = i4 | i5 = i3 | i5 = i2 ).
+fof(c_0_131,axiom,select(a_31,i5) = e_44 | i5 = i4 | i5 = i3 | i5 = i2 ).
+fof(c_0_132,axiom,i6 = i5 | i7 = i5 | e_46 = e_44 ).
+fof(c_0_133,axiom,select(a_29,i4) = e_42 | i4 = i2 | i4 = i3 ).
+fof(c_0_134,axiom,select(a_31,i4) = e_40 | i4 = i2 | i4 = i3 ).
+fof(c_0_135,axiom,i7 = i6 | e_50 = e_48 ).
+fof(c_0_136,axiom,select(a_29,i3) = e_38 | i3 = i2 ).
+fof(c_0_137,axiom,select(a_31,i3) = e_36 | i3 = i2 ).
+fof(c_0_138,axiom,e_34 = select(a_29,i2) ).
+fof(c_0_139,axiom,e_32 = select(a_31,i2) ).
+fof(c_0_140,axiom,! [X1] : ( select(a1,X1) = select(a2,X1) | i7 = X1 | i6 = X1 | i5 = X1 | i4 = X1 | i3 = X1 | i2 = X1 | i1 = X1 ) ).
+fof(c_0_141,axiom,store(a2,i1,e_28) = a_31 | i7 = i1 | i6 = i1 | i5 = i1 | i4 = i1 | i3 = i1 | i2 = i1 ).
+fof(c_0_142,axiom,store(a_31,i2,e_32) = a_35 | i7 = i2 | i6 = i2 | i5 = i2 | i4 = i2 | i3 = i2 ).
+fof(c_0_143,axiom,select(a1,i7) = e_52 | i7 = i2 | i7 = i4 | i7 = i5 | i7 = i6 | i7 = i3 | i7 = i1 ).
+fof(c_0_144,axiom,select(a2,i7) = e_52 | i7 = i2 | i7 = i5 | i7 = i6 | i7 = i4 | i7 = i3 | i7 = i1 ).
+fof(c_0_145,axiom,store(a_35,i3,e_36) = a_39 | i7 = i3 | i6 = i3 | i5 = i3 | i4 = i3 ).
+fof(c_0_146,axiom,select(a1,i6) = e_50 | i6 = i2 | i6 = i3 | i6 = i5 | i6 = i4 | i6 = i1 ).
+fof(c_0_147,axiom,select(a2,i6) = e_48 | i6 = i2 | i6 = i3 | i6 = i5 | i6 = i4 | i6 = i1 ).
+fof(c_0_148,axiom,store(a_39,i4,e_40) = a_43 | i7 = i4 | i6 = i4 | i5 = i4 ).
+fof(c_0_149,axiom,select(a1,i5) = e_46 | i5 = i2 | i5 = i3 | i5 = i4 | i5 = i1 ).
+fof(c_0_150,axiom,select(a2,i5) = e_44 | i5 = i2 | i5 = i3 | i5 = i4 | i5 = i1 ).
+fof(c_0_151,axiom,store(a_43,i5,e_44) = a_47 | i7 = i5 | i6 = i5 ).
+fof(c_0_152,axiom,select(a1,i4) = e_42 | i4 = i3 | i4 = i2 | i4 = i1 ).
+fof(c_0_153,axiom,select(a2,i4) = e_40 | i4 = i3 | i4 = i2 | i4 = i1 ).
+fof(c_0_154,axiom,store(a_47,i6,e_48) = a_51 | i7 = i6 ).
+fof(c_0_155,axiom,select(a1,i3) = e_38 | i3 = i2 | i3 = i1 ).
+fof(c_0_156,axiom,select(a2,i3) = e_36 | i3 = i2 | i3 = i1 ).
+fof(c_0_157,axiom,select(a1,i2) = e_34 | i2 = i1 ).
+fof(c_0_158,axiom,select(a2,i2) = e_32 | i2 = i1 ).
+fof(c_0_159,axiom,a1 != a2 ).
+fof(c_0_160,axiom,select(a_53,i7) = e_52 ).
+fof(c_0_161,axiom,e_30 = select(a1,i1) ).
+fof(c_0_162,axiom,e_28 = select(a2,i1) ).

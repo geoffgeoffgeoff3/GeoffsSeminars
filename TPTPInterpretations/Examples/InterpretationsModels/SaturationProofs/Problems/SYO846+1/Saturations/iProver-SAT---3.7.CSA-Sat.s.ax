@@ -1,0 +1,280 @@
+fof(f2,axiom,! [X0] : ( aex3(X0) <=> ( ~ aal4(X0) & aal3(X0) ) ) ).
+fof(f3,axiom,! [X0] : ( ain(X0,a3) <=> ( a2 = X0 | a1 = X0 | a0 = X0 ) ) ).
+fof(f4,axiom,! [X0] : ! [X1] : ( ain(X1,apow(X0)) => asubq(X1,X0) ) ).
+fof(f5,axiom,! [X0] : ! [X1] : ! [X2] : ( ain(X2,asm(X0,X1)) => ~ ain(X2,X1) ) ).
+fof(f6,axiom,! [X0] : ain(X0,apow(X0)) ).
+fof(f7,axiom,! [X0] : ! [X1] : ( asubq(X1,X0) => ( ~ asubq(X0,X1) => ? [X2] : ( asubq(X1,asm(X0,asing(X2))) & ain(X2,X0) ) ) ) ).
+fof(f9,axiom,! [X0] : ! [X1] : ! [X2] : ( ain(X2,aun(X0,X1)) => ( aal4(asm(aun(X0,X1),asing(X2))) => ( aal3(X1) | aal3(X0) ) ) ) ).
+fof(f10,axiom,~ ain(a0,a0) ).
+fof(f11,axiom,~ ain(a2,a2) ).
+fof(f12,axiom,~ asubq(a2,a0) ).
+fof(f13,axiom,a0 != asing(a1) ).
+fof(f14,axiom,~ ain(asing(asing(a1)),a2) ).
+fof(f15,axiom,~ ain(asm(a3,asing(a1)),a2) ).
+fof(f16,axiom,a2 != apow(asing(a1)) ).
+fof(f17,axiom,asing(asing(a1)) != apow(asing(a1)) ).
+fof(f18,axiom,asubq(aun(asing(a1),asing(asing(a1))),asm(apow(a2),asing(a2))) ).
+fof(f19,axiom,~ ain(asm(apow(a2),apow(asing(a2))),asm(apow(a2),asing(a2))) ).
+fof(f20,axiom,a2 != asing(a2) ).
+fof(f21,axiom,~ ain(asm(apow(a2),apow(asing(a2))),asm(apow(a2),asing(a1))) ).
+fof(f22,axiom,apow(a2) != asm(apow(a2),apow(asing(a2))) ).
+fof(f23,axiom,ain(asing(asing(a1)),asing(asing(asing(a1)))) ).
+fof(f24,axiom,ain(a0,apow(asing(asing(a1)))) ).
+fof(f25,axiom,ain(a0,apow(apow(asing(a1)))) ).
+fof(f26,axiom,~ ain(asing(asing(a1)),asing(apow(asing(a1)))) ).
+fof(f27,axiom,ain(asing(a1),aun(asing(asing(a1)),asing(asing(asing(a1))))) ).
+fof(f28,axiom,ain(a0,apow(aun(asing(a1),asing(asing(a1))))) ).
+fof(f29,axiom,ain(asing(asing(a1)),aun(asm(apow(a2),a2),apow(asing(asing(a1))))) ).
+fof(f30,axiom,ain(a1,aun(asm(apow(a2),apow(asing(a2))),asing(asing(asing(a1))))) ).
+fof(f31,axiom,ain(a2,asm(a4,asing(a1))) ).
+fof(f32,axiom,~ ain(a1,asing(a3)) ).
+fof(f33,axiom,~ ain(asm(apow(a2),a2),a4) ).
+fof(f34,axiom,~ ain(a1,aun(asing(asing(a1)),asing(a3))) ).
+fof(f35,axiom,ain(a1,asm(aun(asing(asing(a2)),a4),asm(apow(a2),asing(a1)))) ).
+fof(f36,axiom,~ ain(asing(a1),aun(asing(asing(a2)),a4)) ).
+fof(f37,axiom,ain(a2,aun(asing(asing(a1)),aun(asing(asing(a2)),a4))) ).
+fof(f38,axiom,~ ain(asm(apow(a2),a2),aun(asing(asing(a1)),aun(asing(asing(a2)),a4))) ).
+fof(f39,axiom,~ ain(asm(a3,asing(a1)),aun(apow(asing(a2)),asing(apow(a2)))) ).
+fof(f40,axiom,ain(a1,aun(asm(apow(a2),apow(asing(a1))),aun(asing(asing(a2)),asing(apow(a2))))) ).
+fof(f41,axiom,ain(a2,aun(asm(apow(a2),apow(asing(a2))),aun(apow(asing(a2)),asing(apow(a2))))) ).
+fof(f42,axiom,ain(a1,aun(asing(asing(a1)),aun(a4,asing(apow(a2))))) ).
+fof(f43,axiom,! [X0] : ( asubq(X0,aun(asing(a1),asing(asing(a1)))) => ( ~ ain(asing(a1),X0) => ( ain(a1,X0) => asing(a1) = X0 ) ) ) ).
+fof(f44,axiom,! [X0] : ( ain(X0,aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))) => ( asing(asing(a1)) = X0 | asing(a1) = X0 | a1 = X0 | a0 = X0 ) ) ).
+fof(f45,axiom,! [X0] : ( ain(X0,asm(a4,asing(a1))) => ( a3 = X0 | a2 = X0 | a0 = X0 ) ) ).
+fof(f46,axiom,! [X0] : ( ain(X0,asm(a4,apow(asing(a2)))) => ( a3 = X0 | a2 = X0 | a1 = X0 ) ) ).
+fof(f47,axiom,~ asubq(aun(asing(apow(asing(a1))),a4),a4) ).
+fof(f48,axiom,~ asubq(aun(asm(apow(a2),apow(asing(a2))),apow(asing(asing(a1)))),aun(asm(apow(a2),apow(asing(a1))),apow(asing(asing(a1))))) ).
+fof(f49,axiom,asubq(apow(a2),aun(asing(asing(a1)),aun(a4,asing(apow(a2))))) ).
+fof(f50,axiom,~ asubq(aun(asing(asing(a1)),aun(asing(asing(a2)),a4)),aun(asing(asing(a2)),a4)) ).
+fof(f51,axiom,asubq(a1,asm(a2,asing(a1))) ).
+fof(f52,axiom,asubq(a2,asm(a3,asing(a2))) ).
+fof(f53,axiom,asubq(asm(asm(apow(a2),a2),asing(asing(a1))),asing(a2)) ).
+fof(f54,axiom,asubq(asm(asm(apow(a2),a2),asing(a2)),asing(asing(a1))) ).
+fof(f55,axiom,aun(asing(a1),asing(asing(a1))) = asm(asm(apow(a2),apow(asing(a2))),asing(a2)) ).
+fof(f56,axiom,asubq(aun(asing(a1),asing(a3)),asm(asm(a4,asing(a2)),asing(a0))) ).
+fof(f57,axiom,asm(a3,asing(a1)) = asm(asm(a4,asing(a1)),asing(a3)) ).
+fof(f58,axiom,a3 = aint(aun(apow(a2),asing(asing(a2))),aun(a4,asing(asm(apow(a2),a2)))) ).
+fof(f59,axiom,! [X0] : ( ain(X0,aun(apow(a2),asing(asing(a2)))) => ( ain(X0,aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2))))) => ~ ain(X0,asing(apow(a2))) ) ) ).
+fof(f60,axiom,aun(asing(a2),apow(asing(a2))) = aint(aun(aun(asing(a2),apow(asing(a2))),asing(asm(a3,asing(a1)))),aun(asm(apow(a2),apow(asing(a2))),aun(apow(asing(a2)),asing(apow(a2))))) ).
+fof(f61,axiom,~ aal2(asing(a3)) ).
+fof(f62,axiom,! [X0] : ( ain(X0,a2) => ~ aal2(asm(a2,asing(X0))) ) ).
+fof(f63,axiom,! [X0] : ( ain(X0,aun(apow(asing(a2)),asing(apow(a2)))) => ~ aal3(asm(aun(apow(asing(a2)),asing(apow(a2))),asing(X0))) ) ).
+fof(f64,axiom,aal2(asm(a4,a2)) ).
+fof(f65,axiom,aal3(asm(apow(aun(asing(a1),asing(asing(a1)))),asing(aun(asing(a1),asing(asing(a1)))))) ).
+fof(f66,axiom,aal3(asm(a4,asing(a2))) ).
+fof(f67,axiom,aal3(aun(a2,asing(apow(a2)))) ).
+fof(f68,axiom,aal4(apow(a2)) ).
+fof(f69,axiom,aal4(aun(asm(apow(a2),asing(a2)),asing(asm(apow(a2),apow(asing(a2)))))) ).
+fof(f74,axiom,aex3(aun(a2,asing(apow(a2)))) ).
+fof(f75,axiom,! [X0] : ( ain(X0,a3) => ( ain(X0,apow(asm(a3,asing(a1)))) => ~ aal3(asm(aint(aun(a3,asing(asm(a3,asing(a1)))),apow(asm(a3,asing(a1)))),asing(X0))) ) ) ).
+fof(f76,axiom,~ aal3(asm(aint(aun(a3,asing(asm(a3,asing(a1)))),apow(asm(a3,asing(a1)))),asing(asm(a3,asing(a1))))) ).
+fof(f79,axiom,asubq(asm(aint(aun(aun(asing(a1),asing(asing(a1))),aun(apow(asing(a2)),asing(a3))),aun(asing(asing(a2)),a4)),asing(a0)),asm(aun(asing(asing(a2)),a4),asm(apow(a2),asing(a1)))) ).
+fof(f83,axiom,! [X0] : ( aex3(X0) => ( ~ aal4(X0) & aal3(X0) ) ) ).
+fof(f95,axiom,! [X0] : ( ( ~ aal4(X0) & aal3(X0) ) | ~ aex3(X0) ) ).
+fof(f96,axiom,! [X0] : ! [X1] : ( asubq(X1,X0) | ~ ain(X1,apow(X0)) ) ).
+fof(f97,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ain(X2,X1) | ~ ain(X2,asm(X0,X1)) ) ).
+fof(f98,axiom,! [X0] : ! [X1] : ( ? [X2] : ( asubq(X1,asm(X0,asing(X2))) & ain(X2,X0) ) | asubq(X0,X1) | ~ asubq(X1,X0) ) ).
+fof(f99,axiom,! [X0] : ! [X1] : ( ? [X2] : ( asubq(X1,asm(X0,asing(X2))) & ain(X2,X0) ) | asubq(X0,X1) | ~ asubq(X1,X0) ) ).
+fof(f100,axiom,! [X0] : ! [X1] : ! [X2] : ( aal3(X1) | aal3(X0) | ~ aal4(asm(aun(X0,X1),asing(X2))) | ~ ain(X2,aun(X0,X1)) ) ).
+fof(f101,axiom,! [X0] : ! [X1] : ! [X2] : ( aal3(X1) | aal3(X0) | ~ aal4(asm(aun(X0,X1),asing(X2))) | ~ ain(X2,aun(X0,X1)) ) ).
+fof(f102,axiom,! [X0] : ( asing(a1) = X0 | ~ ain(a1,X0) | ain(asing(a1),X0) | ~ asubq(X0,aun(asing(a1),asing(asing(a1)))) ) ).
+fof(f103,axiom,! [X0] : ( asing(a1) = X0 | ~ ain(a1,X0) | ain(asing(a1),X0) | ~ asubq(X0,aun(asing(a1),asing(asing(a1)))) ) ).
+fof(f104,axiom,! [X0] : ( asing(asing(a1)) = X0 | asing(a1) = X0 | a1 = X0 | a0 = X0 | ~ ain(X0,aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))) ) ).
+fof(f105,axiom,! [X0] : ( asing(asing(a1)) = X0 | asing(a1) = X0 | a1 = X0 | a0 = X0 | ~ ain(X0,aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))) ) ).
+fof(f106,axiom,! [X0] : ( a3 = X0 | a2 = X0 | a0 = X0 | ~ ain(X0,asm(a4,asing(a1))) ) ).
+fof(f107,axiom,! [X0] : ( a3 = X0 | a2 = X0 | a0 = X0 | ~ ain(X0,asm(a4,asing(a1))) ) ).
+fof(f108,axiom,! [X0] : ( a3 = X0 | a2 = X0 | a1 = X0 | ~ ain(X0,asm(a4,apow(asing(a2)))) ) ).
+fof(f109,axiom,! [X0] : ( a3 = X0 | a2 = X0 | a1 = X0 | ~ ain(X0,asm(a4,apow(asing(a2)))) ) ).
+fof(f110,axiom,! [X0] : ( ~ ain(X0,asing(apow(a2))) | ~ ain(X0,aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2))))) | ~ ain(X0,aun(apow(a2),asing(asing(a2)))) ) ).
+fof(f111,axiom,! [X0] : ( ~ ain(X0,asing(apow(a2))) | ~ ain(X0,aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2))))) | ~ ain(X0,aun(apow(a2),asing(asing(a2)))) ) ).
+fof(f112,axiom,! [X0] : ( ~ aal2(asm(a2,asing(X0))) | ~ ain(X0,a2) ) ).
+fof(f113,axiom,! [X0] : ( ~ aal3(asm(aun(apow(asing(a2)),asing(apow(a2))),asing(X0))) | ~ ain(X0,aun(apow(asing(a2)),asing(apow(a2)))) ) ).
+fof(f114,axiom,! [X0] : ( ~ aal3(asm(aint(aun(a3,asing(asm(a3,asing(a1)))),apow(asm(a3,asing(a1)))),asing(X0))) | ~ ain(X0,apow(asm(a3,asing(a1)))) | ~ ain(X0,a3) ) ).
+fof(f115,axiom,! [X0] : ( ~ aal3(asm(aint(aun(a3,asing(asm(a3,asing(a1)))),apow(asm(a3,asing(a1)))),asing(X0))) | ~ ain(X0,apow(asm(a3,asing(a1)))) | ~ ain(X0,a3) ) ).
+fof(f116,axiom,! [X0] : ( ( ain(X0,a3) | ( a2 != X0 & a1 != X0 & a0 != X0 ) ) & ( a2 = X0 | a1 = X0 | a0 = X0 | ~ ain(X0,a3) ) ) ).
+fof(f117,axiom,! [X0] : ( ( ain(X0,a3) | ( a2 != X0 & a1 != X0 & a0 != X0 ) ) & ( a2 = X0 | a1 = X0 | a0 = X0 | ~ ain(X0,a3) ) ) ).
+fof(f118,axiom,! [X1] : ! [X0] : ( ? [X2] : ( asubq(X1,asm(X0,asing(X2))) & ain(X2,X0) ) => ( asubq(X1,asm(X0,asing(sK0(X0,X1)))) & ain(sK0(X0,X1),X0) ) ) ).
+fof(f119,axiom,! [X0] : ! [X1] : ( ( asubq(X1,asm(X0,asing(sK0(X0,X1)))) & ain(sK0(X0,X1),X0) ) | asubq(X0,X1) | ~ asubq(X1,X0) ) ).
+fof(f121,axiom,! [X0] : ( ~ aal4(X0) | ~ aex3(X0) ) ).
+fof(f122,axiom,! [X0] : ( a2 = X0 | a1 = X0 | a0 = X0 | ~ ain(X0,a3) ) ).
+fof(f123,axiom,! [X0] : ( ain(X0,a3) | a0 != X0 ) ).
+fof(f124,axiom,! [X0] : ( ain(X0,a3) | a1 != X0 ) ).
+fof(f125,axiom,! [X0] : ( ain(X0,a3) | a2 != X0 ) ).
+fof(f126,axiom,! [X0] : ! [X1] : ( asubq(X1,X0) | ~ ain(X1,apow(X0)) ) ).
+fof(f127,axiom,! [X2] : ! [X0] : ! [X1] : ( ~ ain(X2,X1) | ~ ain(X2,asm(X0,X1)) ) ).
+fof(f128,axiom,! [X0] : ain(X0,apow(X0)) ).
+fof(f129,axiom,! [X0] : ! [X1] : ( ain(sK0(X0,X1),X0) | asubq(X0,X1) | ~ asubq(X1,X0) ) ).
+fof(f130,axiom,! [X0] : ! [X1] : ( asubq(X1,asm(X0,asing(sK0(X0,X1)))) | asubq(X0,X1) | ~ asubq(X1,X0) ) ).
+fof(f131,axiom,! [X2] : ! [X0] : ! [X1] : ( aal3(X1) | aal3(X0) | ~ aal4(asm(aun(X0,X1),asing(X2))) | ~ ain(X2,aun(X0,X1)) ) ).
+fof(f132,axiom,~ ain(a0,a0) ).
+fof(f133,axiom,~ ain(a2,a2) ).
+fof(f134,axiom,~ asubq(a2,a0) ).
+fof(f135,axiom,a0 != asing(a1) ).
+fof(f136,axiom,~ ain(asing(asing(a1)),a2) ).
+fof(f137,axiom,~ ain(asm(a3,asing(a1)),a2) ).
+fof(f138,axiom,a2 != apow(asing(a1)) ).
+fof(f139,axiom,asing(asing(a1)) != apow(asing(a1)) ).
+fof(f140,axiom,asubq(aun(asing(a1),asing(asing(a1))),asm(apow(a2),asing(a2))) ).
+fof(f141,axiom,~ ain(asm(apow(a2),apow(asing(a2))),asm(apow(a2),asing(a2))) ).
+fof(f142,axiom,a2 != asing(a2) ).
+fof(f143,axiom,~ ain(asm(apow(a2),apow(asing(a2))),asm(apow(a2),asing(a1))) ).
+fof(f144,axiom,apow(a2) != asm(apow(a2),apow(asing(a2))) ).
+fof(f145,axiom,ain(asing(asing(a1)),asing(asing(asing(a1)))) ).
+fof(f146,axiom,ain(a0,apow(asing(asing(a1)))) ).
+fof(f147,axiom,ain(a0,apow(apow(asing(a1)))) ).
+fof(f148,axiom,~ ain(asing(asing(a1)),asing(apow(asing(a1)))) ).
+fof(f149,axiom,ain(asing(a1),aun(asing(asing(a1)),asing(asing(asing(a1))))) ).
+fof(f150,axiom,ain(a0,apow(aun(asing(a1),asing(asing(a1))))) ).
+fof(f151,axiom,ain(asing(asing(a1)),aun(asm(apow(a2),a2),apow(asing(asing(a1))))) ).
+fof(f152,axiom,ain(a1,aun(asm(apow(a2),apow(asing(a2))),asing(asing(asing(a1))))) ).
+fof(f153,axiom,ain(a2,asm(a4,asing(a1))) ).
+fof(f154,axiom,~ ain(a1,asing(a3)) ).
+fof(f155,axiom,~ ain(asm(apow(a2),a2),a4) ).
+fof(f156,axiom,~ ain(a1,aun(asing(asing(a1)),asing(a3))) ).
+fof(f157,axiom,ain(a1,asm(aun(asing(asing(a2)),a4),asm(apow(a2),asing(a1)))) ).
+fof(f158,axiom,~ ain(asing(a1),aun(asing(asing(a2)),a4)) ).
+fof(f159,axiom,ain(a2,aun(asing(asing(a1)),aun(asing(asing(a2)),a4))) ).
+fof(f160,axiom,~ ain(asm(apow(a2),a2),aun(asing(asing(a1)),aun(asing(asing(a2)),a4))) ).
+fof(f161,axiom,~ ain(asm(a3,asing(a1)),aun(apow(asing(a2)),asing(apow(a2)))) ).
+fof(f162,axiom,ain(a1,aun(asm(apow(a2),apow(asing(a1))),aun(asing(asing(a2)),asing(apow(a2))))) ).
+fof(f163,axiom,ain(a2,aun(asm(apow(a2),apow(asing(a2))),aun(apow(asing(a2)),asing(apow(a2))))) ).
+fof(f164,axiom,ain(a1,aun(asing(asing(a1)),aun(a4,asing(apow(a2))))) ).
+fof(f165,axiom,! [X0] : ( asing(a1) = X0 | ~ ain(a1,X0) | ain(asing(a1),X0) | ~ asubq(X0,aun(asing(a1),asing(asing(a1)))) ) ).
+fof(f166,axiom,! [X0] : ( asing(asing(a1)) = X0 | asing(a1) = X0 | a1 = X0 | a0 = X0 | ~ ain(X0,aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))) ) ).
+fof(f167,axiom,! [X0] : ( a3 = X0 | a2 = X0 | a0 = X0 | ~ ain(X0,asm(a4,asing(a1))) ) ).
+fof(f168,axiom,! [X0] : ( a3 = X0 | a2 = X0 | a1 = X0 | ~ ain(X0,asm(a4,apow(asing(a2)))) ) ).
+fof(f169,axiom,~ asubq(aun(asing(apow(asing(a1))),a4),a4) ).
+fof(f170,axiom,~ asubq(aun(asm(apow(a2),apow(asing(a2))),apow(asing(asing(a1)))),aun(asm(apow(a2),apow(asing(a1))),apow(asing(asing(a1))))) ).
+fof(f171,axiom,asubq(apow(a2),aun(asing(asing(a1)),aun(a4,asing(apow(a2))))) ).
+fof(f172,axiom,~ asubq(aun(asing(asing(a1)),aun(asing(asing(a2)),a4)),aun(asing(asing(a2)),a4)) ).
+fof(f173,axiom,asubq(a1,asm(a2,asing(a1))) ).
+fof(f174,axiom,asubq(a2,asm(a3,asing(a2))) ).
+fof(f175,axiom,asubq(asm(asm(apow(a2),a2),asing(asing(a1))),asing(a2)) ).
+fof(f176,axiom,asubq(asm(asm(apow(a2),a2),asing(a2)),asing(asing(a1))) ).
+fof(f177,axiom,aun(asing(a1),asing(asing(a1))) = asm(asm(apow(a2),apow(asing(a2))),asing(a2)) ).
+fof(f178,axiom,asubq(aun(asing(a1),asing(a3)),asm(asm(a4,asing(a2)),asing(a0))) ).
+fof(f179,axiom,asm(a3,asing(a1)) = asm(asm(a4,asing(a1)),asing(a3)) ).
+fof(f180,axiom,a3 = aint(aun(apow(a2),asing(asing(a2))),aun(a4,asing(asm(apow(a2),a2)))) ).
+fof(f181,axiom,! [X0] : ( ~ ain(X0,asing(apow(a2))) | ~ ain(X0,aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2))))) | ~ ain(X0,aun(apow(a2),asing(asing(a2)))) ) ).
+fof(f182,axiom,aun(asing(a2),apow(asing(a2))) = aint(aun(aun(asing(a2),apow(asing(a2))),asing(asm(a3,asing(a1)))),aun(asm(apow(a2),apow(asing(a2))),aun(apow(asing(a2)),asing(apow(a2))))) ).
+fof(f183,axiom,~ aal2(asing(a3)) ).
+fof(f184,axiom,! [X0] : ( ~ aal2(asm(a2,asing(X0))) | ~ ain(X0,a2) ) ).
+fof(f185,axiom,! [X0] : ( ~ aal3(asm(aun(apow(asing(a2)),asing(apow(a2))),asing(X0))) | ~ ain(X0,aun(apow(asing(a2)),asing(apow(a2)))) ) ).
+fof(f186,axiom,aal2(asm(a4,a2)) ).
+fof(f187,axiom,aal3(asm(apow(aun(asing(a1),asing(asing(a1)))),asing(aun(asing(a1),asing(asing(a1)))))) ).
+fof(f188,axiom,aal3(asm(a4,asing(a2))) ).
+fof(f189,axiom,aal3(aun(a2,asing(apow(a2)))) ).
+fof(f190,axiom,aal4(apow(a2)) ).
+fof(f191,axiom,aal4(aun(asm(apow(a2),asing(a2)),asing(asm(apow(a2),apow(asing(a2)))))) ).
+fof(f192,axiom,aex3(aun(a2,asing(apow(a2)))) ).
+fof(f193,axiom,! [X0] : ( ~ aal3(asm(aint(aun(a3,asing(asm(a3,asing(a1)))),apow(asm(a3,asing(a1)))),asing(X0))) | ~ ain(X0,apow(asm(a3,asing(a1)))) | ~ ain(X0,a3) ) ).
+fof(f194,axiom,~ aal3(asm(aint(aun(a3,asing(asm(a3,asing(a1)))),apow(asm(a3,asing(a1)))),asing(asm(a3,asing(a1))))) ).
+fof(f195,axiom,asubq(asm(aint(aun(aun(asing(a1),asing(asing(a1))),aun(apow(asing(a2)),asing(a3))),aun(asing(asing(a2)),a4)),asing(a0)),asm(aun(asing(asing(a2)),a4),asm(apow(a2),asing(a1)))) ).
+fof(f196,axiom,ain(a2,a3) ).
+fof(f197,axiom,ain(a1,a3) ).
+fof(f198,axiom,ain(a0,a3) ).
+fof(c_49,axiom,! [X0] : ( ~ aal4(X0) | ~ aex3(X0) ) ).
+fof(c_51,axiom,ain(a2,a3) ).
+fof(c_52,axiom,ain(a1,a3) ).
+fof(c_53,axiom,ain(a0,a3) ).
+fof(c_54,axiom,! [X0] : ( ~ ain(X0,a3) | X0 = a2 | X0 = a1 | X0 = a0 ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ ain(X0,apow(X1)) | asubq(X0,X1) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ain(X0,asm(X1,X2)) | ~ ain(X0,X2) ) ).
+fof(c_57,axiom,! [X0] : ain(X0,apow(X0)) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ( ~ asubq(X0,X1) | asubq(X0,asm(X1,asing(sK0(X1,X0)))) | asubq(X1,X0) ) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ( ~ asubq(X0,X1) | ain(sK0(X1,X0),X1) | asubq(X1,X0) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aal4(asm(aun(X0,X1),asing(X2))) | ~ ain(X2,aun(X0,X1)) | aal3(X0) | aal3(X1) ) ).
+fof(c_61,axiom,~ ain(a0,a0) ).
+fof(c_62,axiom,~ ain(a2,a2) ).
+fof(c_63,axiom,~ asubq(a2,a0) ).
+fof(c_64,axiom,asing(a1) != a0 ).
+fof(c_65,axiom,~ ain(asing(asing(a1)),a2) ).
+fof(c_66,axiom,~ ain(asm(a3,asing(a1)),a2) ).
+fof(c_67,axiom,apow(asing(a1)) != a2 ).
+fof(c_68,axiom,apow(asing(a1)) != asing(asing(a1)) ).
+fof(c_69,axiom,asubq(aun(asing(a1),asing(asing(a1))),asm(apow(a2),asing(a2))) ).
+fof(c_70,axiom,~ ain(asm(apow(a2),apow(asing(a2))),asm(apow(a2),asing(a2))) ).
+fof(c_71,axiom,asing(a2) != a2 ).
+fof(c_72,axiom,~ ain(asm(apow(a2),apow(asing(a2))),asm(apow(a2),asing(a1))) ).
+fof(c_73,axiom,asm(apow(a2),apow(asing(a2))) != apow(a2) ).
+fof(c_74,axiom,ain(asing(asing(a1)),asing(asing(asing(a1)))) ).
+fof(c_75,axiom,ain(a0,apow(asing(asing(a1)))) ).
+fof(c_76,axiom,ain(a0,apow(apow(asing(a1)))) ).
+fof(c_77,axiom,~ ain(asing(asing(a1)),asing(apow(asing(a1)))) ).
+fof(c_78,axiom,ain(asing(a1),aun(asing(asing(a1)),asing(asing(asing(a1))))) ).
+fof(c_79,axiom,ain(a0,apow(aun(asing(a1),asing(asing(a1))))) ).
+fof(c_80,axiom,ain(asing(asing(a1)),aun(asm(apow(a2),a2),apow(asing(asing(a1))))) ).
+fof(c_81,axiom,ain(a1,aun(asm(apow(a2),apow(asing(a2))),asing(asing(asing(a1))))) ).
+fof(c_82,axiom,ain(a2,asm(a4,asing(a1))) ).
+fof(c_83,axiom,~ ain(a1,asing(a3)) ).
+fof(c_84,axiom,~ ain(asm(apow(a2),a2),a4) ).
+fof(c_85,axiom,~ ain(a1,aun(asing(asing(a1)),asing(a3))) ).
+fof(c_86,axiom,ain(a1,asm(aun(asing(asing(a2)),a4),asm(apow(a2),asing(a1)))) ).
+fof(c_87,axiom,~ ain(asing(a1),aun(asing(asing(a2)),a4)) ).
+fof(c_88,axiom,ain(a2,aun(asing(asing(a1)),aun(asing(asing(a2)),a4))) ).
+fof(c_89,axiom,~ ain(asm(apow(a2),a2),aun(asing(asing(a1)),aun(asing(asing(a2)),a4))) ).
+fof(c_90,axiom,~ ain(asm(a3,asing(a1)),aun(apow(asing(a2)),asing(apow(a2)))) ).
+fof(c_91,axiom,ain(a1,aun(asm(apow(a2),apow(asing(a1))),aun(asing(asing(a2)),asing(apow(a2))))) ).
+fof(c_92,axiom,ain(a2,aun(asm(apow(a2),apow(asing(a2))),aun(apow(asing(a2)),asing(apow(a2))))) ).
+fof(c_93,axiom,ain(a1,aun(asing(asing(a1)),aun(a4,asing(apow(a2))))) ).
+fof(c_94,axiom,! [X0] : ( ~ asubq(X0,aun(asing(a1),asing(asing(a1)))) | ~ ain(a1,X0) | asing(a1) = X0 | ain(asing(a1),X0) ) ).
+fof(c_95,axiom,! [X0] : ( ~ ain(X0,aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))) | asing(asing(a1)) = X0 | asing(a1) = X0 | X0 = a1 | X0 = a0 ) ).
+fof(c_96,axiom,! [X0] : ( ~ ain(X0,asm(a4,asing(a1))) | X0 = a2 | X0 = a3 | X0 = a0 ) ).
+fof(c_97,axiom,! [X0] : ( ~ ain(X0,asm(a4,apow(asing(a2)))) | X0 = a2 | X0 = a3 | X0 = a1 ) ).
+fof(c_98,axiom,~ asubq(aun(asing(apow(asing(a1))),a4),a4) ).
+fof(c_99,axiom,~ asubq(aun(asm(apow(a2),apow(asing(a2))),apow(asing(asing(a1)))),aun(asm(apow(a2),apow(asing(a1))),apow(asing(asing(a1))))) ).
+fof(c_100,axiom,asubq(apow(a2),aun(asing(asing(a1)),aun(a4,asing(apow(a2))))) ).
+fof(c_101,axiom,~ asubq(aun(asing(asing(a1)),aun(asing(asing(a2)),a4)),aun(asing(asing(a2)),a4)) ).
+fof(c_102,axiom,asubq(a1,asm(a2,asing(a1))) ).
+fof(c_103,axiom,asubq(a2,asm(a3,asing(a2))) ).
+fof(c_104,axiom,asubq(asm(asm(apow(a2),a2),asing(asing(a1))),asing(a2)) ).
+fof(c_105,axiom,asubq(asm(asm(apow(a2),a2),asing(a2)),asing(asing(a1))) ).
+fof(c_106,axiom,asm(asm(apow(a2),apow(asing(a2))),asing(a2)) = aun(asing(a1),asing(asing(a1))) ).
+fof(c_107,axiom,asubq(aun(asing(a1),asing(a3)),asm(asm(a4,asing(a2)),asing(a0))) ).
+fof(c_108,axiom,asm(asm(a4,asing(a1)),asing(a3)) = asm(a3,asing(a1)) ).
+fof(c_109,axiom,aint(aun(apow(a2),asing(asing(a2))),aun(a4,asing(asm(apow(a2),a2)))) = a3 ).
+fof(c_110,axiom,! [X0] : ( ~ ain(X0,aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2))))) | ~ ain(X0,aun(apow(a2),asing(asing(a2)))) | ~ ain(X0,asing(apow(a2))) ) ).
+fof(c_111,axiom,aint(aun(aun(asing(a2),apow(asing(a2))),asing(asm(a3,asing(a1)))),aun(asm(apow(a2),apow(asing(a2))),aun(apow(asing(a2)),asing(apow(a2))))) = aun(asing(a2),apow(asing(a2))) ).
+fof(c_112,axiom,~ aal2(asing(a3)) ).
+fof(c_113,axiom,! [X0] : ( ~ aal2(asm(a2,asing(X0))) | ~ ain(X0,a2) ) ).
+fof(c_114,axiom,! [X0] : ( ~ aal3(asm(aun(apow(asing(a2)),asing(apow(a2))),asing(X0))) | ~ ain(X0,aun(apow(asing(a2)),asing(apow(a2)))) ) ).
+fof(c_115,axiom,aal2(asm(a4,a2)) ).
+fof(c_116,axiom,aal3(asm(apow(aun(asing(a1),asing(asing(a1)))),asing(aun(asing(a1),asing(asing(a1)))))) ).
+fof(c_117,axiom,aal3(asm(a4,asing(a2))) ).
+fof(c_118,axiom,aal3(aun(a2,asing(apow(a2)))) ).
+fof(c_119,axiom,aal4(apow(a2)) ).
+fof(c_120,axiom,aal4(aun(asm(apow(a2),asing(a2)),asing(asm(apow(a2),apow(asing(a2)))))) ).
+fof(c_121,axiom,aex3(aun(a2,asing(apow(a2)))) ).
+fof(c_122,axiom,! [X0] : ( ~ aal3(asm(aint(aun(a3,asing(asm(a3,asing(a1)))),apow(asm(a3,asing(a1)))),asing(X0))) | ~ ain(X0,apow(asm(a3,asing(a1)))) | ~ ain(X0,a3) ) ).
+fof(c_123,axiom,~ aal3(asm(aint(aun(a3,asing(asm(a3,asing(a1)))),apow(asm(a3,asing(a1)))),asing(asm(a3,asing(a1))))) ).
+fof(c_124,axiom,asubq(asm(aint(aun(aun(asing(a1),asing(asing(a1))),aun(apow(asing(a2)),asing(a3))),aun(asing(asing(a2)),a4)),asing(a0)),asm(aun(asing(asing(a2)),a4),asm(apow(a2),asing(a1)))) ).
+fof(c_457,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ aex3(X1) | aex3(X0) ) ).
+fof(c_483,axiom,! [X0] : ( aun(a2,asing(apow(a2))) != X0 | ~ aal4(X0) ) ).
+fof(c_484,axiom,~ aal4(aun(a2,asing(apow(a2)))) ).
+fof(c_905,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_1484,axiom,! [X0] : asubq(X0,X0) ).
+fof(c_1485,axiom,asubq(a0,asing(asing(a1))) ).
+fof(c_1486,axiom,asubq(a0,apow(asing(a1))) ).
+fof(c_1488,axiom,asubq(a0,aun(asing(a1),asing(asing(a1)))) ).
+fof(c_1493,axiom,~ ain(a2,asing(a1)) ).
+fof(c_1498,axiom,! [X0] : ( ~ ain(X0,aun(asing(a1),asing(asing(a1)))) | ~ ain(X0,asing(a2)) ) ).
+fof(c_1508,axiom,! [X0] : ! [X1] : ( ~ asubq(X0,apow(X1)) | asubq(sK0(apow(X1),X0),X1) | asubq(apow(X1),X0) ) ).
+fof(c_1509,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ain(sK0(asm(X0,X1),X2),X1) | ~ asubq(X2,asm(X0,X1)) | asubq(asm(X0,X1),X2) ) ).
+fof(c_1518,axiom,~ ain(a1,asm(apow(a2),asing(a1))) ).
+fof(c_1519,axiom,! [X0] : ( ~ ain(X0,asm(a3,asing(a1))) | ~ ain(X0,asing(a3)) ) ).
+fof(c_1540,axiom,! [X0] : ( ~ asubq(X0,a3) | sK0(a3,X0) = a2 | sK0(a3,X0) = a1 | sK0(a3,X0) = a0 | asubq(a3,X0) ) ).
+fof(c_1551,axiom,! [X0] : ( ~ ain(sK0(asm(a3,asing(a1)),X0),asing(a3)) | ~ asubq(X0,asm(a3,asing(a1))) | asubq(asm(a3,asing(a1)),X0) ) ).
+fof(c_1560,axiom,! [X0] : ( ~ ain(sK0(aun(asing(a1),asing(asing(a1))),X0),asing(a2)) | ~ asubq(X0,aun(asing(a1),asing(asing(a1)))) | asubq(aun(asing(a1),asing(asing(a1))),X0) ) ).
+fof(c_1587,axiom,! [X0] : ( ~ asubq(X0,asm(a4,asing(a1))) | sK0(asm(a4,asing(a1)),X0) = a2 | sK0(asm(a4,asing(a1)),X0) = a3 | sK0(asm(a4,asing(a1)),X0) = a0 | asubq(asm(a4,asing(a1)),X0) ) ).
+fof(c_1613,axiom,! [X0] : ( ~ asubq(X0,asm(a4,apow(asing(a2)))) | sK0(asm(a4,apow(asing(a2))),X0) = a2 | sK0(asm(a4,apow(asing(a2))),X0) = a3 | sK0(asm(a4,apow(asing(a2))),X0) = a1 | asubq(asm(a4,apow(asing(a2))),X0) ) ).
+fof(c_1628,axiom,~ ain(a1,aun(asing(a1),asing(asing(a1)))) | aun(asing(a1),asing(asing(a1))) = asing(a1) | ain(asing(a1),aun(asing(a1),asing(asing(a1)))) ).
+fof(c_1629,axiom,~ ain(a1,a0) | asing(a1) = a0 | ain(asing(a1),a0) ).
+fof(c_1630,axiom,! [X0] : ( ~ ain(a1,sK0(apow(aun(asing(a1),asing(asing(a1)))),X0)) | ~ asubq(X0,apow(aun(asing(a1),asing(asing(a1))))) | sK0(apow(aun(asing(a1),asing(asing(a1)))),X0) = asing(a1) | ain(asing(a1),sK0(apow(aun(asing(a1),asing(asing(a1)))),X0)) | asubq(apow(aun(asing(a1),asing(asing(a1)))),X0) ) ).
+fof(c_1631,axiom,~ ain(a1,a0) | ain(asing(a1),a0) ).
+fof(c_1653,axiom,! [X0] : ( ~ ain(sK0(aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2)))),X0),aun(apow(a2),asing(asing(a2)))) | ~ ain(sK0(aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2)))),X0),asing(apow(a2))) | ~ asubq(X0,aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2))))) | asubq(aun(asing(a2),aun(apow(asing(a2)),asing(apow(a2)))),X0) ) ).
+fof(c_1680,axiom,! [X0] : ( ~ asubq(X0,apow(a3)) | sK0(a3,sK0(apow(a3),X0)) = a2 | sK0(a3,sK0(apow(a3),X0)) = a1 | sK0(a3,sK0(apow(a3),X0)) = a0 | asubq(a3,sK0(apow(a3),X0)) | asubq(apow(a3),X0) ) ).
+fof(c_1694,axiom,~ ain(a1,aun(asing(a1),asing(asing(a1)))) | ~ ain(asing(a1),asing(a2)) | aun(asing(a1),asing(asing(a1))) = asing(a1) ).
+fof(c_1726,axiom,! [X0] : ( ~ asubq(X0,aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))) | sK0(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),X0) = asing(asing(a1)) | sK0(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),X0) = asing(a1) | sK0(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),X0) = a1 | sK0(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),X0) = a0 | asubq(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),X0) ) ).
+fof(c_1745,axiom,! [X0] : ( ~ asubq(X0,apow(asm(a4,asing(a1)))) | sK0(asm(a4,asing(a1)),sK0(apow(asm(a4,asing(a1))),X0)) = a2 | sK0(asm(a4,asing(a1)),sK0(apow(asm(a4,asing(a1))),X0)) = a3 | sK0(asm(a4,asing(a1)),sK0(apow(asm(a4,asing(a1))),X0)) = a0 | asubq(asm(a4,asing(a1)),sK0(apow(asm(a4,asing(a1))),X0)) | asubq(apow(asm(a4,asing(a1))),X0) ) ).
+fof(c_1776,axiom,! [X0] : ( ~ asubq(X0,apow(asm(a4,apow(asing(a2))))) | sK0(asm(a4,apow(asing(a2))),sK0(apow(asm(a4,apow(asing(a2)))),X0)) = a2 | sK0(asm(a4,apow(asing(a2))),sK0(apow(asm(a4,apow(asing(a2)))),X0)) = a3 | sK0(asm(a4,apow(asing(a2))),sK0(apow(asm(a4,apow(asing(a2)))),X0)) = a1 | asubq(asm(a4,apow(asing(a2))),sK0(apow(asm(a4,apow(asing(a2)))),X0)) | asubq(apow(asm(a4,apow(asing(a2)))),X0) ) ).
+fof(c_1815,axiom,! [X0] : ( ~ asubq(X0,apow(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))))) | sK0(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),sK0(apow(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))),X0)) = asing(asing(a1)) | sK0(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),sK0(apow(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))),X0)) = asing(a1) | sK0(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),sK0(apow(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))),X0)) = a1 | sK0(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),sK0(apow(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))),X0)) = a0 | asubq(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1)))),sK0(apow(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))),X0)) | asubq(apow(aun(aun(asing(a1),asing(asing(a1))),apow(asing(asing(a1))))),X0) ) ).

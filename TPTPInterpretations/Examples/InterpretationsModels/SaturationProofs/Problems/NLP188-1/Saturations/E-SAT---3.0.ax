@@ -1,0 +1,529 @@
+fof(clause107,axiom,! [X1] : ! [X8] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( member(X1,skf10(X1,X8),X8) | ~ two(X1,X2) | ~ group(X1,X2) | ~ ssSkP0(X2,X1) | ~ barrel(X1,X3) | ~ present(X1,X3) | ~ event(X1,X3) | ~ chevy(X1,X4) | ~ white(X1,X4) | ~ dirty(X1,X4) | ~ old(X1,X4) | ~ agent(X1,X3,X4) | ~ frontseat(X1,X5) | ~ city(X1,X5) | ~ street(X1,X5) | ~ lonely(X1,X5) | ~ down(X1,X3,X5) | ~ in(X1,X3,X5) | ~ ssSkP1(X5,X2,X1) | ~ placename(X1,X6) | ~ hollywood_placename(X1,X6) | ~ of(X1,X6,X5) | ~ ssSkP2(X7,X8,X1) | ~ group(X1,X7) | ~ group(X1,X8) | ~ actual_world(X1) ) ).
+fof(clause30,axiom,! [X1] : ! [X2] : ( group(X1,X2) | ~ two(X1,X2) ) ).
+fof(clause33,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ barrel(X1,X2) ) ).
+fof(clause43,axiom,! [X1] : ! [X2] : ( placename(X1,X2) | ~ hollywood_placename(X1,X2) ) ).
+fof(clause98,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP2(X1,X2,X3) | member(X3,skf18(X1,X3,X2),X2) ) ).
+fof(clause97,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ssSkP2(X1,X2,X3) | member(X3,skf20(X1,X3,X4),X1) ) ).
+fof(clause93,axiom,ssSkP1(skc9,skc7,skc6) ).
+fof(clause89,axiom,ssSkP0(skc7,skc6) ).
+fof(clause80,axiom,lonely(skc6,skc9) ).
+fof(clause73,axiom,actual_world(skc6) ).
+fof(clause77,axiom,frontseat(skc6,skc9) ).
+fof(clause78,axiom,city(skc6,skc9) ).
+fof(clause79,axiom,street(skc6,skc9) ).
+fof(clause87,axiom,two(skc6,skc7) ).
+fof(clause85,axiom,present(skc6,skc8) ).
+fof(clause92,axiom,in(skc6,skc8,skc9) ).
+fof(clause91,axiom,down(skc6,skc8,skc9) ).
+fof(clause84,axiom,barrel(skc6,skc8) ).
+fof(clause82,axiom,dirty(skc6,skc11) ).
+fof(clause94,axiom,agent(skc6,skc8,skc11) ).
+fof(clause81,axiom,white(skc6,skc11) ).
+fof(clause83,axiom,old(skc6,skc11) ).
+fof(clause74,axiom,chevy(skc6,skc11) ).
+fof(clause76,axiom,hollywood_placename(skc6,skc10) ).
+fof(clause90,axiom,of(skc6,skc10,skc9) ).
+fof(clause88,axiom,group(skc6,skc7) ).
+fof(clause104,axiom,! [X1] : ! [X5] : ! [X2] : ! [X3] : ! [X4] : ( be(X1,skf13(X1,X5,X2),X2,skf12(X2,X1,X5)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause46,axiom,! [X1] : ! [X2] : ( car(X1,X2) | ~ chevy(X1,X2) ) ).
+fof(clause63,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( X3 = X4 | ~ be(X1,X2,X3,X4) ) ).
+fof(clause68,axiom,! [X2] : ! [X3] : ! [X1] : ( X2 = skf22(X3,X1) | X2 = skf24(X3,X1) | ~ member(X1,X2,X3) | ~ two(X1,X3) ) ).
+fof(clause65,axiom,! [X1] : ! [X2] : ( member(X1,skf22(X2,X1),X2) | ~ two(X1,X2) ) ).
+fof(clause64,axiom,! [X1] : ! [X2] : ( member(X1,skf24(X2,X1),X2) | ~ two(X1,X2) ) ).
+fof(clause47,axiom,! [X1] : ! [X2] : ( vehicle(X1,X2) | ~ car(X1,X2) ) ).
+fof(clause99,axiom,! [X1] : ! [X2] : ! [X3] : ( fellow(X1,X2) | ~ member(X1,X2,X3) | ~ ssSkP0(X3,X1) ) ).
+fof(clause48,axiom,! [X1] : ! [X2] : ( transport(X1,X2) | ~ vehicle(X1,X2) ) ).
+fof(clause21,axiom,! [X1] : ! [X2] : ( man(X1,X2) | ~ fellow(X1,X2) ) ).
+fof(clause49,axiom,! [X1] : ! [X2] : ( instrumentality(X1,X2) | ~ transport(X1,X2) ) ).
+fof(clause22,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) | ~ man(X1,X2) ) ).
+fof(clause102,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( state(X1,skf13(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause36,axiom,! [X1] : ! [X2] : ( relname(X1,X2) | ~ placename(X1,X2) ) ).
+fof(clause75,axiom,placename(skc6,skc10) ).
+fof(clause50,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ instrumentality(X1,X2) ) ).
+fof(clause44,axiom,! [X1] : ! [X2] : ( location(X1,X2) | ~ city(X1,X2) ) ).
+fof(clause23,axiom,! [X1] : ! [X2] : ( organism(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(clause37,axiom,! [X1] : ! [X2] : ( relation(X1,X2) | ~ relname(X1,X2) ) ).
+fof(clause4,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ artifact(X1,X2) ) ).
+fof(clause45,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ location(X1,X2) ) ).
+fof(clause103,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( in(X1,skf12(X2,X1,X4),X4) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause96,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP1(X1,X2,X3) | member(X3,skf16(X1,X3,X2),X2) ) ).
+fof(clause106,axiom,! [X3] : ! [X5] : ! [X1] : ! [X2] : ! [X4] : ( ssSkP2(X3,X5,X1) | ~ wear(X1,X2) | ~ nonreflexive(X1,X2) | ~ present(X1,X2) | ~ patient(X1,X2,skf18(X3,X1,X4)) | ~ agent(X1,X2,skf20(X3,X1,X4)) | ~ event(X1,X2) ) ).
+fof(clause15,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ wear(X1,X2) ) ).
+fof(clause24,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ organism(X1,X2) ) ).
+fof(clause31,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ state(X1,X2) ) ).
+fof(clause38,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) | ~ relation(X1,X2) ) ).
+fof(clause16,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ event(X1,X2) ) ).
+fof(clause86,axiom,event(skc6,skc8) ).
+fof(clause13,axiom,! [X1] : ! [X2] : ( set(X1,X2) | ~ group(X1,X2) ) ).
+fof(clause5,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ object(X1,X2) ) ).
+fof(clause51,axiom,! [X1] : ! [X2] : ( seat(X1,X2) | ~ frontseat(X1,X2) ) ).
+fof(clause6,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ entity(X1,X2) ) ).
+fof(clause28,axiom,! [X1] : ! [X2] : ( animate(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(clause29,axiom,! [X1] : ! [X2] : ( male(X1,X2) | ~ man(X1,X2) ) ).
+fof(clause100,axiom,! [X1] : ! [X2] : ! [X3] : ( young(X1,X2) | ~ member(X1,X2,X3) | ~ ssSkP0(X3,X1) ) ).
+fof(clause19,axiom,! [X1] : ! [X2] : ( nonexistent(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(clause41,axiom,! [X1] : ! [X2] : ( general(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(clause40,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(clause14,axiom,! [X1] : ! [X2] : ( multiple(X1,X2) | ~ set(X1,X2) ) ).
+fof(clause17,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(clause39,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(clause52,axiom,! [X1] : ! [X2] : ( furniture(X1,X2) | ~ seat(X1,X2) ) ).
+fof(clause34,axiom,! [X1] : ! [X2] : ( way(X1,X2) | ~ street(X1,X2) ) ).
+fof(clause7,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) | ~ thing(X1,X2) ) ).
+fof(clause9,axiom,! [X1] : ! [X2] : ( existent(X1,X2) | ~ entity(X1,X2) ) ).
+fof(clause8,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ entity(X1,X2) ) ).
+fof(clause26,axiom,! [X1] : ! [X2] : ( living(X1,X2) | ~ organism(X1,X2) ) ).
+fof(clause25,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ organism(X1,X2) ) ).
+fof(clause62,axiom,! [X1] : ! [X2] : ( ~ nonliving(X1,X2) | ~ animate(X1,X2) ) ).
+fof(clause27,axiom,! [X1] : ! [X2] : ( human(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(clause56,axiom,! [X1] : ! [X2] : ( ~ male(X1,X2) | ~ unisex(X1,X2) ) ).
+fof(clause54,axiom,! [X1] : ! [X2] : ( ~ old(X1,X2) | ~ young(X1,X2) ) ).
+fof(clause72,axiom,! [X3] : ! [X2] : ! [X1] : ! [X4] : ( X3 = X2 | ~ placename(X1,X2) | ~ of(X1,X3,X4) | ~ placename(X1,X3) | ~ of(X1,X2,X4) | ~ entity(X1,X4) ) ).
+fof(clause67,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ nonreflexive(X1,X2) | ~ patient(X1,X2,X3) | ~ agent(X1,X2,X3) ) ).
+fof(clause108,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( ~ two(X1,X2) | ~ group(X1,X2) | ~ ssSkP0(X2,X1) | ~ barrel(X1,X3) | ~ present(X1,X3) | ~ event(X1,X3) | ~ chevy(X1,X4) | ~ white(X1,X4) | ~ dirty(X1,X4) | ~ old(X1,X4) | ~ agent(X1,X3,X4) | ~ frontseat(X1,X5) | ~ city(X1,X5) | ~ street(X1,X5) | ~ lonely(X1,X5) | ~ down(X1,X3,X5) | ~ in(X1,X3,X5) | ~ ssSkP1(X5,X2,X1) | ~ placename(X1,X6) | ~ hollywood_placename(X1,X6) | ~ of(X1,X6,X5) | ~ ssSkP2(X7,X8,X1) | ~ group(X1,X7) | ~ cheap(X1,skf10(X1,X9)) | ~ black(X1,skf10(X1,X9)) | ~ coat(X1,skf10(X1,X9)) | ~ group(X1,X8) | ~ actual_world(X1) ) ).
+fof(clause61,axiom,! [X1] : ! [X2] : ( ~ nonexistent(X1,X2) | ~ existent(X1,X2) ) ).
+fof(clause57,axiom,! [X1] : ! [X2] : ( ~ general(X1,X2) | ~ specific(X1,X2) ) ).
+fof(clause60,axiom,! [X1] : ! [X2] : ( ~ human(X1,X2) | ~ nonhuman(X1,X2) ) ).
+fof(clause58,axiom,! [X1] : ! [X2] : ( ~ multiple(X1,X2) | ~ singleton(X1,X2) ) ).
+fof(clause55,axiom,! [X1] : ! [X2] : ( ~ black(X1,X2) | ~ white(X1,X2) ) ).
+fof(clause20,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(clause18,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(clause32,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ state(X1,X2) ) ).
+fof(clause12,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ object(X1,X2) ) ).
+fof(clause11,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ object(X1,X2) ) ).
+fof(clause10,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) | ~ object(X1,X2) ) ).
+fof(clause42,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(clause53,axiom,! [X1] : ! [X2] : ( instrumentality(X1,X2) | ~ furniture(X1,X2) ) ).
+fof(clause35,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ way(X1,X2) ) ).
+fof(clause69,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( two(X1,X3) | member(X1,skf25(X2,X4,X3,X1),X3) | X2 = X4 | ~ member(X1,X2,X3) | ~ member(X1,X4,X3) ) ).
+fof(clause70,axiom,! [X5] : ! [X6] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( two(X5,X6) | X1 = X2 | skf25(X1,X2,X3,X4) != X2 | ~ member(X5,X1,X6) | ~ member(X5,X2,X6) ) ).
+fof(clause71,axiom,! [X5] : ! [X6] : ! [X1] : ! [X7] : ! [X2] : ! [X3] : ! [X4] : ( two(X5,X6) | X1 = X7 | skf25(X1,X2,X3,X4) != X1 | ~ member(X5,X1,X6) | ~ member(X5,X7,X6) ) ).
+fof(clause105,axiom,! [X3] : ! [X6] : ! [X1] : ! [X2] : ! [X4] : ! [X5] : ( ssSkP1(X3,X6,X1) | ~ in(X1,X2,X3) | ~ be(X1,X4,skf16(X3,X1,X5),X2) | ~ state(X1,X4) ) ).
+fof(clause101,axiom,! [X3] : ! [X1] : ! [X2] : ( ssSkP0(X3,X1) | ~ young(X1,skf11(X1,X2)) | ~ fellow(X1,skf11(X1,X2)) ) ).
+fof(clause95,axiom,! [X1] : ! [X2] : ( ssSkP0(X1,X2) | member(X2,skf11(X2,X1),X1) ) ).
+fof(clause3,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ clothes(X1,X2) ) ).
+fof(clause2,axiom,! [X1] : ! [X2] : ( clothes(X1,X2) | ~ coat(X1,X2) ) ).
+fof(clause66,axiom,! [X1] : ! [X2] : ( skf24(X1,X2) != skf22(X1,X2) | ~ two(X2,X1) ) ).
+fof(clause59,axiom,! [X1] : ! [X2] : ( ~ living(X1,X2) | ~ nonliving(X1,X2) ) ).
+fof(clause1,axiom,! [X1] : ! [X2] : ~ member(X1,X2,X2) ).
+fof(c_0_108,axiom,! [X1] : ! [X8] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( member(X1,skf10(X1,X8),X8) | ~ two(X1,X2) | ~ group(X1,X2) | ~ ssSkP0(X2,X1) | ~ barrel(X1,X3) | ~ present(X1,X3) | ~ event(X1,X3) | ~ chevy(X1,X4) | ~ white(X1,X4) | ~ dirty(X1,X4) | ~ old(X1,X4) | ~ agent(X1,X3,X4) | ~ frontseat(X1,X5) | ~ city(X1,X5) | ~ street(X1,X5) | ~ lonely(X1,X5) | ~ down(X1,X3,X5) | ~ in(X1,X3,X5) | ~ ssSkP1(X5,X2,X1) | ~ placename(X1,X6) | ~ hollywood_placename(X1,X6) | ~ of(X1,X6,X5) | ~ ssSkP2(X7,X8,X1) | ~ group(X1,X7) | ~ group(X1,X8) | ~ actual_world(X1) ) ).
+fof(c_0_109,axiom,! [X1] : ! [X2] : ( group(X1,X2) | ~ two(X1,X2) ) ).
+fof(c_0_110,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ barrel(X1,X2) ) ).
+fof(c_0_111,axiom,! [X1] : ! [X2] : ( placename(X1,X2) | ~ hollywood_placename(X1,X2) ) ).
+fof(c_0_112,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( member(X1,skf10(X1,X2),X2) | ~ ssSkP2(X3,X2,X1) | ~ ssSkP1(X4,X5,X1) | ~ in(X1,X6,X4) | ~ down(X1,X6,X4) | ~ ssSkP0(X5,X1) | ~ present(X1,X6) | ~ dirty(X1,X7) | ~ lonely(X1,X4) | ~ actual_world(X1) | ~ of(X1,X8,X4) | ~ agent(X1,X6,X7) | ~ white(X1,X7) | ~ old(X1,X7) | ~ frontseat(X1,X4) | ~ chevy(X1,X7) | ~ city(X1,X4) | ~ hollywood_placename(X1,X8) | ~ street(X1,X4) | ~ barrel(X1,X6) | ~ two(X1,X5) | ~ group(X1,X2) | ~ group(X1,X3) ) ).
+fof(c_0_113,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP2(X1,X2,X3) | member(X3,skf18(X1,X3,X2),X2) ) ).
+fof(c_0_114,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ssSkP2(X1,X2,X3) | member(X3,skf20(X1,X3,X4),X1) ) ).
+fof(c_0_115,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( member(X1,skf18(X2,X1,X3),X3) | member(X1,skf10(X1,X3),X3) | ~ ssSkP1(X4,X5,X1) | ~ in(X1,X6,X4) | ~ down(X1,X6,X4) | ~ ssSkP0(X5,X1) | ~ present(X1,X6) | ~ dirty(X1,X7) | ~ lonely(X1,X4) | ~ actual_world(X1) | ~ of(X1,X8,X4) | ~ agent(X1,X6,X7) | ~ white(X1,X7) | ~ old(X1,X7) | ~ frontseat(X1,X4) | ~ chevy(X1,X7) | ~ city(X1,X4) | ~ hollywood_placename(X1,X8) | ~ street(X1,X4) | ~ barrel(X1,X6) | ~ two(X1,X5) | ~ group(X1,X3) | ~ group(X1,X2) ) ).
+fof(c_0_116,axiom,ssSkP1(skc9,skc7,skc6) ).
+fof(c_0_117,axiom,ssSkP0(skc7,skc6) ).
+fof(c_0_118,axiom,lonely(skc6,skc9) ).
+fof(c_0_119,axiom,actual_world(skc6) ).
+fof(c_0_120,axiom,frontseat(skc6,skc9) ).
+fof(c_0_121,axiom,city(skc6,skc9) ).
+fof(c_0_122,axiom,street(skc6,skc9) ).
+fof(c_0_123,axiom,two(skc6,skc7) ).
+fof(c_0_124,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( member(X1,skf20(X2,X1,X3),X2) | member(X1,skf10(X1,X4),X4) | ~ ssSkP1(X5,X6,X1) | ~ in(X1,X7,X5) | ~ down(X1,X7,X5) | ~ ssSkP0(X6,X1) | ~ present(X1,X7) | ~ dirty(X1,X8) | ~ lonely(X1,X5) | ~ actual_world(X1) | ~ of(X1,X9,X5) | ~ agent(X1,X7,X8) | ~ white(X1,X8) | ~ old(X1,X8) | ~ frontseat(X1,X5) | ~ chevy(X1,X8) | ~ city(X1,X5) | ~ hollywood_placename(X1,X9) | ~ street(X1,X5) | ~ barrel(X1,X7) | ~ two(X1,X6) | ~ group(X1,X4) | ~ group(X1,X2) ) ).
+fof(c_0_125,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( member(skc6,skf18(X1,skc6,X2),X2) | member(skc6,skf10(skc6,X2),X2) | ~ in(skc6,X3,skc9) | ~ down(skc6,X3,skc9) | ~ present(skc6,X3) | ~ dirty(skc6,X4) | ~ of(skc6,X5,skc9) | ~ agent(skc6,X3,X4) | ~ white(skc6,X4) | ~ old(skc6,X4) | ~ chevy(skc6,X4) | ~ hollywood_placename(skc6,X5) | ~ barrel(skc6,X3) | ~ group(skc6,X2) | ~ group(skc6,X1) ) ).
+fof(c_0_126,axiom,present(skc6,skc8) ).
+fof(c_0_127,axiom,in(skc6,skc8,skc9) ).
+fof(c_0_128,axiom,down(skc6,skc8,skc9) ).
+fof(c_0_129,axiom,barrel(skc6,skc8) ).
+fof(c_0_130,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( member(skc6,skf20(X1,skc6,X2),X1) | member(skc6,skf10(skc6,X3),X3) | ~ in(skc6,X4,skc9) | ~ down(skc6,X4,skc9) | ~ present(skc6,X4) | ~ dirty(skc6,X5) | ~ of(skc6,X6,skc9) | ~ agent(skc6,X4,X5) | ~ white(skc6,X5) | ~ old(skc6,X5) | ~ chevy(skc6,X5) | ~ hollywood_placename(skc6,X6) | ~ barrel(skc6,X4) | ~ group(skc6,X3) | ~ group(skc6,X1) ) ).
+fof(c_0_131,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(skc6,skf18(X1,skc6,X2),X2) | member(skc6,skf10(skc6,X2),X2) | ~ dirty(skc6,X3) | ~ of(skc6,X4,skc9) | ~ agent(skc6,skc8,X3) | ~ white(skc6,X3) | ~ old(skc6,X3) | ~ chevy(skc6,X3) | ~ hollywood_placename(skc6,X4) | ~ group(skc6,X2) | ~ group(skc6,X1) ) ).
+fof(c_0_132,axiom,dirty(skc6,skc11) ).
+fof(c_0_133,axiom,agent(skc6,skc8,skc11) ).
+fof(c_0_134,axiom,white(skc6,skc11) ).
+fof(c_0_135,axiom,old(skc6,skc11) ).
+fof(c_0_136,axiom,chevy(skc6,skc11) ).
+fof(c_0_137,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( member(skc6,skf20(X1,skc6,X2),X1) | member(skc6,skf10(skc6,X3),X3) | ~ dirty(skc6,X4) | ~ of(skc6,X5,skc9) | ~ agent(skc6,skc8,X4) | ~ white(skc6,X4) | ~ old(skc6,X4) | ~ chevy(skc6,X4) | ~ hollywood_placename(skc6,X5) | ~ group(skc6,X3) | ~ group(skc6,X1) ) ).
+fof(c_0_138,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc6,skf18(X1,skc6,X2),X2) | member(skc6,skf10(skc6,X2),X2) | ~ of(skc6,X3,skc9) | ~ hollywood_placename(skc6,X3) | ~ group(skc6,X2) | ~ group(skc6,X1) ) ).
+fof(c_0_139,axiom,hollywood_placename(skc6,skc10) ).
+fof(c_0_140,axiom,of(skc6,skc10,skc9) ).
+fof(c_0_141,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(skc6,skf20(X1,skc6,X2),X1) | member(skc6,skf10(skc6,X3),X3) | ~ of(skc6,X4,skc9) | ~ hollywood_placename(skc6,X4) | ~ group(skc6,X3) | ~ group(skc6,X1) ) ).
+fof(c_0_142,axiom,! [X1] : ! [X2] : ( member(skc6,skf18(X1,skc6,X2),X2) | member(skc6,skf10(skc6,X2),X2) | ~ group(skc6,X2) | ~ group(skc6,X1) ) ).
+fof(c_0_143,axiom,group(skc6,skc7) ).
+fof(c_0_144,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc6,skf20(X1,skc6,X2),X1) | member(skc6,skf10(skc6,X3),X3) | ~ group(skc6,X3) | ~ group(skc6,X1) ) ).
+fof(c_0_145,axiom,! [X1] : ! [X5] : ! [X2] : ! [X3] : ! [X4] : ( be(X1,skf13(X1,X5,X2),X2,skf12(X2,X1,X5)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_146,axiom,! [X1] : ( member(skc6,skf18(X1,skc6,skc7),skc7) | member(skc6,skf10(skc6,skc7),skc7) | ~ group(skc6,X1) ) ).
+fof(c_0_147,axiom,! [X1] : ! [X2] : ( member(skc6,skf10(skc6,skc7),skc7) | member(skc6,skf20(X1,skc6,X2),X1) | ~ group(skc6,X1) ) ).
+fof(c_0_148,axiom,! [X1] : ! [X2] : ( be(skc6,skf13(skc6,X1,X2),X2,skf12(X2,skc6,X1)) | ~ member(skc6,X2,skc7) ) ).
+fof(c_0_149,axiom,member(skc6,skf18(skc7,skc6,skc7),skc7) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_150,axiom,! [X1] : ( member(skc6,skf20(skc7,skc6,X1),skc7) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_151,axiom,! [X1] : ! [X2] : ( car(X1,X2) | ~ chevy(X1,X2) ) ).
+fof(c_0_152,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( X3 = X4 | ~ be(X1,X2,X3,X4) ) ).
+fof(c_0_153,axiom,! [X1] : ( be(skc6,skf13(skc6,X1,skf18(skc7,skc6,skc7)),skf18(skc7,skc6,skc7),skf12(skf18(skc7,skc6,skc7),skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_154,axiom,! [X1] : ! [X2] : ( be(skc6,skf13(skc6,X1,skf20(skc7,skc6,X2)),skf20(skc7,skc6,X2),skf12(skf20(skc7,skc6,X2),skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_155,axiom,! [X2] : ! [X3] : ! [X1] : ( X2 = skf22(X3,X1) | X2 = skf24(X3,X1) | ~ member(X1,X2,X3) | ~ two(X1,X3) ) ).
+fof(c_0_156,axiom,! [X1] : ! [X2] : ( member(X1,skf22(X2,X1),X2) | ~ two(X1,X2) ) ).
+fof(c_0_157,axiom,! [X1] : ! [X2] : ( member(X1,skf24(X2,X1),X2) | ~ two(X1,X2) ) ).
+fof(c_0_158,axiom,! [X1] : ! [X2] : ( vehicle(X1,X2) | ~ car(X1,X2) ) ).
+fof(c_0_159,axiom,car(skc6,skc11) ).
+fof(c_0_160,axiom,! [X1] : ! [X2] : ! [X3] : ( fellow(X1,X2) | ~ member(X1,X2,X3) | ~ ssSkP0(X3,X1) ) ).
+fof(c_0_161,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_162,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_163,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_164,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_165,axiom,member(skc6,skf22(skc7,skc6),skc7) ).
+fof(c_0_166,axiom,member(skc6,skf24(skc7,skc6),skc7) ).
+fof(c_0_167,axiom,! [X1] : ! [X2] : ( transport(X1,X2) | ~ vehicle(X1,X2) ) ).
+fof(c_0_168,axiom,vehicle(skc6,skc11) ).
+fof(c_0_169,axiom,! [X1] : ! [X2] : ( man(X1,X2) | ~ fellow(X1,X2) ) ).
+fof(c_0_170,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | fellow(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_171,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | fellow(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_172,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | fellow(skc6,skf10(skc6,skc7)) ).
+fof(c_0_173,axiom,fellow(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_174,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | fellow(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_175,axiom,! [X1] : ( fellow(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_176,axiom,fellow(skc6,skf22(skc7,skc6)) ).
+fof(c_0_177,axiom,fellow(skc6,skf24(skc7,skc6)) ).
+fof(c_0_178,axiom,! [X1] : ! [X2] : ( instrumentality(X1,X2) | ~ transport(X1,X2) ) ).
+fof(c_0_179,axiom,transport(skc6,skc11) ).
+fof(c_0_180,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) | ~ man(X1,X2) ) ).
+fof(c_0_181,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | man(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_182,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | man(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_183,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | man(skc6,skf10(skc6,skc7)) ).
+fof(c_0_184,axiom,man(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_185,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | man(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_186,axiom,! [X1] : ( man(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_187,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( state(X1,skf13(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_188,axiom,! [X1] : ! [X2] : ( relname(X1,X2) | ~ placename(X1,X2) ) ).
+fof(c_0_189,axiom,placename(skc6,skc10) ).
+fof(c_0_190,axiom,man(skc6,skf22(skc7,skc6)) ).
+fof(c_0_191,axiom,man(skc6,skf24(skc7,skc6)) ).
+fof(c_0_192,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ instrumentality(X1,X2) ) ).
+fof(c_0_193,axiom,instrumentality(skc6,skc11) ).
+fof(c_0_194,axiom,! [X1] : ! [X2] : ( location(X1,X2) | ~ city(X1,X2) ) ).
+fof(c_0_195,axiom,! [X1] : ! [X2] : ( organism(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_196,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | human_person(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_197,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | human_person(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_198,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | human_person(skc6,skf10(skc6,skc7)) ).
+fof(c_0_199,axiom,human_person(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_200,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | human_person(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_201,axiom,! [X1] : ( human_person(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_202,axiom,! [X1] : ! [X2] : ! [X3] : ( state(skc6,skf13(skc6,X1,X2)) | ~ member(skc6,X3,skc7) ) ).
+fof(c_0_203,axiom,! [X1] : ! [X2] : ( relation(X1,X2) | ~ relname(X1,X2) ) ).
+fof(c_0_204,axiom,relname(skc6,skc10) ).
+fof(c_0_205,axiom,human_person(skc6,skf22(skc7,skc6)) ).
+fof(c_0_206,axiom,human_person(skc6,skf24(skc7,skc6)) ).
+fof(c_0_207,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ artifact(X1,X2) ) ).
+fof(c_0_208,axiom,artifact(skc6,skc11) ).
+fof(c_0_209,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ location(X1,X2) ) ).
+fof(c_0_210,axiom,location(skc6,skc9) ).
+fof(c_0_211,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( in(X1,skf12(X2,X1,X4),X4) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_212,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP1(X1,X2,X3) | member(X3,skf16(X1,X3,X2),X2) ) ).
+fof(c_0_213,axiom,! [X3] : ! [X5] : ! [X1] : ! [X2] : ! [X4] : ( ssSkP2(X3,X5,X1) | ~ wear(X1,X2) | ~ nonreflexive(X1,X2) | ~ present(X1,X2) | ~ patient(X1,X2,skf18(X3,X1,X4)) | ~ agent(X1,X2,skf20(X3,X1,X4)) | ~ event(X1,X2) ) ).
+fof(c_0_214,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ wear(X1,X2) ) ).
+fof(c_0_215,axiom,! [X1] : ! [X2] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | be(skc6,skf13(skc6,X2,skf10(skc6,skc7)),skf10(skc6,skc7),skf12(skf10(skc6,skc7),skc6,X2)) ) ).
+fof(c_0_216,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_217,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | organism(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_218,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | organism(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_219,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | organism(skc6,skf10(skc6,skc7)) ).
+fof(c_0_220,axiom,organism(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_221,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | organism(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_222,axiom,! [X1] : ( organism(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_223,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ state(X1,X2) ) ).
+fof(c_0_224,axiom,! [X1] : ! [X2] : state(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_225,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) | ~ relation(X1,X2) ) ).
+fof(c_0_226,axiom,relation(skc6,skc10) ).
+fof(c_0_227,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_228,axiom,event(skc6,skc8) ).
+fof(c_0_229,axiom,! [X1] : ! [X2] : ( set(X1,X2) | ~ group(X1,X2) ) ).
+fof(c_0_230,axiom,organism(skc6,skf22(skc7,skc6)) ).
+fof(c_0_231,axiom,organism(skc6,skf24(skc7,skc6)) ).
+fof(c_0_232,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_233,axiom,object(skc6,skc11) ).
+fof(c_0_234,axiom,object(skc6,skc9) ).
+fof(c_0_235,axiom,! [X1] : ! [X2] : ( seat(X1,X2) | ~ frontseat(X1,X2) ) ).
+fof(c_0_236,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | be(skc6,skf13(skc6,X3,skf10(skc6,skc7)),skf10(skc6,skc7),skf12(skf10(skc6,skc7),skc6,X3)) ) ).
+fof(c_0_237,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( in(X1,skf12(X2,X1,X3),X3) | member(X1,skf16(X3,X1,X4),X4) | ~ member(X1,X2,X4) ) ).
+fof(c_0_238,axiom,! [X1] : ! [X2] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | be(skc6,skf13(skc6,X2,skf10(skc6,skc7)),skf10(skc6,skc7),skf12(skf10(skc6,skc7),skc6,X2)) ) ).
+fof(c_0_239,axiom,! [X1] : ( in(skc6,skf12(X1,skc6,skc9),skc9) | ~ member(skc6,X1,skc7) ) ).
+fof(c_0_240,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ssSkP2(X1,X2,X3) | ~ present(X3,X4) | ~ agent(X3,X4,skf20(X1,X3,X5)) | ~ patient(X3,X4,skf18(X1,X3,X5)) | ~ nonreflexive(X3,X4) | ~ wear(X3,X4) ) ).
+fof(c_0_241,axiom,! [X1] : ! [X2] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | skf20(skc7,skc6,X2) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) ) ).
+fof(c_0_242,axiom,! [X1] : ( skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | be(skc6,skf13(skc6,X1,skf10(skc6,skc7)),skf10(skc6,skc7),skf12(skf10(skc6,skc7),skc6,X1)) ) ).
+fof(c_0_243,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf22(skc7,skc6) = skf10(skc6,skc7) | skf24(skc7,skc6) = skf10(skc6,skc7) ) ).
+fof(c_0_244,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_245,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | entity(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_246,axiom,! [X1] : ! [X2] : ( animate(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_247,axiom,! [X1] : ! [X2] : ( male(X1,X2) | ~ man(X1,X2) ) ).
+fof(c_0_248,axiom,! [X1] : ! [X2] : ! [X3] : ( young(X1,X2) | ~ member(X1,X2,X3) | ~ ssSkP0(X3,X1) ) ).
+fof(c_0_249,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | entity(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_250,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | entity(skc6,skf10(skc6,skc7)) ).
+fof(c_0_251,axiom,entity(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_252,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | entity(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_253,axiom,! [X1] : ( entity(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_254,axiom,! [X1] : be(skc6,skf13(skc6,X1,skf24(skc7,skc6)),skf24(skc7,skc6),skf12(skf24(skc7,skc6),skc6,X1)) ).
+fof(c_0_255,axiom,! [X1] : be(skc6,skf13(skc6,X1,skf22(skc7,skc6)),skf22(skc7,skc6),skf12(skf22(skc7,skc6),skc6,X1)) ).
+fof(c_0_256,axiom,! [X1] : ! [X2] : ( nonexistent(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_257,axiom,! [X1] : ! [X2] : eventuality(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_258,axiom,! [X1] : ! [X2] : ( general(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_259,axiom,abstraction(skc6,skc10) ).
+fof(c_0_260,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_261,axiom,eventuality(skc6,skc8) ).
+fof(c_0_262,axiom,! [X1] : ! [X2] : ( multiple(X1,X2) | ~ set(X1,X2) ) ).
+fof(c_0_263,axiom,set(skc6,skc7) ).
+fof(c_0_264,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_265,axiom,entity(skc6,skf22(skc7,skc6)) ).
+fof(c_0_266,axiom,entity(skc6,skf24(skc7,skc6)) ).
+fof(c_0_267,axiom,entity(skc6,skc11) ).
+fof(c_0_268,axiom,entity(skc6,skc9) ).
+fof(c_0_269,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_270,axiom,! [X1] : ! [X2] : ( furniture(X1,X2) | ~ seat(X1,X2) ) ).
+fof(c_0_271,axiom,seat(skc6,skc9) ).
+fof(c_0_272,axiom,! [X1] : ! [X2] : ( way(X1,X2) | ~ street(X1,X2) ) ).
+fof(c_0_273,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | skf22(skc7,skc6) = skf10(skc6,skc7) | skf24(skc7,skc6) = skf10(skc6,skc7) ) ).
+fof(c_0_274,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | skf12(skf10(skc6,skc7),skc6,X3) = skf10(skc6,skc7) ) ).
+fof(c_0_275,axiom,! [X1] : ! [X2] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | in(skc6,skf12(skf10(skc6,skc7),skc6,X2),X2) | member(skc6,skf16(X2,skc6,skc7),skc7) ) ).
+fof(c_0_276,axiom,! [X1] : ! [X2] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf12(skf10(skc6,skc7),skc6,X2) = skf10(skc6,skc7) ) ).
+fof(c_0_277,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | in(skc6,skf12(skf10(skc6,skc7),skc6,X3),X3) | member(skc6,skf16(X3,skc6,skc7),skc7) ) ).
+fof(c_0_278,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | in(skc6,skf12(skf10(skc6,skc7),skc6,skc9),skc9) ) ).
+fof(c_0_279,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | ssSkP2(skc7,X3,skc6) | ~ present(skc6,X4) | ~ agent(skc6,X4,skf22(skc7,skc6)) | ~ patient(skc6,X4,skf18(skc7,skc6,X2)) | ~ nonreflexive(skc6,X4) | ~ wear(skc6,X4) ) ).
+fof(c_0_280,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | in(skc6,skf12(skf10(skc6,skc7),skc6,skc9),skc9) ) ).
+fof(c_0_281,axiom,! [X1] : ! [X2] : ( in(skc6,skf12(skf20(skc7,skc6,X1),skc6,X2),X2) | member(skc6,skf16(X2,skc6,skc7),skc7) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_282,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | in(skc6,skf12(skf10(skc6,skc7),skc6,skc9),skc9) ) ).
+fof(c_0_283,axiom,! [X1] : ! [X2] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | in(skc6,skf12(skf10(skc6,skc7),skc6,X2),X2) | member(skc6,skf16(X2,skc6,skc7),skc7) ) ).
+fof(c_0_284,axiom,! [X1] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) ) ).
+fof(c_0_285,axiom,! [X1] : ( skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | in(skc6,skf12(skf10(skc6,skc7),skc6,X1),X1) | member(skc6,skf16(X1,skc6,skc7),skc7) ) ).
+fof(c_0_286,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | in(skc6,skf12(skf10(skc6,skc7),skc6,skc9),skc9) ).
+fof(c_0_287,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | skf24(skc7,skc6) = skf10(skc6,skc7) ) ).
+fof(c_0_288,axiom,! [X1] : ( in(skc6,skf12(skf20(skc7,skc6,X1),skc6,skc9),skc9) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_289,axiom,! [X1] : ( in(skc6,skf12(skf18(skc7,skc6,skc7),skc6,X1),X1) | member(skc6,skf16(X1,skc6,skc7),skc7) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_290,axiom,in(skc6,skf12(skf18(skc7,skc6,skc7),skc6,skc9),skc9) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_291,axiom,! [X1] : ! [X2] : ! [X3] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | ssSkP2(skc7,X2,skc6) | ~ present(skc6,X3) | ~ agent(skc6,X3,skf22(skc7,skc6)) | ~ patient(skc6,X3,skf18(skc7,skc6,X1)) | ~ nonreflexive(skc6,X3) | ~ wear(skc6,X3) ) ).
+fof(c_0_292,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) | ~ thing(X1,X2) ) ).
+fof(c_0_293,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | thing(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_294,axiom,! [X1] : ! [X2] : ( existent(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_295,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_296,axiom,! [X1] : ! [X2] : ( living(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_297,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_298,axiom,! [X1] : ! [X2] : ( ~ nonliving(X1,X2) | ~ animate(X1,X2) ) ).
+fof(c_0_299,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | animate(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_300,axiom,! [X1] : ! [X2] : ( human(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_301,axiom,! [X1] : ! [X2] : ( ~ male(X1,X2) | ~ unisex(X1,X2) ) ).
+fof(c_0_302,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | male(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_303,axiom,! [X1] : ! [X2] : ( ~ old(X1,X2) | ~ young(X1,X2) ) ).
+fof(c_0_304,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | young(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_305,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf22(skc7,skc6) = skf10(skc6,skc7) | skf24(skc7,skc6) = skf10(skc6,skc7) ).
+fof(c_0_306,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | thing(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_307,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | thing(skc6,skf10(skc6,skc7)) ).
+fof(c_0_308,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | animate(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_309,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | male(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_310,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | young(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_311,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | animate(skc6,skf10(skc6,skc7)) ).
+fof(c_0_312,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | male(skc6,skf10(skc6,skc7)) ).
+fof(c_0_313,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | young(skc6,skf10(skc6,skc7)) ).
+fof(c_0_314,axiom,thing(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_315,axiom,animate(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_316,axiom,male(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_317,axiom,young(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_318,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | thing(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_319,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | animate(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_320,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | male(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_321,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | young(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_322,axiom,! [X1] : ( thing(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_323,axiom,! [X1] : ( animate(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_324,axiom,! [X1] : ( male(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_325,axiom,! [X1] : ( young(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_326,axiom,! [X1] : ( in(skc6,skf12(skf24(skc7,skc6),skc6,X1),X1) | member(skc6,skf16(X1,skc6,skc7),skc7) ) ).
+fof(c_0_327,axiom,! [X1] : skf12(skf24(skc7,skc6),skc6,X1) = skf24(skc7,skc6) ).
+fof(c_0_328,axiom,! [X1] : ( in(skc6,skf12(skf22(skc7,skc6),skc6,X1),X1) | member(skc6,skf16(X1,skc6,skc7),skc7) ) ).
+fof(c_0_329,axiom,! [X1] : skf12(skf22(skc7,skc6),skc6,X1) = skf22(skc7,skc6) ).
+fof(c_0_330,axiom,! [X3] : ! [X2] : ! [X1] : ! [X4] : ( X3 = X2 | ~ placename(X1,X2) | ~ of(X1,X3,X4) | ~ placename(X1,X3) | ~ of(X1,X2,X4) | ~ entity(X1,X4) ) ).
+fof(c_0_331,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ nonreflexive(X1,X2) | ~ patient(X1,X2,X3) | ~ agent(X1,X2,X3) ) ).
+fof(c_0_332,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( ~ two(X1,X2) | ~ group(X1,X2) | ~ ssSkP0(X2,X1) | ~ barrel(X1,X3) | ~ present(X1,X3) | ~ event(X1,X3) | ~ chevy(X1,X4) | ~ white(X1,X4) | ~ dirty(X1,X4) | ~ old(X1,X4) | ~ agent(X1,X3,X4) | ~ frontseat(X1,X5) | ~ city(X1,X5) | ~ street(X1,X5) | ~ lonely(X1,X5) | ~ down(X1,X3,X5) | ~ in(X1,X3,X5) | ~ ssSkP1(X5,X2,X1) | ~ placename(X1,X6) | ~ hollywood_placename(X1,X6) | ~ of(X1,X6,X5) | ~ ssSkP2(X7,X8,X1) | ~ group(X1,X7) | ~ cheap(X1,skf10(X1,X9)) | ~ black(X1,skf10(X1,X9)) | ~ coat(X1,skf10(X1,X9)) | ~ group(X1,X8) | ~ actual_world(X1) ) ).
+fof(c_0_333,axiom,! [X1] : ! [X2] : ( ~ nonexistent(X1,X2) | ~ existent(X1,X2) ) ).
+fof(c_0_334,axiom,! [X1] : ! [X2] : nonexistent(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_335,axiom,animate(skc6,skf22(skc7,skc6)) ).
+fof(c_0_336,axiom,animate(skc6,skf24(skc7,skc6)) ).
+fof(c_0_337,axiom,male(skc6,skf22(skc7,skc6)) ).
+fof(c_0_338,axiom,male(skc6,skf24(skc7,skc6)) ).
+fof(c_0_339,axiom,young(skc6,skf22(skc7,skc6)) ).
+fof(c_0_340,axiom,young(skc6,skf24(skc7,skc6)) ).
+fof(c_0_341,axiom,! [X1] : ! [X2] : ( ~ general(X1,X2) | ~ specific(X1,X2) ) ).
+fof(c_0_342,axiom,general(skc6,skc10) ).
+fof(c_0_343,axiom,! [X1] : ! [X2] : ( ~ human(X1,X2) | ~ nonhuman(X1,X2) ) ).
+fof(c_0_344,axiom,nonhuman(skc6,skc10) ).
+fof(c_0_345,axiom,nonexistent(skc6,skc8) ).
+fof(c_0_346,axiom,! [X1] : ! [X2] : ( ~ multiple(X1,X2) | ~ singleton(X1,X2) ) ).
+fof(c_0_347,axiom,multiple(skc6,skc7) ).
+fof(c_0_348,axiom,! [X1] : ! [X2] : ( ~ black(X1,X2) | ~ white(X1,X2) ) ).
+fof(c_0_349,axiom,in(skc6,skf12(skf24(skc7,skc6),skc6,skc9),skc9) ).
+fof(c_0_350,axiom,in(skc6,skf12(skf22(skc7,skc6),skc6,skc9),skc9) ).
+fof(c_0_351,axiom,! [X1] : ! [X2] : thing(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_352,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_353,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_354,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ state(X1,X2) ) ).
+fof(c_0_355,axiom,thing(skc6,skf22(skc7,skc6)) ).
+fof(c_0_356,axiom,thing(skc6,skf24(skc7,skc6)) ).
+fof(c_0_357,axiom,thing(skc6,skc11) ).
+fof(c_0_358,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_359,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_360,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_361,axiom,thing(skc6,skc9) ).
+fof(c_0_362,axiom,thing(skc6,skc10) ).
+fof(c_0_363,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_364,axiom,! [X1] : ! [X2] : ( instrumentality(X1,X2) | ~ furniture(X1,X2) ) ).
+fof(c_0_365,axiom,furniture(skc6,skc9) ).
+fof(c_0_366,axiom,thing(skc6,skc8) ).
+fof(c_0_367,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ way(X1,X2) ) ).
+fof(c_0_368,axiom,way(skc6,skc9) ).
+fof(c_0_369,axiom,! [X1] : ! [X2] : ! [X3] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | be(skc6,skf13(skc6,X3,skf10(skc6,skc7)),skf10(skc6,skc7),skf10(skc6,skc7)) ) ).
+fof(c_0_370,axiom,! [X1] : ! [X2] : ( skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | be(skc6,skf13(skc6,X1,skf20(skc7,skc6,X2)),skf20(skc7,skc6,X2),skf20(skc7,skc6,X2)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_371,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | skf20(skc7,skc6,X3) = skf22(skc7,skc6) | skf20(skc7,skc6,X3) = skf24(skc7,skc6) | be(skc6,skf13(skc6,X4,skf10(skc6,skc7)),skf10(skc6,skc7),skf10(skc6,skc7)) ) ).
+fof(c_0_372,axiom,! [X1] : ! [X2] : ! [X3] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | in(skc6,skf10(skc6,skc7),X3) | member(skc6,skf16(X3,skc6,skc7),skc7) ) ).
+fof(c_0_373,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | be(skc6,skf13(skc6,X2,skf20(skc7,skc6,X3)),skf20(skc7,skc6,X3),skf20(skc7,skc6,X3)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_374,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | skf12(skf20(skc7,skc6,X3),skc6,X4) = skf20(skc7,skc6,X3) | be(skc6,skf13(skc6,X5,skf10(skc6,skc7)),skf10(skc6,skc7),skf10(skc6,skc7)) ) ).
+fof(c_0_375,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf20(skc7,skc6,X2) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | be(skc6,skf13(skc6,X3,skf10(skc6,skc7)),skf10(skc6,skc7),skf10(skc6,skc7)) ) ).
+fof(c_0_376,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | skf20(skc7,skc6,X3) = skf22(skc7,skc6) | skf20(skc7,skc6,X3) = skf24(skc7,skc6) | in(skc6,skf10(skc6,skc7),X4) | member(skc6,skf16(X4,skc6,skc7),skc7) ) ).
+fof(c_0_377,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf20(skc7,skc6,X2) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | in(skc6,skf10(skc6,skc7),X3) | member(skc6,skf16(X3,skc6,skc7),skc7) ) ).
+fof(c_0_378,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | skf12(skf20(skc7,skc6,X3),skc6,X4) = skf20(skc7,skc6,X3) | in(skc6,skf10(skc6,skc7),X5) | member(skc6,skf16(X5,skc6,skc7),skc7) ) ).
+fof(c_0_379,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf12(skf20(skc7,skc6,X2),skc6,X3) = skf20(skc7,skc6,X2) | be(skc6,skf13(skc6,X4,skf10(skc6,skc7)),skf10(skc6,skc7),skf10(skc6,skc7)) ) ).
+fof(c_0_380,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf12(skf20(skc7,skc6,X2),skc6,X3) = skf20(skc7,skc6,X2) | in(skc6,skf10(skc6,skc7),X4) | member(skc6,skf16(X4,skc6,skc7),skc7) ) ).
+fof(c_0_381,axiom,! [X1] : ! [X2] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf22(skc7,skc6) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | in(skc6,skf10(skc6,skc7),skc9) ) ).
+fof(c_0_382,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | ssSkP2(skc7,X3,skc6) | ~ agent(skc6,skc8,skf22(skc7,skc6)) | ~ patient(skc6,skc8,skf18(skc7,skc6,X2)) | ~ nonreflexive(skc6,skc8) | ~ wear(skc6,skc8) ) ).
+fof(c_0_383,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | skf20(skc7,skc6,X3) = skf24(skc7,skc6) | skf20(skc7,skc6,X3) = skf22(skc7,skc6) | in(skc6,skf10(skc6,skc7),skc9) ) ).
+fof(c_0_384,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | in(skc6,skf20(skc7,skc6,X2),X3) | member(skc6,skf16(X3,skc6,skc7),skc7) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_385,axiom,! [X1] : ! [X2] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | skf20(skc7,skc6,X2) = skf22(skc7,skc6) | in(skc6,skf10(skc6,skc7),skc9) ) ).
+fof(c_0_386,axiom,! [X1] : ! [X2] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | skf20(skc7,skc6,X2) = skf24(skc7,skc6) | skf22(skc7,skc6) != skf24(skc7,skc6) ) ).
+fof(c_0_387,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf12(skf18(skc7,skc6,skc7),skc6,X2) = skf18(skc7,skc6,skc7) | in(skc6,skf10(skc6,skc7),X3) | member(skc6,skf16(X3,skc6,skc7),skc7) ) ).
+fof(c_0_388,axiom,! [X1] : ( skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | be(skc6,skf13(skc6,X1,skf10(skc6,skc7)),skf10(skc6,skc7),skf10(skc6,skc7)) ) ).
+fof(c_0_389,axiom,! [X1] : ( skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | in(skc6,skf10(skc6,skc7),X1) | member(skc6,skf16(X1,skc6,skc7),skc7) ) ).
+fof(c_0_390,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | in(skc6,skf10(skc6,skc7),skc9) ).
+fof(c_0_391,axiom,! [X1] : ( skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | be(skc6,skf13(skc6,X1,skf18(skc7,skc6,skc7)),skf18(skc7,skc6,skc7),skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_392,axiom,! [X1] : ! [X2] : ! [X3] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | skf12(skf18(skc7,skc6,skc7),skc6,X2) = skf18(skc7,skc6,skc7) | be(skc6,skf13(skc6,X3,skf10(skc6,skc7)),skf10(skc6,skc7),skf10(skc6,skc7)) ) ).
+fof(c_0_393,axiom,! [X1] : ! [X2] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | in(skc6,skf20(skc7,skc6,X2),skc9) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_394,axiom,! [X1] : ( skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | in(skc6,skf18(skc7,skc6,skc7),X1) | member(skc6,skf16(X1,skc6,skc7),skc7) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_395,axiom,! [X1] : ! [X2] : ( skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | in(skc6,skf20(skc7,skc6,X1),X2) | member(skc6,skf16(X2,skc6,skc7),skc7) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_396,axiom,! [X1] : ! [X2] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | in(skc6,skf18(skc7,skc6,skc7),X2) | member(skc6,skf16(X2,skc6,skc7),skc7) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_397,axiom,! [X1] : ! [X2] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | be(skc6,skf13(skc6,X2,skf18(skc7,skc6,skc7)),skf18(skc7,skc6,skc7),skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_398,axiom,! [X1] : ( skf12(skf10(skc6,skc7),skc6,X1) = skf10(skc6,skc7) | in(skc6,skf18(skc7,skc6,skc7),skc9) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_399,axiom,! [X1] : ! [X2] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf22(skc7,skc6) = skf10(skc6,skc7) | skf24(skc7,skc6) = skf10(skc6,skc7) | ssSkP2(skc7,X2,skc6) | ~ agent(skc6,skc8,skf22(skc7,skc6)) | ~ patient(skc6,skc8,skf18(skc7,skc6,X1)) | ~ nonreflexive(skc6,skc8) | ~ wear(skc6,skc8) ) ).
+fof(c_0_400,axiom,skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | in(skc6,skf18(skc7,skc6,skc7),skc9) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_401,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | singleton(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_402,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | existent(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_403,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | specific(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_404,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | living(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_405,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | impartial(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_406,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | ~ nonliving(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_407,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | human(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_408,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | ~ unisex(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_409,axiom,! [X1] : ( skf12(skf18(skc7,skc6,skc7),skc6,X1) = skf18(skc7,skc6,skc7) | ~ old(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_410,axiom,! [X1] : ( skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | in(skc6,skf20(skc7,skc6,X1),skc9) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_411,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) != skf24(skc7,skc6) ).
+fof(c_0_412,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | singleton(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_413,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | existent(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_414,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | specific(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_415,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | living(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_416,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | impartial(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_417,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | singleton(skc6,skf10(skc6,skc7)) ).
+fof(c_0_418,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | existent(skc6,skf10(skc6,skc7)) ).
+fof(c_0_419,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | specific(skc6,skf10(skc6,skc7)) ).
+fof(c_0_420,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | ~ nonliving(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_421,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | human(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_422,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | ~ unisex(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_423,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | living(skc6,skf10(skc6,skc7)) ).
+fof(c_0_424,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | impartial(skc6,skf10(skc6,skc7)) ).
+fof(c_0_425,axiom,! [X1] : ! [X2] : ( skf12(skf20(skc7,skc6,X1),skc6,X2) = skf20(skc7,skc6,X1) | ~ old(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_426,axiom,skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | ~ nonliving(skc6,skf10(skc6,skc7)) ).
+fof(c_0_427,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | human(skc6,skf10(skc6,skc7)) ).
+fof(c_0_428,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | ~ unisex(skc6,skf10(skc6,skc7)) ).
+fof(c_0_429,axiom,skf18(skc7,skc6,skc7) = skf22(skc7,skc6) | skf18(skc7,skc6,skc7) = skf24(skc7,skc6) | ~ old(skc6,skf10(skc6,skc7)) ).
+fof(c_0_430,axiom,singleton(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_431,axiom,existent(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_432,axiom,specific(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_433,axiom,living(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_434,axiom,impartial(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_435,axiom,member(skc6,skf10(skc6,skc7),skc7) | ~ nonliving(skc6,skf18(skc7,skc6,skc7)) ).
+fof(c_0_436,axiom,human(skc6,skf18(skc7,skc6,skc7)) | member(skc6,skf10(skc6,skc7),skc7) ).
+fof(c_0_437,axiom,member(skc6,skf10(skc6,skc7),skc7) | ~ unisex(skc6,skf18(skc7,skc6,skc7)) ).
+fof(c_0_438,axiom,member(skc6,skf10(skc6,skc7),skc7) | ~ old(skc6,skf18(skc7,skc6,skc7)) ).
+fof(c_0_439,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf24(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) = skf10(skc6,skc7) | skf22(skc7,skc6) != skf24(skc7,skc6) ) ).
+fof(c_0_440,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | singleton(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_441,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | existent(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_442,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | specific(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_443,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | living(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_444,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | impartial(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_445,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf24(skc7,skc6) | skf20(skc7,skc6,X1) = skf22(skc7,skc6) | ~ nonliving(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_446,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | human(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_447,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | ~ unisex(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_448,axiom,! [X1] : ( skf20(skc7,skc6,X1) = skf22(skc7,skc6) | skf20(skc7,skc6,X1) = skf24(skc7,skc6) | ~ old(skc6,skf10(skc6,skc7)) ) ).
+fof(c_0_449,axiom,! [X1] : ( singleton(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_450,axiom,! [X1] : ( existent(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_451,axiom,! [X1] : ( specific(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_452,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( member(X1,skf16(X2,X1,X3),X3) | member(X1,skf18(X4,X1,X5),X5) | member(X1,skf10(X1,X5),X5) | ~ in(X1,X6,X2) | ~ down(X1,X6,X2) | ~ ssSkP0(X3,X1) | ~ present(X1,X6) | ~ dirty(X1,X7) | ~ lonely(X1,X2) | ~ actual_world(X1) | ~ of(X1,X8,X2) | ~ agent(X1,X6,X7) | ~ white(X1,X7) | ~ old(X1,X7) | ~ frontseat(X1,X2) | ~ chevy(X1,X7) | ~ city(X1,X2) | ~ hollywood_placename(X1,X8) | ~ street(X1,X2) | ~ barrel(X1,X6) | ~ two(X1,X3) | ~ group(X1,X5) | ~ group(X1,X4) ) ).
+fof(c_0_453,axiom,! [X1] : ( living(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_454,axiom,! [X1] : ( impartial(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_455,axiom,! [X1] : ( member(skc6,skf10(skc6,skc7),skc7) | ~ nonliving(skc6,skf20(skc7,skc6,X1)) ) ).
+fof(c_0_456,axiom,! [X1] : ( human(skc6,skf20(skc7,skc6,X1)) | member(skc6,skf10(skc6,skc7),skc7) ) ).
+fof(c_0_457,axiom,! [X1] : ( member(skc6,skf10(skc6,skc7),skc7) | ~ unisex(skc6,skf20(skc7,skc6,X1)) ) ).
+fof(c_0_458,axiom,! [X1] : ( member(skc6,skf10(skc6,skc7),skc7) | ~ old(skc6,skf20(skc7,skc6,X1)) ) ).
+fof(c_0_459,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( member(X1,skf16(X2,X1,X3),X3) | member(X1,skf20(X4,X1,X5),X4) | member(X1,skf10(X1,X6),X6) | ~ in(X1,X7,X2) | ~ down(X1,X7,X2) | ~ ssSkP0(X3,X1) | ~ present(X1,X7) | ~ dirty(X1,X8) | ~ lonely(X1,X2) | ~ actual_world(X1) | ~ of(X1,X9,X2) | ~ agent(X1,X7,X8) | ~ white(X1,X8) | ~ old(X1,X8) | ~ frontseat(X1,X2) | ~ chevy(X1,X8) | ~ city(X1,X2) | ~ hollywood_placename(X1,X9) | ~ street(X1,X2) | ~ barrel(X1,X7) | ~ two(X1,X3) | ~ group(X1,X6) | ~ group(X1,X4) ) ).
+fof(c_0_460,axiom,! [X1] : ( in(skc6,skf24(skc7,skc6),X1) | member(skc6,skf16(X1,skc6,skc7),skc7) ) ).
+fof(c_0_461,axiom,! [X1] : ( in(skc6,skf22(skc7,skc6),X1) | member(skc6,skf16(X1,skc6,skc7),skc7) ) ).
+fof(c_0_462,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( be(X1,skf13(X1,X2,X3),X3,skf12(X3,X1,X2)) | member(X1,skf16(X4,X1,X5),X5) | ~ member(X1,X3,X5) ) ).
+fof(c_0_463,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( state(X1,skf13(X1,X2,X3)) | member(X1,skf16(X4,X1,X5),X5) | ~ member(X1,X6,X5) ) ).
+fof(c_0_464,axiom,! [X1] : ( X1 = skc10 | ~ of(skc6,X1,skc9) | ~ placename(skc6,X1) ) ).
+fof(c_0_465,axiom,~ patient(skc6,skc8,skc11) | ~ nonreflexive(skc6,skc8) ).
+fof(c_0_466,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( ~ cheap(X1,skf10(X1,X2)) | ~ ssSkP2(X3,X4,X1) | ~ ssSkP1(X5,X6,X1) | ~ in(X1,X7,X5) | ~ down(X1,X7,X5) | ~ ssSkP0(X6,X1) | ~ present(X1,X7) | ~ dirty(X1,X8) | ~ lonely(X1,X5) | ~ actual_world(X1) | ~ of(X1,X9,X5) | ~ agent(X1,X7,X8) | ~ white(X1,X8) | ~ black(X1,skf10(X1,X2)) | ~ old(X1,X8) | ~ frontseat(X1,X5) | ~ chevy(X1,X8) | ~ city(X1,X5) | ~ hollywood_placename(X1,X9) | ~ street(X1,X5) | ~ barrel(X1,X7) | ~ two(X1,X6) | ~ group(X1,X4) | ~ group(X1,X3) | ~ coat(X1,skf10(X1,X2)) ) ).
+fof(c_0_467,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( two(X1,X3) | member(X1,skf25(X2,X4,X3,X1),X3) | X2 = X4 | ~ member(X1,X2,X3) | ~ member(X1,X4,X3) ) ).
+fof(c_0_468,axiom,! [X5] : ! [X6] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( two(X5,X6) | X1 = X2 | skf25(X1,X2,X3,X4) != X2 | ~ member(X5,X1,X6) | ~ member(X5,X2,X6) ) ).
+fof(c_0_469,axiom,! [X5] : ! [X6] : ! [X1] : ! [X7] : ! [X2] : ! [X3] : ! [X4] : ( two(X5,X6) | X1 = X7 | skf25(X1,X2,X3,X4) != X1 | ~ member(X5,X1,X6) | ~ member(X5,X7,X6) ) ).
+fof(c_0_470,axiom,! [X3] : ! [X6] : ! [X1] : ! [X2] : ! [X4] : ! [X5] : ( ssSkP1(X3,X6,X1) | ~ in(X1,X2,X3) | ~ be(X1,X4,skf16(X3,X1,X5),X2) | ~ state(X1,X4) ) ).
+fof(c_0_471,axiom,! [X3] : ! [X1] : ! [X2] : ( ssSkP0(X3,X1) | ~ young(X1,skf11(X1,X2)) | ~ fellow(X1,skf11(X1,X2)) ) ).
+fof(c_0_472,axiom,! [X1] : ! [X2] : ( ssSkP0(X1,X2) | member(X2,skf11(X2,X1),X1) ) ).
+fof(c_0_473,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ clothes(X1,X2) ) ).
+fof(c_0_474,axiom,! [X1] : ! [X2] : ( clothes(X1,X2) | ~ coat(X1,X2) ) ).
+fof(c_0_475,axiom,! [X1] : ! [X2] : ( skf24(X1,X2) != skf22(X1,X2) | ~ two(X2,X1) ) ).
+fof(c_0_476,axiom,! [X1] : ! [X2] : ( ~ living(X1,X2) | ~ nonliving(X1,X2) ) ).
+fof(c_0_477,axiom,! [X1] : ! [X2] : ~ existent(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_478,axiom,~ nonliving(skc6,skf22(skc7,skc6)) ).
+fof(c_0_479,axiom,~ nonliving(skc6,skf24(skc7,skc6)) ).
+fof(c_0_480,axiom,~ unisex(skc6,skf22(skc7,skc6)) ).
+fof(c_0_481,axiom,~ unisex(skc6,skf24(skc7,skc6)) ).
+fof(c_0_482,axiom,~ old(skc6,skf22(skc7,skc6)) ).
+fof(c_0_483,axiom,~ old(skc6,skf24(skc7,skc6)) ).
+fof(c_0_484,axiom,~ specific(skc6,skc10) ).
+fof(c_0_485,axiom,~ human(skc6,skc10) ).
+fof(c_0_486,axiom,~ existent(skc6,skc8) ).
+fof(c_0_487,axiom,~ singleton(skc6,skc7) ).
+fof(c_0_488,axiom,~ black(skc6,skc11) ).
+fof(c_0_489,axiom,! [X1] : ! [X2] : ~ member(X1,X2,X2) ).
+fof(c_0_490,axiom,! [X1] : be(skc6,skf13(skc6,X1,skf24(skc7,skc6)),skf24(skc7,skc6),skf24(skc7,skc6)) ).
+fof(c_0_491,axiom,in(skc6,skf24(skc7,skc6),skc9) ).
+fof(c_0_492,axiom,in(skc6,skf22(skc7,skc6),skc9) ).
+fof(c_0_493,axiom,! [X1] : be(skc6,skf13(skc6,X1,skf22(skc7,skc6)),skf22(skc7,skc6),skf22(skc7,skc6)) ).
+fof(c_0_494,axiom,! [X1] : ! [X2] : singleton(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_495,axiom,! [X1] : ! [X2] : unisex(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_496,axiom,! [X1] : ! [X2] : specific(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_497,axiom,! [X1] : ! [X2] : event(skc6,skf13(skc6,X1,X2)) ).
+fof(c_0_498,axiom,singleton(skc6,skf22(skc7,skc6)) ).
+fof(c_0_499,axiom,singleton(skc6,skf24(skc7,skc6)) ).
+fof(c_0_500,axiom,existent(skc6,skf22(skc7,skc6)) ).
+fof(c_0_501,axiom,specific(skc6,skf22(skc7,skc6)) ).
+fof(c_0_502,axiom,existent(skc6,skf24(skc7,skc6)) ).
+fof(c_0_503,axiom,specific(skc6,skf24(skc7,skc6)) ).
+fof(c_0_504,axiom,living(skc6,skf22(skc7,skc6)) ).
+fof(c_0_505,axiom,impartial(skc6,skf22(skc7,skc6)) ).
+fof(c_0_506,axiom,living(skc6,skf24(skc7,skc6)) ).
+fof(c_0_507,axiom,impartial(skc6,skf24(skc7,skc6)) ).
+fof(c_0_508,axiom,human(skc6,skf22(skc7,skc6)) ).
+fof(c_0_509,axiom,human(skc6,skf24(skc7,skc6)) ).
+fof(c_0_510,axiom,singleton(skc6,skc11) ).
+fof(c_0_511,axiom,existent(skc6,skc11) ).
+fof(c_0_512,axiom,specific(skc6,skc11) ).
+fof(c_0_513,axiom,unisex(skc6,skc11) ).
+fof(c_0_514,axiom,impartial(skc6,skc11) ).
+fof(c_0_515,axiom,nonliving(skc6,skc11) ).
+fof(c_0_516,axiom,singleton(skc6,skc9) ).
+fof(c_0_517,axiom,singleton(skc6,skc10) ).
+fof(c_0_518,axiom,existent(skc6,skc9) ).
+fof(c_0_519,axiom,specific(skc6,skc9) ).
+fof(c_0_520,axiom,unisex(skc6,skc10) ).
+fof(c_0_521,axiom,instrumentality(skc6,skc9) ).
+fof(c_0_522,axiom,unisex(skc6,skc9) ).
+fof(c_0_523,axiom,impartial(skc6,skc9) ).
+fof(c_0_524,axiom,nonliving(skc6,skc9) ).
+fof(c_0_525,axiom,singleton(skc6,skc8) ).
+fof(c_0_526,axiom,artifact(skc6,skc9) ).
+fof(c_0_527,axiom,unisex(skc6,skc8) ).
+fof(c_0_528,axiom,specific(skc6,skc8) ).

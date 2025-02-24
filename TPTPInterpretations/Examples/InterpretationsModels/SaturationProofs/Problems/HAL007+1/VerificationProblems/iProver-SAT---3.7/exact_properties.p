@@ -1,0 +1,2 @@
+include('Saturations/HAL007+1/Saturations/iProver-SAT---3.7.ax').
+fof(exact_properties,conjecture,! [Morphism1] : ! [Morphism2] : ! [Dom] : ! [CodDom] : ! [Cod] : ( ( exact(Morphism1,Morphism2) & morphism(Morphism1,Dom,CodDom) & morphism(Morphism2,CodDom,Cod) ) => ! [ElCodDom] : ( ( element(ElCodDom,CodDom) & apply(Morphism2,ElCodDom) = zero(Cod) ) <=> ? [ElDom] : ( element(ElDom,Dom) & apply(Morphism1,ElDom) = ElCodDom ) ) ) ).

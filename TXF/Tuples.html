@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE> Tuples </TITLE>
+</HEAD>
+<BODY>
+<HR><!------------------------------------------------------------------------>
+<H1 ALIGN=CENTER> Tuples </H1>
+
+<IMG SRC="Tuple.jpg" BORDER=0 ALIGN=RIGHT WIDTH=30%>
+
+<H3> The Idea </H3>
+<UL>
+<LI> Types and terms in <TT>[]</TT>s
+<LI> Can contain any type of term, heterogeneously
+<LI> Tuples removed from FOF and plain TFF
+</UL>
+
+<H3> Examples </H3>
+<UL>
+<LI> <TT>[$real,$real]</TT> and <TT>[2.3,-6.6]</TT>
+<LI> <TT>p: ([$int,$i,$o] * $o * $int) > $o</TT><BR>
+     <TT>q: ($int * $i) > $o</TT><BR>
+     <TT>me: $i</TT><BR>
+     <TT>! [X: $int] : p([33,me,$true],! [Y: $i] : q(X,Y),27)</TT>
+</UL>
+
+<P>
+<HR><!------------------------------------------------------------------------>
+</BODY>
+</HTML>

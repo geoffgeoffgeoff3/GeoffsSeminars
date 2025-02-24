@@ -1,0 +1,6 @@
+fof(ifeq_axiom,axiom,! [X0] : ! [X1] : ! [X2] : ifeq(X0,X0,X1,X2) = X1 ).
+fof(clause3,axiom,! [X3] : ! [X4] : true = ifeq(p(f(X3),f(X4)),true,p(X3,X4),true) ).
+fof(clause4,axiom,! [X3] : ! [X4] : true = ifeq(p(X3,X4),true,p(f(X3),f(X4)),true) ).
+fof(clause2,axiom,! [X3] : ! [X4] : true = ifeq(p(X3,X4),true,p(X4,X3),true) ).
+fof(clause1,axiom,! [X3] : p(X3,X3) = true ).
+fof(clause5,axiom,! [X3] : true != p(a,f(X3)) ).

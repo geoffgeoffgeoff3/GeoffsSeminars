@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<TITLE> Fundamental Mathematical Theories </TITLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+function hideshow(obj) {
+    var elem = document.getElementById(obj);
+    if (elem.style.display == 'block') {
+        elem.style.display = 'none';
+    } else if (elem.style.display == 'none') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+}
+<!---------------------------------------------------------------------->
+var images = new Array();
+var myIndex = 0;
+
+images[0]     = new Image();
+images[0].src = 'QuaifeBook.jpg';
+images[1]     = new Image();
+images[1].src = 'ArtQuaife.jpg';
+
+function putImage (index) {
+    document.images['image'].src = images[index].src;
+}
+
+function nextImage () {
+    myIndex = (myIndex + 1) % images.length;
+    document.images['image'].src = images[myIndex].src;
+}
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Fundamental Mathematical Theories </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="QuaifeBook.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>The Mathematical Theories</H3>
+<UL>
+<LI> Van-Neuman-Bernays-G&ouml;del set theory 
+     [<A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Axioms&File=SET005+0.ax">Qua92</A>]
+<LI> Peano arithmetic
+<LI> Tarski's geometry
+<LI> Number theory
+     [<A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Axioms&File=NUM004-0.ax">Qua92</A>]
+</UL>
+
+<H3>The ATP</H3>
+<UL>
+<LI> Encoded in first-order logic
+<LI> Challenge problems solved
+     <UL>
+     <LI> Composition of homomorphisms is a homomorphism
+          [<A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=ALG&File=ALG001-3.p">Qua92</A>]
+     <LI> Unique factorization theorem
+     <LI> Euler's generalization of Fermat's theorem
+     <LI> L&ouml;b's theorem
+     </UL>
+<LI> Proofs using Otter
+</UL>
+
+<H3>The Philosophy</H3>
+<UL>
+<LI> "Regular use of ATP ... state of bliss"
+<LI> "Maximize the integral of one's pleasure function over time"
+<LI> "The pot of gold: Immortality"
+<LI> "With the help of mathematicians ... we might live <EM>forever</EM>
+<LI> Art's invitation ...
+     "<A HREF="https://cryonics.miraheze.org/wiki/Art_Quaife" TARGET=_blank>
+     join me in the loop</A>"
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

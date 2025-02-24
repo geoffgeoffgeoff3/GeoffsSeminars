@@ -1,0 +1,203 @@
+fof(clause30,axiom,! [X1] : ! [X2] : ( ssSkC0 | member(X1,skf34(X1,X2),X2) | ~ group(X1,X2) | ~ ssSkP3(X2,X1) | ~ actual_world(X1) ) ).
+fof(clause3,axiom,ssSkC0 | group(skc64,skc65) ).
+fof(clause1,axiom,actual_world(skc64) ).
+fof(clause8,axiom,! [X1] : ! [X2] : ( ssSkP3(X1,X2) | member(X2,skf31(X2,X1),X1) ) ).
+fof(clause29,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkC0 | ~ hamburger(X1,skf34(X1,X2)) | ~ group(X1,X3) | ~ ssSkP3(X3,X1) | ~ actual_world(X1) ) ).
+fof(clause9,axiom,! [X1] : ( ssSkC0 | hamburger(skc64,X1) | ~ member(skc64,X1,skc65) ) ).
+fof(clause22,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( group(X1,skf24(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP2(X4,X3,X1) ) ).
+fof(clause21,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( three(X1,skf24(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP2(X4,X3,X1) ) ).
+fof(clause28,axiom,! [X2] : ! [X4] : ! [X1] : ! [X3] : ( ssSkP0(X2,X4,skf24(X1,X4,X2),X1) | ~ member(X1,X2,X3) | ~ ssSkP2(X4,X3,X1) ) ).
+fof(clause41,axiom,! [X4] : ! [X1] : ! [X2] : ! [X3] : ( ssSkP3(X4,X1) | member(X1,skf32(X1,X2),X2) | ~ group(X1,X2) | ~ three(X1,X2) | ~ ssSkP1(skf31(X1,X3),X2,X1) ) ).
+fof(clause11,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP1(X1,X2,X3) | member(X3,skf22(X1,X3,X2),X2) ) ).
+fof(clause7,axiom,ssSkC0 | ssSkP2(skc66,skc65,skc64) ).
+fof(clause31,axiom,! [X1] : ! [X2] : ! [X6] : ! [X7] : ! [X3] : ! [X4] : ! [X5] : ( agent(X1,skf15(X1,X2,X6,X7),X2) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(clause27,axiom,! [X1] : ! [X6] : ! [X7] : ! [X8] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( sit(X1,skf15(X1,X6,X7,X8)) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(clause26,axiom,! [X1] : ! [X6] : ! [X7] : ! [X8] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( present(X1,skf15(X1,X6,X7,X8)) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(clause25,axiom,! [X1] : ! [X6] : ! [X7] : ! [X8] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( event(X1,skf15(X1,X6,X7,X8)) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(clause32,axiom,! [X1] : ! [X2] : ! [X4] : ! [X5] : ! [X3] : ( at(X1,skf15(X1,X2,X4,X5),X5) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(clause46,axiom,! [X3] : ! [X6] : ! [X1] : ! [X2] : ! [X4] : ! [X5] : ( ssSkP1(X3,X6,X1) | ~ event(X1,X2) | ~ agent(X1,X2,skf22(X3,X1,X4)) | ~ present(X1,X2) | ~ sit(X1,X2) | ~ with(X1,X2,X3) | ~ at(X1,X2,X5) | ~ table(X1,X5) ) ).
+fof(clause33,axiom,! [X1] : ! [X2] : ! [X4] : ! [X6] : ! [X3] : ! [X5] : ( with(X1,skf15(X1,X2,X4,X6),X4) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(clause4,axiom,ssSkC0 | table(skc64,skc66) ).
+fof(clause37,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( guy(X1,X2) | ~ member(X1,X2,skf24(X1,X3,X4)) | ~ member(X1,X5,X6) | ~ ssSkP2(X7,X6,X1) ) ).
+fof(clause38,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( young(X1,X2) | ~ member(X1,X2,skf24(X1,X3,X4)) | ~ member(X1,X5,X6) | ~ ssSkP2(X7,X6,X1) ) ).
+fof(clause43,axiom,! [X5] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ssSkP3(X5,X1) | ~ young(X1,skf32(X1,X2)) | ~ guy(X1,skf32(X1,X2)) | ~ group(X1,X3) | ~ three(X1,X3) | ~ ssSkP1(skf31(X1,X4),X3,X1) ) ).
+fof(clause15,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( group(X1,skf29(X1,X4)) | ~ member(X1,X2,X3) | ~ ssSkP3(X3,X1) ) ).
+fof(clause40,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ group(X1,X2) | ~ hamburger(X1,skf14(X1,X3)) | ~ ssSkP2(X4,X2,X1) | ~ table(X1,X4) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(clause12,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP2(X1,X2,X3) | member(X3,skf26(X3,X1,X2),X2) ) ).
+fof(clause39,axiom,! [X1] : ! [X2] : ! [X3] : ( member(X1,skf14(X1,X2),X2) | ~ group(X1,X2) | ~ ssSkP2(X3,X2,X1) | ~ table(X1,X3) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(clause44,axiom,! [X4] : ! [X6] : ! [X1] : ! [X2] : ! [X3] : ! [X5] : ( ssSkP2(X4,X6,X1) | ~ young(X1,skf27(X1,X2)) | ~ guy(X1,skf27(X1,X2)) | ~ group(X1,X3) | ~ three(X1,X3) | ~ ssSkP0(skf26(X1,X4,X5),X4,X3,X1) ) ).
+fof(clause13,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ssSkP0(X1,X2,X3,X4) | member(X4,skf17(X3,X4,X5,X6),X3) ) ).
+fof(clause5,axiom,group(skc5,skc6) | ~ ssSkC0 ).
+fof(clause42,axiom,! [X3] : ! [X5] : ! [X1] : ! [X2] : ! [X4] : ( ssSkP2(X3,X5,X1) | member(X1,skf27(X1,X2),X2) | ~ group(X1,X2) | ~ three(X1,X2) | ~ ssSkP0(skf26(X1,X3,X4),X3,X2,X1) ) ).
+fof(clause2,axiom,actual_world(skc5) ).
+fof(clause10,axiom,! [X1] : ( hamburger(skc5,X1) | ~ member(skc5,X1,skc6) | ~ ssSkC0 ) ).
+fof(clause6,axiom,ssSkP3(skc6,skc5) | ~ ssSkC0 ).
+fof(clause45,axiom,! [X3] : ! [X4] : ! [X5] : ! [X1] : ! [X2] : ( ssSkP0(X3,X4,X5,X1) | ~ with(X1,X2,X3) | ~ at(X1,X2,X4) | ~ sit(X1,X2) | ~ present(X1,X2) | ~ agent(X1,X2,skf17(X5,X1,X3,X4)) | ~ event(X1,X2) ) ).
+fof(clause36,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( at(X1,skf18(X1,X5,X6),skf19(X1,X6,X5)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause24,axiom,! [X1] : ! [X2] : ! [X5] : ! [X3] : ! [X4] : ( agent(X1,skf18(X1,X2,X5),X2) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause23,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( with(X1,skf18(X1,X2,X4),X4) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause20,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( event(X1,skf18(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause19,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( present(X1,skf18(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause18,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( sit(X1,skf18(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause35,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( guy(X1,X2) | ~ member(X1,X2,skf29(X1,X3)) | ~ member(X1,X4,X5) | ~ ssSkP3(X5,X1) ) ).
+fof(clause34,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( young(X1,X2) | ~ member(X1,X2,skf29(X1,X3)) | ~ member(X1,X4,X5) | ~ ssSkP3(X5,X1) ) ).
+fof(clause17,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( table(X1,skf19(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(clause16,axiom,! [X2] : ! [X1] : ! [X3] : ( ssSkP1(X2,skf29(X1,X2),X1) | ~ member(X1,X2,X3) | ~ ssSkP3(X3,X1) ) ).
+fof(clause14,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( three(X1,skf29(X1,X4)) | ~ member(X1,X2,X3) | ~ ssSkP3(X3,X1) ) ).
+fof(c_0_46,axiom,! [X1] : ! [X2] : ( ssSkC0 | member(X1,skf34(X1,X2),X2) | ~ group(X1,X2) | ~ ssSkP3(X2,X1) | ~ actual_world(X1) ) ).
+fof(c_0_47,axiom,ssSkC0 | group(skc64,skc65) ).
+fof(c_0_48,axiom,actual_world(skc64) ).
+fof(c_0_49,axiom,member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 | ~ ssSkP3(skc65,skc64) ).
+fof(c_0_50,axiom,! [X1] : ! [X2] : ( ssSkP3(X1,X2) | member(X2,skf31(X2,X1),X1) ) ).
+fof(c_0_51,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkC0 | ~ hamburger(X1,skf34(X1,X2)) | ~ group(X1,X3) | ~ ssSkP3(X3,X1) | ~ actual_world(X1) ) ).
+fof(c_0_52,axiom,! [X1] : ( ssSkC0 | hamburger(skc64,X1) | ~ member(skc64,X1,skc65) ) ).
+fof(c_0_53,axiom,member(skc64,skf31(skc64,skc65),skc65) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ).
+fof(c_0_54,axiom,! [X1] : ( ssSkC0 | ~ hamburger(skc64,skf34(skc64,X1)) | ~ ssSkP3(skc65,skc64) ) ).
+fof(c_0_55,axiom,hamburger(skc64,skf34(skc64,skc65)) | member(skc64,skf31(skc64,skc65),skc65) | ssSkC0 ).
+fof(c_0_56,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( group(X1,skf24(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP2(X4,X3,X1) ) ).
+fof(c_0_57,axiom,member(skc64,skf31(skc64,skc65),skc65) | ssSkC0 ).
+fof(c_0_58,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( three(X1,skf24(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP2(X4,X3,X1) ) ).
+fof(c_0_59,axiom,! [X2] : ! [X4] : ! [X1] : ! [X3] : ( ssSkP0(X2,X4,skf24(X1,X4,X2),X1) | ~ member(X1,X2,X3) | ~ ssSkP2(X4,X3,X1) ) ).
+fof(c_0_60,axiom,! [X4] : ! [X1] : ! [X2] : ! [X3] : ( ssSkP3(X4,X1) | member(X1,skf32(X1,X2),X2) | ~ group(X1,X2) | ~ three(X1,X2) | ~ ssSkP1(skf31(X1,X3),X2,X1) ) ).
+fof(c_0_61,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP1(X1,X2,X3) | member(X3,skf22(X1,X3,X2),X2) ) ).
+fof(c_0_62,axiom,! [X1] : ! [X2] : ! [X3] : ( group(skc64,skf24(skc64,X1,X2)) | ssSkC0 | ~ ssSkP2(X3,skc65,skc64) ) ).
+fof(c_0_63,axiom,ssSkC0 | ssSkP2(skc66,skc65,skc64) ).
+fof(c_0_64,axiom,! [X1] : ! [X2] : ! [X3] : ( three(skc64,skf24(skc64,X1,X2)) | ssSkC0 | ~ ssSkP2(X3,skc65,skc64) ) ).
+fof(c_0_65,axiom,! [X1] : ( ssSkP0(skf31(skc64,skc65),X1,skf24(skc64,X1,skf31(skc64,skc65)),skc64) | ssSkC0 | ~ ssSkP2(X1,skc65,skc64) ) ).
+fof(c_0_66,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(X1,skf22(skf31(X1,X2),X1,X3),X3) | member(X1,skf32(X1,X3),X3) | ssSkP3(X4,X1) | ~ three(X1,X3) | ~ group(X1,X3) ) ).
+fof(c_0_67,axiom,! [X1] : ! [X2] : ( group(skc64,skf24(skc64,X1,X2)) | ssSkC0 ) ).
+fof(c_0_68,axiom,! [X1] : ! [X2] : ( three(skc64,skf24(skc64,X1,X2)) | ssSkC0 ) ).
+fof(c_0_69,axiom,! [X1] : ! [X2] : ! [X6] : ! [X7] : ! [X3] : ! [X4] : ! [X5] : ( agent(X1,skf15(X1,X2,X6,X7),X2) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(c_0_70,axiom,ssSkP0(skf31(skc64,skc65),skc66,skf24(skc64,skc66,skf31(skc64,skc65)),skc64) | ssSkC0 ).
+fof(c_0_71,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | member(skc64,skf32(skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | ssSkP3(X4,skc64) | ssSkC0 ) ).
+fof(c_0_72,axiom,! [X1] : ! [X6] : ! [X7] : ! [X8] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( sit(X1,skf15(X1,X6,X7,X8)) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(c_0_73,axiom,! [X1] : ! [X2] : ( member(skc64,skf34(skc64,skf24(skc64,X1,X2)),skf24(skc64,X1,X2)) | ssSkC0 | ~ ssSkP3(skf24(skc64,X1,X2),skc64) ) ).
+fof(c_0_74,axiom,! [X1] : ! [X6] : ! [X7] : ! [X8] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( present(X1,skf15(X1,X6,X7,X8)) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(c_0_75,axiom,! [X1] : ! [X6] : ! [X7] : ! [X8] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( event(X1,skf15(X1,X6,X7,X8)) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(c_0_76,axiom,! [X1] : ! [X2] : ! [X3] : ( agent(skc64,skf15(skc64,X1,X2,X3),X1) | ssSkC0 | ~ member(skc64,X1,skf24(skc64,skc66,skf31(skc64,skc65))) ) ).
+fof(c_0_77,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | member(skc64,skf32(skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_78,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( sit(skc64,skf15(skc64,X1,X2,X3)) | ssSkC0 | ~ member(skc64,X4,skf24(skc64,skc66,skf31(skc64,skc65))) ) ).
+fof(c_0_79,axiom,! [X1] : ! [X2] : ( member(skc64,skf31(skc64,skf24(skc64,X1,X2)),skf24(skc64,X1,X2)) | member(skc64,skf34(skc64,skf24(skc64,X1,X2)),skf24(skc64,X1,X2)) | ssSkC0 ) ).
+fof(c_0_80,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( present(skc64,skf15(skc64,X1,X2,X3)) | ssSkC0 | ~ member(skc64,X4,skf24(skc64,skc66,skf31(skc64,skc65))) ) ).
+fof(c_0_81,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( event(skc64,skf15(skc64,X1,X2,X3)) | ssSkC0 | ~ member(skc64,X4,skf24(skc64,skc66,skf31(skc64,skc65))) ) ).
+fof(c_0_82,axiom,! [X1] : ! [X2] : ! [X4] : ! [X5] : ! [X3] : ( at(X1,skf15(X1,X2,X4,X5),X5) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(c_0_83,axiom,! [X3] : ! [X6] : ! [X1] : ! [X2] : ! [X4] : ! [X5] : ( ssSkP1(X3,X6,X1) | ~ event(X1,X2) | ~ agent(X1,X2,skf22(X3,X1,X4)) | ~ present(X1,X2) | ~ sit(X1,X2) | ~ with(X1,X2,X3) | ~ at(X1,X2,X5) | ~ table(X1,X5) ) ).
+fof(c_0_84,axiom,! [X1] : ! [X2] : ! [X3] : ( agent(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X2,X3),skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_85,axiom,! [X1] : ! [X2] : ! [X3] : ( sit(skc64,skf15(skc64,X1,X2,X3)) | ssSkC0 ) ).
+fof(c_0_86,axiom,! [X1] : ! [X2] : ! [X3] : ( present(skc64,skf15(skc64,X1,X2,X3)) | ssSkC0 ) ).
+fof(c_0_87,axiom,! [X1] : ! [X2] : ! [X3] : ( event(skc64,skf15(skc64,X1,X2,X3)) | ssSkC0 ) ).
+fof(c_0_88,axiom,! [X1] : ( at(skc64,skf15(skc64,X1,skf31(skc64,skc65),skc66),skc66) | ssSkC0 | ~ member(skc64,X1,skf24(skc64,skc66,skf31(skc64,skc65))) ) ).
+fof(c_0_89,axiom,! [X1] : ! [X2] : ! [X4] : ! [X6] : ! [X3] : ! [X5] : ( with(X1,skf15(X1,X2,X4,X6),X4) | ~ member(X1,X2,X3) | ~ ssSkP0(X4,X5,X3,X1) ) ).
+fof(c_0_90,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ssSkP1(skf31(skc64,X1),X2,skc64) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 | ~ at(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X3,X4),X5) | ~ with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X3,X4),skf31(skc64,X1)) | ~ table(skc64,X5) ) ).
+fof(c_0_91,axiom,! [X1] : ( at(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),skc66),skc66) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_92,axiom,ssSkC0 | table(skc64,skc66) ).
+fof(c_0_93,axiom,! [X1] : ! [X2] : ( with(skc64,skf15(skc64,X1,skf31(skc64,skc65),X2),skf31(skc64,skc65)) | ssSkC0 | ~ member(skc64,X1,skf24(skc64,skc66,skf31(skc64,skc65))) ) ).
+fof(c_0_94,axiom,! [X1] : ! [X2] : ( ssSkP1(skf31(skc64,X1),X2,skc64) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 | ~ with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),skc66),skf31(skc64,X1)) ) ).
+fof(c_0_95,axiom,! [X1] : ! [X2] : ( with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),X2),skf31(skc64,skc65)) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_96,axiom,! [X1] : ( ssSkP1(skf31(skc64,skc65),X1,skc64) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_97,axiom,! [X1] : ! [X2] : ( member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf34(skc64,skc65),skc65) | member(skc64,skf32(skc64,X1),X1) | ssSkP3(X2,skc64) | ssSkC0 | ~ three(skc64,X1) | ~ group(skc64,X1) ) ).
+fof(c_0_98,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf32(skc64,skf24(skc64,X1,X2)),skf24(skc64,X1,X2)) | member(skc64,skf34(skc64,skc65),skc65) | ssSkP3(X3,skc64) | ssSkC0 ) ).
+fof(c_0_99,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( guy(X1,X2) | ~ member(X1,X2,skf24(X1,X3,X4)) | ~ member(X1,X5,X6) | ~ ssSkP2(X7,X6,X1) ) ).
+fof(c_0_100,axiom,! [X1] : ! [X2] : ( member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf32(skc64,skf24(skc64,X1,X2)),skf24(skc64,X1,X2)) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_101,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( young(X1,X2) | ~ member(X1,X2,skf24(X1,X3,X4)) | ~ member(X1,X5,X6) | ~ ssSkP2(X7,X6,X1) ) ).
+fof(c_0_102,axiom,! [X5] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ssSkP3(X5,X1) | ~ young(X1,skf32(X1,X2)) | ~ guy(X1,skf32(X1,X2)) | ~ group(X1,X3) | ~ three(X1,X3) | ~ ssSkP1(skf31(X1,X4),X3,X1) ) ).
+fof(c_0_103,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( guy(skc64,X1) | ssSkC0 | ~ member(skc64,X1,skf24(skc64,X2,X3)) | ~ ssSkP2(X4,skc65,skc64) ) ).
+fof(c_0_104,axiom,member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ).
+fof(c_0_105,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( young(skc64,X1) | ssSkC0 | ~ member(skc64,X1,skf24(skc64,X2,X3)) | ~ ssSkP2(X4,skc65,skc64) ) ).
+fof(c_0_106,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( member(X1,skf22(skf31(X1,X2),X1,X3),X3) | ssSkP3(X4,X1) | ~ guy(X1,skf32(X1,X5)) | ~ young(X1,skf32(X1,X5)) | ~ three(X1,X3) | ~ group(X1,X3) ) ).
+fof(c_0_107,axiom,! [X1] : ( guy(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 | ~ ssSkP2(X1,skc65,skc64) ) ).
+fof(c_0_108,axiom,! [X1] : ( young(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 | ~ ssSkP2(X1,skc65,skc64) ) ).
+fof(c_0_109,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | ssSkP3(X4,skc64) | ssSkC0 | ~ guy(skc64,skf32(skc64,X5)) | ~ young(skc64,skf32(skc64,X5)) ) ).
+fof(c_0_110,axiom,guy(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ).
+fof(c_0_111,axiom,young(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ).
+fof(c_0_112,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | member(skc64,skf34(skc64,skc65),skc65) | ssSkP3(X4,skc64) | ssSkC0 ) ).
+fof(c_0_113,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_114,axiom,! [X1] : ! [X2] : ! [X3] : ( agent(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X2,X3),skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_115,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ssSkP1(skf31(skc64,X1),X2,skc64) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 | ~ at(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X3,X4),X5) | ~ with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X3,X4),skf31(skc64,X1)) | ~ table(skc64,X5) ) ).
+fof(c_0_116,axiom,! [X1] : ( at(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),skc66),skc66) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_117,axiom,! [X1] : ! [X2] : ( ssSkP1(skf31(skc64,X1),X2,skc64) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 | ~ with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),skc66),skf31(skc64,X1)) ) ).
+fof(c_0_118,axiom,! [X1] : ! [X2] : ( with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),X2),skf31(skc64,skc65)) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_119,axiom,! [X1] : ( ssSkP1(skf31(skc64,skc65),X1,skc64) | member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ) ).
+fof(c_0_120,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc64,skf34(skc64,skc65),skc65) | ssSkP3(X1,skc64) | ssSkC0 | ~ guy(skc64,skf32(skc64,X2)) | ~ young(skc64,skf32(skc64,X2)) | ~ three(skc64,X3) | ~ group(skc64,X3) ) ).
+fof(c_0_121,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( group(X1,skf29(X1,X4)) | ~ member(X1,X2,X3) | ~ ssSkP3(X3,X1) ) ).
+fof(c_0_122,axiom,! [X1] : ! [X2] : ( member(skc64,skf34(skc64,skc65),skc65) | ssSkP3(X1,skc64) | ssSkC0 | ~ guy(skc64,skf32(skc64,X2)) | ~ young(skc64,skf32(skc64,X2)) ) ).
+fof(c_0_123,axiom,! [X1] : ( group(skc64,skf29(skc64,X1)) | ssSkC0 | ~ ssSkP3(skc65,skc64) ) ).
+fof(c_0_124,axiom,! [X1] : ( member(skc64,skf34(skc64,skc65),skc65) | ssSkP3(X1,skc64) | ssSkC0 ) ).
+fof(c_0_125,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | member(skc64,skf32(skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | group(skc64,skf29(skc64,X4)) | ssSkC0 ) ).
+fof(c_0_126,axiom,member(skc64,skf34(skc64,skc65),skc65) | ssSkC0 ).
+fof(c_0_127,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | member(skc64,skf32(skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | ssSkC0 | ~ hamburger(skc64,skf34(skc64,X4)) ) ).
+fof(c_0_128,axiom,hamburger(skc64,skf34(skc64,skc65)) | ssSkC0 ).
+fof(c_0_129,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | member(skc64,skf32(skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | ssSkC0 ) ).
+fof(c_0_130,axiom,! [X1] : ! [X2] : ! [X3] : ( agent(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X2,X3),skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | ssSkC0 ) ).
+fof(c_0_131,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ssSkP1(skf31(skc64,X1),X2,skc64) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | ssSkC0 | ~ at(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X3,X4),X5) | ~ with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X3,X4),skf31(skc64,X1)) | ~ table(skc64,X5) ) ).
+fof(c_0_132,axiom,! [X1] : ( at(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),skc66),skc66) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | ssSkC0 ) ).
+fof(c_0_133,axiom,! [X1] : ! [X2] : ( ssSkP1(skf31(skc64,X1),X2,skc64) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | ssSkC0 | ~ with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),skc66),skf31(skc64,X1)) ) ).
+fof(c_0_134,axiom,! [X1] : ! [X2] : ( with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),X2),skf31(skc64,skc65)) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | ssSkC0 ) ).
+fof(c_0_135,axiom,! [X1] : ( ssSkP1(skf31(skc64,skc65),X1,skc64) | member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | ssSkC0 ) ).
+fof(c_0_136,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkC0 | ~ hamburger(skc64,skf34(skc64,X1)) | ~ ssSkP3(skf24(skc64,X2,X3),skc64) ) ).
+fof(c_0_137,axiom,! [X1] : ! [X2] : ( member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf32(skc64,X1),X1) | ssSkP3(X2,skc64) | ssSkC0 | ~ three(skc64,X1) | ~ group(skc64,X1) ) ).
+fof(c_0_138,axiom,! [X1] : ! [X2] : ( ssSkC0 | ~ ssSkP3(skf24(skc64,X1,X2),skc64) ) ).
+fof(c_0_139,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf32(skc64,skf24(skc64,X1,X2)),skf24(skc64,X1,X2)) | ssSkP3(X3,skc64) | ssSkC0 ) ).
+fof(c_0_140,axiom,! [X1] : ! [X2] : ( member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | member(skc64,skf32(skc64,skf24(skc64,X1,X2)),skf24(skc64,X1,X2)) | ssSkC0 ) ).
+fof(c_0_141,axiom,member(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf24(skc64,skc66,skf31(skc64,skc65))) | ssSkC0 ).
+fof(c_0_142,axiom,! [X1] : ( guy(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | ssSkC0 | ~ ssSkP2(X1,skc65,skc64) ) ).
+fof(c_0_143,axiom,! [X1] : ( young(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | ssSkC0 | ~ ssSkP2(X1,skc65,skc64) ) ).
+fof(c_0_144,axiom,guy(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | ssSkC0 ).
+fof(c_0_145,axiom,young(skc64,skf32(skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | ssSkC0 ).
+fof(c_0_146,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | ssSkP3(X4,skc64) | ssSkC0 ) ).
+fof(c_0_147,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,X2,X3)),skf24(skc64,X2,X3)) | ssSkC0 ) ).
+fof(c_0_148,axiom,! [X1] : ! [X2] : ! [X3] : ( agent(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X2,X3),skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65)))) | ssSkC0 ) ).
+fof(c_0_149,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ssSkP1(skf31(skc64,X1),X2,skc64) | ssSkC0 | ~ at(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X3,X4),X5) | ~ with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),X3,X4),skf31(skc64,X1)) | ~ table(skc64,X5) ) ).
+fof(c_0_150,axiom,! [X1] : ( at(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),skc66),skc66) | ssSkC0 ) ).
+fof(c_0_151,axiom,! [X1] : ! [X2] : ( ssSkP1(skf31(skc64,X1),X2,skc64) | ssSkC0 | ~ with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),skc66),skf31(skc64,X1)) ) ).
+fof(c_0_152,axiom,! [X1] : ! [X2] : ( with(skc64,skf15(skc64,skf22(skf31(skc64,X1),skc64,skf24(skc64,skc66,skf31(skc64,skc65))),skf31(skc64,skc65),X2),skf31(skc64,skc65)) | ssSkC0 ) ).
+fof(c_0_153,axiom,! [X1] : ( ssSkP1(skf31(skc64,skc65),X1,skc64) | ssSkC0 ) ).
+fof(c_0_154,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP3(X1,skc64) | ssSkC0 | ~ guy(skc64,skf32(skc64,X2)) | ~ young(skc64,skf32(skc64,X2)) | ~ three(skc64,X3) | ~ group(skc64,X3) ) ).
+fof(c_0_155,axiom,! [X1] : ! [X2] : ( ssSkP3(X1,skc64) | ssSkC0 | ~ guy(skc64,skf32(skc64,X2)) | ~ young(skc64,skf32(skc64,X2)) ) ).
+fof(c_0_156,axiom,! [X1] : ( ssSkP3(X1,skc64) | ssSkC0 ) ).
+fof(c_0_157,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ group(X1,X2) | ~ hamburger(X1,skf14(X1,X3)) | ~ ssSkP2(X4,X2,X1) | ~ table(X1,X4) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(c_0_158,axiom,! [X1] : ! [X2] : ! [X3] : ( ssSkP2(X1,X2,X3) | member(X3,skf26(X3,X1,X2),X2) ) ).
+fof(c_0_159,axiom,! [X1] : ! [X2] : ! [X3] : ( member(X1,skf14(X1,X2),X2) | ~ group(X1,X2) | ~ ssSkP2(X3,X2,X1) | ~ table(X1,X3) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(c_0_160,axiom,! [X4] : ! [X6] : ! [X1] : ! [X2] : ! [X3] : ! [X5] : ( ssSkP2(X4,X6,X1) | ~ young(X1,skf27(X1,X2)) | ~ guy(X1,skf27(X1,X2)) | ~ group(X1,X3) | ~ three(X1,X3) | ~ ssSkP0(skf26(X1,X4,X5),X4,X3,X1) ) ).
+fof(c_0_161,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ssSkP0(X1,X2,X3,X4) | member(X4,skf17(X3,X4,X5,X6),X3) ) ).
+fof(c_0_162,axiom,group(skc5,skc6) | ~ ssSkC0 ).
+fof(c_0_163,axiom,ssSkC0 ).
+fof(c_0_164,axiom,! [X3] : ! [X5] : ! [X1] : ! [X2] : ! [X4] : ( ssSkP2(X3,X5,X1) | member(X1,skf27(X1,X2),X2) | ~ group(X1,X2) | ~ three(X1,X2) | ~ ssSkP0(skf26(X1,X3,X4),X3,X2,X1) ) ).
+fof(c_0_165,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(X1,skf26(X1,X2,X3),X3) | ~ hamburger(X1,skf14(X1,X4)) | ~ table(X1,X2) | ~ group(X1,X3) | ~ ssSkC0 | ~ actual_world(X1) ) ).
+fof(c_0_166,axiom,! [X1] : ! [X2] : ! [X3] : ( member(X1,skf26(X1,X2,X3),X3) | member(X1,skf14(X1,X3),X3) | ~ table(X1,X2) | ~ group(X1,X3) | ~ ssSkC0 | ~ actual_world(X1) ) ).
+fof(c_0_167,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( member(X1,skf17(X2,X1,X3,X4),X2) | ssSkP2(X5,X6,X1) | ~ guy(X1,skf27(X1,X7)) | ~ young(X1,skf27(X1,X7)) | ~ three(X1,X2) | ~ group(X1,X2) ) ).
+fof(c_0_168,axiom,group(skc5,skc6) ).
+fof(c_0_169,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( member(X1,skf17(X2,X1,X3,X4),X2) | member(X1,skf27(X1,X2),X2) | ssSkP2(X5,X6,X1) | ~ three(X1,X2) | ~ group(X1,X2) ) ).
+fof(c_0_170,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(X1,skf26(X1,X2,X3),X3) | ~ hamburger(X1,skf14(X1,X4)) | ~ table(X1,X2) | ~ group(X1,X3) | ~ actual_world(X1) ) ).
+fof(c_0_171,axiom,actual_world(skc5) ).
+fof(c_0_172,axiom,! [X1] : ! [X2] : ! [X3] : ( member(X1,skf26(X1,X2,X3),X3) | member(X1,skf14(X1,X3),X3) | ~ table(X1,X2) | ~ group(X1,X3) | ~ actual_world(X1) ) ).
+fof(c_0_173,axiom,! [X1] : ( hamburger(skc5,X1) | ~ member(skc5,X1,skc6) | ~ ssSkC0 ) ).
+fof(c_0_174,axiom,ssSkP3(skc6,skc5) | ~ ssSkC0 ).
+fof(c_0_175,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( member(skc5,skf17(skc6,skc5,X1,X2),skc6) | ssSkP2(X3,X4,skc5) | ~ guy(skc5,skf27(skc5,X5)) | ~ young(skc5,skf27(skc5,X5)) | ~ three(skc5,skc6) ) ).
+fof(c_0_176,axiom,! [X1] : ! [X2] : ! [X3] : ( member(skc5,skf22(skf31(skc5,X1),skc5,skc6),skc6) | ssSkP3(X2,skc5) | ~ guy(skc5,skf32(skc5,X3)) | ~ young(skc5,skf32(skc5,X3)) | ~ three(skc5,skc6) ) ).
+fof(c_0_177,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(skc5,skf17(skc6,skc5,X1,X2),skc6) | member(skc5,skf27(skc5,skc6),skc6) | ssSkP2(X3,X4,skc5) | ~ three(skc5,skc6) ) ).
+fof(c_0_178,axiom,! [X1] : ! [X2] : ( member(skc5,skf22(skf31(skc5,X1),skc5,skc6),skc6) | member(skc5,skf32(skc5,skc6),skc6) | ssSkP3(X2,skc5) | ~ three(skc5,skc6) ) ).
+fof(c_0_179,axiom,! [X1] : ! [X2] : ! [X3] : ( member(X1,skf14(X1,X2),X2) | ~ ssSkP2(X3,X2,X1) | ~ table(X1,X3) | ~ group(X1,X2) | ~ actual_world(X1) ) ).
+fof(c_0_180,axiom,! [X1] : ! [X2] : ( member(skc5,skf26(skc5,X1,skc6),skc6) | ~ hamburger(skc5,skf14(skc5,X2)) | ~ table(skc5,X1) ) ).
+fof(c_0_181,axiom,! [X1] : ( member(skc5,skf26(skc5,X1,skc6),skc6) | member(skc5,skf14(skc5,skc6),skc6) | ~ table(skc5,X1) ) ).
+fof(c_0_182,axiom,! [X1] : ( hamburger(skc5,X1) | ~ member(skc5,X1,skc6) ) ).
+fof(c_0_183,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ hamburger(X1,skf14(X1,X2)) | ~ ssSkP2(X3,X4,X1) | ~ table(X1,X3) | ~ group(X1,X4) | ~ actual_world(X1) ) ).
+fof(c_0_184,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( at(X1,skf15(X1,X2,X3,X4),X4) | member(X1,skf17(X5,X1,X6,X7),X5) | ~ member(X1,X2,X5) ) ).
+fof(c_0_185,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( agent(X1,skf15(X1,X2,X3,X4),X2) | member(X1,skf17(X5,X1,X6,X7),X5) | ~ member(X1,X2,X5) ) ).
+fof(c_0_186,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( with(X1,skf15(X1,X2,X3,X4),X3) | member(X1,skf17(X5,X1,X6,X7),X5) | ~ member(X1,X2,X5) ) ).
+fof(c_0_187,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( event(X1,skf15(X1,X2,X3,X4)) | member(X1,skf17(X5,X1,X6,X7),X5) | ~ member(X1,X8,X5) ) ).
+fof(c_0_188,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( present(X1,skf15(X1,X2,X3,X4)) | member(X1,skf17(X5,X1,X6,X7),X5) | ~ member(X1,X8,X5) ) ).
+fof(c_0_189,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( sit(X1,skf15(X1,X2,X3,X4)) | member(X1,skf17(X5,X1,X6,X7),X5) | ~ member(X1,X8,X5) ) ).
+fof(c_0_190,axiom,! [X3] : ! [X4] : ! [X5] : ! [X1] : ! [X2] : ( ssSkP0(X3,X4,X5,X1) | ~ with(X1,X2,X3) | ~ at(X1,X2,X4) | ~ sit(X1,X2) | ~ present(X1,X2) | ~ agent(X1,X2,skf17(X5,X1,X3,X4)) | ~ event(X1,X2) ) ).
+fof(c_0_191,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( at(X1,skf18(X1,X5,X6),skf19(X1,X6,X5)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_192,axiom,! [X1] : ! [X2] : ! [X5] : ! [X3] : ! [X4] : ( agent(X1,skf18(X1,X2,X5),X2) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_193,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( with(X1,skf18(X1,X2,X4),X4) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_194,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( event(X1,skf18(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_195,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( present(X1,skf18(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_196,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( sit(X1,skf18(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_197,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( guy(X1,X2) | ~ member(X1,X2,skf29(X1,X3)) | ~ member(X1,X4,X5) | ~ ssSkP3(X5,X1) ) ).
+fof(c_0_198,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( young(X1,X2) | ~ member(X1,X2,skf29(X1,X3)) | ~ member(X1,X4,X5) | ~ ssSkP3(X5,X1) ) ).
+fof(c_0_199,axiom,! [X1] : ! [X5] : ! [X6] : ! [X2] : ! [X3] : ! [X4] : ( table(X1,skf19(X1,X5,X6)) | ~ member(X1,X2,X3) | ~ ssSkP1(X4,X3,X1) ) ).
+fof(c_0_200,axiom,! [X2] : ! [X1] : ! [X3] : ( ssSkP1(X2,skf29(X1,X2),X1) | ~ member(X1,X2,X3) | ~ ssSkP3(X3,X1) ) ).
+fof(c_0_201,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( three(X1,skf29(X1,X4)) | ~ member(X1,X2,X3) | ~ ssSkP3(X3,X1) ) ).
+fof(c_0_202,axiom,ssSkP3(skc6,skc5) ).

@@ -1,0 +1,9 @@
+fof(u9,axiom,! [X0] : ! [X1] : ! [X2] : ( r(X0,u0r1(X1,X0)) | ~ r(X0,u0r2(X2)) | ~ r(X0,u0r3(X2)) | e(X0) | ~ r(X0,X1) | ~ e(X2) ) ).
+fof(clause_5,axiom,! [X1] : ( r(X1,u0r2(X1)) | ~ e(X1) ) ).
+fof(clause_6,axiom,! [X1] : ( r(X1,u0r3(X1)) | ~ e(X1) ) ).
+fof(clause_3,axiom,! [X1] : ( r(X1,u0r4(X1)) | ~ e(X1) ) ).
+fof(clause_8,axiom,! [X2] : ! [X3] : ! [X1] : ! [X4] : ( equalish(X2,X3) | ~ r(X1,X4) | ~ r(X1,X3) | ~ r(X1,X2) | e(X1) | r(X1,u0r1(X4,X1)) ) ).
+fof(clause_2,axiom,! [X0] : ! [X1] : ( equalish(X0,u0r4(X1)) | ~ r(X1,X0) | ~ e(X1) ) ).
+fof(clause_4,axiom,! [X1] : ( ~ equalish(u0r3(X1),u0r2(X1)) | ~ e(X1) ) ).
+fof(clause_7,axiom,! [X1] : ! [X4] : ! [X3] : ! [X2] : ( e(X1) | ~ r(X1,X4) | ~ r(X1,X3) | ~ r(X1,X2) | equalish(X2,X3) | ~ equalish(u0r1(X4,X1),X4) ) ).
+fof(clause_1,axiom,e(exist) ).

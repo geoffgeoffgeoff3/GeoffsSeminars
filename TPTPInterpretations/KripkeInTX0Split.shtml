@@ -1,0 +1,345 @@
+<HTML>
+<HEAD>
+<TITLE> Kripke Interpretations in One TX0 File </TITLE>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'MLK.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Leo-III.png';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+Kripke Interpretations in One TX0 File
+</H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME="image" SRC="MLK.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>One Interpretation, One File</H3>
+<UL>
+<LI> <A HREF="TarskianInTF0Split.shtml">Motivation</A>
+<LI> No apart hate in any world ... I Had a Dream
+</UL>
+
+<H3> Subroles for Parts</H3>
+<UL>
+<LI> <TT>type</TT> 
+     - <A HREF="" onClick="hideshow('p0');return false;">declared</A> before use
+     <SPAN ID="p0" style="display:none">
+     <PRE>
+tff(person_decl,type,    person: $tType).
+tff(product_decl,type,   product: $tType).
+tff(alex_decl,type,      alex: person).
+tff(chris_decl,type,     chris: person).
+tff(leo_decl,type,       leo: product).
+tff(work_hard_decl,type, work_hard: (person * product) > $o).
+tff(gets_rich_decl,type, gets_rich: person > $o). 
+
+tff(d_person_type,type,  d_person: $tType).
+tff(d_product_type,type, d_product: $tType).
+tff(d2person_decl,type,  d2person: d_person > person ).
+tff(d2product_decl,type, d2product: d_product > product ). 
+tff(d_alex_decl,type,    d_alex: d_person).
+tff(d_chris_decl,type,   d_chris: d_person).
+tff(d_leo_decl,type,     d_leo: d_product).
+
+tff(w1_decl,type,w1:     $world).
+tff(w2_decl,type,w2:     $world). </PRE>
+<LI> <TT>interpretation</TT> 
+     - <A HREF="" onClick="hideshow('p1');return false;">the whole</A> interpretation
+     <SPAN ID="p1" style="display:none">
+     <PRE>
+tff(leo_workers,interpretation,
+    ( ( ! [W: $world] : ( W = w1 | W = w2 )
+      & $distinct(w1,w2)
+      & $local_world = w1
+      & $accessible_world(w1,w1)     %----Logic is M
+      & $accessible_world(w2,w2)
+      & $accessible_world(w1,w2) )
+    & $in_world(w1,
+        ( ( ! [P: person] : ? [DP: d_person] : P = d2person(DP)
+          & ! [DP: d_person] : ( DP = d_alex | DP = d_chris )
+          & $distinct(d_alex,d_chris)
+          & ? [DP: d_person] : ( DP = d_alex )
+          & ? [DP: d_person] : ( DP = d_chris )
+          & ! [DP1: d_person,DP2: d_person] : 
+              ( d2person(DP1) = d2person(DP2) => DP1 = DP2 )
+          & ! [P: product] : ? [DP: d_product] : P = d2product(DP)
+          & ! [DP: d_product] : DP = d_leo
+          & ? [DP: d_product] : DP = d_leo
+          & ! [DP1: d_product,DP2: d_product] :
+              ( d2product(DP1) = d2product(DP2) => DP1 = DP2 ) )
+        & ( alex = d2person(d_alex)
+          & chris = d2person(d_chris)
+          & leo = d2product(d_leo) )
+        & ( work_hard(d2person(d_alex),d2product(d_leo))
+          & work_hard(d2person(d_chris),d2product(d_leo))
+          & ~ gets_rich(d2person(d_alex))
+          & gets_rich(d2person(d_chris)) ) ) )
+      & $in_world(w2,
+        ( ( ! [P: person] : ? [DP: d_person] : P = d2person(DP)
+          & ! [DP: d_person] : ( DP = d_alex | DP = d_chris )
+          & $distinct(d_alex,d_chris)
+          & ? [DP: d_person] : ( DP = d_alex )
+          & ? [DP: d_person] : ( DP = d_chris )
+          & ! [DP1: d_person,DP2: d_person] : 
+              ( d2person(DP1) = d2person(DP2) => DP1 = DP2 )
+          & ! [P: product] : ? [DP: d_product] : P = d2product(DP)
+          & ! [DP: d_product] : DP = d_leo
+          & ? [DP: d_product] : DP = d_leo
+          & ! [DP1: d_product,DP2: d_product] :
+              ( d2product(DP1) = d2product(DP2) => DP1 = DP2 ) )
+        & ( alex = d2person(d_alex)
+          & chris = d2person(d_chris)
+          & leo = d2product(d_leo) )
+        & ( work_hard(d2person(d_alex),d2product(d_leo))
+          & work_hard(d2person(d_chris),d2product(d_leo))
+          & gets_rich(d2person(d_alex))
+          & ~ gets_rich(d2person(d_chris)) ) ) ) ) ). </PRE>
+     </SPAN>
+<LI> <TT>interpretation-world</TT> 
+     - <A HREF="" onClick="hideshow('p2');return false;">all the worlds</A> of the interpretation
+     <SPAN ID="p2" style="display:none">
+     <PRE>
+tff(leo_workers_worlds,interpretation-world,
+    ( ! [W: $world] : ( W = w1 | W = w2 )
+    & $distinct(w1,w2)
+    & $local_world = w1
+    & $accessible_world(w1,w1)     %----Logic is M
+    & $accessible_world(w2,w2)
+    & $accessible_world(w1,w2) ) ). </PRE>
+    </SPAN>
+<LI> <TT>interpretation-in_world</TT> 
+     - <A HREF="" onClick="hideshow('p2.1');return false;">all the worlds' interpretations</A>
+     <SPAN ID="p2.1" style="display:none">
+     <PRE>
+tff(leo_workers_in_world,interpretation-in_world,
+    ( $in_world(w1,
+        ( ( ! [P: person] : ? [DP: d_person] : P = d2person(DP)
+          & ! [DP: d_person] : ( DP = d_alex | DP = d_chris )
+          & $distinct(d_alex,d_chris)
+          & ? [DP: d_person] : ( DP = d_alex )
+          & ? [DP: d_person] : ( DP = d_chris )
+          & ! [DP1: d_person,DP2: d_person] : 
+              ( d2person(DP1) = d2person(DP2) => DP1 = DP2 )
+          & ! [P: product] : ? [DP: d_product] : P = d2product(DP)
+          & ! [DP: d_product] : DP = d_leo
+          & ? [DP: d_product] : DP = d_leo
+          & ! [DP1: d_product,DP2: d_product] :
+              ( d2product(DP1) = d2product(DP2) => DP1 = DP2 ) )
+        & ( alex = d2person(d_alex)
+          & chris = d2person(d_chris)
+          & leo = d2product(d_leo) )
+        & ( work_hard(d2person(d_alex),d2product(d_leo))
+          & work_hard(d2person(d_chris),d2product(d_leo))
+          & ~ gets_rich(d2person(d_alex))
+          & gets_rich(d2person(d_chris)) ) ) )
+    & $in_world(w2,
+        ( ( ! [P: person] : ? [DP: d_person] : P = d2person(DP)
+          & ! [DP: d_person] : ( DP = d_alex | DP = d_chris )
+          & $distinct(d_alex,d_chris)
+          & ? [DP: d_person] : ( DP = d_alex )
+          & ? [DP: d_person] : ( DP = d_chris )
+          & ! [DP1: d_person,DP2: d_person] : 
+              ( d2person(DP1) = d2person(DP2) => DP1 = DP2 )
+          & ! [P: product] : ? [DP: d_product] : P = d2product(DP)
+          & ! [DP: d_product] : DP = d_leo
+          & ? [DP: d_product] : DP = d_leo
+          & ! [DP1: d_product,DP2: d_product] :
+              ( d2product(DP1) = d2product(DP2) => DP1 = DP2 ) )
+        & ( alex = d2person(d_alex)
+          & chris = d2person(d_chris)
+          & leo = d2product(d_leo) )
+        & ( work_hard(d2person(d_alex),d2product(d_leo))
+          & work_hard(d2person(d_chris),d2product(d_leo))
+          & gets_rich(d2person(d_alex))
+          & ~ gets_rich(d2person(d_chris)) ) ) ) ) ). </PRE>
+    </SPAN>
+<LI> <TT>interpretation-in_world(</TT><EM>world</EM><TT>,</TT>interpretation<TT>)</TT>
+     - <A HREF="" onClick="hideshow('p3');return false;">the interpretation</A> for <EM>world</EM>
+     <SPAN ID="p3" style="display:none">
+     <PRE>
+tff(leo_workers_w1,interpretation-in_world(w1,interpretation),
+    $in_world(w1,
+      ( ( ! [P: person] : ? [DP: d_person] : P = d2person(DP)
+        & ! [DP: d_person] : ( DP = d_alex | DP = d_chris )
+        & $distinct(d_alex,d_chris)
+        & ? [DP: d_person] : ( DP = d_alex )
+        & ? [DP: d_person] : ( DP = d_chris )
+        & ! [DP1: d_person,DP2: d_person] : 
+            ( d2person(DP1) = d2person(DP2) => DP1 = DP2 )
+        & ! [P: product] : ? [DP: d_product] : P = d2product(DP)
+        & ! [DP: d_product] : DP = d_leo
+        & ? [DP: d_product] : DP = d_leo
+        & ! [DP1: d_product,DP2: d_product] :
+            ( d2product(DP1) = d2product(DP2) => DP1 = DP2 ) )
+      & ( alex = d2person(d_alex)
+        & chris = d2person(d_chris)
+        & leo = d2product(d_leo) )
+      & ( work_hard(d2person(d_alex),d2product(d_leo))
+        & work_hard(d2person(d_chris),d2product(d_leo))
+        & ~ gets_rich(d2person(d_alex))
+        & gets_rich(d2person(d_chris)) ) ) ) ). </PRE>
+     </SPAN>
+<LI> <TT>interpretation-in_world(</TT><EM>world</EM><TT>,</TT>interpretation-domain<TT>)</TT>
+     - <A HREF="" onClick="hideshow('p4');return false;">all the domains</A> for <EM>world</EM>
+     <SPAN ID="p4" style="display:none">
+     <PRE>
+tff(leo_workers_w1_domain,interpretation-in_world(w1,interpretation-domain),
+    $in_world(w1,
+      ( ( ! [P: person] : ? [DP: d_person] : P = d2person(DP)
+        & ! [DP: d_person] : ( DP = d_alex | DP = d_chris )
+        & $distinct(d_alex,d_chris)
+        & ? [DP: d_person] : ( DP = d_alex )
+        & ? [DP: d_person] : ( DP = d_chris )
+        & ! [DP1: d_person,DP2: d_person] : 
+            ( d2person(DP1) = d2person(DP2) => DP1 = DP2 ) )
+      & ( ! [P: product] : ? [DP: d_product] : P = d2product(DP)
+        & ! [DP: d_product] : DP = d_leo
+        & ? [DP: d_product] : DP = d_leo
+        & ! [DP1: d_product,DP2: d_product] :
+            ( d2product(DP1) = d2product(DP2) => DP1 = DP2 ) ) ) ) ). </PRE>
+     </SPAN>
+<LI> <TT>interpretation-in_world(</TT><EM>world</EM><TT>,</TT>interpretation-domain(</TT><EM>term_type</EM><TT>,</TT><EM>domain_type</EM><TT>)</TT>
+     <BR>- <A HREF="" onClick="hideshow('p5');return false;">the domain</A> for 
+     <EM>term_type</EM>, of <EM>domain_type</EM>, for <EM>world</EM>
+     <SPAN ID="p5" style="display:none">
+     <PRE>
+tff(leo_workers_w1_person,interpretation-in_world(w1,interpretation-domain(person,d_person)),
+    $in_world(w1,
+      ( ! [P: person] : ? [DP: d_person] : P = d2person(DP)
+      & ! [DP: d_person] : ( DP = d_alex | DP = d_chris )
+      & $distinct(d_alex,d_chris)
+      & ? [DP: d_person] : ( DP = d_alex )
+      & ? [DP: d_person] : ( DP = d_chris )
+      & ! [DP1: d_person,DP2: d_person] : 
+          ( d2person(DP1) = d2person(DP2) => DP1 = DP2 ) ) ) ). </PRE>
+     </SPAN>
+<LI> <TT>interpretation-in_world(</TT><EM>world</EM><TT>,</TT>interpretation-mapping<TT>)</TT>
+     - <A HREF="" onClick="hideshow('p6');return false;">all the mappings</A> for <EM>world</EM>
+     <SPAN ID="p6" style="display:none">
+     <PRE>
+tff(leo_workers_w1_mappings,interpretation-in_world(w1,interpretation-mapping),
+    $in_world(w1,
+      ( ( alex = d2person(d_alex)
+        & chris = d2person(d_chris)
+        & leo = d2product(d_leo) )
+      & ( work_hard(d2person(d_alex),d2product(d_leo))
+        & work_hard(d2person(d_chris),d2product(d_leo))
+        & ~ gets_rich(d2person(d_alex))
+        & gets_rich(d2person(d_chris)) ) ) ) ). </PRE>
+     </SPAN>
+<LI> <TT>interpretation-in_world(</TT><EM>world</EM><TT>,</TT>interpretation-mapping(</TT><EM>symbol</EM><TT>,</TT><EM>domain_type</EM><TT>)</TT>
+     <BR>- <A HREF="" onClick="hideshow('p7');return false;">the mapping</A> for 
+     <EM>symbol</EM>, of <EM>domain_type</EM>, for <EM>world</EM>
+     <SPAN ID="p7" style="display:none">
+     <PRE>
+tff(leo_workers_w1_work_hard,interpretation-in_world(w1,interpretation-mapping(work_hard,$o)),
+    $in_world(w1,
+      ( work_hard(d2person(d_alex),d2product(d_leo))
+      & work_hard(d2person(d_chris),d2product(d_leo)) ) ) ). </PRE>
+     </SPAN>
+</UL>
+
+<H3>Example - 
+<A HREF="" onClick="hideshow('exampleFiniteFiniteGlobal');putImage(1);return false;">
+Alex and Chris Work Hard - Finite-Finite Countermodel - One Formula</A> </H3>
+<SPAN ID="exampleFiniteFiniteGlobal" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Alex and Chris Work Hard
+     <TH WIDTH=50%> Finite-Finite Countermodel
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global.p"-->
+</PRE>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>Example - 
+<A HREF="" onClick="hideshow('exampleFiniteFiniteGlobalMedium');putImage(1);return false;">
+Alex and Chris Work Hard - Finite-Finite Countermodel - Medium Grained</A> </H3>
+<SPAN ID="exampleFiniteFiniteGlobalMedium" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Alex and Chris Work Hard
+     <TH WIDTH=50%> Finite-Finite Countermodel - Medium Grained
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global.p"-->
+</PRE>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global_Medium.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>Example - 
+<A HREF="" onClick="hideshow('exampleFiniteFiniteGlobalFine');putImage(1);return false;">
+Alex and Chris Work Hard - Finite-Finite Countermodel - Fine Grained</A> </H3>
+<SPAN ID="exampleFiniteFiniteGlobalFine" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Alex and Chris Work Hard
+     <TH WIDTH=50%> Finite-Finite Countermodel - Fine Grained
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global.p"-->
+</PRE>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global_Fine.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>Example - 
+<A HREF="" onClick="hideshow('exampleFiniteFiniteGlobalCompact');putImage(1);return false;">
+Alex and Chris Work Hard - Finite-Finite Countermodel - Compact</A> </H3>
+<SPAN ID="exampleFiniteFiniteGlobalCompact" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=50%> Alex and Chris Work Hard
+     <TH WIDTH=50%> Finite-Finite Countermodel - Compact
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global.p"-->
+</PRE>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global_Compact.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

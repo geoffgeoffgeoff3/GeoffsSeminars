@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE> ATP and the TPTP World </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var nextIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'WhatIsATP.png';
+  images[1]     = new Image();
+  images[1].src = 'Machine.png';
+  images[2]     = new Image();
+  images[2].src = 'SystemOnTPTP.png';
+  images[3]     = new Image();
+  images[3].src = 'ATPContainer.png';
+  images[4]     = new Image();
+  images[4].src = 'TPTPWorld.png';
+  images[5]     = new Image();
+  images[5].src = 'SteppingStones.png';
+
+  function nextImage (whichImage) {
+      nextIndex = (nextIndex + 1) % images.length;
+      document.images[whichImage].src = images[nextIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+ATP and the TPTP World
+</H1>
+
+<A HREF="" onClick="nextImage('main_image');return false">
+<IMG NAME="main_image" SRC="WhatIsATP.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> Automated Theorem Proving (ATP) </H3>
+<UL>
+<LI> "the derivation of conclusions that follow inevitably from facts"<BR>
+     "establishing the consistency of facts"
+<LI> Applications: ... SWV, HWV, PLA, NLP, PRO, AGT, SCT, REL, GEG, ...
+<LI> Complex software, complex installation &rarr; SystemOnTPTP
+<LI> Containerisation &rarr; Developers
+</UL>
+
+<H3> The TPTP World </H3>
+<UL>
+<LI> Well established ATP infrastructure
+<LI> TPTP, TSTP, SZS, SystemOnTPTP, CASC, ...
+<LI> Diverse user community in academia and industry
+<LI> <A HREF="https://www.tptp.org"><FONT size="+2"><STRONG><TT>tptp.org</TT></STRONG></FONT></A>
+</UL>
+
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

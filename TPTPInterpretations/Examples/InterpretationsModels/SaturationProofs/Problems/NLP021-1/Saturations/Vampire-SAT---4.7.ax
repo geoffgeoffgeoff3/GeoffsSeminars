@@ -1,0 +1,91 @@
+fof(clause43,axiom,! [X0] : ! [X2] : ! [X1] : ( ~ partof(X0,X2) | ~ partof(X0,X1) | X1 = X2 ) ).
+fof(clause42,axiom,! [X1] : ! [X0] : ! [X2] : ( ~ have(X1,X0,X2) | owner(X0) | ~ human(X0) ) ).
+fof(clause44,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | of(X1,X2) | ~ event(X0) ) ).
+fof(clause45,axiom,! [X1] : ! [X0] : ! [X2] : ( ~ have(X1,X0,X2) | of(X0,X2) | ~ human(X0) ) ).
+fof(clause47,axiom,! [X2] : ! [X1] : ! [X0] : ( ~ have(X2,X1,X0) | ~ nonhuman(X0) | partof(X0,X1) | ~ nonhuman(X1) ) ).
+fof(clause41,axiom,! [X0] : ! [X1] : ( ~ of(X0,X1) | have(skf1(X0,X1),X1,X0) ) ).
+fof(clause40,axiom,! [X0] : ! [X1] : ( ~ owner(X0) | human(X0) | ~ of(X0,X1) ) ).
+fof(clause46,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ owner(X0) | ~ of(X0,X1) | have(X2,X0,X1) ) ).
+fof(clause60,axiom,fellow(skc7) ).
+fof(clause59,axiom,fellow(skc8) ).
+fof(clause28,axiom,! [X0] : ( ~ fellow(X0) | man(X0) ) ).
+fof(clause26,axiom,! [X0] : ( organism(X0) | ~ human(X0) ) ).
+fof(clause25,axiom,! [X0] : ( ~ organism(X0) | entity(X0) ) ).
+fof(clause39,axiom,! [X0] : ( ~ organism(X0) | ~ object(X0) ) ).
+fof(clause56,axiom,front(skc9) ).
+fof(clause24,axiom,! [X0] : ( ~ front(X0) | nonhuman(X0) ) ).
+fof(clause54,axiom,seat(skc9) ).
+fof(clause23,axiom,! [X0] : ( ~ seat(X0) | furniture(X0) ) ).
+fof(clause55,axiom,furniture(skc9) ).
+fof(clause22,axiom,! [X0] : ( ~ furniture(X0) | instrumentality(X0) ) ).
+fof(clause38,axiom,! [X0] : ( ~ furniture(X0) | ~ transport(X0) ) ).
+fof(clause53,axiom,street(skc11) ).
+fof(clause21,axiom,! [X0] : ( ~ street(X0) | way(X0) ) ).
+fof(clause52,axiom,way(skc11) ).
+fof(clause20,axiom,! [X0] : ( ~ way(X0) | artifact(X0) ) ).
+fof(clause37,axiom,! [X0] : ( ~ way(X0) | ~ instrumentality(X0) ) ).
+fof(clause63,axiom,chevy(skc10) ).
+fof(clause19,axiom,! [X0] : ( ~ chevy(X0) | car(X0) ) ).
+fof(clause64,axiom,car(skc10) ).
+fof(clause18,axiom,! [X0] : ( ~ car(X0) | vehicle(X0) ) ).
+fof(u83,axiom,vehicle(skc10) ).
+fof(clause17,axiom,! [X0] : ( ~ vehicle(X0) | transport(X0) ) ).
+fof(u84,axiom,transport(skc10) ).
+fof(u109,axiom,~ transport(skc9) ).
+fof(clause16,axiom,! [X0] : ( ~ transport(X0) | instrumentality(X0) ) ).
+fof(u94,axiom,instrumentality(skc9) ).
+fof(u85,axiom,instrumentality(skc10) ).
+fof(u108,axiom,~ instrumentality(skc11) ).
+fof(clause15,axiom,! [X0] : ( ~ instrumentality(X0) | artifact(X0) ) ).
+fof(u95,axiom,artifact(skc9) ).
+fof(u90,axiom,artifact(skc11) ).
+fof(u86,axiom,artifact(skc10) ).
+fof(u107,axiom,~ artifact(skc13) ).
+fof(clause14,axiom,! [X0] : ( ~ artifact(X0) | object(X0) ) ).
+fof(clause13,axiom,! [X0] : ( eventuality(X0) | ~ event(X0) ) ).
+fof(clause34,axiom,! [X0] : ( ~ eventuality(X0) | ~ entity(X0) ) ).
+fof(clause49,axiom,hollywood(skc13) ).
+fof(clause12,axiom,! [X0] : ( ~ hollywood(X0) | city(X0) ) ).
+fof(clause48,axiom,city(skc13) ).
+fof(clause11,axiom,! [X0] : ( ~ city(X0) | location(X0) ) ).
+fof(u79,axiom,location(skc13) ).
+fof(clause10,axiom,! [X0] : ( ~ location(X0) | object(X0) ) ).
+fof(clause36,axiom,! [X0] : ( ~ location(X0) | ~ artifact(X0) ) ).
+fof(u88,axiom,object(skc10) ).
+fof(u96,axiom,object(skc9) ).
+fof(u91,axiom,object(skc11) ).
+fof(u80,axiom,object(skc13) ).
+fof(u117,axiom,~ object(skc7) ).
+fof(u116,axiom,~ object(skc8) ).
+fof(clause9,axiom,! [X0] : ( ~ object(X0) | entity(X0) ) ).
+fof(clause61,axiom,man(skc7) ).
+fof(clause58,axiom,man(skc8) ).
+fof(clause8,axiom,! [X0] : ( ~ man(X0) | male(X0) ) ).
+fof(clause27,axiom,! [X0] : ( ~ man(X0) | human(X0) ) ).
+fof(u76,axiom,male(skc7) ).
+fof(u75,axiom,male(skc8) ).
+fof(clause7,axiom,! [X0] : ( ~ male(X0) | human(X0) ) ).
+fof(u78,axiom,human(skc7) ).
+fof(u77,axiom,human(skc8) ).
+fof(u100,axiom,! [X0] : ( ~ human(X0) | entity(X0) ) ).
+fof(u110,axiom,! [X0] : ( ~ human(X0) | ~ object(X0) ) ).
+fof(u105,axiom,~ human(skc9) ).
+fof(clause3,axiom,! [X0] : ( proposition(X0) | ~ drs(X0) ) ).
+fof(clause4,axiom,! [X0] : ( ~ proposition(X0) | drs(X0) ) ).
+fof(u89,axiom,entity(skc10) ).
+fof(u112,axiom,entity(skc7) ).
+fof(u111,axiom,entity(skc8) ).
+fof(u98,axiom,entity(skc9) ).
+fof(u92,axiom,entity(skc11) ).
+fof(u82,axiom,entity(skc13) ).
+fof(clause2,axiom,! [X0] : ( entity(X0) | ~ nonhuman(X0) ) ).
+fof(u114,axiom,! [X0] : ! [X1] : ~ entity(skf1(X0,X1)) ).
+fof(u113,axiom,~ entity(skc12) ).
+fof(u99,axiom,nonhuman(skc9) ).
+fof(u118,axiom,! [X0] : ! [X1] : ~ nonhuman(skf1(X0,X1)) ).
+fof(u115,axiom,~ nonhuman(skc12) ).
+fof(clause29,axiom,! [X0] : ( ~ nonhuman(X0) | ~ human(X0) ) ).
+fof(clause1,axiom,! [X0] : ! [X1] : event(skf1(X0,X1)) ).
+fof(clause50,axiom,event(skc12) ).
+fof(u106,axiom,! [X0] : ( ~ event(X0) | ~ entity(X0) ) ).
+fof(clause73,axiom,skc8 != skc7 ).

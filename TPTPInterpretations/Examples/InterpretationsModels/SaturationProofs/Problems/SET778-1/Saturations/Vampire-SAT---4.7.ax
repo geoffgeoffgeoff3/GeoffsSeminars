@@ -1,0 +1,12 @@
+fof(union_axiom2,axiom,! [X3] : ! [X4] : ! [X5] : ( union(X3,X4,X5) | ~ member(g(X3,X4,X5),X5) | ~ member(g(X3,X4,X5),X3) ) ).
+fof(union_axiom3,axiom,! [X3] : ! [X4] : ! [X5] : ( union(X3,X4,X5) | ~ member(g(X3,X4,X5),X5) | ~ member(g(X3,X4,X5),X4) ) ).
+fof(subsets_are_set_equal_sets,axiom,! [X4] : ! [X3] : ( equal_sets(X4,X3) | ~ subset(X4,X3) | ~ subset(X3,X4) ) ).
+fof(set_equal_sets_are_subsets1,axiom,! [X1] : ! [X2] : ( subset(X1,X2) | ~ equal_sets(X1,X2) ) ).
+fof(set_equal_sets_are_subsets2,axiom,! [X1] : ! [X2] : ( subset(X1,X2) | ~ equal_sets(X2,X1) ) ).
+fof(subsets_axiom2,axiom,! [X1] : ! [X2] : ( subset(X1,X2) | ~ member(member_of_1_not_of_2(X1,X2),X2) ) ).
+fof(union_axiom1,axiom,! [X3] : ! [X4] : ! [X5] : ( member(g(X3,X4,X5),X5) | union(X3,X4,X5) | member(g(X3,X4,X5),X4) | member(g(X3,X4,X5),X3) ) ).
+fof(membership_in_subsets,axiom,! [X0] : ! [X2] : ! [X1] : ( member(X0,X2) | ~ member(X0,X1) | ~ subset(X1,X2) ) ).
+fof(member_of_set1_is_member_of_union,axiom,! [X0] : ! [X5] : ! [X3] : ! [X4] : ( member(X0,X5) | ~ member(X0,X3) | ~ union(X3,X4,X5) ) ).
+fof(member_of_set2_is_member_of_union,axiom,! [X0] : ! [X5] : ! [X4] : ! [X3] : ( member(X0,X5) | ~ member(X0,X4) | ~ union(X3,X4,X5) ) ).
+fof(member_of_union_is_member_of_one_set,axiom,! [X0] : ! [X4] : ! [X5] : ! [X3] : ( member(X0,X4) | ~ member(X0,X5) | member(X0,X3) | ~ union(X3,X4,X5) ) ).
+fof(subsets_axiom1,axiom,! [X1] : ! [X2] : ( member(member_of_1_not_of_2(X1,X2),X1) | subset(X1,X2) ) ).

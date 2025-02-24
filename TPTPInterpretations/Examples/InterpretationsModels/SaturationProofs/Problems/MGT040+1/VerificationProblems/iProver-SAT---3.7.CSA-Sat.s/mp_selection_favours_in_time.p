@@ -1,0 +1,2 @@
+include('Saturations/MGT040+1/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
+fof(mp_selection_favours_in_time,conjecture,! [E] : ! [T] : ( ( environment(E) & greater_or_equal(T,appear(efficient_producers,E)) & greater(critical_point(E),T) & ( in_environment(E,critical_point(E)) => selection_favors(first_movers,efficient_producers,T) ) ) => ( ~ in_environment(E,critical_point(E)) => selection_favors(first_movers,efficient_producers,end_time(E)) ) ) ).

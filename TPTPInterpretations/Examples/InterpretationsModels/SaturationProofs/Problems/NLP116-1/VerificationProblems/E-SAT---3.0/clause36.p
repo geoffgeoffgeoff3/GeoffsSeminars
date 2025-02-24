@@ -1,0 +1,2 @@
+include('Saturations/NLP116-1/Saturations/E-SAT---3.0.ax').
+fof(clause36,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ( ~ event(U,V) | ~ present(U,V) | ~ barrel(U,V) | ~ down(U,V,W) | ~ lonely(U,W) | ~ street(U,W) | ~ in(U,V,X) | ~ agent(U,V,X) | ~ old(U,X) | ~ dirty(U,X) | ~ white(U,X) | ~ chevy(U,X) | ~ city(U,X) | ~ of(U,Y,X) | ~ hollywood_placename(U,Y) | ~ placename(U,Y) | ~ actual_world(U) | ~ ssSkC0 ) ).

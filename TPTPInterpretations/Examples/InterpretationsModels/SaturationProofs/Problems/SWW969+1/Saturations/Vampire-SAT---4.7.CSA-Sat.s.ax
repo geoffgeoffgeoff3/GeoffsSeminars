@@ -1,0 +1,216 @@
+fof(u552,axiom,~ pred_attacker(name_Kbs) ).
+fof(u575,axiom,! [X4] : ! [X1] : ( pred_attacker(tuple_client_A_out_3(constr_cbc_enc_2(name_Kab_65(X4),X1,name_Kbs))) | ~ pred_attacker(X1) ) ).
+fof(u583,axiom,~ pred_attacker(name_Kas) ).
+fof(u593,axiom,! [X9] : ! [X11] : ! [X12] : ( pred_attacker(constr_cbc_enc_3(X9,X11,name_Kab_65(X12),name_Kas)) | ~ pred_attacker(X9) | ~ pred_attacker(X11) ) ).
+fof(u597,axiom,! [X13] : ! [X15] : ( pred_attacker(constr_cbc_enc_2(X13,X15,name_Kas)) | ~ pred_attacker(X13) | ~ pred_attacker(X15) ) ).
+fof(u601,axiom,! [X16] : ( pred_attacker(constr_cbc_enc_1(X16,name_Kas)) | ~ pred_attacker(X16) ) ).
+fof(u753,axiom,! [X1] : pred_attacker(name_Nb_62(X1)) ).
+fof(u775,axiom,! [X1] : ! [X2] : pred_attacker(tuple_client_B_out_2(constr_cbc_enc_1(name_Nb_62(X1),name_Kab_65(X2)))) ).
+fof(u780,axiom,! [X9] : pred_attacker(constr_cbc_enc_1(name_Kab_65(X9),name_Kbs)) ).
+fof(u868,axiom,! [X3] : ! [X4] : pred_attacker(constr_cbc_enc_1(name_Nb_62(X3),name_Kab_65(X4))) ).
+fof(u887,axiom,! [X5] : ! [X6] : ( pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X5,name_Kab_65(X6))),name_Kab_65(X6)))) | ~ pred_attacker(X5) ) ).
+fof(u388,axiom,! [X0] : pred_equal(X0,X0) ).
+fof(u426,axiom,! [X1] : ! [X0] : ( pred_mess(X1,X0) | ~ pred_attacker(X0) | ~ pred_attacker(X1) ) ).
+fof(u433,axiom,! [X1] : ! [X0] : ( ~ pred_mess(X1,X0) | ~ pred_attacker(X1) | pred_attacker(X0) ) ).
+fof(u484,axiom,! [X0] : pred_attacker(name_Na(X0)) ).
+fof(u387,axiom,! [X0] : pred_attacker(name_new0x2Dname(X0)) ).
+fof(u410,axiom,! [X0] : ( pred_attacker(tuple_client_A_in_2(X0)) | ~ pred_attacker(X0) ) ).
+fof(u401,axiom,! [X0] : ( pred_attacker(tuple_client_A_in_4(X0)) | ~ pred_attacker(X0) ) ).
+fof(u449,axiom,! [X0] : ! [X1] : ! [X2] : ( pred_attacker(tuple_client_A_out_1(X0,X1,X2)) | ~ pred_attacker(X1) | ~ pred_attacker(X2) | ~ pred_attacker(X0) ) ).
+fof(u389,axiom,! [X0] : pred_attacker(tuple_client_A_out_1(name_A,name_B,name_Na(X0))) ).
+fof(u560,axiom,! [X0] : ( pred_attacker(tuple_client_A_out_3(constr_tuple_4_get_3_bitstring(constr_cbc_dec_4(X0,name_Kas)))) | ~ pred_attacker(X0) ) ).
+fof(u402,axiom,! [X0] : ( pred_attacker(tuple_client_A_out_3(X0)) | ~ pred_attacker(X0) ) ).
+fof(u894,axiom,! [X0] : ! [X1] : ( pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(X0),name_Kab_65(X1)))) | ~ pred_attacker(constr_cbc_enc_1(X0,name_Kab_65(X1))) ) ).
+fof(u872,axiom,! [X0] : ! [X1] : ( pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(X0),constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas))))) | ~ pred_attacker(X1) | ~ pred_attacker(constr_cbc_enc_1(X0,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas)))) ) ).
+fof(u765,axiom,! [X0] : ! [X1] : ( pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X0,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas)))),constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas))))) | ~ pred_attacker(X1) | ~ pred_attacker(X0) ) ).
+fof(u403,axiom,! [X0] : ( pred_attacker(tuple_client_A_out_5(X0)) | ~ pred_attacker(X0) ) ).
+fof(u404,axiom,! [X0] : ( pred_attacker(tuple_client_B_in_1(X0)) | ~ pred_attacker(X0) ) ).
+fof(u396,axiom,! [X0] : ( pred_attacker(tuple_client_B_in_3(X0)) | ~ pred_attacker(X0) ) ).
+fof(u534,axiom,! [X0] : ! [X1] : ( pred_attacker(tuple_client_B_out_2(constr_cbc_enc_1(name_Nb_62(X0),constr_tuple_2_get_0x30_bitstring(constr_cbc_dec_2(X1,name_Kbs))))) | ~ pred_attacker(X1) ) ).
+fof(u406,axiom,! [X0] : ( pred_attacker(tuple_client_B_out_2(X0)) | ~ pred_attacker(X0) ) ).
+fof(u321,axiom,pred_attacker(tuple_false) ).
+fof(u448,axiom,! [X0] : ! [X1] : ! [X2] : ( pred_attacker(tuple_server_S_in_1(X0,X1,X2)) | ~ pred_attacker(X1) | ~ pred_attacker(X2) | ~ pred_attacker(X0) ) ).
+fof(u525,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( pred_attacker(tuple_server_S_out_2(constr_cbc_enc_4(X0,X1,name_Kab_65(X2),constr_cbc_enc_2(name_Kab_65(X2),X3,name_Kbs),name_Kas))) | ~ pred_attacker(X1) | ~ pred_attacker(X0) | ~ pred_attacker(X3) ) ).
+fof(u400,axiom,! [X0] : ( pred_attacker(tuple_server_S_out_2(X0)) | ~ pred_attacker(X0) ) ).
+fof(u398,axiom,! [X0] : ( pred_attacker(tuple_succ(X0)) | ~ pred_attacker(X0) ) ).
+fof(u322,axiom,pred_attacker(tuple_true) ).
+fof(u405,axiom,! [X0] : ( pred_attacker(constr_tuple_2_get_1(X0)) | ~ pred_attacker(X0) ) ).
+fof(u409,axiom,! [X0] : ( pred_attacker(constr_tuple_4_get_0x30(X0)) | ~ pred_attacker(X0) ) ).
+fof(u408,axiom,! [X0] : ( pred_attacker(constr_tuple_4_get_1(X0)) | ~ pred_attacker(X0) ) ).
+fof(u399,axiom,! [X0] : ( pred_attacker(constr_tuple_2_get_0x30_bitstring(X0)) | ~ pred_attacker(X0) ) ).
+fof(u407,axiom,! [X0] : ( pred_attacker(constr_tuple_4_get_2_bitstring(X0)) | ~ pred_attacker(X0) ) ).
+fof(u741,axiom,! [X0] : ( pred_attacker(constr_tuple_4_get_3_bitstring(constr_cbc_dec_4(X0,name_Kas))) | ~ pred_attacker(X0) ) ).
+fof(u397,axiom,! [X0] : ( pred_attacker(constr_tuple_4_get_3_bitstring(X0)) | ~ pred_attacker(X0) ) ).
+fof(u390,axiom,! [X0] : ( pred_attacker(constr_cbc_2_get_1_prefixes(X0)) | ~ pred_attacker(X0) ) ).
+fof(u391,axiom,! [X0] : ( pred_attacker(constr_cbc_3_get_1_prefixes(X0)) | ~ pred_attacker(X0) ) ).
+fof(u392,axiom,! [X0] : ( pred_attacker(constr_cbc_3_get_2_prefixes(X0)) | ~ pred_attacker(X0) ) ).
+fof(u393,axiom,! [X0] : ( pred_attacker(constr_cbc_4_get_1_prefixes(X0)) | ~ pred_attacker(X0) ) ).
+fof(u395,axiom,! [X0] : ( pred_attacker(constr_cbc_4_get_2_prefixes(X0)) | ~ pred_attacker(X0) ) ).
+fof(u394,axiom,! [X0] : ( pred_attacker(constr_cbc_4_get_3_prefixes(X0)) | ~ pred_attacker(X0) ) ).
+fof(u428,axiom,! [X0] : ! [X1] : ( pred_attacker(constr_cbc_dec_1(X0,X1)) | ~ pred_attacker(X1) | ~ pred_attacker(X0) ) ).
+fof(u544,axiom,! [X1] : ! [X0] : ( pred_attacker(constr_cbc_enc_1(name_Nb_62(X1),constr_tuple_2_get_0x30_bitstring(constr_cbc_dec_2(X0,name_Kbs)))) | ~ pred_attacker(X0) ) ).
+fof(u906,axiom,! [X0] : ! [X1] : ( pred_attacker(constr_cbc_enc_1(tuple_succ(X0),name_Kab_65(X1))) | ~ pred_attacker(constr_cbc_enc_1(X0,name_Kab_65(X1))) ) ).
+fof(u893,axiom,! [X0] : ! [X1] : ( pred_attacker(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X0,name_Kab_65(X1))),name_Kab_65(X1))) | ~ pred_attacker(X0) ) ).
+fof(u880,axiom,! [X0] : ! [X1] : ( pred_attacker(constr_cbc_enc_1(tuple_succ(X0),constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas)))) | ~ pred_attacker(constr_cbc_enc_1(X0,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas)))) | ~ pred_attacker(X1) ) ).
+fof(u871,axiom,! [X1] : ! [X0] : ( pred_attacker(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X1,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X0,name_Kas)))),constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X0,name_Kas)))) | ~ pred_attacker(X1) | ~ pred_attacker(X0) ) ).
+fof(u431,axiom,! [X0] : ! [X1] : ( pred_attacker(constr_cbc_enc_1(X0,X1)) | ~ pred_attacker(X1) | ~ pred_attacker(X0) ) ).
+fof(u430,axiom,! [X0] : ! [X1] : ( pred_attacker(tuple_2(X0,X1)) | ~ pred_attacker(X1) | ~ pred_attacker(X0) ) ).
+fof(u429,axiom,! [X0] : ! [X1] : ( pred_attacker(constr_cbc_dec_2(X0,X1)) | ~ pred_attacker(X1) | ~ pred_attacker(X0) ) ).
+fof(u856,axiom,! [X1] : ! [X0] : ( pred_attacker(constr_cbc_enc_2(name_Kab_65(X1),X0,name_Kbs)) | ~ pred_attacker(X0) ) ).
+fof(u450,axiom,! [X0] : ! [X1] : ! [X2] : ( pred_attacker(constr_cbc_enc_2(X0,X1,X2)) | ~ pred_attacker(X1) | ~ pred_attacker(X2) | ~ pred_attacker(X0) ) ).
+fof(u447,axiom,! [X0] : ! [X1] : ! [X2] : ( pred_attacker(tuple_3(X0,X1,X2)) | ~ pred_attacker(X1) | ~ pred_attacker(X2) | ~ pred_attacker(X0) ) ).
+fof(u427,axiom,! [X0] : ! [X1] : ( pred_attacker(constr_cbc_dec_3(X0,X1)) | ~ pred_attacker(X1) | ~ pred_attacker(X0) ) ).
+fof(u464,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( pred_attacker(constr_cbc_enc_3(X0,X1,X2,X3)) | ~ pred_attacker(X1) | ~ pred_attacker(X2) | ~ pred_attacker(X3) | ~ pred_attacker(X0) ) ).
+fof(u465,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( pred_attacker(tuple_4(X0,X1,X2,X3)) | ~ pred_attacker(X1) | ~ pred_attacker(X2) | ~ pred_attacker(X3) | ~ pred_attacker(X0) ) ).
+fof(u432,axiom,! [X0] : ! [X1] : ( pred_attacker(constr_cbc_dec_4(X0,X1)) | ~ pred_attacker(X1) | ~ pred_attacker(X0) ) ).
+fof(u538,axiom,! [X1] : ! [X0] : ! [X3] : ! [X2] : ( pred_attacker(constr_cbc_enc_4(X1,X0,name_Kab_65(X3),constr_cbc_enc_2(name_Kab_65(X3),X2,name_Kbs),name_Kas)) | ~ pred_attacker(X1) | ~ pred_attacker(X2) | ~ pred_attacker(X0) ) ).
+fof(u470,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,X4)) | ~ pred_attacker(X1) | ~ pred_attacker(X2) | ~ pred_attacker(X3) | ~ pred_attacker(X4) | ~ pred_attacker(X0) ) ).
+fof(u325,axiom,pred_attacker(name_c) ).
+fof(u328,axiom,pred_attacker(name_I) ).
+fof(u331,axiom,pred_attacker(name_B) ).
+fof(u330,axiom,pred_attacker(name_A) ).
+fof(u326,axiom,pred_attacker(constr_CONST_4) ).
+fof(u327,axiom,pred_attacker(constr_CONST_3) ).
+fof(u329,axiom,pred_attacker(constr_CONST_2) ).
+fof(u324,axiom,pred_attacker(constr_CONST_1) ).
+fof(u323,axiom,pred_attacker(constr_CONST_0x30) ).
+fof(u905,axiom,! [X1] : ! [X0] : ( ~ pred_attacker(name_Kab_65(X1)) | ~ pred_attacker(X0) | pred_attacker(tuple_succ(constr_cbc_dec_1(X0,name_Kab_65(X1)))) ) ).
+fof(u923,axiom,! [X1] : ! [X0] : ( ~ pred_attacker(name_Kab_65(X1)) | ~ pred_attacker(constr_cbc_enc_1(X0,name_Kab_65(X1))) | pred_attacker(tuple_succ(X0)) ) ).
+fof(u320,axiom,~ pred_attacker(name_Kab_65(sK0)) ).
+fof(u419,axiom,! [X0] : ( ~ pred_attacker(tuple_client_A_in_2(X0)) | pred_attacker(X0) ) ).
+fof(u435,axiom,! [X1] : ! [X0] : ( ~ pred_attacker(tuple_client_A_in_2(X1)) | ~ pred_eq_bitstring_bitstring(name_Na(X0),constr_tuple_4_get_0x30(constr_cbc_dec_4(X1,name_Kas))) | ~ pred_eq_bitstring_bitstring(name_B,constr_tuple_4_get_1(constr_cbc_dec_4(X1,name_Kas))) | pred_attacker(tuple_client_A_out_3(constr_tuple_4_get_3_bitstring(constr_cbc_dec_4(X1,name_Kas)))) ) ).
+fof(u451,axiom,! [X1] : ! [X0] : ! [X2] : ( ~ pred_attacker(tuple_client_A_in_2(X1)) | ~ pred_eq_bitstring_bitstring(name_B,constr_tuple_4_get_1(constr_cbc_dec_4(X1,name_Kas))) | ~ pred_eq_bitstring_bitstring(name_Na(X0),constr_tuple_4_get_0x30(constr_cbc_dec_4(X1,name_Kas))) | ~ pred_attacker(tuple_client_A_in_4(X2)) | pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X2,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas)))),constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas))))) ) ).
+fof(u413,axiom,! [X0] : ( ~ pred_attacker(tuple_client_A_in_4(X0)) | pred_attacker(X0) ) ).
+fof(u528,axiom,! [X2] : ! [X1] : ! [X0] : ( ~ pred_attacker(tuple_client_A_in_4(X2)) | ~ pred_eq_bitstring_bitstring(name_Na(X1),constr_tuple_4_get_0x30(constr_cbc_dec_4(X0,name_Kas))) | ~ pred_eq_bitstring_bitstring(name_B,constr_tuple_4_get_1(constr_cbc_dec_4(X0,name_Kas))) | pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X2,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X0,name_Kas)))),constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X0,name_Kas))))) | ~ pred_attacker(X0) ) ).
+fof(u439,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_client_A_out_1(X0,X1,X2)) | pred_attacker(X2) ) ).
+fof(u440,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_client_A_out_1(X0,X1,X2)) | pred_attacker(X1) ) ).
+fof(u442,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_client_A_out_1(X0,X1,X2)) | pred_attacker(X0) ) ).
+fof(u417,axiom,! [X0] : ( ~ pred_attacker(tuple_client_A_out_3(X0)) | pred_attacker(X0) ) ).
+fof(u415,axiom,! [X0] : ( ~ pred_attacker(tuple_client_A_out_5(X0)) | pred_attacker(X0) ) ).
+fof(u414,axiom,! [X0] : ( ~ pred_attacker(tuple_client_B_in_1(X0)) | pred_attacker(X0) ) ).
+fof(u434,axiom,! [X1] : ! [X0] : ( ~ pred_attacker(tuple_client_B_in_1(X1)) | ~ pred_eq_bitstring_bitstring(name_A,constr_tuple_2_get_1(constr_cbc_dec_2(X1,name_Kbs))) | pred_attacker(tuple_client_B_out_2(constr_cbc_enc_1(name_Nb_62(X0),constr_tuple_2_get_0x30_bitstring(constr_cbc_dec_2(X1,name_Kbs))))) ) ).
+fof(u411,axiom,! [X0] : ( ~ pred_attacker(tuple_client_B_in_3(X0)) | pred_attacker(X0) ) ).
+fof(u412,axiom,! [X0] : ( ~ pred_attacker(tuple_client_B_out_2(X0)) | pred_attacker(X0) ) ).
+fof(u438,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_server_S_in_1(X0,X1,X2)) | pred_attacker(X1) ) ).
+fof(u441,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_server_S_in_1(X0,X1,X2)) | pred_attacker(X2) ) ).
+fof(u445,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_server_S_in_1(X0,X1,X2)) | pred_attacker(X0) ) ).
+fof(u459,axiom,! [X1] : ! [X2] : ! [X3] : ! [X0] : ( ~ pred_attacker(tuple_server_S_in_1(X1,X2,X3)) | pred_attacker(tuple_server_S_out_2(constr_cbc_enc_4(X3,X2,name_Kab_65(X0),constr_cbc_enc_2(name_Kab_65(X0),X1,name_Kbs),name_Kas))) ) ).
+fof(u418,axiom,! [X0] : ( ~ pred_attacker(tuple_server_S_out_2(X0)) | pred_attacker(X0) ) ).
+fof(u416,axiom,! [X0] : ( ~ pred_attacker(tuple_succ(X0)) | pred_attacker(X0) ) ).
+fof(u879,axiom,! [X1] : ! [X0] : ( ~ pred_attacker(constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas))) | ~ pred_attacker(X1) | ~ pred_attacker(X0) | pred_attacker(tuple_succ(constr_cbc_dec_1(X0,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas))))) ) ).
+fof(u901,axiom,! [X1] : ! [X0] : ( ~ pred_attacker(constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas))) | ~ pred_attacker(X1) | ~ pred_attacker(constr_cbc_enc_1(X0,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas)))) | pred_attacker(tuple_succ(X0)) ) ).
+fof(u487,axiom,! [X0] : ! [X1] : ( ~ pred_attacker(constr_cbc_enc_1(X0,X1)) | ~ pred_attacker(X1) | pred_attacker(X0) ) ).
+fof(u424,axiom,! [X0] : ! [X1] : ( ~ pred_attacker(tuple_2(X0,X1)) | pred_attacker(X1) ) ).
+fof(u425,axiom,! [X0] : ! [X1] : ( ~ pred_attacker(tuple_2(X0,X1)) | pred_attacker(X0) ) ).
+fof(u537,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(constr_cbc_enc_2(X0,X1,name_Kbs)) | ~ pred_eq_bitstring_bitstring(name_A,X1) | pred_attacker(tuple_client_B_out_2(constr_cbc_enc_1(name_Nb_62(X2),X0))) ) ).
+fof(u546,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(constr_cbc_enc_2(X0,X1,name_Kbs)) | pred_attacker(tuple_client_B_out_2(constr_cbc_enc_1(name_Nb_62(X2),X0))) ) ).
+fof(u758,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(constr_cbc_enc_2(X0,X1,name_Kbs)) | pred_attacker(constr_cbc_enc_1(name_Nb_62(X2),X0)) ) ).
+fof(u494,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(constr_cbc_enc_2(X0,X1,X2)) | pred_attacker(constr_cbc_enc_1(X0,X2)) ) ).
+fof(u497,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(constr_cbc_enc_2(X0,X1,X2)) | ~ pred_attacker(X2) | pred_attacker(tuple_2(X0,X1)) ) ).
+fof(u443,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_3(X0,X1,X2)) | pred_attacker(X2) ) ).
+fof(u444,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_3(X0,X1,X2)) | pred_attacker(X0) ) ).
+fof(u446,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_attacker(tuple_3(X0,X1,X2)) | pred_attacker(X1) ) ).
+fof(u498,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(constr_cbc_enc_3(X0,X1,X2,X3)) | pred_attacker(constr_cbc_enc_1(X0,X3)) ) ).
+fof(u509,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(constr_cbc_enc_3(X0,X1,X2,X3)) | pred_attacker(constr_cbc_enc_2(X0,X1,X3)) ) ).
+fof(u511,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(constr_cbc_enc_3(X0,X1,X2,X3)) | ~ pred_attacker(X3) | pred_attacker(tuple_3(X0,X1,X2)) ) ).
+fof(u460,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(tuple_4(X0,X1,X2,X3)) | pred_attacker(X0) ) ).
+fof(u461,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(tuple_4(X0,X1,X2,X3)) | pred_attacker(X1) ) ).
+fof(u462,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(tuple_4(X0,X1,X2,X3)) | pred_attacker(X2) ) ).
+fof(u463,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(tuple_4(X0,X1,X2,X3)) | pred_attacker(X3) ) ).
+fof(u913,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(tuple_4(X0,X1,X2,X3)) | pred_attacker(tuple_succ(constr_cbc_dec_1(X4,X2))) | ~ pred_attacker(X4) | ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) ) ).
+fof(u927,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(tuple_4(X0,X1,X2,X3)) | ~ pred_attacker(constr_cbc_enc_1(X4,X2)) | pred_attacker(tuple_succ(X4)) | ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) ) ).
+fof(u897,axiom,! [X0] : ! [X1] : ( ~ pred_attacker(constr_cbc_dec_4(X0,name_Kas)) | ~ pred_attacker(X1) | pred_attacker(tuple_succ(constr_cbc_dec_1(X1,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X0,name_Kas))))) | ~ pred_attacker(X0) ) ).
+fof(u919,axiom,! [X0] : ! [X1] : ( ~ pred_attacker(constr_cbc_dec_4(X0,name_Kas)) | ~ pred_attacker(constr_cbc_enc_1(X1,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X0,name_Kas)))) | pred_attacker(tuple_succ(X1)) | ~ pred_attacker(X0) ) ).
+fof(u922,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | ~ pred_attacker(X2) | ~ pred_attacker(constr_cbc_enc_1(X4,X2)) | pred_attacker(tuple_succ(X4)) ) ).
+fof(u904,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | pred_attacker(constr_cbc_enc_1(tuple_succ(X4),X2)) | ~ pred_attacker(constr_cbc_enc_1(X4,X2)) ) ).
+fof(u900,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | ~ pred_attacker(X2) | pred_attacker(tuple_succ(constr_cbc_dec_1(X4,X2))) | ~ pred_attacker(X4) ) ).
+fof(u892,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(X4),X2))) | ~ pred_attacker(constr_cbc_enc_1(X4,X2)) ) ).
+fof(u882,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | ~ pred_attacker(X4) | pred_attacker(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X4,X2)),X2)) ) ).
+fof(u874,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X4,X2)),X2))) | ~ pred_attacker(X4) ) ).
+fof(u748,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | pred_attacker(X3) ) ).
+fof(u743,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | pred_attacker(tuple_client_A_out_3(X3)) ) ).
+fof(u543,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | ~ pred_eq_bitstring_bitstring(name_Na(X4),X0) | ~ pred_eq_bitstring_bitstring(name_B,X1) | pred_attacker(tuple_client_A_out_3(X3)) ) ).
+fof(u510,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,X4)) | pred_attacker(constr_cbc_enc_1(X0,X4)) ) ).
+fof(u514,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,X4)) | pred_attacker(constr_cbc_enc_2(X0,X1,X4)) ) ).
+fof(u515,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,X4)) | pred_attacker(constr_cbc_enc_3(X0,X1,X2,X4)) ) ).
+fof(u522,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,X4)) | ~ pred_attacker(X4) | pred_attacker(tuple_4(X0,X1,X2,X3)) ) ).
+fof(u420,axiom,! [X0] : ! [X1] : pred_eq_bitstring_bitstring(X0,X1) ).
+fof(u563,axiom,! [X4] : ! [X0] : ! [X3] : ! [X1] : ! [X2] : ( ~ pred_eq_bitstring_bitstring(name_Na(X4),X0) | pred_attacker(tuple_client_A_out_3(X3)) | ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) ) ).
+fof(u764,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ pred_eq_bitstring_bitstring(name_Na(X0),X1) | pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X2,X3)),X3))) | ~ pred_attacker(constr_cbc_enc_4(X1,X4,X3,X5,name_Kas)) | ~ pred_attacker(X2) ) ).
+fof(u539,axiom,! [X0] : ! [X1] : ( ~ pred_eq_bitstring_bitstring(name_Na(X0),constr_tuple_4_get_0x30(constr_cbc_dec_4(X1,name_Kas))) | pred_attacker(tuple_client_A_out_3(constr_tuple_4_get_3_bitstring(constr_cbc_dec_4(X1,name_Kas)))) | ~ pred_attacker(X1) ) ).
+fof(u603,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ pred_eq_bitstring_bitstring(name_Na(X0),constr_tuple_4_get_0x30(constr_cbc_dec_4(X1,name_Kas))) | pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X2,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas)))),constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas))))) | ~ pred_attacker(X1) | ~ pred_attacker(X2) ) ).
+fof(u672,axiom,! [X1] : ! [X4] : ! [X0] : ! [X5] : ! [X2] : ! [X3] : ( ~ pred_eq_bitstring_bitstring(name_B,X1) | ~ pred_eq_bitstring_bitstring(name_Na(X4),X0) | pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X5,X2)),X2))) | ~ pred_attacker(constr_cbc_enc_4(X0,X1,X2,X3,name_Kas)) | ~ pred_attacker(X5) ) ).
+fof(u526,axiom,! [X1] : ! [X0] : ( ~ pred_eq_bitstring_bitstring(name_B,constr_tuple_4_get_1(constr_cbc_dec_4(X1,name_Kas))) | ~ pred_eq_bitstring_bitstring(name_Na(X0),constr_tuple_4_get_0x30(constr_cbc_dec_4(X1,name_Kas))) | pred_attacker(tuple_client_A_out_3(constr_tuple_4_get_3_bitstring(constr_cbc_dec_4(X1,name_Kas)))) | ~ pred_attacker(X1) ) ).
+fof(u547,axiom,! [X1] : ! [X0] : ! [X2] : ( ~ pred_eq_bitstring_bitstring(name_B,constr_tuple_4_get_1(constr_cbc_dec_4(X1,name_Kas))) | ~ pred_eq_bitstring_bitstring(name_Na(X0),constr_tuple_4_get_0x30(constr_cbc_dec_4(X1,name_Kas))) | pred_attacker(tuple_client_A_out_5(constr_cbc_enc_1(tuple_succ(constr_cbc_dec_1(X2,constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas)))),constr_tuple_4_get_2_bitstring(constr_cbc_dec_4(X1,name_Kas))))) | ~ pred_attacker(X1) | ~ pred_attacker(X2) ) ).
+fof(u524,axiom,! [X0] : ! [X1] : ( ~ pred_eq_bitstring_bitstring(name_A,constr_tuple_2_get_1(constr_cbc_dec_2(X0,name_Kbs))) | pred_attacker(tuple_client_B_out_2(constr_cbc_enc_1(name_Nb_62(X1),constr_tuple_2_get_0x30_bitstring(constr_cbc_dec_2(X0,name_Kbs))))) | ~ pred_attacker(X0) ) ).
+fof(u421,axiom,! [X0] : ! [X1] : constr_tuple_2_get_1(tuple_2(X0,X1)) = X1 ).
+fof(u453,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : constr_tuple_4_get_0x30(tuple_4(X0,X1,X2,X3)) = X0 ).
+fof(u454,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : constr_tuple_4_get_1(tuple_4(X0,X1,X2,X3)) = X1 ).
+fof(u422,axiom,! [X0] : ! [X1] : constr_tuple_2_get_0x30_bitstring(tuple_2(X0,X1)) = X0 ).
+fof(u455,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : constr_tuple_4_get_2_bitstring(tuple_4(X0,X1,X2,X3)) = X2 ).
+fof(u452,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : constr_tuple_4_get_3_bitstring(tuple_4(X0,X1,X2,X3)) = X3 ).
+fof(u423,axiom,! [X1] : ! [X0] : constr_cbc_dec_1(constr_cbc_enc_1(X1,X0),X0) = X1 ).
+fof(u466,axiom,! [X1] : ! [X0] : ! [X2] : ! [X3] : ! [X4] : constr_cbc_enc_1(X1,X0) = constr_cbc_4_get_1_prefixes(constr_cbc_enc_4(X1,X2,X3,X4,X0)) ).
+fof(u456,axiom,! [X1] : ! [X0] : ! [X2] : ! [X3] : constr_cbc_enc_1(X1,X0) = constr_cbc_3_get_1_prefixes(constr_cbc_enc_3(X1,X2,X3,X0)) ).
+fof(u436,axiom,! [X1] : ! [X0] : ! [X2] : constr_cbc_enc_1(X1,X0) = constr_cbc_2_get_1_prefixes(constr_cbc_enc_2(X1,X2,X0)) ).
+fof(u437,axiom,! [X1] : ! [X2] : ! [X0] : constr_cbc_dec_2(constr_cbc_enc_2(X1,X2,X0),X0) = tuple_2(X1,X2) ).
+fof(u467,axiom,! [X1] : ! [X2] : ! [X0] : ! [X3] : ! [X4] : constr_cbc_enc_2(X1,X2,X0) = constr_cbc_4_get_2_prefixes(constr_cbc_enc_4(X1,X2,X3,X4,X0)) ).
+fof(u457,axiom,! [X1] : ! [X2] : ! [X0] : ! [X3] : constr_cbc_enc_2(X1,X2,X0) = constr_cbc_3_get_2_prefixes(constr_cbc_enc_3(X1,X2,X3,X0)) ).
+fof(u458,axiom,! [X1] : ! [X2] : ! [X3] : ! [X0] : constr_cbc_dec_3(constr_cbc_enc_3(X1,X2,X3,X0),X0) = tuple_3(X1,X2,X3) ).
+fof(u468,axiom,! [X1] : ! [X2] : ! [X3] : ! [X0] : ! [X4] : constr_cbc_enc_3(X1,X2,X3,X0) = constr_cbc_4_get_3_prefixes(constr_cbc_enc_4(X1,X2,X3,X4,X0)) ).
+fof(u469,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X0] : constr_cbc_dec_4(constr_cbc_enc_4(X1,X2,X3,X4,X0),X0) = tuple_4(X1,X2,X3,X4) ).
+fof(u377,axiom,name_Kbs != name_c ).
+fof(u386,axiom,name_Kas != name_Kbs ).
+fof(u385,axiom,name_Kas != name_c ).
+fof(u372,axiom,name_I != name_Kas ).
+fof(u359,axiom,name_I != name_Kbs ).
+fof(u341,axiom,name_I != name_c ).
+fof(u381,axiom,name_B != name_c ).
+fof(u383,axiom,name_B != name_Kbs ).
+fof(u384,axiom,name_B != name_Kas ).
+fof(u382,axiom,name_B != name_I ).
+fof(u376,axiom,name_A != name_c ).
+fof(u378,axiom,name_A != name_Kbs ).
+fof(u380,axiom,name_A != name_Kas ).
+fof(u375,axiom,name_A != name_I ).
+fof(u379,axiom,name_A != name_B ).
+fof(u351,axiom,constr_CONST_4 != name_c ).
+fof(u358,axiom,constr_CONST_4 != name_Kbs ).
+fof(u369,axiom,constr_CONST_4 != name_Kas ).
+fof(u352,axiom,constr_CONST_4 != name_I ).
+fof(u366,axiom,constr_CONST_4 != name_B ).
+fof(u356,axiom,constr_CONST_4 != name_A ).
+fof(u349,axiom,constr_CONST_3 != name_c ).
+fof(u355,axiom,constr_CONST_3 != name_Kbs ).
+fof(u373,axiom,constr_CONST_3 != name_Kas ).
+fof(u350,axiom,constr_CONST_3 != name_I ).
+fof(u367,axiom,constr_CONST_3 != name_B ).
+fof(u360,axiom,constr_CONST_3 != name_A ).
+fof(u348,axiom,constr_CONST_3 != constr_CONST_4 ).
+fof(u346,axiom,constr_CONST_2 != name_c ).
+fof(u362,axiom,constr_CONST_2 != name_Kbs ).
+fof(u370,axiom,constr_CONST_2 != name_Kas ).
+fof(u343,axiom,constr_CONST_2 != name_I ).
+fof(u364,axiom,constr_CONST_2 != name_B ).
+fof(u363,axiom,constr_CONST_2 != name_A ).
+fof(u342,axiom,constr_CONST_2 != constr_CONST_4 ).
+fof(u344,axiom,constr_CONST_2 != constr_CONST_3 ).
+fof(u345,axiom,constr_CONST_1 != name_c ).
+fof(u361,axiom,constr_CONST_1 != name_Kbs ).
+fof(u374,axiom,constr_CONST_1 != name_Kas ).
+fof(u347,axiom,constr_CONST_1 != name_I ).
+fof(u368,axiom,constr_CONST_1 != name_B ).
+fof(u357,axiom,constr_CONST_1 != name_A ).
+fof(u339,axiom,constr_CONST_1 != constr_CONST_4 ).
+fof(u340,axiom,constr_CONST_1 != constr_CONST_3 ).
+fof(u338,axiom,constr_CONST_1 != constr_CONST_2 ).
+fof(u337,axiom,constr_CONST_0x30 != name_c ).
+fof(u354,axiom,constr_CONST_0x30 != name_Kbs ).
+fof(u371,axiom,constr_CONST_0x30 != name_Kas ).
+fof(u332,axiom,constr_CONST_0x30 != name_I ).
+fof(u365,axiom,constr_CONST_0x30 != name_B ).
+fof(u353,axiom,constr_CONST_0x30 != name_A ).
+fof(u333,axiom,constr_CONST_0x30 != constr_CONST_4 ).
+fof(u334,axiom,constr_CONST_0x30 != constr_CONST_3 ).
+fof(u335,axiom,constr_CONST_0x30 != constr_CONST_2 ).
+fof(u336,axiom,constr_CONST_0x30 != constr_CONST_1 ).

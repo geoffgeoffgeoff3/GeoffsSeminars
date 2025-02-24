@@ -1,0 +1,59 @@
+%--------------------------------------------------------------------------
+% File     : GRP004-0 : TPTP v2.4.1. Released v1.0.0.
+% Domain   : Group Theory
+% Axioms   : Group theory (equality) axioms
+% Version  : [MOW76] (equality) axioms : 
+%            Reduced > Complete.
+% English  : 
+
+% Refs     : [MOW76] McCharen et al. (1976), Problems and Experiments for a
+%          : [Wos88] Wos (1988), Automated Reasoning - 33 Basic Research Pr
+% Source   : [ANL]
+% Names    : 
+
+% Status   : 
+% Syntax   : Number of clauses    :    6 (   0 non-Horn;   3 unit;   1 RR)
+%            Number of literals   :    9 (   9 equality)
+%            Maximal clause size  :    2 (   1 average)
+%            Number of predicates :    1 (   0 propositional; 2-2 arity)
+%            Number of functors   :    3 (   1 constant; 0-2 arity)
+%            Number of variables  :   13 (   0 singleton)
+%            Maximal term depth   :    3 (   1 average)
+
+% Comments : Requires EQU001-0.ax
+%          : [MOW76] also contains redundant right_identity and
+%            right_inverse axioms.
+%          : Substitution axioms, missing from the [MOW76] presentation due
+%            to the use of paramodulation, have been added in here.
+%          : These axioms are also used in [Wos88] p.186, also with
+%            right_identity and right_inverse.
+%--------------------------------------------------------------------------
+%----For any x and y in the group x*y is also in the group. No clause 
+%----is needed here since this is an instance of reflexivity 
+
+%----There exists an identity element 
+input_clause(left_identity,axiom,
+    [++equal(multiply(identity,X),X)]).
+
+%----For any x in the group, there exists an element y such that x*y = y*x 
+%----= identity.
+input_clause(left_inverse,axiom,
+    [++equal(multiply(inverse(X),X),identity)]).
+
+%----The operation '*' is associative 
+input_clause(associativity,axiom,
+    [++equal(multiply(multiply(X,Y),Z),multiply(X,multiply(Y,Z)))]).
+
+%----Substitution axioms 
+input_clause(inverse_substitution1,axiom,
+    [--equal(A,B),
+     ++equal(inverse(A),inverse(B))]).
+
+input_clause(multiply_substitution1,axiom,
+    [--equal(C,D),
+     ++equal(multiply(C,E),multiply(D,E))]).
+
+input_clause(multiply_substitution2,axiom,
+    [--equal(F,G),
+     ++equal(multiply(H,F),multiply(H,G))]).
+%--------------------------------------------------------------------------

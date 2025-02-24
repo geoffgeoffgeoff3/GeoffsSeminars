@@ -1,0 +1,2 @@
+include('Saturations/SWB030+3/Saturations/E-SAT---3.0.ax').
+fof(owl_bool_intersectionof_class_003,conjecture,! [Z] : ! [S1] : ! [C1] : ! [S2] : ! [C2] : ! [S3] : ! [C3] : ( ( iext(uri_rdf_first,S1,C1) & iext(uri_rdf_rest,S1,S2) & iext(uri_rdf_first,S2,C2) & iext(uri_rdf_rest,S2,S3) & iext(uri_rdf_first,S3,C3) & iext(uri_rdf_rest,S3,uri_rdf_nil) ) => ( iext(uri_owl_intersectionOf,Z,S1) <=> ( ic(Z) & ic(C1) & ic(C2) & ic(C3) & ! [X] : ( icext(Z,X) <=> ( icext(C1,X) & icext(C2,X) & icext(C3,X) ) ) ) ) ) ).
