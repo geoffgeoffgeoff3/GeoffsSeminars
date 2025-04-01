@@ -1,0 +1,2 @@
+include('Saturations/PUZ072+1/Saturations/Vampire-SAT---4.7.ax').
+fof(ax267,conjecture,ssA(n7,n7) = n6 | ssA(n7,n8) = n6 | ssA(n7,n9) = n6 | ssA(n8,n7) = n6 | ssA(n8,n8) = n6 | ssA(n8,n9) = n6 | ssA(n9,n7) = n6 | ssA(n9,n8) = n6 | ssA(n9,n9) = n6 ).

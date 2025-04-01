@@ -1,0 +1,16 @@
+fof(c_49,axiom,! [X0] : c_Objects_Ohext(X0,X0) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ c_Objects_Ohext(X0,X1) | ~ c_Objects_Ohext(X1,X2) | c_Objects_Ohext(X0,X2) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : c_COMBI(X0,X1) = X0 ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ c_Conform_Olconf(X0,X1,X2,X3,X4) | ~ c_Objects_Ohext(X1,X5) | c_Conform_Olconf(X0,X5,X2,X3,X4) ) ).
+fof(c_55,axiom,c_Conform_Olconf(v_P,v_ha______,v_la______,v_E____,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ).
+fof(c_56,axiom,c_WellTypeRT_OWTrt(v_P,v_ha______,v_E____,c_Expr_Oexp_Onew(v_C______,tc_List_Olist(tc_String_Ochar)),v_T____) ).
+fof(c_57,axiom,c_Fun_Ofun__upd(v_ha______,v_a______,c_Option_Ooption_OSome(c_Pair(v_C______,c_Objects_Oinit__fields(v_FDTs______),tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))),tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval)))),tc_nat,tc_Option_Ooption(tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))))) = v_h_Ha______ ).
+fof(c_58,axiom,c_TypeRel_OFields(v_P,v_C______,v_FDTs______,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ).
+fof(c_59,axiom,c_Option_Ooption_OSome(v_a______,tc_nat) = c_Objects_Onew__Addr(v_ha______) ).
+fof(c_60,axiom,~ c_Conform_Olconf(v_P,v_h_Ha______,v_la______,v_E____,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ).
+fof(c_123,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( X0 != X1 | X2 != X3 | X4 != X5 | X6 != X7 | X8 != X9 | ~ c_WellTypeRT_OWTrt(X1,X3,X5,X7,X9) | c_WellTypeRT_OWTrt(X0,X2,X4,X6,X8) ) ).
+fof(c_130,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( X0 != X1 | X2 != X3 | X4 != X5 | X6 != X7 | ~ c_TypeRel_OFields(X1,X3,X5,X7) | c_TypeRel_OFields(X0,X2,X4,X6) ) ).
+fof(c_182,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_431,axiom,! [X0] : ( ~ c_Objects_Ohext(v_ha______,X0) | c_Conform_Olconf(v_P,X0,v_la______,v_E____,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ) ).
+fof(c_439,axiom,! [X0] : ! [X1] : ( ~ c_Objects_Ohext(X0,X1) | ~ c_Objects_Ohext(v_ha______,X0) | c_Conform_Olconf(v_P,X1,v_la______,v_E____,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ) ).
+fof(c_440,axiom,~ c_Objects_Ohext(v_ha______,v_h_Ha______) ).

@@ -1,0 +1,61 @@
+fof(c_51,axiom,! [X0] : ( ~ drs(X0) | proposition(X0) ) ).
+fof(c_52,axiom,! [X0] : ( ~ proposition(X0) | drs(X0) ) ).
+fof(c_53,axiom,! [X0] : ( ~ woman(X0) | female(X0) ) ).
+fof(c_54,axiom,! [X0] : ( ~ female(X0) | human(X0) ) ).
+fof(c_78,axiom,! [X0] : ( ~ woman(X0) | ~ man(X0) ) ).
+fof(c_79,axiom,! [X0] : ( ~ female(X0) | ~ male(X0) ) ).
+fof(c_80,axiom,! [X0] : ( ~ eventuality(X0) | ~ abstraction(X0) ) ).
+fof(c_81,axiom,! [X0] : ( ~ entity(X0) | ~ abstraction(X0) ) ).
+fof(c_83,axiom,! [X0] : ( ~ new(X0) | ~ old(X0) ) ).
+fof(c_88,axiom,! [X0] : ! [X1] : ( ~ of(X0,X1) | ~ owner(X0) | human(X0) ) ).
+fof(c_89,axiom,! [X0] : ! [X1] : ( ~ of(X0,X1) | have(skf1(X0,X1),X1,X0) ) ).
+fof(c_90,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ human(X1) | owner(X1) ) ).
+fof(c_91,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ partof(X0,X1) | ~ partof(X0,X2) | X1 = X2 ) ).
+fof(c_92,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ event(X0) | of(X1,X2) ) ).
+fof(c_93,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ human(X1) | of(X1,X2) ) ).
+fof(c_94,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ of(X0,X1) | ~ owner(X0) | have(X2,X0,X1) ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ nonhuman(X1) | ~ nonhuman(X2) | partof(X2,X1) ) ).
+fof(c_99,axiom,lonely(skc9) ).
+fof(c_105,axiom,young(skc6) ).
+fof(c_110,axiom,white(skc8) ).
+fof(c_111,axiom,dirty(skc8) ).
+fof(c_112,axiom,old(skc8) ).
+fof(c_113,axiom,in(skc10,skc11) ).
+fof(c_114,axiom,barrel(skc10,skc8) ).
+fof(c_115,axiom,down(skc10,skc9) ).
+fof(c_116,axiom,in(skc6,skc7) ).
+fof(c_163,axiom,! [X0] : ( proposition(X0) | ~ drs(X0) ) ).
+fof(c_164,axiom,! [X0] : ( ~ drs(X0) | proposition(X0) ) ).
+fof(c_165,axiom,! [X0] : ( ~ proposition(X0) | drs(X0) ) ).
+fof(c_175,axiom,! [X0] : ( ~ entity(X0) | ~ abstraction(X0) ) ).
+fof(c_177,axiom,! [X0] : ( ~ woman(X0) | female(X0) ) ).
+fof(c_179,axiom,! [X0] : ( ~ woman(X0) | ~ man(X0) ) ).
+fof(c_181,axiom,! [X0] : ( ~ female(X0) | human(X0) ) ).
+fof(c_183,axiom,! [X0] : ( ~ female(X0) | ~ male(X0) ) ).
+fof(c_227,axiom,! [X0] : ( ~ eventuality(X0) | ~ abstraction(X0) ) ).
+fof(c_307,axiom,! [X0] : ( ~ new(X0) | ~ old(X0) ) ).
+fof(c_311,axiom,! [X0] : ! [X1] : ( ~ of(X0,X1) | have(skf1(X0,X1),X1,X0) ) ).
+fof(c_846,axiom,! [X0] : X0 = X0 ).
+fof(c_847,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_848,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_849,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ event(X1) | event(X0) ) ).
+fof(c_850,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ man(X1) | man(X0) ) ).
+fof(c_851,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ city(X1) | city(X0) ) ).
+fof(c_852,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ hollywood(X1) | hollywood(X0) ) ).
+fof(c_853,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ car(X1) | car(X0) ) ).
+fof(c_854,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ chevy(X1) | chevy(X0) ) ).
+fof(c_855,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ way(X1) | way(X0) ) ).
+fof(c_856,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ street(X1) | street(X0) ) ).
+fof(c_857,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ furniture(X1) | furniture(X0) ) ).
+fof(c_858,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ seat(X1) | seat(X0) ) ).
+fof(c_859,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ front(X1) | front(X0) ) ).
+fof(c_860,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ fellow(X1) | fellow(X0) ) ).
+fof(c_861,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ old(X1) | old(X0) ) ).
+fof(c_862,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | ~ have(X1,X2,X3) | have(X0,X2,X3) ) ).
+fof(c_863,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ lonely(X1) | lonely(X0) ) ).
+fof(c_864,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ young(X1) | young(X0) ) ).
+fof(c_865,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ white(X1) | white(X0) ) ).
+fof(c_866,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ dirty(X1) | dirty(X0) ) ).
+fof(c_867,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ in(X1,X3) | in(X0,X2) ) ).
+fof(c_868,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ barrel(X1,X3) | barrel(X0,X2) ) ).
+fof(c_869,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ down(X1,X3) | down(X0,X2) ) ).

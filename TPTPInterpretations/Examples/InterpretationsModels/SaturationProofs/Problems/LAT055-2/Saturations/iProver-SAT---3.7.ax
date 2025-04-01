@@ -1,0 +1,12 @@
+fof(c_49,axiom,! [X0] : meet(X0,X0) = X0 ).
+fof(c_50,axiom,! [X0] : join(X0,X0) = X0 ).
+fof(c_51,axiom,! [X0] : ! [X1] : meet(X0,join(X0,X1)) = X0 ).
+fof(c_52,axiom,! [X0] : ! [X1] : join(X0,meet(X0,X1)) = X0 ).
+fof(c_53,axiom,! [X0] : ! [X1] : meet(X0,X1) = meet(X1,X0) ).
+fof(c_54,axiom,! [X0] : ! [X1] : join(X0,X1) = join(X1,X0) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ! [X2] : meet(meet(X0,X1),X2) = meet(X0,meet(X1,X2)) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : join(join(X0,X1),X2) = join(X0,join(X1,X2)) ).
+fof(c_81,axiom,! [X0] : X0 = X0 ).
+fof(c_82,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_83,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | meet(X0,X2) = meet(X1,X3) ) ).
+fof(c_84,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | join(X0,X2) = join(X1,X3) ) ).

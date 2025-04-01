@@ -1,0 +1,12 @@
+fof(successor_equality1,axiom,! [X1] : ! [X2] : ( equalish(X1,X2) | ~ equalish(successor(X1),successor(X2)) ) ).
+fof(successor_substitution,axiom,! [X1] : ! [X2] : ( equalish(successor(X1),successor(X2)) | ~ equalish(X1,X2) ) ).
+fof(times,axiom,! [X1] : ! [X2] : equalish(multiply(X1,successor(X2)),add(multiply(X1,X2),X1)) ).
+fof(addition,axiom,! [X1] : ! [X2] : equalish(add(X1,successor(X2)),successor(add(X1,X2))) ).
+fof(adding_zero,axiom,! [X1] : equalish(add(X1,n0),X1) ).
+fof(times_zero,axiom,! [X1] : equalish(multiply(X1,n0),n0) ).
+fof(c_0_6,axiom,! [X1] : ! [X2] : ( equalish(X1,X2) | ~ equalish(successor(X1),successor(X2)) ) ).
+fof(c_0_7,axiom,! [X1] : ! [X2] : ( equalish(successor(X1),successor(X2)) | ~ equalish(X1,X2) ) ).
+fof(c_0_8,axiom,! [X1] : ! [X2] : equalish(multiply(X1,successor(X2)),add(multiply(X1,X2),X1)) ).
+fof(c_0_9,axiom,! [X1] : ! [X2] : equalish(add(X1,successor(X2)),successor(add(X1,X2))) ).
+fof(c_0_10,axiom,! [X1] : equalish(add(X1,n0),X1) ).
+fof(c_0_11,axiom,! [X1] : equalish(multiply(X1,n0),n0) ).

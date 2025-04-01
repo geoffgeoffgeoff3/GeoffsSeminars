@@ -1,0 +1,2 @@
+include('Saturations/SWB025-10/Saturations/E-SAT---3.0.ax').
+fof(testcase_premise_fullish_025_Cyclic_Dependencies_between_Complex_Properties_10,conjecture,iext(uri_owl_propertyChainAxiom,uri_ex_hasCousin,sK2_testcase_premise_fullish_025_Cyclic_Dependencies_between_Complex_Properties_BNODE_l21) = true ).

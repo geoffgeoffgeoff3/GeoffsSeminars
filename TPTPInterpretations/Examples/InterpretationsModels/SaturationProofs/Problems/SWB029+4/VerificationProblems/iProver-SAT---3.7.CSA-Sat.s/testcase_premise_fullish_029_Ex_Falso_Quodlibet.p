@@ -1,0 +1,2 @@
+include('Saturations/SWB029+4/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
+fof(testcase_premise_fullish_029_Ex_Falso_Quodlibet,conjecture,? [BNODE_x] : ? [BNODE_y] : ? [BNODE_l1] : ? [BNODE_l2] : ( iext(uri_rdf_type,uri_ex_A,uri_owl_Class) & iext(uri_rdf_type,uri_ex_B,uri_owl_Class) & iext(uri_rdf_type,uri_ex_w,BNODE_x) & iext(uri_owl_intersectionOf,BNODE_x,BNODE_l1) & iext(uri_rdf_first,BNODE_l1,uri_ex_A) & iext(uri_rdf_rest,BNODE_l1,BNODE_l2) & iext(uri_rdf_first,BNODE_l2,BNODE_y) & iext(uri_rdf_rest,BNODE_l2,uri_rdf_nil) & iext(uri_owl_complementOf,BNODE_y,uri_ex_A) ) ).

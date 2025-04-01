@@ -1,0 +1,51 @@
+fof(c_49,axiom,! [X0] : ( ~ female(X0) | ~ male(X0) ) ).
+fof(c_50,axiom,! [X0] : ( female(X0) | male(X0) ) ).
+fof(c_51,axiom,! [X0] : ( ~ person(X0) | sex(X0,sex_of1(X0)) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ sex(X0,X1) | ~ male(X1) | person(X0) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ sex(X0,X1) | ~ female(X1) | person(X0) ) ).
+fof(c_55,axiom,! [X0] : ( ~ parent(X0) | person(X0) ) ).
+fof(c_56,axiom,! [X0] : ( ~ parent(X0) | child(X0,child_of1(X0)) ) ).
+fof(c_57,axiom,! [X0] : ( ~ parent(X0) | person(child_of1(X0)) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ( ~ child(X0,X1) | ~ person(X0) | ~ person(X1) | parent(X0) ) ).
+fof(c_59,axiom,! [X0] : ( ~ mother(X0) | parent(X0) ) ).
+fof(c_60,axiom,! [X0] : ( ~ mother(X0) | sex(X0,sex_of2(X0)) ) ).
+fof(c_61,axiom,! [X0] : ( ~ mother(X0) | female(sex_of2(X0)) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ sex(X0,X1) | ~ female(X1) | ~ parent(X0) | mother(X0) ) ).
+fof(c_63,axiom,! [X0] : ( ~ father(X0) | parent(X0) ) ).
+fof(c_64,axiom,! [X0] : ( ~ mother(X0) | ~ father(X0) ) ).
+fof(c_65,axiom,! [X0] : ( ~ parent(X0) | mother(X0) | father(X0) ) ).
+fof(c_66,axiom,! [X0] : ( ~ grandparent(X0) | parent(X0) ) ).
+fof(c_67,axiom,! [X0] : ( ~ grandparent(X0) | child(X0,child_of2(X0)) ) ).
+fof(c_68,axiom,! [X0] : ( ~ grandparent(X0) | parent(child_of2(X0)) ) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ( ~ child(X0,X1) | ~ parent(X0) | ~ parent(X1) | grandparent(X0) ) ).
+fof(c_70,axiom,! [X0] : ( ~ parent_with_sons_only(X0) | parent(X0) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ( ~ child(X0,X1) | ~ parent_with_sons_only(X0) | child_with_parent(X1) ) ).
+fof(c_72,axiom,! [X0] : ( ~ parent(X0) | child(X0,female_child_of(X0)) | parent_with_sons_only(X0) ) ).
+fof(c_73,axiom,! [X0] : ( ~ child_with_parent(female_child_of(X0)) | ~ parent(X0) | parent_with_sons_only(X0) ) ).
+fof(c_74,axiom,! [X0] : ( ~ child_with_parent(X0) | sex(X0,sex_of3(X0)) ) ).
+fof(c_75,axiom,! [X0] : ( ~ child_with_parent(X0) | male(sex_of3(X0)) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ( ~ sex(X0,X1) | ~ male(X1) | child_with_parent(X0) ) ).
+fof(c_105,axiom,! [X0] : ( ~ male(X0) | ~ female(X0) ) ).
+fof(c_106,axiom,! [X0] : ( ~ female(X0) | ~ male(X0) ) ).
+fof(c_107,axiom,! [X0] : ( male(X0) | female(X0) ) ).
+fof(c_108,axiom,! [X0] : ( female(X0) | male(X0) ) ).
+fof(c_109,axiom,! [X0] : ( ~ person(X0) | sex(X0,sex_of1(X0)) ) ).
+fof(c_111,axiom,! [X0] : ( person(X0) | ~ parent(X0) ) ).
+fof(c_112,axiom,! [X0] : ( ~ parent(X0) | person(X0) ) ).
+fof(c_115,axiom,! [X0] : ( ~ parent(X0) | child(X0,child_of1(X0)) ) ).
+fof(c_117,axiom,! [X0] : ( ~ parent(X0) | person(child_of1(X0)) ) ).
+fof(c_119,axiom,! [X0] : ( parent(X0) | ~ mother(X0) ) ).
+fof(c_120,axiom,! [X0] : ( ~ mother(X0) | parent(X0) ) ).
+fof(c_121,axiom,! [X0] : ( parent(X0) | ~ father(X0) ) ).
+fof(c_122,axiom,! [X0] : ( ~ father(X0) | parent(X0) ) ).
+fof(c_123,axiom,! [X0] : ( parent(X0) | ~ grandparent(X0) ) ).
+fof(c_124,axiom,! [X0] : ( ~ grandparent(X0) | parent(X0) ) ).
+fof(c_125,axiom,! [X0] : ( parent(X0) | ~ parent_with_sons_only(X0) ) ).
+fof(c_126,axiom,! [X0] : ( ~ parent_with_sons_only(X0) | parent(X0) ) ).
+fof(c_129,axiom,! [X0] : ( ~ mother(X0) | sex(X0,sex_of2(X0)) ) ).
+fof(c_131,axiom,! [X0] : ( ~ mother(X0) | female(sex_of2(X0)) ) ).
+fof(c_133,axiom,! [X0] : ( ~ mother(X0) | ~ father(X0) ) ).
+fof(c_141,axiom,! [X0] : ( ~ grandparent(X0) | child(X0,child_of2(X0)) ) ).
+fof(c_143,axiom,! [X0] : ( ~ grandparent(X0) | parent(child_of2(X0)) ) ).
+fof(c_147,axiom,! [X0] : ( ~ child_with_parent(X0) | sex(X0,sex_of3(X0)) ) ).
+fof(c_149,axiom,! [X0] : ( ~ child_with_parent(X0) | male(sex_of3(X0)) ) ).

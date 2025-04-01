@@ -1,0 +1,211 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ~ member(X0,X1,X1) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ( ~ guy(X0,X1) | man(X0,X1) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ man(X0,X1) | human_person(X0,X1) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | organism(X0,X1) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | entity(X0,X1) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | thing(X0,X1) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | singleton(X0,X1) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | specific(X0,X1) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | existent(X0,X1) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | impartial(X0,X1) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | human(X0,X1) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | animate(X0,X1) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ man(X0,X1) | male(X0,X1) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( ~ group(X0,X1) | set(X0,X1) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ( ~ set(X0,X1) | multiple(X0,X1) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | group(X0,X1) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | burger(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ burger(X0,X1) | meat(X0,X1) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ( ~ meat(X0,X1) | food(X0,X1) ) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ( ~ food(X0,X1) | substance_matter(X0,X1) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( ~ substance_matter(X0,X1) | object(X0,X1) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | entity(X0,X1) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | nonliving(X0,X1) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | impartial(X0,X1) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | eventuality(X0,X1) ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | thing(X0,X1) ) ).
+fof(c_78,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | specific(X0,X1) ) ).
+fof(c_79,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | nonexistent(X0,X1) ) ).
+fof(c_80,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(c_81,axiom,! [X0] : ! [X1] : ( ~ table(X0,X1) | furniture(X0,X1) ) ).
+fof(c_82,axiom,! [X0] : ! [X1] : ( ~ furniture(X0,X1) | instrumentality(X0,X1) ) ).
+fof(c_83,axiom,! [X0] : ! [X1] : ( ~ instrumentality(X0,X1) | artifact(X0,X1) ) ).
+fof(c_84,axiom,! [X0] : ! [X1] : ( ~ artifact(X0,X1) | object(X0,X1) ) ).
+fof(c_85,axiom,! [X0] : ! [X1] : ( ~ male(X0,X1) | ~ unisex(X0,X1) ) ).
+fof(c_86,axiom,! [X0] : ! [X1] : ( ~ singleton(X0,X1) | ~ multiple(X0,X1) ) ).
+fof(c_88,axiom,! [X0] : ! [X1] : ( ~ existent(X0,X1) | ~ nonexistent(X0,X1) ) ).
+fof(c_89,axiom,! [X0] : ! [X1] : ( ~ animate(X0,X1) | ~ nonliving(X0,X1) ) ).
+fof(c_90,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | member(X0,skf18(X1,X0),X1) ) ).
+fof(c_91,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | member(X0,skf16(X1,X0),X1) ) ).
+fof(c_92,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | member(X0,skf14(X1,X0),X1) ) ).
+fof(c_93,axiom,! [X0] : ! [X1] : ( skf18(X0,X1) != skf14(X0,X1) | ~ three(X1,X0) ) ).
+fof(c_94,axiom,! [X0] : ! [X1] : ( skf18(X0,X1) != skf16(X0,X1) | ~ three(X1,X0) ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ( skf16(X0,X1) != skf14(X0,X1) | ~ three(X1,X0) ) ).
+fof(c_96,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(X0,X1,X2) | ~ three(X0,X2) | skf18(X2,X0) = X1 | skf16(X2,X0) = X1 | skf14(X2,X0) = X1 ) ).
+fof(c_97,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( skf19(X0,X1,X2,X3,X4) != X0 | ~ member(X5,X0,X6) | ~ member(X5,X7,X6) | ~ member(X5,X8,X6) | X0 = X7 | X0 = X8 | X7 = X8 | three(X5,X6) ) ).
+fof(c_98,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( skf19(X0,X1,X2,X3,X4) != X1 | ~ member(X5,X0,X6) | ~ member(X5,X1,X6) | ~ member(X5,X7,X6) | X0 = X1 | X0 = X7 | X1 = X7 | three(X5,X6) ) ).
+fof(c_99,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( skf19(X0,X1,X2,X3,X4) != X2 | ~ member(X5,X0,X6) | ~ member(X5,X1,X6) | ~ member(X5,X2,X6) | X0 = X1 | X0 = X2 | X1 = X2 | three(X5,X6) ) ).
+fof(c_100,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ member(X0,X1,X2) | ~ member(X0,X3,X2) | ~ member(X0,X4,X2) | X1 = X3 | X1 = X4 | X3 = X4 | member(X0,skf19(X1,X3,X4,X2,X0),X2) | three(X0,X2) ) ).
+fof(c_101,axiom,actual_world(skc2) ).
+fof(c_102,axiom,three(skc2,skc3) ).
+fof(c_103,axiom,group(skc2,skc3) ).
+fof(c_104,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | young(skc2,X0) ) ).
+fof(c_105,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | guy(skc2,X0) ) ).
+fof(c_106,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skc3) | group(skc2,skf9(X1)) ) ).
+fof(c_107,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skc3) | table(skc2,skf11(X1)) ) ).
+fof(c_108,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X2,skc3) | hamburger(skc2,X0) ) ).
+fof(c_109,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X1,skc3) | event(skc2,skf12(X2,X3)) ) ).
+fof(c_110,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X1,skc3) | present(skc2,skf12(X2,X3)) ) ).
+fof(c_112,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X1,skc3) | agent(skc2,skf12(X0,X1),X1) ) ).
+fof(c_113,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X1,skc3) | with(skc2,skf12(X0,X2),X0) ) ).
+fof(c_114,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X1,skc3) | at(skc2,skf12(X0,X1),skf11(X1)) ) ).
+fof(c_815,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ guy(X1,X2) | guy(X0,X2) ) ).
+fof(c_816,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ group(X1,X3) | group(X0,X2) ) ).
+fof(c_818,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ hamburger(X1,X2) | hamburger(X0,X2) ) ).
+fof(c_819,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ sit(X1,X3) | sit(X0,X2) ) ).
+fof(c_820,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ event(X1,X3) | event(X0,X2) ) ).
+fof(c_821,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ table(X1,X3) | table(X0,X2) ) ).
+fof(c_822,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ actual_world(X1) | actual_world(X0) ) ).
+fof(c_823,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ young(X1,X2) | young(X0,X2) ) ).
+fof(c_824,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ present(X1,X3) | present(X0,X2) ) ).
+fof(c_825,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != X1 | X2 != X3 | ~ agent(X1,X3,X4) | agent(X0,X2,X4) ) ).
+fof(c_826,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != X1 | X2 != X3 | ~ with(X1,X3,X4) | with(X0,X2,X4) ) ).
+fof(c_827,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( X0 != X1 | X2 != X3 | X4 != X5 | ~ at(X1,X3,X5) | at(X0,X2,X4) ) ).
+fof(c_828,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | man(X0,X1) ) ).
+fof(c_829,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | man(skc2,X0) ) ).
+fof(c_839,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ thing(X0,X2) | ~ multiple(X1,X3) ) ).
+fof(c_840,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | ~ multiple(X0,X1) ) ).
+fof(c_850,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ entity(X0,X2) | ~ nonexistent(X1,X3) ) ).
+fof(c_851,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | ~ nonexistent(X0,X1) ) ).
+fof(c_872,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ human_person(X0,X2) | ~ nonliving(X1,X3) ) ).
+fof(c_873,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | ~ nonliving(X0,X1) ) ).
+fof(c_883,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ man(X0,X2) | ~ unisex(X1,X3) ) ).
+fof(c_884,axiom,! [X0] : ! [X1] : ( ~ man(X0,X1) | ~ unisex(X0,X1) ) ).
+fof(c_894,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ group(X0,X2) | multiple(X1,X3) ) ).
+fof(c_895,axiom,! [X0] : ! [X1] : ( ~ group(X0,X1) | multiple(X0,X1) ) ).
+fof(c_905,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ thing(X1,X3) | ~ group(X0,X2) ) ).
+fof(c_906,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | ~ group(X0,X1) ) ).
+fof(c_916,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ hamburger(X0,X2) | meat(X1,X3) ) ).
+fof(c_917,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | meat(X0,X1) ) ).
+fof(c_927,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ hamburger(X0,X2) | food(X1,X3) ) ).
+fof(c_928,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | food(X0,X1) ) ).
+fof(c_938,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ hamburger(X0,X2) | substance_matter(X1,X3) ) ).
+fof(c_939,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | substance_matter(X0,X1) ) ).
+fof(c_949,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ hamburger(X0,X2) | object(X1,X3) ) ).
+fof(c_950,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | object(X0,X1) ) ).
+fof(c_960,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ entity(X1,X3) | ~ eventuality(X0,X2) ) ).
+fof(c_961,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(c_971,axiom,! [X1] : ! [X2] : ! [X0] : ! [X3] : ( skf11(X1) != X2 | X0 != skc2 | ~ member(skc2,X3,skc3) | furniture(X0,X2) ) ).
+fof(c_972,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skc3) | furniture(skc2,skf11(X1)) ) ).
+fof(c_982,axiom,! [X1] : ! [X2] : ! [X0] : ! [X3] : ( skf11(X1) != X2 | X0 != skc2 | ~ member(skc2,X3,skc3) | instrumentality(X0,X2) ) ).
+fof(c_983,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skc3) | instrumentality(skc2,skf11(X1)) ) ).
+fof(c_993,axiom,! [X1] : ! [X2] : ! [X0] : ! [X3] : ( skf11(X1) != X2 | X0 != skc2 | ~ member(skc2,X3,skc3) | artifact(X0,X2) ) ).
+fof(c_994,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skc3) | artifact(skc2,skf11(X1)) ) ).
+fof(c_1004,axiom,! [X1] : ! [X2] : ! [X0] : ! [X3] : ( skf11(X1) != X2 | X0 != skc2 | ~ member(skc2,X3,skc3) | object(X0,X2) ) ).
+fof(c_1005,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skc3) | object(skc2,skf11(X1)) ) ).
+fof(c_1015,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skf9(X3)) | ~ member(skc2,X4,skc3) | object(X0,X1) ) ).
+fof(c_1016,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X2,skc3) | object(skc2,X0) ) ).
+fof(c_1032,axiom,! [X1] : ! [X2] : ! [X3] : ! [X0] : ! [X4] : ! [X5] : ( skf12(X1,X2) != X3 | X0 != skc2 | ~ member(skc2,X4,skf9(X5)) | ~ member(skc2,X5,skc3) | eventuality(X0,X3) ) ).
+fof(c_1033,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X1,skc3) | eventuality(skc2,skf12(X2,X3)) ) ).
+fof(c_1047,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | ~ unisex(X0,X1) ) ).
+fof(c_1048,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | ~ unisex(skc2,X0) ) ).
+fof(c_1056,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | human_person(X0,X1) ) ).
+fof(c_1057,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | human_person(skc2,X0) ) ).
+fof(c_1069,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | ~ nonliving(X0,X1) ) ).
+fof(c_1070,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | ~ nonliving(skc2,X0) ) ).
+fof(c_1078,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | organism(X0,X1) ) ).
+fof(c_1079,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | organism(skc2,X0) ) ).
+fof(c_1093,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | entity(X0,X1) ) ).
+fof(c_1094,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | entity(skc2,X0) ) ).
+fof(c_1104,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | ~ object(X0,X1) ) ).
+fof(c_1105,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | ~ object(skc2,X0) ) ).
+fof(c_1115,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ group(X1,X3) | ~ eventuality(X0,X2) ) ).
+fof(c_1116,axiom,! [X0] : ! [X1] : ( ~ group(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(c_1124,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ entity(X0,X2) | ~ group(X1,X3) ) ).
+fof(c_1125,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | ~ group(X0,X1) ) ).
+fof(c_1137,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | ~ eventuality(X0,X1) ) ).
+fof(c_1138,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | ~ eventuality(skc2,X0) ) ).
+fof(c_1150,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ group(X1,X3) | ~ object(X0,X2) ) ).
+fof(c_1151,axiom,! [X0] : ! [X1] : ( ~ group(X0,X1) | ~ object(X0,X1) ) ).
+fof(c_1159,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ object(X0,X2) | ~ eventuality(X1,X3) ) ).
+fof(c_1160,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(c_1168,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | ~ group(X0,X1) ) ).
+fof(c_1169,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | ~ group(skc2,X0) ) ).
+fof(c_1230,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ three(X0,X2) | ~ object(X1,X3) ) ).
+fof(c_1231,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | ~ object(X0,X1) ) ).
+fof(c_1239,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ three(X0,X2) | ~ eventuality(X1,X3) ) ).
+fof(c_1240,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(c_1248,axiom,! [X0] : ! [X1] : ( X0 != skc2 | X1 != skc3 | ~ object(X0,X1) ) ).
+fof(c_1249,axiom,~ object(skc2,skc3) ).
+fof(c_1253,axiom,! [X0] : ! [X1] : ( X0 != skc2 | X1 != skc3 | ~ eventuality(X0,X1) ) ).
+fof(c_1254,axiom,~ eventuality(skc2,skc3) ).
+fof(c_1258,axiom,! [X1] : ! [X2] : ! [X0] : ! [X3] : ( skf9(X1) != X2 | X0 != skc2 | ~ member(skc2,X3,skc3) | ~ object(X0,X2) ) ).
+fof(c_1259,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skc3) | ~ object(skc2,skf9(X1)) ) ).
+fof(c_1267,axiom,! [X1] : ! [X2] : ! [X0] : ! [X3] : ( skf9(X1) != X2 | X0 != skc2 | ~ member(skc2,X3,skc3) | ~ eventuality(X0,X2) ) ).
+fof(c_1268,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skc3) | ~ eventuality(skc2,skf9(X1)) ) ).
+fof(c_1276,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc2 | X1 != X2 | ~ member(skc2,X2,skc3) | ~ three(X0,X1) ) ).
+fof(c_1277,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | ~ three(skc2,X0) ) ).
+fof(c_1287,axiom,! [X0] : ! [X1] : ! [X2] : ( skf9(X0) != X1 | skc2 != skc2 | ~ member(skc2,X1,skc3) | ~ member(skc2,X2,skc3) ) ).
+fof(c_1288,axiom,! [X0] : ! [X1] : ( ~ member(skc2,skf9(X0),skc3) | ~ member(skc2,X1,skc3) ) ).
+fof(c_4895,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | ~ sP0_iProver_split ) ).
+fof(c_4896,axiom,! [X0] : ( ~ member(skc2,skf9(X0),skc3) | ~ sP1_iProver_split ) ).
+fof(c_4897,axiom,sP0_iProver_split | sP1_iProver_split ).
+fof(c_4898,axiom,! [X0] : ( ~ eventuality(skc2,skf9(X0)) | ~ sP2_iProver_split ) ).
+fof(c_4899,axiom,sP0_iProver_split | sP2_iProver_split ).
+fof(c_4900,axiom,! [X0] : ( ~ object(skc2,skf9(X0)) | ~ sP3_iProver_split ) ).
+fof(c_4901,axiom,sP0_iProver_split | sP3_iProver_split ).
+fof(c_4902,axiom,! [X0] : ! [X1] : ( eventuality(skc2,skf12(X0,X1)) | ~ sP4_iProver_split ) ).
+fof(c_4903,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X1,skc3) | ~ sP5_iProver_split ) ).
+fof(c_4904,axiom,sP4_iProver_split | sP5_iProver_split ).
+fof(c_4905,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skf9(X1)) | object(skc2,X0) | ~ sP6_iProver_split ) ).
+fof(c_4906,axiom,sP0_iProver_split | sP6_iProver_split ).
+fof(c_4907,axiom,! [X0] : ( object(skc2,skf11(X0)) | ~ sP7_iProver_split ) ).
+fof(c_4908,axiom,sP0_iProver_split | sP7_iProver_split ).
+fof(c_4910,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_5417,axiom,~ three(skc2,skf18(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5418,axiom,~ three(skc2,skf18(skc3,skc2)) ).
+fof(c_5423,axiom,~ three(skc2,skf16(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5424,axiom,~ three(skc2,skf16(skc3,skc2)) ).
+fof(c_5429,axiom,~ three(skc2,skf14(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5430,axiom,~ three(skc2,skf14(skc3,skc2)) ).
+fof(c_5443,axiom,~ three(skc2,skc3) | ~ sP0_iProver_split ).
+fof(c_5446,axiom,~ sP0_iProver_split ).
+fof(c_5447,axiom,sP7_iProver_split ).
+fof(c_5448,axiom,sP6_iProver_split ).
+fof(c_5449,axiom,sP3_iProver_split ).
+fof(c_5450,axiom,sP2_iProver_split ).
+fof(c_5451,axiom,sP1_iProver_split ).
+fof(c_5452,axiom,! [X0] : object(skc2,skf11(X0)) ).
+fof(c_5454,axiom,! [X0] : ~ eventuality(skc2,skf9(X0)) ).
+fof(c_5457,axiom,! [X0] : ~ object(skc2,skf9(X0)) ).
+fof(c_5464,axiom,! [X0] : ~ member(skc2,skf9(X0),skc3) ).
+fof(c_5467,axiom,! [X0] : ! [X1] : ( object(skc2,X0) | ~ member(skc2,X0,skf9(X1)) ) ).
+fof(c_5468,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skf9(X1)) | object(skc2,X0) ) ).
+fof(c_5474,axiom,! [X0] : ( ~ three(skc2,skf9(X0)) | object(skc2,skf18(skf9(X0),skc2)) ) ).
+fof(c_5475,axiom,! [X0] : ( ~ three(skc2,skf9(X0)) | object(skc2,skf16(skf9(X0),skc2)) ) ).
+fof(c_5476,axiom,! [X0] : ( ~ three(skc2,skf9(X0)) | object(skc2,skf14(skf9(X0),skc2)) ) ).
+fof(c_5533,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | ~ three(skc2,skf9(X0)) | ~ sP5_iProver_split ) ).
+fof(c_5558,axiom,~ three(skc2,skf9(skf18(skc3,skc2))) | ~ three(skc2,skc3) | ~ sP5_iProver_split ).
+fof(c_5559,axiom,~ three(skc2,skf9(skf16(skc3,skc2))) | ~ three(skc2,skc3) | ~ sP5_iProver_split ).
+fof(c_5560,axiom,~ three(skc2,skf9(skf14(skc3,skc2))) | ~ three(skc2,skc3) | ~ sP5_iProver_split ).
+fof(c_5561,axiom,~ three(skc2,skf9(skf14(skc3,skc2))) | ~ sP5_iProver_split ).
+fof(c_5564,axiom,~ three(skc2,skf9(skf16(skc3,skc2))) | ~ sP5_iProver_split ).
+fof(c_5567,axiom,~ three(skc2,skf9(skf18(skc3,skc2))) | ~ sP5_iProver_split ).
+fof(c_5614,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X2,skf9(X1)) | ~ member(skc2,X3,skf9(X1)) | X0 = X2 | X0 = X3 | X2 = X3 | object(skc2,skf19(X0,X2,X3,skf9(X1),skc2)) | three(skc2,skf9(X1)) ) ).
+fof(c_5652,axiom,! [X0] : ( ~ eventuality(skc2,skf18(skf9(X0),skc2)) | ~ three(skc2,skf9(X0)) ) ).
+fof(c_5653,axiom,! [X0] : ( ~ eventuality(skc2,skf16(skf9(X0),skc2)) | ~ three(skc2,skf9(X0)) ) ).
+fof(c_5654,axiom,! [X0] : ( ~ eventuality(skc2,skf14(skf9(X0),skc2)) | ~ three(skc2,skf9(X0)) ) ).
+fof(c_5669,axiom,! [X0] : ~ eventuality(skc2,skf11(X0)) ).
+fof(c_5680,axiom,~ object(skc2,skf18(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5681,axiom,~ object(skc2,skf16(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5682,axiom,~ object(skc2,skf14(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5684,axiom,~ object(skc2,skf14(skc3,skc2)) ).
+fof(c_5685,axiom,~ object(skc2,skf16(skc3,skc2)) ).
+fof(c_5686,axiom,~ object(skc2,skf18(skc3,skc2)) ).
+fof(c_5709,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ eventuality(skc2,skf19(X0,X1,X2,skf9(X3),skc2)) | ~ member(skc2,X0,skf9(X3)) | ~ member(skc2,X1,skf9(X3)) | ~ member(skc2,X2,skf9(X3)) | X0 = X1 | X0 = X2 | X1 = X2 | three(skc2,skf9(X3)) ) ).
+fof(c_5722,axiom,~ eventuality(skc2,skf18(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5723,axiom,~ eventuality(skc2,skf16(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5724,axiom,~ eventuality(skc2,skf14(skc3,skc2)) | ~ three(skc2,skc3) ).
+fof(c_5726,axiom,~ eventuality(skc2,skf14(skc3,skc2)) ).
+fof(c_5727,axiom,~ eventuality(skc2,skf16(skc3,skc2)) ).
+fof(c_5728,axiom,~ eventuality(skc2,skf18(skc3,skc2)) ).

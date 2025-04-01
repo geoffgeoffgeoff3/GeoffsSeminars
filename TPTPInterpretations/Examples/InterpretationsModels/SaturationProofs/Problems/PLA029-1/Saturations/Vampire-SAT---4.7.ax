@@ -1,0 +1,10 @@
+fof(pickup_3,axiom,! [X0] : ! [X1] : ! [X3] : ! [X2] : ( holds(on(X0,X1),do(pickup(X3),X2)) | ~ holds(on(X0,X1),X2) | ~ differ(X0,X3) ) ).
+fof(putdown_2,axiom,! [X0] : ! [X1] : ! [X2] : ( holds(on(X0,X1),do(putdown(X0,X1),X2)) | ~ holds(clear(X1),X2) | ~ holds(holding(X0),X2) ) ).
+fof(putdown_4,axiom,! [X0] : ! [X1] : ! [X3] : ! [X4] : ! [X2] : ( holds(on(X0,X1),do(putdown(X3,X4),X2)) | ~ holds(on(X0,X1),X2) ) ).
+fof(putdown_3,axiom,! [X0] : ! [X1] : ! [X2] : ( holds(clear(X0),do(putdown(X0,X1),X2)) | ~ holds(clear(X1),X2) | ~ holds(holding(X0),X2) ) ).
+fof(putdown_5,axiom,! [X3] : ! [X0] : ! [X1] : ! [X2] : ( holds(clear(X3),do(putdown(X0,X1),X2)) | ~ holds(clear(X3),X2) | ~ differ(X3,X1) ) ).
+fof(pickup_4,axiom,! [X0] : ! [X3] : ! [X2] : ( holds(clear(X0),do(pickup(X3),X2)) | ~ holds(clear(X0),X2) | ~ differ(X0,X3) ) ).
+fof(pickup_2,axiom,! [X1] : ! [X0] : ! [X2] : ( holds(clear(X1),do(pickup(X0),X2)) | ~ holds(clear(X0),X2) | ~ holds(on(X0,X1),X2) | ~ holds(empty,X2) ) ).
+fof(putdown_1,axiom,! [X0] : ! [X1] : ! [X2] : ( holds(empty,do(putdown(X0,X1),X2)) | ~ holds(clear(X1),X2) | ~ holds(holding(X0),X2) ) ).
+fof(pickup_1,axiom,! [X0] : ! [X2] : ( holds(holding(X0),do(pickup(X0),X2)) | ~ holds(empty,X2) | ~ holds(clear(X0),X2) | ~ differ(X0,table) ) ).
+fof(and_definition,axiom,! [X0] : ! [X1] : ! [X2] : ( holds(and(X0,X1),X2) | ~ holds(X0,X2) | ~ holds(X1,X2) ) ).

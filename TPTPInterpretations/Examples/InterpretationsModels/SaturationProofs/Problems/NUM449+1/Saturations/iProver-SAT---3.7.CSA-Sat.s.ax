@@ -1,0 +1,433 @@
+fof(f2,axiom,aInteger0(sz00) ).
+fof(f3,axiom,aInteger0(sz10) ).
+fof(f4,axiom,! [X0] : ( aInteger0(X0) => aInteger0(smndt0(X0)) ) ).
+fof(f5,axiom,! [X0] : ! [X1] : ( ( aInteger0(X1) & aInteger0(X0) ) => aInteger0(sdtpldt0(X0,X1)) ) ).
+fof(f6,axiom,! [X0] : ! [X1] : ( ( aInteger0(X1) & aInteger0(X0) ) => aInteger0(sdtasdt0(X0,X1)) ) ).
+fof(f7,axiom,! [X0] : ! [X1] : ! [X2] : ( ( aInteger0(X2) & aInteger0(X1) & aInteger0(X0) ) => sdtpldt0(X0,sdtpldt0(X1,X2)) = sdtpldt0(sdtpldt0(X0,X1),X2) ) ).
+fof(f8,axiom,! [X0] : ! [X1] : ( ( aInteger0(X1) & aInteger0(X0) ) => sdtpldt0(X0,X1) = sdtpldt0(X1,X0) ) ).
+fof(f9,axiom,! [X0] : ( aInteger0(X0) => ( sdtpldt0(sz00,X0) = X0 & sdtpldt0(X0,sz00) = X0 ) ) ).
+fof(f10,axiom,! [X0] : ( aInteger0(X0) => ( sz00 = sdtpldt0(smndt0(X0),X0) & sz00 = sdtpldt0(X0,smndt0(X0)) ) ) ).
+fof(f11,axiom,! [X0] : ! [X1] : ! [X2] : ( ( aInteger0(X2) & aInteger0(X1) & aInteger0(X0) ) => sdtasdt0(X0,sdtasdt0(X1,X2)) = sdtasdt0(sdtasdt0(X0,X1),X2) ) ).
+fof(f12,axiom,! [X0] : ! [X1] : ( ( aInteger0(X1) & aInteger0(X0) ) => sdtasdt0(X0,X1) = sdtasdt0(X1,X0) ) ).
+fof(f13,axiom,! [X0] : ( aInteger0(X0) => ( sdtasdt0(sz10,X0) = X0 & sdtasdt0(X0,sz10) = X0 ) ) ).
+fof(f14,axiom,! [X0] : ! [X1] : ! [X2] : ( ( aInteger0(X2) & aInteger0(X1) & aInteger0(X0) ) => ( sdtasdt0(sdtpldt0(X0,X1),X2) = sdtpldt0(sdtasdt0(X0,X2),sdtasdt0(X1,X2)) & sdtasdt0(X0,sdtpldt0(X1,X2)) = sdtpldt0(sdtasdt0(X0,X1),sdtasdt0(X0,X2)) ) ) ).
+fof(f15,axiom,! [X0] : ( aInteger0(X0) => ( sz00 = sdtasdt0(sz00,X0) & sz00 = sdtasdt0(X0,sz00) ) ) ).
+fof(f16,axiom,! [X0] : ( aInteger0(X0) => ( smndt0(X0) = sdtasdt0(X0,smndt0(sz10)) & smndt0(X0) = sdtasdt0(smndt0(sz10),X0) ) ) ).
+fof(f17,axiom,! [X0] : ! [X1] : ( ( aInteger0(X1) & aInteger0(X0) ) => ( sz00 = sdtasdt0(X0,X1) => ( sz00 = X1 | sz00 = X0 ) ) ) ).
+fof(f18,axiom,! [X0] : ( aInteger0(X0) => ! [X1] : ( aDivisorOf0(X1,X0) <=> ( ? [X2] : ( sdtasdt0(X1,X2) = X0 & aInteger0(X2) ) & sz00 != X1 & aInteger0(X1) ) ) ) ).
+fof(f19,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sz00 != X2 & aInteger0(X2) & aInteger0(X1) & aInteger0(X0) ) => ( sdteqdtlpzmzozddtrp0(X0,X1,X2) <=> aDivisorOf0(X2,sdtpldt0(X0,smndt0(X1))) ) ) ).
+fof(f20,axiom,! [X0] : ! [X1] : ( ( sz00 != X1 & aInteger0(X1) & aInteger0(X0) ) => sdteqdtlpzmzozddtrp0(X0,X0,X1) ) ).
+fof(f21,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sz00 != X2 & aInteger0(X2) & aInteger0(X1) & aInteger0(X0) ) => ( sdteqdtlpzmzozddtrp0(X0,X1,X2) => sdteqdtlpzmzozddtrp0(X1,X0,X2) ) ) ).
+fof(f22,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ( aInteger0(X3) & sz00 != X2 & aInteger0(X2) & aInteger0(X1) & aInteger0(X0) ) => ( ( sdteqdtlpzmzozddtrp0(X1,X3,X2) & sdteqdtlpzmzozddtrp0(X0,X1,X2) ) => sdteqdtlpzmzozddtrp0(X0,X3,X2) ) ) ).
+fof(f23,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ( sz00 != X3 & aInteger0(X3) & sz00 != X2 & aInteger0(X2) & aInteger0(X1) & aInteger0(X0) ) => ( sdteqdtlpzmzozddtrp0(X0,X1,sdtasdt0(X2,X3)) => ( sdteqdtlpzmzozddtrp0(X0,X1,X3) & sdteqdtlpzmzozddtrp0(X0,X1,X2) ) ) ) ).
+fof(f25,axiom,! [X0] : ( aInteger0(X0) => ( ? [X1] : ( isPrime0(X1) & aDivisorOf0(X1,X0) ) <=> ( smndt0(sz10) != X0 & sz10 != X0 ) ) ) ).
+fof(f28,axiom,! [X0] : ( aSet0(X0) => ! [X1] : ( aSubsetOf0(X1,X0) <=> ( ! [X2] : ( aElementOf0(X2,X1) => aElementOf0(X2,X0) ) & aSet0(X1) ) ) ) ).
+fof(f30,axiom,! [X0] : ! [X1] : ( ( aSubsetOf0(X1,cS1395) & aSubsetOf0(X0,cS1395) ) => ! [X2] : ( sdtbsmnsldt0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) ) & aInteger0(X3) ) ) & aSet0(X2) ) ) ) ).
+fof(f31,axiom,! [X0] : ! [X1] : ( ( aSubsetOf0(X1,cS1395) & aSubsetOf0(X0,cS1395) ) => ! [X2] : ( sdtslmnbsdt0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( aElementOf0(X3,X1) & aElementOf0(X3,X0) & aInteger0(X3) ) ) & aSet0(X2) ) ) ) ).
+fof(f32,axiom,! [X0] : ( ( ! [X1] : ( aElementOf0(X1,X0) => aSubsetOf0(X1,cS1395) ) & aSet0(X0) ) => ! [X1] : ( sbsmnsldt0(X0) = X1 <=> ( ! [X2] : ( aElementOf0(X2,X1) <=> ( ? [X3] : ( aElementOf0(X2,X3) & aElementOf0(X3,X0) ) & aInteger0(X2) ) ) & aSet0(X1) ) ) ) ).
+fof(f33,axiom,! [X0] : ( aSubsetOf0(X0,cS1395) => ! [X1] : ( stldt0(X0) = X1 <=> ( ! [X2] : ( aElementOf0(X2,X1) <=> ( ~ aElementOf0(X2,X0) & aInteger0(X2) ) ) & aSet0(X1) ) ) ) ).
+fof(f34,axiom,! [X0] : ! [X1] : ( ( sz00 != X1 & aInteger0(X1) & aInteger0(X0) ) => ! [X2] : ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) ) & aSet0(X2) ) ) ) ).
+fof(f35,axiom,! [X0] : ( aSubsetOf0(X0,cS1395) => ( isOpen0(X0) <=> ! [X1] : ( aElementOf0(X1,X0) => ? [X2] : ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X1,X2),X0) & sz00 != X2 & aInteger0(X2) ) ) ) ) ).
+fof(f36,axiom,! [X0] : ( aSubsetOf0(X0,cS1395) => ( isClosed0(X0) <=> isOpen0(stldt0(X0)) ) ) ).
+fof(f37,axiom,! [X0] : ( ( ! [X1] : ( aElementOf0(X1,X0) => ( isOpen0(X1) & aSubsetOf0(X1,cS1395) ) ) & aSet0(X0) ) => isOpen0(sbsmnsldt0(X0)) ) ).
+fof(f38,axiom,! [X0] : ! [X1] : ( ( isOpen0(X1) & isOpen0(X0) & aSubsetOf0(X1,cS1395) & aSubsetOf0(X0,cS1395) ) => isOpen0(sdtslmnbsdt0(X0,X1)) ) ).
+fof(f39,axiom,! [X0] : ! [X1] : ( ( isClosed0(X1) & isClosed0(X0) & aSubsetOf0(X1,cS1395) & aSubsetOf0(X0,cS1395) ) => isClosed0(sdtbsmnsldt0(X0,X1)) ) ).
+fof(f40,axiom,! [X0] : ( ( ! [X1] : ( aElementOf0(X1,X0) => ( isClosed0(X1) & aSubsetOf0(X1,cS1395) ) ) & isFinite0(X0) & aSet0(X0) ) => isClosed0(sbsmnsldt0(X0)) ) ).
+fof(f41,axiom,! [X0] : ! [X1] : ( ( sz00 != X1 & aInteger0(X1) & aInteger0(X0) ) => ( isClosed0(szAzrzSzezqlpdtcmdtrp0(X0,X1)) & aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X0,X1),cS1395) ) ) ).
+fof(f42,axiom,xS = cS2043 ).
+fof(f43,axiom,stldt0(sbsmnsldt0(xS)) = cS2076 ).
+fof(f44,axiom,isFinite0(xS) ).
+fof(f45,axiom,isClosed0(sbsmnsldt0(xS)) ).
+fof(f46,axiom,~ isClosed0(sbsmnsldt0(xS)) ).
+fof(f52,axiom,! [X0] : ( ( ! [X1] : ( aElementOf0(X1,X0) => aSubsetOf0(X1,cS1395) ) & aSet0(X0) ) => ! [X2] : ( sbsmnsldt0(X0) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( ? [X4] : ( aElementOf0(X3,X4) & aElementOf0(X4,X0) ) & aInteger0(X3) ) ) & aSet0(X2) ) ) ) ).
+fof(f53,axiom,~ isClosed0(sbsmnsldt0(xS)) ).
+fof(f54,axiom,! [X0] : ( aInteger0(smndt0(X0)) | ~ aInteger0(X0) ) ).
+fof(f55,axiom,! [X0] : ! [X1] : ( aInteger0(sdtpldt0(X0,X1)) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f56,axiom,! [X0] : ! [X1] : ( aInteger0(sdtpldt0(X0,X1)) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f57,axiom,! [X0] : ! [X1] : ( aInteger0(sdtasdt0(X0,X1)) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f58,axiom,! [X0] : ! [X1] : ( aInteger0(sdtasdt0(X0,X1)) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f59,axiom,! [X0] : ! [X1] : ! [X2] : ( sdtpldt0(X0,sdtpldt0(X1,X2)) = sdtpldt0(sdtpldt0(X0,X1),X2) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f60,axiom,! [X0] : ! [X1] : ! [X2] : ( sdtpldt0(X0,sdtpldt0(X1,X2)) = sdtpldt0(sdtpldt0(X0,X1),X2) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f61,axiom,! [X0] : ! [X1] : ( sdtpldt0(X0,X1) = sdtpldt0(X1,X0) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f62,axiom,! [X0] : ! [X1] : ( sdtpldt0(X0,X1) = sdtpldt0(X1,X0) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f63,axiom,! [X0] : ( ( sdtpldt0(sz00,X0) = X0 & sdtpldt0(X0,sz00) = X0 ) | ~ aInteger0(X0) ) ).
+fof(f64,axiom,! [X0] : ( ( sz00 = sdtpldt0(smndt0(X0),X0) & sz00 = sdtpldt0(X0,smndt0(X0)) ) | ~ aInteger0(X0) ) ).
+fof(f65,axiom,! [X0] : ! [X1] : ! [X2] : ( sdtasdt0(X0,sdtasdt0(X1,X2)) = sdtasdt0(sdtasdt0(X0,X1),X2) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f66,axiom,! [X0] : ! [X1] : ! [X2] : ( sdtasdt0(X0,sdtasdt0(X1,X2)) = sdtasdt0(sdtasdt0(X0,X1),X2) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f67,axiom,! [X0] : ! [X1] : ( sdtasdt0(X0,X1) = sdtasdt0(X1,X0) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f68,axiom,! [X0] : ! [X1] : ( sdtasdt0(X0,X1) = sdtasdt0(X1,X0) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f69,axiom,! [X0] : ( ( sdtasdt0(sz10,X0) = X0 & sdtasdt0(X0,sz10) = X0 ) | ~ aInteger0(X0) ) ).
+fof(f70,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sdtasdt0(sdtpldt0(X0,X1),X2) = sdtpldt0(sdtasdt0(X0,X2),sdtasdt0(X1,X2)) & sdtasdt0(X0,sdtpldt0(X1,X2)) = sdtpldt0(sdtasdt0(X0,X1),sdtasdt0(X0,X2)) ) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f71,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sdtasdt0(sdtpldt0(X0,X1),X2) = sdtpldt0(sdtasdt0(X0,X2),sdtasdt0(X1,X2)) & sdtasdt0(X0,sdtpldt0(X1,X2)) = sdtpldt0(sdtasdt0(X0,X1),sdtasdt0(X0,X2)) ) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f72,axiom,! [X0] : ( ( sz00 = sdtasdt0(sz00,X0) & sz00 = sdtasdt0(X0,sz00) ) | ~ aInteger0(X0) ) ).
+fof(f73,axiom,! [X0] : ( ( smndt0(X0) = sdtasdt0(X0,smndt0(sz10)) & smndt0(X0) = sdtasdt0(smndt0(sz10),X0) ) | ~ aInteger0(X0) ) ).
+fof(f74,axiom,! [X0] : ! [X1] : ( sz00 = X1 | sz00 = X0 | sz00 != sdtasdt0(X0,X1) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f75,axiom,! [X0] : ! [X1] : ( sz00 = X1 | sz00 = X0 | sz00 != sdtasdt0(X0,X1) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f76,axiom,! [X0] : ( ! [X1] : ( aDivisorOf0(X1,X0) <=> ( ? [X2] : ( sdtasdt0(X1,X2) = X0 & aInteger0(X2) ) & sz00 != X1 & aInteger0(X1) ) ) | ~ aInteger0(X0) ) ).
+fof(f77,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sdteqdtlpzmzozddtrp0(X0,X1,X2) <=> aDivisorOf0(X2,sdtpldt0(X0,smndt0(X1))) ) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f78,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sdteqdtlpzmzozddtrp0(X0,X1,X2) <=> aDivisorOf0(X2,sdtpldt0(X0,smndt0(X1))) ) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f79,axiom,! [X0] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X0,X0,X1) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f80,axiom,! [X0] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X0,X0,X1) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f81,axiom,! [X0] : ! [X1] : ! [X2] : ( sdteqdtlpzmzozddtrp0(X1,X0,X2) | ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f82,axiom,! [X0] : ! [X1] : ! [X2] : ( sdteqdtlpzmzozddtrp0(X1,X0,X2) | ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f83,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( sdteqdtlpzmzozddtrp0(X0,X3,X2) | ~ sdteqdtlpzmzozddtrp0(X1,X3,X2) | ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ aInteger0(X3) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f84,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( sdteqdtlpzmzozddtrp0(X0,X3,X2) | ~ sdteqdtlpzmzozddtrp0(X1,X3,X2) | ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ aInteger0(X3) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f85,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ( sdteqdtlpzmzozddtrp0(X0,X1,X3) & sdteqdtlpzmzozddtrp0(X0,X1,X2) ) | ~ sdteqdtlpzmzozddtrp0(X0,X1,sdtasdt0(X2,X3)) | sz00 = X3 | ~ aInteger0(X3) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f86,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ( sdteqdtlpzmzozddtrp0(X0,X1,X3) & sdteqdtlpzmzozddtrp0(X0,X1,X2) ) | ~ sdteqdtlpzmzozddtrp0(X0,X1,sdtasdt0(X2,X3)) | sz00 = X3 | ~ aInteger0(X3) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f87,axiom,! [X0] : ( ( ? [X1] : ( isPrime0(X1) & aDivisorOf0(X1,X0) ) <=> ( smndt0(sz10) != X0 & sz10 != X0 ) ) | ~ aInteger0(X0) ) ).
+fof(f88,axiom,! [X0] : ( ! [X1] : ( aSubsetOf0(X1,X0) <=> ( ! [X2] : ( aElementOf0(X2,X0) | ~ aElementOf0(X2,X1) ) & aSet0(X1) ) ) | ~ aSet0(X0) ) ).
+fof(f89,axiom,! [X0] : ! [X1] : ( ! [X2] : ( sdtbsmnsldt0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) ) & aInteger0(X3) ) ) & aSet0(X2) ) ) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f90,axiom,! [X0] : ! [X1] : ( ! [X2] : ( sdtbsmnsldt0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) ) & aInteger0(X3) ) ) & aSet0(X2) ) ) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f91,axiom,! [X0] : ! [X1] : ( ! [X2] : ( sdtslmnbsdt0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( aElementOf0(X3,X1) & aElementOf0(X3,X0) & aInteger0(X3) ) ) & aSet0(X2) ) ) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f92,axiom,! [X0] : ! [X1] : ( ! [X2] : ( sdtslmnbsdt0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( aElementOf0(X3,X1) & aElementOf0(X3,X0) & aInteger0(X3) ) ) & aSet0(X2) ) ) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f93,axiom,! [X0] : ( ! [X2] : ( sbsmnsldt0(X0) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( ? [X4] : ( aElementOf0(X3,X4) & aElementOf0(X4,X0) ) & aInteger0(X3) ) ) & aSet0(X2) ) ) | ? [X1] : ( ~ aSubsetOf0(X1,cS1395) & aElementOf0(X1,X0) ) | ~ aSet0(X0) ) ).
+fof(f94,axiom,! [X0] : ( ! [X2] : ( sbsmnsldt0(X0) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( ? [X4] : ( aElementOf0(X3,X4) & aElementOf0(X4,X0) ) & aInteger0(X3) ) ) & aSet0(X2) ) ) | ? [X1] : ( ~ aSubsetOf0(X1,cS1395) & aElementOf0(X1,X0) ) | ~ aSet0(X0) ) ).
+fof(f95,axiom,! [X0] : ( ! [X1] : ( stldt0(X0) = X1 <=> ( ! [X2] : ( aElementOf0(X2,X1) <=> ( ~ aElementOf0(X2,X0) & aInteger0(X2) ) ) & aSet0(X1) ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f96,axiom,! [X0] : ! [X1] : ( ! [X2] : ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) ) & aSet0(X2) ) ) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f97,axiom,! [X0] : ! [X1] : ( ! [X2] : ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) ) & aSet0(X2) ) ) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f98,axiom,! [X0] : ( ( isOpen0(X0) <=> ! [X1] : ( ? [X2] : ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X1,X2),X0) & sz00 != X2 & aInteger0(X2) ) | ~ aElementOf0(X1,X0) ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f99,axiom,! [X0] : ( ( isClosed0(X0) <=> isOpen0(stldt0(X0)) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f100,axiom,! [X0] : ( isOpen0(sbsmnsldt0(X0)) | ? [X1] : ( ( ~ isOpen0(X1) | ~ aSubsetOf0(X1,cS1395) ) & aElementOf0(X1,X0) ) | ~ aSet0(X0) ) ).
+fof(f101,axiom,! [X0] : ( isOpen0(sbsmnsldt0(X0)) | ? [X1] : ( ( ~ isOpen0(X1) | ~ aSubsetOf0(X1,cS1395) ) & aElementOf0(X1,X0) ) | ~ aSet0(X0) ) ).
+fof(f102,axiom,! [X0] : ! [X1] : ( isOpen0(sdtslmnbsdt0(X0,X1)) | ~ isOpen0(X1) | ~ isOpen0(X0) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f103,axiom,! [X0] : ! [X1] : ( isOpen0(sdtslmnbsdt0(X0,X1)) | ~ isOpen0(X1) | ~ isOpen0(X0) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f104,axiom,! [X0] : ! [X1] : ( isClosed0(sdtbsmnsldt0(X0,X1)) | ~ isClosed0(X1) | ~ isClosed0(X0) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f105,axiom,! [X0] : ! [X1] : ( isClosed0(sdtbsmnsldt0(X0,X1)) | ~ isClosed0(X1) | ~ isClosed0(X0) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f106,axiom,! [X0] : ( isClosed0(sbsmnsldt0(X0)) | ? [X1] : ( ( ~ isClosed0(X1) | ~ aSubsetOf0(X1,cS1395) ) & aElementOf0(X1,X0) ) | ~ isFinite0(X0) | ~ aSet0(X0) ) ).
+fof(f107,axiom,! [X0] : ( isClosed0(sbsmnsldt0(X0)) | ? [X1] : ( ( ~ isClosed0(X1) | ~ aSubsetOf0(X1,cS1395) ) & aElementOf0(X1,X0) ) | ~ isFinite0(X0) | ~ aSet0(X0) ) ).
+fof(f108,axiom,! [X0] : ! [X1] : ( ( isClosed0(szAzrzSzezqlpdtcmdtrp0(X0,X1)) & aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X0,X1),cS1395) ) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f109,axiom,! [X0] : ! [X1] : ( ( isClosed0(szAzrzSzezqlpdtcmdtrp0(X0,X1)) & aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X0,X1),cS1395) ) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f110,axiom,! [X1] : ! [X0] : ! [X2] : ( sP0(X1,X0,X2) <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) ) & aInteger0(X3) ) ) & aSet0(X2) ) ) ).
+fof(f111,axiom,! [X0] : ! [X1] : ( ! [X2] : ( sdtbsmnsldt0(X0,X1) = X2 <=> sP0(X1,X0,X2) ) | ~ sP1(X0,X1) ) ).
+fof(f112,axiom,! [X0] : ! [X1] : ( sP1(X0,X1) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f113,axiom,! [X1] : ! [X0] : ! [X2] : ( sP2(X1,X0,X2) <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( aElementOf0(X3,X1) & aElementOf0(X3,X0) & aInteger0(X3) ) ) & aSet0(X2) ) ) ).
+fof(f114,axiom,! [X0] : ! [X1] : ( ! [X2] : ( sdtslmnbsdt0(X0,X1) = X2 <=> sP2(X1,X0,X2) ) | ~ sP3(X0,X1) ) ).
+fof(f115,axiom,! [X0] : ! [X1] : ( sP3(X0,X1) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f116,axiom,! [X0] : ! [X2] : ( sP4(X0,X2) <=> ( ! [X3] : ( aElementOf0(X3,X2) <=> ( ? [X4] : ( aElementOf0(X3,X4) & aElementOf0(X4,X0) ) & aInteger0(X3) ) ) & aSet0(X2) ) ) ).
+fof(f117,axiom,! [X0] : ( ! [X2] : ( sbsmnsldt0(X0) = X2 <=> sP4(X0,X2) ) | ~ sP5(X0) ) ).
+fof(f118,axiom,! [X0] : ( sP5(X0) | ? [X1] : ( ~ aSubsetOf0(X1,cS1395) & aElementOf0(X1,X0) ) | ~ aSet0(X0) ) ).
+fof(f119,axiom,! [X0] : ( ! [X1] : ( ( aDivisorOf0(X1,X0) | ! [X2] : ( sdtasdt0(X1,X2) != X0 | ~ aInteger0(X2) ) | sz00 = X1 | ~ aInteger0(X1) ) & ( ( ? [X2] : ( sdtasdt0(X1,X2) = X0 & aInteger0(X2) ) & sz00 != X1 & aInteger0(X1) ) | ~ aDivisorOf0(X1,X0) ) ) | ~ aInteger0(X0) ) ).
+fof(f120,axiom,! [X0] : ( ! [X1] : ( ( aDivisorOf0(X1,X0) | ! [X2] : ( sdtasdt0(X1,X2) != X0 | ~ aInteger0(X2) ) | sz00 = X1 | ~ aInteger0(X1) ) & ( ( ? [X2] : ( sdtasdt0(X1,X2) = X0 & aInteger0(X2) ) & sz00 != X1 & aInteger0(X1) ) | ~ aDivisorOf0(X1,X0) ) ) | ~ aInteger0(X0) ) ).
+fof(f121,axiom,! [X0] : ( ! [X1] : ( ( aDivisorOf0(X1,X0) | ! [X2] : ( sdtasdt0(X1,X2) != X0 | ~ aInteger0(X2) ) | sz00 = X1 | ~ aInteger0(X1) ) & ( ( ? [X3] : ( sdtasdt0(X1,X3) = X0 & aInteger0(X3) ) & sz00 != X1 & aInteger0(X1) ) | ~ aDivisorOf0(X1,X0) ) ) | ~ aInteger0(X0) ) ).
+fof(f122,axiom,! [X1] : ! [X0] : ( ? [X3] : ( sdtasdt0(X1,X3) = X0 & aInteger0(X3) ) => ( sdtasdt0(X1,sK6(X0,X1)) = X0 & aInteger0(sK6(X0,X1)) ) ) ).
+fof(f123,axiom,! [X0] : ( ! [X1] : ( ( aDivisorOf0(X1,X0) | ! [X2] : ( sdtasdt0(X1,X2) != X0 | ~ aInteger0(X2) ) | sz00 = X1 | ~ aInteger0(X1) ) & ( ( sdtasdt0(X1,sK6(X0,X1)) = X0 & aInteger0(sK6(X0,X1)) & sz00 != X1 & aInteger0(X1) ) | ~ aDivisorOf0(X1,X0) ) ) | ~ aInteger0(X0) ) ).
+fof(f124,axiom,! [X0] : ! [X1] : ! [X2] : ( ( ( sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ aDivisorOf0(X2,sdtpldt0(X0,smndt0(X1))) ) & ( aDivisorOf0(X2,sdtpldt0(X0,smndt0(X1))) | ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) ) ) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f125,axiom,! [X0] : ( ( ( ? [X1] : ( isPrime0(X1) & aDivisorOf0(X1,X0) ) | smndt0(sz10) = X0 | sz10 = X0 ) & ( ( smndt0(sz10) != X0 & sz10 != X0 ) | ! [X1] : ( ~ isPrime0(X1) | ~ aDivisorOf0(X1,X0) ) ) ) | ~ aInteger0(X0) ) ).
+fof(f126,axiom,! [X0] : ( ( ( ? [X1] : ( isPrime0(X1) & aDivisorOf0(X1,X0) ) | smndt0(sz10) = X0 | sz10 = X0 ) & ( ( smndt0(sz10) != X0 & sz10 != X0 ) | ! [X1] : ( ~ isPrime0(X1) | ~ aDivisorOf0(X1,X0) ) ) ) | ~ aInteger0(X0) ) ).
+fof(f127,axiom,! [X0] : ( ( ( ? [X1] : ( isPrime0(X1) & aDivisorOf0(X1,X0) ) | smndt0(sz10) = X0 | sz10 = X0 ) & ( ( smndt0(sz10) != X0 & sz10 != X0 ) | ! [X2] : ( ~ isPrime0(X2) | ~ aDivisorOf0(X2,X0) ) ) ) | ~ aInteger0(X0) ) ).
+fof(f128,axiom,! [X0] : ( ? [X1] : ( isPrime0(X1) & aDivisorOf0(X1,X0) ) => ( isPrime0(sK7(X0)) & aDivisorOf0(sK7(X0),X0) ) ) ).
+fof(f129,axiom,! [X0] : ( ( ( ( isPrime0(sK7(X0)) & aDivisorOf0(sK7(X0),X0) ) | smndt0(sz10) = X0 | sz10 = X0 ) & ( ( smndt0(sz10) != X0 & sz10 != X0 ) | ! [X2] : ( ~ isPrime0(X2) | ~ aDivisorOf0(X2,X0) ) ) ) | ~ aInteger0(X0) ) ).
+fof(f130,axiom,! [X0] : ( ! [X1] : ( ( aSubsetOf0(X1,X0) | ? [X2] : ( ~ aElementOf0(X2,X0) & aElementOf0(X2,X1) ) | ~ aSet0(X1) ) & ( ( ! [X2] : ( aElementOf0(X2,X0) | ~ aElementOf0(X2,X1) ) & aSet0(X1) ) | ~ aSubsetOf0(X1,X0) ) ) | ~ aSet0(X0) ) ).
+fof(f131,axiom,! [X0] : ( ! [X1] : ( ( aSubsetOf0(X1,X0) | ? [X2] : ( ~ aElementOf0(X2,X0) & aElementOf0(X2,X1) ) | ~ aSet0(X1) ) & ( ( ! [X2] : ( aElementOf0(X2,X0) | ~ aElementOf0(X2,X1) ) & aSet0(X1) ) | ~ aSubsetOf0(X1,X0) ) ) | ~ aSet0(X0) ) ).
+fof(f132,axiom,! [X0] : ( ! [X1] : ( ( aSubsetOf0(X1,X0) | ? [X2] : ( ~ aElementOf0(X2,X0) & aElementOf0(X2,X1) ) | ~ aSet0(X1) ) & ( ( ! [X3] : ( aElementOf0(X3,X0) | ~ aElementOf0(X3,X1) ) & aSet0(X1) ) | ~ aSubsetOf0(X1,X0) ) ) | ~ aSet0(X0) ) ).
+fof(f133,axiom,! [X1] : ! [X0] : ( ? [X2] : ( ~ aElementOf0(X2,X0) & aElementOf0(X2,X1) ) => ( ~ aElementOf0(sK8(X0,X1),X0) & aElementOf0(sK8(X0,X1),X1) ) ) ).
+fof(f134,axiom,! [X0] : ( ! [X1] : ( ( aSubsetOf0(X1,X0) | ( ~ aElementOf0(sK8(X0,X1),X0) & aElementOf0(sK8(X0,X1),X1) ) | ~ aSet0(X1) ) & ( ( ! [X3] : ( aElementOf0(X3,X0) | ~ aElementOf0(X3,X1) ) & aSet0(X1) ) | ~ aSubsetOf0(X1,X0) ) ) | ~ aSet0(X0) ) ).
+fof(f135,axiom,! [X0] : ! [X1] : ( ! [X2] : ( ( sdtbsmnsldt0(X0,X1) = X2 | ~ sP0(X1,X0,X2) ) & ( sP0(X1,X0,X2) | sdtbsmnsldt0(X0,X1) != X2 ) ) | ~ sP1(X0,X1) ) ).
+fof(f136,axiom,! [X1] : ! [X0] : ! [X2] : ( ( sP0(X1,X0,X2) | ? [X3] : ( ( ( ~ aElementOf0(X3,X1) & ~ aElementOf0(X3,X0) ) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) ) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X2) | ( ~ aElementOf0(X3,X1) & ~ aElementOf0(X3,X0) ) | ~ aInteger0(X3) ) & ( ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) ) & aInteger0(X3) ) | ~ aElementOf0(X3,X2) ) ) & aSet0(X2) ) | ~ sP0(X1,X0,X2) ) ) ).
+fof(f137,axiom,! [X1] : ! [X0] : ! [X2] : ( ( sP0(X1,X0,X2) | ? [X3] : ( ( ( ~ aElementOf0(X3,X1) & ~ aElementOf0(X3,X0) ) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) ) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X2) | ( ~ aElementOf0(X3,X1) & ~ aElementOf0(X3,X0) ) | ~ aInteger0(X3) ) & ( ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) ) & aInteger0(X3) ) | ~ aElementOf0(X3,X2) ) ) & aSet0(X2) ) | ~ sP0(X1,X0,X2) ) ) ).
+fof(f138,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sP0(X0,X1,X2) | ? [X3] : ( ( ( ~ aElementOf0(X3,X0) & ~ aElementOf0(X3,X1) ) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( ( aElementOf0(X3,X0) | aElementOf0(X3,X1) ) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X4] : ( ( aElementOf0(X4,X2) | ( ~ aElementOf0(X4,X0) & ~ aElementOf0(X4,X1) ) | ~ aInteger0(X4) ) & ( ( ( aElementOf0(X4,X0) | aElementOf0(X4,X1) ) & aInteger0(X4) ) | ~ aElementOf0(X4,X2) ) ) & aSet0(X2) ) | ~ sP0(X0,X1,X2) ) ) ).
+fof(f139,axiom,! [X2] : ! [X1] : ! [X0] : ( ? [X3] : ( ( ( ~ aElementOf0(X3,X0) & ~ aElementOf0(X3,X1) ) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( ( aElementOf0(X3,X0) | aElementOf0(X3,X1) ) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) => ( ( ( ~ aElementOf0(sK9(X0,X1,X2),X0) & ~ aElementOf0(sK9(X0,X1,X2),X1) ) | ~ aInteger0(sK9(X0,X1,X2)) | ~ aElementOf0(sK9(X0,X1,X2),X2) ) & ( ( ( aElementOf0(sK9(X0,X1,X2),X0) | aElementOf0(sK9(X0,X1,X2),X1) ) & aInteger0(sK9(X0,X1,X2)) ) | aElementOf0(sK9(X0,X1,X2),X2) ) ) ) ).
+fof(f140,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sP0(X0,X1,X2) | ( ( ( ~ aElementOf0(sK9(X0,X1,X2),X0) & ~ aElementOf0(sK9(X0,X1,X2),X1) ) | ~ aInteger0(sK9(X0,X1,X2)) | ~ aElementOf0(sK9(X0,X1,X2),X2) ) & ( ( ( aElementOf0(sK9(X0,X1,X2),X0) | aElementOf0(sK9(X0,X1,X2),X1) ) & aInteger0(sK9(X0,X1,X2)) ) | aElementOf0(sK9(X0,X1,X2),X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X4] : ( ( aElementOf0(X4,X2) | ( ~ aElementOf0(X4,X0) & ~ aElementOf0(X4,X1) ) | ~ aInteger0(X4) ) & ( ( ( aElementOf0(X4,X0) | aElementOf0(X4,X1) ) & aInteger0(X4) ) | ~ aElementOf0(X4,X2) ) ) & aSet0(X2) ) | ~ sP0(X0,X1,X2) ) ) ).
+fof(f141,axiom,! [X0] : ! [X1] : ( ! [X2] : ( ( sdtslmnbsdt0(X0,X1) = X2 | ~ sP2(X1,X0,X2) ) & ( sP2(X1,X0,X2) | sdtslmnbsdt0(X0,X1) != X2 ) ) | ~ sP3(X0,X1) ) ).
+fof(f142,axiom,! [X1] : ! [X0] : ! [X2] : ( ( sP2(X1,X0,X2) | ? [X3] : ( ( ~ aElementOf0(X3,X1) | ~ aElementOf0(X3,X0) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( aElementOf0(X3,X1) & aElementOf0(X3,X0) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X2) | ~ aElementOf0(X3,X1) | ~ aElementOf0(X3,X0) | ~ aInteger0(X3) ) & ( ( aElementOf0(X3,X1) & aElementOf0(X3,X0) & aInteger0(X3) ) | ~ aElementOf0(X3,X2) ) ) & aSet0(X2) ) | ~ sP2(X1,X0,X2) ) ) ).
+fof(f143,axiom,! [X1] : ! [X0] : ! [X2] : ( ( sP2(X1,X0,X2) | ? [X3] : ( ( ~ aElementOf0(X3,X1) | ~ aElementOf0(X3,X0) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( aElementOf0(X3,X1) & aElementOf0(X3,X0) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X2) | ~ aElementOf0(X3,X1) | ~ aElementOf0(X3,X0) | ~ aInteger0(X3) ) & ( ( aElementOf0(X3,X1) & aElementOf0(X3,X0) & aInteger0(X3) ) | ~ aElementOf0(X3,X2) ) ) & aSet0(X2) ) | ~ sP2(X1,X0,X2) ) ) ).
+fof(f144,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sP2(X0,X1,X2) | ? [X3] : ( ( ~ aElementOf0(X3,X0) | ~ aElementOf0(X3,X1) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( aElementOf0(X3,X0) & aElementOf0(X3,X1) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X4] : ( ( aElementOf0(X4,X2) | ~ aElementOf0(X4,X0) | ~ aElementOf0(X4,X1) | ~ aInteger0(X4) ) & ( ( aElementOf0(X4,X0) & aElementOf0(X4,X1) & aInteger0(X4) ) | ~ aElementOf0(X4,X2) ) ) & aSet0(X2) ) | ~ sP2(X0,X1,X2) ) ) ).
+fof(f145,axiom,! [X2] : ! [X1] : ! [X0] : ( ? [X3] : ( ( ~ aElementOf0(X3,X0) | ~ aElementOf0(X3,X1) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( aElementOf0(X3,X0) & aElementOf0(X3,X1) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) => ( ( ~ aElementOf0(sK10(X0,X1,X2),X0) | ~ aElementOf0(sK10(X0,X1,X2),X1) | ~ aInteger0(sK10(X0,X1,X2)) | ~ aElementOf0(sK10(X0,X1,X2),X2) ) & ( ( aElementOf0(sK10(X0,X1,X2),X0) & aElementOf0(sK10(X0,X1,X2),X1) & aInteger0(sK10(X0,X1,X2)) ) | aElementOf0(sK10(X0,X1,X2),X2) ) ) ) ).
+fof(f146,axiom,! [X0] : ! [X1] : ! [X2] : ( ( sP2(X0,X1,X2) | ( ( ~ aElementOf0(sK10(X0,X1,X2),X0) | ~ aElementOf0(sK10(X0,X1,X2),X1) | ~ aInteger0(sK10(X0,X1,X2)) | ~ aElementOf0(sK10(X0,X1,X2),X2) ) & ( ( aElementOf0(sK10(X0,X1,X2),X0) & aElementOf0(sK10(X0,X1,X2),X1) & aInteger0(sK10(X0,X1,X2)) ) | aElementOf0(sK10(X0,X1,X2),X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X4] : ( ( aElementOf0(X4,X2) | ~ aElementOf0(X4,X0) | ~ aElementOf0(X4,X1) | ~ aInteger0(X4) ) & ( ( aElementOf0(X4,X0) & aElementOf0(X4,X1) & aInteger0(X4) ) | ~ aElementOf0(X4,X2) ) ) & aSet0(X2) ) | ~ sP2(X0,X1,X2) ) ) ).
+fof(f147,axiom,! [X0] : ( ! [X2] : ( ( sbsmnsldt0(X0) = X2 | ~ sP4(X0,X2) ) & ( sP4(X0,X2) | sbsmnsldt0(X0) != X2 ) ) | ~ sP5(X0) ) ).
+fof(f148,axiom,! [X0] : ( ! [X1] : ( ( sbsmnsldt0(X0) = X1 | ~ sP4(X0,X1) ) & ( sP4(X0,X1) | sbsmnsldt0(X0) != X1 ) ) | ~ sP5(X0) ) ).
+fof(f149,axiom,! [X0] : ! [X2] : ( ( sP4(X0,X2) | ? [X3] : ( ( ! [X4] : ( ~ aElementOf0(X3,X4) | ~ aElementOf0(X4,X0) ) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( ? [X4] : ( aElementOf0(X3,X4) & aElementOf0(X4,X0) ) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X2) | ! [X4] : ( ~ aElementOf0(X3,X4) | ~ aElementOf0(X4,X0) ) | ~ aInteger0(X3) ) & ( ( ? [X4] : ( aElementOf0(X3,X4) & aElementOf0(X4,X0) ) & aInteger0(X3) ) | ~ aElementOf0(X3,X2) ) ) & aSet0(X2) ) | ~ sP4(X0,X2) ) ) ).
+fof(f150,axiom,! [X0] : ! [X2] : ( ( sP4(X0,X2) | ? [X3] : ( ( ! [X4] : ( ~ aElementOf0(X3,X4) | ~ aElementOf0(X4,X0) ) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( ? [X4] : ( aElementOf0(X3,X4) & aElementOf0(X4,X0) ) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X2) | ! [X4] : ( ~ aElementOf0(X3,X4) | ~ aElementOf0(X4,X0) ) | ~ aInteger0(X3) ) & ( ( ? [X4] : ( aElementOf0(X3,X4) & aElementOf0(X4,X0) ) & aInteger0(X3) ) | ~ aElementOf0(X3,X2) ) ) & aSet0(X2) ) | ~ sP4(X0,X2) ) ) ).
+fof(f151,axiom,! [X0] : ! [X1] : ( ( sP4(X0,X1) | ? [X2] : ( ( ! [X3] : ( ~ aElementOf0(X2,X3) | ~ aElementOf0(X3,X0) ) | ~ aInteger0(X2) | ~ aElementOf0(X2,X1) ) & ( ( ? [X4] : ( aElementOf0(X2,X4) & aElementOf0(X4,X0) ) & aInteger0(X2) ) | aElementOf0(X2,X1) ) ) | ~ aSet0(X1) ) & ( ( ! [X5] : ( ( aElementOf0(X5,X1) | ! [X6] : ( ~ aElementOf0(X5,X6) | ~ aElementOf0(X6,X0) ) | ~ aInteger0(X5) ) & ( ( ? [X7] : ( aElementOf0(X5,X7) & aElementOf0(X7,X0) ) & aInteger0(X5) ) | ~ aElementOf0(X5,X1) ) ) & aSet0(X1) ) | ~ sP4(X0,X1) ) ) ).
+fof(f152,axiom,! [X1] : ! [X0] : ( ? [X2] : ( ( ! [X3] : ( ~ aElementOf0(X2,X3) | ~ aElementOf0(X3,X0) ) | ~ aInteger0(X2) | ~ aElementOf0(X2,X1) ) & ( ( ? [X4] : ( aElementOf0(X2,X4) & aElementOf0(X4,X0) ) & aInteger0(X2) ) | aElementOf0(X2,X1) ) ) => ( ( ! [X3] : ( ~ aElementOf0(sK11(X0,X1),X3) | ~ aElementOf0(X3,X0) ) | ~ aInteger0(sK11(X0,X1)) | ~ aElementOf0(sK11(X0,X1),X1) ) & ( ( ? [X4] : ( aElementOf0(sK11(X0,X1),X4) & aElementOf0(X4,X0) ) & aInteger0(sK11(X0,X1)) ) | aElementOf0(sK11(X0,X1),X1) ) ) ) ).
+fof(f153,axiom,! [X1] : ! [X0] : ( ? [X4] : ( aElementOf0(sK11(X0,X1),X4) & aElementOf0(X4,X0) ) => ( aElementOf0(sK11(X0,X1),sK12(X0,X1)) & aElementOf0(sK12(X0,X1),X0) ) ) ).
+fof(f154,axiom,! [X5] : ! [X0] : ( ? [X7] : ( aElementOf0(X5,X7) & aElementOf0(X7,X0) ) => ( aElementOf0(X5,sK13(X0,X5)) & aElementOf0(sK13(X0,X5),X0) ) ) ).
+fof(f155,axiom,! [X0] : ! [X1] : ( ( sP4(X0,X1) | ( ( ! [X3] : ( ~ aElementOf0(sK11(X0,X1),X3) | ~ aElementOf0(X3,X0) ) | ~ aInteger0(sK11(X0,X1)) | ~ aElementOf0(sK11(X0,X1),X1) ) & ( ( aElementOf0(sK11(X0,X1),sK12(X0,X1)) & aElementOf0(sK12(X0,X1),X0) & aInteger0(sK11(X0,X1)) ) | aElementOf0(sK11(X0,X1),X1) ) ) | ~ aSet0(X1) ) & ( ( ! [X5] : ( ( aElementOf0(X5,X1) | ! [X6] : ( ~ aElementOf0(X5,X6) | ~ aElementOf0(X6,X0) ) | ~ aInteger0(X5) ) & ( ( aElementOf0(X5,sK13(X0,X5)) & aElementOf0(sK13(X0,X5),X0) & aInteger0(X5) ) | ~ aElementOf0(X5,X1) ) ) & aSet0(X1) ) | ~ sP4(X0,X1) ) ) ).
+fof(f156,axiom,! [X0] : ( ? [X1] : ( ~ aSubsetOf0(X1,cS1395) & aElementOf0(X1,X0) ) => ( ~ aSubsetOf0(sK14(X0),cS1395) & aElementOf0(sK14(X0),X0) ) ) ).
+fof(f157,axiom,! [X0] : ( sP5(X0) | ( ~ aSubsetOf0(sK14(X0),cS1395) & aElementOf0(sK14(X0),X0) ) | ~ aSet0(X0) ) ).
+fof(f158,axiom,! [X0] : ( ! [X1] : ( ( stldt0(X0) = X1 | ? [X2] : ( ( aElementOf0(X2,X0) | ~ aInteger0(X2) | ~ aElementOf0(X2,X1) ) & ( ( ~ aElementOf0(X2,X0) & aInteger0(X2) ) | aElementOf0(X2,X1) ) ) | ~ aSet0(X1) ) & ( ( ! [X2] : ( ( aElementOf0(X2,X1) | aElementOf0(X2,X0) | ~ aInteger0(X2) ) & ( ( ~ aElementOf0(X2,X0) & aInteger0(X2) ) | ~ aElementOf0(X2,X1) ) ) & aSet0(X1) ) | stldt0(X0) != X1 ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f159,axiom,! [X0] : ( ! [X1] : ( ( stldt0(X0) = X1 | ? [X2] : ( ( aElementOf0(X2,X0) | ~ aInteger0(X2) | ~ aElementOf0(X2,X1) ) & ( ( ~ aElementOf0(X2,X0) & aInteger0(X2) ) | aElementOf0(X2,X1) ) ) | ~ aSet0(X1) ) & ( ( ! [X2] : ( ( aElementOf0(X2,X1) | aElementOf0(X2,X0) | ~ aInteger0(X2) ) & ( ( ~ aElementOf0(X2,X0) & aInteger0(X2) ) | ~ aElementOf0(X2,X1) ) ) & aSet0(X1) ) | stldt0(X0) != X1 ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f160,axiom,! [X0] : ( ! [X1] : ( ( stldt0(X0) = X1 | ? [X2] : ( ( aElementOf0(X2,X0) | ~ aInteger0(X2) | ~ aElementOf0(X2,X1) ) & ( ( ~ aElementOf0(X2,X0) & aInteger0(X2) ) | aElementOf0(X2,X1) ) ) | ~ aSet0(X1) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) | ~ aInteger0(X3) ) & ( ( ~ aElementOf0(X3,X0) & aInteger0(X3) ) | ~ aElementOf0(X3,X1) ) ) & aSet0(X1) ) | stldt0(X0) != X1 ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f161,axiom,! [X1] : ! [X0] : ( ? [X2] : ( ( aElementOf0(X2,X0) | ~ aInteger0(X2) | ~ aElementOf0(X2,X1) ) & ( ( ~ aElementOf0(X2,X0) & aInteger0(X2) ) | aElementOf0(X2,X1) ) ) => ( ( aElementOf0(sK15(X0,X1),X0) | ~ aInteger0(sK15(X0,X1)) | ~ aElementOf0(sK15(X0,X1),X1) ) & ( ( ~ aElementOf0(sK15(X0,X1),X0) & aInteger0(sK15(X0,X1)) ) | aElementOf0(sK15(X0,X1),X1) ) ) ) ).
+fof(f162,axiom,! [X0] : ( ! [X1] : ( ( stldt0(X0) = X1 | ( ( aElementOf0(sK15(X0,X1),X0) | ~ aInteger0(sK15(X0,X1)) | ~ aElementOf0(sK15(X0,X1),X1) ) & ( ( ~ aElementOf0(sK15(X0,X1),X0) & aInteger0(sK15(X0,X1)) ) | aElementOf0(sK15(X0,X1),X1) ) ) | ~ aSet0(X1) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X1) | aElementOf0(X3,X0) | ~ aInteger0(X3) ) & ( ( ~ aElementOf0(X3,X0) & aInteger0(X3) ) | ~ aElementOf0(X3,X1) ) ) & aSet0(X1) ) | stldt0(X0) != X1 ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f163,axiom,! [X0] : ! [X1] : ( ! [X2] : ( ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | ? [X3] : ( ( ~ sdteqdtlpzmzozddtrp0(X3,X0,X1) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X2) | ~ sdteqdtlpzmzozddtrp0(X3,X0,X1) | ~ aInteger0(X3) ) & ( ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) | ~ aElementOf0(X3,X2) ) ) & aSet0(X2) ) | szAzrzSzezqlpdtcmdtrp0(X0,X1) != X2 ) ) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f164,axiom,! [X0] : ! [X1] : ( ! [X2] : ( ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | ? [X3] : ( ( ~ sdteqdtlpzmzozddtrp0(X3,X0,X1) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X3] : ( ( aElementOf0(X3,X2) | ~ sdteqdtlpzmzozddtrp0(X3,X0,X1) | ~ aInteger0(X3) ) & ( ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) | ~ aElementOf0(X3,X2) ) ) & aSet0(X2) ) | szAzrzSzezqlpdtcmdtrp0(X0,X1) != X2 ) ) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f165,axiom,! [X0] : ! [X1] : ( ! [X2] : ( ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | ? [X3] : ( ( ~ sdteqdtlpzmzozddtrp0(X3,X0,X1) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X4] : ( ( aElementOf0(X4,X2) | ~ sdteqdtlpzmzozddtrp0(X4,X0,X1) | ~ aInteger0(X4) ) & ( ( sdteqdtlpzmzozddtrp0(X4,X0,X1) & aInteger0(X4) ) | ~ aElementOf0(X4,X2) ) ) & aSet0(X2) ) | szAzrzSzezqlpdtcmdtrp0(X0,X1) != X2 ) ) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f166,axiom,! [X2] : ! [X1] : ! [X0] : ( ? [X3] : ( ( ~ sdteqdtlpzmzozddtrp0(X3,X0,X1) | ~ aInteger0(X3) | ~ aElementOf0(X3,X2) ) & ( ( sdteqdtlpzmzozddtrp0(X3,X0,X1) & aInteger0(X3) ) | aElementOf0(X3,X2) ) ) => ( ( ~ sdteqdtlpzmzozddtrp0(sK16(X0,X1,X2),X0,X1) | ~ aInteger0(sK16(X0,X1,X2)) | ~ aElementOf0(sK16(X0,X1,X2),X2) ) & ( ( sdteqdtlpzmzozddtrp0(sK16(X0,X1,X2),X0,X1) & aInteger0(sK16(X0,X1,X2)) ) | aElementOf0(sK16(X0,X1,X2),X2) ) ) ) ).
+fof(f167,axiom,! [X0] : ! [X1] : ( ! [X2] : ( ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | ( ( ~ sdteqdtlpzmzozddtrp0(sK16(X0,X1,X2),X0,X1) | ~ aInteger0(sK16(X0,X1,X2)) | ~ aElementOf0(sK16(X0,X1,X2),X2) ) & ( ( sdteqdtlpzmzozddtrp0(sK16(X0,X1,X2),X0,X1) & aInteger0(sK16(X0,X1,X2)) ) | aElementOf0(sK16(X0,X1,X2),X2) ) ) | ~ aSet0(X2) ) & ( ( ! [X4] : ( ( aElementOf0(X4,X2) | ~ sdteqdtlpzmzozddtrp0(X4,X0,X1) | ~ aInteger0(X4) ) & ( ( sdteqdtlpzmzozddtrp0(X4,X0,X1) & aInteger0(X4) ) | ~ aElementOf0(X4,X2) ) ) & aSet0(X2) ) | szAzrzSzezqlpdtcmdtrp0(X0,X1) != X2 ) ) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f168,axiom,! [X0] : ( ( ( isOpen0(X0) | ? [X1] : ( ! [X2] : ( ~ aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X1,X2),X0) | sz00 = X2 | ~ aInteger0(X2) ) & aElementOf0(X1,X0) ) ) & ( ! [X1] : ( ? [X2] : ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X1,X2),X0) & sz00 != X2 & aInteger0(X2) ) | ~ aElementOf0(X1,X0) ) | ~ isOpen0(X0) ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f169,axiom,! [X0] : ( ( ( isOpen0(X0) | ? [X1] : ( ! [X2] : ( ~ aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X1,X2),X0) | sz00 = X2 | ~ aInteger0(X2) ) & aElementOf0(X1,X0) ) ) & ( ! [X3] : ( ? [X4] : ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X3,X4),X0) & sz00 != X4 & aInteger0(X4) ) | ~ aElementOf0(X3,X0) ) | ~ isOpen0(X0) ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f170,axiom,! [X0] : ( ? [X1] : ( ! [X2] : ( ~ aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X1,X2),X0) | sz00 = X2 | ~ aInteger0(X2) ) & aElementOf0(X1,X0) ) => ( ! [X2] : ( ~ aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(sK17(X0),X2),X0) | sz00 = X2 | ~ aInteger0(X2) ) & aElementOf0(sK17(X0),X0) ) ) ).
+fof(f171,axiom,! [X3] : ! [X0] : ( ? [X4] : ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X3,X4),X0) & sz00 != X4 & aInteger0(X4) ) => ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X3,sK18(X0,X3)),X0) & sz00 != sK18(X0,X3) & aInteger0(sK18(X0,X3)) ) ) ).
+fof(f172,axiom,! [X0] : ( ( ( isOpen0(X0) | ( ! [X2] : ( ~ aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(sK17(X0),X2),X0) | sz00 = X2 | ~ aInteger0(X2) ) & aElementOf0(sK17(X0),X0) ) ) & ( ! [X3] : ( ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X3,sK18(X0,X3)),X0) & sz00 != sK18(X0,X3) & aInteger0(sK18(X0,X3)) ) | ~ aElementOf0(X3,X0) ) | ~ isOpen0(X0) ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f173,axiom,! [X0] : ( ( ( isClosed0(X0) | ~ isOpen0(stldt0(X0)) ) & ( isOpen0(stldt0(X0)) | ~ isClosed0(X0) ) ) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f174,axiom,! [X0] : ( ? [X1] : ( ( ~ isOpen0(X1) | ~ aSubsetOf0(X1,cS1395) ) & aElementOf0(X1,X0) ) => ( ( ~ isOpen0(sK19(X0)) | ~ aSubsetOf0(sK19(X0),cS1395) ) & aElementOf0(sK19(X0),X0) ) ) ).
+fof(f175,axiom,! [X0] : ( isOpen0(sbsmnsldt0(X0)) | ( ( ~ isOpen0(sK19(X0)) | ~ aSubsetOf0(sK19(X0),cS1395) ) & aElementOf0(sK19(X0),X0) ) | ~ aSet0(X0) ) ).
+fof(f176,axiom,! [X0] : ( ? [X1] : ( ( ~ isClosed0(X1) | ~ aSubsetOf0(X1,cS1395) ) & aElementOf0(X1,X0) ) => ( ( ~ isClosed0(sK20(X0)) | ~ aSubsetOf0(sK20(X0),cS1395) ) & aElementOf0(sK20(X0),X0) ) ) ).
+fof(f177,axiom,! [X0] : ( isClosed0(sbsmnsldt0(X0)) | ( ( ~ isClosed0(sK20(X0)) | ~ aSubsetOf0(sK20(X0),cS1395) ) & aElementOf0(sK20(X0),X0) ) | ~ isFinite0(X0) | ~ aSet0(X0) ) ).
+fof(f178,axiom,aInteger0(sz00) ).
+fof(f179,axiom,aInteger0(sz10) ).
+fof(f180,axiom,! [X0] : ( aInteger0(smndt0(X0)) | ~ aInteger0(X0) ) ).
+fof(f181,axiom,! [X0] : ! [X1] : ( aInteger0(sdtpldt0(X0,X1)) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f182,axiom,! [X0] : ! [X1] : ( aInteger0(sdtasdt0(X0,X1)) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f183,axiom,! [X2] : ! [X0] : ! [X1] : ( sdtpldt0(X0,sdtpldt0(X1,X2)) = sdtpldt0(sdtpldt0(X0,X1),X2) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f184,axiom,! [X0] : ! [X1] : ( sdtpldt0(X0,X1) = sdtpldt0(X1,X0) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f185,axiom,! [X0] : ( sdtpldt0(X0,sz00) = X0 | ~ aInteger0(X0) ) ).
+fof(f186,axiom,! [X0] : ( sdtpldt0(sz00,X0) = X0 | ~ aInteger0(X0) ) ).
+fof(f187,axiom,! [X0] : ( sz00 = sdtpldt0(X0,smndt0(X0)) | ~ aInteger0(X0) ) ).
+fof(f188,axiom,! [X0] : ( sz00 = sdtpldt0(smndt0(X0),X0) | ~ aInteger0(X0) ) ).
+fof(f189,axiom,! [X2] : ! [X0] : ! [X1] : ( sdtasdt0(X0,sdtasdt0(X1,X2)) = sdtasdt0(sdtasdt0(X0,X1),X2) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f190,axiom,! [X0] : ! [X1] : ( sdtasdt0(X0,X1) = sdtasdt0(X1,X0) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f191,axiom,! [X0] : ( sdtasdt0(X0,sz10) = X0 | ~ aInteger0(X0) ) ).
+fof(f192,axiom,! [X0] : ( sdtasdt0(sz10,X0) = X0 | ~ aInteger0(X0) ) ).
+fof(f193,axiom,! [X2] : ! [X0] : ! [X1] : ( sdtasdt0(X0,sdtpldt0(X1,X2)) = sdtpldt0(sdtasdt0(X0,X1),sdtasdt0(X0,X2)) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f194,axiom,! [X2] : ! [X0] : ! [X1] : ( sdtasdt0(sdtpldt0(X0,X1),X2) = sdtpldt0(sdtasdt0(X0,X2),sdtasdt0(X1,X2)) | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f195,axiom,! [X0] : ( sz00 = sdtasdt0(X0,sz00) | ~ aInteger0(X0) ) ).
+fof(f196,axiom,! [X0] : ( sz00 = sdtasdt0(sz00,X0) | ~ aInteger0(X0) ) ).
+fof(f197,axiom,! [X0] : ( smndt0(X0) = sdtasdt0(smndt0(sz10),X0) | ~ aInteger0(X0) ) ).
+fof(f198,axiom,! [X0] : ( smndt0(X0) = sdtasdt0(X0,smndt0(sz10)) | ~ aInteger0(X0) ) ).
+fof(f199,axiom,! [X0] : ! [X1] : ( sz00 = X1 | sz00 = X0 | sz00 != sdtasdt0(X0,X1) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f200,axiom,! [X0] : ! [X1] : ( aInteger0(X1) | ~ aDivisorOf0(X1,X0) | ~ aInteger0(X0) ) ).
+fof(f201,axiom,! [X0] : ! [X1] : ( sz00 != X1 | ~ aDivisorOf0(X1,X0) | ~ aInteger0(X0) ) ).
+fof(f202,axiom,! [X0] : ! [X1] : ( aInteger0(sK6(X0,X1)) | ~ aDivisorOf0(X1,X0) | ~ aInteger0(X0) ) ).
+fof(f203,axiom,! [X0] : ! [X1] : ( sdtasdt0(X1,sK6(X0,X1)) = X0 | ~ aDivisorOf0(X1,X0) | ~ aInteger0(X0) ) ).
+fof(f204,axiom,! [X2] : ! [X0] : ! [X1] : ( aDivisorOf0(X1,X0) | sdtasdt0(X1,X2) != X0 | ~ aInteger0(X2) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f205,axiom,! [X2] : ! [X0] : ! [X1] : ( aDivisorOf0(X2,sdtpldt0(X0,smndt0(X1))) | ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f206,axiom,! [X2] : ! [X0] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ aDivisorOf0(X2,sdtpldt0(X0,smndt0(X1))) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f207,axiom,! [X0] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X0,X0,X1) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f208,axiom,! [X2] : ! [X0] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X1,X0,X2) | ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f209,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X0,X3,X2) | ~ sdteqdtlpzmzozddtrp0(X1,X3,X2) | ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ aInteger0(X3) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f210,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ sdteqdtlpzmzozddtrp0(X0,X1,sdtasdt0(X2,X3)) | sz00 = X3 | ~ aInteger0(X3) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f211,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X0,X1,X3) | ~ sdteqdtlpzmzozddtrp0(X0,X1,sdtasdt0(X2,X3)) | sz00 = X3 | ~ aInteger0(X3) | sz00 = X2 | ~ aInteger0(X2) | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f212,axiom,! [X2] : ! [X0] : ( sz10 != X0 | ~ isPrime0(X2) | ~ aDivisorOf0(X2,X0) | ~ aInteger0(X0) ) ).
+fof(f213,axiom,! [X2] : ! [X0] : ( smndt0(sz10) != X0 | ~ isPrime0(X2) | ~ aDivisorOf0(X2,X0) | ~ aInteger0(X0) ) ).
+fof(f214,axiom,! [X0] : ( aDivisorOf0(sK7(X0),X0) | smndt0(sz10) = X0 | sz10 = X0 | ~ aInteger0(X0) ) ).
+fof(f215,axiom,! [X0] : ( isPrime0(sK7(X0)) | smndt0(sz10) = X0 | sz10 = X0 | ~ aInteger0(X0) ) ).
+fof(f216,axiom,! [X0] : ! [X1] : ( aSet0(X1) | ~ aSubsetOf0(X1,X0) | ~ aSet0(X0) ) ).
+fof(f217,axiom,! [X0] : ! [X3] : ! [X1] : ( aElementOf0(X3,X0) | ~ aElementOf0(X3,X1) | ~ aSubsetOf0(X1,X0) | ~ aSet0(X0) ) ).
+fof(f218,axiom,! [X0] : ! [X1] : ( aSubsetOf0(X1,X0) | aElementOf0(sK8(X0,X1),X1) | ~ aSet0(X1) | ~ aSet0(X0) ) ).
+fof(f219,axiom,! [X0] : ! [X1] : ( aSubsetOf0(X1,X0) | ~ aElementOf0(sK8(X0,X1),X0) | ~ aSet0(X1) | ~ aSet0(X0) ) ).
+fof(f220,axiom,! [X2] : ! [X0] : ! [X1] : ( sP0(X1,X0,X2) | sdtbsmnsldt0(X0,X1) != X2 | ~ sP1(X0,X1) ) ).
+fof(f221,axiom,! [X2] : ! [X0] : ! [X1] : ( sdtbsmnsldt0(X0,X1) = X2 | ~ sP0(X1,X0,X2) | ~ sP1(X0,X1) ) ).
+fof(f222,axiom,! [X2] : ! [X0] : ! [X1] : ( aSet0(X2) | ~ sP0(X0,X1,X2) ) ).
+fof(f223,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aInteger0(X4) | ~ aElementOf0(X4,X2) | ~ sP0(X0,X1,X2) ) ).
+fof(f224,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aElementOf0(X4,X0) | aElementOf0(X4,X1) | ~ aElementOf0(X4,X2) | ~ sP0(X0,X1,X2) ) ).
+fof(f225,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aElementOf0(X4,X2) | ~ aElementOf0(X4,X1) | ~ aInteger0(X4) | ~ sP0(X0,X1,X2) ) ).
+fof(f226,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aElementOf0(X4,X2) | ~ aElementOf0(X4,X0) | ~ aInteger0(X4) | ~ sP0(X0,X1,X2) ) ).
+fof(f227,axiom,! [X2] : ! [X0] : ! [X1] : ( sP0(X0,X1,X2) | aInteger0(sK9(X0,X1,X2)) | aElementOf0(sK9(X0,X1,X2),X2) | ~ aSet0(X2) ) ).
+fof(f228,axiom,! [X2] : ! [X0] : ! [X1] : ( sP0(X0,X1,X2) | aElementOf0(sK9(X0,X1,X2),X0) | aElementOf0(sK9(X0,X1,X2),X1) | aElementOf0(sK9(X0,X1,X2),X2) | ~ aSet0(X2) ) ).
+fof(f229,axiom,! [X2] : ! [X0] : ! [X1] : ( sP0(X0,X1,X2) | ~ aElementOf0(sK9(X0,X1,X2),X1) | ~ aInteger0(sK9(X0,X1,X2)) | ~ aElementOf0(sK9(X0,X1,X2),X2) | ~ aSet0(X2) ) ).
+fof(f230,axiom,! [X2] : ! [X0] : ! [X1] : ( sP0(X0,X1,X2) | ~ aElementOf0(sK9(X0,X1,X2),X0) | ~ aInteger0(sK9(X0,X1,X2)) | ~ aElementOf0(sK9(X0,X1,X2),X2) | ~ aSet0(X2) ) ).
+fof(f231,axiom,! [X0] : ! [X1] : ( sP1(X0,X1) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f232,axiom,! [X2] : ! [X0] : ! [X1] : ( sP2(X1,X0,X2) | sdtslmnbsdt0(X0,X1) != X2 | ~ sP3(X0,X1) ) ).
+fof(f233,axiom,! [X2] : ! [X0] : ! [X1] : ( sdtslmnbsdt0(X0,X1) = X2 | ~ sP2(X1,X0,X2) | ~ sP3(X0,X1) ) ).
+fof(f234,axiom,! [X2] : ! [X0] : ! [X1] : ( aSet0(X2) | ~ sP2(X0,X1,X2) ) ).
+fof(f235,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aInteger0(X4) | ~ aElementOf0(X4,X2) | ~ sP2(X0,X1,X2) ) ).
+fof(f236,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aElementOf0(X4,X1) | ~ aElementOf0(X4,X2) | ~ sP2(X0,X1,X2) ) ).
+fof(f237,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aElementOf0(X4,X0) | ~ aElementOf0(X4,X2) | ~ sP2(X0,X1,X2) ) ).
+fof(f238,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aElementOf0(X4,X2) | ~ aElementOf0(X4,X0) | ~ aElementOf0(X4,X1) | ~ aInteger0(X4) | ~ sP2(X0,X1,X2) ) ).
+fof(f239,axiom,! [X2] : ! [X0] : ! [X1] : ( sP2(X0,X1,X2) | aInteger0(sK10(X0,X1,X2)) | aElementOf0(sK10(X0,X1,X2),X2) | ~ aSet0(X2) ) ).
+fof(f240,axiom,! [X2] : ! [X0] : ! [X1] : ( sP2(X0,X1,X2) | aElementOf0(sK10(X0,X1,X2),X1) | aElementOf0(sK10(X0,X1,X2),X2) | ~ aSet0(X2) ) ).
+fof(f241,axiom,! [X2] : ! [X0] : ! [X1] : ( sP2(X0,X1,X2) | aElementOf0(sK10(X0,X1,X2),X0) | aElementOf0(sK10(X0,X1,X2),X2) | ~ aSet0(X2) ) ).
+fof(f242,axiom,! [X2] : ! [X0] : ! [X1] : ( sP2(X0,X1,X2) | ~ aElementOf0(sK10(X0,X1,X2),X0) | ~ aElementOf0(sK10(X0,X1,X2),X1) | ~ aInteger0(sK10(X0,X1,X2)) | ~ aElementOf0(sK10(X0,X1,X2),X2) | ~ aSet0(X2) ) ).
+fof(f243,axiom,! [X0] : ! [X1] : ( sP3(X0,X1) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f244,axiom,! [X0] : ! [X1] : ( sP4(X0,X1) | sbsmnsldt0(X0) != X1 | ~ sP5(X0) ) ).
+fof(f245,axiom,! [X0] : ! [X1] : ( sbsmnsldt0(X0) = X1 | ~ sP4(X0,X1) | ~ sP5(X0) ) ).
+fof(f246,axiom,! [X0] : ! [X1] : ( aSet0(X1) | ~ sP4(X0,X1) ) ).
+fof(f247,axiom,! [X0] : ! [X5] : ! [X1] : ( aInteger0(X5) | ~ aElementOf0(X5,X1) | ~ sP4(X0,X1) ) ).
+fof(f248,axiom,! [X0] : ! [X5] : ! [X1] : ( aElementOf0(sK13(X0,X5),X0) | ~ aElementOf0(X5,X1) | ~ sP4(X0,X1) ) ).
+fof(f249,axiom,! [X0] : ! [X5] : ! [X1] : ( aElementOf0(X5,sK13(X0,X5)) | ~ aElementOf0(X5,X1) | ~ sP4(X0,X1) ) ).
+fof(f250,axiom,! [X6] : ! [X0] : ! [X5] : ! [X1] : ( aElementOf0(X5,X1) | ~ aElementOf0(X5,X6) | ~ aElementOf0(X6,X0) | ~ aInteger0(X5) | ~ sP4(X0,X1) ) ).
+fof(f251,axiom,! [X0] : ! [X1] : ( sP4(X0,X1) | aInteger0(sK11(X0,X1)) | aElementOf0(sK11(X0,X1),X1) | ~ aSet0(X1) ) ).
+fof(f252,axiom,! [X0] : ! [X1] : ( sP4(X0,X1) | aElementOf0(sK12(X0,X1),X0) | aElementOf0(sK11(X0,X1),X1) | ~ aSet0(X1) ) ).
+fof(f253,axiom,! [X0] : ! [X1] : ( sP4(X0,X1) | aElementOf0(sK11(X0,X1),sK12(X0,X1)) | aElementOf0(sK11(X0,X1),X1) | ~ aSet0(X1) ) ).
+fof(f254,axiom,! [X0] : ! [X3] : ! [X1] : ( sP4(X0,X1) | ~ aElementOf0(sK11(X0,X1),X3) | ~ aElementOf0(X3,X0) | ~ aInteger0(sK11(X0,X1)) | ~ aElementOf0(sK11(X0,X1),X1) | ~ aSet0(X1) ) ).
+fof(f255,axiom,! [X0] : ( sP5(X0) | aElementOf0(sK14(X0),X0) | ~ aSet0(X0) ) ).
+fof(f256,axiom,! [X0] : ( sP5(X0) | ~ aSubsetOf0(sK14(X0),cS1395) | ~ aSet0(X0) ) ).
+fof(f257,axiom,! [X0] : ! [X1] : ( aSet0(X1) | stldt0(X0) != X1 | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f258,axiom,! [X0] : ! [X3] : ! [X1] : ( aInteger0(X3) | ~ aElementOf0(X3,X1) | stldt0(X0) != X1 | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f259,axiom,! [X0] : ! [X3] : ! [X1] : ( ~ aElementOf0(X3,X0) | ~ aElementOf0(X3,X1) | stldt0(X0) != X1 | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f260,axiom,! [X0] : ! [X3] : ! [X1] : ( aElementOf0(X3,X1) | aElementOf0(X3,X0) | ~ aInteger0(X3) | stldt0(X0) != X1 | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f261,axiom,! [X0] : ! [X1] : ( stldt0(X0) = X1 | aInteger0(sK15(X0,X1)) | aElementOf0(sK15(X0,X1),X1) | ~ aSet0(X1) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f262,axiom,! [X0] : ! [X1] : ( stldt0(X0) = X1 | ~ aElementOf0(sK15(X0,X1),X0) | aElementOf0(sK15(X0,X1),X1) | ~ aSet0(X1) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f263,axiom,! [X0] : ! [X1] : ( stldt0(X0) = X1 | aElementOf0(sK15(X0,X1),X0) | ~ aInteger0(sK15(X0,X1)) | ~ aElementOf0(sK15(X0,X1),X1) | ~ aSet0(X1) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f264,axiom,! [X2] : ! [X0] : ! [X1] : ( aSet0(X2) | szAzrzSzezqlpdtcmdtrp0(X0,X1) != X2 | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f265,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aInteger0(X4) | ~ aElementOf0(X4,X2) | szAzrzSzezqlpdtcmdtrp0(X0,X1) != X2 | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f266,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X4,X0,X1) | ~ aElementOf0(X4,X2) | szAzrzSzezqlpdtcmdtrp0(X0,X1) != X2 | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f267,axiom,! [X4] : ! [X2] : ! [X0] : ! [X1] : ( aElementOf0(X4,X2) | ~ sdteqdtlpzmzozddtrp0(X4,X0,X1) | ~ aInteger0(X4) | szAzrzSzezqlpdtcmdtrp0(X0,X1) != X2 | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f268,axiom,! [X2] : ! [X0] : ! [X1] : ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | aInteger0(sK16(X0,X1,X2)) | aElementOf0(sK16(X0,X1,X2),X2) | ~ aSet0(X2) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f269,axiom,! [X2] : ! [X0] : ! [X1] : ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | sdteqdtlpzmzozddtrp0(sK16(X0,X1,X2),X0,X1) | aElementOf0(sK16(X0,X1,X2),X2) | ~ aSet0(X2) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f270,axiom,! [X2] : ! [X0] : ! [X1] : ( szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | ~ sdteqdtlpzmzozddtrp0(sK16(X0,X1,X2),X0,X1) | ~ aInteger0(sK16(X0,X1,X2)) | ~ aElementOf0(sK16(X0,X1,X2),X2) | ~ aSet0(X2) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f271,axiom,! [X0] : ! [X3] : ( aInteger0(sK18(X0,X3)) | ~ aElementOf0(X3,X0) | ~ isOpen0(X0) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f272,axiom,! [X0] : ! [X3] : ( sz00 != sK18(X0,X3) | ~ aElementOf0(X3,X0) | ~ isOpen0(X0) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f273,axiom,! [X0] : ! [X3] : ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X3,sK18(X0,X3)),X0) | ~ aElementOf0(X3,X0) | ~ isOpen0(X0) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f274,axiom,! [X0] : ( isOpen0(X0) | aElementOf0(sK17(X0),X0) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f275,axiom,! [X2] : ! [X0] : ( isOpen0(X0) | ~ aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(sK17(X0),X2),X0) | sz00 = X2 | ~ aInteger0(X2) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f276,axiom,! [X0] : ( isOpen0(stldt0(X0)) | ~ isClosed0(X0) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f277,axiom,! [X0] : ( isClosed0(X0) | ~ isOpen0(stldt0(X0)) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f278,axiom,! [X0] : ( isOpen0(sbsmnsldt0(X0)) | aElementOf0(sK19(X0),X0) | ~ aSet0(X0) ) ).
+fof(f279,axiom,! [X0] : ( isOpen0(sbsmnsldt0(X0)) | ~ isOpen0(sK19(X0)) | ~ aSubsetOf0(sK19(X0),cS1395) | ~ aSet0(X0) ) ).
+fof(f280,axiom,! [X0] : ! [X1] : ( isOpen0(sdtslmnbsdt0(X0,X1)) | ~ isOpen0(X1) | ~ isOpen0(X0) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f281,axiom,! [X0] : ! [X1] : ( isClosed0(sdtbsmnsldt0(X0,X1)) | ~ isClosed0(X1) | ~ isClosed0(X0) | ~ aSubsetOf0(X1,cS1395) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f282,axiom,! [X0] : ( isClosed0(sbsmnsldt0(X0)) | aElementOf0(sK20(X0),X0) | ~ isFinite0(X0) | ~ aSet0(X0) ) ).
+fof(f283,axiom,! [X0] : ( isClosed0(sbsmnsldt0(X0)) | ~ isClosed0(sK20(X0)) | ~ aSubsetOf0(sK20(X0),cS1395) | ~ isFinite0(X0) | ~ aSet0(X0) ) ).
+fof(f284,axiom,! [X0] : ! [X1] : ( aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X0,X1),cS1395) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f285,axiom,! [X0] : ! [X1] : ( isClosed0(szAzrzSzezqlpdtcmdtrp0(X0,X1)) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f286,axiom,xS = cS2043 ).
+fof(f287,axiom,stldt0(sbsmnsldt0(xS)) = cS2076 ).
+fof(f288,axiom,isFinite0(xS) ).
+fof(f289,axiom,~ isClosed0(sbsmnsldt0(xS)) ).
+fof(f290,axiom,cS2076 = stldt0(sbsmnsldt0(cS2043)) ).
+fof(f291,axiom,isFinite0(cS2043) ).
+fof(f292,axiom,~ isClosed0(sbsmnsldt0(cS2043)) ).
+fof(f293,axiom,! [X2] : ! [X1] : ( aDivisorOf0(X1,sdtasdt0(X1,X2)) | ~ aInteger0(X2) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(sdtasdt0(X1,X2)) ) ).
+fof(f294,axiom,! [X0] : ( ~ aDivisorOf0(sz00,X0) | ~ aInteger0(X0) ) ).
+fof(f295,axiom,! [X2] : ( ~ isPrime0(X2) | ~ aDivisorOf0(X2,smndt0(sz10)) | ~ aInteger0(smndt0(sz10)) ) ).
+fof(f296,axiom,! [X2] : ( ~ isPrime0(X2) | ~ aDivisorOf0(X2,sz10) | ~ aInteger0(sz10) ) ).
+fof(f297,axiom,! [X0] : ! [X1] : ( sP0(X1,X0,sdtbsmnsldt0(X0,X1)) | ~ sP1(X0,X1) ) ).
+fof(f298,axiom,! [X0] : ! [X1] : ( sP2(X1,X0,sdtslmnbsdt0(X0,X1)) | ~ sP3(X0,X1) ) ).
+fof(f299,axiom,! [X0] : ( sP4(X0,sbsmnsldt0(X0)) | ~ sP5(X0) ) ).
+fof(f300,axiom,! [X0] : ! [X3] : ( aElementOf0(X3,stldt0(X0)) | aElementOf0(X3,X0) | ~ aInteger0(X3) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f301,axiom,! [X0] : ! [X3] : ( ~ aElementOf0(X3,X0) | ~ aElementOf0(X3,stldt0(X0)) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f302,axiom,! [X0] : ! [X3] : ( aInteger0(X3) | ~ aElementOf0(X3,stldt0(X0)) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f303,axiom,! [X0] : ( aSet0(stldt0(X0)) | ~ aSubsetOf0(X0,cS1395) ) ).
+fof(f304,axiom,! [X4] : ! [X0] : ! [X1] : ( aElementOf0(X4,szAzrzSzezqlpdtcmdtrp0(X0,X1)) | ~ sdteqdtlpzmzozddtrp0(X4,X0,X1) | ~ aInteger0(X4) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f305,axiom,! [X4] : ! [X0] : ! [X1] : ( sdteqdtlpzmzozddtrp0(X4,X0,X1) | ~ aElementOf0(X4,szAzrzSzezqlpdtcmdtrp0(X0,X1)) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f306,axiom,! [X4] : ! [X0] : ! [X1] : ( aInteger0(X4) | ~ aElementOf0(X4,szAzrzSzezqlpdtcmdtrp0(X0,X1)) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(f307,axiom,! [X0] : ! [X1] : ( aSet0(szAzrzSzezqlpdtcmdtrp0(X0,X1)) | sz00 = X1 | ~ aInteger0(X1) | ~ aInteger0(X0) ) ).
+fof(c_49,axiom,aInteger0(sz00) ).
+fof(c_50,axiom,aInteger0(sz10) ).
+fof(c_51,axiom,! [X0] : ( ~ aInteger0(X0) | aInteger0(smndt0(X0)) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | aInteger0(sdtpldt0(X0,X1)) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | aInteger0(sdtasdt0(X0,X1)) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | sdtpldt0(sdtpldt0(X0,X1),X2) = sdtpldt0(X0,sdtpldt0(X1,X2)) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | sdtpldt0(X0,X1) = sdtpldt0(X1,X0) ) ).
+fof(c_56,axiom,! [X0] : ( ~ aInteger0(X0) | sdtpldt0(sz00,X0) = X0 ) ).
+fof(c_57,axiom,! [X0] : ( ~ aInteger0(X0) | sdtpldt0(X0,sz00) = X0 ) ).
+fof(c_58,axiom,! [X0] : ( ~ aInteger0(X0) | sdtpldt0(smndt0(X0),X0) = sz00 ) ).
+fof(c_59,axiom,! [X0] : ( ~ aInteger0(X0) | sdtpldt0(X0,smndt0(X0)) = sz00 ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | sdtasdt0(sdtasdt0(X0,X1),X2) = sdtasdt0(X0,sdtasdt0(X1,X2)) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | sdtasdt0(X0,X1) = sdtasdt0(X1,X0) ) ).
+fof(c_62,axiom,! [X0] : ( ~ aInteger0(X0) | sdtasdt0(sz10,X0) = X0 ) ).
+fof(c_63,axiom,! [X0] : ( ~ aInteger0(X0) | sdtasdt0(X0,sz10) = X0 ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | sdtpldt0(sdtasdt0(X0,X2),sdtasdt0(X1,X2)) = sdtasdt0(sdtpldt0(X0,X1),X2) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | sdtpldt0(sdtasdt0(X0,X1),sdtasdt0(X0,X2)) = sdtasdt0(X0,sdtpldt0(X1,X2)) ) ).
+fof(c_66,axiom,! [X0] : ( ~ aInteger0(X0) | sdtasdt0(sz00,X0) = sz00 ) ).
+fof(c_67,axiom,! [X0] : ( ~ aInteger0(X0) | sdtasdt0(X0,sz00) = sz00 ) ).
+fof(c_68,axiom,! [X0] : ( ~ aInteger0(X0) | sdtasdt0(X0,smndt0(sz10)) = smndt0(X0) ) ).
+fof(c_69,axiom,! [X0] : ( ~ aInteger0(X0) | sdtasdt0(smndt0(sz10),X0) = smndt0(X0) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( sdtasdt0(X0,X1) != sz00 | ~ aInteger0(X0) | ~ aInteger0(X1) | X0 = sz00 | X1 = sz00 ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ( ~ aInteger0(sdtasdt0(X0,X1)) | ~ aInteger0(X0) | ~ aInteger0(X1) | X0 = sz00 | aDivisorOf0(X0,sdtasdt0(X0,X1)) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ aDivisorOf0(X0,X1) | ~ aInteger0(X1) | sdtasdt0(X0,sK6(X1,X0)) = X1 ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ( ~ aDivisorOf0(X0,X1) | ~ aInteger0(X1) | aInteger0(sK6(X1,X0)) ) ).
+fof(c_74,axiom,! [X0] : ( ~ aDivisorOf0(sz00,X0) | ~ aInteger0(X0) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ( ~ aDivisorOf0(X0,X1) | ~ aInteger0(X1) | aInteger0(X0) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aDivisorOf0(X0,sdtpldt0(X1,smndt0(X2))) | ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | X0 = sz00 | sdteqdtlpzmzozddtrp0(X1,X2,X0) ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | X2 = sz00 | aDivisorOf0(X2,sdtpldt0(X0,smndt0(X1))) ) ).
+fof(c_78,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | X1 = sz00 | sdteqdtlpzmzozddtrp0(X0,X0,X1) ) ).
+fof(c_79,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | X2 = sz00 | sdteqdtlpzmzozddtrp0(X1,X0,X2) ) ).
+fof(c_80,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ sdteqdtlpzmzozddtrp0(X1,X3,X2) | ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | ~ aInteger0(X3) | X2 = sz00 | sdteqdtlpzmzozddtrp0(X0,X3,X2) ) ).
+fof(c_81,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sdteqdtlpzmzozddtrp0(X0,X1,sdtasdt0(X2,X3)) | ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | ~ aInteger0(X3) | X2 = sz00 | X3 = sz00 | sdteqdtlpzmzozddtrp0(X0,X1,X3) ) ).
+fof(c_82,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sdteqdtlpzmzozddtrp0(X0,X1,sdtasdt0(X2,X3)) | ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | ~ aInteger0(X3) | X2 = sz00 | X3 = sz00 | sdteqdtlpzmzozddtrp0(X0,X1,X2) ) ).
+fof(c_83,axiom,! [X0] : ( ~ aInteger0(X0) | smndt0(sz10) = X0 | X0 = sz10 | isPrime0(sK7(X0)) ) ).
+fof(c_84,axiom,! [X0] : ( ~ aInteger0(X0) | smndt0(sz10) = X0 | X0 = sz10 | aDivisorOf0(sK7(X0),X0) ) ).
+fof(c_85,axiom,! [X0] : ( ~ aDivisorOf0(X0,smndt0(sz10)) | ~ aInteger0(smndt0(sz10)) | ~ isPrime0(X0) ) ).
+fof(c_86,axiom,! [X0] : ( ~ aDivisorOf0(X0,sz10) | ~ isPrime0(X0) | ~ aInteger0(sz10) ) ).
+fof(c_87,axiom,! [X0] : ! [X1] : ( ~ aElementOf0(sK8(X0,X1),X0) | ~ aSet0(X0) | ~ aSet0(X1) | aSubsetOf0(X1,X0) ) ).
+fof(c_88,axiom,! [X0] : ! [X1] : ( ~ aSet0(X0) | ~ aSet0(X1) | aElementOf0(sK8(X0,X1),X1) | aSubsetOf0(X1,X0) ) ).
+fof(c_89,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aSubsetOf0(X0,X1) | ~ aElementOf0(X2,X0) | ~ aSet0(X1) | aElementOf0(X2,X1) ) ).
+fof(c_90,axiom,! [X0] : ! [X1] : ( ~ aSubsetOf0(X0,X1) | ~ aSet0(X1) | aSet0(X0) ) ).
+fof(c_91,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sP0(X0,X1,X2) | ~ sP1(X1,X0) | sdtbsmnsldt0(X1,X0) = X2 ) ).
+fof(c_92,axiom,! [X0] : ! [X1] : ( ~ sP1(X0,X1) | sP0(X1,X0,sdtbsmnsldt0(X0,X1)) ) ).
+fof(c_93,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(sK9(X0,X1,X2),X0) | ~ aElementOf0(sK9(X0,X1,X2),X2) | ~ aInteger0(sK9(X0,X1,X2)) | ~ aSet0(X2) | sP0(X0,X1,X2) ) ).
+fof(c_94,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(sK9(X0,X1,X2),X1) | ~ aElementOf0(sK9(X0,X1,X2),X2) | ~ aInteger0(sK9(X0,X1,X2)) | ~ aSet0(X2) | sP0(X0,X1,X2) ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aSet0(X0) | aElementOf0(sK9(X1,X2,X0),X0) | aElementOf0(sK9(X1,X2,X0),X1) | aElementOf0(sK9(X1,X2,X0),X2) | sP0(X1,X2,X0) ) ).
+fof(c_96,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aSet0(X0) | aElementOf0(sK9(X1,X2,X0),X0) | aInteger0(sK9(X1,X2,X0)) | sP0(X1,X2,X0) ) ).
+fof(c_97,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sP0(X0,X1,X2) | ~ aElementOf0(X3,X0) | ~ aInteger0(X3) | aElementOf0(X3,X2) ) ).
+fof(c_98,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sP0(X0,X1,X2) | ~ aElementOf0(X3,X1) | ~ aInteger0(X3) | aElementOf0(X3,X2) ) ).
+fof(c_99,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sP0(X0,X1,X2) | ~ aElementOf0(X3,X2) | aElementOf0(X3,X0) | aElementOf0(X3,X1) ) ).
+fof(c_100,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sP0(X0,X1,X2) | ~ aElementOf0(X3,X2) | aInteger0(X3) ) ).
+fof(c_101,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sP0(X0,X1,X2) | aSet0(X2) ) ).
+fof(c_102,axiom,! [X0] : ! [X1] : ( ~ aSubsetOf0(X0,cS1395) | ~ aSubsetOf0(X1,cS1395) | sP1(X0,X1) ) ).
+fof(c_103,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sP2(X0,X1,X2) | ~ sP3(X1,X0) | sdtslmnbsdt0(X1,X0) = X2 ) ).
+fof(c_104,axiom,! [X0] : ! [X1] : ( ~ sP3(X0,X1) | sP2(X1,X0,sdtslmnbsdt0(X0,X1)) ) ).
+fof(c_105,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(sK10(X0,X1,X2),X0) | ~ aElementOf0(sK10(X0,X1,X2),X1) | ~ aElementOf0(sK10(X0,X1,X2),X2) | ~ aInteger0(sK10(X0,X1,X2)) | ~ aSet0(X2) | sP2(X0,X1,X2) ) ).
+fof(c_106,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aSet0(X0) | aElementOf0(sK10(X1,X2,X0),X0) | aElementOf0(sK10(X1,X2,X0),X1) | sP2(X1,X2,X0) ) ).
+fof(c_107,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aSet0(X0) | aElementOf0(sK10(X1,X2,X0),X0) | aElementOf0(sK10(X1,X2,X0),X2) | sP2(X1,X2,X0) ) ).
+fof(c_108,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aSet0(X0) | aElementOf0(sK10(X1,X2,X0),X0) | aInteger0(sK10(X1,X2,X0)) | sP2(X1,X2,X0) ) ).
+fof(c_109,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sP2(X0,X1,X2) | ~ aElementOf0(X3,X0) | ~ aElementOf0(X3,X1) | ~ aInteger0(X3) | aElementOf0(X3,X2) ) ).
+fof(c_110,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sP2(X0,X1,X2) | ~ aElementOf0(X3,X2) | aElementOf0(X3,X0) ) ).
+fof(c_111,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sP2(X0,X1,X2) | ~ aElementOf0(X3,X2) | aElementOf0(X3,X1) ) ).
+fof(c_112,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ sP2(X0,X1,X2) | ~ aElementOf0(X3,X2) | aInteger0(X3) ) ).
+fof(c_113,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sP2(X0,X1,X2) | aSet0(X2) ) ).
+fof(c_114,axiom,! [X0] : ! [X1] : ( ~ aSubsetOf0(X0,cS1395) | ~ aSubsetOf0(X1,cS1395) | sP3(X0,X1) ) ).
+fof(c_115,axiom,! [X0] : ! [X1] : ( ~ sP4(X0,X1) | ~ sP5(X0) | sbsmnsldt0(X0) = X1 ) ).
+fof(c_116,axiom,! [X0] : ( ~ sP5(X0) | sP4(X0,sbsmnsldt0(X0)) ) ).
+fof(c_117,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(sK11(X0,X1),X1) | ~ aElementOf0(sK11(X0,X1),X2) | ~ aInteger0(sK11(X0,X1)) | ~ aElementOf0(X2,X0) | ~ aSet0(X1) | sP4(X0,X1) ) ).
+fof(c_118,axiom,! [X0] : ! [X1] : ( ~ aSet0(X0) | aElementOf0(sK11(X1,X0),sK12(X1,X0)) | aElementOf0(sK11(X1,X0),X0) | sP4(X1,X0) ) ).
+fof(c_119,axiom,! [X0] : ! [X1] : ( ~ aSet0(X0) | aElementOf0(sK11(X1,X0),X0) | aElementOf0(sK12(X1,X0),X1) | sP4(X1,X0) ) ).
+fof(c_120,axiom,! [X0] : ! [X1] : ( ~ aSet0(X0) | aElementOf0(sK11(X1,X0),X0) | aInteger0(sK11(X1,X0)) | sP4(X1,X0) ) ).
+fof(c_121,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ aElementOf0(X0,X1) | ~ aElementOf0(X1,X2) | ~ sP4(X2,X3) | ~ aInteger0(X0) | aElementOf0(X0,X3) ) ).
+fof(c_122,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(X0,X1) | ~ sP4(X2,X1) | aElementOf0(X0,sK13(X2,X0)) ) ).
+fof(c_123,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(X0,X1) | ~ sP4(X2,X1) | aElementOf0(sK13(X2,X0),X2) ) ).
+fof(c_124,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(X0,X1) | ~ sP4(X2,X1) | aInteger0(X0) ) ).
+fof(c_125,axiom,! [X0] : ! [X1] : ( ~ sP4(X0,X1) | aSet0(X1) ) ).
+fof(c_126,axiom,! [X0] : ( ~ aSubsetOf0(sK14(X0),cS1395) | ~ aSet0(X0) | sP5(X0) ) ).
+fof(c_127,axiom,! [X0] : ( ~ aSet0(X0) | aElementOf0(sK14(X0),X0) | sP5(X0) ) ).
+fof(c_128,axiom,! [X0] : ! [X1] : ( ~ aElementOf0(sK15(X0,X1),X1) | ~ aInteger0(sK15(X0,X1)) | ~ aSubsetOf0(X0,cS1395) | ~ aSet0(X1) | stldt0(X0) = X1 | aElementOf0(sK15(X0,X1),X0) ) ).
+fof(c_129,axiom,! [X0] : ! [X1] : ( ~ aElementOf0(sK15(X0,X1),X0) | ~ aSubsetOf0(X0,cS1395) | ~ aSet0(X1) | stldt0(X0) = X1 | aElementOf0(sK15(X0,X1),X1) ) ).
+fof(c_130,axiom,! [X0] : ! [X1] : ( ~ aSubsetOf0(X0,cS1395) | ~ aSet0(X1) | stldt0(X0) = X1 | aElementOf0(sK15(X0,X1),X1) | aInteger0(sK15(X0,X1)) ) ).
+fof(c_131,axiom,! [X0] : ! [X1] : ( ~ aSubsetOf0(X0,cS1395) | ~ aInteger0(X1) | aElementOf0(X1,stldt0(X0)) | aElementOf0(X1,X0) ) ).
+fof(c_132,axiom,! [X0] : ! [X1] : ( ~ aElementOf0(X0,stldt0(X1)) | ~ aElementOf0(X0,X1) | ~ aSubsetOf0(X1,cS1395) ) ).
+fof(c_133,axiom,! [X0] : ! [X1] : ( ~ aElementOf0(X0,stldt0(X1)) | ~ aSubsetOf0(X1,cS1395) | aInteger0(X0) ) ).
+fof(c_134,axiom,! [X0] : ( ~ aSubsetOf0(X0,cS1395) | aSet0(stldt0(X0)) ) ).
+fof(c_135,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sdteqdtlpzmzozddtrp0(sK16(X0,X1,X2),X0,X1) | ~ aElementOf0(sK16(X0,X1,X2),X2) | ~ aInteger0(sK16(X0,X1,X2)) | ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aSet0(X2) | szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | X1 = sz00 ) ).
+fof(c_136,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aSet0(X2) | szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | X1 = sz00 | sdteqdtlpzmzozddtrp0(sK16(X0,X1,X2),X0,X1) | aElementOf0(sK16(X0,X1,X2),X2) ) ).
+fof(c_137,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aSet0(X2) | szAzrzSzezqlpdtcmdtrp0(X0,X1) = X2 | X1 = sz00 | aElementOf0(sK16(X0,X1,X2),X2) | aInteger0(sK16(X0,X1,X2)) ) ).
+fof(c_138,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sdteqdtlpzmzozddtrp0(X0,X1,X2) | ~ aInteger0(X0) | ~ aInteger0(X1) | ~ aInteger0(X2) | X2 = sz00 | aElementOf0(X0,szAzrzSzezqlpdtcmdtrp0(X1,X2)) ) ).
+fof(c_139,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(X0,szAzrzSzezqlpdtcmdtrp0(X1,X2)) | ~ aInteger0(X1) | ~ aInteger0(X2) | X2 = sz00 | sdteqdtlpzmzozddtrp0(X0,X1,X2) ) ).
+fof(c_140,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ aElementOf0(X0,szAzrzSzezqlpdtcmdtrp0(X1,X2)) | ~ aInteger0(X1) | ~ aInteger0(X2) | X2 = sz00 | aInteger0(X0) ) ).
+fof(c_141,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | X1 = sz00 | aSet0(szAzrzSzezqlpdtcmdtrp0(X0,X1)) ) ).
+fof(c_142,axiom,! [X0] : ! [X1] : ( ~ aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(sK17(X0),X1),X0) | ~ aSubsetOf0(X0,cS1395) | ~ aInteger0(X1) | X1 = sz00 | isOpen0(X0) ) ).
+fof(c_143,axiom,! [X0] : ( ~ aSubsetOf0(X0,cS1395) | aElementOf0(sK17(X0),X0) | isOpen0(X0) ) ).
+fof(c_144,axiom,! [X0] : ! [X1] : ( ~ aElementOf0(X0,X1) | ~ aSubsetOf0(X1,cS1395) | ~ isOpen0(X1) | aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X0,sK18(X1,X0)),X1) ) ).
+fof(c_145,axiom,! [X0] : ! [X1] : ( sK18(X0,X1) != sz00 | ~ aElementOf0(X1,X0) | ~ aSubsetOf0(X0,cS1395) | ~ isOpen0(X0) ) ).
+fof(c_146,axiom,! [X0] : ! [X1] : ( ~ aElementOf0(X0,X1) | ~ aSubsetOf0(X1,cS1395) | ~ isOpen0(X1) | aInteger0(sK18(X1,X0)) ) ).
+fof(c_147,axiom,! [X0] : ( ~ aSubsetOf0(X0,cS1395) | ~ isOpen0(stldt0(X0)) | isClosed0(X0) ) ).
+fof(c_148,axiom,! [X0] : ( ~ aSubsetOf0(X0,cS1395) | ~ isClosed0(X0) | isOpen0(stldt0(X0)) ) ).
+fof(c_149,axiom,! [X0] : ( ~ aSubsetOf0(sK19(X0),cS1395) | ~ isOpen0(sK19(X0)) | ~ aSet0(X0) | isOpen0(sbsmnsldt0(X0)) ) ).
+fof(c_150,axiom,! [X0] : ( ~ aSet0(X0) | aElementOf0(sK19(X0),X0) | isOpen0(sbsmnsldt0(X0)) ) ).
+fof(c_151,axiom,! [X0] : ! [X1] : ( ~ aSubsetOf0(X0,cS1395) | ~ aSubsetOf0(X1,cS1395) | ~ isOpen0(X0) | ~ isOpen0(X1) | isOpen0(sdtslmnbsdt0(X0,X1)) ) ).
+fof(c_152,axiom,! [X0] : ! [X1] : ( ~ aSubsetOf0(X0,cS1395) | ~ aSubsetOf0(X1,cS1395) | ~ isClosed0(X0) | ~ isClosed0(X1) | isClosed0(sdtbsmnsldt0(X0,X1)) ) ).
+fof(c_153,axiom,! [X0] : ( ~ aSubsetOf0(sK20(X0),cS1395) | ~ isClosed0(sK20(X0)) | ~ aSet0(X0) | ~ isFinite0(X0) | isClosed0(sbsmnsldt0(X0)) ) ).
+fof(c_154,axiom,! [X0] : ( ~ aSet0(X0) | ~ isFinite0(X0) | aElementOf0(sK20(X0),X0) | isClosed0(sbsmnsldt0(X0)) ) ).
+fof(c_155,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | X1 = sz00 | isClosed0(szAzrzSzezqlpdtcmdtrp0(X0,X1)) ) ).
+fof(c_156,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | X1 = sz00 | aSubsetOf0(szAzrzSzezqlpdtcmdtrp0(X0,X1),cS1395) ) ).
+fof(c_157,axiom,stldt0(sbsmnsldt0(cS2043)) = cS2076 ).
+fof(c_158,axiom,isFinite0(cS2043) ).
+fof(c_159,axiom,~ isClosed0(sbsmnsldt0(cS2043)) ).
+fof(c_237,axiom,! [X0] : ( ~ isPrime0(X0) | ~ aDivisorOf0(X0,sz10) ) ).
+fof(c_238,axiom,! [X0] : ( ~ aDivisorOf0(X0,sz10) | ~ isPrime0(X0) ) ).
+fof(c_240,axiom,! [X0] : ! [X1] : ( ~ aInteger0(X0) | ~ aInteger0(X1) | X0 = sz00 | aDivisorOf0(X0,sdtasdt0(X0,X1)) ) ).
+fof(c_1871,axiom,! [X0] : X0 = X0 ).
+fof(c_1872,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_1873,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_1874,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ aInteger0(X1) | aInteger0(X0) ) ).
+fof(c_1875,axiom,! [X0] : ! [X1] : ( X0 != X1 | smndt0(X0) = smndt0(X1) ) ).
+fof(c_1876,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | sdtpldt0(X0,X2) = sdtpldt0(X1,X3) ) ).
+fof(c_1877,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | sdtasdt0(X0,X2) = sdtasdt0(X1,X3) ) ).
+fof(c_1878,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ aDivisorOf0(X1,X3) | aDivisorOf0(X0,X2) ) ).
+fof(c_1879,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != X1 | X2 != X3 | ~ sdteqdtlpzmzozddtrp0(X1,X4,X3) | sdteqdtlpzmzozddtrp0(X0,X4,X2) ) ).
+fof(c_1880,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ isPrime0(X1) | isPrime0(X0) ) ).
+fof(c_1881,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ aSubsetOf0(X1,X3) | aSubsetOf0(X0,X2) ) ).
+fof(c_1882,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ aElementOf0(X1,X3) | aElementOf0(X0,X2) ) ).
+fof(c_1883,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ aSet0(X1) | aSet0(X0) ) ).
+fof(c_1884,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | ~ sP0(X2,X3,X1) | sP0(X2,X3,X0) ) ).
+fof(c_1885,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | ~ sP2(X2,X3,X1) | sP2(X2,X3,X0) ) ).
+fof(c_1886,axiom,! [X0] : ! [X1] : ( X0 != X1 | sbsmnsldt0(X0) = sbsmnsldt0(X1) ) ).
+fof(c_1887,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ sP4(X2,X1) | sP4(X2,X0) ) ).
+fof(c_1888,axiom,! [X0] : ! [X1] : ( X0 != X1 | stldt0(X0) = stldt0(X1) ) ).
+fof(c_1889,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | szAzrzSzezqlpdtcmdtrp0(X0,X2) = szAzrzSzezqlpdtcmdtrp0(X1,X3) ) ).
+fof(c_1890,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ isOpen0(X1) | isOpen0(X0) ) ).
+fof(c_1891,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ isClosed0(X1) | isClosed0(X0) ) ).
+fof(c_1892,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ isFinite0(X1) | isFinite0(X0) ) ).

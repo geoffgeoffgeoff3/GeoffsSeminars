@@ -1,0 +1,446 @@
+fof(familiar_or_not,axiom,! [X1] : ! [X2] : ( familiar(X1,X2) | not_familiar(X1,X2) | ~ person(X1) | ~ person(X2) | ~ not_equal(X1,X2) ) ).
+fof(not_equal_4_2,axiom,not_equal(n4,n2) ).
+fof(person_2,axiom,person(n2) ).
+fof(person_4,axiom,person(n4) ).
+fof(not_equal_4_3,axiom,not_equal(n4,n3) ).
+fof(person_3,axiom,person(n3) ).
+fof(not_equal_5_2,axiom,not_equal(n5,n2) ).
+fof(person_5,axiom,person(n5) ).
+fof(not_equal_5_3,axiom,not_equal(n5,n3) ).
+fof(not_equal_5_4,axiom,not_equal(n5,n4) ).
+fof(not_equal_6_3,axiom,not_equal(n6,n3) ).
+fof(person_6,axiom,person(n6) ).
+fof(not_equal_6_4,axiom,not_equal(n6,n4) ).
+fof(not_equal_6_5,axiom,not_equal(n6,n5) ).
+fof(not_equal_6_2,axiom,not_equal(n6,n2) ).
+fof(three_not_familiar,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ not_familiar(X1,X2) | ~ not_familiar(X2,X3) | ~ not_familiar(X3,X1) ) ).
+fof(not_equal_3_4,axiom,not_equal(n3,n4) ).
+fof(not_equal_5_1,axiom,not_equal(n5,n1) ).
+fof(person_1,axiom,person(n1) ).
+fof(not_equal_6_1,axiom,not_equal(n6,n1) ).
+fof(not_equal_2_4,axiom,not_equal(n2,n4) ).
+fof(not_equal_3_5,axiom,not_equal(n3,n5) ).
+fof(not_equal_4_5,axiom,not_equal(n4,n5) ).
+fof(not_equal_2_5,axiom,not_equal(n2,n5) ).
+fof(not_equal_2_6,axiom,not_equal(n2,n6) ).
+fof(not_equal_3_6,axiom,not_equal(n3,n6) ).
+fof(not_equal_4_6,axiom,not_equal(n4,n6) ).
+fof(not_equal_5_6,axiom,not_equal(n5,n6) ).
+fof(not_equal_3_1,axiom,not_equal(n3,n1) ).
+fof(not_equal_3_2,axiom,not_equal(n3,n2) ).
+fof(not_equal_4_1,axiom,not_equal(n4,n1) ).
+fof(not_equal_2_3,axiom,not_equal(n2,n3) ).
+fof(not_equal_1_4,axiom,not_equal(n1,n4) ).
+fof(not_equal_1_5,axiom,not_equal(n1,n5) ).
+fof(not_equal_1_6,axiom,not_equal(n1,n6) ).
+fof(not_equal_1_3,axiom,not_equal(n1,n3) ).
+fof(not_equal_2_1,axiom,not_equal(n2,n1) ).
+fof(not_equal_1_2,axiom,not_equal(n1,n2) ).
+fof(three_familiar,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ familiar(X1,X2) | ~ familiar(X2,X3) | ~ familiar(X3,X1) ) ).
+fof(c_0_39,axiom,! [X1] : ! [X2] : ( familiar(X1,X2) | not_familiar(X1,X2) | ~ person(X1) | ~ person(X2) | ~ not_equal(X1,X2) ) ).
+fof(c_0_40,axiom,not_equal(n4,n2) ).
+fof(c_0_41,axiom,person(n2) ).
+fof(c_0_42,axiom,person(n4) ).
+fof(c_0_43,axiom,not_equal(n4,n3) ).
+fof(c_0_44,axiom,person(n3) ).
+fof(c_0_45,axiom,not_equal(n5,n2) ).
+fof(c_0_46,axiom,person(n5) ).
+fof(c_0_47,axiom,not_equal(n5,n3) ).
+fof(c_0_48,axiom,not_equal(n5,n4) ).
+fof(c_0_49,axiom,not_equal(n6,n3) ).
+fof(c_0_50,axiom,person(n6) ).
+fof(c_0_51,axiom,not_equal(n6,n4) ).
+fof(c_0_52,axiom,not_equal(n6,n5) ).
+fof(c_0_53,axiom,not_equal(n6,n2) ).
+fof(c_0_54,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ not_familiar(X1,X2) | ~ not_familiar(X2,X3) | ~ not_familiar(X3,X1) ) ).
+fof(c_0_55,axiom,not_familiar(n4,n2) | familiar(n4,n2) ).
+fof(c_0_56,axiom,not_equal(n3,n4) ).
+fof(c_0_57,axiom,not_equal(n5,n1) ).
+fof(c_0_58,axiom,person(n1) ).
+fof(c_0_59,axiom,not_equal(n6,n1) ).
+fof(c_0_60,axiom,not_familiar(n4,n3) | familiar(n4,n3) ).
+fof(c_0_61,axiom,not_equal(n2,n4) ).
+fof(c_0_62,axiom,not_familiar(n5,n2) | familiar(n5,n2) ).
+fof(c_0_63,axiom,not_equal(n3,n5) ).
+fof(c_0_64,axiom,not_equal(n4,n5) ).
+fof(c_0_65,axiom,not_familiar(n5,n3) | familiar(n5,n3) ).
+fof(c_0_66,axiom,not_equal(n2,n5) ).
+fof(c_0_67,axiom,not_familiar(n5,n4) | familiar(n5,n4) ).
+fof(c_0_68,axiom,not_familiar(n6,n3) | familiar(n6,n3) ).
+fof(c_0_69,axiom,not_equal(n2,n6) ).
+fof(c_0_70,axiom,not_familiar(n6,n4) | familiar(n6,n4) ).
+fof(c_0_71,axiom,not_familiar(n6,n5) | familiar(n6,n5) ).
+fof(c_0_72,axiom,not_familiar(n6,n2) | familiar(n6,n2) ).
+fof(c_0_73,axiom,not_equal(n3,n6) ).
+fof(c_0_74,axiom,not_equal(n4,n6) ).
+fof(c_0_75,axiom,not_equal(n5,n6) ).
+fof(c_0_76,axiom,not_equal(n3,n1) ).
+fof(c_0_77,axiom,not_equal(n3,n2) ).
+fof(c_0_78,axiom,not_equal(n4,n1) ).
+fof(c_0_79,axiom,! [X1] : ( familiar(n4,n2) | ~ not_familiar(X1,n4) | ~ not_familiar(n2,X1) ) ).
+fof(c_0_80,axiom,not_familiar(n3,n4) | familiar(n3,n4) ).
+fof(c_0_81,axiom,not_equal(n2,n3) ).
+fof(c_0_82,axiom,not_equal(n1,n4) ).
+fof(c_0_83,axiom,not_familiar(n5,n1) | familiar(n5,n1) ).
+fof(c_0_84,axiom,not_familiar(n6,n1) | familiar(n6,n1) ).
+fof(c_0_85,axiom,! [X1] : ( familiar(n4,n3) | ~ not_familiar(X1,n4) | ~ not_familiar(n3,X1) ) ).
+fof(c_0_86,axiom,not_familiar(n2,n4) | familiar(n2,n4) ).
+fof(c_0_87,axiom,! [X1] : ( familiar(n5,n2) | ~ not_familiar(X1,n5) | ~ not_familiar(n2,X1) ) ).
+fof(c_0_88,axiom,not_familiar(n3,n5) | familiar(n3,n5) ).
+fof(c_0_89,axiom,not_equal(n1,n5) ).
+fof(c_0_90,axiom,not_familiar(n4,n5) | familiar(n4,n5) ).
+fof(c_0_91,axiom,! [X1] : ( familiar(n5,n3) | ~ not_familiar(X1,n5) | ~ not_familiar(n3,X1) ) ).
+fof(c_0_92,axiom,not_familiar(n2,n5) | familiar(n2,n5) ).
+fof(c_0_93,axiom,! [X1] : ( familiar(n5,n4) | ~ not_familiar(X1,n5) | ~ not_familiar(n4,X1) ) ).
+fof(c_0_94,axiom,! [X1] : ( familiar(n6,n3) | ~ not_familiar(X1,n6) | ~ not_familiar(n3,X1) ) ).
+fof(c_0_95,axiom,not_familiar(n2,n6) | familiar(n2,n6) ).
+fof(c_0_96,axiom,not_equal(n1,n6) ).
+fof(c_0_97,axiom,! [X1] : ( familiar(n6,n4) | ~ not_familiar(X1,n6) | ~ not_familiar(n4,X1) ) ).
+fof(c_0_98,axiom,! [X1] : ( familiar(n6,n5) | ~ not_familiar(X1,n6) | ~ not_familiar(n5,X1) ) ).
+fof(c_0_99,axiom,! [X1] : ( familiar(n6,n2) | ~ not_familiar(X1,n6) | ~ not_familiar(n2,X1) ) ).
+fof(c_0_100,axiom,not_familiar(n3,n6) | familiar(n3,n6) ).
+fof(c_0_101,axiom,not_familiar(n4,n6) | familiar(n4,n6) ).
+fof(c_0_102,axiom,not_familiar(n5,n6) | familiar(n5,n6) ).
+fof(c_0_103,axiom,not_familiar(n3,n1) | familiar(n3,n1) ).
+fof(c_0_104,axiom,not_familiar(n3,n2) | familiar(n3,n2) ).
+fof(c_0_105,axiom,not_equal(n1,n3) ).
+fof(c_0_106,axiom,not_familiar(n4,n1) | familiar(n4,n1) ).
+fof(c_0_107,axiom,familiar(n3,n4) | familiar(n4,n2) | ~ not_familiar(n2,n3) ).
+fof(c_0_108,axiom,not_familiar(n2,n3) | familiar(n2,n3) ).
+fof(c_0_109,axiom,not_familiar(n1,n4) | familiar(n1,n4) ).
+fof(c_0_110,axiom,! [X1] : ( familiar(n5,n1) | ~ not_familiar(X1,n5) | ~ not_familiar(n1,X1) ) ).
+fof(c_0_111,axiom,! [X1] : ( familiar(n6,n1) | ~ not_familiar(X1,n6) | ~ not_familiar(n1,X1) ) ).
+fof(c_0_112,axiom,familiar(n2,n4) | familiar(n4,n3) | ~ not_familiar(n3,n2) ).
+fof(c_0_113,axiom,not_equal(n2,n1) ).
+fof(c_0_114,axiom,familiar(n3,n5) | familiar(n5,n2) | ~ not_familiar(n2,n3) ).
+fof(c_0_115,axiom,not_familiar(n1,n5) | familiar(n1,n5) ).
+fof(c_0_116,axiom,familiar(n4,n5) | familiar(n5,n2) | ~ not_familiar(n2,n4) ).
+fof(c_0_117,axiom,familiar(n2,n5) | familiar(n5,n3) | ~ not_familiar(n3,n2) ).
+fof(c_0_118,axiom,familiar(n4,n5) | familiar(n5,n3) | ~ not_familiar(n3,n4) ).
+fof(c_0_119,axiom,familiar(n2,n5) | familiar(n5,n4) | ~ not_familiar(n4,n2) ).
+fof(c_0_120,axiom,familiar(n2,n6) | familiar(n6,n3) | ~ not_familiar(n3,n2) ).
+fof(c_0_121,axiom,not_familiar(n1,n6) | familiar(n1,n6) ).
+fof(c_0_122,axiom,familiar(n2,n6) | familiar(n6,n4) | ~ not_familiar(n4,n2) ).
+fof(c_0_123,axiom,familiar(n2,n6) | familiar(n6,n5) | ~ not_familiar(n5,n2) ).
+fof(c_0_124,axiom,familiar(n3,n5) | familiar(n5,n4) | ~ not_familiar(n4,n3) ).
+fof(c_0_125,axiom,familiar(n3,n6) | familiar(n6,n2) | ~ not_familiar(n2,n3) ).
+fof(c_0_126,axiom,familiar(n3,n6) | familiar(n6,n4) | ~ not_familiar(n4,n3) ).
+fof(c_0_127,axiom,familiar(n3,n6) | familiar(n6,n5) | ~ not_familiar(n5,n3) ).
+fof(c_0_128,axiom,familiar(n4,n6) | familiar(n6,n2) | ~ not_familiar(n2,n4) ).
+fof(c_0_129,axiom,familiar(n4,n6) | familiar(n6,n3) | ~ not_familiar(n3,n4) ).
+fof(c_0_130,axiom,familiar(n6,n5) | familiar(n5,n4) | ~ not_familiar(n4,n6) ).
+fof(c_0_131,axiom,familiar(n5,n6) | familiar(n6,n2) | ~ not_familiar(n2,n5) ).
+fof(c_0_132,axiom,familiar(n5,n6) | familiar(n6,n3) | ~ not_familiar(n3,n5) ).
+fof(c_0_133,axiom,familiar(n5,n6) | familiar(n6,n4) | ~ not_familiar(n4,n5) ).
+fof(c_0_134,axiom,! [X1] : ( familiar(n3,n1) | ~ not_familiar(X1,n3) | ~ not_familiar(n1,X1) ) ).
+fof(c_0_135,axiom,not_equal(n1,n2) ).
+fof(c_0_136,axiom,! [X1] : ( familiar(n3,n2) | ~ not_familiar(X1,n3) | ~ not_familiar(n2,X1) ) ).
+fof(c_0_137,axiom,not_familiar(n1,n3) | familiar(n1,n3) ).
+fof(c_0_138,axiom,! [X1] : ( familiar(n4,n1) | ~ not_familiar(X1,n4) | ~ not_familiar(n1,X1) ) ).
+fof(c_0_139,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ familiar(X1,X2) | ~ familiar(X2,X3) | ~ familiar(X3,X1) ) ).
+fof(c_0_140,axiom,familiar(n2,n3) | familiar(n4,n2) | familiar(n3,n4) ).
+fof(c_0_141,axiom,familiar(n1,n4) | familiar(n4,n3) | ~ not_familiar(n3,n1) ).
+fof(c_0_142,axiom,familiar(n4,n5) | familiar(n5,n1) | ~ not_familiar(n1,n4) ).
+fof(c_0_143,axiom,familiar(n4,n6) | familiar(n6,n1) | ~ not_familiar(n1,n4) ).
+fof(c_0_144,axiom,familiar(n3,n2) | familiar(n4,n3) | familiar(n2,n4) ).
+fof(c_0_145,axiom,familiar(n1,n4) | familiar(n4,n2) | ~ not_familiar(n2,n1) ).
+fof(c_0_146,axiom,not_familiar(n2,n1) | familiar(n2,n1) ).
+fof(c_0_147,axiom,familiar(n2,n3) | familiar(n5,n2) | familiar(n3,n5) ).
+fof(c_0_148,axiom,familiar(n1,n5) | familiar(n5,n3) | ~ not_familiar(n3,n1) ).
+fof(c_0_149,axiom,familiar(n1,n5) | familiar(n5,n4) | ~ not_familiar(n4,n1) ).
+fof(c_0_150,axiom,familiar(n5,n6) | familiar(n6,n1) | ~ not_familiar(n1,n5) ).
+fof(c_0_151,axiom,familiar(n2,n4) | familiar(n5,n2) | familiar(n4,n5) ).
+fof(c_0_152,axiom,familiar(n3,n2) | familiar(n5,n3) | familiar(n2,n5) ).
+fof(c_0_153,axiom,familiar(n1,n5) | familiar(n5,n2) | ~ not_familiar(n2,n1) ).
+fof(c_0_154,axiom,familiar(n3,n4) | familiar(n5,n3) | familiar(n4,n5) ).
+fof(c_0_155,axiom,familiar(n4,n2) | familiar(n5,n4) | familiar(n2,n5) ).
+fof(c_0_156,axiom,familiar(n3,n2) | familiar(n6,n3) | familiar(n2,n6) ).
+fof(c_0_157,axiom,familiar(n1,n6) | familiar(n6,n2) | ~ not_familiar(n2,n1) ).
+fof(c_0_158,axiom,familiar(n1,n6) | familiar(n6,n4) | ~ not_familiar(n4,n1) ).
+fof(c_0_159,axiom,familiar(n1,n6) | familiar(n6,n5) | ~ not_familiar(n5,n1) ).
+fof(c_0_160,axiom,familiar(n4,n2) | familiar(n6,n4) | familiar(n2,n6) ).
+fof(c_0_161,axiom,familiar(n1,n6) | familiar(n6,n3) | ~ not_familiar(n3,n1) ).
+fof(c_0_162,axiom,familiar(n5,n2) | familiar(n6,n5) | familiar(n2,n6) ).
+fof(c_0_163,axiom,familiar(n4,n3) | familiar(n5,n4) | familiar(n3,n5) ).
+fof(c_0_164,axiom,familiar(n2,n3) | familiar(n6,n2) | familiar(n3,n6) ).
+fof(c_0_165,axiom,familiar(n4,n3) | familiar(n6,n4) | familiar(n3,n6) ).
+fof(c_0_166,axiom,familiar(n5,n3) | familiar(n6,n5) | familiar(n3,n6) ).
+fof(c_0_167,axiom,familiar(n2,n4) | familiar(n6,n2) | familiar(n4,n6) ).
+fof(c_0_168,axiom,familiar(n3,n4) | familiar(n6,n3) | familiar(n4,n6) ).
+fof(c_0_169,axiom,familiar(n4,n6) | familiar(n5,n4) | familiar(n6,n5) ).
+fof(c_0_170,axiom,familiar(n2,n5) | familiar(n6,n2) | familiar(n5,n6) ).
+fof(c_0_171,axiom,familiar(n3,n5) | familiar(n6,n3) | familiar(n5,n6) ).
+fof(c_0_172,axiom,familiar(n4,n5) | familiar(n6,n4) | familiar(n5,n6) ).
+fof(c_0_173,axiom,familiar(n2,n3) | familiar(n3,n1) | ~ not_familiar(n1,n2) ).
+fof(c_0_174,axiom,not_familiar(n1,n2) | familiar(n1,n2) ).
+fof(c_0_175,axiom,familiar(n1,n3) | familiar(n3,n2) | ~ not_familiar(n2,n1) ).
+fof(c_0_176,axiom,familiar(n2,n4) | familiar(n4,n1) | ~ not_familiar(n1,n2) ).
+fof(c_0_177,axiom,familiar(n3,n4) | familiar(n4,n1) | ~ not_familiar(n1,n3) ).
+fof(c_0_178,axiom,familiar(n2,n5) | familiar(n5,n1) | ~ not_familiar(n1,n2) ).
+fof(c_0_179,axiom,familiar(n3,n5) | familiar(n5,n1) | ~ not_familiar(n1,n3) ).
+fof(c_0_180,axiom,familiar(n2,n6) | familiar(n6,n1) | ~ not_familiar(n1,n2) ).
+fof(c_0_181,axiom,familiar(n3,n6) | familiar(n6,n1) | ~ not_familiar(n1,n3) ).
+fof(c_0_182,axiom,! [X1] : ( familiar(n3,n4) | familiar(n2,n3) | ~ familiar(X1,n4) | ~ familiar(n2,X1) ) ).
+fof(c_0_183,axiom,familiar(n3,n1) | familiar(n4,n3) | familiar(n1,n4) ).
+fof(c_0_184,axiom,familiar(n1,n4) | familiar(n5,n1) | familiar(n4,n5) ).
+fof(c_0_185,axiom,familiar(n1,n4) | familiar(n6,n1) | familiar(n4,n6) ).
+fof(c_0_186,axiom,! [X1] : ( familiar(n2,n4) | familiar(n3,n2) | ~ familiar(X1,n4) | ~ familiar(n3,X1) ) ).
+fof(c_0_187,axiom,familiar(n2,n1) | familiar(n4,n2) | familiar(n1,n4) ).
+fof(c_0_188,axiom,! [X1] : ( familiar(n3,n5) | familiar(n2,n3) | ~ familiar(X1,n5) | ~ familiar(n2,X1) ) ).
+fof(c_0_189,axiom,familiar(n3,n1) | familiar(n5,n3) | familiar(n1,n5) ).
+fof(c_0_190,axiom,familiar(n4,n1) | familiar(n5,n4) | familiar(n1,n5) ).
+fof(c_0_191,axiom,familiar(n1,n5) | familiar(n6,n1) | familiar(n5,n6) ).
+fof(c_0_192,axiom,! [X1] : ( familiar(n4,n5) | familiar(n2,n4) | ~ familiar(X1,n5) | ~ familiar(n2,X1) ) ).
+fof(c_0_193,axiom,! [X1] : ( familiar(n2,n5) | familiar(n3,n2) | ~ familiar(X1,n5) | ~ familiar(n3,X1) ) ).
+fof(c_0_194,axiom,familiar(n2,n1) | familiar(n5,n2) | familiar(n1,n5) ).
+fof(c_0_195,axiom,! [X1] : ( familiar(n4,n5) | familiar(n3,n4) | ~ familiar(X1,n5) | ~ familiar(n3,X1) ) ).
+fof(c_0_196,axiom,! [X1] : ( familiar(n2,n5) | familiar(n4,n2) | ~ familiar(X1,n5) | ~ familiar(n4,X1) ) ).
+fof(c_0_197,axiom,! [X1] : ( familiar(n2,n6) | familiar(n3,n2) | ~ familiar(X1,n6) | ~ familiar(n3,X1) ) ).
+fof(c_0_198,axiom,familiar(n2,n1) | familiar(n6,n2) | familiar(n1,n6) ).
+fof(c_0_199,axiom,familiar(n4,n1) | familiar(n6,n4) | familiar(n1,n6) ).
+fof(c_0_200,axiom,familiar(n5,n1) | familiar(n6,n5) | familiar(n1,n6) ).
+fof(c_0_201,axiom,! [X1] : ( familiar(n2,n6) | familiar(n4,n2) | ~ familiar(X1,n6) | ~ familiar(n4,X1) ) ).
+fof(c_0_202,axiom,familiar(n3,n1) | familiar(n6,n3) | familiar(n1,n6) ).
+fof(c_0_203,axiom,! [X1] : ( familiar(n2,n6) | familiar(n5,n2) | ~ familiar(X1,n6) | ~ familiar(n5,X1) ) ).
+fof(c_0_204,axiom,! [X1] : ( familiar(n3,n5) | familiar(n4,n3) | ~ familiar(X1,n5) | ~ familiar(n4,X1) ) ).
+fof(c_0_205,axiom,! [X1] : ( familiar(n3,n6) | familiar(n2,n3) | ~ familiar(X1,n6) | ~ familiar(n2,X1) ) ).
+fof(c_0_206,axiom,! [X1] : ( familiar(n3,n6) | familiar(n4,n3) | ~ familiar(X1,n6) | ~ familiar(n4,X1) ) ).
+fof(c_0_207,axiom,! [X1] : ( familiar(n3,n6) | familiar(n5,n3) | ~ familiar(X1,n6) | ~ familiar(n5,X1) ) ).
+fof(c_0_208,axiom,! [X1] : ( familiar(n4,n6) | familiar(n2,n4) | ~ familiar(X1,n6) | ~ familiar(n2,X1) ) ).
+fof(c_0_209,axiom,! [X1] : ( familiar(n4,n6) | familiar(n3,n4) | ~ familiar(X1,n6) | ~ familiar(n3,X1) ) ).
+fof(c_0_210,axiom,! [X1] : ( familiar(n5,n4) | familiar(n4,n6) | ~ familiar(X1,n6) | ~ familiar(n5,X1) ) ).
+fof(c_0_211,axiom,! [X1] : ( familiar(n5,n6) | familiar(n2,n5) | ~ familiar(X1,n6) | ~ familiar(n2,X1) ) ).
+fof(c_0_212,axiom,! [X1] : ( familiar(n5,n6) | familiar(n3,n5) | ~ familiar(X1,n6) | ~ familiar(n3,X1) ) ).
+fof(c_0_213,axiom,! [X1] : ( familiar(n5,n6) | familiar(n4,n5) | ~ familiar(X1,n6) | ~ familiar(n4,X1) ) ).
+fof(c_0_214,axiom,familiar(n1,n2) | familiar(n3,n1) | familiar(n2,n3) ).
+fof(c_0_215,axiom,familiar(n2,n1) | familiar(n3,n2) | familiar(n1,n3) ).
+fof(c_0_216,axiom,familiar(n1,n2) | familiar(n4,n1) | familiar(n2,n4) ).
+fof(c_0_217,axiom,familiar(n1,n3) | familiar(n4,n1) | familiar(n3,n4) ).
+fof(c_0_218,axiom,familiar(n1,n2) | familiar(n5,n1) | familiar(n2,n5) ).
+fof(c_0_219,axiom,familiar(n1,n3) | familiar(n5,n1) | familiar(n3,n5) ).
+fof(c_0_220,axiom,familiar(n1,n2) | familiar(n6,n1) | familiar(n2,n6) ).
+fof(c_0_221,axiom,familiar(n1,n3) | familiar(n6,n1) | familiar(n3,n6) ).
+fof(c_0_222,axiom,! [X1] : ( familiar(n1,n2) | ~ not_familiar(X1,n1) | ~ not_familiar(n2,X1) ) ).
+fof(c_0_223,axiom,! [X1] : ( familiar(n1,n3) | ~ not_familiar(X1,n1) | ~ not_familiar(n3,X1) ) ).
+fof(c_0_224,axiom,! [X1] : ( familiar(n1,n4) | ~ not_familiar(X1,n1) | ~ not_familiar(n4,X1) ) ).
+fof(c_0_225,axiom,! [X1] : ( familiar(n1,n5) | ~ not_familiar(X1,n1) | ~ not_familiar(n5,X1) ) ).
+fof(c_0_226,axiom,! [X1] : ( familiar(n1,n6) | ~ not_familiar(X1,n1) | ~ not_familiar(n6,X1) ) ).
+fof(c_0_227,axiom,! [X1] : ( familiar(n2,n1) | ~ not_familiar(X1,n2) | ~ not_familiar(n1,X1) ) ).
+fof(c_0_228,axiom,! [X1] : ( familiar(n2,n3) | ~ not_familiar(X1,n2) | ~ not_familiar(n3,X1) ) ).
+fof(c_0_229,axiom,! [X1] : ( familiar(n2,n4) | ~ not_familiar(X1,n2) | ~ not_familiar(n4,X1) ) ).
+fof(c_0_230,axiom,! [X1] : ( familiar(n2,n5) | ~ not_familiar(X1,n2) | ~ not_familiar(n5,X1) ) ).
+fof(c_0_231,axiom,! [X1] : ( familiar(n2,n6) | ~ not_familiar(X1,n2) | ~ not_familiar(n6,X1) ) ).
+fof(c_0_232,axiom,! [X1] : ( familiar(n3,n4) | ~ not_familiar(X1,n3) | ~ not_familiar(n4,X1) ) ).
+fof(c_0_233,axiom,! [X1] : ( familiar(n3,n5) | ~ not_familiar(X1,n3) | ~ not_familiar(n5,X1) ) ).
+fof(c_0_234,axiom,! [X1] : ( familiar(n3,n6) | ~ not_familiar(X1,n3) | ~ not_familiar(n6,X1) ) ).
+fof(c_0_235,axiom,! [X1] : ( familiar(n4,n5) | ~ not_familiar(X1,n4) | ~ not_familiar(n5,X1) ) ).
+fof(c_0_236,axiom,! [X1] : ( familiar(n4,n6) | ~ not_familiar(X1,n4) | ~ not_familiar(n6,X1) ) ).
+fof(c_0_237,axiom,! [X1] : ( familiar(n5,n6) | ~ not_familiar(X1,n5) | ~ not_familiar(n6,X1) ) ).
+fof(c_0_238,axiom,familiar(n4,n3) | familiar(n3,n1) | familiar(n2,n3) | familiar(n3,n4) | ~ familiar(n2,n1) ).
+fof(c_0_239,axiom,familiar(n4,n5) | familiar(n5,n1) | familiar(n2,n3) | familiar(n3,n4) | ~ familiar(n2,n1) ).
+fof(c_0_240,axiom,familiar(n4,n6) | familiar(n6,n1) | familiar(n2,n3) | familiar(n3,n4) | ~ familiar(n2,n1) ).
+fof(c_0_241,axiom,familiar(n3,n5) | familiar(n4,n3) | familiar(n2,n3) | familiar(n3,n4) | ~ familiar(n2,n5) ).
+fof(c_0_242,axiom,familiar(n3,n6) | familiar(n4,n3) | familiar(n2,n3) | familiar(n3,n4) | ~ familiar(n2,n6) ).
+fof(c_0_243,axiom,familiar(n5,n6) | familiar(n4,n5) | familiar(n2,n3) | familiar(n3,n4) | ~ familiar(n2,n6) ).
+fof(c_0_244,axiom,familiar(n4,n2) | familiar(n2,n1) | familiar(n3,n2) | familiar(n2,n4) | ~ familiar(n3,n1) ).
+fof(c_0_245,axiom,familiar(n4,n5) | familiar(n5,n1) | familiar(n3,n2) | familiar(n2,n4) | ~ familiar(n3,n1) ).
+fof(c_0_246,axiom,familiar(n4,n6) | familiar(n6,n1) | familiar(n3,n2) | familiar(n2,n4) | ~ familiar(n3,n1) ).
+fof(c_0_247,axiom,familiar(n2,n5) | familiar(n4,n2) | familiar(n3,n2) | familiar(n2,n4) | ~ familiar(n3,n5) ).
+fof(c_0_248,axiom,familiar(n2,n6) | familiar(n4,n2) | familiar(n3,n2) | familiar(n2,n4) | ~ familiar(n3,n6) ).
+fof(c_0_249,axiom,familiar(n5,n6) | familiar(n4,n5) | familiar(n3,n2) | familiar(n2,n4) | ~ familiar(n3,n6) ).
+fof(c_0_250,axiom,familiar(n5,n3) | familiar(n3,n1) | familiar(n2,n3) | familiar(n3,n5) | ~ familiar(n2,n1) ).
+fof(c_0_251,axiom,familiar(n5,n4) | familiar(n4,n1) | familiar(n2,n3) | familiar(n3,n5) | ~ familiar(n2,n1) ).
+fof(c_0_252,axiom,familiar(n5,n6) | familiar(n6,n1) | familiar(n2,n3) | familiar(n3,n5) | ~ familiar(n2,n1) ).
+fof(c_0_253,axiom,familiar(n3,n6) | familiar(n5,n3) | familiar(n2,n3) | familiar(n3,n5) | ~ familiar(n2,n6) ).
+fof(c_0_254,axiom,familiar(n5,n4) | familiar(n4,n6) | familiar(n2,n3) | familiar(n3,n5) | ~ familiar(n2,n6) ).
+fof(c_0_255,axiom,familiar(n5,n3) | familiar(n3,n1) | familiar(n2,n4) | familiar(n4,n5) | ~ familiar(n2,n1) ).
+fof(c_0_256,axiom,familiar(n5,n4) | familiar(n4,n1) | familiar(n2,n4) | familiar(n4,n5) | ~ familiar(n2,n1) ).
+fof(c_0_257,axiom,familiar(n5,n6) | familiar(n6,n1) | familiar(n2,n4) | familiar(n4,n5) | ~ familiar(n2,n1) ).
+fof(c_0_258,axiom,familiar(n3,n6) | familiar(n5,n3) | familiar(n2,n4) | familiar(n4,n5) | ~ familiar(n2,n6) ).
+fof(c_0_259,axiom,familiar(n5,n4) | familiar(n4,n6) | familiar(n2,n4) | familiar(n4,n5) | ~ familiar(n2,n6) ).
+fof(c_0_260,axiom,familiar(n5,n2) | familiar(n2,n1) | familiar(n3,n2) | familiar(n2,n5) | ~ familiar(n3,n1) ).
+fof(c_0_261,axiom,familiar(n5,n4) | familiar(n4,n1) | familiar(n3,n2) | familiar(n2,n5) | ~ familiar(n3,n1) ).
+fof(c_0_262,axiom,familiar(n5,n6) | familiar(n6,n1) | familiar(n3,n2) | familiar(n2,n5) | ~ familiar(n3,n1) ).
+fof(c_0_263,axiom,familiar(n2,n6) | familiar(n5,n2) | familiar(n3,n2) | familiar(n2,n5) | ~ familiar(n3,n6) ).
+fof(c_0_264,axiom,familiar(n5,n4) | familiar(n4,n6) | familiar(n3,n2) | familiar(n2,n5) | ~ familiar(n3,n6) ).
+fof(c_0_265,axiom,familiar(n5,n2) | familiar(n2,n1) | familiar(n3,n4) | familiar(n4,n5) | ~ familiar(n3,n1) ).
+fof(c_0_266,axiom,familiar(n5,n4) | familiar(n4,n1) | familiar(n3,n4) | familiar(n4,n5) | ~ familiar(n3,n1) ).
+fof(c_0_267,axiom,familiar(n5,n6) | familiar(n6,n1) | familiar(n3,n4) | familiar(n4,n5) | ~ familiar(n3,n1) ).
+fof(c_0_268,axiom,familiar(n2,n6) | familiar(n5,n2) | familiar(n3,n4) | familiar(n4,n5) | ~ familiar(n3,n6) ).
+fof(c_0_269,axiom,familiar(n5,n4) | familiar(n4,n6) | familiar(n3,n4) | familiar(n4,n5) | ~ familiar(n3,n6) ).
+fof(c_0_270,axiom,familiar(n5,n2) | familiar(n2,n1) | familiar(n4,n2) | familiar(n2,n5) | ~ familiar(n4,n1) ).
+fof(c_0_271,axiom,familiar(n5,n3) | familiar(n3,n1) | familiar(n4,n2) | familiar(n2,n5) | ~ familiar(n4,n1) ).
+fof(c_0_272,axiom,familiar(n5,n6) | familiar(n6,n1) | familiar(n4,n2) | familiar(n2,n5) | ~ familiar(n4,n1) ).
+fof(c_0_273,axiom,familiar(n2,n6) | familiar(n5,n2) | familiar(n4,n2) | familiar(n2,n5) | ~ familiar(n4,n6) ).
+fof(c_0_274,axiom,familiar(n3,n6) | familiar(n5,n3) | familiar(n4,n2) | familiar(n2,n5) | ~ familiar(n4,n6) ).
+fof(c_0_275,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n3,n2) | familiar(n2,n6) | ~ familiar(n3,n1) ).
+fof(c_0_276,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n3,n2) | familiar(n2,n6) | ~ familiar(n3,n1) ).
+fof(c_0_277,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n3,n2) | familiar(n2,n6) | ~ familiar(n3,n1) ).
+fof(c_0_278,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n4,n2) | familiar(n2,n6) | ~ familiar(n4,n1) ).
+fof(c_0_279,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n4,n2) | familiar(n2,n6) | ~ familiar(n4,n1) ).
+fof(c_0_280,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n4,n2) | familiar(n2,n6) | ~ familiar(n4,n1) ).
+fof(c_0_281,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n5,n2) | familiar(n2,n6) | ~ familiar(n5,n1) ).
+fof(c_0_282,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n5,n2) | familiar(n2,n6) | ~ familiar(n5,n1) ).
+fof(c_0_283,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n5,n2) | familiar(n2,n6) | ~ familiar(n5,n1) ).
+fof(c_0_284,axiom,familiar(n5,n2) | familiar(n2,n1) | familiar(n4,n3) | familiar(n3,n5) | ~ familiar(n4,n1) ).
+fof(c_0_285,axiom,familiar(n5,n3) | familiar(n3,n1) | familiar(n4,n3) | familiar(n3,n5) | ~ familiar(n4,n1) ).
+fof(c_0_286,axiom,familiar(n5,n6) | familiar(n6,n1) | familiar(n4,n3) | familiar(n3,n5) | ~ familiar(n4,n1) ).
+fof(c_0_287,axiom,familiar(n2,n6) | familiar(n5,n2) | familiar(n4,n3) | familiar(n3,n5) | ~ familiar(n4,n6) ).
+fof(c_0_288,axiom,familiar(n3,n6) | familiar(n5,n3) | familiar(n4,n3) | familiar(n3,n5) | ~ familiar(n4,n6) ).
+fof(c_0_289,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n2,n3) | familiar(n3,n6) | ~ familiar(n2,n1) ).
+fof(c_0_290,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n2,n3) | familiar(n3,n6) | ~ familiar(n2,n1) ).
+fof(c_0_291,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n2,n3) | familiar(n3,n6) | ~ familiar(n2,n1) ).
+fof(c_0_292,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n4,n3) | familiar(n3,n6) | ~ familiar(n4,n1) ).
+fof(c_0_293,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n4,n3) | familiar(n3,n6) | ~ familiar(n4,n1) ).
+fof(c_0_294,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n4,n3) | familiar(n3,n6) | ~ familiar(n4,n1) ).
+fof(c_0_295,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n5,n3) | familiar(n3,n6) | ~ familiar(n5,n1) ).
+fof(c_0_296,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n5,n3) | familiar(n3,n6) | ~ familiar(n5,n1) ).
+fof(c_0_297,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n5,n3) | familiar(n3,n6) | ~ familiar(n5,n1) ).
+fof(c_0_298,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n2,n4) | familiar(n4,n6) | ~ familiar(n2,n1) ).
+fof(c_0_299,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n2,n4) | familiar(n4,n6) | ~ familiar(n2,n1) ).
+fof(c_0_300,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n2,n4) | familiar(n4,n6) | ~ familiar(n2,n1) ).
+fof(c_0_301,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n3,n4) | familiar(n4,n6) | ~ familiar(n3,n1) ).
+fof(c_0_302,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n3,n4) | familiar(n4,n6) | ~ familiar(n3,n1) ).
+fof(c_0_303,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n3,n4) | familiar(n4,n6) | ~ familiar(n3,n1) ).
+fof(c_0_304,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n4,n6) | familiar(n5,n4) | ~ familiar(n5,n1) ).
+fof(c_0_305,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n4,n6) | familiar(n5,n4) | ~ familiar(n5,n1) ).
+fof(c_0_306,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n4,n6) | familiar(n5,n4) | ~ familiar(n5,n1) ).
+fof(c_0_307,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n2,n5) | familiar(n5,n6) | ~ familiar(n2,n1) ).
+fof(c_0_308,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n2,n5) | familiar(n5,n6) | ~ familiar(n2,n1) ).
+fof(c_0_309,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n2,n5) | familiar(n5,n6) | ~ familiar(n2,n1) ).
+fof(c_0_310,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n3,n5) | familiar(n5,n6) | ~ familiar(n3,n1) ).
+fof(c_0_311,axiom,familiar(n6,n4) | familiar(n4,n1) | familiar(n3,n5) | familiar(n5,n6) | ~ familiar(n3,n1) ).
+fof(c_0_312,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n3,n5) | familiar(n5,n6) | ~ familiar(n3,n1) ).
+fof(c_0_313,axiom,familiar(n6,n2) | familiar(n2,n1) | familiar(n4,n5) | familiar(n5,n6) | ~ familiar(n4,n1) ).
+fof(c_0_314,axiom,familiar(n6,n3) | familiar(n3,n1) | familiar(n4,n5) | familiar(n5,n6) | ~ familiar(n4,n1) ).
+fof(c_0_315,axiom,familiar(n6,n5) | familiar(n5,n1) | familiar(n4,n5) | familiar(n5,n6) | ~ familiar(n4,n1) ).
+fof(c_0_316,axiom,! [X1] : ( familiar(n2,n3) | familiar(n3,n1) | ~ familiar(X1,n1) | ~ familiar(n2,X1) ) ).
+fof(c_0_317,axiom,! [X1] : ( familiar(n3,n2) | familiar(n2,n1) | ~ familiar(X1,n1) | ~ familiar(n3,X1) ) ).
+fof(c_0_318,axiom,! [X1] : ( familiar(n2,n4) | familiar(n4,n1) | ~ familiar(X1,n1) | ~ familiar(n2,X1) ) ).
+fof(c_0_319,axiom,! [X1] : ( familiar(n3,n4) | familiar(n4,n1) | ~ familiar(X1,n1) | ~ familiar(n3,X1) ) ).
+fof(c_0_320,axiom,! [X1] : ( familiar(n4,n2) | familiar(n2,n1) | ~ familiar(X1,n1) | ~ familiar(n4,X1) ) ).
+fof(c_0_321,axiom,! [X1] : ( familiar(n4,n3) | familiar(n3,n1) | ~ familiar(X1,n1) | ~ familiar(n4,X1) ) ).
+fof(c_0_322,axiom,! [X1] : ( familiar(n2,n5) | familiar(n5,n1) | ~ familiar(X1,n1) | ~ familiar(n2,X1) ) ).
+fof(c_0_323,axiom,! [X1] : ( familiar(n3,n5) | familiar(n5,n1) | ~ familiar(X1,n1) | ~ familiar(n3,X1) ) ).
+fof(c_0_324,axiom,! [X1] : ( familiar(n4,n5) | familiar(n5,n1) | ~ familiar(X1,n1) | ~ familiar(n4,X1) ) ).
+fof(c_0_325,axiom,! [X1] : ( familiar(n5,n2) | familiar(n2,n1) | ~ familiar(X1,n1) | ~ familiar(n5,X1) ) ).
+fof(c_0_326,axiom,! [X1] : ( familiar(n5,n3) | familiar(n3,n1) | ~ familiar(X1,n1) | ~ familiar(n5,X1) ) ).
+fof(c_0_327,axiom,! [X1] : ( familiar(n5,n4) | familiar(n4,n1) | ~ familiar(X1,n1) | ~ familiar(n5,X1) ) ).
+fof(c_0_328,axiom,! [X1] : ( familiar(n6,n2) | familiar(n2,n1) | ~ familiar(X1,n1) | ~ familiar(n6,X1) ) ).
+fof(c_0_329,axiom,! [X1] : ( familiar(n6,n3) | familiar(n3,n1) | ~ familiar(X1,n1) | ~ familiar(n6,X1) ) ).
+fof(c_0_330,axiom,! [X1] : ( familiar(n6,n4) | familiar(n4,n1) | ~ familiar(X1,n1) | ~ familiar(n6,X1) ) ).
+fof(c_0_331,axiom,! [X1] : ( familiar(n6,n5) | familiar(n5,n1) | ~ familiar(X1,n1) | ~ familiar(n6,X1) ) ).
+fof(c_0_332,axiom,! [X1] : ( familiar(n2,n6) | familiar(n6,n1) | ~ familiar(X1,n1) | ~ familiar(n2,X1) ) ).
+fof(c_0_333,axiom,! [X1] : ( familiar(n3,n6) | familiar(n6,n1) | ~ familiar(X1,n1) | ~ familiar(n3,X1) ) ).
+fof(c_0_334,axiom,! [X1] : ( familiar(n4,n6) | familiar(n6,n1) | ~ familiar(X1,n1) | ~ familiar(n4,X1) ) ).
+fof(c_0_335,axiom,! [X1] : ( familiar(n5,n6) | familiar(n6,n1) | ~ familiar(X1,n1) | ~ familiar(n5,X1) ) ).
+fof(c_0_336,axiom,familiar(n2,n1) | familiar(n1,n2) | ~ not_familiar(n2,n2) ).
+fof(c_0_337,axiom,familiar(n3,n1) | familiar(n1,n2) | ~ not_familiar(n2,n3) ).
+fof(c_0_338,axiom,familiar(n4,n1) | familiar(n1,n2) | ~ not_familiar(n2,n4) ).
+fof(c_0_339,axiom,familiar(n5,n1) | familiar(n1,n2) | ~ not_familiar(n2,n5) ).
+fof(c_0_340,axiom,familiar(n6,n1) | familiar(n1,n2) | ~ not_familiar(n2,n6) ).
+fof(c_0_341,axiom,familiar(n2,n1) | familiar(n1,n3) | ~ not_familiar(n3,n2) ).
+fof(c_0_342,axiom,familiar(n3,n1) | familiar(n1,n3) | ~ not_familiar(n3,n3) ).
+fof(c_0_343,axiom,familiar(n4,n1) | familiar(n1,n3) | ~ not_familiar(n3,n4) ).
+fof(c_0_344,axiom,familiar(n5,n1) | familiar(n1,n3) | ~ not_familiar(n3,n5) ).
+fof(c_0_345,axiom,familiar(n6,n1) | familiar(n1,n3) | ~ not_familiar(n3,n6) ).
+fof(c_0_346,axiom,familiar(n2,n1) | familiar(n1,n4) | ~ not_familiar(n4,n2) ).
+fof(c_0_347,axiom,familiar(n3,n1) | familiar(n1,n4) | ~ not_familiar(n4,n3) ).
+fof(c_0_348,axiom,familiar(n4,n1) | familiar(n1,n4) | ~ not_familiar(n4,n4) ).
+fof(c_0_349,axiom,familiar(n5,n1) | familiar(n1,n4) | ~ not_familiar(n4,n5) ).
+fof(c_0_350,axiom,familiar(n6,n1) | familiar(n1,n4) | ~ not_familiar(n4,n6) ).
+fof(c_0_351,axiom,familiar(n2,n1) | familiar(n1,n5) | ~ not_familiar(n5,n2) ).
+fof(c_0_352,axiom,familiar(n3,n1) | familiar(n1,n5) | ~ not_familiar(n5,n3) ).
+fof(c_0_353,axiom,familiar(n4,n1) | familiar(n1,n5) | ~ not_familiar(n5,n4) ).
+fof(c_0_354,axiom,familiar(n5,n1) | familiar(n1,n5) | ~ not_familiar(n5,n5) ).
+fof(c_0_355,axiom,familiar(n6,n1) | familiar(n1,n5) | ~ not_familiar(n5,n6) ).
+fof(c_0_356,axiom,familiar(n2,n1) | familiar(n1,n6) | ~ not_familiar(n6,n2) ).
+fof(c_0_357,axiom,familiar(n3,n1) | familiar(n1,n6) | ~ not_familiar(n6,n3) ).
+fof(c_0_358,axiom,familiar(n4,n1) | familiar(n1,n6) | ~ not_familiar(n6,n4) ).
+fof(c_0_359,axiom,familiar(n5,n1) | familiar(n1,n6) | ~ not_familiar(n6,n5) ).
+fof(c_0_360,axiom,familiar(n6,n1) | familiar(n1,n6) | ~ not_familiar(n6,n6) ).
+fof(c_0_361,axiom,familiar(n1,n2) | familiar(n2,n1) | ~ not_familiar(n1,n1) ).
+fof(c_0_362,axiom,familiar(n3,n2) | familiar(n2,n1) | ~ not_familiar(n1,n3) ).
+fof(c_0_363,axiom,familiar(n4,n2) | familiar(n2,n1) | ~ not_familiar(n1,n4) ).
+fof(c_0_364,axiom,familiar(n5,n2) | familiar(n2,n1) | ~ not_familiar(n1,n5) ).
+fof(c_0_365,axiom,familiar(n6,n2) | familiar(n2,n1) | ~ not_familiar(n1,n6) ).
+fof(c_0_366,axiom,familiar(n1,n2) | familiar(n2,n3) | ~ not_familiar(n3,n1) ).
+fof(c_0_367,axiom,familiar(n3,n2) | familiar(n2,n3) | ~ not_familiar(n3,n3) ).
+fof(c_0_368,axiom,familiar(n4,n2) | familiar(n2,n3) | ~ not_familiar(n3,n4) ).
+fof(c_0_369,axiom,familiar(n5,n2) | familiar(n2,n3) | ~ not_familiar(n3,n5) ).
+fof(c_0_370,axiom,familiar(n6,n2) | familiar(n2,n3) | ~ not_familiar(n3,n6) ).
+fof(c_0_371,axiom,familiar(n1,n2) | familiar(n2,n4) | ~ not_familiar(n4,n1) ).
+fof(c_0_372,axiom,familiar(n3,n2) | familiar(n2,n4) | ~ not_familiar(n4,n3) ).
+fof(c_0_373,axiom,familiar(n4,n2) | familiar(n2,n4) | ~ not_familiar(n4,n4) ).
+fof(c_0_374,axiom,familiar(n5,n2) | familiar(n2,n4) | ~ not_familiar(n4,n5) ).
+fof(c_0_375,axiom,familiar(n6,n2) | familiar(n2,n4) | ~ not_familiar(n4,n6) ).
+fof(c_0_376,axiom,familiar(n1,n2) | familiar(n2,n5) | ~ not_familiar(n5,n1) ).
+fof(c_0_377,axiom,familiar(n3,n2) | familiar(n2,n5) | ~ not_familiar(n5,n3) ).
+fof(c_0_378,axiom,familiar(n4,n2) | familiar(n2,n5) | ~ not_familiar(n5,n4) ).
+fof(c_0_379,axiom,familiar(n5,n2) | familiar(n2,n5) | ~ not_familiar(n5,n5) ).
+fof(c_0_380,axiom,familiar(n6,n2) | familiar(n2,n5) | ~ not_familiar(n5,n6) ).
+fof(c_0_381,axiom,familiar(n1,n2) | familiar(n2,n6) | ~ not_familiar(n6,n1) ).
+fof(c_0_382,axiom,familiar(n3,n2) | familiar(n2,n6) | ~ not_familiar(n6,n3) ).
+fof(c_0_383,axiom,familiar(n4,n2) | familiar(n2,n6) | ~ not_familiar(n6,n4) ).
+fof(c_0_384,axiom,familiar(n5,n2) | familiar(n2,n6) | ~ not_familiar(n6,n5) ).
+fof(c_0_385,axiom,familiar(n6,n2) | familiar(n2,n6) | ~ not_familiar(n6,n6) ).
+fof(c_0_386,axiom,familiar(n1,n3) | familiar(n3,n1) | ~ not_familiar(n1,n1) ).
+fof(c_0_387,axiom,familiar(n4,n3) | familiar(n3,n1) | ~ not_familiar(n1,n4) ).
+fof(c_0_388,axiom,familiar(n5,n3) | familiar(n3,n1) | ~ not_familiar(n1,n5) ).
+fof(c_0_389,axiom,familiar(n6,n3) | familiar(n3,n1) | ~ not_familiar(n1,n6) ).
+fof(c_0_390,axiom,familiar(n2,n3) | familiar(n3,n2) | ~ not_familiar(n2,n2) ).
+fof(c_0_391,axiom,familiar(n4,n3) | familiar(n3,n2) | ~ not_familiar(n2,n4) ).
+fof(c_0_392,axiom,familiar(n5,n3) | familiar(n3,n2) | ~ not_familiar(n2,n5) ).
+fof(c_0_393,axiom,familiar(n6,n3) | familiar(n3,n2) | ~ not_familiar(n2,n6) ).
+fof(c_0_394,axiom,familiar(n1,n3) | familiar(n3,n4) | ~ not_familiar(n4,n1) ).
+fof(c_0_395,axiom,familiar(n2,n3) | familiar(n3,n4) | ~ not_familiar(n4,n2) ).
+fof(c_0_396,axiom,familiar(n4,n3) | familiar(n3,n4) | ~ not_familiar(n4,n4) ).
+fof(c_0_397,axiom,familiar(n5,n3) | familiar(n3,n4) | ~ not_familiar(n4,n5) ).
+fof(c_0_398,axiom,familiar(n6,n3) | familiar(n3,n4) | ~ not_familiar(n4,n6) ).
+fof(c_0_399,axiom,familiar(n1,n3) | familiar(n3,n5) | ~ not_familiar(n5,n1) ).
+fof(c_0_400,axiom,familiar(n1,n3) | familiar(n3,n6) | ~ not_familiar(n6,n1) ).
+fof(c_0_401,axiom,familiar(n2,n3) | familiar(n3,n5) | ~ not_familiar(n5,n2) ).
+fof(c_0_402,axiom,familiar(n4,n3) | familiar(n3,n5) | ~ not_familiar(n5,n4) ).
+fof(c_0_403,axiom,familiar(n5,n3) | familiar(n3,n5) | ~ not_familiar(n5,n5) ).
+fof(c_0_404,axiom,familiar(n6,n3) | familiar(n3,n5) | ~ not_familiar(n5,n6) ).
+fof(c_0_405,axiom,familiar(n2,n3) | familiar(n3,n6) | ~ not_familiar(n6,n2) ).
+fof(c_0_406,axiom,familiar(n4,n3) | familiar(n3,n6) | ~ not_familiar(n6,n4) ).
+fof(c_0_407,axiom,familiar(n5,n3) | familiar(n3,n6) | ~ not_familiar(n6,n5) ).
+fof(c_0_408,axiom,familiar(n6,n3) | familiar(n3,n6) | ~ not_familiar(n6,n6) ).
+fof(c_0_409,axiom,familiar(n1,n4) | familiar(n4,n1) | ~ not_familiar(n1,n1) ).
+fof(c_0_410,axiom,familiar(n5,n4) | familiar(n4,n1) | ~ not_familiar(n1,n5) ).
+fof(c_0_411,axiom,familiar(n6,n4) | familiar(n4,n1) | ~ not_familiar(n1,n6) ).
+fof(c_0_412,axiom,familiar(n2,n4) | familiar(n4,n2) | ~ not_familiar(n2,n2) ).
+fof(c_0_413,axiom,familiar(n5,n4) | familiar(n4,n2) | ~ not_familiar(n2,n5) ).
+fof(c_0_414,axiom,familiar(n6,n4) | familiar(n4,n2) | ~ not_familiar(n2,n6) ).
+fof(c_0_415,axiom,familiar(n3,n4) | familiar(n4,n3) | ~ not_familiar(n3,n3) ).
+fof(c_0_416,axiom,familiar(n5,n4) | familiar(n4,n3) | ~ not_familiar(n3,n5) ).
+fof(c_0_417,axiom,familiar(n6,n4) | familiar(n4,n3) | ~ not_familiar(n3,n6) ).
+fof(c_0_418,axiom,familiar(n1,n4) | familiar(n4,n5) | ~ not_familiar(n5,n1) ).
+fof(c_0_419,axiom,familiar(n2,n4) | familiar(n4,n5) | ~ not_familiar(n5,n2) ).
+fof(c_0_420,axiom,familiar(n3,n4) | familiar(n4,n5) | ~ not_familiar(n5,n3) ).
+fof(c_0_421,axiom,familiar(n5,n4) | familiar(n4,n5) | ~ not_familiar(n5,n5) ).
+fof(c_0_422,axiom,familiar(n6,n4) | familiar(n4,n5) | ~ not_familiar(n5,n6) ).
+fof(c_0_423,axiom,familiar(n1,n4) | familiar(n4,n6) | ~ not_familiar(n6,n1) ).
+fof(c_0_424,axiom,familiar(n2,n4) | familiar(n4,n6) | ~ not_familiar(n6,n2) ).
+fof(c_0_425,axiom,familiar(n3,n4) | familiar(n4,n6) | ~ not_familiar(n6,n3) ).
+fof(c_0_426,axiom,familiar(n5,n4) | familiar(n4,n6) | ~ not_familiar(n6,n5) ).
+fof(c_0_427,axiom,familiar(n6,n4) | familiar(n4,n6) | ~ not_familiar(n6,n6) ).
+fof(c_0_428,axiom,familiar(n1,n5) | familiar(n5,n1) | ~ not_familiar(n1,n1) ).
+fof(c_0_429,axiom,familiar(n6,n5) | familiar(n5,n1) | ~ not_familiar(n1,n6) ).
+fof(c_0_430,axiom,familiar(n2,n5) | familiar(n5,n2) | ~ not_familiar(n2,n2) ).
+fof(c_0_431,axiom,familiar(n6,n5) | familiar(n5,n2) | ~ not_familiar(n2,n6) ).
+fof(c_0_432,axiom,familiar(n3,n5) | familiar(n5,n3) | ~ not_familiar(n3,n3) ).
+fof(c_0_433,axiom,familiar(n6,n5) | familiar(n5,n3) | ~ not_familiar(n3,n6) ).
+fof(c_0_434,axiom,familiar(n1,n5) | familiar(n5,n6) | ~ not_familiar(n6,n1) ).
+fof(c_0_435,axiom,familiar(n1,n6) | familiar(n6,n1) | ~ not_familiar(n1,n1) ).
+fof(c_0_436,axiom,familiar(n2,n5) | familiar(n5,n6) | ~ not_familiar(n6,n2) ).
+fof(c_0_437,axiom,familiar(n2,n6) | familiar(n6,n2) | ~ not_familiar(n2,n2) ).
+fof(c_0_438,axiom,familiar(n3,n5) | familiar(n5,n6) | ~ not_familiar(n6,n3) ).
+fof(c_0_439,axiom,familiar(n3,n6) | familiar(n6,n3) | ~ not_familiar(n3,n3) ).
+fof(c_0_440,axiom,familiar(n4,n5) | familiar(n5,n4) | ~ not_familiar(n4,n4) ).
+fof(c_0_441,axiom,familiar(n4,n5) | familiar(n5,n6) | ~ not_familiar(n6,n4) ).
+fof(c_0_442,axiom,familiar(n4,n6) | familiar(n6,n4) | ~ not_familiar(n4,n4) ).
+fof(c_0_443,axiom,familiar(n4,n6) | familiar(n6,n5) | ~ not_familiar(n5,n4) ).
+fof(c_0_444,axiom,familiar(n6,n5) | familiar(n5,n6) | ~ not_familiar(n6,n6) ).
+fof(c_0_445,axiom,familiar(n5,n6) | familiar(n6,n5) | ~ not_familiar(n5,n5) ).

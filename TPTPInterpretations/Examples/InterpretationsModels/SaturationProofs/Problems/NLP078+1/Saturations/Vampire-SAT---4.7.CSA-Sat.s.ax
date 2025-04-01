@@ -1,0 +1,118 @@
+fof(u142,axiom,male(sK0,sK1) ).
+fof(u146,axiom,six(sK0,sK1) ).
+fof(u150,axiom,group(sK0,sK1) ).
+fof(u154,axiom,! [X0] : ! [X1] : ~ member(X0,X1,X1) ).
+fof(u158,axiom,! [X0] : ! [X1] : ( ~ singleton(X0,X1) | ~ multiple(X0,X1) ) ).
+fof(u162,axiom,! [X0] : ! [X1] : ( ~ shot(X0,X1) | action(X0,X1) ) ).
+fof(u166,axiom,! [X0] : ! [X1] : ( ~ action(X0,X1) | act(X0,X1) ) ).
+fof(u170,axiom,! [X0] : ! [X1] : ( multiple(X0,X1) | ~ set(X0,X1) ) ).
+fof(u174,axiom,! [X0] : ! [X1] : ( ~ act(X0,X1) | event(X0,X1) ) ).
+fof(u178,axiom,! [X0] : ! [X1] : ( group(X0,X1) | ~ six(X0,X1) ) ).
+fof(u182,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | thing(X0,X1) ) ).
+fof(u186,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(u190,axiom,! [X0] : ! [X1] : ( ~ unisex(X0,X1) | ~ male(X0,X1) ) ).
+fof(u194,axiom,! [X0] : ! [X1] : ( set(X0,X1) | ~ group(X0,X1) ) ).
+fof(u198,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | singleton(X0,X1) ) ).
+fof(u202,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | eventuality(X0,X1) ) ).
+fof(u206,axiom,! [X2] : ( ~ member(sK0,X2,sK1) | shot(sK0,X2) ) ).
+fof(u210,axiom,! [X0] : ! [X1] : ( member(X0,sK7(X0,X1),X1) | ~ six(X0,X1) ) ).
+fof(u214,axiom,! [X0] : ! [X1] : ( member(X0,sK6(X0,X1),X1) | ~ six(X0,X1) ) ).
+fof(u218,axiom,! [X0] : ! [X1] : ( member(X0,sK5(X0,X1),X1) | ~ six(X0,X1) ) ).
+fof(u222,axiom,! [X0] : ! [X1] : ( member(X0,sK4(X0,X1),X1) | ~ six(X0,X1) ) ).
+fof(u226,axiom,! [X0] : ! [X1] : ( member(X0,sK3(X0,X1),X1) | ~ six(X0,X1) ) ).
+fof(u230,axiom,! [X0] : ! [X1] : ( member(X0,sK2(X0,X1),X1) | ~ six(X0,X1) ) ).
+fof(u234,axiom,! [X0] : ! [X1] : ( sK6(X0,X1) != sK7(X0,X1) | ~ six(X0,X1) ) ).
+fof(u238,axiom,! [X0] : ! [X1] : ( sK5(X0,X1) != sK7(X0,X1) | ~ six(X0,X1) ) ).
+fof(u242,axiom,! [X0] : ! [X1] : ( sK4(X0,X1) != sK7(X0,X1) | ~ six(X0,X1) ) ).
+fof(u246,axiom,! [X0] : ! [X1] : ( sK3(X0,X1) != sK7(X0,X1) | ~ six(X0,X1) ) ).
+fof(u250,axiom,! [X0] : ! [X1] : ( sK2(X0,X1) != sK7(X0,X1) | ~ six(X0,X1) ) ).
+fof(u254,axiom,! [X0] : ! [X1] : ( sK5(X0,X1) != sK6(X0,X1) | ~ six(X0,X1) ) ).
+fof(u258,axiom,! [X0] : ! [X1] : ( sK4(X0,X1) != sK6(X0,X1) | ~ six(X0,X1) ) ).
+fof(u262,axiom,! [X0] : ! [X1] : ( sK3(X0,X1) != sK6(X0,X1) | ~ six(X0,X1) ) ).
+fof(u266,axiom,! [X0] : ! [X1] : ( sK2(X0,X1) != sK6(X0,X1) | ~ six(X0,X1) ) ).
+fof(u270,axiom,! [X0] : ! [X1] : ( sK4(X0,X1) != sK5(X0,X1) | ~ six(X0,X1) ) ).
+fof(u274,axiom,! [X0] : ! [X1] : ( sK3(X0,X1) != sK5(X0,X1) | ~ six(X0,X1) ) ).
+fof(u278,axiom,! [X0] : ! [X1] : ( sK2(X0,X1) != sK5(X0,X1) | ~ six(X0,X1) ) ).
+fof(u282,axiom,! [X0] : ! [X1] : ( sK3(X0,X1) != sK4(X0,X1) | ~ six(X0,X1) ) ).
+fof(u286,axiom,! [X0] : ! [X1] : ( sK2(X0,X1) != sK4(X0,X1) | ~ six(X0,X1) ) ).
+fof(u290,axiom,! [X0] : ! [X1] : ( sK2(X0,X1) != sK3(X0,X1) | ~ six(X0,X1) ) ).
+fof(u296,axiom,shot(sK0,sK7(sK0,sK1)) ).
+fof(u303,axiom,action(sK0,sK7(sK0,sK1)) ).
+fof(u310,axiom,act(sK0,sK7(sK0,sK1)) ).
+fof(u315,axiom,event(sK0,sK7(sK0,sK1)) ).
+fof(u322,axiom,eventuality(sK0,sK7(sK0,sK1)) ).
+fof(u330,axiom,unisex(sK0,sK7(sK0,sK1)) ).
+fof(u335,axiom,thing(sK0,sK7(sK0,sK1)) ).
+fof(u342,axiom,~ male(sK0,sK7(sK0,sK1)) ).
+fof(u346,axiom,singleton(sK0,sK7(sK0,sK1)) ).
+fof(u351,axiom,~ multiple(sK0,sK7(sK0,sK1)) ).
+fof(u356,axiom,~ set(sK0,sK7(sK0,sK1)) ).
+fof(u361,axiom,~ group(sK0,sK7(sK0,sK1)) ).
+fof(u366,axiom,~ six(sK0,sK7(sK0,sK1)) ).
+fof(u370,axiom,shot(sK0,sK6(sK0,sK1)) ).
+fof(u375,axiom,action(sK0,sK6(sK0,sK1)) ).
+fof(u380,axiom,act(sK0,sK6(sK0,sK1)) ).
+fof(u385,axiom,event(sK0,sK6(sK0,sK1)) ).
+fof(u390,axiom,eventuality(sK0,sK6(sK0,sK1)) ).
+fof(u396,axiom,unisex(sK0,sK6(sK0,sK1)) ).
+fof(u401,axiom,thing(sK0,sK6(sK0,sK1)) ).
+fof(u406,axiom,~ male(sK0,sK6(sK0,sK1)) ).
+fof(u410,axiom,singleton(sK0,sK6(sK0,sK1)) ).
+fof(u415,axiom,~ multiple(sK0,sK6(sK0,sK1)) ).
+fof(u420,axiom,~ set(sK0,sK6(sK0,sK1)) ).
+fof(u425,axiom,~ group(sK0,sK6(sK0,sK1)) ).
+fof(u430,axiom,~ six(sK0,sK6(sK0,sK1)) ).
+fof(u434,axiom,shot(sK0,sK5(sK0,sK1)) ).
+fof(u439,axiom,action(sK0,sK5(sK0,sK1)) ).
+fof(u444,axiom,act(sK0,sK5(sK0,sK1)) ).
+fof(u449,axiom,event(sK0,sK5(sK0,sK1)) ).
+fof(u454,axiom,eventuality(sK0,sK5(sK0,sK1)) ).
+fof(u458,axiom,! [X0] : ! [X1] : ! [X8] : ( ~ six(X0,X1) | sK7(X0,X1) = X8 | sK6(X0,X1) = X8 | sK5(X0,X1) = X8 | sK4(X0,X1) = X8 | sK3(X0,X1) = X8 | sK2(X0,X1) = X8 | ~ member(X0,X8,X1) ) ).
+fof(u464,axiom,unisex(sK0,sK5(sK0,sK1)) ).
+fof(u470,axiom,thing(sK0,sK5(sK0,sK1)) ).
+fof(u475,axiom,~ male(sK0,sK5(sK0,sK1)) ).
+fof(u479,axiom,shot(sK0,sK4(sK0,sK1)) ).
+fof(u484,axiom,action(sK0,sK4(sK0,sK1)) ).
+fof(u488,axiom,shot(sK0,sK3(sK0,sK1)) ).
+fof(u494,axiom,action(sK0,sK3(sK0,sK1)) ).
+fof(u498,axiom,shot(sK0,sK2(sK0,sK1)) ).
+fof(u504,axiom,action(sK0,sK2(sK0,sK1)) ).
+fof(u508,axiom,! [X0] : ( ~ member(sK0,X0,sK1) | sK6(sK0,sK1) = X0 | sK5(sK0,sK1) = X0 | sK4(sK0,sK1) = X0 | sK3(sK0,sK1) = X0 | sK2(sK0,sK1) = X0 | sK7(sK0,sK1) = X0 ) ).
+fof(u513,axiom,act(sK0,sK4(sK0,sK1)) ).
+fof(u524,axiom,act(sK0,sK3(sK0,sK1)) ).
+fof(u529,axiom,act(sK0,sK2(sK0,sK1)) ).
+fof(u534,axiom,event(sK0,sK4(sK0,sK1)) ).
+fof(u539,axiom,event(sK0,sK3(sK0,sK1)) ).
+fof(u544,axiom,event(sK0,sK2(sK0,sK1)) ).
+fof(u549,axiom,eventuality(sK0,sK4(sK0,sK1)) ).
+fof(u555,axiom,eventuality(sK0,sK3(sK0,sK1)) ).
+fof(u561,axiom,eventuality(sK0,sK2(sK0,sK1)) ).
+fof(u567,axiom,unisex(sK0,sK4(sK0,sK1)) ).
+fof(u572,axiom,thing(sK0,sK4(sK0,sK1)) ).
+fof(u577,axiom,unisex(sK0,sK3(sK0,sK1)) ).
+fof(u582,axiom,thing(sK0,sK3(sK0,sK1)) ).
+fof(u587,axiom,unisex(sK0,sK2(sK0,sK1)) ).
+fof(u592,axiom,thing(sK0,sK2(sK0,sK1)) ).
+fof(u597,axiom,singleton(sK0,sK5(sK0,sK1)) ).
+fof(u602,axiom,~ male(sK0,sK4(sK0,sK1)) ).
+fof(u606,axiom,singleton(sK0,sK4(sK0,sK1)) ).
+fof(u611,axiom,~ male(sK0,sK3(sK0,sK1)) ).
+fof(u615,axiom,singleton(sK0,sK3(sK0,sK1)) ).
+fof(u620,axiom,~ male(sK0,sK2(sK0,sK1)) ).
+fof(u624,axiom,singleton(sK0,sK2(sK0,sK1)) ).
+fof(u629,axiom,~ multiple(sK0,sK5(sK0,sK1)) ).
+fof(u634,axiom,~ multiple(sK0,sK4(sK0,sK1)) ).
+fof(u639,axiom,~ multiple(sK0,sK3(sK0,sK1)) ).
+fof(u644,axiom,~ multiple(sK0,sK2(sK0,sK1)) ).
+fof(u649,axiom,~ set(sK0,sK5(sK0,sK1)) ).
+fof(u654,axiom,~ set(sK0,sK4(sK0,sK1)) ).
+fof(u659,axiom,~ set(sK0,sK3(sK0,sK1)) ).
+fof(u664,axiom,~ set(sK0,sK2(sK0,sK1)) ).
+fof(u669,axiom,~ group(sK0,sK5(sK0,sK1)) ).
+fof(u674,axiom,~ group(sK0,sK4(sK0,sK1)) ).
+fof(u679,axiom,~ group(sK0,sK3(sK0,sK1)) ).
+fof(u684,axiom,~ group(sK0,sK2(sK0,sK1)) ).
+fof(u689,axiom,~ six(sK0,sK5(sK0,sK1)) ).
+fof(u693,axiom,~ six(sK0,sK4(sK0,sK1)) ).
+fof(u697,axiom,~ six(sK0,sK3(sK0,sK1)) ).
+fof(u701,axiom,~ six(sK0,sK2(sK0,sK1)) ).

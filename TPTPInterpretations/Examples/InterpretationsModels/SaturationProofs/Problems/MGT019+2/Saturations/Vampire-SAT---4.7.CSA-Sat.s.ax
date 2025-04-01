@@ -1,0 +1,16 @@
+fof(u33,axiom,! [X0] : ( in_environment(X0,sK2(X0)) | ~ stable(X0) | ~ environment(X0) ) ).
+fof(u31,axiom,! [X1] : ( ~ in_environment(sK0,X1) | greater_or_equal(sK1(X1),X1) ) ).
+fof(u29,axiom,stable(sK0) ).
+fof(u34,axiom,! [X0] : ! [X2] : ( ~ stable(X0) | ~ greater_or_equal(X2,sK2(X0)) | ~ subpopulations(first_movers,efficient_producers,X0,X2) | greater_or_equal(founding_rate(efficient_producers,X2),founding_rate(first_movers,X2)) | ~ environment(X0) ) ).
+fof(u45,axiom,! [X0] : ( greater_or_equal(founding_rate(efficient_producers,X0),founding_rate(first_movers,X0)) | ~ subpopulations(first_movers,efficient_producers,sK0,X0) | ~ greater_or_equal(X0,sK2(sK0)) ) ).
+fof(u42,axiom,greater_or_equal(sK1(sK2(sK0)),sK2(sK0)) ).
+fof(u39,axiom,! [X0] : ! [X1] : ( ~ greater_or_equal(X0,X1) | greater(X0,X1) | X0 = X1 ) ).
+fof(u46,axiom,! [X0] : ( greater(founding_rate(efficient_producers,X0),founding_rate(first_movers,X0)) | ~ greater_or_equal(X0,sK2(sK0)) | ~ subpopulations(first_movers,efficient_producers,sK0,X0) | founding_rate(efficient_producers,X0) = founding_rate(first_movers,X0) ) ).
+fof(u43,axiom,greater(sK1(sK2(sK0)),sK2(sK0)) | sK2(sK0) = sK1(sK2(sK0)) ).
+fof(u32,axiom,! [X1] : ( ~ greater(growth_rate(efficient_producers,sK1(X1)),growth_rate(first_movers,sK1(X1))) | ~ in_environment(sK0,X1) ) ).
+fof(u38,axiom,! [X0] : ( ~ greater(disbanding_rate(first_movers,X0),disbanding_rate(efficient_producers,X0)) | ~ greater_or_equal(founding_rate(efficient_producers,X0),founding_rate(first_movers,X0)) | greater(growth_rate(efficient_producers,X0),growth_rate(first_movers,X0)) ) ).
+fof(u37,axiom,~ greater(disbanding_rate(first_movers,sK4),disbanding_rate(efficient_producers,sK4)) ).
+fof(u30,axiom,! [X1] : ( subpopulations(first_movers,efficient_producers,sK0,sK1(X1)) | ~ in_environment(sK0,X1) ) ).
+fof(u36,axiom,subpopulations(first_movers,efficient_producers,sK3,sK4) ).
+fof(u35,axiom,environment(sK3) ).
+fof(u28,axiom,environment(sK0) ).

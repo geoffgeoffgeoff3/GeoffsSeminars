@@ -1,0 +1,241 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ! [X2] : select(store(X0,X1,X2),X1) = X2 ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( select(store(X0,X1,X2),X3) = select(X0,X3) | X1 = X3 ) ).
+fof(c_51,axiom,store(a1,i1,e_43) = a_44 ).
+fof(c_52,axiom,store(a2,i1,e_45) = a_46 ).
+fof(c_53,axiom,store(a_44,i2,e_47) = a_48 ).
+fof(c_54,axiom,store(a_46,i2,e_49) = a_50 ).
+fof(c_55,axiom,store(a_48,i3,e_51) = a_52 ).
+fof(c_56,axiom,store(a_50,i3,e_53) = a_54 ).
+fof(c_57,axiom,store(a_52,i4,e_55) = a_56 ).
+fof(c_58,axiom,store(a_54,i4,e_57) = a_58 ).
+fof(c_59,axiom,store(a_56,i5,e_59) = a_60 ).
+fof(c_60,axiom,store(a_58,i5,e_61) = a_62 ).
+fof(c_61,axiom,store(a_60,i6,e_63) = a_64 ).
+fof(c_62,axiom,store(a_62,i6,e_65) = a_66 ).
+fof(c_63,axiom,store(a_64,i7,e_67) = a_68 ).
+fof(c_64,axiom,store(a_66,i7,e_69) = a_70 ).
+fof(c_65,axiom,store(a_68,i8,e_71) = a_72 ).
+fof(c_66,axiom,store(a_70,i8,e_73) = a_74 ).
+fof(c_67,axiom,store(a_72,i9,e_75) = a_76 ).
+fof(c_68,axiom,store(a_74,i9,e_77) = a_78 ).
+fof(c_69,axiom,store(a_76,i1,e_79) = a_80 ).
+fof(c_70,axiom,store(a_78,i10,e_81) = a_82 ).
+fof(c_71,axiom,select(a2,i1) = e_43 ).
+fof(c_72,axiom,select(a1,i1) = e_45 ).
+fof(c_73,axiom,select(a_46,i2) = e_47 ).
+fof(c_74,axiom,select(a_44,i2) = e_49 ).
+fof(c_75,axiom,select(a_50,i3) = e_51 ).
+fof(c_76,axiom,select(a_48,i3) = e_53 ).
+fof(c_77,axiom,select(a_54,i4) = e_55 ).
+fof(c_78,axiom,select(a_52,i4) = e_57 ).
+fof(c_79,axiom,select(a_58,i5) = e_59 ).
+fof(c_80,axiom,select(a_56,i5) = e_61 ).
+fof(c_81,axiom,select(a_62,i6) = e_63 ).
+fof(c_82,axiom,select(a_60,i6) = e_65 ).
+fof(c_83,axiom,select(a_66,i7) = e_67 ).
+fof(c_84,axiom,select(a_64,i7) = e_69 ).
+fof(c_85,axiom,select(a_70,i8) = e_71 ).
+fof(c_86,axiom,select(a_68,i8) = e_73 ).
+fof(c_87,axiom,select(a_74,i9) = e_75 ).
+fof(c_88,axiom,select(a_72,i9) = e_77 ).
+fof(c_89,axiom,select(a_78,i10) = e_79 ).
+fof(c_90,axiom,select(a_76,i10) = e_81 ).
+fof(c_91,axiom,select(a1,i_83) = e_84 ).
+fof(c_92,axiom,select(a2,i_83) = e_85 ).
+fof(c_93,axiom,sk(a1,a2) = i_83 ).
+fof(c_94,axiom,a_80 = a_82 ).
+fof(c_95,axiom,e_84 != e_85 ).
+fof(c_194,axiom,store(a_78,i10,e_81) = a_80 ).
+fof(c_335,axiom,select(a_80,i10) = e_81 ).
+fof(c_336,axiom,select(a_44,i1) = e_43 ).
+fof(c_337,axiom,select(a_46,i1) = e_45 ).
+fof(c_338,axiom,select(a_48,i2) = e_47 ).
+fof(c_339,axiom,select(a_50,i2) = e_49 ).
+fof(c_340,axiom,select(a_52,i3) = e_51 ).
+fof(c_341,axiom,select(a_54,i3) = e_53 ).
+fof(c_342,axiom,select(a_56,i4) = e_55 ).
+fof(c_346,axiom,! [X0] : ( select(a_44,X0) = select(a1,X0) | X0 = i1 ) ).
+fof(c_347,axiom,! [X0] : ( select(a_46,X0) = select(a2,X0) | X0 = i1 ) ).
+fof(c_348,axiom,! [X0] : ( select(a_44,X0) = select(a_48,X0) | X0 = i2 ) ).
+fof(c_349,axiom,! [X0] : ( select(a_46,X0) = select(a_50,X0) | X0 = i2 ) ).
+fof(c_350,axiom,! [X0] : ( select(a_48,X0) = select(a_52,X0) | X0 = i3 ) ).
+fof(c_351,axiom,! [X0] : ( select(a_50,X0) = select(a_54,X0) | X0 = i3 ) ).
+fof(c_352,axiom,! [X0] : ( select(a_52,X0) = select(a_56,X0) | X0 = i4 ) ).
+fof(c_353,axiom,! [X0] : ( select(a_78,X0) = select(a_80,X0) | X0 = i10 ) ).
+fof(c_377,axiom,! [X0] : ( select(a_54,X0) = select(a_58,X0) | X0 = i4 ) ).
+fof(c_378,axiom,select(a_58,i4) = e_57 ).
+fof(c_382,axiom,! [X0] : ( select(a_56,X0) = select(a_60,X0) | X0 = i5 ) ).
+fof(c_383,axiom,select(a_60,i5) = e_59 ).
+fof(c_387,axiom,! [X0] : ( select(a_58,X0) = select(a_62,X0) | X0 = i5 ) ).
+fof(c_388,axiom,select(a_62,i5) = e_61 ).
+fof(c_392,axiom,! [X0] : ( select(a_60,X0) = select(a_64,X0) | X0 = i6 ) ).
+fof(c_393,axiom,select(a_64,i6) = e_63 ).
+fof(c_397,axiom,! [X0] : ( select(a_62,X0) = select(a_66,X0) | X0 = i6 ) ).
+fof(c_398,axiom,select(a_66,i6) = e_65 ).
+fof(c_402,axiom,! [X0] : ( select(a_64,X0) = select(a_68,X0) | X0 = i7 ) ).
+fof(c_403,axiom,select(a_68,i7) = e_67 ).
+fof(c_407,axiom,! [X0] : ( select(a_66,X0) = select(a_70,X0) | X0 = i7 ) ).
+fof(c_408,axiom,select(a_70,i7) = e_69 ).
+fof(c_412,axiom,! [X0] : ( select(a_68,X0) = select(a_72,X0) | X0 = i8 ) ).
+fof(c_413,axiom,select(a_72,i8) = e_71 ).
+fof(c_423,axiom,select(a1,i2) = e_49 | i1 = i2 ).
+fof(c_427,axiom,! [X0] : ( select(a_70,X0) = select(a_74,X0) | X0 = i8 ) ).
+fof(c_428,axiom,select(a_74,i8) = e_73 ).
+fof(c_432,axiom,! [X0] : ( select(a_72,X0) = select(a_76,X0) | X0 = i9 ) ).
+fof(c_433,axiom,select(a_76,i9) = e_75 ).
+fof(c_437,axiom,! [X0] : ( select(a_74,X0) = select(a_78,X0) | X0 = i9 ) ).
+fof(c_438,axiom,select(a_78,i9) = e_77 ).
+fof(c_442,axiom,! [X0] : ( select(a_76,X0) = select(a_80,X0) | X0 = i1 ) ).
+fof(c_443,axiom,select(a_80,i1) = e_79 ).
+fof(c_456,axiom,select(a2,i2) = e_47 | i1 = i2 ).
+fof(c_470,axiom,select(a_44,i3) = e_53 | i2 = i3 ).
+fof(c_480,axiom,select(a1,i3) = e_53 | i1 = i3 | i2 = i3 ).
+fof(c_491,axiom,select(a_46,i3) = e_51 | i2 = i3 ).
+fof(c_501,axiom,select(a2,i3) = e_51 | i1 = i3 | i2 = i3 ).
+fof(c_512,axiom,select(a_48,i4) = e_57 | i3 = i4 ).
+fof(c_527,axiom,select(a_50,i4) = e_55 | i3 = i4 ).
+fof(c_535,axiom,select(a_44,i4) = e_57 | i2 = i4 | i3 = i4 ).
+fof(c_544,axiom,select(a_46,i4) = e_55 | i2 = i4 | i3 = i4 ).
+fof(c_555,axiom,select(a_52,i5) = e_61 | i4 = i5 ).
+fof(c_563,axiom,select(a_48,i5) = e_61 | i3 = i5 | i4 = i5 ).
+fof(c_579,axiom,select(a_78,i1) = e_79 | i1 = i10 ).
+fof(c_592,axiom,select(a_54,i5) = e_59 | i4 = i5 ).
+fof(c_600,axiom,select(a_50,i5) = e_59 | i3 = i5 | i4 = i5 ).
+fof(c_611,axiom,select(a_56,i6) = e_65 | i5 = i6 ).
+fof(c_623,axiom,select(a_52,i6) = e_65 | i4 = i6 | i5 = i6 ).
+fof(c_634,axiom,select(a_58,i6) = e_63 | i5 = i6 ).
+fof(c_643,axiom,select(a_54,i6) = e_63 | i4 = i6 | i5 = i6 ).
+fof(c_660,axiom,select(a_60,i7) = e_69 | i6 = i7 ).
+fof(c_668,axiom,select(a_56,i7) = e_69 | i5 = i7 | i6 = i7 ).
+fof(c_696,axiom,select(a_62,i7) = e_67 | i6 = i7 ).
+fof(c_704,axiom,select(a_58,i7) = e_67 | i5 = i7 | i6 = i7 ).
+fof(c_732,axiom,select(a_64,i8) = e_73 | i7 = i8 ).
+fof(c_740,axiom,select(a_60,i8) = e_73 | i6 = i8 | i7 = i8 ).
+fof(c_751,axiom,select(a_66,i8) = e_71 | i7 = i8 ).
+fof(c_759,axiom,select(a_62,i8) = e_71 | i6 = i8 | i7 = i8 ).
+fof(c_770,axiom,select(a_68,i9) = e_77 | i8 = i9 ).
+fof(c_778,axiom,select(a_64,i9) = e_77 | i7 = i9 | i8 = i9 ).
+fof(c_789,axiom,select(a_70,i9) = e_75 | i8 = i9 ).
+fof(c_801,axiom,select(a_66,i9) = e_75 | i7 = i9 | i8 = i9 ).
+fof(c_812,axiom,select(a_72,i10) = e_81 | i9 = i10 ).
+fof(c_820,axiom,select(a_68,i10) = e_81 | i8 = i10 | i9 = i10 ).
+fof(c_832,axiom,select(a_74,i10) = e_79 | i9 = i10 ).
+fof(c_833,axiom,select(a_74,i1) = e_79 | i1 = i9 | i1 = i10 ).
+fof(c_844,axiom,select(a_70,i10) = e_79 | i8 = i10 | i9 = i10 ).
+fof(c_864,axiom,! [X0] : ( select(a_76,X0) = select(a_78,X0) | X0 = i1 | X0 = i10 ) ).
+fof(c_895,axiom,select(a1,i4) = e_57 | i1 = i4 | i2 = i4 | i3 = i4 ).
+fof(c_907,axiom,select(a2,i4) = e_55 | i1 = i4 | i2 = i4 | i3 = i4 ).
+fof(c_919,axiom,select(a_44,i5) = e_61 | i2 = i5 | i3 = i5 | i4 = i5 ).
+fof(c_931,axiom,select(a_46,i5) = e_59 | i2 = i5 | i3 = i5 | i4 = i5 ).
+fof(c_943,axiom,select(a_48,i6) = e_65 | i3 = i6 | i4 = i6 | i5 = i6 ).
+fof(c_955,axiom,select(a_50,i6) = e_63 | i3 = i6 | i4 = i6 | i5 = i6 ).
+fof(c_986,axiom,select(a_52,i7) = e_69 | i4 = i7 | i5 = i7 | i6 = i7 ).
+fof(c_998,axiom,select(a_54,i7) = e_67 | i4 = i7 | i5 = i7 | i6 = i7 ).
+fof(c_1010,axiom,select(a_56,i8) = e_73 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_1022,axiom,select(a_58,i8) = e_71 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_1034,axiom,select(a_60,i9) = e_77 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_1046,axiom,select(a_62,i9) = e_75 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_1058,axiom,select(a_64,i10) = e_81 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_1103,axiom,select(a_70,i1) = e_79 | i1 = i8 | i1 = i9 | i1 = i10 ).
+fof(c_1115,axiom,select(a_66,i10) = e_79 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_1132,axiom,! [X0] : ( select(a_74,X0) = select(a_76,X0) | X0 = i1 | X0 = i9 | X0 = i10 ) ).
+fof(c_1134,axiom,select(a_76,i9) = e_77 | i1 = i9 | i9 = i10 ).
+fof(c_1135,axiom,i1 = i9 | i9 = i10 | e_75 = e_77 ).
+fof(c_1150,axiom,store(a_74,i9,e_75) = a_78 | i1 = i9 | i9 = i10 ).
+fof(c_1206,axiom,select(a1,i5) = e_61 | i1 = i5 | i2 = i5 | i3 = i5 | i4 = i5 ).
+fof(c_1221,axiom,select(a2,i5) = e_59 | i1 = i5 | i2 = i5 | i3 = i5 | i4 = i5 ).
+fof(c_1236,axiom,select(a_44,i6) = e_65 | i2 = i6 | i3 = i6 | i4 = i6 | i5 = i6 ).
+fof(c_1251,axiom,select(a_46,i6) = e_63 | i2 = i6 | i3 = i6 | i4 = i6 | i5 = i6 ).
+fof(c_1266,axiom,select(a_48,i7) = e_69 | i3 = i7 | i4 = i7 | i5 = i7 | i6 = i7 ).
+fof(c_1281,axiom,select(a_50,i7) = e_67 | i3 = i7 | i4 = i7 | i5 = i7 | i6 = i7 ).
+fof(c_1296,axiom,select(a_52,i8) = e_73 | i4 = i8 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_1311,axiom,select(a_54,i8) = e_71 | i4 = i8 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_1359,axiom,select(a_56,i9) = e_77 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_1374,axiom,select(a_58,i9) = e_75 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_1389,axiom,select(a_60,i10) = e_81 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_1404,axiom,select(a_66,i1) = e_79 | i1 = i7 | i1 = i8 | i1 = i9 | i1 = i10 ).
+fof(c_1419,axiom,select(a_62,i10) = e_79 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_1438,axiom,! [X0] : ( select(a_72,X0) = select(a_74,X0) | X0 = i1 | X0 = i9 | X0 = i10 ) ).
+fof(c_1458,axiom,! [X0] : ( select(a_70,X0) = select(a_72,X0) | X0 = i1 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_1459,axiom,select(a_72,i8) = e_73 | i1 = i8 | i8 = i9 | i8 = i10 ).
+fof(c_1462,axiom,i1 = i8 | i8 = i9 | i8 = i10 | e_71 = e_73 ).
+fof(c_1481,axiom,store(a_70,i8,e_71) = a_74 | i1 = i8 | i8 = i9 | i8 = i10 ).
+fof(c_1533,axiom,select(a1,i6) = e_65 | i1 = i6 | i2 = i6 | i3 = i6 | i4 = i6 | i5 = i6 ).
+fof(c_1551,axiom,select(a2,i6) = e_63 | i1 = i6 | i2 = i6 | i3 = i6 | i4 = i6 | i5 = i6 ).
+fof(c_1582,axiom,select(a_44,i7) = e_69 | i2 = i7 | i3 = i7 | i4 = i7 | i5 = i7 | i6 = i7 ).
+fof(c_1600,axiom,select(a_46,i7) = e_67 | i2 = i7 | i3 = i7 | i4 = i7 | i5 = i7 | i6 = i7 ).
+fof(c_1618,axiom,select(a_48,i8) = e_73 | i3 = i8 | i4 = i8 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_1648,axiom,select(a_50,i8) = e_71 | i3 = i8 | i4 = i8 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_1666,axiom,select(a_52,i9) = e_77 | i4 = i9 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_1684,axiom,select(a_54,i9) = e_75 | i4 = i9 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_1708,axiom,select(a_56,i10) = e_81 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_1749,axiom,select(a_62,i1) = e_79 | i1 = i6 | i1 = i7 | i1 = i8 | i1 = i9 | i1 = i10 ).
+fof(c_1767,axiom,select(a_58,i10) = e_79 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_1790,axiom,! [X0] : ( select(a_68,X0) = select(a_70,X0) | X0 = i1 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_1815,axiom,! [X0] : ( select(a_66,X0) = select(a_68,X0) | X0 = i1 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_1816,axiom,select(a_68,i7) = e_69 | i1 = i7 | i7 = i8 | i7 = i9 | i7 = i10 ).
+fof(c_1820,axiom,i1 = i7 | i7 = i8 | i7 = i9 | i7 = i10 | e_67 = e_69 ).
+fof(c_1843,axiom,store(a_66,i7,e_67) = a_70 | i1 = i7 | i7 = i8 | i7 = i9 | i7 = i10 ).
+fof(c_1898,axiom,select(a1,i7) = e_69 | i1 = i7 | i2 = i7 | i3 = i7 | i4 = i7 | i5 = i7 | i6 = i7 ).
+fof(c_1919,axiom,select(a2,i7) = e_67 | i1 = i7 | i2 = i7 | i3 = i7 | i4 = i7 | i5 = i7 | i6 = i7 ).
+fof(c_1945,axiom,select(a_44,i8) = e_73 | i2 = i8 | i3 = i8 | i4 = i8 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_1966,axiom,select(a_46,i8) = e_71 | i2 = i8 | i3 = i8 | i4 = i8 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_1987,axiom,select(a_48,i9) = e_77 | i3 = i9 | i4 = i9 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_2008,axiom,select(a_50,i9) = e_75 | i3 = i9 | i4 = i9 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_2038,axiom,select(a_52,i10) = e_81 | i4 = i10 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_2059,axiom,select(a_58,i1) = e_79 | i1 = i5 | i1 = i6 | i1 = i7 | i1 = i8 | i1 = i9 | i1 = i10 ).
+fof(c_2109,axiom,select(a_54,i10) = e_79 | i4 = i10 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_2136,axiom,! [X0] : ( select(a_64,X0) = select(a_66,X0) | X0 = i1 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_2166,axiom,! [X0] : ( select(a_62,X0) = select(a_64,X0) | X0 = i1 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_2167,axiom,select(a_64,i6) = e_65 | i1 = i6 | i6 = i7 | i6 = i8 | i6 = i9 | i6 = i10 ).
+fof(c_2172,axiom,i1 = i6 | i6 = i7 | i6 = i8 | i6 = i9 | i6 = i10 | e_63 = e_65 ).
+fof(c_2199,axiom,store(a_62,i6,e_63) = a_66 | i1 = i6 | i6 = i7 | i6 = i8 | i6 = i9 | i6 = i10 ).
+fof(c_2263,axiom,select(a1,i8) = e_73 | i1 = i8 | i2 = i8 | i3 = i8 | i4 = i8 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_2287,axiom,select(a2,i8) = e_71 | i1 = i8 | i2 = i8 | i3 = i8 | i4 = i8 | i5 = i8 | i6 = i8 | i7 = i8 ).
+fof(c_2311,axiom,select(a_44,i9) = e_77 | i2 = i9 | i3 = i9 | i4 = i9 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_2336,axiom,select(a_46,i9) = e_75 | i2 = i9 | i3 = i9 | i4 = i9 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_2384,axiom,select(a_48,i10) = e_81 | i3 = i10 | i4 = i10 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_2408,axiom,select(a_54,i1) = e_79 | i1 = i4 | i1 = i5 | i1 = i6 | i1 = i7 | i1 = i8 | i1 = i9 | i1 = i10 ).
+fof(c_2432,axiom,select(a_50,i10) = e_79 | i3 = i10 | i4 = i10 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_2463,axiom,! [X0] : ( select(a_60,X0) = select(a_62,X0) | X0 = i1 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_2498,axiom,! [X0] : ( select(a_58,X0) = select(a_60,X0) | X0 = i1 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_2499,axiom,select(a_60,i5) = e_61 | i1 = i5 | i5 = i6 | i5 = i7 | i5 = i8 | i5 = i9 | i5 = i10 ).
+fof(c_2505,axiom,i1 = i5 | i5 = i6 | i5 = i7 | i5 = i8 | i5 = i9 | i5 = i10 | e_59 = e_61 ).
+fof(c_2538,axiom,store(a_58,i5,e_59) = a_62 | i1 = i5 | i5 = i6 | i5 = i7 | i5 = i8 | i5 = i9 | i5 = i10 ).
+fof(c_2611,axiom,select(a1,i9) = e_77 | i1 = i9 | i2 = i9 | i3 = i9 | i4 = i9 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_2638,axiom,select(a2,i9) = e_75 | i1 = i9 | i2 = i9 | i3 = i9 | i4 = i9 | i5 = i9 | i6 = i9 | i7 = i9 | i8 = i9 ).
+fof(c_2666,axiom,select(a_44,i10) = e_81 | i2 = i10 | i3 = i10 | i4 = i10 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_2700,axiom,select(a_50,i1) = e_79 | i1 = i3 | i1 = i4 | i1 = i5 | i1 = i6 | i1 = i7 | i1 = i8 | i1 = i9 | i1 = i10 ).
+fof(c_2729,axiom,select(a_46,i10) = e_79 | i2 = i10 | i3 = i10 | i4 = i10 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_2784,axiom,! [X0] : ( select(a_56,X0) = select(a_58,X0) | X0 = i1 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_2824,axiom,! [X0] : ( select(a_54,X0) = select(a_56,X0) | X0 = i1 | X0 = i4 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_2825,axiom,select(a_56,i4) = e_57 | i1 = i4 | i4 = i5 | i4 = i6 | i4 = i7 | i4 = i8 | i4 = i9 | i4 = i10 ).
+fof(c_2832,axiom,i1 = i4 | i4 = i5 | i4 = i6 | i4 = i7 | i4 = i8 | i4 = i9 | i4 = i10 | e_55 = e_57 ).
+fof(c_2880,axiom,store(a_54,i4,e_55) = a_58 | i1 = i4 | i4 = i5 | i4 = i6 | i4 = i7 | i4 = i8 | i4 = i9 | i4 = i10 ).
+fof(c_2963,axiom,select(a1,i10) = e_81 | i1 = i10 | i2 = i10 | i3 = i10 | i4 = i10 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_2993,axiom,select(a_46,i1) = e_79 | i1 = i2 | i1 = i3 | i1 = i4 | i1 = i5 | i1 = i6 | i1 = i7 | i1 = i8 | i1 = i9 | i1 = i10 ).
+fof(c_2995,axiom,i1 = i2 | i1 = i3 | i1 = i4 | i1 = i5 | i1 = i6 | i1 = i7 | i1 = i8 | i1 = i9 | i1 = i10 | e_45 = e_79 ).
+fof(c_3035,axiom,select(a2,i10) = e_79 | i1 = i10 | i2 = i10 | i3 = i10 | i4 = i10 | i5 = i10 | i6 = i10 | i7 = i10 | i8 = i10 | i9 = i10 ).
+fof(c_3103,axiom,! [X0] : ( select(a_52,X0) = select(a_54,X0) | X0 = i1 | X0 = i4 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_3138,axiom,store(a_76,i1,e_45) = a_80 | i1 = i2 | i1 = i3 | i1 = i4 | i1 = i5 | i1 = i6 | i1 = i7 | i1 = i8 | i1 = i9 | i1 = i10 ).
+fof(c_3178,axiom,select(a_52,i3) = e_53 | i1 = i3 | i3 = i4 | i3 = i5 | i3 = i6 | i3 = i7 | i3 = i8 | i3 = i9 | i3 = i10 ).
+fof(c_3179,axiom,! [X0] : ( select(a_50,X0) = select(a_52,X0) | X0 = i1 | X0 = i3 | X0 = i4 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_3187,axiom,i1 = i3 | i3 = i4 | i3 = i5 | i3 = i6 | i3 = i7 | i3 = i8 | i3 = i9 | i3 = i10 | e_51 = e_53 ).
+fof(c_3226,axiom,store(a_50,i3,e_51) = a_54 | i1 = i3 | i3 = i4 | i3 = i5 | i3 = i6 | i3 = i7 | i3 = i8 | i3 = i9 | i3 = i10 ).
+fof(c_3352,axiom,! [X0] : ( select(a_48,X0) = select(a_50,X0) | X0 = i1 | X0 = i3 | X0 = i4 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_3401,axiom,select(a_48,i2) = e_49 | i1 = i2 | i2 = i3 | i2 = i4 | i2 = i5 | i2 = i6 | i2 = i7 | i2 = i8 | i2 = i9 | i2 = i10 ).
+fof(c_3402,axiom,! [X0] : ( select(a_46,X0) = select(a_48,X0) | X0 = i1 | X0 = i2 | X0 = i3 | X0 = i4 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_3411,axiom,i1 = i2 | i2 = i3 | i2 = i4 | i2 = i5 | i2 = i6 | i2 = i7 | i2 = i8 | i2 = i9 | i2 = i10 | e_47 = e_49 ).
+fof(c_3473,axiom,store(a_46,i2,e_47) = a_50 | i1 = i2 | i2 = i3 | i2 = i4 | i2 = i5 | i2 = i6 | i2 = i7 | i2 = i8 | i2 = i9 | i2 = i10 ).
+fof(c_3541,axiom,! [X0] : ( select(a_44,X0) = select(a_46,X0) | X0 = i1 | X0 = i2 | X0 = i3 | X0 = i4 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_3595,axiom,! [X0] : ( select(a_44,X0) = select(a2,X0) | X0 = i1 | X0 = i2 | X0 = i3 | X0 = i4 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_3650,axiom,! [X0] : ( select(a1,X0) = select(a2,X0) | X0 = i1 | X0 = i2 | X0 = i3 | X0 = i4 | X0 = i5 | X0 = i6 | X0 = i7 | X0 = i8 | X0 = i9 | X0 = i10 ) ).
+fof(c_3704,axiom,select(a1,i_83) = e_85 | i1 = i_83 | i2 = i_83 | i3 = i_83 | i4 = i_83 | i5 = i_83 | i6 = i_83 | i7 = i_83 | i8 = i_83 | i9 = i_83 | i10 = i_83 ).
+fof(c_3714,axiom,i1 = i_83 | i2 = i_83 | i3 = i_83 | i4 = i_83 | i5 = i_83 | i6 = i_83 | i7 = i_83 | i8 = i_83 | i9 = i_83 | i10 = i_83 | e_84 = e_85 ).
+fof(c_3715,axiom,i1 = i_83 | i2 = i_83 | i3 = i_83 | i4 = i_83 | i5 = i_83 | i6 = i_83 | i7 = i_83 | i8 = i_83 | i9 = i_83 | i10 = i_83 ).
+fof(c_3747,axiom,select(a2,i10) = e_85 | i1 = i_83 | i2 = i_83 | i3 = i_83 | i4 = i_83 | i5 = i_83 | i6 = i_83 | i7 = i_83 | i8 = i_83 | i9 = i_83 ).
+fof(c_3748,axiom,select(a1,i10) = e_84 | i1 = i_83 | i2 = i_83 | i3 = i_83 | i4 = i_83 | i5 = i_83 | i6 = i_83 | i7 = i_83 | i8 = i_83 | i9 = i_83 ).
+fof(c_3792,axiom,i1 = i10 | i1 = i_83 | i2 = i10 | i2 = i_83 | i3 = i10 | i3 = i_83 | i4 = i10 | i4 = i_83 | i5 = i10 | i5 = i_83 | i6 = i10 | i6 = i_83 | i7 = i10 | i7 = i_83 | i8 = i10 | i8 = i_83 | i9 = i10 | i9 = i_83 | e_79 = e_85 ).
+fof(c_3832,axiom,i1 = i10 | i1 = i_83 | i2 = i10 | i2 = i_83 | i3 = i10 | i3 = i_83 | i4 = i10 | i4 = i_83 | i5 = i10 | i5 = i_83 | i6 = i10 | i6 = i_83 | i7 = i10 | i7 = i_83 | i8 = i10 | i8 = i_83 | i9 = i10 | i9 = i_83 | e_81 = e_84 ).
+fof(c_3919,axiom,e_79 != e_84 | i1 = i10 | i1 = i_83 | i2 = i10 | i2 = i_83 | i3 = i10 | i3 = i_83 | i4 = i10 | i4 = i_83 | i5 = i10 | i5 = i_83 | i6 = i10 | i6 = i_83 | i7 = i10 | i7 = i_83 | i8 = i10 | i8 = i_83 | i9 = i10 | i9 = i_83 ).
+fof(c_4015,axiom,e_79 != e_81 | i1 = i10 | i1 = i_83 | i2 = i10 | i2 = i_83 | i3 = i10 | i3 = i_83 | i4 = i10 | i4 = i_83 | i5 = i10 | i5 = i_83 | i6 = i10 | i6 = i_83 | i7 = i10 | i7 = i_83 | i8 = i10 | i8 = i_83 | i9 = i10 | i9 = i_83 ).

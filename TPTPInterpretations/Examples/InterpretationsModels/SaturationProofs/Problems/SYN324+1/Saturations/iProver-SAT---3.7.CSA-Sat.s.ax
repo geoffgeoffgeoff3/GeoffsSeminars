@@ -1,0 +1,19 @@
+fof(f1,axiom,? [X0] : ! [X1] : ( ( big_f(X0,X1) <=> big_f(X0,X0) ) => ( big_f(X0,X1) <=> big_f(X1,X1) ) ) ).
+fof(f2,axiom,~ ( ? [X0] : ! [X1] : ( ( big_f(X0,X1) <=> big_f(X0,X0) ) => ( big_f(X0,X1) <=> big_f(X1,X1) ) ) ) ).
+fof(f3,axiom,! [X0] : ? [X1] : ( ( big_f(X0,X1) <~> big_f(X1,X1) ) & ( big_f(X0,X1) <=> big_f(X0,X0) ) ) ).
+fof(f4,axiom,! [X0] : ? [X1] : ( ( ~ big_f(X1,X1) | ~ big_f(X0,X1) ) & ( big_f(X1,X1) | big_f(X0,X1) ) & ( big_f(X0,X1) | ~ big_f(X0,X0) ) & ( big_f(X0,X0) | ~ big_f(X0,X1) ) ) ).
+fof(f5,axiom,! [X0] : ? [X1] : ( ( ~ big_f(X1,X1) | ~ big_f(X0,X1) ) & ( big_f(X1,X1) | big_f(X0,X1) ) & ( big_f(X0,X1) | ~ big_f(X0,X0) ) & ( big_f(X0,X0) | ~ big_f(X0,X1) ) ) ).
+fof(f6,axiom,! [X0] : ( ? [X1] : ( ( ~ big_f(X1,X1) | ~ big_f(X0,X1) ) & ( big_f(X1,X1) | big_f(X0,X1) ) & ( big_f(X0,X1) | ~ big_f(X0,X0) ) & ( big_f(X0,X0) | ~ big_f(X0,X1) ) ) => ( ( ~ big_f(sK0(X0),sK0(X0)) | ~ big_f(X0,sK0(X0)) ) & ( big_f(sK0(X0),sK0(X0)) | big_f(X0,sK0(X0)) ) & ( big_f(X0,sK0(X0)) | ~ big_f(X0,X0) ) & ( big_f(X0,X0) | ~ big_f(X0,sK0(X0)) ) ) ) ).
+fof(f7,axiom,! [X0] : ( ( ~ big_f(sK0(X0),sK0(X0)) | ~ big_f(X0,sK0(X0)) ) & ( big_f(sK0(X0),sK0(X0)) | big_f(X0,sK0(X0)) ) & ( big_f(X0,sK0(X0)) | ~ big_f(X0,X0) ) & ( big_f(X0,X0) | ~ big_f(X0,sK0(X0)) ) ) ).
+fof(f8,axiom,! [X0] : ( big_f(X0,X0) | ~ big_f(X0,sK0(X0)) ) ).
+fof(f9,axiom,! [X0] : ( big_f(X0,sK0(X0)) | ~ big_f(X0,X0) ) ).
+fof(f10,axiom,! [X0] : ( big_f(sK0(X0),sK0(X0)) | big_f(X0,sK0(X0)) ) ).
+fof(f11,axiom,! [X0] : ( ~ big_f(sK0(X0),sK0(X0)) | ~ big_f(X0,sK0(X0)) ) ).
+fof(c_49,axiom,! [X0] : ( ~ big_f(sK0(X0),sK0(X0)) | ~ big_f(X0,sK0(X0)) ) ).
+fof(c_50,axiom,! [X0] : ( big_f(sK0(X0),sK0(X0)) | big_f(X0,sK0(X0)) ) ).
+fof(c_51,axiom,! [X0] : ( ~ big_f(X0,X0) | big_f(X0,sK0(X0)) ) ).
+fof(c_52,axiom,! [X0] : ( ~ big_f(X0,sK0(X0)) | big_f(X0,X0) ) ).
+fof(c_57,axiom,! [X0] : ( ~ big_f(X0,X0) | ~ big_f(sK0(X0),sK0(X0)) ) ).
+fof(c_58,axiom,! [X0] : ( ~ big_f(sK0(X0),sK0(X0)) | ~ big_f(X0,X0) ) ).
+fof(c_59,axiom,! [X0] : ( big_f(X0,X0) | big_f(sK0(X0),sK0(X0)) ) ).
+fof(c_60,axiom,! [X0] : ( big_f(sK0(X0),sK0(X0)) | big_f(X0,X0) ) ).

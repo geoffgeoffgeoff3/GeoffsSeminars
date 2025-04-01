@@ -1,0 +1,2 @@
+include('Saturations/MGT034+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(mp_decreasing_function,conjecture,! [E] : ! [T] : ! [To] : ( ( environment(E) & in_environment(E,To) & greater_or_equal(difference(growth_rate(first_movers,To),growth_rate(efficient_producers,To)),zero) & greater_or_equal(T,appear(efficient_producers,E)) & greater(To,T) ) => ( decreases(difference(growth_rate(first_movers,T),growth_rate(efficient_producers,T))) => greater(difference(growth_rate(first_movers,T),growth_rate(efficient_producers,T)),zero) ) ) ).

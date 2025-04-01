@@ -1,0 +1,12 @@
+fof(c_51,axiom,! [X0] : ! [X1] : c_Value_Oval_OAddr(X0) != c_Value_Oval_OIntg(X1) ).
+fof(c_52,axiom,! [X0] : c_Value_Oval_OAddr(X0) != c_Value_Oval_OUnit ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( c_Value_Oval_OAddr(X0) != c_Value_Oval_OAddr(X1) | X0 = X1 ) ).
+fof(c_55,axiom,! [X0] : c_Value_Oval_OIntg(X0) != c_Value_Oval_OUnit ).
+fof(c_56,axiom,! [X0] : ! [X1] : ( c_Value_Oval_OIntg(X0) != c_Value_Oval_OIntg(X1) | X0 = X1 ) ).
+fof(c_59,axiom,c_Value_Oval_OUnit != c_Value_Oval_ONull ).
+fof(c_60,axiom,! [X0] : c_Value_Oval_OIntg(X0) != c_Value_Oval_ONull ).
+fof(c_62,axiom,! [X0] : c_Value_Oval_OAddr(X0) != c_Value_Oval_ONull ).
+fof(c_63,axiom,c_WellTypeRT_OWTrt(v_P,v_ha____,v_E____,c_Expr_Oexp_OVal(v_v____,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_ONT) ).
+fof(c_64,axiom,c_Value_Oval_ONull != v_v____ ).
+fof(c_103,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_107,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( X0 != X1 | X2 != X3 | X4 != X5 | X6 != X7 | X8 != X9 | ~ c_WellTypeRT_OWTrt(X1,X3,X5,X7,X9) | c_WellTypeRT_OWTrt(X0,X2,X4,X6,X8) ) ).

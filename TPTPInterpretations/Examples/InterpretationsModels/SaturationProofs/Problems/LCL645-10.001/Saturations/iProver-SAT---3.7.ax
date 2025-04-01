@@ -1,0 +1,9 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ! [X2] : ifeq2(X0,X0,X1,X2) = X1 ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : ifeq(X0,X0,X1,X2) = X1 ).
+fof(c_51,axiom,r1(sK3_main_X,sK2_main_Y) = true ).
+fof(c_52,axiom,r1(sK3_main_X,sK1_main_Y) = true ).
+fof(c_53,axiom,! [X0] : ifeq2(r1(sK2_main_Y,X0),true,p1(X0),true) = true ).
+fof(c_54,axiom,! [X0] : ifeq2(r1(sK1_main_Y,X0),true,p1(X0),true) = true ).
+fof(c_55,axiom,ifeq(p1(sK2_main_Y),true,a,b) = b ).
+fof(c_56,axiom,ifeq(p1(sK1_main_Y),true,a,b) = b ).
+fof(c_57,axiom,a != b ).

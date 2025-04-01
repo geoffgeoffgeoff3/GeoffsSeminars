@@ -1,0 +1,581 @@
+fof(receive_working_key_from_switch,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(wk,enc(i(tmk),X1))) ) ).
+fof(dec_enc_cancel,axiom,! [X1] : ! [X2] : enc(X1,enc(i(X1),X2)) = X2 ).
+fof(double_inverse_cancel,axiom,! [X1] : i(i(X1)) = X1 ).
+fof(intruder_knows_1,axiom,p(enc(tmk,pp)) ).
+fof(data_translate_PIN_from_local_to_interchange_key,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(enc(i(wk),X3),enc(i(enc(i(tmk),X2)),X1))) ) ).
+fof(key_translate_from_ZCMK_to_TMK,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(tmk,enc(i(enc(i(zcmk),X2)),X1))) ) ).
+fof(data_translate_PIN_from_local_storage_to_interchange_key,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(enc(i(wk),X2),enc(i(lp),X1))) ) ).
+fof(intruder_knows_3,axiom,p(enc(w,t1)) ).
+fof(attacker_can_encrypt,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(X1,X2)) ) ).
+fof(data_translate_between_interchange_keys,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(enc(i(wk),X3),enc(i(enc(i(wk),X2)),X1))) ) ).
+fof(intruder_knows_2,axiom,p(enc(wk,w)) ).
+fof(data_encrypt,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(enc(i(tc),X1),X2)) ) ).
+fof(enc_dec_cancel,axiom,! [X1] : ! [X2] : enc(i(X1),enc(X1,X2)) = X2 ).
+fof(encrypt_a_stored_comms_key,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(enc(i(tmk),X2),enc(i(tc),X1))) ) ).
+fof(encrypt_a_PIN_derivation_key_under_a_TMK,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(enc(i(tmk),X2),enc(i(tmk),X1))) ) ).
+fof(keys_are_symmetric,axiom,! [X1] : ( p(X1) => p(i(X1)) ) ).
+fof(intruder_knows_4,axiom,p(enc(lp,t2)) ).
+fof(intruder_knows_5,axiom,p(enc(tc,k)) ).
+fof(intruder_knows_7,axiom,p(i(kk)) ).
+fof(key_translate_from_TMK_to_ZCMK,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(i(enc(i(zcmk),X2)),enc(i(tmk),X1))) ) ).
+fof(co1,axiom,p(enc(pp,a)) ).
+fof(intruder_knows_8,axiom,p(a) ).
+fof(data_decrypt,axiom,! [X1] : ! [X2] : ! [X3] : ( ( p(X1) & p(X2) & p(X3) ) => p(enc(i(enc(i(tc),X1)),X2)) ) ).
+fof(intruder_knows_6,axiom,p(kk) ).
+fof(c_0_24,axiom,! [X16] : ! [X17] : ! [X18] : ( ~ p(X16) | ~ p(X17) | ~ p(X18) | p(enc(wk,enc(i(tmk),X16))) ) ).
+fof(c_0_25,axiom,! [X6] : ! [X7] : enc(X6,enc(i(X6),X7)) = X7 ).
+fof(c_0_26,axiom,! [X8] : i(i(X8)) = X8 ).
+fof(c_0_27,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(wk,enc(i(tmk),X1))) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_28,axiom,! [X1] : ! [X2] : enc(X1,enc(i(X1),X2)) = X2 ).
+fof(c_0_29,axiom,! [X1] : i(i(X1)) = X1 ).
+fof(c_0_30,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(wk,X1)) | ~ p(enc(tmk,X1)) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_31,axiom,p(enc(tmk,pp)) ).
+fof(c_0_32,axiom,! [X31] : ! [X32] : ! [X33] : ( ~ p(X31) | ~ p(X32) | ~ p(X33) | p(enc(enc(i(wk),X33),enc(i(enc(i(tmk),X32)),X31))) ) ).
+fof(c_0_33,axiom,! [X10] : ! [X11] : ! [X12] : ( ~ p(X10) | ~ p(X11) | ~ p(X12) | p(enc(tmk,enc(i(enc(i(zcmk),X11)),X10))) ) ).
+fof(c_0_34,axiom,! [X37] : ! [X38] : ! [X39] : ( ~ p(X37) | ~ p(X38) | ~ p(X39) | p(enc(enc(i(wk),X38),enc(i(lp),X37))) ) ).
+fof(c_0_35,axiom,! [X1] : ! [X2] : ( p(enc(wk,pp)) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_36,axiom,p(enc(w,t1)) ).
+fof(c_0_37,axiom,! [X3] : ! [X2] : ! [X1] : ( p(enc(enc(i(wk),X3),enc(i(enc(i(tmk),X2)),X1))) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_38,axiom,! [X2] : ! [X1] : ! [X3] : ( p(enc(tmk,enc(i(enc(i(zcmk),X2)),X1))) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_39,axiom,! [X2] : ! [X1] : ! [X3] : ( p(enc(enc(i(wk),X2),enc(i(lp),X1))) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_40,axiom,! [X1] : ( p(enc(wk,pp)) | ~ p(X1) ) ).
+fof(c_0_41,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,enc(i(enc(i(tmk),X2)),X3))) | ~ p(enc(wk,X1)) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_42,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(wk,enc(i(enc(i(zcmk),X1)),X2))) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_43,axiom,! [X40] : ! [X41] : ! [X42] : ( ~ p(X40) | ~ p(X41) | ~ p(X42) | p(enc(X40,X41)) ) ).
+fof(c_0_44,axiom,! [X34] : ! [X35] : ! [X36] : ( ~ p(X34) | ~ p(X35) | ~ p(X36) | p(enc(enc(i(wk),X36),enc(i(enc(i(wk),X35)),X34))) ) ).
+fof(c_0_45,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,enc(i(lp),X2))) | ~ p(enc(wk,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_46,axiom,p(enc(wk,pp)) ).
+fof(c_0_47,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(tmk),X3),X2)) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_48,axiom,p(enc(wk,w)) ).
+fof(c_0_49,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(enc(i(tmk),X3)),X4))) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_50,axiom,! [X25] : ! [X26] : ! [X27] : ( ~ p(X25) | ~ p(X26) | ~ p(X27) | p(enc(enc(i(tc),X25),X26)) ) ).
+fof(c_0_51,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,X2)) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_52,axiom,! [X4] : ! [X5] : enc(i(X4),enc(X4,X5)) = X5 ).
+fof(c_0_53,axiom,! [X22] : ! [X23] : ! [X24] : ( ~ p(X22) | ~ p(X23) | ~ p(X24) | p(enc(enc(i(tmk),X23),enc(i(tc),X22))) ) ).
+fof(c_0_54,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),enc(i(enc(i(tmk),X2)),X3))) | ~ p(X2) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_55,axiom,! [X3] : ! [X2] : ! [X1] : ( p(enc(enc(i(wk),X3),enc(i(enc(i(wk),X2)),X1))) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_56,axiom,! [X1] : ! [X2] : ( p(enc(pp,enc(i(lp),X1))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_57,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(tmk,X3)) | ~ p(enc(X3,X2)) | ~ p(X1) ) ).
+fof(c_0_58,axiom,! [X1] : ! [X2] : ( p(enc(w,enc(i(enc(i(tmk),X1)),X2))) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_59,axiom,! [X1] : ! [X2] : ( p(enc(pp,enc(i(enc(i(tmk),X1)),X2))) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_60,axiom,! [X19] : ! [X20] : ! [X21] : ( ~ p(X19) | ~ p(X20) | ~ p(X21) | p(enc(enc(i(tmk),X20),enc(i(tmk),X19))) ) ).
+fof(c_0_61,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(tmk),X4),X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_62,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(tc),X1),X2)) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_63,axiom,! [X1] : ! [X2] : ( p(enc(X1,X2)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_64,axiom,! [X1] : ! [X2] : enc(i(X1),enc(X1,X2)) = X2 ).
+fof(c_0_65,axiom,! [X9] : ( ~ p(X9) | p(i(X9)) ) ).
+fof(c_0_66,axiom,! [X2] : ! [X1] : ! [X3] : ( p(enc(enc(i(tmk),X2),enc(i(tc),X1))) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_67,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(tmk),X3),X2)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_68,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(wk),X3),X2)) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_69,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(lp,X1)) | ~ p(X2) ) ).
+fof(c_0_70,axiom,p(enc(lp,t2)) ).
+fof(c_0_71,axiom,! [X1] : ! [X2] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(pp,X2)) | ~ p(X1) ) ).
+fof(c_0_72,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(enc(i(tmk),X2),X1)) | ~ p(X2) ) ).
+fof(c_0_73,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(tmk),X2),X1)) | ~ p(X2) ) ).
+fof(c_0_74,axiom,! [X2] : ! [X1] : ! [X3] : ( p(enc(enc(i(tmk),X2),enc(i(tmk),X1))) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_75,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(tmk,X4)) | ~ p(enc(X4,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_76,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,X2)) | ~ p(enc(tc,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_77,axiom,p(enc(tc,k)) ).
+fof(c_0_78,axiom,! [X1] : ! [X2] : ( p(X1) | ~ p(enc(X2,X1)) | ~ p(i(X2)) ) ).
+fof(c_0_79,axiom,! [X1] : ( p(i(X1)) | ~ p(X1) ) ).
+fof(c_0_80,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,enc(i(tc),X2))) | ~ p(enc(tmk,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_81,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(tmk,X3)) | ~ p(enc(X3,X2)) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_82,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(wk,X3)) | ~ p(enc(X3,X2)) | ~ p(X1) ) ).
+fof(c_0_83,axiom,! [X1] : ( p(enc(pp,t2)) | ~ p(X1) ) ).
+fof(c_0_84,axiom,! [X1] : ! [X2] : ( p(enc(enc(i(wk),X1),enc(i(pp),X2))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_85,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(tmk,X2)) | ~ p(enc(X2,X1)) ) ).
+fof(c_0_86,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(tmk,X2)) | ~ p(enc(X2,X1)) ) ).
+fof(c_0_87,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(tmk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_88,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(enc(i(zcmk),X4)),X5),X3)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_89,axiom,! [X1] : ! [X2] : ( p(enc(k,X1)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_90,axiom,p(i(kk)) ).
+fof(c_0_91,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(tc,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_92,axiom,! [X1] : ! [X2] : ( p(X1) | ~ p(enc(X2,X1)) | ~ p(X2) ) ).
+fof(c_0_93,axiom,! [X1] : ! [X2] : ( p(enc(pp,enc(i(tc),X1))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_94,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(enc(i(zcmk),X3)),X4),X2)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_95,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(enc(i(zcmk),X3)),X4),X2)) | ~ p(X1) | ~ p(X5) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_96,axiom,! [X1] : ! [X2] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(w,X2)) | ~ p(X1) ) ).
+fof(c_0_97,axiom,p(enc(pp,t2)) ).
+fof(c_0_98,axiom,! [X1] : ! [X2] : ( p(enc(X1,enc(i(pp),X2))) | ~ p(enc(wk,X1)) | ~ p(X2) ) ).
+fof(c_0_99,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(enc(i(enc(i(zcmk),X2)),X3),X1)) | ~ p(X4) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_100,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(enc(i(zcmk),X2)),X3),X1)) | ~ p(X4) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_101,axiom,! [X13] : ! [X14] : ! [X15] : ( ~ p(X13) | ~ p(X14) | ~ p(X15) | p(enc(i(enc(i(zcmk),X14)),enc(i(tmk),X13))) ) ).
+fof(c_0_102,axiom,~ p(enc(pp,a)) ).
+fof(c_0_103,axiom,! [X1] : ! [X2] : ( p(enc(enc(i(tmk),X1),pp)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_104,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),X5)) | ~ p(enc(X5,X3)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X4) ) ).
+fof(c_0_105,axiom,! [X1] : ( p(enc(k,X1)) | ~ p(X1) ) ).
+fof(c_0_106,axiom,! [X1] : ! [X2] : ( p(enc(enc(i(tmk),X1),k)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_107,axiom,! [X1] : ! [X2] : ( p(enc(X1,X2)) | ~ p(i(X1)) | ~ p(X2) ) ).
+fof(c_0_108,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(tc,X1)) | ~ p(X2) ) ).
+fof(c_0_109,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X4)) | ~ p(enc(X4,X2)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_110,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,enc(i(tmk),X2))) | ~ p(enc(tmk,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_111,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X4)) | ~ p(enc(X4,X2)) | ~ p(X1) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_112,axiom,! [X1] : ( p(enc(enc(i(wk),X1),t1)) | ~ p(X1) ) ).
+fof(c_0_113,axiom,! [X1] : ( p(enc(enc(i(wk),X1),t2)) | ~ p(X1) ) ).
+fof(c_0_114,axiom,! [X1] : ( p(enc(w,enc(i(pp),X1))) | ~ p(X1) ) ).
+fof(c_0_115,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),X3)) | ~ p(enc(X3,X1)) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_116,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),X3)) | ~ p(enc(X3,X1)) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_117,axiom,! [X2] : ! [X1] : ! [X3] : ( p(enc(i(enc(i(zcmk),X2)),enc(i(tmk),X1))) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_118,axiom,~ p(enc(pp,a)) ).
+fof(c_0_119,axiom,p(a) ).
+fof(c_0_120,axiom,! [X1] : ! [X2] : ( p(enc(X1,pp)) | ~ p(enc(tmk,X1)) | ~ p(X2) ) ).
+fof(c_0_121,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),enc(i(X2),X3))) | ~ p(enc(tmk,X2)) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_122,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),k)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_123,axiom,! [X1] : ! [X2] : ( p(enc(X1,k)) | ~ p(enc(tmk,X1)) | ~ p(X2) ) ).
+fof(c_0_124,axiom,! [X28] : ! [X29] : ! [X30] : ( ~ p(X28) | ~ p(X29) | ~ p(X30) | p(enc(i(enc(i(tc),X28)),X29)) ) ).
+fof(c_0_125,axiom,! [X1] : ( p(enc(kk,X1)) | ~ p(X1) ) ).
+fof(c_0_126,axiom,! [X1] : ( p(enc(pp,k)) | ~ p(X1) ) ).
+fof(c_0_127,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),k)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_128,axiom,! [X1] : ! [X2] : ( p(enc(pp,enc(i(tmk),X1))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_129,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),k)) | ~ p(X1) | ~ p(X4) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_130,axiom,! [X1] : ( p(enc(X1,t1)) | ~ p(enc(wk,X1)) ) ).
+fof(c_0_131,axiom,! [X1] : ( p(enc(X1,t2)) | ~ p(enc(wk,X1)) ) ).
+fof(c_0_132,axiom,! [X1] : ( p(enc(w,X1)) | ~ p(enc(pp,X1)) ) ).
+fof(c_0_133,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),k)) | ~ p(X3) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_134,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),k)) | ~ p(X3) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_135,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(i(enc(i(zcmk),X1)),X2)) | ~ p(enc(tmk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_136,axiom,~ p(pp) ).
+fof(c_0_137,axiom,! [X1] : ( p(enc(pp,pp)) | ~ p(X1) ) ).
+fof(c_0_138,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),enc(i(enc(i(enc(i(zcmk),X2)),X3)),X4))) | ~ p(X1) | ~ p(X4) | ~ p(X5) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_139,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(X4,k)) | ~ p(enc(zcmk,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) ) ).
+fof(c_0_140,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),k)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_141,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(i(enc(i(tc),X1)),X2)) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_142,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),kk)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_143,axiom,p(enc(pp,k)) ).
+fof(c_0_144,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),enc(i(enc(i(zcmk),X2)),X3))) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_145,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(X3,k)) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_146,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),enc(i(tmk),X2))) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_147,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(X3,k)) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_148,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),kk)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_149,axiom,! [X1] : ! [X2] : ( p(enc(enc(i(wk),X1),enc(i(w),X2))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_150,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(tmk),X1),t1)) | ~ p(X2) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_151,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(tmk),X1),t2)) | ~ p(X2) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_152,axiom,! [X1] : ! [X2] : ( p(enc(w,enc(i(tmk),X1))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_153,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),kk)) | ~ p(X1) | ~ p(X4) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_154,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(X2,k)) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_155,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(X2,k)) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_156,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),kk)) | ~ p(X3) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_157,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),kk)) | ~ p(X3) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_158,axiom,! [X1] : ! [X2] : ( p(enc(i(enc(i(zcmk),X1)),pp)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_159,axiom,! [X1] : ! [X2] : ( ~ p(enc(i(tmk),X1)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_160,axiom,p(enc(pp,pp)) ).
+fof(c_0_161,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(lp,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_162,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(enc(i(enc(i(zcmk),X2)),X3)),X4))) | ~ p(enc(wk,X1)) | ~ p(X4) | ~ p(X5) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_163,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ! [X11] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,enc(i(enc(i(zcmk),X4)),X5))) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X3) | ~ p(X10) | ~ p(X11) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_164,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(i(X1),X2)) | ~ p(enc(tc,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_165,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(X4,kk)) | ~ p(enc(zcmk,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) ) ).
+fof(c_0_166,axiom,p(kk) ).
+fof(c_0_167,axiom,! [X1] : ( p(X1) | ~ p(enc(kk,X1)) ) ).
+fof(c_0_168,axiom,! [X1] : ( p(enc(enc(i(wk),X1),k)) | ~ p(X1) ) ).
+fof(c_0_169,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(enc(i(zcmk),X2)),X3))) | ~ p(enc(tmk,X1)) | ~ p(X4) | ~ p(X5) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_170,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,enc(i(enc(i(zcmk),X3)),X4))) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X2) | ~ p(X8) | ~ p(X9) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_171,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(tmk,X2)) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_172,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,enc(i(enc(i(zcmk),X3)),X4))) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X6) | ~ p(X7) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_173,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,enc(i(enc(i(wk),X2)),X3))) | ~ p(enc(wk,X1)) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_174,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(X3,kk)) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_175,axiom,! [X1] : ! [X2] : ( p(enc(X1,enc(i(w),X2))) | ~ p(enc(wk,X1)) | ~ p(X2) ) ).
+fof(c_0_176,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,t1)) | ~ p(enc(tmk,X1)) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_177,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,t2)) | ~ p(enc(tmk,X1)) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_178,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(tmk,X1)) | ~ p(X2) ) ).
+fof(c_0_179,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(X3,kk)) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_180,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(w,X1)) | ~ p(enc(zcmk,enc(i(enc(i(zcmk),X2)),X3))) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_181,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,enc(i(enc(i(zcmk),X2)),X3))) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_182,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(tmk,X1)) | ~ p(X2) ) ).
+fof(c_0_183,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(X2,kk)) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_184,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(X2,kk)) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_185,axiom,! [X1] : ! [X2] : ( ~ p(i(enc(i(zcmk),X1))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_186,axiom,! [X1] : ! [X2] : ( ~ p(enc(tmk,X1)) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_187,axiom,! [X1] : ( p(enc(enc(i(wk),X1),pp)) | ~ p(X1) ) ).
+fof(c_0_188,axiom,! [X1] : ! [X2] : ( p(enc(enc(i(wk),X1),t2)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_189,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(enc(i(enc(i(zcmk),X3)),X4)),X5))) | ~ p(X5) | ~ p(X6) | ~ p(X3) | ~ p(X4) | ~ p(X7) | ~ p(X8) | ~ p(X9) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_190,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),enc(i(X2),X3))) | ~ p(enc(tmk,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_191,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ! [X11] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),X5)) | ~ p(enc(zcmk,X5)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X3) | ~ p(X10) | ~ p(X11) | ~ p(X4) ) ).
+fof(c_0_192,axiom,! [X1] : ! [X2] : ( p(enc(i(k),X1)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_193,axiom,! [X1] : ! [X2] : ( p(enc(i(X1),X2)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_194,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,enc(i(tmk),X4))) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X9) | ~ p(X4) ) ).
+fof(c_0_195,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,enc(i(tc),X4))) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X9) | ~ p(X4) ) ).
+fof(c_0_196,axiom,! [X1] : ( p(enc(i(kk),X1)) | ~ p(X1) ) ).
+fof(c_0_197,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,enc(i(wk),X4))) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_198,axiom,! [X1] : ( p(enc(X1,k)) | ~ p(enc(wk,X1)) ) ).
+fof(c_0_199,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(enc(i(zcmk),X3)),X4))) | ~ p(X5) | ~ p(X6) | ~ p(X3) | ~ p(X4) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_200,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X4)) | ~ p(enc(zcmk,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X2) | ~ p(X8) | ~ p(X9) | ~ p(X3) ) ).
+fof(c_0_201,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),enc(i(enc(i(zcmk),X2)),X3))) | ~ p(X1) | ~ p(X4) | ~ p(X5) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_202,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X4)) | ~ p(enc(zcmk,X4)) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X6) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_203,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(enc(i(wk),X3)),X4))) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_204,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,enc(i(tmk),X3))) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_205,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,enc(i(tc),X3))) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_206,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,enc(i(wk),X3))) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_207,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(w),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_208,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(lp),X3))) | ~ p(X4) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_209,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(pp),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_210,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),enc(i(enc(i(wk),X2)),X3))) | ~ p(X2) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_211,axiom,! [X1] : ! [X2] : ( p(enc(w,enc(i(X1),X2))) | ~ p(enc(tmk,X1)) | ~ p(X2) ) ).
+fof(c_0_212,axiom,! [X1] : ! [X2] : ( p(enc(pp,enc(i(X1),X2))) | ~ p(enc(tmk,X1)) | ~ p(X2) ) ).
+fof(c_0_213,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),t1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_214,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),t2)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_215,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,enc(i(enc(i(zcmk),X1)),X2))) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_216,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,enc(i(tmk),X3))) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_217,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,enc(i(tc),X3))) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_218,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,enc(i(wk),X3))) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_219,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(i(enc(i(zcmk),X1)),enc(i(enc(i(zcmk),X2)),X3))) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_220,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),X3)) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_221,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),X3)) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_222,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),enc(i(lp),X2))) | ~ p(X3) | ~ p(X2) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_223,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(tc),X3))) | ~ p(X4) | ~ p(X3) | ~ p(X5) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_224,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,enc(i(enc(i(zcmk),X1)),X2))) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_225,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(tmk),X3))) | ~ p(X4) | ~ p(X3) | ~ p(X5) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_226,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),pp)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_227,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),enc(i(tc),X2))) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_228,axiom,! [X1] : ! [X2] : ( p(enc(w,enc(i(enc(i(wk),X1)),X2))) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_229,axiom,! [X1] : ! [X2] : ( p(enc(pp,enc(i(enc(i(wk),X1)),X2))) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_230,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(zcmk,enc(i(tmk),X2))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_231,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(zcmk,enc(i(tc),X2))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_232,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(zcmk,enc(i(wk),X2))) | ~ p(X3) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_233,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,enc(i(tmk),X2))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_234,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,enc(i(tc),X2))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_235,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,enc(i(wk),X2))) | ~ p(X3) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_236,axiom,! [X1] : ! [X2] : ( p(enc(w,enc(i(tc),X1))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_237,axiom,! [X1] : ! [X2] : ( ~ p(enc(zcmk,X1)) | ~ p(i(X1)) | ~ p(X2) ) ).
+fof(c_0_238,axiom,! [X1] : ! [X2] : ( p(X1) | ~ p(enc(i(X2),X1)) | ~ p(X2) ) ).
+fof(c_0_239,axiom,! [X1] : ! [X2] : ( p(enc(w,enc(i(lp),X1))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_240,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ p(enc(i(enc(i(zcmk),X1)),X2)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_241,axiom,! [X1] : ( p(enc(X1,pp)) | ~ p(enc(wk,X1)) ) ).
+fof(c_0_242,axiom,! [X1] : ! [X2] : ( p(enc(X1,t2)) | ~ p(enc(wk,X1)) | ~ p(X2) ) ).
+fof(c_0_243,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(X1,enc(i(enc(i(enc(i(zcmk),X2)),X3)),X4))) | ~ p(enc(enc(i(zcmk),X5),X1)) | ~ p(X4) | ~ p(X6) | ~ p(X2) | ~ p(X3) | ~ p(X7) | ~ p(X8) | ~ p(X9) | ~ p(X5) ) ).
+fof(c_0_244,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),enc(i(enc(i(enc(i(zcmk),X2)),X3)),X4))) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_245,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ! [X11] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),enc(i(zcmk),X5))) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X3) | ~ p(X10) | ~ p(X11) | ~ p(X4) ) ).
+fof(c_0_246,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),i(enc(i(tc),X5)))) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X4) | ~ p(X10) | ~ p(X3) | ~ p(X5) ) ).
+fof(c_0_247,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),enc(i(tc),X5))) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X4) | ~ p(X10) | ~ p(X3) | ~ p(X5) ) ).
+fof(c_0_248,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(X3),X4))) | ~ p(enc(enc(i(zcmk),X5),X3)) | ~ p(X4) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X5) ) ).
+fof(c_0_249,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(X3,X4))) | ~ p(enc(enc(i(zcmk),X5),i(X3))) | ~ p(X4) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X5) ) ).
+fof(c_0_250,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,i(enc(i(tc),X4)))) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X9) | ~ p(X4) ) ).
+fof(c_0_251,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),i(k))) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X4) | ~ p(X9) | ~ p(X3) ) ).
+fof(c_0_252,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),i(X5))) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X4) | ~ p(X3) | ~ p(X5) ) ).
+fof(c_0_253,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,X4)) | ~ p(enc(tmk,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X9) ) ).
+fof(c_0_254,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,X4)) | ~ p(enc(tc,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X9) ) ).
+fof(c_0_255,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),i(kk))) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_256,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,X4)) | ~ p(enc(wk,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) ) ).
+fof(c_0_257,axiom,p(enc(w,k)) ).
+fof(c_0_258,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(enc(i(zcmk),X2)),X3))) | ~ p(enc(enc(i(zcmk),X4),X1)) | ~ p(X5) | ~ p(X6) | ~ p(X2) | ~ p(X3) | ~ p(X7) | ~ p(X4) ) ).
+fof(c_0_259,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),X3)) | ~ p(X5) | ~ p(X6) | ~ p(X4) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_260,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),w)) | ~ p(enc(enc(i(zcmk),X3),wk)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_261,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),enc(i(zcmk),X4))) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X2) | ~ p(X8) | ~ p(X9) | ~ p(X3) ) ).
+fof(c_0_262,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(enc(i(tc),X4)))) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) | ~ p(X8) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_263,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X2)) | ~ p(X1) | ~ p(X4) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_264,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),enc(i(tc),X4))) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) | ~ p(X8) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_265,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),enc(i(zcmk),X4))) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X6) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_266,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),enc(i(X2),X3))) | ~ p(enc(enc(i(zcmk),X4),X2)) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X4) ) ).
+fof(c_0_267,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(enc(i(wk),X2)),X3))) | ~ p(enc(enc(i(zcmk),X4),X1)) | ~ p(X2) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X4) ) ).
+fof(c_0_268,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(wk),X4),X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_269,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(enc(i(tmk),X2)),X3))) | ~ p(enc(enc(i(zcmk),X4),X1)) | ~ p(X2) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X4) ) ).
+fof(c_0_270,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(enc(i(tc),X4)))) | ~ p(X1) | ~ p(X5) | ~ p(X3) | ~ p(X6) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_271,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),enc(X2,X3))) | ~ p(enc(enc(i(zcmk),X4),i(X2))) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X4) ) ).
+fof(c_0_272,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,i(enc(i(tc),X3)))) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_273,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(k))) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X3) | ~ p(X7) | ~ p(X2) ) ).
+fof(c_0_274,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(X4))) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_275,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(tmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X7) ) ).
+fof(c_0_276,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(tc,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X7) ) ).
+fof(c_0_277,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(kk))) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_278,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(wk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_279,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),w)) | ~ p(enc(enc(i(zcmk),X2),wk)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_280,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(X1,enc(i(w),X2))) | ~ p(enc(enc(i(zcmk),X3),X1)) | ~ p(X2) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X3) ) ).
+fof(c_0_281,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(lp,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_282,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(lp),X2))) | ~ p(enc(enc(i(zcmk),X3),X1)) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_283,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(X1,enc(i(pp),X2))) | ~ p(enc(enc(i(zcmk),X3),X1)) | ~ p(X2) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X3) ) ).
+fof(c_0_284,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),enc(i(tc),X4))) | ~ p(X1) | ~ p(X5) | ~ p(X3) | ~ p(X6) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_285,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(wk),X3),X2)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_286,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,enc(i(enc(i(enc(i(zcmk),X1)),X2)),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_287,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),enc(i(X2),X3))) | ~ p(enc(enc(i(zcmk),X4),X2)) | ~ p(X3) | ~ p(X1) | ~ p(X5) | ~ p(X4) ) ).
+fof(c_0_288,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,enc(i(enc(i(enc(i(zcmk),X1)),X2)),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_289,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,t1)) | ~ p(enc(enc(i(zcmk),X2),X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_290,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),enc(X2,X3))) | ~ p(enc(enc(i(zcmk),X4),i(X2))) | ~ p(X3) | ~ p(X1) | ~ p(X5) | ~ p(X4) ) ).
+fof(c_0_291,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,t2)) | ~ p(enc(enc(i(zcmk),X2),X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_292,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(tmk),X1),enc(i(w),X2))) | ~ p(X2) | ~ p(X3) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_293,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_294,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,i(enc(i(tc),X3)))) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_295,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(k))) | ~ p(X1) | ~ p(X4) | ~ p(X3) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_296,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(X4))) | ~ p(X1) | ~ p(X5) | ~ p(X3) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_297,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(tmk,X3)) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X5) ) ).
+fof(c_0_298,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(tc,X3)) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X5) ) ).
+fof(c_0_299,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(kk))) | ~ p(X1) | ~ p(X4) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_300,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(wk,X3)) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_301,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),w)) | ~ p(enc(enc(i(zcmk),X2),wk)) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_302,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(tmk),X1),enc(i(pp),X2))) | ~ p(X2) | ~ p(X3) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_303,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(i(enc(i(zcmk),X1)),X2)) | ~ p(enc(enc(i(zcmk),X3),X2)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_304,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),enc(i(zcmk),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_305,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),enc(i(zcmk),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_306,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(lp,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_307,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(X1,k)) | ~ p(enc(enc(i(zcmk),X2),X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_308,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(tc,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_309,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(tc),X2))) | ~ p(enc(enc(i(zcmk),X3),X1)) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_310,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_311,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),i(enc(i(tc),X3)))) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_312,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(tmk),X2))) | ~ p(enc(enc(i(zcmk),X3),X1)) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_313,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),i(enc(i(tc),X3)))) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_314,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(X1,pp)) | ~ p(enc(enc(i(zcmk),X2),X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_315,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X2)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_316,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(tc,X2)) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_317,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(wk,X1)) | ~ p(enc(enc(i(zcmk),X2),X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_318,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),enc(i(tc),X3))) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_319,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),enc(i(tc),X3))) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_320,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,enc(i(X1),X2))) | ~ p(enc(enc(i(zcmk),X3),X1)) | ~ p(X2) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_321,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,enc(X1,X2))) | ~ p(enc(enc(i(zcmk),X3),i(X1))) | ~ p(X2) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_322,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,enc(i(X1),X2))) | ~ p(enc(enc(i(zcmk),X3),X1)) | ~ p(X2) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_323,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,enc(X1,X2))) | ~ p(enc(enc(i(zcmk),X3),i(X1))) | ~ p(X2) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_324,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(enc(i(wk),X2),X1)) | ~ p(X2) ) ).
+fof(c_0_325,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(zcmk,i(enc(i(tc),X2)))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_326,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(wk),X2),X1)) | ~ p(X2) ) ).
+fof(c_0_327,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),i(k))) | ~ p(X3) | ~ p(X2) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_328,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),i(X3))) | ~ p(X4) | ~ p(X2) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_329,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(tmk,X2)) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_330,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(tc,X2)) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_331,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),i(kk))) | ~ p(X3) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_332,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(wk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_333,axiom,! [X1] : ! [X2] : ( p(enc(w,w)) | ~ p(enc(enc(i(zcmk),X1),wk)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_334,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,i(enc(i(tc),X2)))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_335,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),i(k))) | ~ p(X3) | ~ p(X2) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_336,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),i(X3))) | ~ p(X4) | ~ p(X2) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_337,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(tmk,X2)) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_338,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(tc,X2)) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_339,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),i(kk))) | ~ p(X3) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_340,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(wk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_341,axiom,! [X1] : ! [X2] : ( p(enc(pp,w)) | ~ p(enc(enc(i(zcmk),X1),wk)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_342,axiom,! [X1] : ( p(enc(pp,enc(i(w),X1))) | ~ p(X1) ) ).
+fof(c_0_343,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(tc,X1)) | ~ p(X2) ) ).
+fof(c_0_344,axiom,! [X1] : ( ~ p(enc(i(wk),X1)) | ~ p(X1) ) ).
+fof(c_0_345,axiom,! [X1] : ( ~ p(enc(zcmk,kk)) | ~ p(X1) ) ).
+fof(c_0_346,axiom,! [X1] : ! [X2] : ( ~ p(enc(i(zcmk),X1)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_347,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(lp,X1)) | ~ p(X2) ) ).
+fof(c_0_348,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ p(enc(enc(i(zcmk),X1),X2)) | ~ p(X2) | ~ p(X3) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_349,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(tmk,X1)) | ~ p(enc(enc(i(zcmk),X2),X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_350,axiom,! [X1] : ! [X2] : ! [X3] : ( p(X1) | ~ p(enc(enc(i(tc),X2),X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_351,axiom,! [X1] : ! [X2] : ! [X3] : ( p(X1) | ~ p(enc(i(enc(i(tc),X2)),X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_352,axiom,p(enc(w,pp)) ).
+fof(c_0_353,axiom,! [X1] : ( p(enc(w,t2)) | ~ p(X1) ) ).
+fof(c_0_354,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(X1,enc(i(enc(i(enc(i(zcmk),X2)),X3)),X4))) | ~ p(enc(zcmk,X5)) | ~ p(enc(X5,X1)) | ~ p(X4) | ~ p(X6) | ~ p(X2) | ~ p(X3) | ~ p(X7) | ~ p(X8) | ~ p(X9) ) ).
+fof(c_0_355,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(X1),X2),enc(i(enc(i(enc(i(zcmk),X3)),X4)),X5))) | ~ p(enc(zcmk,X1)) | ~ p(X5) | ~ p(X6) | ~ p(X3) | ~ p(X4) | ~ p(X7) | ~ p(X8) | ~ p(X9) | ~ p(X2) ) ).
+fof(c_0_356,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(enc(i(X3),X4)),X5))) | ~ p(enc(zcmk,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X4) | ~ p(X7) | ~ p(X8) | ~ p(X9) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_357,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(enc(i(enc(i(zcmk),X2)),X3)),X4))) | ~ p(enc(tmk,X1)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_358,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),enc(i(enc(i(X2),X3)),X4))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_359,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ! [X11] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(X4,enc(i(zcmk),X5))) | ~ p(enc(zcmk,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X3) | ~ p(X10) | ~ p(X11) ) ).
+fof(c_0_360,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ! [X11] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,enc(i(X4),X5))) | ~ p(enc(zcmk,X4)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X3) | ~ p(X10) | ~ p(X11) | ~ p(X5) ) ).
+fof(c_0_361,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(X4,i(enc(i(tc),X5)))) | ~ p(enc(zcmk,X4)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X10) | ~ p(X3) | ~ p(X5) ) ).
+fof(c_0_362,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),i(X5))) | ~ p(enc(tc,X5)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X4) | ~ p(X10) | ~ p(X3) ) ).
+fof(c_0_363,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(X4,enc(i(tc),X5))) | ~ p(enc(zcmk,X4)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X10) | ~ p(X3) | ~ p(X5) ) ).
+fof(c_0_364,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),X5)) | ~ p(enc(tc,X5)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X4) | ~ p(X10) | ~ p(X3) ) ).
+fof(c_0_365,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(X3),X4))) | ~ p(enc(zcmk,X5)) | ~ p(enc(X5,X3)) | ~ p(X4) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) ) ).
+fof(c_0_366,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(X3,X4))) | ~ p(enc(X5,i(X3))) | ~ p(enc(zcmk,X5)) | ~ p(X4) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) ) ).
+fof(c_0_367,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,i(X4))) | ~ p(enc(tc,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X9) ) ).
+fof(c_0_368,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(X4,i(k))) | ~ p(enc(zcmk,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X9) | ~ p(X3) ) ).
+fof(c_0_369,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(zcmk),X4),X5)) | ~ p(i(X5)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_370,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(X4,i(X5))) | ~ p(enc(zcmk,X4)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X3) | ~ p(X5) ) ).
+fof(c_0_371,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(tmk,enc(i(zcmk),X4))) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X9) ) ).
+fof(c_0_372,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(tc,enc(i(zcmk),X4))) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) | ~ p(X9) ) ).
+fof(c_0_373,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(X4,i(kk))) | ~ p(enc(zcmk,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) ) ).
+fof(c_0_374,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(wk,enc(i(zcmk),X4))) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X8) | ~ p(X3) ) ).
+fof(c_0_375,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,tc)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_376,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,pp)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_377,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,w)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_378,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(X1),X2),enc(i(enc(i(zcmk),X3)),X4))) | ~ p(enc(zcmk,X1)) | ~ p(X5) | ~ p(X6) | ~ p(X3) | ~ p(X4) | ~ p(X7) | ~ p(X2) ) ).
+fof(c_0_379,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(enc(i(zcmk),X2)),X3))) | ~ p(enc(zcmk,X4)) | ~ p(enc(X4,X1)) | ~ p(X5) | ~ p(X6) | ~ p(X2) | ~ p(X3) | ~ p(X7) ) ).
+fof(c_0_380,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,X4)) | ~ p(enc(X4,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_381,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(X3),X4))) | ~ p(enc(zcmk,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X4) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_382,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,i(k))) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) | ~ p(X7) | ~ p(X3) | ~ p(X8) ) ).
+fof(c_0_383,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,i(kk))) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_384,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(zcmk,k)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) | ~ p(X7) | ~ p(X3) ) ).
+fof(c_0_385,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),w)) | ~ p(enc(X3,wk)) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) | ~ p(X7) ) ).
+fof(c_0_386,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(enc(i(X4),X5),X3)) | ~ p(enc(zcmk,X4)) | ~ p(X6) | ~ p(X7) | ~ p(X8) | ~ p(X1) | ~ p(X2) | ~ p(X9) | ~ p(X5) ) ).
+fof(c_0_387,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(X3,enc(i(zcmk),X4))) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X2) | ~ p(X8) | ~ p(X9) ) ).
+fof(c_0_388,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,enc(i(X3),X4))) | ~ p(enc(zcmk,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X2) | ~ p(X8) | ~ p(X9) | ~ p(X4) ) ).
+fof(c_0_389,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(X3,i(enc(i(tc),X4)))) | ~ p(enc(zcmk,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X8) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_390,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(X4))) | ~ p(enc(tc,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) | ~ p(X8) | ~ p(X2) ) ).
+fof(c_0_391,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(enc(i(zcmk),X2)),X3))) | ~ p(enc(wk,X1)) | ~ p(X4) | ~ p(X5) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_392,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X2)) | ~ p(X1) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_393,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),enc(i(X2),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X1) | ~ p(X4) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_394,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(X3,enc(i(tc),X4))) | ~ p(enc(zcmk,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X8) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_395,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X4)) | ~ p(enc(tc,X4)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) | ~ p(X8) | ~ p(X2) ) ).
+fof(c_0_396,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(X1),X2),enc(i(enc(i(wk),X3)),X4))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X2) ) ).
+fof(c_0_397,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(X3),X4))) | ~ p(enc(wk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_398,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(X1),X2),enc(i(enc(i(tmk),X3)),X4))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X2) ) ).
+fof(c_0_399,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),enc(i(X3),X4))) | ~ p(enc(tmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_400,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(X3,enc(i(zcmk),X4))) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X6) | ~ p(X7) ) ).
+fof(c_0_401,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,enc(i(X3),X4))) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X6) | ~ p(X7) | ~ p(X4) ) ).
+fof(c_0_402,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),enc(i(X2),X3))) | ~ p(enc(zcmk,X4)) | ~ p(enc(X4,X2)) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) ) ).
+fof(c_0_403,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(enc(i(wk),X2)),X3))) | ~ p(enc(zcmk,X4)) | ~ p(enc(X4,X1)) | ~ p(X2) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X7) ) ).
+fof(c_0_404,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(wk,X4)) | ~ p(enc(X4,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_405,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(enc(i(tmk),X2)),X3))) | ~ p(enc(zcmk,X4)) | ~ p(enc(X4,X1)) | ~ p(X2) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X7) ) ).
+fof(c_0_406,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(X3,i(enc(i(tc),X4)))) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_407,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),i(X4))) | ~ p(enc(tc,X4)) | ~ p(X1) | ~ p(X5) | ~ p(X3) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_408,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),enc(X2,X3))) | ~ p(enc(X4,i(X2))) | ~ p(enc(zcmk,X4)) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) ) ).
+fof(c_0_409,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,i(X3))) | ~ p(enc(tc,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X7) ) ).
+fof(c_0_410,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(X3,i(k))) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X7) | ~ p(X2) ) ).
+fof(c_0_411,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X4)) | ~ p(i(X4)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_412,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(X3,i(X4))) | ~ p(enc(zcmk,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_413,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(tmk,enc(i(zcmk),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X7) ) ).
+fof(c_0_414,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(tc,enc(i(zcmk),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) | ~ p(X7) ) ).
+fof(c_0_415,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(X3,i(kk))) | ~ p(enc(zcmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_416,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(wk,enc(i(zcmk),X3))) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_417,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,tc)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_418,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,w)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_419,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,pp)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_420,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,i(k))) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X6) ) ).
+fof(c_0_421,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,i(kk))) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_422,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,k)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_423,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),w)) | ~ p(enc(X2,wk)) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) ) ).
+fof(c_0_424,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(enc(i(X3),X4),X2)) | ~ p(enc(zcmk,X3)) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X7) | ~ p(X4) ) ).
+fof(c_0_425,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(X1),X2),enc(i(w),X3))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_426,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(X1,enc(i(w),X2))) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X1)) | ~ p(X2) | ~ p(X4) | ~ p(X5) | ~ p(X6) ) ).
+fof(c_0_427,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(w,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_428,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(X1),X2),enc(i(lp),X3))) | ~ p(enc(zcmk,X1)) | ~ p(X4) | ~ p(X3) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X2) ) ).
+fof(c_0_429,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(lp) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X7) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_430,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( p(enc(X1,enc(i(lp),X2))) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X1)) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X6) | ~ p(X7) ) ).
+fof(c_0_431,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(X1),X2),enc(i(pp),X3))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_432,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(X1,enc(i(pp),X2))) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X1)) | ~ p(X2) | ~ p(X4) | ~ p(X5) | ~ p(X6) ) ).
+fof(c_0_433,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(pp,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X6) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_434,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(X3,enc(i(tc),X4))) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_435,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X4)) | ~ p(enc(tc,X4)) | ~ p(X1) | ~ p(X5) | ~ p(X3) | ~ p(X6) | ~ p(X2) ) ).
+fof(c_0_436,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),enc(i(enc(i(X2),X3)),X4))) | ~ p(enc(zcmk,X2)) | ~ p(X1) | ~ p(X4) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_437,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(enc(i(wk),X2)),X3))) | ~ p(enc(tmk,X1)) | ~ p(X2) | ~ p(X3) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_438,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(wk,X3)) | ~ p(enc(X3,X2)) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_439,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),enc(i(X2),X3))) | ~ p(enc(wk,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_440,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,enc(i(enc(i(X1),X2)),X3))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_441,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),enc(i(X2),X3))) | ~ p(enc(zcmk,X4)) | ~ p(enc(X4,X2)) | ~ p(X3) | ~ p(X1) | ~ p(X5) ) ).
+fof(c_0_442,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,enc(i(enc(i(X1),X2)),X3))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_443,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(enc(i(tmk),X2)),X3))) | ~ p(enc(tmk,X1)) | ~ p(X2) | ~ p(X3) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_444,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,t1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_445,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(X1),X2),t1)) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_446,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),enc(X2,X3))) | ~ p(enc(X4,i(X2))) | ~ p(enc(zcmk,X4)) | ~ p(X3) | ~ p(X1) | ~ p(X5) ) ).
+fof(c_0_447,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,t2)) | ~ p(enc(zcmk,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_448,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(X1),X2),t2)) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_449,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(X1,enc(i(w),X2))) | ~ p(enc(tmk,X1)) | ~ p(X2) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_450,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(w,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_451,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,enc(i(X1),X2))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_452,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_453,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,i(X3))) | ~ p(enc(tc,X3)) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X5) ) ).
+fof(c_0_454,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(X3,i(k))) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X4) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_455,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(zcmk),X3),X4)) | ~ p(i(X4)) | ~ p(X1) | ~ p(X5) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_456,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(X3,i(X4))) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X5) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_457,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(tmk,enc(i(zcmk),X3))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X5) ) ).
+fof(c_0_458,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(tc,enc(i(zcmk),X3))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) | ~ p(X5) ) ).
+fof(c_0_459,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(X3,i(kk))) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_460,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(wk,enc(i(zcmk),X3))) | ~ p(X3) | ~ p(X1) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_461,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,tc)) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_462,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,w)) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_463,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,pp)) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_464,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,i(k))) | ~ p(X1) | ~ p(X3) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_465,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,i(kk))) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_466,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(zcmk,k)) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_467,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),w)) | ~ p(enc(X2,wk)) | ~ p(enc(zcmk,X2)) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_468,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(enc(enc(i(X3),X4),X2)) | ~ p(enc(zcmk,X3)) | ~ p(X1) | ~ p(X5) | ~ p(X4) ) ).
+fof(c_0_469,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(i(X1),enc(i(enc(i(zcmk),X2)),X3))) | ~ p(enc(zcmk,X1)) | ~ p(X4) | ~ p(X5) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_470,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(i(enc(i(zcmk),X1)),enc(i(X2),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_471,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(X1,enc(i(pp),X2))) | ~ p(enc(tmk,X1)) | ~ p(X2) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_472,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(pp,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_473,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(i(enc(i(zcmk),X1)),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X2)) | ~ p(X4) | ~ p(X1) | ~ p(X5) ) ).
+fof(c_0_474,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(w,X1)) | ~ p(enc(X2,enc(i(zcmk),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) ) ).
+fof(c_0_475,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(pp,X1)) | ~ p(enc(X2,enc(i(zcmk),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) ) ).
+fof(c_0_476,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(w,X1)) | ~ p(enc(zcmk,enc(i(X2),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X3) ) ).
+fof(c_0_477,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,enc(i(X2),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X6) | ~ p(X3) ) ).
+fof(c_0_478,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(lp),X2))) | ~ p(enc(tmk,X1)) | ~ p(X3) | ~ p(X2) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_479,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(lp) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_480,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(X1,k)) | ~ p(enc(zcmk,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_481,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(X1),X2),k)) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_482,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(X1),X2),enc(i(tc),X3))) | ~ p(enc(zcmk,X1)) | ~ p(X4) | ~ p(X3) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_483,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(tc) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X2) | ~ p(X3) ) ).
+fof(c_0_484,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(tc),X2))) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X1)) | ~ p(X4) | ~ p(X2) | ~ p(X5) ) ).
+fof(c_0_485,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_486,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,enc(i(X1),X2))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_487,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(w,X1)) | ~ p(enc(X2,i(enc(i(tc),X3)))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_488,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),i(X3))) | ~ p(enc(tc,X3)) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_489,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(X1),X2),enc(i(tmk),X3))) | ~ p(enc(zcmk,X1)) | ~ p(X4) | ~ p(X3) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_490,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(enc(i(zcmk),X1)),X2),X3)) | ~ p(enc(tmk,X3)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_491,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(X1,enc(i(tmk),X2))) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X1)) | ~ p(X4) | ~ p(X2) | ~ p(X5) ) ).
+fof(c_0_492,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(pp,X1)) | ~ p(enc(X2,i(enc(i(tc),X3)))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_493,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(X1,pp)) | ~ p(enc(zcmk,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_494,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(enc(i(X1),X2),pp)) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_495,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),i(X3))) | ~ p(enc(tc,X3)) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_496,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),enc(i(X2),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X1) | ~ p(X5) | ~ p(X3) ) ).
+fof(c_0_497,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X2)) | ~ p(X4) | ~ p(X1) | ~ p(X5) ) ).
+fof(c_0_498,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,enc(i(tc),X2))) | ~ p(enc(wk,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_499,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(tc) | ~ p(X1) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_500,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(X1,enc(i(tmk),X2))) | ~ p(enc(wk,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_501,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(wk,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) ) ).
+fof(c_0_502,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(wk,enc(i(X1),X2))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X5) | ~ p(X2) ) ).
+fof(c_0_503,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(w,X1)) | ~ p(enc(X2,enc(i(tc),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_504,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),X3)) | ~ p(enc(tc,X3)) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_505,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(pp,X1)) | ~ p(enc(X2,enc(i(tc),X3))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X5) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_506,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),X3)) | ~ p(enc(tc,X3)) | ~ p(X4) | ~ p(X2) | ~ p(X5) | ~ p(X1) ) ).
+fof(c_0_507,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,enc(i(X1),X2))) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X1)) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_508,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,enc(X1,X2))) | ~ p(enc(X3,i(X1))) | ~ p(enc(zcmk,X3)) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_509,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,enc(i(X1),X2))) | ~ p(enc(zcmk,X3)) | ~ p(enc(X3,X1)) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_510,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,enc(X1,X2))) | ~ p(enc(X3,i(X1))) | ~ p(enc(zcmk,X3)) | ~ p(X2) | ~ p(X4) ) ).
+fof(c_0_511,axiom,! [X1] : ! [X2] : ( p(enc(w,enc(i(X1),X2))) | ~ p(enc(wk,X1)) | ~ p(X2) ) ).
+fof(c_0_512,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(wk,X2)) | ~ p(enc(X2,X1)) ) ).
+fof(c_0_513,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(zcmk,i(X2))) | ~ p(enc(tc,X2)) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_514,axiom,! [X1] : ! [X2] : ( p(enc(pp,enc(i(X1),X2))) | ~ p(enc(wk,X1)) | ~ p(X2) ) ).
+fof(c_0_515,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(wk,X2)) | ~ p(enc(X2,X1)) ) ).
+fof(c_0_516,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(X2,i(k))) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_517,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(enc(i(zcmk),X2),X3)) | ~ p(i(X3)) | ~ p(X4) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_518,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(X2,i(X3))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_519,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),enc(i(X2),X3))) | ~ p(enc(wk,X2)) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_520,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(tmk,enc(i(zcmk),X2))) | ~ p(X2) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_521,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(tc,enc(i(zcmk),X2))) | ~ p(X2) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_522,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(X2,i(kk))) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_523,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(wk,enc(i(zcmk),X2))) | ~ p(X2) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_524,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(zcmk,tc)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_525,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(zcmk,pp)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_526,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(zcmk,w)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_527,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(w,X1)) | ~ p(enc(zcmk,i(k))) | ~ p(X2) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_528,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(zcmk,i(kk))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_529,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(enc(zcmk,k)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_530,axiom,! [X1] : ! [X2] : ( p(enc(w,w)) | ~ p(enc(X1,wk)) | ~ p(enc(zcmk,X1)) | ~ p(X2) ) ).
+fof(c_0_531,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(w,X1)) | ~ p(enc(enc(i(X2),X3),X1)) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_532,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,i(X2))) | ~ p(enc(tc,X2)) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_533,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(X2,i(k))) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X4) | ~ p(X1) ) ).
+fof(c_0_534,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(zcmk),X2),X3)) | ~ p(i(X3)) | ~ p(X4) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_535,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(X2,i(X3))) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_536,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(tmk,enc(i(zcmk),X2))) | ~ p(X2) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_537,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(tc,enc(i(zcmk),X2))) | ~ p(X2) | ~ p(X3) | ~ p(X1) | ~ p(X4) ) ).
+fof(c_0_538,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(X2,i(kk))) | ~ p(enc(zcmk,X2)) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_539,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(wk,enc(i(zcmk),X2))) | ~ p(X2) | ~ p(X3) | ~ p(X1) ) ).
+fof(c_0_540,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,tc)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_541,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,pp)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_542,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,w)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_543,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,i(k))) | ~ p(X2) | ~ p(X1) | ~ p(X3) ) ).
+fof(c_0_544,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,i(kk))) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_545,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(enc(zcmk,k)) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_546,axiom,! [X1] : ! [X2] : ( p(enc(pp,w)) | ~ p(enc(X1,wk)) | ~ p(enc(zcmk,X1)) | ~ p(X2) ) ).
+fof(c_0_547,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p(enc(pp,X1)) | ~ p(enc(enc(i(X2),X3),X1)) | ~ p(enc(zcmk,X2)) | ~ p(X4) | ~ p(X3) ) ).
+fof(c_0_548,axiom,! [X1] : ( p(enc(pp,X1)) | ~ p(enc(w,X1)) ) ).
+fof(c_0_549,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(tc) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_550,axiom,! [X1] : ( ~ p(enc(wk,X1)) | ~ p(X1) ) ).
+fof(c_0_551,axiom,! [X1] : ( ~ p(i(wk)) | ~ p(X1) ) ).
+fof(c_0_552,axiom,! [X1] : ! [X2] : ( ~ p(enc(zcmk,i(X1))) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_553,axiom,! [X1] : ( ~ p(zcmk) | ~ p(X1) ) ).
+fof(c_0_554,axiom,! [X1] : ! [X2] : ( ~ p(enc(zcmk,X1)) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_555,axiom,! [X1] : ! [X2] : ( p(enc(i(X1),pp)) | ~ p(enc(zcmk,X1)) | ~ p(X2) ) ).
+fof(c_0_556,axiom,! [X1] : ! [X2] : ( ~ p(i(zcmk)) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_557,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(i(X1),enc(i(tmk),X2))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_558,axiom,! [X1] : ! [X2] : ( p(enc(w,X1)) | ~ p(lp) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_559,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(lp) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_560,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(tmk,enc(i(X1),X2))) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X2) ) ).
+fof(c_0_561,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(wk),X1),X2)) | ~ p(lp) | ~ p(X3) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_562,axiom,! [X1] : ! [X2] : ( p(enc(pp,X1)) | ~ p(tc) | ~ p(X2) | ~ p(X1) ) ).
+fof(c_0_563,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(enc(i(tmk),X1),X2)) | ~ p(tc) | ~ p(X3) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_564,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ p(enc(zcmk,X1)) | ~ p(enc(X1,X2)) | ~ p(X2) | ~ p(X3) | ~ p(X4) ) ).
+fof(c_0_565,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ p(enc(i(X1),X2)) | ~ p(enc(zcmk,X1)) | ~ p(X3) | ~ p(X4) | ~ p(X2) ) ).
+fof(c_0_566,axiom,! [X1] : ! [X2] : ( ~ p(i(tmk)) | ~ p(X1) | ~ p(X2) ) ).
+fof(c_0_567,axiom,! [X1] : ! [X2] : ! [X3] : ( p(enc(tmk,X1)) | ~ p(enc(zcmk,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) ) ).
+fof(c_0_568,axiom,! [X1] : ! [X2] : ! [X3] : ( p(X1) | ~ p(enc(tc,X2)) | ~ p(enc(X2,X1)) | ~ p(X3) ) ).
+fof(c_0_569,axiom,! [X1] : ! [X2] : ( p(X1) | ~ p(enc(k,X1)) | ~ p(X2) ) ).
+fof(c_0_570,axiom,! [X1] : ! [X2] : ! [X3] : ( p(X1) | ~ p(enc(i(X2),X1)) | ~ p(enc(tc,X2)) | ~ p(X3) ) ).
+fof(c_0_571,axiom,! [X1] : ( p(X1) | ~ p(enc(i(k),X1)) ) ).
+fof(c_0_572,axiom,! [X1] : ( p(X1) | ~ p(enc(i(kk),X1)) ) ).
+fof(c_0_573,axiom,p(k) | ~ p(tc) ).
+fof(c_0_574,axiom,p(t2) | ~ p(lp) ).
+fof(c_0_575,axiom,! [X1] : ( p(X1) | ~ p(i(X1)) ) ).
+fof(c_0_576,axiom,~ p(w) ).
+fof(c_0_577,axiom,~ p(wk) ).
+fof(c_0_578,axiom,~ p(tmk) ).
+fof(c_0_579,axiom,p(enc(pp,t1)) ).
+fof(c_0_580,axiom,p(enc(w,t2)) ).

@@ -1,0 +1,611 @@
+fof(f7,axiom,! [X0] : ( abstractDomain(X0) => iowlThing(X0) ) ).
+fof(f92,axiom,! [X0] : ( iFishTopping(X0) => abstractDomain(X0) ) ).
+fof(f93,axiom,! [X0] : ( iFishTopping(X0) => ? [X1] : ( iMild(X1) & ihasSpiciness(X0,X1) ) ) ).
+fof(f94,axiom,! [X0] : ( iFishTopping(X0) => iPizzaTopping(X0) ) ).
+fof(f95,axiom,! [X0] : ( iFood(X0) => abstractDomain(X0) ) ).
+fof(f96,axiom,! [X0] : ( iFood(X0) => iDomainConcept(X0) ) ).
+fof(f144,axiom,! [X0] : ( iHot(X0) => abstractDomain(X0) ) ).
+fof(f155,axiom,! [X0] : ( iInterestingPizza(X0) => abstractDomain(X0) ) ).
+fof(f156,axiom,! [X0] : ( iInterestingPizza(X0) <=> ( ? [X2] : ? [X3] : ? [X4] : ( X3 != X4 & X2 != X4 & X2 != X3 & ihasTopping(X0,X4) & ihasTopping(X0,X3) & ihasTopping(X0,X2) ) & iPizza(X0) ) ) ).
+fof(f176,axiom,! [X0] : ( iMeatTopping(X0) => abstractDomain(X0) ) ).
+fof(f177,axiom,! [X0] : ( iMeatTopping(X0) => iPizzaTopping(X0) ) ).
+fof(f178,axiom,! [X0] : ( iMeatyPizza(X0) => abstractDomain(X0) ) ).
+fof(f179,axiom,! [X0] : ( iMeatyPizza(X0) <=> ( ? [X1] : ( iMeatTopping(X1) & ihasTopping(X0,X1) ) & iPizza(X0) ) ) ).
+fof(f180,axiom,! [X0] : ( iMedium(X0) => abstractDomain(X0) ) ).
+fof(f182,axiom,! [X0] : ( iMild(X0) => abstractDomain(X0) ) ).
+fof(f210,axiom,! [X0] : ( iNonVegetarianPizza(X0) => abstractDomain(X0) ) ).
+fof(f211,axiom,! [X0] : ( iNonVegetarianPizza(X0) <=> ( iPizza(X0) & ~ iVegetarianPizza(X0) & abstractDomain(X0) ) ) ).
+fof(f248,axiom,! [X0] : ( iPizza(X0) => abstractDomain(X0) ) ).
+fof(f249,axiom,! [X0] : ( iPizza(X0) => ? [X1] : ( iPizzaBase(X1) & ihasBase(X0,X1) ) ) ).
+fof(f250,axiom,! [X0] : ( iPizza(X0) => iFood(X0) ) ).
+fof(f251,axiom,! [X0] : ( iPizzaBase(X0) => abstractDomain(X0) ) ).
+fof(f252,axiom,! [X0] : ( iPizzaBase(X0) => iFood(X0) ) ).
+fof(f253,axiom,! [X0] : ( iPizzaTopping(X0) => abstractDomain(X0) ) ).
+fof(f254,axiom,! [X0] : ( iPizzaTopping(X0) => iFood(X0) ) ).
+fof(f329,axiom,! [X0] : ( iSpiciness(X0) => abstractDomain(X0) ) ).
+fof(f330,axiom,! [X0] : ( iSpiciness(X0) <=> ( iMild(X0) | iHot(X0) | iMedium(X0) ) ) ).
+fof(f331,axiom,! [X0] : ( iSpiciness(X0) => iValuePartition(X0) ) ).
+fof(f332,axiom,! [X0] : ( iSpicyPizza(X0) => abstractDomain(X0) ) ).
+fof(f333,axiom,! [X0] : ( iSpicyPizza(X0) <=> ( iPizza(X0) & ? [X1] : ( iSpicyTopping(X1) & ihasTopping(X0,X1) ) ) ) ).
+fof(f334,axiom,! [X0] : ( iSpicyPizzaEquivalent(X0) => abstractDomain(X0) ) ).
+fof(f335,axiom,! [X0] : ( iSpicyPizzaEquivalent(X0) <=> ( ? [X1] : ( iPizzaTopping(X1) & ? [X5] : ( iHot(X5) & ihasSpiciness(X1,X5) ) & ihasTopping(X0,X1) ) & iPizza(X0) ) ) ).
+fof(f336,axiom,! [X0] : ( iSpicyTopping(X0) => abstractDomain(X0) ) ).
+fof(f337,axiom,! [X0] : ( iSpicyTopping(X0) <=> ( iPizzaTopping(X0) & ? [X1] : ( iHot(X1) & ihasSpiciness(X0,X1) ) ) ) ).
+fof(f352,axiom,! [X0] : ( iThinAndCrispyPizza(X0) => abstractDomain(X0) ) ).
+fof(f353,axiom,! [X0] : ( iThinAndCrispyPizza(X0) <=> ( ! [X1] : ( ihasBase(X0,X1) => iThinAndCrispyBase(X1) ) & abstractDomain(X0) & iPizza(X0) ) ) ).
+fof(f363,axiom,! [X0] : ( iValuePartition(X0) => abstractDomain(X0) ) ).
+fof(f367,axiom,! [X0] : ( iVegetarianPizza(X0) <=> ( ~ ( ? [X1] : ( iFishTopping(X1) & ihasTopping(X0,X1) ) ) & abstractDomain(X0) & iPizza(X0) & ~ ( ? [X1] : ( iMeatTopping(X1) & ihasTopping(X0,X1) ) ) & abstractDomain(X0) ) ) ).
+fof(f368,axiom,! [X0] : ( iVegetarianPizzaEquivalent1(X0) => abstractDomain(X0) ) ).
+fof(f369,axiom,! [X0] : ( iVegetarianPizzaEquivalent1(X0) <=> ( ! [X1] : ( ihasTopping(X0,X1) => iVegetarianTopping(X1) ) & abstractDomain(X0) & iPizza(X0) ) ) ).
+fof(f370,axiom,! [X0] : ( iVegetarianPizzaEquivalent2(X0) => abstractDomain(X0) ) ).
+fof(f371,axiom,! [X0] : ( iVegetarianPizzaEquivalent2(X0) <=> ( ! [X1] : ( ihasTopping(X0,X1) => ( iFruitTopping(X1) | iSauceTopping(X1) | iVegetableTopping(X1) | iHerbSpiceTopping(X1) | iNutTopping(X1) | iCheeseTopping(X1) ) ) & abstractDomain(X0) & iPizza(X0) ) ) ).
+fof(f386,axiom,! [X0] : ! [X1] : ( ihasBase(X0,X1) => ( abstractDomain(X1) & abstractDomain(X0) ) ) ).
+fof(f387,axiom,! [X0] : ! [X1] : ! [X5] : ( ( ihasBase(X0,X5) & ihasBase(X0,X1) ) => X1 = X5 ) ).
+fof(f388,axiom,! [X0] : ! [X1] : ! [X5] : ( ( ihasBase(X5,X0) & ihasBase(X1,X0) ) => X1 = X5 ) ).
+fof(f389,axiom,! [X0] : ! [X1] : ( ihasBase(X0,X1) => iPizza(X0) ) ).
+fof(f390,axiom,! [X0] : ! [X1] : ( ihasBase(X0,X1) => iPizzaBase(X1) ) ).
+fof(f393,axiom,! [X0] : ! [X1] : ( ihasIngredient(X0,X1) => ( abstractDomain(X1) & abstractDomain(X0) ) ) ).
+fof(f394,axiom,! [X0] : ! [X1] : ! [X5] : ( ( ihasIngredient(X1,X5) & ihasIngredient(X0,X1) ) => ihasIngredient(X0,X5) ) ).
+fof(f395,axiom,! [X0] : ! [X1] : ( ihasIngredient(X0,X1) => iFood(X0) ) ).
+fof(f396,axiom,! [X0] : ! [X1] : ( ihasIngredient(X0,X1) => iFood(X1) ) ).
+fof(f398,axiom,! [X0] : ! [X1] : ( ihasSpiciness(X0,X1) => ( abstractDomain(X1) & abstractDomain(X0) ) ) ).
+fof(f399,axiom,! [X0] : ! [X1] : ! [X5] : ( ( ihasSpiciness(X0,X5) & ihasSpiciness(X0,X1) ) => X1 = X5 ) ).
+fof(f400,axiom,! [X0] : ! [X1] : ( ihasSpiciness(X0,X1) => iSpiciness(X1) ) ).
+fof(f401,axiom,! [X0] : ! [X1] : ( ihasTopping(X0,X1) => ( abstractDomain(X1) & abstractDomain(X0) ) ) ).
+fof(f402,axiom,! [X0] : ! [X1] : ! [X5] : ( ( ihasTopping(X5,X0) & ihasTopping(X1,X0) ) => X1 = X5 ) ).
+fof(f403,axiom,! [X0] : ! [X1] : ( ihasTopping(X0,X1) => iPizza(X0) ) ).
+fof(f404,axiom,! [X0] : ! [X1] : ( ihasTopping(X0,X1) => iPizzaTopping(X1) ) ).
+fof(f406,axiom,! [X0] : ! [X1] : ( iisBaseOf(X0,X1) => ( abstractDomain(X1) & abstractDomain(X0) ) ) ).
+fof(f407,axiom,! [X0] : ! [X1] : ! [X5] : ( ( iisBaseOf(X0,X5) & iisBaseOf(X0,X1) ) => X1 = X5 ) ).
+fof(f408,axiom,! [X0] : ! [X1] : ! [X5] : ( ( iisBaseOf(X5,X0) & iisBaseOf(X1,X0) ) => X1 = X5 ) ).
+fof(f409,axiom,! [X0] : ! [X1] : ( iisBaseOf(X0,X1) => iPizzaBase(X0) ) ).
+fof(f410,axiom,! [X0] : ! [X1] : ( iisBaseOf(X0,X1) => iPizza(X1) ) ).
+fof(f411,axiom,! [X0] : ! [X1] : ( iisBaseOf(X0,X1) <=> ihasBase(X1,X0) ) ).
+fof(f412,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) => ( abstractDomain(X1) & abstractDomain(X0) ) ) ).
+fof(f413,axiom,! [X0] : ! [X1] : ! [X5] : ( ( iisIngredientOf(X1,X5) & iisIngredientOf(X0,X1) ) => iisIngredientOf(X0,X5) ) ).
+fof(f414,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) => iFood(X0) ) ).
+fof(f415,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) => iFood(X1) ) ).
+fof(f416,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) <=> ihasIngredient(X1,X0) ) ).
+fof(f417,axiom,! [X0] : ! [X1] : ( iisToppingOf(X0,X1) => ( abstractDomain(X1) & abstractDomain(X0) ) ) ).
+fof(f418,axiom,! [X0] : ! [X1] : ! [X5] : ( ( iisToppingOf(X0,X5) & iisToppingOf(X0,X1) ) => X1 = X5 ) ).
+fof(f419,axiom,! [X0] : ! [X1] : ( iisToppingOf(X0,X1) => iPizzaTopping(X0) ) ).
+fof(f420,axiom,! [X0] : ! [X1] : ( iisToppingOf(X0,X1) => iPizza(X1) ) ).
+fof(f421,axiom,! [X0] : ! [X1] : ( iisToppingOf(X0,X1) <=> ihasTopping(X1,X0) ) ).
+fof(f472,axiom,! [X0] : ~ ( iMild(X0) & iMedium(X0) ) ).
+fof(f483,axiom,! [X0] : ~ ( iVegetarianPizza(X0) & iNonVegetarianPizza(X0) ) ).
+fof(f496,axiom,! [X0] : ~ ( iPizzaTopping(X0) & iPizzaBase(X0) ) ).
+fof(f504,axiom,! [X0] : ~ ( iMild(X0) & iHot(X0) ) ).
+fof(f604,axiom,! [X0] : ~ ( iFishTopping(X0) & iMeatTopping(X0) ) ).
+fof(f609,axiom,! [X0] : ~ ( iValuePartition(X0) & iDomainConcept(X0) ) ).
+fof(f655,axiom,! [X0] : ~ ( iHot(X0) & iMedium(X0) ) ).
+fof(f733,axiom,! [X0] : ~ ( iPizzaBase(X0) & iPizza(X0) ) ).
+fof(f780,axiom,! [X0] : ~ ( iPizzaTopping(X0) & iPizza(X0) ) ).
+fof(f830,axiom,! [X0] : ! [X1] : ( iisToppingOf(X0,X1) => iisIngredientOf(X0,X1) ) ).
+fof(f831,axiom,! [X0] : ! [X1] : ( iisBaseOf(X0,X1) => iisIngredientOf(X0,X1) ) ).
+fof(f832,axiom,! [X0] : ! [X1] : ( ihasBase(X0,X1) => ihasIngredient(X0,X1) ) ).
+fof(f833,axiom,! [X0] : ! [X1] : ( ihasTopping(X0,X1) => ihasIngredient(X0,X1) ) ).
+fof(f835,axiom,! [X0] : ( iInterestingPizza(X0) <=> ( ? [X1] : ? [X2] : ? [X3] : ( X2 != X3 & X1 != X3 & X1 != X2 & ihasTopping(X0,X3) & ihasTopping(X0,X2) & ihasTopping(X0,X1) ) & iPizza(X0) ) ) ).
+fof(f836,axiom,! [X0] : ( iSpicyPizzaEquivalent(X0) <=> ( ? [X1] : ( iPizzaTopping(X1) & ? [X2] : ( iHot(X2) & ihasSpiciness(X1,X2) ) & ihasTopping(X0,X1) ) & iPizza(X0) ) ) ).
+fof(f837,axiom,! [X0] : ( iVegetarianPizza(X0) <=> ( ~ ( ? [X1] : ( iFishTopping(X1) & ihasTopping(X0,X1) ) ) & abstractDomain(X0) & iPizza(X0) & ~ ( ? [X2] : ( iMeatTopping(X2) & ihasTopping(X0,X2) ) ) & abstractDomain(X0) ) ) ).
+fof(f838,axiom,! [X0] : ! [X1] : ! [X2] : ( ( ihasBase(X0,X2) & ihasBase(X0,X1) ) => X1 = X2 ) ).
+fof(f839,axiom,! [X0] : ! [X1] : ! [X2] : ( ( ihasBase(X2,X0) & ihasBase(X1,X0) ) => X1 = X2 ) ).
+fof(f840,axiom,! [X0] : ! [X1] : ! [X2] : ( ( ihasIngredient(X1,X2) & ihasIngredient(X0,X1) ) => ihasIngredient(X0,X2) ) ).
+fof(f841,axiom,! [X0] : ! [X1] : ! [X2] : ( ( ihasSpiciness(X0,X2) & ihasSpiciness(X0,X1) ) => X1 = X2 ) ).
+fof(f842,axiom,! [X0] : ! [X1] : ! [X2] : ( ( ihasTopping(X2,X0) & ihasTopping(X1,X0) ) => X1 = X2 ) ).
+fof(f843,axiom,! [X0] : ! [X1] : ! [X2] : ( ( iisBaseOf(X0,X2) & iisBaseOf(X0,X1) ) => X1 = X2 ) ).
+fof(f844,axiom,! [X0] : ! [X1] : ! [X2] : ( ( iisBaseOf(X2,X0) & iisBaseOf(X1,X0) ) => X1 = X2 ) ).
+fof(f845,axiom,! [X0] : ! [X1] : ! [X2] : ( ( iisIngredientOf(X1,X2) & iisIngredientOf(X0,X1) ) => iisIngredientOf(X0,X2) ) ).
+fof(f846,axiom,! [X0] : ! [X1] : ! [X2] : ( ( iisToppingOf(X0,X2) & iisToppingOf(X0,X1) ) => X1 = X2 ) ).
+fof(f847,axiom,! [X0] : ( ( ! [X1] : ( ihasTopping(X0,X1) => ( iFruitTopping(X1) | iSauceTopping(X1) | iVegetableTopping(X1) | iHerbSpiceTopping(X1) | iNutTopping(X1) | iCheeseTopping(X1) ) ) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f848,axiom,! [X0] : ( ( ! [X1] : ( ihasTopping(X0,X1) => iVegetarianTopping(X1) ) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent1(X0) ) ).
+fof(f850,axiom,! [X0] : ( ( ! [X1] : ( ihasBase(X0,X1) => iThinAndCrispyBase(X1) ) & abstractDomain(X0) & iPizza(X0) ) => iThinAndCrispyPizza(X0) ) ).
+fof(f851,axiom,! [X0] : ( ( ? [X1] : ( iPizzaTopping(X1) & ? [X2] : ( iHot(X2) & ihasSpiciness(X1,X2) ) & ihasTopping(X0,X1) ) & iPizza(X0) ) => iSpicyPizzaEquivalent(X0) ) ).
+fof(f852,axiom,! [X0] : ( ( iPizza(X0) & ? [X1] : ( iSpicyTopping(X1) & ihasTopping(X0,X1) ) ) => iSpicyPizza(X0) ) ).
+fof(f853,axiom,! [X0] : ( ( iPizzaTopping(X0) & ? [X1] : ( iHot(X1) & ihasSpiciness(X0,X1) ) ) => iSpicyTopping(X0) ) ).
+fof(f855,axiom,! [X0] : ( ( iPizza(X0) & ~ iVegetarianPizza(X0) & abstractDomain(X0) ) => iNonVegetarianPizza(X0) ) ).
+fof(f856,axiom,! [X0] : ( ( ? [X1] : ( iMeatTopping(X1) & ihasTopping(X0,X1) ) & iPizza(X0) ) => iMeatyPizza(X0) ) ).
+fof(f857,axiom,! [X0] : ( ( ? [X1] : ? [X2] : ? [X3] : ( X2 != X3 & X1 != X3 & X1 != X2 & ihasTopping(X0,X3) & ihasTopping(X0,X2) & ihasTopping(X0,X1) ) & iPizza(X0) ) => iInterestingPizza(X0) ) ).
+fof(f898,axiom,! [X0] : ( ( ! [X1] : ( ihasTopping(X0,X1) => ( iFruitTopping(X1) | iSauceTopping(X1) | iVegetableTopping(X1) | iHerbSpiceTopping(X1) | iCheeseTopping(X1) ) ) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f1179,axiom,! [X0] : ( ( ! [X1] : ( ihasTopping(X0,X1) => ( iFruitTopping(X1) | iSauceTopping(X1) | iVegetableTopping(X1) | iCheeseTopping(X1) ) ) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f1302,axiom,! [X0] : ( ( ! [X1] : ( ihasTopping(X0,X1) => ( iSauceTopping(X1) | iVegetableTopping(X1) | iCheeseTopping(X1) ) ) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f1512,axiom,! [X0] : ( ( ! [X1] : ( ihasTopping(X0,X1) => ( iVegetableTopping(X1) | iCheeseTopping(X1) ) ) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f1559,axiom,! [X0] : ( ( ! [X1] : ( ihasTopping(X0,X1) => iCheeseTopping(X1) ) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f1570,axiom,! [X0] : ( ( ! [X1] : ~ ihasTopping(X0,X1) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f1576,axiom,! [X0] : ( ( ! [X1] : ~ ihasTopping(X0,X1) & abstractDomain(X0) & iPizza(X0) ) => iVegetarianPizzaEquivalent1(X0) ) ).
+fof(f1584,axiom,! [X0] : ( ( ! [X1] : ~ ihasBase(X0,X1) & abstractDomain(X0) & iPizza(X0) ) => iThinAndCrispyPizza(X0) ) ).
+fof(f1595,axiom,! [X0] : ( iowlThing(X0) | ~ abstractDomain(X0) ) ).
+fof(f1598,axiom,! [X0] : ( abstractDomain(X0) | ~ iFishTopping(X0) ) ).
+fof(f1599,axiom,! [X0] : ( ? [X1] : ( iMild(X1) & ihasSpiciness(X0,X1) ) | ~ iFishTopping(X0) ) ).
+fof(f1600,axiom,! [X0] : ( iPizzaTopping(X0) | ~ iFishTopping(X0) ) ).
+fof(f1601,axiom,! [X0] : ( abstractDomain(X0) | ~ iFood(X0) ) ).
+fof(f1602,axiom,! [X0] : ( iDomainConcept(X0) | ~ iFood(X0) ) ).
+fof(f1603,axiom,! [X0] : ( abstractDomain(X0) | ~ iHot(X0) ) ).
+fof(f1605,axiom,! [X0] : ( abstractDomain(X0) | ~ iInterestingPizza(X0) ) ).
+fof(f1606,axiom,! [X0] : ( iInterestingPizza(X0) | ! [X1] : ! [X2] : ! [X3] : ( X2 = X3 | X1 = X3 | X1 = X2 | ~ ihasTopping(X0,X3) | ~ ihasTopping(X0,X2) | ~ ihasTopping(X0,X1) ) | ~ iPizza(X0) ) ).
+fof(f1607,axiom,! [X0] : ( iInterestingPizza(X0) | ! [X1] : ! [X2] : ! [X3] : ( X2 = X3 | X1 = X3 | X1 = X2 | ~ ihasTopping(X0,X3) | ~ ihasTopping(X0,X2) | ~ ihasTopping(X0,X1) ) | ~ iPizza(X0) ) ).
+fof(f1608,axiom,! [X0] : ( abstractDomain(X0) | ~ iMeatTopping(X0) ) ).
+fof(f1609,axiom,! [X0] : ( iPizzaTopping(X0) | ~ iMeatTopping(X0) ) ).
+fof(f1610,axiom,! [X0] : ( abstractDomain(X0) | ~ iMeatyPizza(X0) ) ).
+fof(f1611,axiom,! [X0] : ( iMeatyPizza(X0) | ! [X1] : ( ~ iMeatTopping(X1) | ~ ihasTopping(X0,X1) ) | ~ iPizza(X0) ) ).
+fof(f1612,axiom,! [X0] : ( iMeatyPizza(X0) | ! [X1] : ( ~ iMeatTopping(X1) | ~ ihasTopping(X0,X1) ) | ~ iPizza(X0) ) ).
+fof(f1613,axiom,! [X0] : ( abstractDomain(X0) | ~ iMedium(X0) ) ).
+fof(f1615,axiom,! [X0] : ( abstractDomain(X0) | ~ iMild(X0) ) ).
+fof(f1617,axiom,! [X0] : ( abstractDomain(X0) | ~ iNonVegetarianPizza(X0) ) ).
+fof(f1618,axiom,! [X0] : ( iNonVegetarianPizza(X0) | ~ iPizza(X0) | iVegetarianPizza(X0) | ~ abstractDomain(X0) ) ).
+fof(f1619,axiom,! [X0] : ( iNonVegetarianPizza(X0) | ~ iPizza(X0) | iVegetarianPizza(X0) | ~ abstractDomain(X0) ) ).
+fof(f1620,axiom,! [X0] : ( abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1621,axiom,! [X0] : ( ? [X1] : ( iPizzaBase(X1) & ihasBase(X0,X1) ) | ~ iPizza(X0) ) ).
+fof(f1622,axiom,! [X0] : ( iFood(X0) | ~ iPizza(X0) ) ).
+fof(f1623,axiom,! [X0] : ( abstractDomain(X0) | ~ iPizzaBase(X0) ) ).
+fof(f1624,axiom,! [X0] : ( iFood(X0) | ~ iPizzaBase(X0) ) ).
+fof(f1625,axiom,! [X0] : ( abstractDomain(X0) | ~ iPizzaTopping(X0) ) ).
+fof(f1626,axiom,! [X0] : ( iFood(X0) | ~ iPizzaTopping(X0) ) ).
+fof(f1627,axiom,! [X0] : ( abstractDomain(X0) | ~ iSpiciness(X0) ) ).
+fof(f1628,axiom,! [X0] : ( iValuePartition(X0) | ~ iSpiciness(X0) ) ).
+fof(f1629,axiom,! [X0] : ( abstractDomain(X0) | ~ iSpicyPizza(X0) ) ).
+fof(f1630,axiom,! [X0] : ( iSpicyPizza(X0) | ~ iPizza(X0) | ! [X1] : ( ~ iSpicyTopping(X1) | ~ ihasTopping(X0,X1) ) ) ).
+fof(f1631,axiom,! [X0] : ( iSpicyPizza(X0) | ~ iPizza(X0) | ! [X1] : ( ~ iSpicyTopping(X1) | ~ ihasTopping(X0,X1) ) ) ).
+fof(f1632,axiom,! [X0] : ( abstractDomain(X0) | ~ iSpicyPizzaEquivalent(X0) ) ).
+fof(f1633,axiom,! [X0] : ( iSpicyPizzaEquivalent(X0) | ! [X1] : ( ~ iPizzaTopping(X1) | ! [X2] : ( ~ iHot(X2) | ~ ihasSpiciness(X1,X2) ) | ~ ihasTopping(X0,X1) ) | ~ iPizza(X0) ) ).
+fof(f1634,axiom,! [X0] : ( iSpicyPizzaEquivalent(X0) | ! [X1] : ( ~ iPizzaTopping(X1) | ! [X2] : ( ~ iHot(X2) | ~ ihasSpiciness(X1,X2) ) | ~ ihasTopping(X0,X1) ) | ~ iPizza(X0) ) ).
+fof(f1635,axiom,! [X0] : ( abstractDomain(X0) | ~ iSpicyTopping(X0) ) ).
+fof(f1636,axiom,! [X0] : ( iSpicyTopping(X0) | ~ iPizzaTopping(X0) | ! [X1] : ( ~ iHot(X1) | ~ ihasSpiciness(X0,X1) ) ) ).
+fof(f1637,axiom,! [X0] : ( iSpicyTopping(X0) | ~ iPizzaTopping(X0) | ! [X1] : ( ~ iHot(X1) | ~ ihasSpiciness(X0,X1) ) ) ).
+fof(f1638,axiom,! [X0] : ( abstractDomain(X0) | ~ iThinAndCrispyPizza(X0) ) ).
+fof(f1639,axiom,! [X0] : ( iThinAndCrispyPizza(X0) | ? [X1] : ihasBase(X0,X1) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1640,axiom,! [X0] : ( iThinAndCrispyPizza(X0) | ? [X1] : ihasBase(X0,X1) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1641,axiom,! [X0] : ( abstractDomain(X0) | ~ iValuePartition(X0) ) ).
+fof(f1643,axiom,! [X0] : ( iVegetarianPizza(X0) <=> ( ! [X1] : ( ~ iFishTopping(X1) | ~ ihasTopping(X0,X1) ) & abstractDomain(X0) & iPizza(X0) & ! [X2] : ( ~ iMeatTopping(X2) | ~ ihasTopping(X0,X2) ) & abstractDomain(X0) ) ) ).
+fof(f1644,axiom,! [X0] : ( abstractDomain(X0) | ~ iVegetarianPizzaEquivalent1(X0) ) ).
+fof(f1645,axiom,! [X0] : ( iVegetarianPizzaEquivalent1(X0) | ? [X1] : ihasTopping(X0,X1) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1646,axiom,! [X0] : ( iVegetarianPizzaEquivalent1(X0) | ? [X1] : ihasTopping(X0,X1) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1647,axiom,! [X0] : ( abstractDomain(X0) | ~ iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f1648,axiom,! [X0] : ( iVegetarianPizzaEquivalent2(X0) | ? [X1] : ihasTopping(X0,X1) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1649,axiom,! [X0] : ( iVegetarianPizzaEquivalent2(X0) | ? [X1] : ihasTopping(X0,X1) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1651,axiom,! [X0] : ! [X1] : ( ( abstractDomain(X1) & abstractDomain(X0) ) | ~ ihasBase(X0,X1) ) ).
+fof(f1652,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ ihasBase(X0,X2) | ~ ihasBase(X0,X1) ) ).
+fof(f1653,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ ihasBase(X0,X2) | ~ ihasBase(X0,X1) ) ).
+fof(f1654,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ ihasBase(X2,X0) | ~ ihasBase(X1,X0) ) ).
+fof(f1655,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ ihasBase(X2,X0) | ~ ihasBase(X1,X0) ) ).
+fof(f1656,axiom,! [X0] : ! [X1] : ( iPizza(X0) | ~ ihasBase(X0,X1) ) ).
+fof(f1657,axiom,! [X0] : ! [X1] : ( iPizzaBase(X1) | ~ ihasBase(X0,X1) ) ).
+fof(f1658,axiom,! [X0] : ! [X1] : ( ( abstractDomain(X1) & abstractDomain(X0) ) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1659,axiom,! [X0] : ! [X1] : ! [X2] : ( ihasIngredient(X0,X2) | ~ ihasIngredient(X1,X2) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1660,axiom,! [X0] : ! [X1] : ! [X2] : ( ihasIngredient(X0,X2) | ~ ihasIngredient(X1,X2) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1661,axiom,! [X0] : ! [X1] : ( iFood(X0) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1662,axiom,! [X0] : ! [X1] : ( iFood(X1) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1663,axiom,! [X0] : ! [X1] : ( ( abstractDomain(X1) & abstractDomain(X0) ) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1664,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ ihasSpiciness(X0,X2) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1665,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ ihasSpiciness(X0,X2) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1666,axiom,! [X0] : ! [X1] : ( iSpiciness(X1) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1667,axiom,! [X0] : ! [X1] : ( ( abstractDomain(X1) & abstractDomain(X0) ) | ~ ihasTopping(X0,X1) ) ).
+fof(f1668,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ ihasTopping(X2,X0) | ~ ihasTopping(X1,X0) ) ).
+fof(f1669,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ ihasTopping(X2,X0) | ~ ihasTopping(X1,X0) ) ).
+fof(f1670,axiom,! [X0] : ! [X1] : ( iPizza(X0) | ~ ihasTopping(X0,X1) ) ).
+fof(f1671,axiom,! [X0] : ! [X1] : ( iPizzaTopping(X1) | ~ ihasTopping(X0,X1) ) ).
+fof(f1672,axiom,! [X0] : ! [X1] : ( ( abstractDomain(X1) & abstractDomain(X0) ) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1673,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ iisBaseOf(X0,X2) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1674,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ iisBaseOf(X0,X2) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1675,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ iisBaseOf(X2,X0) | ~ iisBaseOf(X1,X0) ) ).
+fof(f1676,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ iisBaseOf(X2,X0) | ~ iisBaseOf(X1,X0) ) ).
+fof(f1677,axiom,! [X0] : ! [X1] : ( iPizzaBase(X0) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1678,axiom,! [X0] : ! [X1] : ( iPizza(X1) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1679,axiom,! [X0] : ! [X1] : ( ( abstractDomain(X1) & abstractDomain(X0) ) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1680,axiom,! [X0] : ! [X1] : ! [X2] : ( iisIngredientOf(X0,X2) | ~ iisIngredientOf(X1,X2) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1681,axiom,! [X0] : ! [X1] : ! [X2] : ( iisIngredientOf(X0,X2) | ~ iisIngredientOf(X1,X2) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1682,axiom,! [X0] : ! [X1] : ( iFood(X0) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1683,axiom,! [X0] : ! [X1] : ( iFood(X1) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1684,axiom,! [X0] : ! [X1] : ( ( abstractDomain(X1) & abstractDomain(X0) ) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1685,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ iisToppingOf(X0,X2) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1686,axiom,! [X0] : ! [X1] : ! [X2] : ( X1 = X2 | ~ iisToppingOf(X0,X2) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1687,axiom,! [X0] : ! [X1] : ( iPizzaTopping(X0) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1688,axiom,! [X0] : ! [X1] : ( iPizza(X1) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1689,axiom,! [X0] : ( ~ iMild(X0) | ~ iMedium(X0) ) ).
+fof(f1690,axiom,! [X0] : ( ~ iVegetarianPizza(X0) | ~ iNonVegetarianPizza(X0) ) ).
+fof(f1691,axiom,! [X0] : ( ~ iPizzaTopping(X0) | ~ iPizzaBase(X0) ) ).
+fof(f1692,axiom,! [X0] : ( ~ iMild(X0) | ~ iHot(X0) ) ).
+fof(f1693,axiom,! [X0] : ( ~ iFishTopping(X0) | ~ iMeatTopping(X0) ) ).
+fof(f1694,axiom,! [X0] : ( ~ iValuePartition(X0) | ~ iDomainConcept(X0) ) ).
+fof(f1695,axiom,! [X0] : ( ~ iHot(X0) | ~ iMedium(X0) ) ).
+fof(f1696,axiom,! [X0] : ( ~ iPizzaBase(X0) | ~ iPizza(X0) ) ).
+fof(f1697,axiom,! [X0] : ( ~ iPizzaTopping(X0) | ~ iPizza(X0) ) ).
+fof(f1698,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1699,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1700,axiom,! [X0] : ! [X1] : ( ihasIngredient(X0,X1) | ~ ihasBase(X0,X1) ) ).
+fof(f1701,axiom,! [X0] : ! [X1] : ( ihasIngredient(X0,X1) | ~ ihasTopping(X0,X1) ) ).
+fof(f1702,axiom,! [X0] : ( sP0(X0) <=> ( ! [X1] : ( ~ iFishTopping(X1) | ~ ihasTopping(X0,X1) ) & abstractDomain(X0) & iPizza(X0) & ! [X2] : ( ~ iMeatTopping(X2) | ~ ihasTopping(X0,X2) ) & abstractDomain(X0) ) ) ).
+fof(f1703,axiom,! [X0] : ( iVegetarianPizza(X0) <=> sP0(X0) ) ).
+fof(f1710,axiom,! [X0] : ( ? [X1] : ( iMild(X1) & ihasSpiciness(X0,X1) ) => ( iMild(sK3(X0)) & ihasSpiciness(X0,sK3(X0)) ) ) ).
+fof(f1711,axiom,! [X0] : ( ( iMild(sK3(X0)) & ihasSpiciness(X0,sK3(X0)) ) | ~ iFishTopping(X0) ) ).
+fof(f1712,axiom,! [X0] : ( ? [X1] : ( iPizzaBase(X1) & ihasBase(X0,X1) ) => ( iPizzaBase(sK4(X0)) & ihasBase(X0,sK4(X0)) ) ) ).
+fof(f1713,axiom,! [X0] : ( ( iPizzaBase(sK4(X0)) & ihasBase(X0,sK4(X0)) ) | ~ iPizza(X0) ) ).
+fof(f1714,axiom,! [X0] : ( ( iSpiciness(X0) | ( ~ iMild(X0) & ~ iHot(X0) & ~ iMedium(X0) ) ) & ( iMild(X0) | iHot(X0) | iMedium(X0) | ~ iSpiciness(X0) ) ) ).
+fof(f1715,axiom,! [X0] : ( ( iSpiciness(X0) | ( ~ iMild(X0) & ~ iHot(X0) & ~ iMedium(X0) ) ) & ( iMild(X0) | iHot(X0) | iMedium(X0) | ~ iSpiciness(X0) ) ) ).
+fof(f1716,axiom,! [X0] : ( ? [X1] : ihasBase(X0,X1) => ihasBase(X0,sK5(X0)) ) ).
+fof(f1717,axiom,! [X0] : ( iThinAndCrispyPizza(X0) | ihasBase(X0,sK5(X0)) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1718,axiom,! [X0] : ( ( sP0(X0) | ? [X1] : ( iFishTopping(X1) & ihasTopping(X0,X1) ) | ~ abstractDomain(X0) | ~ iPizza(X0) | ? [X2] : ( iMeatTopping(X2) & ihasTopping(X0,X2) ) | ~ abstractDomain(X0) ) & ( ( ! [X1] : ( ~ iFishTopping(X1) | ~ ihasTopping(X0,X1) ) & abstractDomain(X0) & iPizza(X0) & ! [X2] : ( ~ iMeatTopping(X2) | ~ ihasTopping(X0,X2) ) & abstractDomain(X0) ) | ~ sP0(X0) ) ) ).
+fof(f1719,axiom,! [X0] : ( ( sP0(X0) | ? [X1] : ( iFishTopping(X1) & ihasTopping(X0,X1) ) | ~ abstractDomain(X0) | ~ iPizza(X0) | ? [X2] : ( iMeatTopping(X2) & ihasTopping(X0,X2) ) | ~ abstractDomain(X0) ) & ( ( ! [X1] : ( ~ iFishTopping(X1) | ~ ihasTopping(X0,X1) ) & abstractDomain(X0) & iPizza(X0) & ! [X2] : ( ~ iMeatTopping(X2) | ~ ihasTopping(X0,X2) ) & abstractDomain(X0) ) | ~ sP0(X0) ) ) ).
+fof(f1720,axiom,! [X0] : ( ( sP0(X0) | ? [X1] : ( iFishTopping(X1) & ihasTopping(X0,X1) ) | ~ abstractDomain(X0) | ~ iPizza(X0) | ? [X2] : ( iMeatTopping(X2) & ihasTopping(X0,X2) ) | ~ abstractDomain(X0) ) & ( ( ! [X3] : ( ~ iFishTopping(X3) | ~ ihasTopping(X0,X3) ) & abstractDomain(X0) & iPizza(X0) & ! [X4] : ( ~ iMeatTopping(X4) | ~ ihasTopping(X0,X4) ) & abstractDomain(X0) ) | ~ sP0(X0) ) ) ).
+fof(f1721,axiom,! [X0] : ( ? [X1] : ( iFishTopping(X1) & ihasTopping(X0,X1) ) => ( iFishTopping(sK6(X0)) & ihasTopping(X0,sK6(X0)) ) ) ).
+fof(f1722,axiom,! [X0] : ( ? [X2] : ( iMeatTopping(X2) & ihasTopping(X0,X2) ) => ( iMeatTopping(sK7(X0)) & ihasTopping(X0,sK7(X0)) ) ) ).
+fof(f1723,axiom,! [X0] : ( ( sP0(X0) | ( iFishTopping(sK6(X0)) & ihasTopping(X0,sK6(X0)) ) | ~ abstractDomain(X0) | ~ iPizza(X0) | ( iMeatTopping(sK7(X0)) & ihasTopping(X0,sK7(X0)) ) | ~ abstractDomain(X0) ) & ( ( ! [X3] : ( ~ iFishTopping(X3) | ~ ihasTopping(X0,X3) ) & abstractDomain(X0) & iPizza(X0) & ! [X4] : ( ~ iMeatTopping(X4) | ~ ihasTopping(X0,X4) ) & abstractDomain(X0) ) | ~ sP0(X0) ) ) ).
+fof(f1724,axiom,! [X0] : ( ( iVegetarianPizza(X0) | ~ sP0(X0) ) & ( sP0(X0) | ~ iVegetarianPizza(X0) ) ) ).
+fof(f1725,axiom,! [X0] : ( ? [X1] : ihasTopping(X0,X1) => ihasTopping(X0,sK8(X0)) ) ).
+fof(f1726,axiom,! [X0] : ( iVegetarianPizzaEquivalent1(X0) | ihasTopping(X0,sK8(X0)) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1727,axiom,! [X0] : ( ? [X1] : ihasTopping(X0,X1) => ihasTopping(X0,sK9(X0)) ) ).
+fof(f1728,axiom,! [X0] : ( iVegetarianPizzaEquivalent2(X0) | ihasTopping(X0,sK9(X0)) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1732,axiom,! [X0] : ! [X1] : ( ( iisBaseOf(X0,X1) | ~ ihasBase(X1,X0) ) & ( ihasBase(X1,X0) | ~ iisBaseOf(X0,X1) ) ) ).
+fof(f1733,axiom,! [X0] : ! [X1] : ( ( iisIngredientOf(X0,X1) | ~ ihasIngredient(X1,X0) ) & ( ihasIngredient(X1,X0) | ~ iisIngredientOf(X0,X1) ) ) ).
+fof(f1734,axiom,! [X0] : ! [X1] : ( ( iisToppingOf(X0,X1) | ~ ihasTopping(X1,X0) ) & ( ihasTopping(X1,X0) | ~ iisToppingOf(X0,X1) ) ) ).
+fof(f1740,axiom,! [X0] : ( iowlThing(X0) | ~ abstractDomain(X0) ) ).
+fof(f1750,axiom,! [X0] : ( abstractDomain(X0) | ~ iFishTopping(X0) ) ).
+fof(f1751,axiom,! [X0] : ( ihasSpiciness(X0,sK3(X0)) | ~ iFishTopping(X0) ) ).
+fof(f1752,axiom,! [X0] : ( iMild(sK3(X0)) | ~ iFishTopping(X0) ) ).
+fof(f1753,axiom,! [X0] : ( iPizzaTopping(X0) | ~ iFishTopping(X0) ) ).
+fof(f1754,axiom,! [X0] : ( abstractDomain(X0) | ~ iFood(X0) ) ).
+fof(f1755,axiom,! [X0] : ( iDomainConcept(X0) | ~ iFood(X0) ) ).
+fof(f1756,axiom,! [X0] : ( abstractDomain(X0) | ~ iHot(X0) ) ).
+fof(f1758,axiom,! [X0] : ( abstractDomain(X0) | ~ iInterestingPizza(X0) ) ).
+fof(f1759,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( iInterestingPizza(X0) | X2 = X3 | X1 = X3 | X1 = X2 | ~ ihasTopping(X0,X3) | ~ ihasTopping(X0,X2) | ~ ihasTopping(X0,X1) | ~ iPizza(X0) ) ).
+fof(f1760,axiom,! [X0] : ( abstractDomain(X0) | ~ iMeatTopping(X0) ) ).
+fof(f1761,axiom,! [X0] : ( iPizzaTopping(X0) | ~ iMeatTopping(X0) ) ).
+fof(f1762,axiom,! [X0] : ( abstractDomain(X0) | ~ iMeatyPizza(X0) ) ).
+fof(f1763,axiom,! [X0] : ! [X1] : ( iMeatyPizza(X0) | ~ iMeatTopping(X1) | ~ ihasTopping(X0,X1) | ~ iPizza(X0) ) ).
+fof(f1764,axiom,! [X0] : ( abstractDomain(X0) | ~ iMedium(X0) ) ).
+fof(f1766,axiom,! [X0] : ( abstractDomain(X0) | ~ iMild(X0) ) ).
+fof(f1768,axiom,! [X0] : ( abstractDomain(X0) | ~ iNonVegetarianPizza(X0) ) ).
+fof(f1769,axiom,! [X0] : ( iNonVegetarianPizza(X0) | ~ iPizza(X0) | iVegetarianPizza(X0) | ~ abstractDomain(X0) ) ).
+fof(f1770,axiom,! [X0] : ( abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1771,axiom,! [X0] : ( ihasBase(X0,sK4(X0)) | ~ iPizza(X0) ) ).
+fof(f1772,axiom,! [X0] : ( iPizzaBase(sK4(X0)) | ~ iPizza(X0) ) ).
+fof(f1773,axiom,! [X0] : ( iFood(X0) | ~ iPizza(X0) ) ).
+fof(f1774,axiom,! [X0] : ( abstractDomain(X0) | ~ iPizzaBase(X0) ) ).
+fof(f1775,axiom,! [X0] : ( iFood(X0) | ~ iPizzaBase(X0) ) ).
+fof(f1776,axiom,! [X0] : ( abstractDomain(X0) | ~ iPizzaTopping(X0) ) ).
+fof(f1777,axiom,! [X0] : ( iFood(X0) | ~ iPizzaTopping(X0) ) ).
+fof(f1778,axiom,! [X0] : ( abstractDomain(X0) | ~ iSpiciness(X0) ) ).
+fof(f1779,axiom,! [X0] : ( iMild(X0) | iHot(X0) | iMedium(X0) | ~ iSpiciness(X0) ) ).
+fof(f1780,axiom,! [X0] : ( iSpiciness(X0) | ~ iMedium(X0) ) ).
+fof(f1781,axiom,! [X0] : ( iSpiciness(X0) | ~ iHot(X0) ) ).
+fof(f1782,axiom,! [X0] : ( iSpiciness(X0) | ~ iMild(X0) ) ).
+fof(f1783,axiom,! [X0] : ( iValuePartition(X0) | ~ iSpiciness(X0) ) ).
+fof(f1784,axiom,! [X0] : ( abstractDomain(X0) | ~ iSpicyPizza(X0) ) ).
+fof(f1785,axiom,! [X0] : ! [X1] : ( iSpicyPizza(X0) | ~ iPizza(X0) | ~ iSpicyTopping(X1) | ~ ihasTopping(X0,X1) ) ).
+fof(f1786,axiom,! [X0] : ( abstractDomain(X0) | ~ iSpicyPizzaEquivalent(X0) ) ).
+fof(f1787,axiom,! [X2] : ! [X0] : ! [X1] : ( iSpicyPizzaEquivalent(X0) | ~ iPizzaTopping(X1) | ~ iHot(X2) | ~ ihasSpiciness(X1,X2) | ~ ihasTopping(X0,X1) | ~ iPizza(X0) ) ).
+fof(f1788,axiom,! [X0] : ( abstractDomain(X0) | ~ iSpicyTopping(X0) ) ).
+fof(f1789,axiom,! [X0] : ! [X1] : ( iSpicyTopping(X0) | ~ iPizzaTopping(X0) | ~ iHot(X1) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1790,axiom,! [X0] : ( abstractDomain(X0) | ~ iThinAndCrispyPizza(X0) ) ).
+fof(f1791,axiom,! [X0] : ( iThinAndCrispyPizza(X0) | ihasBase(X0,sK5(X0)) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1792,axiom,! [X0] : ( abstractDomain(X0) | ~ iValuePartition(X0) ) ).
+fof(f1794,axiom,! [X0] : ( abstractDomain(X0) | ~ sP0(X0) ) ).
+fof(f1795,axiom,! [X4] : ! [X0] : ( ~ iMeatTopping(X4) | ~ ihasTopping(X0,X4) | ~ sP0(X0) ) ).
+fof(f1796,axiom,! [X0] : ( iPizza(X0) | ~ sP0(X0) ) ).
+fof(f1798,axiom,! [X0] : ! [X3] : ( ~ iFishTopping(X3) | ~ ihasTopping(X0,X3) | ~ sP0(X0) ) ).
+fof(f1803,axiom,! [X0] : ( sP0(X0) | ~ iVegetarianPizza(X0) ) ).
+fof(f1804,axiom,! [X0] : ( iVegetarianPizza(X0) | ~ sP0(X0) ) ).
+fof(f1805,axiom,! [X0] : ( abstractDomain(X0) | ~ iVegetarianPizzaEquivalent1(X0) ) ).
+fof(f1806,axiom,! [X0] : ( iVegetarianPizzaEquivalent1(X0) | ihasTopping(X0,sK8(X0)) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1807,axiom,! [X0] : ( abstractDomain(X0) | ~ iVegetarianPizzaEquivalent2(X0) ) ).
+fof(f1808,axiom,! [X0] : ( iVegetarianPizzaEquivalent2(X0) | ihasTopping(X0,sK9(X0)) | ~ abstractDomain(X0) | ~ iPizza(X0) ) ).
+fof(f1810,axiom,! [X0] : ! [X1] : ( abstractDomain(X0) | ~ ihasBase(X0,X1) ) ).
+fof(f1811,axiom,! [X0] : ! [X1] : ( abstractDomain(X1) | ~ ihasBase(X0,X1) ) ).
+fof(f1812,axiom,! [X2] : ! [X0] : ! [X1] : ( X1 = X2 | ~ ihasBase(X0,X2) | ~ ihasBase(X0,X1) ) ).
+fof(f1813,axiom,! [X2] : ! [X0] : ! [X1] : ( X1 = X2 | ~ ihasBase(X2,X0) | ~ ihasBase(X1,X0) ) ).
+fof(f1814,axiom,! [X0] : ! [X1] : ( iPizza(X0) | ~ ihasBase(X0,X1) ) ).
+fof(f1815,axiom,! [X0] : ! [X1] : ( iPizzaBase(X1) | ~ ihasBase(X0,X1) ) ).
+fof(f1818,axiom,! [X0] : ! [X1] : ( abstractDomain(X0) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1819,axiom,! [X0] : ! [X1] : ( abstractDomain(X1) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1820,axiom,! [X2] : ! [X0] : ! [X1] : ( ihasIngredient(X0,X2) | ~ ihasIngredient(X1,X2) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1821,axiom,! [X0] : ! [X1] : ( iFood(X0) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1822,axiom,! [X0] : ! [X1] : ( iFood(X1) | ~ ihasIngredient(X0,X1) ) ).
+fof(f1825,axiom,! [X0] : ! [X1] : ( abstractDomain(X0) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1826,axiom,! [X0] : ! [X1] : ( abstractDomain(X1) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1827,axiom,! [X2] : ! [X0] : ! [X1] : ( X1 = X2 | ~ ihasSpiciness(X0,X2) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1828,axiom,! [X0] : ! [X1] : ( iSpiciness(X1) | ~ ihasSpiciness(X0,X1) ) ).
+fof(f1829,axiom,! [X0] : ! [X1] : ( abstractDomain(X0) | ~ ihasTopping(X0,X1) ) ).
+fof(f1830,axiom,! [X0] : ! [X1] : ( abstractDomain(X1) | ~ ihasTopping(X0,X1) ) ).
+fof(f1831,axiom,! [X2] : ! [X0] : ! [X1] : ( X1 = X2 | ~ ihasTopping(X2,X0) | ~ ihasTopping(X1,X0) ) ).
+fof(f1832,axiom,! [X0] : ! [X1] : ( iPizza(X0) | ~ ihasTopping(X0,X1) ) ).
+fof(f1833,axiom,! [X0] : ! [X1] : ( iPizzaTopping(X1) | ~ ihasTopping(X0,X1) ) ).
+fof(f1836,axiom,! [X0] : ! [X1] : ( abstractDomain(X0) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1837,axiom,! [X0] : ! [X1] : ( abstractDomain(X1) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1838,axiom,! [X2] : ! [X0] : ! [X1] : ( X1 = X2 | ~ iisBaseOf(X0,X2) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1839,axiom,! [X2] : ! [X0] : ! [X1] : ( X1 = X2 | ~ iisBaseOf(X2,X0) | ~ iisBaseOf(X1,X0) ) ).
+fof(f1840,axiom,! [X0] : ! [X1] : ( iPizzaBase(X0) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1841,axiom,! [X0] : ! [X1] : ( iPizza(X1) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1842,axiom,! [X0] : ! [X1] : ( ihasBase(X1,X0) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1843,axiom,! [X0] : ! [X1] : ( iisBaseOf(X0,X1) | ~ ihasBase(X1,X0) ) ).
+fof(f1844,axiom,! [X0] : ! [X1] : ( abstractDomain(X0) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1845,axiom,! [X0] : ! [X1] : ( abstractDomain(X1) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1846,axiom,! [X2] : ! [X0] : ! [X1] : ( iisIngredientOf(X0,X2) | ~ iisIngredientOf(X1,X2) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1847,axiom,! [X0] : ! [X1] : ( iFood(X0) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1848,axiom,! [X0] : ! [X1] : ( iFood(X1) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1849,axiom,! [X0] : ! [X1] : ( ihasIngredient(X1,X0) | ~ iisIngredientOf(X0,X1) ) ).
+fof(f1850,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) | ~ ihasIngredient(X1,X0) ) ).
+fof(f1851,axiom,! [X0] : ! [X1] : ( abstractDomain(X0) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1852,axiom,! [X0] : ! [X1] : ( abstractDomain(X1) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1853,axiom,! [X2] : ! [X0] : ! [X1] : ( X1 = X2 | ~ iisToppingOf(X0,X2) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1854,axiom,! [X0] : ! [X1] : ( iPizzaTopping(X0) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1855,axiom,! [X0] : ! [X1] : ( iPizza(X1) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1856,axiom,! [X0] : ! [X1] : ( ihasTopping(X1,X0) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1857,axiom,! [X0] : ! [X1] : ( iisToppingOf(X0,X1) | ~ ihasTopping(X1,X0) ) ).
+fof(f1868,axiom,! [X0] : ( ~ iMild(X0) | ~ iMedium(X0) ) ).
+fof(f1869,axiom,! [X0] : ( ~ iVegetarianPizza(X0) | ~ iNonVegetarianPizza(X0) ) ).
+fof(f1870,axiom,! [X0] : ( ~ iPizzaTopping(X0) | ~ iPizzaBase(X0) ) ).
+fof(f1871,axiom,! [X0] : ( ~ iMild(X0) | ~ iHot(X0) ) ).
+fof(f1872,axiom,! [X0] : ( ~ iFishTopping(X0) | ~ iMeatTopping(X0) ) ).
+fof(f1873,axiom,! [X0] : ( ~ iValuePartition(X0) | ~ iDomainConcept(X0) ) ).
+fof(f1874,axiom,! [X0] : ( ~ iHot(X0) | ~ iMedium(X0) ) ).
+fof(f1875,axiom,! [X0] : ( ~ iPizzaBase(X0) | ~ iPizza(X0) ) ).
+fof(f1876,axiom,! [X0] : ( ~ iPizzaTopping(X0) | ~ iPizza(X0) ) ).
+fof(f1877,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) | ~ iisToppingOf(X0,X1) ) ).
+fof(f1878,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) | ~ iisBaseOf(X0,X1) ) ).
+fof(f1879,axiom,! [X0] : ! [X1] : ( ihasIngredient(X0,X1) | ~ ihasBase(X0,X1) ) ).
+fof(f1880,axiom,! [X0] : ! [X1] : ( ihasIngredient(X0,X1) | ~ ihasTopping(X0,X1) ) ).
+fof(c_54,axiom,! [X0] : ( ~ abstractDomain(X0) | iowlThing(X0) ) ).
+fof(c_64,axiom,! [X0] : ( ~ iFishTopping(X0) | abstractDomain(X0) ) ).
+fof(c_65,axiom,! [X0] : ( ~ iFishTopping(X0) | iMild(sK3(X0)) ) ).
+fof(c_66,axiom,! [X0] : ( ~ iFishTopping(X0) | ihasSpiciness(X0,sK3(X0)) ) ).
+fof(c_67,axiom,! [X0] : ( ~ iFishTopping(X0) | iPizzaTopping(X0) ) ).
+fof(c_68,axiom,! [X0] : ( ~ iFood(X0) | abstractDomain(X0) ) ).
+fof(c_69,axiom,! [X0] : ( ~ iFood(X0) | iDomainConcept(X0) ) ).
+fof(c_70,axiom,! [X0] : ( ~ iHot(X0) | abstractDomain(X0) ) ).
+fof(c_72,axiom,! [X0] : ( ~ iInterestingPizza(X0) | abstractDomain(X0) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ ihasTopping(X0,X1) | ~ ihasTopping(X0,X2) | ~ ihasTopping(X0,X3) | ~ iPizza(X0) | X1 = X2 | X1 = X3 | X2 = X3 | iInterestingPizza(X0) ) ).
+fof(c_74,axiom,! [X0] : ( ~ iMeatTopping(X0) | abstractDomain(X0) ) ).
+fof(c_75,axiom,! [X0] : ( ~ iMeatTopping(X0) | iPizzaTopping(X0) ) ).
+fof(c_76,axiom,! [X0] : ( ~ iMeatyPizza(X0) | abstractDomain(X0) ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | ~ iPizza(X0) | ~ iMeatTopping(X1) | iMeatyPizza(X0) ) ).
+fof(c_78,axiom,! [X0] : ( ~ iMedium(X0) | abstractDomain(X0) ) ).
+fof(c_80,axiom,! [X0] : ( ~ iMild(X0) | abstractDomain(X0) ) ).
+fof(c_82,axiom,! [X0] : ( ~ iNonVegetarianPizza(X0) | abstractDomain(X0) ) ).
+fof(c_83,axiom,! [X0] : ( ~ abstractDomain(X0) | ~ iPizza(X0) | iNonVegetarianPizza(X0) | iVegetarianPizza(X0) ) ).
+fof(c_84,axiom,! [X0] : ( ~ iPizza(X0) | abstractDomain(X0) ) ).
+fof(c_85,axiom,! [X0] : ( ~ iPizza(X0) | iPizzaBase(sK4(X0)) ) ).
+fof(c_86,axiom,! [X0] : ( ~ iPizza(X0) | ihasBase(X0,sK4(X0)) ) ).
+fof(c_87,axiom,! [X0] : ( ~ iPizza(X0) | iFood(X0) ) ).
+fof(c_88,axiom,! [X0] : ( ~ iPizzaBase(X0) | abstractDomain(X0) ) ).
+fof(c_89,axiom,! [X0] : ( ~ iPizzaBase(X0) | iFood(X0) ) ).
+fof(c_90,axiom,! [X0] : ( ~ iPizzaTopping(X0) | abstractDomain(X0) ) ).
+fof(c_91,axiom,! [X0] : ( ~ iPizzaTopping(X0) | iFood(X0) ) ).
+fof(c_92,axiom,! [X0] : ( ~ iSpiciness(X0) | abstractDomain(X0) ) ).
+fof(c_93,axiom,! [X0] : ( ~ iMild(X0) | iSpiciness(X0) ) ).
+fof(c_94,axiom,! [X0] : ( ~ iHot(X0) | iSpiciness(X0) ) ).
+fof(c_95,axiom,! [X0] : ( ~ iMedium(X0) | iSpiciness(X0) ) ).
+fof(c_96,axiom,! [X0] : ( ~ iSpiciness(X0) | iMild(X0) | iHot(X0) | iMedium(X0) ) ).
+fof(c_97,axiom,! [X0] : ( ~ iSpiciness(X0) | iValuePartition(X0) ) ).
+fof(c_98,axiom,! [X0] : ( ~ iSpicyPizza(X0) | abstractDomain(X0) ) ).
+fof(c_99,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | ~ iPizza(X0) | ~ iSpicyTopping(X1) | iSpicyPizza(X0) ) ).
+fof(c_100,axiom,! [X0] : ( ~ iSpicyPizzaEquivalent(X0) | abstractDomain(X0) ) ).
+fof(c_101,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ihasSpiciness(X0,X1) | ~ ihasTopping(X2,X0) | ~ iPizzaTopping(X0) | ~ iHot(X1) | ~ iPizza(X2) | iSpicyPizzaEquivalent(X2) ) ).
+fof(c_102,axiom,! [X0] : ( ~ iSpicyTopping(X0) | abstractDomain(X0) ) ).
+fof(c_103,axiom,! [X0] : ! [X1] : ( ~ ihasSpiciness(X0,X1) | ~ iPizzaTopping(X0) | ~ iHot(X1) | iSpicyTopping(X0) ) ).
+fof(c_104,axiom,! [X0] : ( ~ iThinAndCrispyPizza(X0) | abstractDomain(X0) ) ).
+fof(c_105,axiom,! [X0] : ( ~ abstractDomain(X0) | ~ iPizza(X0) | ihasBase(X0,sK5(X0)) | iThinAndCrispyPizza(X0) ) ).
+fof(c_106,axiom,! [X0] : ( ~ iValuePartition(X0) | abstractDomain(X0) ) ).
+fof(c_108,axiom,! [X0] : ( ~ abstractDomain(X0) | ~ iPizza(X0) | iFishTopping(sK6(X0)) | iMeatTopping(sK7(X0)) | sP0(X0) ) ).
+fof(c_109,axiom,! [X0] : ( ~ abstractDomain(X0) | ~ iPizza(X0) | ihasTopping(X0,sK7(X0)) | iFishTopping(sK6(X0)) | sP0(X0) ) ).
+fof(c_110,axiom,! [X0] : ( ~ abstractDomain(X0) | ~ iPizza(X0) | ihasTopping(X0,sK6(X0)) | iMeatTopping(sK7(X0)) | sP0(X0) ) ).
+fof(c_111,axiom,! [X0] : ( ~ abstractDomain(X0) | ~ iPizza(X0) | ihasTopping(X0,sK6(X0)) | ihasTopping(X0,sK7(X0)) | sP0(X0) ) ).
+fof(c_112,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | ~ iFishTopping(X1) | ~ sP0(X0) ) ).
+fof(c_114,axiom,! [X0] : ( ~ sP0(X0) | iPizza(X0) ) ).
+fof(c_115,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | ~ iMeatTopping(X1) | ~ sP0(X0) ) ).
+fof(c_116,axiom,! [X0] : ( ~ sP0(X0) | abstractDomain(X0) ) ).
+fof(c_117,axiom,! [X0] : ( ~ sP0(X0) | iVegetarianPizza(X0) ) ).
+fof(c_118,axiom,! [X0] : ( ~ iVegetarianPizza(X0) | sP0(X0) ) ).
+fof(c_119,axiom,! [X0] : ( ~ iVegetarianPizzaEquivalent1(X0) | abstractDomain(X0) ) ).
+fof(c_120,axiom,! [X0] : ( ~ abstractDomain(X0) | ~ iPizza(X0) | ihasTopping(X0,sK8(X0)) | iVegetarianPizzaEquivalent1(X0) ) ).
+fof(c_121,axiom,! [X0] : ( ~ iVegetarianPizzaEquivalent2(X0) | abstractDomain(X0) ) ).
+fof(c_122,axiom,! [X0] : ( ~ abstractDomain(X0) | ~ iPizza(X0) | ihasTopping(X0,sK9(X0)) | iVegetarianPizzaEquivalent2(X0) ) ).
+fof(c_124,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | abstractDomain(X1) ) ).
+fof(c_125,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | abstractDomain(X0) ) ).
+fof(c_126,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ihasBase(X0,X1) | ~ ihasBase(X0,X2) | X1 = X2 ) ).
+fof(c_127,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ihasBase(X0,X1) | ~ ihasBase(X2,X1) | X0 = X2 ) ).
+fof(c_128,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | iPizza(X0) ) ).
+fof(c_129,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | iPizzaBase(X1) ) ).
+fof(c_132,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | abstractDomain(X1) ) ).
+fof(c_133,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | abstractDomain(X0) ) ).
+fof(c_134,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ihasIngredient(X0,X1) | ~ ihasIngredient(X1,X2) | ihasIngredient(X0,X2) ) ).
+fof(c_135,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | iFood(X0) ) ).
+fof(c_136,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | iFood(X1) ) ).
+fof(c_139,axiom,! [X0] : ! [X1] : ( ~ ihasSpiciness(X0,X1) | abstractDomain(X1) ) ).
+fof(c_140,axiom,! [X0] : ! [X1] : ( ~ ihasSpiciness(X0,X1) | abstractDomain(X0) ) ).
+fof(c_141,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ihasSpiciness(X0,X1) | ~ ihasSpiciness(X0,X2) | X1 = X2 ) ).
+fof(c_142,axiom,! [X0] : ! [X1] : ( ~ ihasSpiciness(X0,X1) | iSpiciness(X1) ) ).
+fof(c_143,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | abstractDomain(X1) ) ).
+fof(c_144,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | abstractDomain(X0) ) ).
+fof(c_145,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ihasTopping(X0,X1) | ~ ihasTopping(X2,X1) | X0 = X2 ) ).
+fof(c_146,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | iPizza(X0) ) ).
+fof(c_147,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | iPizzaTopping(X1) ) ).
+fof(c_150,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | abstractDomain(X1) ) ).
+fof(c_151,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | abstractDomain(X0) ) ).
+fof(c_152,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ iisBaseOf(X0,X1) | ~ iisBaseOf(X0,X2) | X1 = X2 ) ).
+fof(c_153,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ iisBaseOf(X0,X1) | ~ iisBaseOf(X2,X1) | X0 = X2 ) ).
+fof(c_154,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | iPizzaBase(X0) ) ).
+fof(c_155,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | iPizza(X1) ) ).
+fof(c_156,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | iisBaseOf(X1,X0) ) ).
+fof(c_157,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | ihasBase(X1,X0) ) ).
+fof(c_158,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | abstractDomain(X1) ) ).
+fof(c_159,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | abstractDomain(X0) ) ).
+fof(c_160,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ iisIngredientOf(X0,X1) | ~ iisIngredientOf(X1,X2) | iisIngredientOf(X0,X2) ) ).
+fof(c_161,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | iFood(X0) ) ).
+fof(c_162,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | iFood(X1) ) ).
+fof(c_163,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | iisIngredientOf(X1,X0) ) ).
+fof(c_164,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | ihasIngredient(X1,X0) ) ).
+fof(c_165,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | abstractDomain(X1) ) ).
+fof(c_166,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | abstractDomain(X0) ) ).
+fof(c_167,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ iisToppingOf(X0,X1) | ~ iisToppingOf(X0,X2) | X1 = X2 ) ).
+fof(c_168,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | iPizzaTopping(X0) ) ).
+fof(c_169,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | iPizza(X1) ) ).
+fof(c_170,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | iisToppingOf(X1,X0) ) ).
+fof(c_171,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | ihasTopping(X1,X0) ) ).
+fof(c_182,axiom,! [X0] : ( ~ iMild(X0) | ~ iMedium(X0) ) ).
+fof(c_183,axiom,! [X0] : ( ~ iNonVegetarianPizza(X0) | ~ iVegetarianPizza(X0) ) ).
+fof(c_184,axiom,! [X0] : ( ~ iPizzaTopping(X0) | ~ iPizzaBase(X0) ) ).
+fof(c_185,axiom,! [X0] : ( ~ iMild(X0) | ~ iHot(X0) ) ).
+fof(c_186,axiom,! [X0] : ( ~ iFishTopping(X0) | ~ iMeatTopping(X0) ) ).
+fof(c_187,axiom,! [X0] : ( ~ iDomainConcept(X0) | ~ iValuePartition(X0) ) ).
+fof(c_188,axiom,! [X0] : ( ~ iHot(X0) | ~ iMedium(X0) ) ).
+fof(c_189,axiom,! [X0] : ( ~ iPizza(X0) | ~ iPizzaBase(X0) ) ).
+fof(c_190,axiom,! [X0] : ( ~ iPizzaTopping(X0) | ~ iPizza(X0) ) ).
+fof(c_191,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | iisIngredientOf(X0,X1) ) ).
+fof(c_192,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | iisIngredientOf(X0,X1) ) ).
+fof(c_193,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | ihasIngredient(X0,X1) ) ).
+fof(c_194,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | ihasIngredient(X0,X1) ) ).
+fof(c_318,axiom,! [X0] : ( ~ iPizza(X0) | iNonVegetarianPizza(X0) | iVegetarianPizza(X0) ) ).
+fof(c_321,axiom,! [X0] : ( ~ iPizza(X0) | ihasTopping(X0,sK9(X0)) | iVegetarianPizzaEquivalent2(X0) ) ).
+fof(c_324,axiom,! [X0] : ( ~ iPizza(X0) | ihasTopping(X0,sK8(X0)) | iVegetarianPizzaEquivalent1(X0) ) ).
+fof(c_327,axiom,! [X0] : ( ~ iPizza(X0) | ihasBase(X0,sK5(X0)) | iThinAndCrispyPizza(X0) ) ).
+fof(c_330,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | ~ iSpicyTopping(X1) | iSpicyPizza(X0) ) ).
+fof(c_333,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | ~ iMeatTopping(X1) | iMeatyPizza(X0) ) ).
+fof(c_336,axiom,! [X0] : ( ~ iPizza(X0) | iFishTopping(sK6(X0)) | iMeatTopping(sK7(X0)) | sP0(X0) ) ).
+fof(c_339,axiom,! [X0] : ( ~ iPizza(X0) | ihasTopping(X0,sK6(X0)) | iMeatTopping(sK7(X0)) | sP0(X0) ) ).
+fof(c_342,axiom,! [X0] : ( ~ iPizza(X0) | ihasTopping(X0,sK7(X0)) | iFishTopping(sK6(X0)) | sP0(X0) ) ).
+fof(c_345,axiom,! [X0] : ( ~ iPizza(X0) | ihasTopping(X0,sK6(X0)) | ihasTopping(X0,sK7(X0)) | sP0(X0) ) ).
+fof(c_348,axiom,! [X0] : ! [X3] : ! [X2] : ! [X1] : ( ~ ihasTopping(X0,X3) | ~ ihasTopping(X0,X2) | ~ ihasTopping(X0,X1) | X1 = X2 | X1 = X3 | X2 = X3 | iInterestingPizza(X0) ) ).
+fof(c_349,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ ihasTopping(X0,X1) | ~ ihasTopping(X0,X2) | ~ ihasTopping(X0,X3) | X1 = X2 | X1 = X3 | X2 = X3 | iInterestingPizza(X0) ) ).
+fof(c_358,axiom,! [X0] : ( sP0(X0) | ~ iVegetarianPizza(X0) ) ).
+fof(c_359,axiom,! [X0] : ( ~ iVegetarianPizza(X0) | sP0(X0) ) ).
+fof(c_360,axiom,! [X0] : ( ~ sP0(X0) | iVegetarianPizza(X0) ) ).
+fof(c_366,axiom,! [X0] : ( iowlThing(X0) | ~ iFishTopping(X0) ) ).
+fof(c_367,axiom,! [X0] : ( ~ iFishTopping(X0) | iowlThing(X0) ) ).
+fof(c_368,axiom,! [X0] : ( iowlThing(X0) | ~ iFood(X0) ) ).
+fof(c_369,axiom,! [X0] : ( ~ iFood(X0) | iowlThing(X0) ) ).
+fof(c_370,axiom,! [X0] : ( iowlThing(X0) | ~ iHot(X0) ) ).
+fof(c_371,axiom,! [X0] : ( ~ iHot(X0) | iowlThing(X0) ) ).
+fof(c_372,axiom,! [X0] : ( iowlThing(X0) | ~ iInterestingPizza(X0) ) ).
+fof(c_373,axiom,! [X0] : ( ~ iInterestingPizza(X0) | iowlThing(X0) ) ).
+fof(c_374,axiom,! [X0] : ! [X1] : ( iowlThing(X0) | ~ ihasTopping(X0,X1) ) ).
+fof(c_375,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | iowlThing(X0) ) ).
+fof(c_376,axiom,! [X0] : ( iowlThing(X0) | ~ iPizza(X0) ) ).
+fof(c_377,axiom,! [X0] : ( ~ iPizza(X0) | iowlThing(X0) ) ).
+fof(c_378,axiom,! [X0] : ( iowlThing(X0) | ~ iMeatTopping(X0) ) ).
+fof(c_379,axiom,! [X0] : ( ~ iMeatTopping(X0) | iowlThing(X0) ) ).
+fof(c_380,axiom,! [X0] : ( iowlThing(X0) | ~ iMeatyPizza(X0) ) ).
+fof(c_381,axiom,! [X0] : ( ~ iMeatyPizza(X0) | iowlThing(X0) ) ).
+fof(c_382,axiom,! [X0] : ( iowlThing(X0) | ~ iMedium(X0) ) ).
+fof(c_383,axiom,! [X0] : ( ~ iMedium(X0) | iowlThing(X0) ) ).
+fof(c_384,axiom,! [X0] : ( iowlThing(X0) | ~ iMild(X0) ) ).
+fof(c_385,axiom,! [X0] : ( ~ iMild(X0) | iowlThing(X0) ) ).
+fof(c_386,axiom,! [X0] : ( iowlThing(X0) | ~ iNonVegetarianPizza(X0) ) ).
+fof(c_387,axiom,! [X0] : ( ~ iNonVegetarianPizza(X0) | iowlThing(X0) ) ).
+fof(c_388,axiom,! [X0] : ( iowlThing(X0) | ~ iPizzaBase(X0) ) ).
+fof(c_389,axiom,! [X0] : ( ~ iPizzaBase(X0) | iowlThing(X0) ) ).
+fof(c_390,axiom,! [X0] : ( iowlThing(X0) | ~ iPizzaTopping(X0) ) ).
+fof(c_391,axiom,! [X0] : ( ~ iPizzaTopping(X0) | iowlThing(X0) ) ).
+fof(c_392,axiom,! [X0] : ( iowlThing(X0) | ~ iSpiciness(X0) ) ).
+fof(c_393,axiom,! [X0] : ( ~ iSpiciness(X0) | iowlThing(X0) ) ).
+fof(c_394,axiom,! [X0] : ( iowlThing(X0) | ~ iSpicyPizza(X0) ) ).
+fof(c_395,axiom,! [X0] : ( ~ iSpicyPizza(X0) | iowlThing(X0) ) ).
+fof(c_396,axiom,! [X0] : ( iowlThing(X0) | ~ iSpicyPizzaEquivalent(X0) ) ).
+fof(c_397,axiom,! [X0] : ( ~ iSpicyPizzaEquivalent(X0) | iowlThing(X0) ) ).
+fof(c_398,axiom,! [X0] : ! [X1] : ( iowlThing(X0) | ~ ihasSpiciness(X0,X1) ) ).
+fof(c_399,axiom,! [X0] : ! [X1] : ( ~ ihasSpiciness(X0,X1) | iowlThing(X0) ) ).
+fof(c_400,axiom,! [X0] : ( iowlThing(X0) | ~ iSpicyTopping(X0) ) ).
+fof(c_401,axiom,! [X0] : ( ~ iSpicyTopping(X0) | iowlThing(X0) ) ).
+fof(c_402,axiom,! [X0] : ( iowlThing(X0) | ~ iThinAndCrispyPizza(X0) ) ).
+fof(c_403,axiom,! [X0] : ( ~ iThinAndCrispyPizza(X0) | iowlThing(X0) ) ).
+fof(c_404,axiom,! [X0] : ( iowlThing(X0) | ~ iValuePartition(X0) ) ).
+fof(c_405,axiom,! [X0] : ( ~ iValuePartition(X0) | iowlThing(X0) ) ).
+fof(c_406,axiom,! [X0] : ( iowlThing(X0) | ~ sP0(X0) ) ).
+fof(c_407,axiom,! [X0] : ( ~ sP0(X0) | iowlThing(X0) ) ).
+fof(c_408,axiom,! [X0] : ( iowlThing(X0) | ~ iVegetarianPizzaEquivalent1(X0) ) ).
+fof(c_409,axiom,! [X0] : ( ~ iVegetarianPizzaEquivalent1(X0) | iowlThing(X0) ) ).
+fof(c_410,axiom,! [X0] : ( iowlThing(X0) | ~ iVegetarianPizzaEquivalent2(X0) ) ).
+fof(c_411,axiom,! [X0] : ( ~ iVegetarianPizzaEquivalent2(X0) | iowlThing(X0) ) ).
+fof(c_412,axiom,! [X0] : ! [X1] : ( iowlThing(X0) | ~ ihasBase(X0,X1) ) ).
+fof(c_413,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | iowlThing(X0) ) ).
+fof(c_414,axiom,! [X0] : ! [X1] : ( iowlThing(X0) | ~ iisBaseOf(X0,X1) ) ).
+fof(c_415,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | iowlThing(X0) ) ).
+fof(c_416,axiom,! [X0] : ! [X1] : ( iowlThing(X0) | ~ ihasIngredient(X0,X1) ) ).
+fof(c_417,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | iowlThing(X0) ) ).
+fof(c_418,axiom,! [X0] : ! [X1] : ( iowlThing(X0) | ~ iisIngredientOf(X0,X1) ) ).
+fof(c_419,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | iowlThing(X0) ) ).
+fof(c_420,axiom,! [X0] : ! [X1] : ( iowlThing(X0) | ~ iisToppingOf(X0,X1) ) ).
+fof(c_421,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | iowlThing(X0) ) ).
+fof(c_428,axiom,! [X0] : ( ~ iDomainConcept(X0) | ~ iValuePartition(X0) ) ).
+fof(c_432,axiom,! [X0] : ( iDomainConcept(X0) | ~ iFood(X0) ) ).
+fof(c_433,axiom,! [X0] : ( ~ iFood(X0) | iDomainConcept(X0) ) ).
+fof(c_436,axiom,! [X0] : ( ~ iFishTopping(X0) | iMild(sK3(X0)) ) ).
+fof(c_438,axiom,! [X0] : ( ~ iFishTopping(X0) | ihasSpiciness(X0,sK3(X0)) ) ).
+fof(c_440,axiom,! [X0] : ( ~ iFishTopping(X0) | iPizzaTopping(X0) ) ).
+fof(c_442,axiom,! [X0] : ( ~ iFishTopping(X0) | ~ iMeatTopping(X0) ) ).
+fof(c_446,axiom,! [X0] : ( ~ iPizzaTopping(X0) | iFood(X0) ) ).
+fof(c_448,axiom,! [X0] : ( ~ iPizzaTopping(X0) | ~ iPizza(X0) ) ).
+fof(c_450,axiom,! [X0] : ( ~ iPizzaTopping(X0) | ~ iPizzaBase(X0) ) ).
+fof(c_456,axiom,! [X0] : ( iFood(X0) | ~ iPizza(X0) ) ).
+fof(c_457,axiom,! [X0] : ( ~ iPizza(X0) | iFood(X0) ) ).
+fof(c_458,axiom,! [X0] : ( iFood(X0) | ~ iPizzaBase(X0) ) ).
+fof(c_459,axiom,! [X0] : ( ~ iPizzaBase(X0) | iFood(X0) ) ).
+fof(c_462,axiom,! [X0] : ! [X1] : ( iFood(X0) | ~ ihasIngredient(X0,X1) ) ).
+fof(c_463,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | iFood(X0) ) ).
+fof(c_464,axiom,! [X0] : ! [X1] : ( iFood(X0) | ~ iisIngredientOf(X0,X1) ) ).
+fof(c_465,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | iFood(X0) ) ).
+fof(c_468,axiom,! [X0] : ( ~ iHot(X0) | iSpiciness(X0) ) ).
+fof(c_470,axiom,! [X0] : ( ~ iHot(X0) | ~ iMedium(X0) ) ).
+fof(c_472,axiom,! [X0] : ( ~ iHot(X0) | ~ iMild(X0) ) ).
+fof(c_473,axiom,! [X0] : ( ~ iMild(X0) | ~ iHot(X0) ) ).
+fof(c_476,axiom,! [X0] : ( ~ iSpiciness(X0) | iValuePartition(X0) ) ).
+fof(c_482,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | iPizza(X0) ) ).
+fof(c_484,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | abstractDomain(X1) ) ).
+fof(c_486,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | ihasIngredient(X0,X1) ) ).
+fof(c_488,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | iPizzaTopping(X1) ) ).
+fof(c_490,axiom,! [X0] : ! [X1] : ( ~ ihasTopping(X0,X1) | iisToppingOf(X1,X0) ) ).
+fof(c_496,axiom,! [X0] : ( ~ iPizza(X0) | iPizzaBase(sK4(X0)) ) ).
+fof(c_498,axiom,! [X0] : ( ~ iPizza(X0) | ihasBase(X0,sK4(X0)) ) ).
+fof(c_500,axiom,! [X0] : ( ~ iPizza(X0) | ~ iPizzaBase(X0) ) ).
+fof(c_506,axiom,! [X0] : ( iPizza(X0) | ~ sP0(X0) ) ).
+fof(c_507,axiom,! [X0] : ( ~ sP0(X0) | iPizza(X0) ) ).
+fof(c_508,axiom,! [X0] : ! [X1] : ( iPizza(X0) | ~ ihasBase(X0,X1) ) ).
+fof(c_509,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | iPizza(X0) ) ).
+fof(c_514,axiom,! [X0] : ( ~ iMeatTopping(X0) | iPizzaTopping(X0) ) ).
+fof(c_522,axiom,! [X0] : ( ~ iMedium(X0) | iSpiciness(X0) ) ).
+fof(c_524,axiom,! [X0] : ( ~ iMedium(X0) | ~ iMild(X0) ) ).
+fof(c_525,axiom,! [X0] : ( ~ iMild(X0) | ~ iMedium(X0) ) ).
+fof(c_530,axiom,! [X0] : ( ~ iMild(X0) | iSpiciness(X0) ) ).
+fof(c_536,axiom,! [X0] : ( ~ iNonVegetarianPizza(X0) | ~ sP0(X0) ) ).
+fof(c_546,axiom,! [X0] : ! [X1] : ( iPizzaBase(X0) | ~ iisBaseOf(X0,X1) ) ).
+fof(c_547,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | iPizzaBase(X0) ) ).
+fof(c_552,axiom,! [X0] : ! [X1] : ( iPizzaTopping(X0) | ~ iisToppingOf(X0,X1) ) ).
+fof(c_553,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | iPizzaTopping(X0) ) ).
+fof(c_570,axiom,! [X0] : ! [X1] : ( ~ ihasSpiciness(X0,X1) | abstractDomain(X1) ) ).
+fof(c_572,axiom,! [X0] : ! [X1] : ( ~ ihasSpiciness(X0,X1) | iSpiciness(X1) ) ).
+fof(c_594,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | abstractDomain(X1) ) ).
+fof(c_596,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | iPizzaBase(X1) ) ).
+fof(c_598,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | iisBaseOf(X1,X0) ) ).
+fof(c_600,axiom,! [X0] : ! [X1] : ( ~ ihasBase(X0,X1) | ihasIngredient(X0,X1) ) ).
+fof(c_602,axiom,! [X1] : ! [X0] : ( ihasBase(X1,X0) | ~ iisBaseOf(X0,X1) ) ).
+fof(c_603,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | ihasBase(X1,X0) ) ).
+fof(c_608,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | abstractDomain(X1) ) ).
+fof(c_612,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | iisIngredientOf(X0,X1) ) ).
+fof(c_614,axiom,! [X0] : ! [X1] : ( ~ iisBaseOf(X0,X1) | iPizza(X1) ) ).
+fof(c_620,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | abstractDomain(X1) ) ).
+fof(c_622,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | iFood(X1) ) ).
+fof(c_624,axiom,! [X0] : ! [X1] : ( ~ ihasIngredient(X0,X1) | iisIngredientOf(X1,X0) ) ).
+fof(c_634,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | abstractDomain(X1) ) ).
+fof(c_636,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | iFood(X1) ) ).
+fof(c_638,axiom,! [X0] : ! [X1] : ( ~ iisIngredientOf(X0,X1) | ihasIngredient(X1,X0) ) ).
+fof(c_642,axiom,! [X0] : ! [X1] : ( iisIngredientOf(X0,X1) | ~ iisToppingOf(X0,X1) ) ).
+fof(c_643,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | iisIngredientOf(X0,X1) ) ).
+fof(c_644,axiom,! [X1] : ! [X0] : ( ihasTopping(X1,X0) | ~ iisToppingOf(X0,X1) ) ).
+fof(c_645,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | ihasTopping(X1,X0) ) ).
+fof(c_650,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | abstractDomain(X1) ) ).
+fof(c_656,axiom,! [X0] : ! [X1] : ( ~ iisToppingOf(X0,X1) | iPizza(X1) ) ).
+fof(c_841,axiom,! [X0] : ( ~ iPizza(X0) | iNonVegetarianPizza(X0) | sP0(X0) ) ).
+fof(c_1121,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ihasSpiciness(X0,X1) | ~ ihasTopping(X2,X0) | ~ iPizzaTopping(X0) | ~ iHot(X1) | iSpicyPizzaEquivalent(X2) ) ).
+fof(c_1131,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ihasSpiciness(X0,X1) | ~ ihasTopping(X2,X0) | ~ iHot(X1) | iSpicyPizzaEquivalent(X2) ) ).
+fof(c_1987,axiom,! [X0] : X0 = X0 ).
+fof(c_1988,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_1989,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_1990,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ dataDomain(X1) | dataDomain(X0) ) ).
+fof(c_1991,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ abstractDomain(X1) | abstractDomain(X0) ) ).
+fof(c_1992,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ iowlThing(X1) | iowlThing(X0) ) ).
+fof(c_1993,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ iCountry(X1) | iCountry(X0) ) ).
+fof(c_1994,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ iFishTopping(X1) | iFishTopping(X0) ) ).
+fof(c_1995,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ iMild(X1) | iMild(X0) ) ).
+fof(c_1996,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ ihasSpiciness(X2,X1) | ihasSpiciness(X2,X0) ) ).
+fof(c_1997,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ ihasTopping(X2,X1) | ihasTopping(X2,X0) ) ).
+fof(c_1998,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ iMeatTopping(X1) | iMeatTopping(X0) ) ).
+fof(c_1999,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ iPizzaBase(X1) | iPizzaBase(X0) ) ).
+fof(c_2000,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ ihasBase(X2,X1) | ihasBase(X2,X0) ) ).

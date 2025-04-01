@@ -1,0 +1,2 @@
+include('Saturations/SWV918-1/Saturations/Vampire-SAT---4.7.ax').
+fof(cls_CHAINED_0_01,conjecture,c_Conform_Ooconf(v_P,v_ha____,c_Pair(v_C____,c_Objects_Oinit__fields(v_FDTs____),tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))),tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ).

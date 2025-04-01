@@ -1,0 +1,2 @@
+include('Saturations/SWV538-1.004/Saturations/Vampire-SAT---4.7.ax').
+fof(hyp3,conjecture,a_474 = store(a_472,i3,e_473) ).

@@ -1,0 +1,2 @@
+include('Saturations/SWV484+2/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(unwrap_hn2k1_hn2k1_command,conjecture,! [X13] : ! [X12] : ! [X11] : ! [A] : ! [B] : ! [C] : ! [D] : ! [E] : ! [F] : ! [G] : ! [H] : ! [I] : ! [X7] : ! [X6] : ! [X5] : ! [X4] : ! [X2] : ! [J] : ! [K] : ! [L] : ! [M] : ! [N] : ! [O] : ! [P] : ! [Q] : ! [R] : ! [S] : ! [T] : ! [U] : ! [V] : ! [W] : ( p(W,V,U,T,S,R,Q,P,O,N,M,L,K,J,n1,X2,n1,X4,X5,X6,X7,I,H,G,F,E,D,C,B,A,n1,X11,X12,X13) => p(W,V,U,T,S,R,Q,P,O,N,M,L,K,J,n1,X2,n1,X4,X5,X6,n1,I,H,G,F,E,D,C,B,A,n1,X11,X12,X13) ) ).

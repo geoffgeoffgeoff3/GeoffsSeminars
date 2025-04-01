@@ -1,0 +1,113 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ! [X2] : select(store(X0,X1,X2),X1) = X2 ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( select(store(X0,X1,X2),X3) = select(X0,X3) | X1 = X3 ) ).
+fof(c_51,axiom,store(a1,i1,e_468) = a_469 ).
+fof(c_52,axiom,store(a_469,i1,e_468) = a_470 ).
+fof(c_53,axiom,store(a_470,i0,e_471) = a_472 ).
+fof(c_54,axiom,store(a_472,i3,e_473) = a_474 ).
+fof(c_55,axiom,store(a_474,i3,e_475) = a_476 ).
+fof(c_56,axiom,store(a_476,i2,e_477) = a_478 ).
+fof(c_57,axiom,store(a_478,i2,e_479) = a_480 ).
+fof(c_58,axiom,store(a_480,i0,e_481) = a_482 ).
+fof(c_59,axiom,store(a_470,i3,e_473) = a_483 ).
+fof(c_60,axiom,store(a_483,i0,e_471) = a_484 ).
+fof(c_61,axiom,store(a_484,i3,e_485) = a_486 ).
+fof(c_62,axiom,store(a_486,i2,e_487) = a_488 ).
+fof(c_63,axiom,store(a_488,i0,e_489) = a_490 ).
+fof(c_64,axiom,store(a_490,i3,e_491) = a_492 ).
+fof(c_65,axiom,select(a1,i1) = e_468 ).
+fof(c_66,axiom,select(a_470,i3) = e_471 ).
+fof(c_67,axiom,select(a_470,i0) = e_473 ).
+fof(c_68,axiom,select(a_474,i2) = e_475 ).
+fof(c_69,axiom,select(a_474,i3) = e_477 ).
+fof(c_70,axiom,select(a_478,i0) = e_479 ).
+fof(c_71,axiom,select(a_478,i2) = e_481 ).
+fof(c_72,axiom,select(a_484,i2) = e_485 ).
+fof(c_73,axiom,select(a_484,i3) = e_487 ).
+fof(c_74,axiom,select(a_488,i3) = e_489 ).
+fof(c_75,axiom,select(a_488,i0) = e_491 ).
+fof(c_76,axiom,select(a_482,i_493) = e_494 ).
+fof(c_77,axiom,select(a_492,i_493) = e_495 ).
+fof(c_78,axiom,sk(a_482,a_492) = i_493 ).
+fof(c_79,axiom,e_494 != e_495 ).
+fof(c_254,axiom,select(a_469,i1) = e_468 ).
+fof(c_255,axiom,select(a_470,i1) = e_468 ).
+fof(c_256,axiom,select(a_472,i0) = e_471 ).
+fof(c_257,axiom,select(a_474,i3) = e_473 ).
+fof(c_258,axiom,select(a_476,i3) = e_475 ).
+fof(c_259,axiom,select(a_478,i2) = e_477 ).
+fof(c_260,axiom,select(a_480,i2) = e_479 ).
+fof(c_261,axiom,select(a_482,i0) = e_481 ).
+fof(c_262,axiom,select(a_483,i3) = e_473 ).
+fof(c_263,axiom,select(a_484,i0) = e_471 ).
+fof(c_264,axiom,e_473 = e_477 ).
+fof(c_265,axiom,store(a_476,i2,e_473) = a_478 ).
+fof(c_266,axiom,e_477 = e_481 ).
+fof(c_267,axiom,store(a_480,i0,e_477) = a_482 ).
+fof(c_268,axiom,select(a_486,i3) = e_485 ).
+fof(c_269,axiom,select(a_488,i2) = e_487 ).
+fof(c_270,axiom,select(a_490,i0) = e_489 ).
+fof(c_271,axiom,select(a_492,i3) = e_491 ).
+fof(c_272,axiom,e_473 = e_481 ).
+fof(c_273,axiom,select(a_478,i2) = e_473 ).
+fof(c_274,axiom,select(a_482,i0) = e_473 ).
+fof(c_279,axiom,! [X0] : ( select(a_469,X0) = select(a1,X0) | X0 = i1 ) ).
+fof(c_280,axiom,! [X0] : ( select(a_469,X0) = select(a_470,X0) | X0 = i1 ) ).
+fof(c_281,axiom,! [X0] : ( select(a_470,X0) = select(a_472,X0) | X0 = i0 ) ).
+fof(c_282,axiom,! [X0] : ( select(a_472,X0) = select(a_474,X0) | X0 = i3 ) ).
+fof(c_283,axiom,! [X0] : ( select(a_474,X0) = select(a_476,X0) | X0 = i3 ) ).
+fof(c_284,axiom,! [X0] : ( select(a_478,X0) = select(a_480,X0) | X0 = i2 ) ).
+fof(c_285,axiom,! [X0] : ( select(a_470,X0) = select(a_483,X0) | X0 = i3 ) ).
+fof(c_286,axiom,! [X0] : ( select(a_483,X0) = select(a_484,X0) | X0 = i0 ) ).
+fof(c_287,axiom,! [X0] : ( select(a_484,X0) = select(a_486,X0) | X0 = i3 ) ).
+fof(c_288,axiom,! [X0] : ( select(a_486,X0) = select(a_488,X0) | X0 = i2 ) ).
+fof(c_289,axiom,! [X0] : ( select(a_488,X0) = select(a_490,X0) | X0 = i0 ) ).
+fof(c_290,axiom,! [X0] : ( select(a_490,X0) = select(a_492,X0) | X0 = i3 ) ).
+fof(c_291,axiom,! [X0] : ( select(a_476,X0) = select(a_478,X0) | X0 = i2 ) ).
+fof(c_327,axiom,store(a_480,i0,e_473) = a_482 ).
+fof(c_328,axiom,! [X0] : ( select(a_480,X0) = select(a_482,X0) | X0 = i0 ) ).
+fof(c_361,axiom,select(a_474,i0) = e_471 | i0 = i3 ).
+fof(c_362,axiom,! [X0] : ( select(a_470,X0) = select(a_474,X0) | X0 = i0 | X0 = i3 ) ).
+fof(c_396,axiom,select(a_484,i3) = e_473 | i0 = i3 ).
+fof(c_397,axiom,! [X0] : ( select(a_470,X0) = select(a_484,X0) | X0 = i0 | X0 = i3 ) ).
+fof(c_398,axiom,i0 = i3 | e_473 = e_487 ).
+fof(c_414,axiom,store(a_486,i2,e_473) = a_488 | i0 = i3 ).
+fof(c_436,axiom,select(a_488,i3) = e_485 | i3 = i2 ).
+fof(c_437,axiom,! [X0] : ( select(a_484,X0) = select(a_488,X0) | X0 = i3 | X0 = i2 ) ).
+fof(c_438,axiom,i3 = i2 | e_485 = e_489 ).
+fof(c_457,axiom,select(a_492,i0) = e_489 | i0 = i3 ).
+fof(c_458,axiom,! [X0] : ( select(a_488,X0) = select(a_492,X0) | X0 = i0 | X0 = i3 ) ).
+fof(c_472,axiom,store(a_488,i0,e_485) = a_490 | i3 = i2 ).
+fof(c_496,axiom,select(a_478,i3) = e_475 | i3 = i2 ).
+fof(c_497,axiom,! [X0] : ( select(a_474,X0) = select(a_478,X0) | X0 = i3 | X0 = i2 ) ).
+fof(c_513,axiom,select(a_482,i2) = e_479 | i0 = i2 ).
+fof(c_514,axiom,! [X0] : ( select(a_478,X0) = select(a_482,X0) | X0 = i0 | X0 = i2 ) ).
+fof(c_535,axiom,select(a_470,i2) = e_475 | i0 = i2 | i3 = i2 ).
+fof(c_562,axiom,select(a_470,i2) = e_485 | i0 = i2 | i3 = i2 ).
+fof(c_574,axiom,i0 = i2 | i3 = i2 | e_475 = e_485 ).
+fof(c_602,axiom,store(a_488,i0,e_475) = a_490 | i0 = i2 | i3 = i2 ).
+fof(c_603,axiom,store(a_484,i3,e_475) = a_486 | i0 = i2 | i3 = i2 ).
+fof(c_637,axiom,select(a_484,i0) = e_491 | i0 = i3 | i0 = i2 ).
+fof(c_639,axiom,i0 = i3 | i0 = i2 | e_471 = e_491 ).
+fof(c_650,axiom,store(a_490,i3,e_471) = a_492 | i0 = i3 | i0 = i2 ).
+fof(c_679,axiom,select(a_490,i0) = e_475 | i0 = i2 | i3 = i2 ).
+fof(c_680,axiom,i0 = i2 | i3 = i2 | e_475 = e_489 ).
+fof(c_702,axiom,select(a_488,i_493) = e_495 | i0 = i_493 | i3 = i_493 ).
+fof(c_714,axiom,select(a_484,i_493) = e_495 | i0 = i_493 | i3 = i_493 | i2 = i_493 ).
+fof(c_729,axiom,select(a_474,i0) = e_479 | i0 = i3 | i0 = i2 ).
+fof(c_744,axiom,i0 = i3 | i0 = i2 | e_471 = e_479 ).
+fof(c_758,axiom,store(a_478,i2,e_471) = a_480 | i0 = i3 | i0 = i2 ).
+fof(c_780,axiom,select(a_478,i_493) = e_494 | i0 = i_493 | i2 = i_493 ).
+fof(c_792,axiom,select(a_474,i_493) = e_494 | i0 = i_493 | i3 = i_493 | i2 = i_493 ).
+fof(c_806,axiom,select(a_470,i_493) = e_495 | i0 = i_493 | i3 = i_493 | i2 = i_493 ).
+fof(c_820,axiom,select(a_470,i_493) = e_494 | i0 = i_493 | i3 = i_493 | i2 = i_493 ).
+fof(c_849,axiom,i0 = i_493 | i3 = i_493 | i2 = i_493 | e_494 = e_495 ).
+fof(c_851,axiom,i0 = i_493 | i3 = i_493 | i2 = i_493 ).
+fof(c_865,axiom,select(a_488,i2) = e_495 | i0 = i_493 | i3 = i_493 ).
+fof(c_866,axiom,select(a_492,i2) = e_495 | i0 = i_493 | i3 = i_493 ).
+fof(c_867,axiom,select(a_482,i2) = e_494 | i0 = i_493 | i3 = i_493 ).
+fof(c_874,axiom,i0 = i_493 | i3 = i_493 | e_487 = e_495 ).
+fof(c_909,axiom,i0 = i2 | i0 = i_493 | i3 = i_493 | e_479 = e_494 ).
+fof(c_920,axiom,e_487 != e_494 | i0 = i_493 | i3 = i_493 ).
+fof(c_938,axiom,e_479 != e_487 | i0 = i2 | i0 = i_493 | i3 = i_493 ).
+fof(c_951,axiom,e_473 != e_479 | i0 = i3 | i0 = i2 | i0 = i_493 | i3 = i_493 ).
+fof(c_969,axiom,e_471 != e_473 | i0 = i3 | i0 = i2 | i0 = i_493 | i3 = i_493 ).

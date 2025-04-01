@@ -1,0 +1,3 @@
+fof(reflexivity,conjecture,! [X] : r1(X,X) ).
+fof(transitivity,conjecture,! [X] : ! [Y] : ! [Z] : ( ( r1(X,Y) & r1(Y,Z) ) => r1(X,Z) ) ).
+fof(main,conjecture,~(~ ( ? [X] : ( ! [Y] : ( ~ r1(X,Y) | ( ( ( ~ ( ! [X] : ( ~ r1(Y,X) | ~ ( ~ p2(X) & ~ p102(X) & p101(X) ) ) ) & ~ ( ! [X] : ( ~ r1(Y,X) | ~ ( p2(X) & ~ p102(X) & p101(X) ) ) ) ) | ~ ( ~ p101(Y) & p100(Y) ) ) & ( ( ( ! [X] : ( ~ r1(Y,X) | ~ p2(X) | ~ p101(X) ) | p2(Y) ) & ( ! [X] : ( ~ r1(Y,X) | p2(X) | ~ p101(X) ) | ~ p2(Y) ) ) | ~ p101(Y) ) & ( ( ( ! [X] : ( ~ r1(Y,X) | ~ p1(X) | ~ p100(X) ) | p1(Y) ) & ( ! [X] : ( ~ r1(Y,X) | p1(X) | ~ p100(X) ) | ~ p1(Y) ) ) | ~ p100(Y) ) & ( p101(Y) | ~ p102(Y) ) & ( p100(Y) | ~ p101(Y) ) ) ) & ~ p101(X) & p100(X) ) ) )).

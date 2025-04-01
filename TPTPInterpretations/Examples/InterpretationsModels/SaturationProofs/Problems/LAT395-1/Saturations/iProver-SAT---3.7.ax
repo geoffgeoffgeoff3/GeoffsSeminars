@@ -1,0 +1,26 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ( ~ unique_complement(X0,X1) | complement(X0,X1) ) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ unique_complement(X0,X1) | ~ complement(X0,X2) | X1 = X2 ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ complement(X0,X1) | complement(X0,f(X0,X1)) | unique_complement(X0,X1) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( f(X0,X1) != X1 | ~ complement(X0,X1) | unique_complement(X0,X1) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ complement(X0,X1) | meet(X0,X1) = n0 ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ complement(X0,X1) | join(X0,X1) = n1 ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( meet(X0,X1) != n0 | join(X0,X1) != n1 | complement(X0,X1) ) ).
+fof(c_56,axiom,! [X0] : meet(X0,n0) = n0 ).
+fof(c_57,axiom,! [X0] : join(X0,n0) = X0 ).
+fof(c_58,axiom,! [X0] : meet(X0,n1) = X0 ).
+fof(c_59,axiom,! [X0] : join(X0,n1) = n1 ).
+fof(c_60,axiom,! [X0] : ! [X1] : ! [X2] : ( meet(X0,X1) != X0 | meet(X1,join(X0,X2)) = join(X0,meet(X2,X1)) ) ).
+fof(c_61,axiom,! [X0] : meet(X0,X0) = X0 ).
+fof(c_62,axiom,! [X0] : join(X0,X0) = X0 ).
+fof(c_63,axiom,! [X0] : ! [X1] : meet(X0,join(X0,X1)) = X0 ).
+fof(c_64,axiom,! [X0] : ! [X1] : join(X0,meet(X0,X1)) = X0 ).
+fof(c_65,axiom,! [X0] : ! [X1] : meet(X0,X1) = meet(X1,X0) ).
+fof(c_66,axiom,! [X0] : ! [X1] : join(X0,X1) = join(X1,X0) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ! [X2] : meet(meet(X0,X1),X2) = meet(X0,meet(X1,X2)) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ! [X2] : join(join(X0,X1),X2) = join(X0,join(X1,X2)) ).
+fof(c_188,axiom,! [X0] : X0 = X0 ).
+fof(c_189,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_190,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_191,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ complement(X2,X1) | complement(X2,X0) ) ).
+fof(c_192,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | meet(X0,X2) = meet(X1,X3) ) ).
+fof(c_193,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | join(X0,X2) = join(X1,X3) ) ).

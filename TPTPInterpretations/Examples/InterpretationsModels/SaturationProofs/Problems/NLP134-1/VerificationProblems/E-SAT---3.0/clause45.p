@@ -1,0 +1,2 @@
+include('Saturations/NLP134-1/Saturations/E-SAT---3.0.ax').
+fof(clause45,conjecture,! [U] : ( ~ member(skc12,U,skc13) | ~ ssSkC0 | young(skc12,U) ) ).

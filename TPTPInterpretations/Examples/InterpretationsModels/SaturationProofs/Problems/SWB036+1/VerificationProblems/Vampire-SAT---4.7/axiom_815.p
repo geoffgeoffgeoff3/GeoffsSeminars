@@ -1,0 +1,2 @@
+include('Saturations/SWB036+1/Saturations/Vampire-SAT---4.7.ax').
+fof(axiom_815,conjecture,! [X] : ~ ( iCheeseTopping(X) & iFruitTopping(X) ) ).

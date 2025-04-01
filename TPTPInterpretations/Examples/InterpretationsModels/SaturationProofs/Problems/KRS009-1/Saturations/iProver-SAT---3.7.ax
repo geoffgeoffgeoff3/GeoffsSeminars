@@ -1,0 +1,89 @@
+fof(c_49,axiom,e(exist) ).
+fof(c_50,axiom,! [X0] : ( ~ c(X0) | p2least(X0) ) ).
+fof(c_51,axiom,! [X0] : ( ~ p2least(X0) | c(X0) ) ).
+fof(c_52,axiom,! [X0] : ( ~ equalish(u1r2(X0),u1r1(X0)) | ~ p2least(X0) ) ).
+fof(c_53,axiom,! [X0] : ( ~ p2least(X0) | p(X0,u1r1(X0)) ) ).
+fof(c_54,axiom,! [X0] : ( ~ p2least(X0) | p(X0,u1r2(X0)) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ p(X0,X1) | ~ p(X0,X2) | equalish(X1,X2) | p2least(X0) ) ).
+fof(c_56,axiom,! [X0] : ( ~ d(X0) | p1most(X0) ) ).
+fof(c_57,axiom,! [X0] : ( ~ p1most(X0) | d(X0) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ p(X0,X1) | ~ p(X0,X2) | ~ p1most(X0) | equalish(X1,X2) ) ).
+fof(c_59,axiom,! [X0] : ( ~ equalish(u3r2(X0),u3r1(X0)) | p1most(X0) ) ).
+fof(c_60,axiom,! [X0] : ( p(X0,u3r1(X0)) | p1most(X0) ) ).
+fof(c_61,axiom,! [X0] : ( p(X0,u3r2(X0)) | p1most(X0) ) ).
+fof(c_62,axiom,! [X0] : ( ~ a(X0) | c(X0) | d(X0) ) ).
+fof(c_63,axiom,! [X0] : ( ~ d(X0) | a(X0) ) ).
+fof(c_64,axiom,! [X0] : ( ~ c(X0) | a(X0) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ( ~ r(X0,X1) | c(X1) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( ~ r(X0,X1) | t(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ s(X0,X1) | d(X1) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ( ~ s(X0,X1) | t(X0,X1) ) ).
+fof(c_69,axiom,! [X0] : ( ~ e(X0) | s1most(X0) ) ).
+fof(c_70,axiom,! [X0] : ( ~ e(X0) | r1most(X0) ) ).
+fof(c_71,axiom,! [X0] : ( ~ e(X0) | t3least(X0) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ t(X0,X1) | ~ e(X0) | a(X1) ) ).
+fof(c_73,axiom,! [X0] : ( ~ a(u7r1(X0)) | ~ s1most(X0) | ~ r1most(X0) | ~ t3least(X0) | e(X0) ) ).
+fof(c_74,axiom,! [X0] : ( ~ s1most(X0) | ~ r1most(X0) | ~ t3least(X0) | t(X0,u7r1(X0)) | e(X0) ) ).
+fof(c_75,axiom,! [X0] : ( ~ equalish(u8r2(X0),u8r1(X0)) | ~ t3least(X0) ) ).
+fof(c_76,axiom,! [X0] : ( ~ equalish(u8r3(X0),u8r1(X0)) | ~ t3least(X0) ) ).
+fof(c_77,axiom,! [X0] : ( ~ equalish(u8r3(X0),u8r2(X0)) | ~ t3least(X0) ) ).
+fof(c_78,axiom,! [X0] : ( ~ t3least(X0) | t(X0,u8r1(X0)) ) ).
+fof(c_79,axiom,! [X0] : ( ~ t3least(X0) | t(X0,u8r2(X0)) ) ).
+fof(c_80,axiom,! [X0] : ( ~ t3least(X0) | t(X0,u8r3(X0)) ) ).
+fof(c_81,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ t(X0,X1) | ~ t(X0,X2) | ~ t(X0,X3) | equalish(X1,X2) | equalish(X3,X1) | equalish(X3,X2) | t3least(X0) ) ).
+fof(c_82,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ r(X0,X1) | ~ r(X0,X2) | ~ r1most(X0) | equalish(X1,X2) ) ).
+fof(c_83,axiom,! [X0] : ( ~ equalish(u9r2(X0),u9r1(X0)) | r1most(X0) ) ).
+fof(c_84,axiom,! [X0] : ( r(X0,u9r1(X0)) | r1most(X0) ) ).
+fof(c_85,axiom,! [X0] : ( r(X0,u9r2(X0)) | r1most(X0) ) ).
+fof(c_86,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ s(X0,X1) | ~ s(X0,X2) | ~ s1most(X0) | equalish(X1,X2) ) ).
+fof(c_87,axiom,! [X0] : ( ~ equalish(u10r2(X0),u10r1(X0)) | s1most(X0) ) ).
+fof(c_88,axiom,! [X0] : ( s(X0,u10r1(X0)) | s1most(X0) ) ).
+fof(c_89,axiom,! [X0] : ( s(X0,u10r2(X0)) | s1most(X0) ) ).
+fof(c_128,axiom,! [X0] : ( c(X0) | ~ p2least(X0) ) ).
+fof(c_129,axiom,! [X0] : ( ~ p2least(X0) | c(X0) ) ).
+fof(c_130,axiom,! [X0] : ( ~ c(X0) | p2least(X0) ) ).
+fof(c_132,axiom,! [X0] : ( d(X0) | ~ p1most(X0) ) ).
+fof(c_133,axiom,! [X0] : ( ~ p1most(X0) | d(X0) ) ).
+fof(c_134,axiom,! [X0] : ( ~ d(X0) | p1most(X0) ) ).
+fof(c_136,axiom,! [X0] : ( ~ c(X0) | ~ equalish(u1r2(X0),u1r1(X0)) ) ).
+fof(c_137,axiom,! [X0] : ( ~ equalish(u1r2(X0),u1r1(X0)) | ~ c(X0) ) ).
+fof(c_138,axiom,! [X0] : ( ~ c(X0) | p(X0,u1r1(X0)) ) ).
+fof(c_140,axiom,! [X0] : ( ~ c(X0) | p(X0,u1r2(X0)) ) ).
+fof(c_142,axiom,! [X0] : ( ~ c(X0) | a(X0) ) ).
+fof(c_146,axiom,! [X0] : ( ~ d(X0) | a(X0) ) ).
+fof(c_148,axiom,! [X0] : ( d(X0) | ~ equalish(u3r2(X0),u3r1(X0)) ) ).
+fof(c_149,axiom,! [X0] : ( ~ equalish(u3r2(X0),u3r1(X0)) | d(X0) ) ).
+fof(c_150,axiom,! [X0] : ( d(X0) | p(X0,u3r1(X0)) ) ).
+fof(c_151,axiom,! [X0] : ( p(X0,u3r1(X0)) | d(X0) ) ).
+fof(c_152,axiom,! [X0] : ( d(X0) | p(X0,u3r2(X0)) ) ).
+fof(c_153,axiom,! [X0] : ( p(X0,u3r2(X0)) | d(X0) ) ).
+fof(c_160,axiom,! [X0] : ! [X1] : ( ~ r(X0,X1) | c(X1) ) ).
+fof(c_162,axiom,! [X0] : ! [X1] : ( ~ r(X0,X1) | t(X0,X1) ) ).
+fof(c_164,axiom,! [X0] : ! [X1] : ( ~ s(X0,X1) | t(X0,X1) ) ).
+fof(c_166,axiom,! [X0] : ! [X1] : ( ~ s(X0,X1) | d(X1) ) ).
+fof(c_168,axiom,! [X0] : ( ~ e(X0) | s1most(X0) ) ).
+fof(c_170,axiom,! [X0] : ( ~ e(X0) | r1most(X0) ) ).
+fof(c_172,axiom,! [X0] : ( ~ e(X0) | t3least(X0) ) ).
+fof(c_174,axiom,! [X0] : ( ~ t3least(X0) | ~ equalish(u8r2(X0),u8r1(X0)) ) ).
+fof(c_175,axiom,! [X0] : ( ~ equalish(u8r2(X0),u8r1(X0)) | ~ t3least(X0) ) ).
+fof(c_176,axiom,! [X0] : ( ~ t3least(X0) | ~ equalish(u8r3(X0),u8r1(X0)) ) ).
+fof(c_177,axiom,! [X0] : ( ~ equalish(u8r3(X0),u8r1(X0)) | ~ t3least(X0) ) ).
+fof(c_178,axiom,! [X0] : ( ~ t3least(X0) | ~ equalish(u8r3(X0),u8r2(X0)) ) ).
+fof(c_179,axiom,! [X0] : ( ~ equalish(u8r3(X0),u8r2(X0)) | ~ t3least(X0) ) ).
+fof(c_180,axiom,! [X0] : ( ~ t3least(X0) | t(X0,u8r1(X0)) ) ).
+fof(c_182,axiom,! [X0] : ( ~ t3least(X0) | t(X0,u8r2(X0)) ) ).
+fof(c_184,axiom,! [X0] : ( ~ t3least(X0) | t(X0,u8r3(X0)) ) ).
+fof(c_194,axiom,! [X0] : ( r1most(X0) | ~ equalish(u9r2(X0),u9r1(X0)) ) ).
+fof(c_195,axiom,! [X0] : ( ~ equalish(u9r2(X0),u9r1(X0)) | r1most(X0) ) ).
+fof(c_196,axiom,! [X0] : ( r1most(X0) | r(X0,u9r1(X0)) ) ).
+fof(c_197,axiom,! [X0] : ( r(X0,u9r1(X0)) | r1most(X0) ) ).
+fof(c_198,axiom,! [X0] : ( r1most(X0) | r(X0,u9r2(X0)) ) ).
+fof(c_199,axiom,! [X0] : ( r(X0,u9r2(X0)) | r1most(X0) ) ).
+fof(c_202,axiom,! [X0] : ( s1most(X0) | ~ equalish(u10r2(X0),u10r1(X0)) ) ).
+fof(c_203,axiom,! [X0] : ( ~ equalish(u10r2(X0),u10r1(X0)) | s1most(X0) ) ).
+fof(c_204,axiom,! [X0] : ( s1most(X0) | s(X0,u10r1(X0)) ) ).
+fof(c_205,axiom,! [X0] : ( s(X0,u10r1(X0)) | s1most(X0) ) ).
+fof(c_206,axiom,! [X0] : ( s1most(X0) | s(X0,u10r2(X0)) ) ).
+fof(c_207,axiom,! [X0] : ( s(X0,u10r2(X0)) | s1most(X0) ) ).
+fof(c_303,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ p(X0,X1) | ~ p(X0,X2) | equalish(X1,X2) | c(X0) ) ).
+fof(c_304,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ p(X0,X1) | ~ p(X0,X2) | ~ d(X0) | equalish(X1,X2) ) ).

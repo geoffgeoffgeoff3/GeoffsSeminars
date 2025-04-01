@@ -1,0 +1,9 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ! [X2] : add(multiply(X0,X1),multiply(X2,X1)) = multiply(X1,add(X0,X2)) ).
+fof(c_50,axiom,! [X0] : add(X0,inverse(X0)) = one ).
+fof(c_51,axiom,! [X0] : ! [X1] : add(multiply(X0,inverse(X0)),add(multiply(X0,X1),multiply(inverse(X0),X1))) = X1 ).
+fof(c_52,axiom,! [X0] : ! [X1] : add(multiply(X0,inverse(X1)),add(multiply(X0,X1),multiply(inverse(X1),X1))) = X0 ).
+fof(c_53,axiom,! [X0] : ! [X1] : add(multiply(X0,inverse(X1)),add(multiply(X0,X0),multiply(inverse(X1),X0))) = X0 ).
+fof(c_54,axiom,add(a,a) != a ).
+fof(c_70,axiom,! [X0] : ! [X1] : add(multiply(X0,inverse(X1)),multiply(X0,add(X0,inverse(X1)))) = X0 ).
+fof(c_71,axiom,! [X0] : ! [X1] : add(multiply(X0,inverse(X1)),multiply(X1,add(X0,inverse(X1)))) = X0 ).
+fof(c_72,axiom,! [X0] : ! [X1] : add(multiply(X0,inverse(X0)),multiply(X1,one)) = X1 ).

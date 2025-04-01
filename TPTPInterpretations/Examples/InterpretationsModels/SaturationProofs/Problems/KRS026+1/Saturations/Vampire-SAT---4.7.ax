@@ -1,0 +1,5 @@
+fof(u26,axiom,! [X0] : ( xsd_string(X0) | xsd_integer(X0) ) ).
+fof(u25,axiom,! [X0] : ( ~ xsd_string(X0) | ~ xsd_integer(X0) ) ).
+fof(u23,axiom,! [X0] : cowlThing(X0) ).
+fof(u24,axiom,! [X0] : ~ cowlNothing(X0) ).
+fof(u39,axiom,! [X0] : ! [X1] : X0 = X1 ).

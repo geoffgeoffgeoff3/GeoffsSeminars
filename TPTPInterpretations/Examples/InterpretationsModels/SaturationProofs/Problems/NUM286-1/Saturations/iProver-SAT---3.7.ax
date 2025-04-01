@@ -1,0 +1,9 @@
+fof(c_49,axiom,! [X0] : equalish(add(X0,n0),X0) ).
+fof(c_50,axiom,! [X0] : ! [X1] : equalish(add(X0,successor(X1)),successor(add(X0,X1))) ).
+fof(c_51,axiom,! [X0] : equalish(multiply(X0,n0),n0) ).
+fof(c_52,axiom,! [X0] : ! [X1] : equalish(multiply(X0,successor(X1)),add(multiply(X0,X1),X0)) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ equalish(successor(X0),successor(X1)) | equalish(X0,X1) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ equalish(X0,X1) | equalish(successor(X0),successor(X1)) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( equalish(X0,X1) | ~ equalish(successor(X0),successor(X1)) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ equalish(successor(X0),successor(X1)) | equalish(X0,X1) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( ~ equalish(X0,X1) | equalish(successor(X0),successor(X1)) ) ).

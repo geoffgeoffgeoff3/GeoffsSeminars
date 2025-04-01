@@ -1,0 +1,92 @@
+fof(clause7,axiom,! [X1] : ! [X3] : ! [X2] : ( ssSkC0 | customer(X1,skf30(X1,X3)) | ~ coffee(X1,X2) | ~ actual_world(X1) ) ).
+fof(clause3,axiom,ssSkC0 | coffee(skc16,skc17) ).
+fof(clause1,axiom,actual_world(skc16) ).
+fof(clause20,axiom,! [X2] : ! [X1] : ( ssSkC0 | agent(skc16,skf21(X2),skf22(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause21,axiom,! [X2] : ! [X1] : ( ssSkC0 | patient(skc16,skf20(X2),skf22(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause17,axiom,! [X2] : ! [X1] : ( ssSkC0 | patient(skc16,skf21(X2),skc17) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause16,axiom,! [X2] : ! [X1] : ( ssSkC0 | see(skc16,skf20(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause13,axiom,! [X2] : ! [X1] : ( ssSkC0 | event(skc16,skf20(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause12,axiom,! [X2] : ! [X1] : ( ssSkC0 | event(skc16,skf21(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause14,axiom,! [X2] : ! [X1] : ( ssSkC0 | past(skc16,skf20(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause11,axiom,! [X2] : ! [X1] : ( ssSkC0 | past(skc16,skf21(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause15,axiom,! [X2] : ! [X1] : ( ssSkC0 | nonreflexive(skc16,skf20(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause18,axiom,! [X1] : ( ssSkC0 | agent(skc16,skf20(X1),X1) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause10,axiom,! [X2] : ! [X1] : ( ssSkC0 | nonreflexive(skc16,skf21(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause9,axiom,! [X2] : ! [X1] : ( ssSkC0 | drink(skc16,skf21(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause8,axiom,! [X2] : ! [X1] : ( ssSkC0 | human_person(skc16,skf22(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(clause19,axiom,! [X1] : ! [X2] : ( ssSkC0 | in(X1,skf30(X1,X2),skf26(X1,X2)) | ~ coffee(X1,X2) | ~ actual_world(X1) ) ).
+fof(clause6,axiom,! [X1] : ! [X3] : ! [X2] : ( ssSkC0 | restaurant(X1,skf26(X1,X3)) | ~ coffee(X1,X2) | ~ actual_world(X1) ) ).
+fof(clause38,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ coffee(X1,X2) | ~ see(X1,X3) | ~ nonreflexive(X1,X3) | ~ past(X1,X3) | ~ agent(X1,X3,skf17(X1,X4,X2)) | ~ event(X1,X3) | ~ event(X1,X5) | ~ patient(X1,X5,X2) | ~ past(X1,X5) | ~ nonreflexive(X1,X5) | ~ drink(X1,X5) | ~ patient(X1,X3,X6) | ~ agent(X1,X5,X6) | ~ human_person(X1,X6) | ~ restaurant(X1,X4) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(clause37,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ssSkC0 | ~ see(X1,X2) | ~ nonreflexive(X1,X2) | ~ past(X1,X2) | ~ agent(X1,X2,skf30(X1,X3)) | ~ event(X1,X2) | ~ event(X1,X4) | ~ patient(X1,X4,X3) | ~ past(X1,X4) | ~ nonreflexive(X1,X4) | ~ drink(X1,X4) | ~ patient(X1,X2,X5) | ~ agent(X1,X4,X5) | ~ human_person(X1,X5) | ~ coffee(X1,X3) | ~ actual_world(X1) ) ).
+fof(clause32,axiom,! [X1] : ! [X3] : ! [X4] : ! [X2] : ( in(X1,skf17(X1,X3,X4),X3) | ~ coffee(X1,X2) | ~ restaurant(X1,X3) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(clause35,axiom,! [X3] : ! [X1] : ! [X2] : ( agent(skc5,skf12(X3),skf13(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause22,axiom,! [X1] : ! [X4] : ! [X5] : ! [X2] : ! [X3] : ( customer(X1,skf17(X1,X4,X5)) | ~ coffee(X1,X2) | ~ restaurant(X1,X3) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(clause36,axiom,! [X3] : ! [X1] : ! [X2] : ( patient(skc5,skf11(X3),skf13(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause33,axiom,! [X2] : ! [X1] : ( agent(skc5,skf11(X2),X2) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause34,axiom,! [X3] : ! [X1] : ! [X2] : ( patient(skc5,skf12(X3),skc6) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause23,axiom,! [X3] : ! [X1] : ! [X2] : ( see(skc5,skf11(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause27,axiom,! [X3] : ! [X1] : ! [X2] : ( event(skc5,skf12(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause26,axiom,! [X3] : ! [X1] : ! [X2] : ( event(skc5,skf11(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause28,axiom,! [X3] : ! [X1] : ! [X2] : ( past(skc5,skf12(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause25,axiom,! [X3] : ! [X1] : ! [X2] : ( past(skc5,skf11(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause29,axiom,! [X3] : ! [X1] : ! [X2] : ( nonreflexive(skc5,skf12(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause24,axiom,! [X3] : ! [X1] : ! [X2] : ( nonreflexive(skc5,skf11(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause30,axiom,! [X3] : ! [X1] : ! [X2] : ( drink(skc5,skf12(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause31,axiom,! [X3] : ! [X1] : ! [X2] : ( human_person(skc5,skf13(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(clause4,axiom,ssSkC0 | restaurant(skc16,skc18) ).
+fof(clause5,axiom,coffee(skc5,skc6) | ~ ssSkC0 ).
+fof(clause2,axiom,actual_world(skc5) ).
+fof(c_0_38,axiom,! [X1] : ! [X3] : ! [X2] : ( ssSkC0 | customer(X1,skf30(X1,X3)) | ~ coffee(X1,X2) | ~ actual_world(X1) ) ).
+fof(c_0_39,axiom,ssSkC0 | coffee(skc16,skc17) ).
+fof(c_0_40,axiom,actual_world(skc16) ).
+fof(c_0_41,axiom,! [X2] : ! [X1] : ( ssSkC0 | agent(skc16,skf21(X2),skf22(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_42,axiom,! [X1] : ( customer(skc16,skf30(skc16,X1)) | ssSkC0 ) ).
+fof(c_0_43,axiom,! [X2] : ! [X1] : ( ssSkC0 | patient(skc16,skf20(X2),skf22(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_44,axiom,! [X2] : ! [X1] : ( ssSkC0 | patient(skc16,skf21(X2),skc17) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_45,axiom,! [X2] : ! [X1] : ( ssSkC0 | see(skc16,skf20(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_46,axiom,! [X2] : ! [X1] : ( ssSkC0 | event(skc16,skf20(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_47,axiom,! [X2] : ! [X1] : ( ssSkC0 | event(skc16,skf21(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_48,axiom,! [X2] : ! [X1] : ( ssSkC0 | past(skc16,skf20(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_49,axiom,! [X2] : ! [X1] : ( ssSkC0 | past(skc16,skf21(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_50,axiom,! [X2] : ! [X1] : ( ssSkC0 | nonreflexive(skc16,skf20(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_51,axiom,! [X1] : ( ssSkC0 | agent(skc16,skf20(X1),X1) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_52,axiom,! [X2] : ! [X1] : ( ssSkC0 | nonreflexive(skc16,skf21(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_53,axiom,! [X2] : ! [X1] : ( ssSkC0 | drink(skc16,skf21(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_54,axiom,! [X2] : ! [X1] : ( ssSkC0 | human_person(skc16,skf22(X2)) | ~ in(skc16,X1,skc18) | ~ customer(skc16,X1) ) ).
+fof(c_0_55,axiom,! [X1] : ! [X2] : ( ssSkC0 | in(X1,skf30(X1,X2),skf26(X1,X2)) | ~ coffee(X1,X2) | ~ actual_world(X1) ) ).
+fof(c_0_56,axiom,! [X1] : ! [X3] : ! [X2] : ( ssSkC0 | restaurant(X1,skf26(X1,X3)) | ~ coffee(X1,X2) | ~ actual_world(X1) ) ).
+fof(c_0_57,axiom,! [X1] : ! [X2] : ( agent(skc16,skf21(X1),skf22(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_58,axiom,! [X1] : ! [X2] : ( patient(skc16,skf20(X1),skf22(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_59,axiom,! [X1] : ! [X2] : ( patient(skc16,skf21(X1),skc17) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_60,axiom,! [X1] : ! [X2] : ( see(skc16,skf20(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_61,axiom,! [X1] : ! [X2] : ( event(skc16,skf20(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_62,axiom,! [X1] : ! [X2] : ( event(skc16,skf21(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_63,axiom,! [X1] : ! [X2] : ( past(skc16,skf20(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_64,axiom,! [X1] : ! [X2] : ( past(skc16,skf21(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_65,axiom,! [X1] : ! [X2] : ( nonreflexive(skc16,skf20(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_66,axiom,! [X1] : ( agent(skc16,skf20(skf30(skc16,X1)),skf30(skc16,X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X1),skc18) ) ).
+fof(c_0_67,axiom,! [X1] : ! [X2] : ( nonreflexive(skc16,skf21(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_68,axiom,! [X1] : ! [X2] : ( drink(skc16,skf21(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_69,axiom,! [X1] : ! [X2] : ( human_person(skc16,skf22(X1)) | ssSkC0 | ~ in(skc16,skf30(skc16,X2),skc18) ) ).
+fof(c_0_70,axiom,in(skc16,skf30(skc16,skc17),skf26(skc16,skc17)) | ssSkC0 ).
+fof(c_0_71,axiom,! [X1] : ( restaurant(skc16,skf26(skc16,X1)) | ssSkC0 ) ).
+fof(c_0_72,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ coffee(X1,X2) | ~ see(X1,X3) | ~ nonreflexive(X1,X3) | ~ past(X1,X3) | ~ agent(X1,X3,skf17(X1,X4,X2)) | ~ event(X1,X3) | ~ event(X1,X5) | ~ patient(X1,X5,X2) | ~ past(X1,X5) | ~ nonreflexive(X1,X5) | ~ drink(X1,X5) | ~ patient(X1,X3,X6) | ~ agent(X1,X5,X6) | ~ human_person(X1,X6) | ~ restaurant(X1,X4) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(c_0_73,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ssSkC0 | ~ see(X1,X2) | ~ nonreflexive(X1,X2) | ~ past(X1,X2) | ~ agent(X1,X2,skf30(X1,X3)) | ~ event(X1,X2) | ~ event(X1,X4) | ~ patient(X1,X4,X3) | ~ past(X1,X4) | ~ nonreflexive(X1,X4) | ~ drink(X1,X4) | ~ patient(X1,X2,X5) | ~ agent(X1,X4,X5) | ~ human_person(X1,X5) | ~ coffee(X1,X3) | ~ actual_world(X1) ) ).
+fof(c_0_74,axiom,! [X1] : ! [X3] : ! [X4] : ! [X2] : ( in(X1,skf17(X1,X3,X4),X3) | ~ coffee(X1,X2) | ~ restaurant(X1,X3) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(c_0_75,axiom,! [X3] : ! [X1] : ! [X2] : ( agent(skc5,skf12(X3),skf13(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_76,axiom,! [X1] : ! [X4] : ! [X5] : ! [X2] : ! [X3] : ( customer(X1,skf17(X1,X4,X5)) | ~ coffee(X1,X2) | ~ restaurant(X1,X3) | ~ actual_world(X1) | ~ ssSkC0 ) ).
+fof(c_0_77,axiom,! [X3] : ! [X1] : ! [X2] : ( patient(skc5,skf11(X3),skf13(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_78,axiom,! [X2] : ! [X1] : ( agent(skc5,skf11(X2),X2) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_79,axiom,! [X3] : ! [X1] : ! [X2] : ( patient(skc5,skf12(X3),skc6) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_80,axiom,! [X3] : ! [X1] : ! [X2] : ( see(skc5,skf11(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_81,axiom,! [X3] : ! [X1] : ! [X2] : ( event(skc5,skf12(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_82,axiom,! [X3] : ! [X1] : ! [X2] : ( event(skc5,skf11(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_83,axiom,! [X3] : ! [X1] : ! [X2] : ( past(skc5,skf12(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_84,axiom,! [X3] : ! [X1] : ! [X2] : ( past(skc5,skf11(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_85,axiom,! [X3] : ! [X1] : ! [X2] : ( nonreflexive(skc5,skf12(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_86,axiom,! [X3] : ! [X1] : ! [X2] : ( nonreflexive(skc5,skf11(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_87,axiom,! [X3] : ! [X1] : ! [X2] : ( drink(skc5,skf12(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_88,axiom,! [X3] : ! [X1] : ! [X2] : ( human_person(skc5,skf13(X3)) | ~ restaurant(skc5,X1) | ~ in(skc5,X2,X1) | ~ customer(skc5,X2) | ~ ssSkC0 ) ).
+fof(c_0_89,axiom,ssSkC0 | restaurant(skc16,skc18) ).
+fof(c_0_90,axiom,coffee(skc5,skc6) | ~ ssSkC0 ).
+fof(c_0_91,axiom,actual_world(skc5) ).

@@ -1,0 +1,2 @@
+include('Saturations/NLP227-10/Saturations/iProver-SAT---3.7.ax').
+fof(clause26,conjecture,! [U] : ! [V] : ifeq3(abstraction(U,V),true,unisex(U,V),true) = true ).

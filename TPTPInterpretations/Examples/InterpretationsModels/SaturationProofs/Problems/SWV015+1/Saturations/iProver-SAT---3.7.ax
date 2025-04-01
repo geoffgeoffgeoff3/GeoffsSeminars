@@ -1,0 +1,108 @@
+fof(f2,axiom,party_of_protocol(a) ).
+fof(f3,axiom,message(sent(a,b,pair(a,an_a_nonce))) ).
+fof(f4,axiom,a_stored(pair(b,an_a_nonce)) ).
+fof(f5,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ( a_stored(pair(X4,X5)) & message(sent(t,a,triple(encrypt(quadruple(X4,X5,X2,X1),at),X3,X0))) ) => ( a_holds(key(X2,X4)) & message(sent(a,X4,pair(X3,encrypt(X0,X2)))) ) ) ).
+fof(f7,axiom,party_of_protocol(b) ).
+fof(f8,axiom,fresh_to_b(an_a_nonce) ).
+fof(f9,axiom,! [X0] : ! [X1] : ( ( fresh_to_b(X1) & message(sent(X0,b,pair(X0,X1))) ) => ( b_stored(pair(X0,X1)) & message(sent(b,t,triple(b,generate_b_nonce(X1),encrypt(triple(X0,X1,generate_expiration_time(X1)),bt)))) ) ) ).
+fof(f11,axiom,t_holds(key(at,a)) ).
+fof(f12,axiom,t_holds(key(bt,b)) ).
+fof(f13,axiom,party_of_protocol(t) ).
+fof(f14,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ( a_nonce(X3) & t_holds(key(X6,X2)) & t_holds(key(X5,X0)) & message(sent(X0,t,triple(X0,X1,encrypt(triple(X2,X3,X4),X5)))) ) => message(sent(t,X2,triple(encrypt(quadruple(X0,X3,generate_key(X3),X4),X6),encrypt(triple(X2,generate_key(X3),X4),X5),X1))) ) ).
+fof(f15,axiom,! [X0] : ! [X1] : ! [X2] : ( message(sent(X0,X1,X2)) => intruder_message(X2) ) ).
+fof(f16,axiom,! [X0] : ! [X1] : ( intruder_message(pair(X0,X1)) => ( intruder_message(X1) & intruder_message(X0) ) ) ).
+fof(f17,axiom,! [X0] : ! [X1] : ! [X2] : ( intruder_message(triple(X0,X1,X2)) => ( intruder_message(X2) & intruder_message(X1) & intruder_message(X0) ) ) ).
+fof(f18,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( intruder_message(quadruple(X0,X1,X2,X3)) => ( intruder_message(X3) & intruder_message(X2) & intruder_message(X1) & intruder_message(X0) ) ) ).
+fof(f19,axiom,! [X0] : ! [X1] : ( ( intruder_message(X1) & intruder_message(X0) ) => intruder_message(pair(X0,X1)) ) ).
+fof(f20,axiom,! [X0] : ! [X1] : ! [X2] : ( ( intruder_message(X2) & intruder_message(X1) & intruder_message(X0) ) => intruder_message(triple(X0,X1,X2)) ) ).
+fof(f21,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ( intruder_message(X3) & intruder_message(X2) & intruder_message(X1) & intruder_message(X0) ) => intruder_message(quadruple(X0,X1,X2,X3)) ) ).
+fof(f22,axiom,! [X0] : ! [X1] : ! [X2] : ( ( party_of_protocol(X2) & intruder_holds(key(X1,X2)) & intruder_message(encrypt(X0,X1)) ) => intruder_message(X1) ) ).
+fof(f23,axiom,! [X0] : ! [X1] : ! [X2] : ( ( party_of_protocol(X2) & party_of_protocol(X1) & intruder_message(X0) ) => message(sent(X1,X2,X0)) ) ).
+fof(f24,axiom,! [X1] : ! [X2] : ( ( party_of_protocol(X2) & intruder_message(X1) ) => intruder_holds(key(X1,X2)) ) ).
+fof(f25,axiom,! [X0] : ! [X1] : ! [X2] : ( ( party_of_protocol(X2) & intruder_holds(key(X1,X2)) & intruder_message(X0) ) => intruder_message(encrypt(X0,X1)) ) ).
+fof(f27,axiom,! [X0] : ~ a_nonce(generate_key(X0)) ).
+fof(f32,axiom,! [X0] : ! [X1] : ( ( party_of_protocol(X1) & intruder_message(X0) ) => intruder_holds(key(X0,X1)) ) ).
+fof(f35,axiom,! [X0] : ! [X1] : ( ( fresh_to_b(X1) & message(sent(X0,b,pair(X0,X1))) ) => message(sent(b,t,triple(b,generate_b_nonce(X1),encrypt(triple(X0,X1,generate_expiration_time(X1)),bt)))) ) ).
+fof(f36,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ( a_stored(pair(X4,X5)) & message(sent(t,a,triple(encrypt(quadruple(X4,X5,X2,X1),at),X3,X0))) ) => message(sent(a,X4,pair(X3,encrypt(X0,X2)))) ) ).
+fof(f38,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( message(sent(a,X4,pair(X3,encrypt(X0,X2)))) | ~ a_stored(pair(X4,X5)) | ~ message(sent(t,a,triple(encrypt(quadruple(X4,X5,X2,X1),at),X3,X0))) ) ).
+fof(f39,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( message(sent(a,X4,pair(X3,encrypt(X0,X2)))) | ~ a_stored(pair(X4,X5)) | ~ message(sent(t,a,triple(encrypt(quadruple(X4,X5,X2,X1),at),X3,X0))) ) ).
+fof(f40,axiom,! [X0] : ! [X1] : ( message(sent(b,t,triple(b,generate_b_nonce(X1),encrypt(triple(X0,X1,generate_expiration_time(X1)),bt)))) | ~ fresh_to_b(X1) | ~ message(sent(X0,b,pair(X0,X1))) ) ).
+fof(f41,axiom,! [X0] : ! [X1] : ( message(sent(b,t,triple(b,generate_b_nonce(X1),encrypt(triple(X0,X1,generate_expiration_time(X1)),bt)))) | ~ fresh_to_b(X1) | ~ message(sent(X0,b,pair(X0,X1))) ) ).
+fof(f42,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( message(sent(t,X2,triple(encrypt(quadruple(X0,X3,generate_key(X3),X4),X6),encrypt(triple(X2,generate_key(X3),X4),X5),X1))) | ~ a_nonce(X3) | ~ t_holds(key(X6,X2)) | ~ t_holds(key(X5,X0)) | ~ message(sent(X0,t,triple(X0,X1,encrypt(triple(X2,X3,X4),X5)))) ) ).
+fof(f43,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( message(sent(t,X2,triple(encrypt(quadruple(X0,X3,generate_key(X3),X4),X6),encrypt(triple(X2,generate_key(X3),X4),X5),X1))) | ~ a_nonce(X3) | ~ t_holds(key(X6,X2)) | ~ t_holds(key(X5,X0)) | ~ message(sent(X0,t,triple(X0,X1,encrypt(triple(X2,X3,X4),X5)))) ) ).
+fof(f44,axiom,! [X0] : ! [X1] : ! [X2] : ( intruder_message(X2) | ~ message(sent(X0,X1,X2)) ) ).
+fof(f45,axiom,! [X0] : ! [X1] : ( ( intruder_message(X1) & intruder_message(X0) ) | ~ intruder_message(pair(X0,X1)) ) ).
+fof(f46,axiom,! [X0] : ! [X1] : ! [X2] : ( ( intruder_message(X2) & intruder_message(X1) & intruder_message(X0) ) | ~ intruder_message(triple(X0,X1,X2)) ) ).
+fof(f47,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ( intruder_message(X3) & intruder_message(X2) & intruder_message(X1) & intruder_message(X0) ) | ~ intruder_message(quadruple(X0,X1,X2,X3)) ) ).
+fof(f48,axiom,! [X0] : ! [X1] : ( intruder_message(pair(X0,X1)) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f49,axiom,! [X0] : ! [X1] : ( intruder_message(pair(X0,X1)) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f50,axiom,! [X0] : ! [X1] : ! [X2] : ( intruder_message(triple(X0,X1,X2)) | ~ intruder_message(X2) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f51,axiom,! [X0] : ! [X1] : ! [X2] : ( intruder_message(triple(X0,X1,X2)) | ~ intruder_message(X2) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f52,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( intruder_message(quadruple(X0,X1,X2,X3)) | ~ intruder_message(X3) | ~ intruder_message(X2) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f53,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( intruder_message(quadruple(X0,X1,X2,X3)) | ~ intruder_message(X3) | ~ intruder_message(X2) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f54,axiom,! [X0] : ! [X1] : ! [X2] : ( intruder_message(X1) | ~ party_of_protocol(X2) | ~ intruder_holds(key(X1,X2)) | ~ intruder_message(encrypt(X0,X1)) ) ).
+fof(f55,axiom,! [X0] : ! [X1] : ! [X2] : ( intruder_message(X1) | ~ party_of_protocol(X2) | ~ intruder_holds(key(X1,X2)) | ~ intruder_message(encrypt(X0,X1)) ) ).
+fof(f56,axiom,! [X0] : ! [X1] : ! [X2] : ( message(sent(X1,X2,X0)) | ~ party_of_protocol(X2) | ~ party_of_protocol(X1) | ~ intruder_message(X0) ) ).
+fof(f57,axiom,! [X0] : ! [X1] : ! [X2] : ( message(sent(X1,X2,X0)) | ~ party_of_protocol(X2) | ~ party_of_protocol(X1) | ~ intruder_message(X0) ) ).
+fof(f58,axiom,! [X0] : ! [X1] : ( intruder_holds(key(X0,X1)) | ~ party_of_protocol(X1) | ~ intruder_message(X0) ) ).
+fof(f59,axiom,! [X0] : ! [X1] : ( intruder_holds(key(X0,X1)) | ~ party_of_protocol(X1) | ~ intruder_message(X0) ) ).
+fof(f60,axiom,! [X0] : ! [X1] : ! [X2] : ( intruder_message(encrypt(X0,X1)) | ~ party_of_protocol(X2) | ~ intruder_holds(key(X1,X2)) | ~ intruder_message(X0) ) ).
+fof(f61,axiom,! [X0] : ! [X1] : ! [X2] : ( intruder_message(encrypt(X0,X1)) | ~ party_of_protocol(X2) | ~ intruder_holds(key(X1,X2)) | ~ intruder_message(X0) ) ).
+fof(f63,axiom,party_of_protocol(a) ).
+fof(f64,axiom,message(sent(a,b,pair(a,an_a_nonce))) ).
+fof(f65,axiom,a_stored(pair(b,an_a_nonce)) ).
+fof(f66,axiom,! [X4] : ! [X2] : ! [X0] : ! [X5] : ! [X3] : ! [X1] : ( message(sent(a,X4,pair(X3,encrypt(X0,X2)))) | ~ a_stored(pair(X4,X5)) | ~ message(sent(t,a,triple(encrypt(quadruple(X4,X5,X2,X1),at),X3,X0))) ) ).
+fof(f67,axiom,party_of_protocol(b) ).
+fof(f68,axiom,fresh_to_b(an_a_nonce) ).
+fof(f69,axiom,! [X0] : ! [X1] : ( message(sent(b,t,triple(b,generate_b_nonce(X1),encrypt(triple(X0,X1,generate_expiration_time(X1)),bt)))) | ~ fresh_to_b(X1) | ~ message(sent(X0,b,pair(X0,X1))) ) ).
+fof(f70,axiom,t_holds(key(at,a)) ).
+fof(f71,axiom,t_holds(key(bt,b)) ).
+fof(f72,axiom,party_of_protocol(t) ).
+fof(f73,axiom,! [X6] : ! [X4] : ! [X2] : ! [X0] : ! [X5] : ! [X3] : ! [X1] : ( message(sent(t,X2,triple(encrypt(quadruple(X0,X3,generate_key(X3),X4),X6),encrypt(triple(X2,generate_key(X3),X4),X5),X1))) | ~ a_nonce(X3) | ~ t_holds(key(X6,X2)) | ~ t_holds(key(X5,X0)) | ~ message(sent(X0,t,triple(X0,X1,encrypt(triple(X2,X3,X4),X5)))) ) ).
+fof(f74,axiom,! [X2] : ! [X0] : ! [X1] : ( intruder_message(X2) | ~ message(sent(X0,X1,X2)) ) ).
+fof(f75,axiom,! [X0] : ! [X1] : ( intruder_message(X0) | ~ intruder_message(pair(X0,X1)) ) ).
+fof(f76,axiom,! [X0] : ! [X1] : ( intruder_message(X1) | ~ intruder_message(pair(X0,X1)) ) ).
+fof(f77,axiom,! [X2] : ! [X0] : ! [X1] : ( intruder_message(X0) | ~ intruder_message(triple(X0,X1,X2)) ) ).
+fof(f78,axiom,! [X2] : ! [X0] : ! [X1] : ( intruder_message(X1) | ~ intruder_message(triple(X0,X1,X2)) ) ).
+fof(f79,axiom,! [X2] : ! [X0] : ! [X1] : ( intruder_message(X2) | ~ intruder_message(triple(X0,X1,X2)) ) ).
+fof(f80,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( intruder_message(X0) | ~ intruder_message(quadruple(X0,X1,X2,X3)) ) ).
+fof(f81,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( intruder_message(X1) | ~ intruder_message(quadruple(X0,X1,X2,X3)) ) ).
+fof(f82,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( intruder_message(X2) | ~ intruder_message(quadruple(X0,X1,X2,X3)) ) ).
+fof(f83,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( intruder_message(X3) | ~ intruder_message(quadruple(X0,X1,X2,X3)) ) ).
+fof(f84,axiom,! [X0] : ! [X1] : ( intruder_message(pair(X0,X1)) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f85,axiom,! [X2] : ! [X0] : ! [X1] : ( intruder_message(triple(X0,X1,X2)) | ~ intruder_message(X2) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f86,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( intruder_message(quadruple(X0,X1,X2,X3)) | ~ intruder_message(X3) | ~ intruder_message(X2) | ~ intruder_message(X1) | ~ intruder_message(X0) ) ).
+fof(f87,axiom,! [X2] : ! [X0] : ! [X1] : ( intruder_message(X1) | ~ party_of_protocol(X2) | ~ intruder_holds(key(X1,X2)) | ~ intruder_message(encrypt(X0,X1)) ) ).
+fof(f88,axiom,! [X2] : ! [X0] : ! [X1] : ( message(sent(X1,X2,X0)) | ~ party_of_protocol(X2) | ~ party_of_protocol(X1) | ~ intruder_message(X0) ) ).
+fof(f89,axiom,! [X0] : ! [X1] : ( intruder_holds(key(X0,X1)) | ~ party_of_protocol(X1) | ~ intruder_message(X0) ) ).
+fof(f90,axiom,! [X2] : ! [X0] : ! [X1] : ( intruder_message(encrypt(X0,X1)) | ~ party_of_protocol(X2) | ~ intruder_holds(key(X1,X2)) | ~ intruder_message(X0) ) ).
+fof(f92,axiom,! [X0] : ~ a_nonce(generate_key(X0)) ).
+fof(c_49,axiom,party_of_protocol(a) ).
+fof(c_50,axiom,message(sent(a,b,pair(a,an_a_nonce))) ).
+fof(c_51,axiom,a_stored(pair(b,an_a_nonce)) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ message(sent(t,a,triple(encrypt(quadruple(X0,X1,X2,X3),at),X4,X5))) | ~ a_stored(pair(X0,X1)) | message(sent(a,X0,pair(X4,encrypt(X5,X2)))) ) ).
+fof(c_53,axiom,party_of_protocol(b) ).
+fof(c_54,axiom,fresh_to_b(an_a_nonce) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ message(sent(X0,b,pair(X0,X1))) | ~ fresh_to_b(X1) | message(sent(b,t,triple(b,generate_b_nonce(X1),encrypt(triple(X0,X1,generate_expiration_time(X1)),bt)))) ) ).
+fof(c_56,axiom,t_holds(key(at,a)) ).
+fof(c_57,axiom,t_holds(key(bt,b)) ).
+fof(c_58,axiom,party_of_protocol(t) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ message(sent(X0,t,triple(X0,X1,encrypt(triple(X2,X3,X4),X5)))) | ~ t_holds(key(X5,X0)) | ~ t_holds(key(X6,X2)) | ~ a_nonce(X3) | message(sent(t,X2,triple(encrypt(quadruple(X0,X3,generate_key(X3),X4),X6),encrypt(triple(X2,generate_key(X3),X4),X5),X1))) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ message(sent(X0,X1,X2)) | intruder_message(X2) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ intruder_message(pair(X0,X1)) | intruder_message(X1) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ intruder_message(pair(X0,X1)) | intruder_message(X0) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ intruder_message(triple(X0,X1,X2)) | intruder_message(X2) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ intruder_message(triple(X0,X1,X2)) | intruder_message(X1) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ intruder_message(triple(X0,X1,X2)) | intruder_message(X0) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ intruder_message(quadruple(X0,X1,X2,X3)) | intruder_message(X3) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ intruder_message(quadruple(X0,X1,X2,X3)) | intruder_message(X2) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ intruder_message(quadruple(X0,X1,X2,X3)) | intruder_message(X1) ) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ intruder_message(quadruple(X0,X1,X2,X3)) | intruder_message(X0) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( ~ intruder_message(X0) | ~ intruder_message(X1) | intruder_message(pair(X0,X1)) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ intruder_message(X0) | ~ intruder_message(X1) | ~ intruder_message(X2) | intruder_message(triple(X0,X2,X1)) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ intruder_message(X0) | ~ intruder_message(X1) | ~ intruder_message(X2) | ~ intruder_message(X3) | intruder_message(quadruple(X1,X3,X2,X0)) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ intruder_message(encrypt(X0,X1)) | ~ intruder_holds(key(X1,X2)) | ~ party_of_protocol(X2) | intruder_message(X1) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ party_of_protocol(X0) | ~ party_of_protocol(X1) | ~ intruder_message(X2) | message(sent(X1,X0,X2)) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ( ~ party_of_protocol(X0) | ~ intruder_message(X1) | intruder_holds(key(X1,X0)) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ intruder_holds(key(X0,X1)) | ~ party_of_protocol(X1) | ~ intruder_message(X2) | intruder_message(encrypt(X2,X0)) ) ).
+fof(c_78,axiom,! [X0] : ~ a_nonce(generate_key(X0)) ).

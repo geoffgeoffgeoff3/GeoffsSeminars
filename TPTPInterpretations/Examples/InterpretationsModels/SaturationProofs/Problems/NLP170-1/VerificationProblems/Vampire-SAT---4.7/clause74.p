@@ -1,0 +1,2 @@
+include('Saturations/NLP170-1/Saturations/Vampire-SAT---4.7.ax').
+fof(clause74,conjecture,city(skc9,skc18) ).

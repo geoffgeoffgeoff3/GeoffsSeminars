@@ -1,0 +1,49 @@
+fof(u186,axiom,p1(sK1(sK0)) | ~ p1(sK0) ).
+fof(u185,axiom,p1(sK2(sK0)) | ~ p1(sK0) ).
+fof(u165,axiom,~ p1(sK1(sK0)) | p1(sK0) ).
+fof(u164,axiom,~ p1(sK2(sK0)) | p1(sK0) ).
+fof(u75,axiom,p100(sK1(sK0)) ).
+fof(u49,axiom,p100(sK2(sK0)) ).
+fof(u30,axiom,p100(sK0) ).
+fof(u45,axiom,p101(sK1(sK0)) ).
+fof(u40,axiom,p101(sK2(sK0)) ).
+fof(u29,axiom,~ p101(sK0) ).
+fof(u44,axiom,~ p102(sK1(sK0)) ).
+fof(u21,axiom,! [X1] : ( ~ p102(sK1(X1)) | p101(X1) | ~ p100(X1) | ~ r1(sK0,X1) ) ).
+fof(u39,axiom,~ p102(sK2(sK0)) ).
+fof(u17,axiom,! [X1] : ( ~ p102(sK2(X1)) | p101(X1) | ~ p100(X1) | ~ r1(sK0,X1) ) ).
+fof(u33,axiom,~ p102(sK0) ).
+fof(u42,axiom,p2(sK1(sK0)) ).
+fof(u38,axiom,~ p2(sK2(sK0)) ).
+fof(u16,axiom,! [X1] : ( ~ p2(sK2(X1)) | p101(X1) | ~ p100(X1) | ~ r1(sK0,X1) ) ).
+fof(u71,axiom,r1(sK0,sK1(sK0)) ).
+fof(u47,axiom,r1(sK0,sK2(sK0)) ).
+fof(u86,axiom,! [X0] : ( r1(X0,sK1(sK0)) | ~ r1(X0,sK0) ) ).
+fof(u58,axiom,! [X0] : ( r1(X0,sK2(sK0)) | ~ r1(X0,sK0) ) ).
+fof(u31,axiom,! [X0] : r1(X0,X0) ).
+fof(u112,axiom,! [X0] : ( ~ r1(sK2(sK0),X0) | ~ p2(X0) | ~ p101(X0) ) ).
+fof(u156,axiom,! [X0] : ( ~ r1(sK2(sK0),X0) | ~ p100(X0) | ~ p1(X0) | p1(sK2(sK0)) ) ).
+fof(u177,axiom,! [X0] : ( ~ r1(sK2(sK0),X0) | ~ p100(X0) | p1(X0) | ~ p1(sK2(sK0)) ) ).
+fof(u118,axiom,~ r1(sK2(sK0),sK0) ).
+fof(u103,axiom,~ r1(sK2(sK0),sK1(sK0)) ).
+fof(u136,axiom,! [X1] : ( ~ r1(sK1(sK0),X1) | p2(X1) | ~ p101(X1) ) ).
+fof(u157,axiom,! [X1] : ( ~ r1(sK1(sK0),X1) | ~ p100(X1) | ~ p1(X1) | p1(sK1(sK0)) ) ).
+fof(u178,axiom,! [X1] : ( ~ r1(sK1(sK0),X1) | ~ p100(X1) | p1(X1) | ~ p1(sK1(sK0)) ) ).
+fof(u142,axiom,~ r1(sK1(sK0),sK0) ).
+fof(u128,axiom,~ r1(sK1(sK0),sK2(sK0)) ).
+fof(u179,axiom,! [X2] : ( ~ r1(sK0,X2) | ~ p100(X2) | p1(X2) | ~ p1(sK0) ) ).
+fof(u158,axiom,! [X2] : ( ~ r1(sK0,X2) | ~ p100(X2) | ~ p1(X2) | p1(sK0) ) ).
+fof(u28,axiom,! [X1] : ( ~ r1(sK0,X1) | p100(X1) | ~ p101(X1) ) ).
+fof(u27,axiom,! [X1] : ( ~ r1(sK0,X1) | p101(X1) | ~ p102(X1) ) ).
+fof(u26,axiom,! [X1] : ! [X2] : ( ~ r1(sK0,X1) | ~ p1(X1) | ~ p100(X2) | p1(X2) | ~ r1(X1,X2) | ~ p100(X1) ) ).
+fof(u25,axiom,! [X1] : ! [X3] : ( ~ r1(sK0,X1) | p1(X1) | ~ p100(X3) | ~ p1(X3) | ~ r1(X1,X3) | ~ p100(X1) ) ).
+fof(u24,axiom,! [X1] : ! [X4] : ( ~ r1(sK0,X1) | ~ p2(X1) | ~ p101(X4) | p2(X4) | ~ r1(X1,X4) | ~ p101(X1) ) ).
+fof(u23,axiom,! [X1] : ! [X5] : ( ~ r1(sK0,X1) | p2(X1) | ~ p101(X5) | ~ p2(X5) | ~ r1(X1,X5) | ~ p101(X1) ) ).
+fof(u22,axiom,! [X1] : ( ~ r1(sK0,X1) | p101(X1) | p101(sK1(X1)) | ~ p100(X1) ) ).
+fof(u20,axiom,! [X1] : ( ~ r1(sK0,X1) | p101(X1) | p2(sK1(X1)) | ~ p100(X1) ) ).
+fof(u19,axiom,! [X1] : ( ~ r1(sK0,X1) | p101(X1) | r1(X1,sK1(X1)) | ~ p100(X1) ) ).
+fof(u18,axiom,! [X1] : ( ~ r1(sK0,X1) | p101(X1) | p101(sK2(X1)) | ~ p100(X1) ) ).
+fof(u15,axiom,! [X1] : ( ~ r1(sK0,X1) | p101(X1) | r1(X1,sK2(X1)) | ~ p100(X1) ) ).
+fof(u32,axiom,! [X1] : ! [X2] : ! [X0] : ( ~ r1(X1,X2) | r1(X0,X2) | ~ r1(X0,X1) ) ).
+fof(u66,axiom,! [X1] : ! [X0] : ( ~ r1(X1,X0) | r1(X1,sK2(sK0)) | ~ r1(X0,sK0) ) ).
+fof(u96,axiom,! [X2] : ! [X1] : ( ~ r1(X2,X1) | r1(X2,sK1(sK0)) | ~ r1(X1,sK0) ) ).

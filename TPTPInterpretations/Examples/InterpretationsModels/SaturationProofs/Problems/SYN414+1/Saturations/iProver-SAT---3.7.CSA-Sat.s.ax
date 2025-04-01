@@ -1,0 +1,38 @@
+fof(f1,axiom,! [X0] : ( ? [X1] : ( f(X1) & h(X0,X1) ) => ? [X2] : ( g(X2) & h(X0,X2) ) ) <=> ! [X3] : ! [X4] : ! [X5] : ( ( f(X4) & h(X3,X4) ) => ( g(X5) & h(X3,X5) ) ) ).
+fof(f2,axiom,~ ( ( ! [X0] : ( ? [X1] : ( f(X1) & h(X0,X1) ) => ? [X2] : ( g(X2) & h(X0,X2) ) ) <=> ! [X3] : ! [X4] : ! [X5] : ( ( f(X4) & h(X3,X4) ) => ( g(X5) & h(X3,X5) ) ) ) ) ).
+fof(f3,axiom,! [X0] : ( ? [X2] : ( g(X2) & h(X0,X2) ) | ! [X1] : ( ~ f(X1) | ~ h(X0,X1) ) ) <~> ! [X3] : ! [X4] : ! [X5] : ( ( g(X5) & h(X3,X5) ) | ~ f(X4) | ~ h(X3,X4) ) ).
+fof(f4,axiom,! [X0] : ( ? [X2] : ( g(X2) & h(X0,X2) ) | ! [X1] : ( ~ f(X1) | ~ h(X0,X1) ) ) <~> ! [X3] : ! [X4] : ! [X5] : ( ( g(X5) & h(X3,X5) ) | ~ f(X4) | ~ h(X3,X4) ) ).
+fof(f5,axiom,sP0 <=> ! [X0] : ( ? [X2] : ( g(X2) & h(X0,X2) ) | ! [X1] : ( ~ f(X1) | ~ h(X0,X1) ) ) ).
+fof(f6,axiom,sP0 <~> ! [X3] : ! [X4] : ! [X5] : ( ( g(X5) & h(X3,X5) ) | ~ f(X4) | ~ h(X3,X4) ) ).
+fof(f7,axiom,( sP0 | ? [X0] : ( ! [X2] : ( ~ g(X2) | ~ h(X0,X2) ) & ? [X1] : ( f(X1) & h(X0,X1) ) ) ) & ( ! [X0] : ( ? [X2] : ( g(X2) & h(X0,X2) ) | ! [X1] : ( ~ f(X1) | ~ h(X0,X1) ) ) | ~ sP0 ) ).
+fof(f8,axiom,( sP0 | ? [X0] : ( ! [X1] : ( ~ g(X1) | ~ h(X0,X1) ) & ? [X2] : ( f(X2) & h(X0,X2) ) ) ) & ( ! [X3] : ( ? [X4] : ( g(X4) & h(X3,X4) ) | ! [X5] : ( ~ f(X5) | ~ h(X3,X5) ) ) | ~ sP0 ) ).
+fof(f9,axiom,? [X0] : ( ! [X1] : ( ~ g(X1) | ~ h(X0,X1) ) & ? [X2] : ( f(X2) & h(X0,X2) ) ) => ( ! [X1] : ( ~ g(X1) | ~ h(sK1,X1) ) & ? [X2] : ( f(X2) & h(sK1,X2) ) ) ).
+fof(f10,axiom,? [X2] : ( f(X2) & h(sK1,X2) ) => ( f(sK2) & h(sK1,sK2) ) ).
+fof(f11,axiom,! [X3] : ( ? [X4] : ( g(X4) & h(X3,X4) ) => ( g(sK3(X3)) & h(X3,sK3(X3)) ) ) ).
+fof(f12,axiom,( sP0 | ( ! [X1] : ( ~ g(X1) | ~ h(sK1,X1) ) & f(sK2) & h(sK1,sK2) ) ) & ( ! [X3] : ( ( g(sK3(X3)) & h(X3,sK3(X3)) ) | ! [X5] : ( ~ f(X5) | ~ h(X3,X5) ) ) | ~ sP0 ) ).
+fof(f13,axiom,( ? [X3] : ? [X4] : ? [X5] : ( ( ~ g(X5) | ~ h(X3,X5) ) & f(X4) & h(X3,X4) ) | ~ sP0 ) & ( ! [X3] : ! [X4] : ! [X5] : ( ( g(X5) & h(X3,X5) ) | ~ f(X4) | ~ h(X3,X4) ) | sP0 ) ).
+fof(f14,axiom,( ? [X0] : ? [X1] : ? [X2] : ( ( ~ g(X2) | ~ h(X0,X2) ) & f(X1) & h(X0,X1) ) | ~ sP0 ) & ( ! [X3] : ! [X4] : ! [X5] : ( ( g(X5) & h(X3,X5) ) | ~ f(X4) | ~ h(X3,X4) ) | sP0 ) ).
+fof(f15,axiom,? [X0] : ? [X1] : ? [X2] : ( ( ~ g(X2) | ~ h(X0,X2) ) & f(X1) & h(X0,X1) ) => ( ( ~ g(sK6) | ~ h(sK4,sK6) ) & f(sK5) & h(sK4,sK5) ) ).
+fof(f16,axiom,( ( ( ~ g(sK6) | ~ h(sK4,sK6) ) & f(sK5) & h(sK4,sK5) ) | ~ sP0 ) & ( ! [X3] : ! [X4] : ! [X5] : ( ( g(X5) & h(X3,X5) ) | ~ f(X4) | ~ h(X3,X4) ) | sP0 ) ).
+fof(f17,axiom,! [X5] : ! [X3] : ( h(X3,sK3(X3)) | ~ f(X5) | ~ h(X3,X5) | ~ sP0 ) ).
+fof(f18,axiom,! [X5] : ! [X3] : ( g(sK3(X3)) | ~ f(X5) | ~ h(X3,X5) | ~ sP0 ) ).
+fof(f19,axiom,sP0 | h(sK1,sK2) ).
+fof(f20,axiom,sP0 | f(sK2) ).
+fof(f21,axiom,! [X1] : ( sP0 | ~ g(X1) | ~ h(sK1,X1) ) ).
+fof(f22,axiom,! [X4] : ! [X5] : ! [X3] : ( h(X3,X5) | ~ f(X4) | ~ h(X3,X4) | sP0 ) ).
+fof(f23,axiom,! [X4] : ! [X5] : ! [X3] : ( g(X5) | ~ f(X4) | ~ h(X3,X4) | sP0 ) ).
+fof(f24,axiom,h(sK4,sK5) | ~ sP0 ).
+fof(f25,axiom,f(sK5) | ~ sP0 ).
+fof(f26,axiom,~ g(sK6) | ~ h(sK4,sK6) | ~ sP0 ).
+fof(c_49,axiom,! [X0] : ( ~ h(sK1,X0) | ~ g(X0) | sP0 ) ).
+fof(c_50,axiom,f(sK2) | sP0 ).
+fof(c_51,axiom,h(sK1,sK2) | sP0 ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ h(X0,X1) | ~ f(X1) | ~ sP0 | g(sK3(X0)) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ h(X0,X1) | ~ f(X1) | ~ sP0 | h(X0,sK3(X0)) ) ).
+fof(c_54,axiom,~ h(sK4,sK6) | ~ g(sK6) | ~ sP0 ).
+fof(c_55,axiom,~ sP0 | f(sK5) ).
+fof(c_56,axiom,~ sP0 | h(sK4,sK5) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ h(X0,X1) | ~ f(X1) | g(X2) | sP0 ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ h(X0,X1) | ~ f(X1) | h(X0,X2) | sP0 ) ).
+fof(c_99,axiom,! [X0] : ! [X1] : ( ~ h(X0,X1) | ~ f(X1) | g(sK3(X0)) ) ).
+fof(c_115,axiom,! [X0] : ! [X1] : ( ~ h(X0,X1) | ~ f(X1) | h(X0,sK3(X0)) ) ).

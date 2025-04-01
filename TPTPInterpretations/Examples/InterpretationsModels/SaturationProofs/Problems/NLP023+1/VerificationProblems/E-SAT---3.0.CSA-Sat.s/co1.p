@@ -1,0 +1,2 @@
+include('Saturations/NLP023+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
+fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ? [W] : ? [X] : ? [Y] : ( of(U,W,V) & woman(U,V) & mia_forename(U,W) & forename(U,W) & proposition(U,X) & present(U,Y) & theme(U,Y,X) & desire_want(U,Y) & agent(U,Y,V) & accessible_world(U,X) & ? [Z] : ( event(X,Z) & agent(X,Z,V) & present(X,Z) & dance(X,Z) ) ) ) ) )).

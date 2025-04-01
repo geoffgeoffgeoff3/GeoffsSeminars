@@ -1,0 +1,321 @@
+fof(co1,axiom,~ ( ? [X1] : ( actual_world(X1) & ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ( of(X1,X2,X3) & city(X1,X3) & hollywood_placename(X1,X2) & placename(X1,X2) & street(X1,X3) & lonely(X1,X3) & chevy(X1,X4) & white(X1,X4) & dirty(X1,X4) & old(X1,X4) & event(X1,X5) & agent(X1,X5,X4) & present(X1,X5) & barrel(X1,X5) & down(X1,X5,X3) & in(X1,X5,X3) & ! [X7] : ( ( frontseat(X1,X7) & member(X1,X7,X6) ) => ? [X8] : ? [X9] : ( state(X1,X8) & be(X1,X8,X7,X9) & in(X1,X9,X7) ) ) & two(X1,X6) & group(X1,X6) & ! [X10] : ( member(X1,X10,X6) => ( fellow(X1,X10) & young(X1,X10) ) ) ) ) ) ).
+fof(ax25,axiom,! [X1] : ! [X2] : ( chevy(X1,X2) => car(X1,X2) ) ).
+fof(ax60,axiom,! [X1] : ! [X2] : ( two(X1,X2) <=> ? [X3] : ( member(X1,X3,X2) & ? [X4] : ( member(X1,X4,X2) & X4 != X3 & ! [X5] : ( member(X1,X5,X2) => ( X5 = X4 | X5 = X3 ) ) ) ) ) ).
+fof(ax24,axiom,! [X1] : ! [X2] : ( car(X1,X2) => vehicle(X1,X2) ) ).
+fof(ax23,axiom,! [X1] : ! [X2] : ( vehicle(X1,X2) => transport(X1,X2) ) ).
+fof(ax49,axiom,! [X1] : ! [X2] : ( fellow(X1,X2) => man(X1,X2) ) ).
+fof(ax22,axiom,! [X1] : ! [X2] : ( transport(X1,X2) => instrumentality(X1,X2) ) ).
+fof(ax48,axiom,! [X1] : ! [X2] : ( man(X1,X2) => human_person(X1,X2) ) ).
+fof(ax21,axiom,! [X1] : ! [X2] : ( instrumentality(X1,X2) => artifact(X1,X2) ) ).
+fof(ax13,axiom,! [X1] : ! [X2] : ( placename(X1,X2) => relname(X1,X2) ) ).
+fof(ax5,axiom,! [X1] : ! [X2] : ( city(X1,X2) => location(X1,X2) ) ).
+fof(ax47,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) => organism(X1,X2) ) ).
+fof(ax20,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) => object(X1,X2) ) ).
+fof(ax12,axiom,! [X1] : ! [X2] : ( relname(X1,X2) => relation(X1,X2) ) ).
+fof(ax4,axiom,! [X1] : ! [X2] : ( location(X1,X2) => object(X1,X2) ) ).
+fof(ax46,axiom,! [X1] : ! [X2] : ( organism(X1,X2) => entity(X1,X2) ) ).
+fof(ax19,axiom,! [X1] : ! [X2] : ( object(X1,X2) => entity(X1,X2) ) ).
+fof(ax11,axiom,! [X1] : ! [X2] : ( relation(X1,X2) => abstraction(X1,X2) ) ).
+fof(ax27,axiom,! [X1] : ! [X2] : ( event(X1,X2) => eventuality(X1,X2) ) ).
+fof(ax45,axiom,! [X1] : ! [X2] : ( entity(X1,X2) => thing(X1,X2) ) ).
+fof(ax10,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) => thing(X1,X2) ) ).
+fof(ax32,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) => thing(X1,X2) ) ).
+fof(ax54,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) => ~ multiple(X1,X2) ) ).
+fof(ax44,axiom,! [X1] : ! [X2] : ( thing(X1,X2) => singleton(X1,X2) ) ).
+fof(ax51,axiom,! [X1] : ! [X2] : ( existent(X1,X2) => ~ nonexistent(X1,X2) ) ).
+fof(ax42,axiom,! [X1] : ! [X2] : ( entity(X1,X2) => existent(X1,X2) ) ).
+fof(ax55,axiom,! [X1] : ! [X2] : ( specific(X1,X2) => ~ general(X1,X2) ) ).
+fof(ax43,axiom,! [X1] : ! [X2] : ( entity(X1,X2) => specific(X1,X2) ) ).
+fof(ax52,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) => ~ human(X1,X2) ) ).
+fof(ax39,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) => human(X1,X2) ) ).
+fof(ax50,axiom,! [X1] : ! [X2] : ( animate(X1,X2) => ~ nonliving(X1,X2) ) ).
+fof(ax38,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) => animate(X1,X2) ) ).
+fof(ax56,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) => ~ male(X1,X2) ) ).
+fof(ax37,axiom,! [X1] : ! [X2] : ( man(X1,X2) => male(X1,X2) ) ).
+fof(ax31,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) => specific(X1,X2) ) ).
+fof(ax57,axiom,! [X1] : ! [X2] : ( young(X1,X2) => ~ old(X1,X2) ) ).
+fof(ax36,axiom,! [X1] : ! [X2] : ( group(X1,X2) => set(X1,X2) ) ).
+fof(ax15,axiom,! [X1] : ! [X2] : ( street(X1,X2) => way(X1,X2) ) ).
+fof(ax58,axiom,! [X1] : ! [X2] : ! [X3] : ( ( entity(X1,X2) & placename(X1,X3) & of(X1,X3,X2) ) => ~ ( ? [X4] : ( placename(X1,X4) & X4 != X3 & of(X1,X4,X2) ) ) ) ).
+fof(ax53,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) => ~ living(X1,X2) ) ).
+fof(ax40,axiom,! [X1] : ! [X2] : ( organism(X1,X2) => living(X1,X2) ) ).
+fof(ax41,axiom,! [X1] : ! [X2] : ( organism(X1,X2) => impartial(X1,X2) ) ).
+fof(ax18,axiom,! [X1] : ! [X2] : ( object(X1,X2) => nonliving(X1,X2) ) ).
+fof(ax17,axiom,! [X1] : ! [X2] : ( object(X1,X2) => impartial(X1,X2) ) ).
+fof(ax16,axiom,! [X1] : ! [X2] : ( object(X1,X2) => unisex(X1,X2) ) ).
+fof(ax9,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) => nonhuman(X1,X2) ) ).
+fof(ax8,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) => general(X1,X2) ) ).
+fof(ax7,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) => unisex(X1,X2) ) ).
+fof(ax35,axiom,! [X1] : ! [X2] : ( set(X1,X2) => multiple(X1,X2) ) ).
+fof(ax14,axiom,! [X1] : ! [X2] : ( way(X1,X2) => artifact(X1,X2) ) ).
+fof(ax30,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) => nonexistent(X1,X2) ) ).
+fof(ax29,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) => unisex(X1,X2) ) ).
+fof(ax59,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( be(X1,X2,X3,X4) => X3 = X4 ) ).
+fof(ax3,axiom,! [X1] : ! [X2] : ( frontseat(X1,X2) => seat(X1,X2) ) ).
+fof(ax33,axiom,! [X1] : ! [X2] : ( state(X1,X2) => eventuality(X1,X2) ) ).
+fof(ax34,axiom,! [X1] : ! [X2] : ( two(X1,X2) => group(X1,X2) ) ).
+fof(ax28,axiom,! [X1] : ! [X2] : ( state(X1,X2) => event(X1,X2) ) ).
+fof(ax26,axiom,! [X1] : ! [X2] : ( barrel(X1,X2) => event(X1,X2) ) ).
+fof(ax6,axiom,! [X1] : ! [X2] : ( hollywood_placename(X1,X2) => placename(X1,X2) ) ).
+fof(ax1,axiom,! [X1] : ! [X2] : ( furniture(X1,X2) => instrumentality(X1,X2) ) ).
+fof(ax2,axiom,! [X1] : ! [X2] : ( seat(X1,X2) => furniture(X1,X2) ) ).
+fof(ax61,axiom,! [X1] : ~ ( ? [X2] : member(X1,X2,X2) ) ).
+fof(c_0_62,axiom,~ ( ~ ( ? [X1] : ( actual_world(X1) & ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ( of(X1,X2,X3) & city(X1,X3) & hollywood_placename(X1,X2) & placename(X1,X2) & street(X1,X3) & lonely(X1,X3) & chevy(X1,X4) & white(X1,X4) & dirty(X1,X4) & old(X1,X4) & event(X1,X5) & agent(X1,X5,X4) & present(X1,X5) & barrel(X1,X5) & down(X1,X5,X3) & in(X1,X5,X3) & ! [X7] : ( ( frontseat(X1,X7) & member(X1,X7,X6) ) => ? [X8] : ? [X9] : ( state(X1,X8) & be(X1,X8,X7,X9) & in(X1,X9,X7) ) ) & two(X1,X6) & group(X1,X6) & ! [X10] : ( member(X1,X10,X6) => ( fellow(X1,X10) & young(X1,X10) ) ) ) ) ) ) ).
+fof(c_0_63,axiom,! [X59] : ! [X60] : ( ~ chevy(X59,X60) | car(X59,X60) ) ).
+fof(c_0_64,axiom,! [X151] : ! [X154] : ( actual_world(esk4_0) & of(esk4_0,esk5_0,esk6_0) & city(esk4_0,esk6_0) & hollywood_placename(esk4_0,esk5_0) & placename(esk4_0,esk5_0) & street(esk4_0,esk6_0) & lonely(esk4_0,esk6_0) & chevy(esk4_0,esk7_0) & white(esk4_0,esk7_0) & dirty(esk4_0,esk7_0) & old(esk4_0,esk7_0) & event(esk4_0,esk8_0) & agent(esk4_0,esk8_0,esk7_0) & present(esk4_0,esk8_0) & barrel(esk4_0,esk8_0) & down(esk4_0,esk8_0,esk6_0) & in(esk4_0,esk8_0,esk6_0) & ( state(esk4_0,esk10_1(X151)) | ~ frontseat(esk4_0,X151) | ~ member(esk4_0,X151,esk9_0) ) & ( be(esk4_0,esk10_1(X151),X151,esk11_1(X151)) | ~ frontseat(esk4_0,X151) | ~ member(esk4_0,X151,esk9_0) ) & ( in(esk4_0,esk11_1(X151),X151) | ~ frontseat(esk4_0,X151) | ~ member(esk4_0,X151,esk9_0) ) & two(esk4_0,esk9_0) & group(esk4_0,esk9_0) & ( fellow(esk4_0,X154) | ~ member(esk4_0,X154,esk9_0) ) & ( young(esk4_0,X154) | ~ member(esk4_0,X154,esk9_0) ) ) ).
+fof(c_0_65,axiom,! [X133] : ! [X134] : ! [X137] : ! [X138] : ! [X139] : ! [X140] : ! [X141] : ( ( member(X133,esk1_2(X133,X134),X134) | ~ two(X133,X134) ) & ( member(X133,esk2_2(X133,X134),X134) | ~ two(X133,X134) ) & ( esk2_2(X133,X134) != esk1_2(X133,X134) | ~ two(X133,X134) ) & ( ~ member(X133,X137,X134) | X137 = esk2_2(X133,X134) | X137 = esk1_2(X133,X134) | ~ two(X133,X134) ) & ( member(X138,esk3_4(X138,X139,X140,X141),X139) | ~ member(X138,X141,X139) | X141 = X140 | ~ member(X138,X140,X139) | two(X138,X139) ) & ( esk3_4(X138,X139,X140,X141) != X141 | ~ member(X138,X141,X139) | X141 = X140 | ~ member(X138,X140,X139) | two(X138,X139) ) & ( esk3_4(X138,X139,X140,X141) != X140 | ~ member(X138,X141,X139) | X141 = X140 | ~ member(X138,X140,X139) | two(X138,X139) ) ) ).
+fof(c_0_66,axiom,! [X57] : ! [X58] : ( ~ car(X57,X58) | vehicle(X57,X58) ) ).
+fof(c_0_67,axiom,! [X1] : ! [X2] : ( car(X1,X2) | ~ chevy(X1,X2) ) ).
+fof(c_0_68,axiom,chevy(esk4_0,esk7_0) ).
+fof(c_0_69,axiom,! [X1] : ! [X2] : ( member(X1,esk2_2(X1,X2),X2) | ~ two(X1,X2) ) ).
+fof(c_0_70,axiom,two(esk4_0,esk9_0) ).
+fof(c_0_71,axiom,! [X1] : ! [X2] : ( member(X1,esk1_2(X1,X2),X2) | ~ two(X1,X2) ) ).
+fof(c_0_72,axiom,! [X55] : ! [X56] : ( ~ vehicle(X55,X56) | transport(X55,X56) ) ).
+fof(c_0_73,axiom,! [X1] : ! [X2] : ( vehicle(X1,X2) | ~ car(X1,X2) ) ).
+fof(c_0_74,axiom,car(esk4_0,esk7_0) ).
+fof(c_0_75,axiom,! [X107] : ! [X108] : ( ~ fellow(X107,X108) | man(X107,X108) ) ).
+fof(c_0_76,axiom,! [X1] : ( fellow(esk4_0,X1) | ~ member(esk4_0,X1,esk9_0) ) ).
+fof(c_0_77,axiom,member(esk4_0,esk2_2(esk4_0,esk9_0),esk9_0) ).
+fof(c_0_78,axiom,member(esk4_0,esk1_2(esk4_0,esk9_0),esk9_0) ).
+fof(c_0_79,axiom,! [X53] : ! [X54] : ( ~ transport(X53,X54) | instrumentality(X53,X54) ) ).
+fof(c_0_80,axiom,! [X1] : ! [X2] : ( transport(X1,X2) | ~ vehicle(X1,X2) ) ).
+fof(c_0_81,axiom,vehicle(esk4_0,esk7_0) ).
+fof(c_0_82,axiom,! [X105] : ! [X106] : ( ~ man(X105,X106) | human_person(X105,X106) ) ).
+fof(c_0_83,axiom,! [X1] : ! [X2] : ( man(X1,X2) | ~ fellow(X1,X2) ) ).
+fof(c_0_84,axiom,fellow(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_85,axiom,fellow(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_86,axiom,! [X51] : ! [X52] : ( ~ instrumentality(X51,X52) | artifact(X51,X52) ) ).
+fof(c_0_87,axiom,! [X1] : ! [X2] : ( instrumentality(X1,X2) | ~ transport(X1,X2) ) ).
+fof(c_0_88,axiom,transport(esk4_0,esk7_0) ).
+fof(c_0_89,axiom,! [X35] : ! [X36] : ( ~ placename(X35,X36) | relname(X35,X36) ) ).
+fof(c_0_90,axiom,! [X19] : ! [X20] : ( ~ city(X19,X20) | location(X19,X20) ) ).
+fof(c_0_91,axiom,! [X103] : ! [X104] : ( ~ human_person(X103,X104) | organism(X103,X104) ) ).
+fof(c_0_92,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) | ~ man(X1,X2) ) ).
+fof(c_0_93,axiom,man(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_94,axiom,man(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_95,axiom,! [X49] : ! [X50] : ( ~ artifact(X49,X50) | object(X49,X50) ) ).
+fof(c_0_96,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ instrumentality(X1,X2) ) ).
+fof(c_0_97,axiom,instrumentality(esk4_0,esk7_0) ).
+fof(c_0_98,axiom,! [X33] : ! [X34] : ( ~ relname(X33,X34) | relation(X33,X34) ) ).
+fof(c_0_99,axiom,! [X1] : ! [X2] : ( relname(X1,X2) | ~ placename(X1,X2) ) ).
+fof(c_0_100,axiom,placename(esk4_0,esk5_0) ).
+fof(c_0_101,axiom,! [X17] : ! [X18] : ( ~ location(X17,X18) | object(X17,X18) ) ).
+fof(c_0_102,axiom,! [X1] : ! [X2] : ( location(X1,X2) | ~ city(X1,X2) ) ).
+fof(c_0_103,axiom,city(esk4_0,esk6_0) ).
+fof(c_0_104,axiom,! [X101] : ! [X102] : ( ~ organism(X101,X102) | entity(X101,X102) ) ).
+fof(c_0_105,axiom,! [X1] : ! [X2] : ( organism(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_106,axiom,human_person(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_107,axiom,human_person(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_108,axiom,! [X47] : ! [X48] : ( ~ object(X47,X48) | entity(X47,X48) ) ).
+fof(c_0_109,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ artifact(X1,X2) ) ).
+fof(c_0_110,axiom,artifact(esk4_0,esk7_0) ).
+fof(c_0_111,axiom,! [X31] : ! [X32] : ( ~ relation(X31,X32) | abstraction(X31,X32) ) ).
+fof(c_0_112,axiom,! [X1] : ! [X2] : ( relation(X1,X2) | ~ relname(X1,X2) ) ).
+fof(c_0_113,axiom,relname(esk4_0,esk5_0) ).
+fof(c_0_114,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ location(X1,X2) ) ).
+fof(c_0_115,axiom,location(esk4_0,esk6_0) ).
+fof(c_0_116,axiom,! [X63] : ! [X64] : ( ~ event(X63,X64) | eventuality(X63,X64) ) ).
+fof(c_0_117,axiom,! [X99] : ! [X100] : ( ~ entity(X99,X100) | thing(X99,X100) ) ).
+fof(c_0_118,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_119,axiom,organism(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_120,axiom,organism(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_121,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_122,axiom,object(esk4_0,esk7_0) ).
+fof(c_0_123,axiom,! [X29] : ! [X30] : ( ~ abstraction(X29,X30) | thing(X29,X30) ) ).
+fof(c_0_124,axiom,! [X1] : ! [X2] : ( abstraction(X1,X2) | ~ relation(X1,X2) ) ).
+fof(c_0_125,axiom,relation(esk4_0,esk5_0) ).
+fof(c_0_126,axiom,object(esk4_0,esk6_0) ).
+fof(c_0_127,axiom,! [X73] : ! [X74] : ( ~ eventuality(X73,X74) | thing(X73,X74) ) ).
+fof(c_0_128,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_129,axiom,event(esk4_0,esk8_0) ).
+fof(c_0_130,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) => ~ multiple(X1,X2) ) ).
+fof(c_0_131,axiom,! [X97] : ! [X98] : ( ~ thing(X97,X98) | singleton(X97,X98) ) ).
+fof(c_0_132,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_133,axiom,entity(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_134,axiom,entity(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_135,axiom,! [X1] : ! [X2] : ( existent(X1,X2) => ~ nonexistent(X1,X2) ) ).
+fof(c_0_136,axiom,! [X93] : ! [X94] : ( ~ entity(X93,X94) | existent(X93,X94) ) ).
+fof(c_0_137,axiom,! [X1] : ! [X2] : ( specific(X1,X2) => ~ general(X1,X2) ) ).
+fof(c_0_138,axiom,! [X95] : ! [X96] : ( ~ entity(X95,X96) | specific(X95,X96) ) ).
+fof(c_0_139,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) => ~ human(X1,X2) ) ).
+fof(c_0_140,axiom,! [X87] : ! [X88] : ( ~ human_person(X87,X88) | human(X87,X88) ) ).
+fof(c_0_141,axiom,! [X1] : ! [X2] : ( animate(X1,X2) => ~ nonliving(X1,X2) ) ).
+fof(c_0_142,axiom,! [X85] : ! [X86] : ( ~ human_person(X85,X86) | animate(X85,X86) ) ).
+fof(c_0_143,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) => ~ male(X1,X2) ) ).
+fof(c_0_144,axiom,! [X83] : ! [X84] : ( ~ man(X83,X84) | male(X83,X84) ) ).
+fof(c_0_145,axiom,entity(esk4_0,esk7_0) ).
+fof(c_0_146,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_147,axiom,abstraction(esk4_0,esk5_0) ).
+fof(c_0_148,axiom,entity(esk4_0,esk6_0) ).
+fof(c_0_149,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_150,axiom,eventuality(esk4_0,esk8_0) ).
+fof(c_0_151,axiom,! [X71] : ! [X72] : ( ~ eventuality(X71,X72) | specific(X71,X72) ) ).
+fof(c_0_152,axiom,! [X1] : ! [X2] : ( young(X1,X2) => ~ old(X1,X2) ) ).
+fof(c_0_153,axiom,! [X81] : ! [X82] : ( ~ group(X81,X82) | set(X81,X82) ) ).
+fof(c_0_154,axiom,! [X39] : ! [X40] : ( ~ street(X39,X40) | way(X39,X40) ) ).
+fof(c_0_155,axiom,! [X125] : ! [X126] : ! [X127] : ! [X128] : ( ~ entity(X125,X126) | ~ placename(X125,X127) | ~ of(X125,X127,X126) | ~ placename(X125,X128) | X128 = X127 | ~ of(X125,X128,X126) ) ).
+fof(c_0_156,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) => ~ living(X1,X2) ) ).
+fof(c_0_157,axiom,! [X117] : ! [X118] : ( ~ singleton(X117,X118) | ~ multiple(X117,X118) ) ).
+fof(c_0_158,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) | ~ thing(X1,X2) ) ).
+fof(c_0_159,axiom,thing(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_160,axiom,thing(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_161,axiom,! [X111] : ! [X112] : ( ~ existent(X111,X112) | ~ nonexistent(X111,X112) ) ).
+fof(c_0_162,axiom,! [X1] : ! [X2] : ( existent(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_163,axiom,! [X119] : ! [X120] : ( ~ specific(X119,X120) | ~ general(X119,X120) ) ).
+fof(c_0_164,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_165,axiom,! [X113] : ! [X114] : ( ~ nonhuman(X113,X114) | ~ human(X113,X114) ) ).
+fof(c_0_166,axiom,! [X1] : ! [X2] : ( human(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_167,axiom,! [X109] : ! [X110] : ( ~ animate(X109,X110) | ~ nonliving(X109,X110) ) ).
+fof(c_0_168,axiom,! [X1] : ! [X2] : ( animate(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_169,axiom,! [X121] : ! [X122] : ( ~ unisex(X121,X122) | ~ male(X121,X122) ) ).
+fof(c_0_170,axiom,! [X1] : ! [X2] : ( male(X1,X2) | ~ man(X1,X2) ) ).
+fof(c_0_171,axiom,thing(esk4_0,esk7_0) ).
+fof(c_0_172,axiom,thing(esk4_0,esk5_0) ).
+fof(c_0_173,axiom,thing(esk4_0,esk6_0) ).
+fof(c_0_174,axiom,thing(esk4_0,esk8_0) ).
+fof(c_0_175,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_176,axiom,! [X123] : ! [X124] : ( ~ young(X123,X124) | ~ old(X123,X124) ) ).
+fof(c_0_177,axiom,! [X89] : ! [X90] : ( ~ organism(X89,X90) | living(X89,X90) ) ).
+fof(c_0_178,axiom,! [X91] : ! [X92] : ( ~ organism(X91,X92) | impartial(X91,X92) ) ).
+fof(c_0_179,axiom,! [X45] : ! [X46] : ( ~ object(X45,X46) | nonliving(X45,X46) ) ).
+fof(c_0_180,axiom,! [X43] : ! [X44] : ( ~ object(X43,X44) | impartial(X43,X44) ) ).
+fof(c_0_181,axiom,! [X41] : ! [X42] : ( ~ object(X41,X42) | unisex(X41,X42) ) ).
+fof(c_0_182,axiom,! [X27] : ! [X28] : ( ~ abstraction(X27,X28) | nonhuman(X27,X28) ) ).
+fof(c_0_183,axiom,! [X25] : ! [X26] : ( ~ abstraction(X25,X26) | general(X25,X26) ) ).
+fof(c_0_184,axiom,! [X23] : ! [X24] : ( ~ abstraction(X23,X24) | unisex(X23,X24) ) ).
+fof(c_0_185,axiom,! [X79] : ! [X80] : ( ~ set(X79,X80) | multiple(X79,X80) ) ).
+fof(c_0_186,axiom,! [X1] : ! [X2] : ( set(X1,X2) | ~ group(X1,X2) ) ).
+fof(c_0_187,axiom,group(esk4_0,esk9_0) ).
+fof(c_0_188,axiom,! [X37] : ! [X38] : ( ~ way(X37,X38) | artifact(X37,X38) ) ).
+fof(c_0_189,axiom,! [X1] : ! [X2] : ( way(X1,X2) | ~ street(X1,X2) ) ).
+fof(c_0_190,axiom,street(esk4_0,esk6_0) ).
+fof(c_0_191,axiom,! [X69] : ! [X70] : ( ~ eventuality(X69,X70) | nonexistent(X69,X70) ) ).
+fof(c_0_192,axiom,! [X67] : ! [X68] : ( ~ eventuality(X67,X68) | unisex(X67,X68) ) ).
+fof(c_0_193,axiom,! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X4 = X3 | ~ entity(X1,X2) | ~ placename(X1,X3) | ~ of(X1,X3,X2) | ~ placename(X1,X4) | ~ of(X1,X4,X2) ) ).
+fof(c_0_194,axiom,of(esk4_0,esk5_0,esk6_0) ).
+fof(c_0_195,axiom,! [X129] : ! [X130] : ! [X131] : ! [X132] : ( ~ be(X129,X130,X131,X132) | X131 = X132 ) ).
+fof(c_0_196,axiom,! [X15] : ! [X16] : ( ~ frontseat(X15,X16) | seat(X15,X16) ) ).
+fof(c_0_197,axiom,! [X75] : ! [X76] : ( ~ state(X75,X76) | eventuality(X75,X76) ) ).
+fof(c_0_198,axiom,! [X77] : ! [X78] : ( ~ two(X77,X78) | group(X77,X78) ) ).
+fof(c_0_199,axiom,! [X65] : ! [X66] : ( ~ state(X65,X66) | event(X65,X66) ) ).
+fof(c_0_200,axiom,! [X61] : ! [X62] : ( ~ barrel(X61,X62) | event(X61,X62) ) ).
+fof(c_0_201,axiom,! [X21] : ! [X22] : ( ~ hollywood_placename(X21,X22) | placename(X21,X22) ) ).
+fof(c_0_202,axiom,! [X11] : ! [X12] : ( ~ furniture(X11,X12) | instrumentality(X11,X12) ) ).
+fof(c_0_203,axiom,! [X13] : ! [X14] : ( ~ seat(X13,X14) | furniture(X13,X14) ) ).
+fof(c_0_204,axiom,! [X115] : ! [X116] : ( ~ nonliving(X115,X116) | ~ living(X115,X116) ) ).
+fof(c_0_205,axiom,! [X1] : ! [X2] : ( ~ singleton(X1,X2) | ~ multiple(X1,X2) ) ).
+fof(c_0_206,axiom,singleton(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_207,axiom,singleton(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_208,axiom,! [X1] : ! [X2] : ( ~ existent(X1,X2) | ~ nonexistent(X1,X2) ) ).
+fof(c_0_209,axiom,existent(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_210,axiom,! [X1] : ! [X2] : ( ~ specific(X1,X2) | ~ general(X1,X2) ) ).
+fof(c_0_211,axiom,specific(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_212,axiom,existent(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_213,axiom,specific(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_214,axiom,! [X1] : ! [X2] : ( ~ nonhuman(X1,X2) | ~ human(X1,X2) ) ).
+fof(c_0_215,axiom,human(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_216,axiom,! [X1] : ! [X2] : ( ~ animate(X1,X2) | ~ nonliving(X1,X2) ) ).
+fof(c_0_217,axiom,animate(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_218,axiom,human(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_219,axiom,animate(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_220,axiom,! [X1] : ! [X2] : ( ~ unisex(X1,X2) | ~ male(X1,X2) ) ).
+fof(c_0_221,axiom,male(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_222,axiom,male(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_223,axiom,singleton(esk4_0,esk7_0) ).
+fof(c_0_224,axiom,existent(esk4_0,esk7_0) ).
+fof(c_0_225,axiom,specific(esk4_0,esk7_0) ).
+fof(c_0_226,axiom,singleton(esk4_0,esk5_0) ).
+fof(c_0_227,axiom,singleton(esk4_0,esk6_0) ).
+fof(c_0_228,axiom,existent(esk4_0,esk6_0) ).
+fof(c_0_229,axiom,specific(esk4_0,esk6_0) ).
+fof(c_0_230,axiom,singleton(esk4_0,esk8_0) ).
+fof(c_0_231,axiom,specific(esk4_0,esk8_0) ).
+fof(c_0_232,axiom,! [X1] : ! [X2] : ( ~ young(X1,X2) | ~ old(X1,X2) ) ).
+fof(c_0_233,axiom,old(esk4_0,esk7_0) ).
+fof(c_0_234,axiom,! [X143] : ! [X144] : ~ member(X143,X144,X144) ).
+fof(c_0_235,axiom,! [X1] : ! [X2] : ( living(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_236,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_237,axiom,! [X1] : ( young(esk4_0,X1) | ~ member(esk4_0,X1,esk9_0) ) ).
+fof(c_0_238,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_239,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_240,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_241,axiom,! [X1] : ! [X2] : ( nonhuman(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_242,axiom,! [X1] : ! [X2] : ( general(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_243,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ abstraction(X1,X2) ) ).
+fof(c_0_244,axiom,! [X1] : ! [X2] : ( multiple(X1,X2) | ~ set(X1,X2) ) ).
+fof(c_0_245,axiom,set(esk4_0,esk9_0) ).
+fof(c_0_246,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ way(X1,X2) ) ).
+fof(c_0_247,axiom,way(esk4_0,esk6_0) ).
+fof(c_0_248,axiom,! [X1] : ! [X2] : ( nonexistent(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_249,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_250,axiom,! [X1] : ( X1 = esk5_0 | ~ of(esk4_0,X1,esk6_0) | ~ placename(esk4_0,X1) ) ).
+fof(c_0_251,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( member(X1,esk3_4(X1,X2,X3,X4),X2) | X4 = X3 | two(X1,X2) | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_252,axiom,! [X2] : ! [X1] : ! [X3] : ( X2 = esk2_2(X1,X3) | X2 = esk1_2(X1,X3) | ~ member(X1,X2,X3) | ~ two(X1,X3) ) ).
+fof(c_0_253,axiom,! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X4 = X3 | two(X1,X2) | esk3_4(X1,X2,X3,X4) != X3 | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_254,axiom,! [X4] : ! [X3] : ! [X1] : ! [X2] : ( X4 = X3 | two(X1,X2) | esk3_4(X1,X2,X3,X4) != X4 | ~ member(X1,X4,X2) | ~ member(X1,X3,X2) ) ).
+fof(c_0_255,axiom,! [X1] : ( be(esk4_0,esk10_1(X1),X1,esk11_1(X1)) | ~ frontseat(esk4_0,X1) | ~ member(esk4_0,X1,esk9_0) ) ).
+fof(c_0_256,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( X3 = X4 | ~ be(X1,X2,X3,X4) ) ).
+fof(c_0_257,axiom,! [X1] : ! [X2] : ( esk2_2(X1,X2) != esk1_2(X1,X2) | ~ two(X1,X2) ) ).
+fof(c_0_258,axiom,! [X1] : ! [X2] : ( seat(X1,X2) | ~ frontseat(X1,X2) ) ).
+fof(c_0_259,axiom,! [X1] : ( in(esk4_0,esk11_1(X1),X1) | ~ frontseat(esk4_0,X1) | ~ member(esk4_0,X1,esk9_0) ) ).
+fof(c_0_260,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ state(X1,X2) ) ).
+fof(c_0_261,axiom,! [X1] : ! [X2] : ( group(X1,X2) | ~ two(X1,X2) ) ).
+fof(c_0_262,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ state(X1,X2) ) ).
+fof(c_0_263,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ barrel(X1,X2) ) ).
+fof(c_0_264,axiom,! [X1] : ! [X2] : ( placename(X1,X2) | ~ hollywood_placename(X1,X2) ) ).
+fof(c_0_265,axiom,! [X1] : ( state(esk4_0,esk10_1(X1)) | ~ frontseat(esk4_0,X1) | ~ member(esk4_0,X1,esk9_0) ) ).
+fof(c_0_266,axiom,! [X1] : ! [X2] : ( instrumentality(X1,X2) | ~ furniture(X1,X2) ) ).
+fof(c_0_267,axiom,! [X1] : ! [X2] : ( furniture(X1,X2) | ~ seat(X1,X2) ) ).
+fof(c_0_268,axiom,! [X1] : ! [X2] : ( ~ nonliving(X1,X2) | ~ living(X1,X2) ) ).
+fof(c_0_269,axiom,~ multiple(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_270,axiom,~ multiple(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_271,axiom,~ nonexistent(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_272,axiom,~ general(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_273,axiom,~ nonexistent(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_274,axiom,~ general(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_275,axiom,~ nonhuman(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_276,axiom,~ nonliving(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_277,axiom,~ nonhuman(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_278,axiom,~ nonliving(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_279,axiom,~ unisex(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_280,axiom,~ unisex(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_281,axiom,~ multiple(esk4_0,esk7_0) ).
+fof(c_0_282,axiom,~ nonexistent(esk4_0,esk7_0) ).
+fof(c_0_283,axiom,~ general(esk4_0,esk7_0) ).
+fof(c_0_284,axiom,~ multiple(esk4_0,esk5_0) ).
+fof(c_0_285,axiom,~ multiple(esk4_0,esk6_0) ).
+fof(c_0_286,axiom,~ nonexistent(esk4_0,esk6_0) ).
+fof(c_0_287,axiom,~ general(esk4_0,esk6_0) ).
+fof(c_0_288,axiom,~ multiple(esk4_0,esk8_0) ).
+fof(c_0_289,axiom,~ general(esk4_0,esk8_0) ).
+fof(c_0_290,axiom,~ young(esk4_0,esk7_0) ).
+fof(c_0_291,axiom,! [X1] : ! [X2] : ~ member(X1,X2,X2) ).
+fof(c_0_292,axiom,living(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_293,axiom,impartial(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_294,axiom,living(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_295,axiom,impartial(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_296,axiom,young(esk4_0,esk2_2(esk4_0,esk9_0)) ).
+fof(c_0_297,axiom,young(esk4_0,esk1_2(esk4_0,esk9_0)) ).
+fof(c_0_298,axiom,nonliving(esk4_0,esk7_0) ).
+fof(c_0_299,axiom,impartial(esk4_0,esk7_0) ).
+fof(c_0_300,axiom,unisex(esk4_0,esk7_0) ).
+fof(c_0_301,axiom,nonhuman(esk4_0,esk5_0) ).
+fof(c_0_302,axiom,general(esk4_0,esk5_0) ).
+fof(c_0_303,axiom,unisex(esk4_0,esk5_0) ).
+fof(c_0_304,axiom,nonliving(esk4_0,esk6_0) ).
+fof(c_0_305,axiom,impartial(esk4_0,esk6_0) ).
+fof(c_0_306,axiom,unisex(esk4_0,esk6_0) ).
+fof(c_0_307,axiom,multiple(esk4_0,esk9_0) ).
+fof(c_0_308,axiom,artifact(esk4_0,esk6_0) ).
+fof(c_0_309,axiom,nonexistent(esk4_0,esk8_0) ).
+fof(c_0_310,axiom,unisex(esk4_0,esk8_0) ).
+fof(c_0_311,axiom,in(esk4_0,esk8_0,esk6_0) ).
+fof(c_0_312,axiom,down(esk4_0,esk8_0,esk6_0) ).
+fof(c_0_313,axiom,agent(esk4_0,esk8_0,esk7_0) ).
+fof(c_0_314,axiom,present(esk4_0,esk8_0) ).
+fof(c_0_315,axiom,dirty(esk4_0,esk7_0) ).
+fof(c_0_316,axiom,white(esk4_0,esk7_0) ).
+fof(c_0_317,axiom,lonely(esk4_0,esk6_0) ).
+fof(c_0_318,axiom,barrel(esk4_0,esk8_0) ).
+fof(c_0_319,axiom,hollywood_placename(esk4_0,esk5_0) ).
+fof(c_0_320,axiom,actual_world(esk4_0) ).

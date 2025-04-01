@@ -1,0 +1,243 @@
+fof(u174,axiom,young(sK7) ).
+fof(u171,axiom,young(sK8) ).
+fof(u123,axiom,in(sK8,sK6) ).
+fof(u121,axiom,in(sK7,sK6) ).
+fof(u109,axiom,in(sK1,sK0) ).
+fof(u108,axiom,down(sK1,sK3) ).
+fof(u107,axiom,barrel(sK1,sK2) ).
+fof(u106,axiom,lonely(sK3) ).
+fof(u102,axiom,dirty(sK2) ).
+fof(u101,axiom,white(sK2) ).
+fof(u165,axiom,! [X0] : ! [X2] : ! [X1] : ( ~ partof(X0,X2) | X1 = X2 | ~ partof(X0,X1) ) ).
+fof(u162,axiom,! [X1] : ! [X0] : ( ~ of(X1,X0) | event(sK9(X0,X1)) ) ).
+fof(u170,axiom,! [X1] : ! [X2] : ( ~ of(X1,X2) | human(X1) | ~ owner(X1) ) ).
+fof(u163,axiom,! [X1] : ! [X0] : ( ~ of(X1,X0) | have(sK9(X0,X1),X0,X1) ) ).
+fof(u169,axiom,! [X1] : ! [X2] : ! [X0] : ( ~ of(X1,X2) | have(X0,X1,X2) | ~ owner(X1) ) ).
+fof(u167,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ human(X1) | owner(X1) ) ).
+fof(u164,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | of(X1,X2) | ~ event(X0) ) ).
+fof(u168,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ human(X1) | of(X1,X2) ) ).
+fof(u166,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ have(X0,X1,X2) | ~ nonhuman(X2) | ~ nonhuman(X1) | partof(X2,X1) ) ).
+fof(u161,axiom,! [X0] : ( ~ proposition(X0) | drs(X0) ) ).
+fof(u160,axiom,! [X0] : ( ~ drs(X0) | proposition(X0) ) ).
+fof(u330,axiom,~ woman(sK8) ).
+fof(u331,axiom,~ woman(sK7) ).
+fof(u301,axiom,~ woman(sK6) ).
+fof(u326,axiom,~ woman(sK3) ).
+fof(u329,axiom,~ woman(sK2) ).
+fof(u325,axiom,~ woman(sK1) ).
+fof(u324,axiom,~ woman(sK0) ).
+fof(u126,axiom,! [X0] : ( ~ woman(X0) | female(X0) ) ).
+fof(u157,axiom,! [X0] : ( ~ woman(X0) | ~ man(X0) ) ).
+fof(u342,axiom,~ female(sK8) ).
+fof(u345,axiom,~ female(sK7) ).
+fof(u300,axiom,~ female(sK6) ).
+fof(u323,axiom,~ female(sK3) ).
+fof(u328,axiom,~ female(sK2) ).
+fof(u321,axiom,~ female(sK1) ).
+fof(u319,axiom,~ female(sK0) ).
+fof(u134,axiom,! [X0] : ( ~ female(X0) | ~ male(X0) ) ).
+fof(u140,axiom,! [X0] : ( ~ female(X0) | human(X0) ) ).
+fof(u338,axiom,male(sK7) ).
+fof(u337,axiom,male(sK8) ).
+fof(u299,axiom,~ male(sK6) ).
+fof(u322,axiom,~ male(sK3) ).
+fof(u327,axiom,~ male(sK2) ).
+fof(u320,axiom,~ male(sK1) ).
+fof(u318,axiom,~ male(sK0) ).
+fof(u141,axiom,! [X0] : ( ~ male(X0) | human(X0) ) ).
+fof(u365,axiom,~ abstraction(sK8) ).
+fof(u369,axiom,~ abstraction(sK7) ).
+fof(u192,axiom,~ abstraction(sK6) ).
+fof(u291,axiom,~ abstraction(sK3) ).
+fof(u307,axiom,~ abstraction(sK2) ).
+fof(u230,axiom,~ abstraction(sK1) ).
+fof(u289,axiom,~ abstraction(sK0) ).
+fof(u124,axiom,! [X0] : ( ~ abstraction(X0) | ~ eventuality(X0) ) ).
+fof(u125,axiom,! [X0] : ( ~ abstraction(X0) | ~ entity(X0) ) ).
+fof(u178,axiom,~ new(sK2) ).
+fof(u127,axiom,! [X0] : ( ~ new(X0) | ~ old(X0) ) ).
+fof(u103,axiom,old(sK2) ).
+fof(u97,axiom,city(sK0) ).
+fof(u375,axiom,~ city(sK8) ).
+fof(u379,axiom,~ city(sK7) ).
+fof(u274,axiom,~ city(sK6) ).
+fof(u257,axiom,~ city(sK3) ).
+fof(u245,axiom,~ city(sK2) ).
+fof(u294,axiom,~ city(sK1) ).
+fof(u144,axiom,! [X0] : ( ~ city(X0) | location(X0) ) ).
+fof(u96,axiom,hollywood(sK0) ).
+fof(u386,axiom,~ hollywood(sK8) ).
+fof(u390,axiom,~ hollywood(sK7) ).
+fof(u276,axiom,~ hollywood(sK6) ).
+fof(u259,axiom,~ hollywood(sK3) ).
+fof(u247,axiom,~ hollywood(sK2) ).
+fof(u305,axiom,~ hollywood(sK1) ).
+fof(u130,axiom,! [X0] : ( ~ hollywood(X0) | city(X0) ) ).
+fof(u227,axiom,eventuality(sK1) ).
+fof(u364,axiom,~ eventuality(sK8) ).
+fof(u368,axiom,~ eventuality(sK7) ).
+fof(u191,axiom,~ eventuality(sK6) ).
+fof(u290,axiom,~ eventuality(sK3) ).
+fof(u306,axiom,~ eventuality(sK2) ).
+fof(u288,axiom,~ eventuality(sK0) ).
+fof(u136,axiom,! [X0] : ( ~ eventuality(X0) | ~ entity(X0) ) ).
+fof(u98,axiom,event(sK1) ).
+fof(u372,axiom,~ event(sK8) ).
+fof(u376,axiom,~ event(sK7) ).
+fof(u226,axiom,~ event(sK6) ).
+fof(u296,axiom,~ event(sK3) ).
+fof(u310,axiom,~ event(sK2) ).
+fof(u295,axiom,~ event(sK0) ).
+fof(u149,axiom,! [X0] : ( ~ event(X0) | eventuality(X0) ) ).
+fof(u199,axiom,location(sK0) ).
+fof(u367,axiom,~ location(sK8) ).
+fof(u371,axiom,~ location(sK7) ).
+fof(u269,axiom,~ location(sK6) ).
+fof(u253,axiom,~ location(sK3) ).
+fof(u240,axiom,~ location(sK2) ).
+fof(u287,axiom,~ location(sK1) ).
+fof(u138,axiom,! [X0] : ( ~ location(X0) | object(X0) ) ).
+fof(u147,axiom,! [X0] : ( ~ location(X0) | ~ artifact(X0) ) ).
+fof(u193,axiom,vehicle(sK2) ).
+fof(u392,axiom,~ vehicle(sK8) ).
+fof(u394,axiom,~ vehicle(sK7) ).
+fof(u212,axiom,~ vehicle(sK6) ).
+fof(u222,axiom,~ vehicle(sK3) ).
+fof(u309,axiom,~ vehicle(sK1) ).
+fof(u242,axiom,~ vehicle(sK0) ).
+fof(u128,axiom,! [X0] : ( ~ vehicle(X0) | transport(X0) ) ).
+fof(u100,axiom,car(sK2) ).
+fof(u395,axiom,~ car(sK8) ).
+fof(u396,axiom,~ car(sK7) ).
+fof(u213,axiom,~ car(sK6) ).
+fof(u223,axiom,~ car(sK3) ).
+fof(u311,axiom,~ car(sK1) ).
+fof(u246,axiom,~ car(sK0) ).
+fof(u143,axiom,! [X0] : ( ~ car(X0) | vehicle(X0) ) ).
+fof(u99,axiom,chevy(sK2) ).
+fof(u398,axiom,~ chevy(sK8) ).
+fof(u399,axiom,~ chevy(sK7) ).
+fof(u215,axiom,~ chevy(sK6) ).
+fof(u225,axiom,~ chevy(sK3) ).
+fof(u312,axiom,~ chevy(sK1) ).
+fof(u248,axiom,~ chevy(sK0) ).
+fof(u131,axiom,! [X0] : ( ~ chevy(X0) | car(X0) ) ).
+fof(u264,axiom,artifact(sK6) ).
+fof(u250,axiom,artifact(sK3) ).
+fof(u236,axiom,artifact(sK2) ).
+fof(u366,axiom,~ artifact(sK8) ).
+fof(u370,axiom,~ artifact(sK7) ).
+fof(u286,axiom,~ artifact(sK1) ).
+fof(u216,axiom,~ artifact(sK0) ).
+fof(u150,axiom,! [X0] : ( ~ artifact(X0) | object(X0) ) ).
+fof(u105,axiom,way(sK3) ).
+fof(u373,axiom,~ way(sK8) ).
+fof(u377,axiom,~ way(sK7) ).
+fof(u265,axiom,~ way(sK6) ).
+fof(u218,axiom,~ way(sK2) ).
+fof(u292,axiom,~ way(sK1) ).
+fof(u249,axiom,~ way(sK0) ).
+fof(u148,axiom,! [X0] : ( ~ way(X0) | ~ instrumentality(X0) ) ).
+fof(u152,axiom,! [X0] : ( ~ way(X0) | artifact(X0) ) ).
+fof(u104,axiom,street(sK3) ).
+fof(u383,axiom,~ street(sK8) ).
+fof(u387,axiom,~ street(sK7) ).
+fof(u271,axiom,~ street(sK6) ).
+fof(u224,axiom,~ street(sK2) ).
+fof(u302,axiom,~ street(sK1) ).
+fof(u258,axiom,~ street(sK0) ).
+fof(u132,axiom,! [X0] : ( ~ street(X0) | way(X0) ) ).
+fof(u195,axiom,transport(sK2) ).
+fof(u385,axiom,~ transport(sK8) ).
+fof(u389,axiom,~ transport(sK7) ).
+fof(u209,axiom,~ transport(sK6) ).
+fof(u221,axiom,~ transport(sK3) ).
+fof(u304,axiom,~ transport(sK1) ).
+fof(u238,axiom,~ transport(sK0) ).
+fof(u137,axiom,! [X0] : ( ~ transport(X0) | instrumentality(X0) ) ).
+fof(u146,axiom,! [X0] : ( ~ transport(X0) | ~ furniture(X0) ) ).
+fof(u262,axiom,instrumentality(sK6) ).
+fof(u197,axiom,instrumentality(sK2) ).
+fof(u374,axiom,~ instrumentality(sK8) ).
+fof(u378,axiom,~ instrumentality(sK7) ).
+fof(u219,axiom,~ instrumentality(sK3) ).
+fof(u293,axiom,~ instrumentality(sK1) ).
+fof(u235,axiom,~ instrumentality(sK0) ).
+fof(u151,axiom,! [X0] : ( ~ instrumentality(X0) | artifact(X0) ) ).
+fof(u111,axiom,furniture(sK6) ).
+fof(u384,axiom,~ furniture(sK8) ).
+fof(u388,axiom,~ furniture(sK7) ).
+fof(u260,axiom,~ furniture(sK3) ).
+fof(u210,axiom,~ furniture(sK2) ).
+fof(u303,axiom,~ furniture(sK1) ).
+fof(u261,axiom,~ furniture(sK0) ).
+fof(u153,axiom,! [X0] : ( ~ furniture(X0) | instrumentality(X0) ) ).
+fof(u110,axiom,seat(sK6) ).
+fof(u391,axiom,~ seat(sK8) ).
+fof(u393,axiom,~ seat(sK7) ).
+fof(u267,axiom,~ seat(sK3) ).
+fof(u214,axiom,~ seat(sK2) ).
+fof(u308,axiom,~ seat(sK1) ).
+fof(u275,axiom,~ seat(sK0) ).
+fof(u133,axiom,! [X0] : ( ~ seat(X0) | furniture(X0) ) ).
+fof(u179,axiom,nonhuman(sK6) ).
+fof(u348,axiom,~ nonhuman(sK8) ).
+fof(u352,axiom,~ nonhuman(sK7) ).
+fof(u232,axiom,~ nonhuman(sK1) ).
+fof(u142,axiom,! [X0] : ( ~ nonhuman(X0) | entity(X0) ) ).
+fof(u155,axiom,! [X0] : ( ~ nonhuman(X0) | ~ human(X0) ) ).
+fof(u112,axiom,front(sK6) ).
+fof(u358,axiom,~ front(sK8) ).
+fof(u362,axiom,~ front(sK7) ).
+fof(u234,axiom,~ front(sK1) ).
+fof(u129,axiom,! [X0] : ( ~ front(X0) | nonhuman(X0) ) ).
+fof(u268,axiom,object(sK6) ).
+fof(u252,axiom,object(sK3) ).
+fof(u239,axiom,object(sK2) ).
+fof(u201,axiom,object(sK0) ).
+fof(u356,axiom,~ object(sK8) ).
+fof(u360,axiom,~ object(sK7) ).
+fof(u277,axiom,~ object(sK1) ).
+fof(u135,axiom,! [X0] : ( ~ object(X0) | ~ organism(X0) ) ).
+fof(u154,axiom,! [X0] : ( ~ object(X0) | entity(X0) ) ).
+fof(u355,axiom,entity(sK8) ).
+fof(u359,axiom,entity(sK7) ).
+fof(u189,axiom,entity(sK6) ).
+fof(u280,axiom,entity(sK3) ).
+fof(u279,axiom,entity(sK2) ).
+fof(u278,axiom,entity(sK0) ).
+fof(u229,axiom,~ entity(sK1) ).
+fof(u351,axiom,organism(sK7) ).
+fof(u347,axiom,organism(sK8) ).
+fof(u272,axiom,~ organism(sK6) ).
+fof(u255,axiom,~ organism(sK3) ).
+fof(u243,axiom,~ organism(sK2) ).
+fof(u233,axiom,~ organism(sK1) ).
+fof(u203,axiom,~ organism(sK0) ).
+fof(u139,axiom,! [X0] : ( ~ organism(X0) | entity(X0) ) ).
+fof(u344,axiom,human(sK7) ).
+fof(u341,axiom,human(sK8) ).
+fof(u297,axiom,~ human(sK6) ).
+fof(u316,axiom,~ human(sK3) ).
+fof(u315,axiom,~ human(sK2) ).
+fof(u314,axiom,~ human(sK1) ).
+fof(u313,axiom,~ human(sK0) ).
+fof(u156,axiom,! [X0] : ( ~ human(X0) | organism(X0) ) ).
+fof(u175,axiom,man(sK7) ).
+fof(u172,axiom,man(sK8) ).
+fof(u336,axiom,~ man(sK6) ).
+fof(u335,axiom,~ man(sK3) ).
+fof(u334,axiom,~ man(sK2) ).
+fof(u333,axiom,~ man(sK1) ).
+fof(u332,axiom,~ man(sK0) ).
+fof(u158,axiom,! [X0] : ( ~ man(X0) | male(X0) ) ).
+fof(u159,axiom,! [X0] : ( ~ man(X0) | human(X0) ) ).
+fof(u176,axiom,fellow(sK7) ).
+fof(u173,axiom,fellow(sK8) ).
+fof(u363,axiom,~ fellow(sK6) ).
+fof(u382,axiom,~ fellow(sK3) ).
+fof(u397,axiom,~ fellow(sK2) ).
+fof(u381,axiom,~ fellow(sK1) ).
+fof(u380,axiom,~ fellow(sK0) ).
+fof(u145,axiom,! [X0] : ( ~ fellow(X0) | man(X0) ) ).
+fof(u177,axiom,sK7 != sK8 ).

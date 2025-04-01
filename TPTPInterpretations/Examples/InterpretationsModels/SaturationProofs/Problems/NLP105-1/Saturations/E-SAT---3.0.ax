@@ -1,0 +1,116 @@
+fof(clause31,axiom,! [X1] : ! [X2] : ( ~ nonexistent(X1,X2) | ~ existent(X1,X2) ) ).
+fof(clause16,axiom,! [X1] : ! [X2] : ( existent(X1,X2) | ~ entity(X1,X2) ) ).
+fof(clause21,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ organism(X1,X2) ) ).
+fof(clause20,axiom,! [X1] : ! [X2] : ( organism(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(clause32,axiom,! [X1] : ! [X2] : ( ~ nonliving(X1,X2) | ~ animate(X1,X2) ) ).
+fof(clause25,axiom,! [X1] : ! [X2] : ( animate(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(clause6,axiom,! [X1] : ! [X2] : ( nonexistent(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(clause26,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) | ~ customer(X1,X2) ) ).
+fof(clause17,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) | ~ object(X1,X2) ) ).
+fof(clause28,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ building(X1,X2) ) ).
+fof(clause27,axiom,! [X1] : ! [X2] : ( building(X1,X2) | ~ restaurant(X1,X2) ) ).
+fof(clause13,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ object(X1,X2) ) ).
+fof(clause30,axiom,! [X1] : ! [X2] : ( ~ living(X1,X2) | ~ nonliving(X1,X2) ) ).
+fof(clause23,axiom,! [X1] : ! [X2] : ( living(X1,X2) | ~ organism(X1,X2) ) ).
+fof(clause12,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ substance_matter(X1,X2) ) ).
+fof(clause11,axiom,! [X1] : ! [X2] : ( substance_matter(X1,X2) | ~ food(X1,X2) ) ).
+fof(clause29,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ artifact(X1,X2) ) ).
+fof(clause2,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ event(X1,X2) ) ).
+fof(clause10,axiom,! [X1] : ! [X2] : ( food(X1,X2) | ~ beverage(X1,X2) ) ).
+fof(clause48,axiom,! [X3] : ! [X1] : ! [X2] : ( agent(skc1,skf5(X3),skf7(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause49,axiom,! [X3] : ! [X1] : ! [X2] : ( patient(skc1,skf4(X3),skf7(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause34,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( beverage(X1,X3) | ~ drink(X1,X2) | ~ patient(X1,X2,X3) | ~ agent(X1,X2,X4) ) ).
+fof(clause47,axiom,! [X3] : ! [X1] : ! [X2] : ( patient(skc1,skf5(X3),skf6(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause46,axiom,! [X2] : ! [X1] : ( agent(skc1,skf4(X2),X2) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause33,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ nonreflexive(X1,X2) | ~ patient(X1,X2,X3) | ~ agent(X1,X2,X3) ) ).
+fof(clause22,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ organism(X1,X2) ) ).
+fof(clause18,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ object(X1,X2) ) ).
+fof(clause44,axiom,! [X3] : ! [X1] : ! [X2] : ( past(skc1,skf4(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause19,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ object(X1,X2) ) ).
+fof(clause7,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(clause38,axiom,! [X3] : ! [X1] : ! [X2] : ( past(skc1,skf5(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause43,axiom,! [X3] : ! [X1] : ! [X2] : ( nonreflexive(skc1,skf4(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause39,axiom,! [X3] : ! [X1] : ! [X2] : ( nonreflexive(skc1,skf5(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause15,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ entity(X1,X2) ) ).
+fof(clause5,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(clause4,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) | ~ thing(X1,X2) ) ).
+fof(clause14,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ entity(X1,X2) ) ).
+fof(clause3,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(clause41,axiom,! [X3] : ! [X1] : ! [X2] : ( human_person(skc1,skf7(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause36,axiom,! [X3] : ! [X1] : ! [X2] : ( coffee(skc1,skf6(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause40,axiom,! [X3] : ! [X1] : ! [X2] : ( drink(skc1,skf5(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause24,axiom,! [X1] : ! [X2] : ( human(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(clause45,axiom,! [X3] : ! [X1] : ! [X2] : ( event(skc1,skf4(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause37,axiom,! [X3] : ! [X1] : ! [X2] : ( event(skc1,skf5(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause42,axiom,! [X3] : ! [X1] : ! [X2] : ( see(skc1,skf4(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(clause9,axiom,! [X1] : ! [X2] : ( beverage(X1,X2) | ~ coffee(X1,X2) ) ).
+fof(clause8,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ drink(X1,X2) ) ).
+fof(clause1,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ see(X1,X2) ) ).
+fof(clause35,axiom,actual_world(skc1) ).
+fof(c_0_49,axiom,! [X1] : ! [X2] : ( ~ nonexistent(X1,X2) | ~ existent(X1,X2) ) ).
+fof(c_0_50,axiom,! [X1] : ! [X2] : ( existent(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_51,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_52,axiom,! [X1] : ! [X2] : ( organism(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_53,axiom,! [X1] : ! [X2] : ( ~ nonliving(X1,X2) | ~ animate(X1,X2) ) ).
+fof(c_0_54,axiom,! [X1] : ! [X2] : ( animate(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_55,axiom,! [X1] : ! [X2] : ( ~ entity(X1,X2) | ~ nonexistent(X1,X2) ) ).
+fof(c_0_56,axiom,! [X1] : ! [X2] : ( nonexistent(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_57,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_58,axiom,! [X1] : ! [X2] : ( human_person(X1,X2) | ~ customer(X1,X2) ) ).
+fof(c_0_59,axiom,! [X1] : ! [X2] : ( ~ human_person(X1,X2) | ~ nonliving(X1,X2) ) ).
+fof(c_0_60,axiom,! [X1] : ! [X2] : ( nonliving(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_61,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ building(X1,X2) ) ).
+fof(c_0_62,axiom,! [X1] : ! [X2] : ( building(X1,X2) | ~ restaurant(X1,X2) ) ).
+fof(c_0_63,axiom,! [X1] : ! [X2] : ( ~ entity(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_64,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_65,axiom,! [X1] : ! [X2] : ( ~ living(X1,X2) | ~ nonliving(X1,X2) ) ).
+fof(c_0_66,axiom,! [X1] : ! [X2] : ( living(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_67,axiom,! [X1] : ! [X2] : ( entity(X1,X2) | ~ customer(X1,X2) ) ).
+fof(c_0_68,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ substance_matter(X1,X2) ) ).
+fof(c_0_69,axiom,! [X1] : ! [X2] : ( substance_matter(X1,X2) | ~ food(X1,X2) ) ).
+fof(c_0_70,axiom,! [X1] : ! [X2] : ( ~ human_person(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_71,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ artifact(X1,X2) ) ).
+fof(c_0_72,axiom,! [X1] : ! [X2] : ( artifact(X1,X2) | ~ restaurant(X1,X2) ) ).
+fof(c_0_73,axiom,! [X1] : ! [X2] : ( ~ object(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_74,axiom,! [X1] : ! [X2] : ( eventuality(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_75,axiom,! [X1] : ! [X2] : ( ~ organism(X1,X2) | ~ nonliving(X1,X2) ) ).
+fof(c_0_76,axiom,! [X1] : ! [X2] : ( ~ customer(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_77,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ food(X1,X2) ) ).
+fof(c_0_78,axiom,! [X1] : ! [X2] : ( food(X1,X2) | ~ beverage(X1,X2) ) ).
+fof(c_0_79,axiom,! [X1] : ! [X2] : ( ~ customer(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_80,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ restaurant(X1,X2) ) ).
+fof(c_0_81,axiom,! [X1] : ! [X2] : ( ~ object(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_82,axiom,! [X1] : ! [X2] : ( ~ organism(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_83,axiom,! [X1] : ! [X2] : ( ~ customer(X1,X2) | ~ event(X1,X2) ) ).
+fof(c_0_84,axiom,! [X3] : ! [X1] : ! [X2] : ( agent(skc1,skf5(X3),skf7(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_85,axiom,! [X3] : ! [X1] : ! [X2] : ( patient(skc1,skf4(X3),skf7(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_86,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( beverage(X1,X3) | ~ drink(X1,X2) | ~ patient(X1,X2,X3) | ~ agent(X1,X2,X4) ) ).
+fof(c_0_87,axiom,! [X1] : ! [X2] : ( object(X1,X2) | ~ beverage(X1,X2) ) ).
+fof(c_0_88,axiom,! [X3] : ! [X1] : ! [X2] : ( patient(skc1,skf5(X3),skf6(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_89,axiom,! [X1] : ! [X2] : ( ~ restaurant(X1,X2) | ~ customer(X1,X2) ) ).
+fof(c_0_90,axiom,! [X2] : ! [X1] : ( agent(skc1,skf4(X2),X2) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_91,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ nonreflexive(X1,X2) | ~ patient(X1,X2,X3) | ~ agent(X1,X2,X3) ) ).
+fof(c_0_92,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ organism(X1,X2) ) ).
+fof(c_0_93,axiom,! [X1] : ! [X2] : ( impartial(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_94,axiom,! [X3] : ! [X1] : ! [X2] : ( past(skc1,skf4(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_95,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ object(X1,X2) ) ).
+fof(c_0_96,axiom,! [X1] : ! [X2] : ( unisex(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_97,axiom,! [X3] : ! [X1] : ! [X2] : ( past(skc1,skf5(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_98,axiom,! [X3] : ! [X1] : ! [X2] : ( nonreflexive(skc1,skf4(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_99,axiom,! [X3] : ! [X1] : ! [X2] : ( nonreflexive(skc1,skf5(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_100,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_101,axiom,! [X1] : ! [X2] : ( specific(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_102,axiom,! [X1] : ! [X2] : ( singleton(X1,X2) | ~ thing(X1,X2) ) ).
+fof(c_0_103,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ entity(X1,X2) ) ).
+fof(c_0_104,axiom,! [X1] : ! [X2] : ( thing(X1,X2) | ~ eventuality(X1,X2) ) ).
+fof(c_0_105,axiom,! [X3] : ! [X1] : ! [X2] : ( human_person(skc1,skf7(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_106,axiom,! [X3] : ! [X1] : ! [X2] : ( coffee(skc1,skf6(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_107,axiom,! [X3] : ! [X1] : ! [X2] : ( drink(skc1,skf5(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_108,axiom,! [X1] : ! [X2] : ( human(X1,X2) | ~ human_person(X1,X2) ) ).
+fof(c_0_109,axiom,! [X3] : ! [X1] : ! [X2] : ( event(skc1,skf4(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_110,axiom,! [X3] : ! [X1] : ! [X2] : ( event(skc1,skf5(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_111,axiom,! [X3] : ! [X1] : ! [X2] : ( see(skc1,skf4(X3)) | ~ restaurant(skc1,X1) | ~ in(skc1,X2,X1) | ~ customer(skc1,X2) ) ).
+fof(c_0_112,axiom,! [X1] : ! [X2] : ( beverage(X1,X2) | ~ coffee(X1,X2) ) ).
+fof(c_0_113,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ drink(X1,X2) ) ).
+fof(c_0_114,axiom,! [X1] : ! [X2] : ( event(X1,X2) | ~ see(X1,X2) ) ).
+fof(c_0_115,axiom,actual_world(skc1) ).

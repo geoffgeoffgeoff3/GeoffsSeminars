@@ -1,0 +1,54 @@
+fof(u110,axiom,coffee(sK0,sK1) ).
+fof(u114,axiom,human_person(sK0,sK2) ).
+fof(u118,axiom,event(sK0,sK3) ).
+fof(u122,axiom,nonreflexive(sK0,sK3) ).
+fof(u126,axiom,drink(sK0,sK3) ).
+fof(u130,axiom,restaurant(sK0,sK4) ).
+fof(u134,axiom,agent(sK0,sK3,sK2) ).
+fof(u138,axiom,patient(sK0,sK3,sK1) ).
+fof(u142,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(u146,axiom,! [X0] : ! [X1] : ( ~ nonliving(X0,X1) | ~ animate(X0,X1) ) ).
+fof(u150,axiom,! [X0] : ! [X1] : ( ~ building(X0,X1) | artifact(X0,X1) ) ).
+fof(u154,axiom,! [X0] : ! [X1] : ( ~ food(X0,X1) | substance_matter(X0,X1) ) ).
+fof(u158,axiom,! [X0] : ! [X1] : ( ~ restaurant(X0,X1) | building(X0,X1) ) ).
+fof(u162,axiom,! [X0] : ! [X1] : ( ~ coffee(X0,X1) | beverage(X0,X1) ) ).
+fof(u166,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ artifact(X0,X1) ) ).
+fof(u170,axiom,! [X0] : ! [X1] : ( ~ substance_matter(X0,X1) | object(X0,X1) ) ).
+fof(u174,axiom,! [X0] : ! [X1] : ( ~ nonliving(X0,X1) | ~ living(X0,X1) ) ).
+fof(u178,axiom,! [X0] : ! [X1] : ( event(X0,X1) | ~ drink(X0,X1) ) ).
+fof(u182,axiom,! [X0] : ! [X1] : ( living(X0,X1) | ~ organism(X0,X1) ) ).
+fof(u186,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ organism(X0,X1) ) ).
+fof(u190,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | nonexistent(X0,X1) ) ).
+fof(u194,axiom,! [X0] : ! [X1] : ( ~ beverage(X0,X1) | food(X0,X1) ) ).
+fof(u198,axiom,! [X0] : ! [X1] : ( animate(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(u202,axiom,! [X0] : ! [X1] : ( existent(X0,X1) | ~ entity(X0,X1) ) ).
+fof(u206,axiom,! [X0] : ! [X1] : ( organism(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(u210,axiom,! [X0] : ! [X1] : ( nonliving(X0,X1) | ~ object(X0,X1) ) ).
+fof(u214,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ object(X0,X1) ) ).
+fof(u218,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) | ~ event(X0,X1) ) ).
+fof(u224,axiom,building(sK0,sK4) ).
+fof(u229,axiom,beverage(sK0,sK1) ).
+fof(u233,axiom,artifact(sK0,sK4) ).
+fof(u238,axiom,food(sK0,sK1) ).
+fof(u243,axiom,substance_matter(sK0,sK1) ).
+fof(u248,axiom,object(sK0,sK1) ).
+fof(u255,axiom,! [X0] : ! [X1] : ( ~ living(X0,X1) | ~ object(X0,X1) ) ).
+fof(u259,axiom,! [X0] : ! [X1] : ! [X3] : ( ~ nonreflexive(X0,X1) | ~ agent(X0,X1,X3) | ~ patient(X0,X1,X3) ) ).
+fof(u264,axiom,! [X2] : ! [X3] : ( ~ animate(X2,X3) | ~ object(X2,X3) ) ).
+fof(u270,axiom,! [X0] : ! [X1] : ( nonexistent(X0,X1) | ~ event(X0,X1) ) ).
+fof(u275,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | ~ object(X0,X1) ) ).
+fof(u279,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ drink(X0,X1) | ~ agent(X0,X1,X2) | ~ patient(X0,X1,X3) | beverage(X0,X3) ) ).
+fof(u284,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | ~ object(X0,X1) ) ).
+fof(u290,axiom,~ object(sK0,sK2) ).
+fof(u295,axiom,~ artifact(sK0,sK2) ).
+fof(u299,axiom,! [X0] : ( ~ patient(sK0,sK3,X0) | ~ agent(sK0,sK3,X0) ) ).
+fof(u303,axiom,! [X0] : ! [X1] : ( ~ existent(X0,X1) | ~ event(X0,X1) ) ).
+fof(u309,axiom,~ agent(sK0,sK3,sK1) ).
+fof(u313,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | ~ entity(X0,X1) ) ).
+fof(u317,axiom,! [X1] : ( ~ patient(sK0,sK3,X1) | beverage(sK0,X1) ) ).
+fof(u329,axiom,~ entity(sK0,sK3) ).
+fof(u335,axiom,~ object(sK0,sK3) ).
+fof(u341,axiom,~ organism(sK0,sK3) ).
+fof(u346,axiom,! [X0] : ! [X1] : ( ~ drink(X0,X1) | ~ entity(X0,X1) ) ).
+fof(u350,axiom,~ artifact(sK0,sK3) ).
+fof(u354,axiom,~ human_person(sK0,sK3) ).

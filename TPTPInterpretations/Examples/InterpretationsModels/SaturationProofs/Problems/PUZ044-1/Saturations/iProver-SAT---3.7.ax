@@ -1,0 +1,7 @@
+fof(c_49,axiom,! [X0] : ( a_truth(truthteller(X0)) | a_truth(liar(X0)) ) ).
+fof(c_50,axiom,! [X0] : ( ~ a_truth(truthteller(X0)) | ~ a_truth(liar(X0)) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ a_truth(says(X0,X1)) | ~ a_truth(X1) | a_truth(truthteller(X0)) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ a_truth(says(X0,X1)) | a_truth(liar(X0)) | a_truth(X1) ) ).
+fof(c_61,axiom,! [X0] : ( ~ a_truth(truthteller(X0)) | ~ a_truth(liar(X0)) ) ).
+fof(c_63,axiom,! [X0] : ( a_truth(truthteller(X0)) | a_truth(liar(X0)) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ( ~ a_truth(says(X0,X1)) | ~ a_truth(truthteller(X0)) | a_truth(X1) ) ).

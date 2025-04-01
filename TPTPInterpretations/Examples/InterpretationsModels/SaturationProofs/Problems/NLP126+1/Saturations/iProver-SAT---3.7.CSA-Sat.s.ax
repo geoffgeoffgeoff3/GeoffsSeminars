@@ -1,0 +1,154 @@
+fof(f6,axiom,! [X0] : ! [X1] : ( location(X0,X1) => object(X0,X1) ) ).
+fof(f7,axiom,! [X0] : ! [X1] : ( city(X0,X1) => location(X0,X1) ) ).
+fof(f10,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) => general(X0,X1) ) ).
+fof(f13,axiom,! [X0] : ! [X1] : ( relation(X0,X1) => abstraction(X0,X1) ) ).
+fof(f14,axiom,! [X0] : ! [X1] : ( relname(X0,X1) => relation(X0,X1) ) ).
+fof(f15,axiom,! [X0] : ! [X1] : ( placename(X0,X1) => relname(X0,X1) ) ).
+fof(f19,axiom,! [X0] : ! [X1] : ( entity(X0,X1) => existent(X0,X1) ) ).
+fof(f20,axiom,! [X0] : ! [X1] : ( entity(X0,X1) => specific(X0,X1) ) ).
+fof(f22,axiom,! [X0] : ! [X1] : ( object(X0,X1) => entity(X0,X1) ) ).
+fof(f23,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) => object(X0,X1) ) ).
+fof(f24,axiom,! [X0] : ! [X1] : ( way(X0,X1) => artifact(X0,X1) ) ).
+fof(f25,axiom,! [X0] : ! [X1] : ( street(X0,X1) => way(X0,X1) ) ).
+fof(f27,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) => nonexistent(X0,X1) ) ).
+fof(f28,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) => specific(X0,X1) ) ).
+fof(f31,axiom,! [X0] : ! [X1] : ( event(X0,X1) => eventuality(X0,X1) ) ).
+fof(f33,axiom,! [X0] : ! [X1] : ( existent(X0,X1) => ~ nonexistent(X0,X1) ) ).
+fof(f34,axiom,! [X0] : ! [X1] : ( specific(X0,X1) => ~ general(X0,X1) ) ).
+fof(f35,axiom,! [X0] : ! [X1] : ! [X2] : ( ( of(X0,X2,X1) & placename(X0,X2) & entity(X0,X1) ) => ~ ( ? [X3] : ( of(X0,X3,X1) & X2 != X3 & placename(X0,X3) ) ) ) ).
+fof(f36,axiom,~ ( ? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( in(X0,X4,X3) & down(X0,X4,X1) & barrel(X0,X4) & present(X0,X4) & agent(X0,X4,X3) & event(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ) ).
+fof(f37,axiom,~ ( ~ ( ? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( in(X0,X4,X3) & down(X0,X4,X1) & barrel(X0,X4) & present(X0,X4) & agent(X0,X4,X3) & event(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ) ) ).
+fof(f38,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( in(X0,X4,X3) & down(X0,X4,X1) & barrel(X0,X4) & present(X0,X4) & agent(X0,X4,X3) & event(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f39,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( down(X0,X4,X1) & barrel(X0,X4) & present(X0,X4) & agent(X0,X4,X3) & event(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f40,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & present(X0,X4) & agent(X0,X4,X3) & event(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f41,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & agent(X0,X4,X3) & event(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f42,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & event(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f43,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & event(X0,X4) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f44,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & event(X0,X4) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f45,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & event(X0,X4) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & lonely(X0,X1) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f46,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & event(X0,X4) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & street(X0,X1) ) & actual_world(X0) ) ).
+fof(f47,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & event(X0,X4) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & street(X0,X1) ) ).
+fof(f63,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ location(X0,X1) ) ).
+fof(f64,axiom,! [X0] : ! [X1] : ( location(X0,X1) | ~ city(X0,X1) ) ).
+fof(f66,axiom,! [X0] : ! [X1] : ( general(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(f67,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) | ~ relation(X0,X1) ) ).
+fof(f68,axiom,! [X0] : ! [X1] : ( relation(X0,X1) | ~ relname(X0,X1) ) ).
+fof(f69,axiom,! [X0] : ! [X1] : ( relname(X0,X1) | ~ placename(X0,X1) ) ).
+fof(f70,axiom,! [X0] : ! [X1] : ( existent(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f71,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f72,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ object(X0,X1) ) ).
+fof(f73,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ artifact(X0,X1) ) ).
+fof(f74,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) | ~ way(X0,X1) ) ).
+fof(f75,axiom,! [X0] : ! [X1] : ( way(X0,X1) | ~ street(X0,X1) ) ).
+fof(f76,axiom,! [X0] : ! [X1] : ( nonexistent(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f77,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f78,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) | ~ event(X0,X1) ) ).
+fof(f80,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(f81,axiom,! [X0] : ! [X1] : ( ~ general(X0,X1) | ~ specific(X0,X1) ) ).
+fof(f82,axiom,! [X0] : ! [X1] : ! [X2] : ( ! [X3] : ( ~ of(X0,X3,X1) | X2 = X3 | ~ placename(X0,X3) ) | ~ of(X0,X2,X1) | ~ placename(X0,X2) | ~ entity(X0,X1) ) ).
+fof(f83,axiom,! [X0] : ! [X1] : ! [X2] : ( ! [X3] : ( ~ of(X0,X3,X1) | X2 = X3 | ~ placename(X0,X3) ) | ~ of(X0,X2,X1) | ~ placename(X0,X2) | ~ entity(X0,X1) ) ).
+fof(f84,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ( barrel(X0,X4) & event(X0,X4) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & street(X0,X1) ) => ( barrel(sK0,sK4) & event(sK0,sK4) & chevy(sK0,sK3) & placename(sK0,sK2) & hollywood_placename(sK0,sK2) & city(sK0,sK3) & of(sK0,sK2,sK3) & street(sK0,sK1) ) ).
+fof(f85,axiom,barrel(sK0,sK4) & event(sK0,sK4) & chevy(sK0,sK3) & placename(sK0,sK2) & hollywood_placename(sK0,sK2) & city(sK0,sK3) & of(sK0,sK2,sK3) & street(sK0,sK1) ).
+fof(f91,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ location(X0,X1) ) ).
+fof(f92,axiom,! [X0] : ! [X1] : ( location(X0,X1) | ~ city(X0,X1) ) ).
+fof(f94,axiom,! [X0] : ! [X1] : ( general(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(f95,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) | ~ relation(X0,X1) ) ).
+fof(f96,axiom,! [X0] : ! [X1] : ( relation(X0,X1) | ~ relname(X0,X1) ) ).
+fof(f97,axiom,! [X0] : ! [X1] : ( relname(X0,X1) | ~ placename(X0,X1) ) ).
+fof(f98,axiom,! [X0] : ! [X1] : ( existent(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f99,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f100,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ object(X0,X1) ) ).
+fof(f101,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ artifact(X0,X1) ) ).
+fof(f102,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) | ~ way(X0,X1) ) ).
+fof(f103,axiom,! [X0] : ! [X1] : ( way(X0,X1) | ~ street(X0,X1) ) ).
+fof(f104,axiom,! [X0] : ! [X1] : ( nonexistent(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f105,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f106,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) | ~ event(X0,X1) ) ).
+fof(f108,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(f109,axiom,! [X0] : ! [X1] : ( ~ general(X0,X1) | ~ specific(X0,X1) ) ).
+fof(f110,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( ~ of(X0,X3,X1) | X2 = X3 | ~ placename(X0,X3) | ~ of(X0,X2,X1) | ~ placename(X0,X2) | ~ entity(X0,X1) ) ).
+fof(f111,axiom,street(sK0,sK1) ).
+fof(f112,axiom,of(sK0,sK2,sK3) ).
+fof(f113,axiom,city(sK0,sK3) ).
+fof(f115,axiom,placename(sK0,sK2) ).
+fof(f117,axiom,event(sK0,sK4) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ location(X0,X1) | object(X0,X1) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ city(X0,X1) | location(X0,X1) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | general(X0,X1) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ( ~ relation(X0,X1) | abstraction(X0,X1) ) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ( ~ relname(X0,X1) | relation(X0,X1) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | relname(X0,X1) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | existent(X0,X1) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | specific(X0,X1) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | entity(X0,X1) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ( ~ artifact(X0,X1) | object(X0,X1) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ( ~ way(X0,X1) | artifact(X0,X1) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( ~ street(X0,X1) | way(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | nonexistent(X0,X1) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | specific(X0,X1) ) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | eventuality(X0,X1) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ( ~ existent(X0,X1) | ~ nonexistent(X0,X1) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ general(X0,X1) | ~ specific(X0,X1) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ of(X0,X1,X2) | ~ of(X0,X3,X2) | ~ placename(X0,X1) | ~ placename(X0,X3) | ~ entity(X0,X2) | X1 = X3 ) ).
+fof(c_75,axiom,event(sK0,sK4) ).
+fof(c_77,axiom,placename(sK0,sK2) ).
+fof(c_79,axiom,city(sK0,sK3) ).
+fof(c_80,axiom,of(sK0,sK2,sK3) ).
+fof(c_81,axiom,street(sK0,sK1) ).
+fof(c_340,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ chevy(X1,X3) | chevy(X0,X2) ) ).
+fof(c_341,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ city(X1,X3) | city(X0,X2) ) ).
+fof(c_343,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ hollywood_placename(X1,X3) | hollywood_placename(X0,X2) ) ).
+fof(c_344,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ street(X1,X3) | street(X0,X2) ) ).
+fof(c_345,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ event(X1,X3) | event(X0,X2) ) ).
+fof(c_346,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ barrel(X1,X3) | barrel(X0,X2) ) ).
+fof(c_378,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK3 | location(X0,X1) ) ).
+fof(c_379,axiom,location(sK0,sK3) ).
+fof(c_384,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK3 | object(X0,X1) ) ).
+fof(c_385,axiom,object(sK0,sK3) ).
+fof(c_392,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK1 | way(X0,X1) ) ).
+fof(c_393,axiom,way(sK0,sK1) ).
+fof(c_398,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK1 | artifact(X0,X1) ) ).
+fof(c_399,axiom,artifact(sK0,sK1) ).
+fof(c_406,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK4 | eventuality(X0,X1) ) ).
+fof(c_407,axiom,eventuality(sK0,sK4) ).
+fof(c_414,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK1 | object(X0,X1) ) ).
+fof(c_415,axiom,object(sK0,sK1) ).
+fof(c_420,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK3 | entity(X0,X1) ) ).
+fof(c_421,axiom,entity(sK0,sK3) ).
+fof(c_425,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK1 | entity(X0,X1) ) ).
+fof(c_426,axiom,entity(sK0,sK1) ).
+fof(c_432,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ abstraction(X0,X2) | ~ specific(X1,X3) ) ).
+fof(c_433,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | ~ specific(X0,X1) ) ).
+fof(c_443,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ relation(X0,X2) | ~ specific(X1,X3) ) ).
+fof(c_444,axiom,! [X0] : ! [X1] : ( ~ relation(X0,X1) | ~ specific(X0,X1) ) ).
+fof(c_454,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ relname(X0,X2) | ~ specific(X1,X3) ) ).
+fof(c_455,axiom,! [X0] : ! [X1] : ( ~ relname(X0,X1) | ~ specific(X0,X1) ) ).
+fof(c_465,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ placename(X0,X2) | ~ specific(X1,X3) ) ).
+fof(c_466,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | ~ specific(X0,X1) ) ).
+fof(c_476,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ entity(X0,X2) | ~ nonexistent(X1,X3) ) ).
+fof(c_477,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | ~ nonexistent(X0,X1) ) ).
+fof(c_487,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ entity(X1,X3) | ~ eventuality(X0,X2) ) ).
+fof(c_488,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(c_498,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK4 | ~ entity(X0,X1) ) ).
+fof(c_499,axiom,~ entity(sK0,sK4) ).
+fof(c_503,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK4 | specific(X0,X1) ) ).
+fof(c_504,axiom,specific(sK0,sK4) ).
+fof(c_510,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ placename(X1,X3) | ~ entity(X0,X2) ) ).
+fof(c_511,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | ~ entity(X0,X1) ) ).
+fof(c_519,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK4 | ~ placename(X0,X1) ) ).
+fof(c_520,axiom,~ placename(sK0,sK4) ).
+fof(c_527,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK3 | ~ placename(X0,X1) ) ).
+fof(c_528,axiom,~ placename(sK0,sK3) ).
+fof(c_532,axiom,! [X0] : ! [X1] : ( X0 != sK0 | X1 != sK1 | ~ placename(X0,X1) ) ).
+fof(c_533,axiom,~ placename(sK0,sK1) ).
+fof(c_537,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != sK0 | X1 != sK3 | ~ of(X0,X2,X1) | ~ of(X0,X3,X1) | ~ placename(X0,X2) | ~ placename(X0,X3) | X2 = X3 ) ).
+fof(c_538,axiom,! [X0] : ! [X1] : ( ~ of(sK0,X0,sK3) | ~ of(sK0,X1,sK3) | ~ placename(sK0,X0) | ~ placename(sK0,X1) | X0 = X1 ) ).
+fof(c_555,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != sK0 | X1 != sK1 | ~ of(X0,X2,X1) | ~ of(X0,X3,X1) | ~ placename(X0,X2) | ~ placename(X0,X3) | X2 = X3 ) ).
+fof(c_556,axiom,! [X0] : ! [X1] : ( ~ of(sK0,X0,sK1) | ~ of(sK0,X1,sK1) | ~ placename(sK0,X0) | ~ placename(sK0,X1) | X0 = X1 ) ).
+fof(c_573,axiom,sK0 != sK0 | sK4 != sK3 ).
+fof(c_580,axiom,sK0 != sK0 | sK4 != sK1 ).
+fof(c_603,axiom,sK4 != sK1 ).
+fof(c_604,axiom,sK4 != sK3 ).
+fof(c_660,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_793,axiom,! [X0] : ( ~ of(sK0,X0,sK3) | ~ placename(sK0,X0) | ~ placename(sK0,sK2) | X0 = sK2 ) ).
+fof(c_794,axiom,! [X0] : ( ~ of(sK0,X0,sK3) | ~ placename(sK0,X0) | X0 = sK2 ) ).

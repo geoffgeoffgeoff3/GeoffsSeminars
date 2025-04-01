@@ -1,0 +1,115 @@
+fof(transitivity_of_order,axiom,! [X1] : ! [X2] : ! [X3] : ( after(X1,X2) | ~ after(X1,X3) | ~ after(X3,X2) ) ).
+fof(order4,axiom,after(four,five) ).
+fof(order5,axiom,after(five,six) ).
+fof(order3,axiom,after(three,four) ).
+fof(order2,axiom,after(two,three) ).
+fof(familiar_or_not,axiom,! [X1] : ! [X2] : ( familiar(X1,X2) | not_familiar(X1,X2) | ~ person(X1) | ~ person(X2) | ~ after(X1,X2) ) ).
+fof(person6,axiom,person(six) ).
+fof(person5,axiom,person(five) ).
+fof(person4,axiom,person(four) ).
+fof(person2,axiom,person(two) ).
+fof(person3,axiom,person(three) ).
+fof(order1,axiom,after(one,two) ).
+fof(person1,axiom,person(one) ).
+fof(three_not_familiar,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ not_familiar(X1,X2) | ~ not_familiar(X2,X3) | ~ not_familiar(X3,X1) ) ).
+fof(three_familiar,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ familiar(X1,X2) | ~ familiar(X2,X3) | ~ familiar(X3,X1) ) ).
+fof(c_0_15,axiom,! [X1] : ! [X2] : ! [X3] : ( after(X1,X2) | ~ after(X1,X3) | ~ after(X3,X2) ) ).
+fof(c_0_16,axiom,after(four,five) ).
+fof(c_0_17,axiom,after(five,six) ).
+fof(c_0_18,axiom,! [X1] : ( after(X1,five) | ~ after(X1,four) ) ).
+fof(c_0_19,axiom,! [X1] : ( after(X1,six) | ~ after(X1,five) ) ).
+fof(c_0_20,axiom,! [X1] : ! [X2] : ( after(X1,five) | ~ after(X2,four) | ~ after(X1,X2) ) ).
+fof(c_0_21,axiom,after(three,four) ).
+fof(c_0_22,axiom,! [X1] : ! [X2] : ( after(X1,six) | ~ after(X2,five) | ~ after(X1,X2) ) ).
+fof(c_0_23,axiom,! [X1] : ( after(X1,five) | ~ after(X1,three) ) ).
+fof(c_0_24,axiom,! [X1] : ( after(X1,four) | ~ after(X1,three) ) ).
+fof(c_0_25,axiom,! [X1] : ! [X2] : ( after(X1,six) | ~ after(X2,four) | ~ after(X1,X2) ) ).
+fof(c_0_26,axiom,! [X1] : ! [X2] : ( after(X1,six) | ~ after(X2,three) | ~ after(X1,X2) ) ).
+fof(c_0_27,axiom,after(two,three) ).
+fof(c_0_28,axiom,! [X1] : ! [X2] : ( after(X1,five) | ~ after(X2,three) | ~ after(X1,X2) ) ).
+fof(c_0_29,axiom,! [X1] : ! [X2] : ( familiar(X1,X2) | not_familiar(X1,X2) | ~ person(X1) | ~ person(X2) | ~ after(X1,X2) ) ).
+fof(c_0_30,axiom,! [X1] : ( after(X1,six) | ~ after(X1,three) ) ).
+fof(c_0_31,axiom,person(six) ).
+fof(c_0_32,axiom,! [X1] : ! [X2] : ( after(X1,four) | ~ after(X2,three) | ~ after(X1,X2) ) ).
+fof(c_0_33,axiom,person(five) ).
+fof(c_0_34,axiom,! [X1] : ( after(X1,six) | ~ after(X1,four) ) ).
+fof(c_0_35,axiom,person(four) ).
+fof(c_0_36,axiom,! [X1] : ( after(X1,six) | ~ after(X1,two) ) ).
+fof(c_0_37,axiom,! [X1] : ( after(X1,five) | ~ after(X1,two) ) ).
+fof(c_0_38,axiom,! [X1] : ( not_familiar(X1,six) | familiar(X1,six) | ~ after(X1,three) | ~ person(X1) ) ).
+fof(c_0_39,axiom,person(two) ).
+fof(c_0_40,axiom,! [X1] : ( not_familiar(X1,six) | familiar(X1,six) | ~ after(X1,five) | ~ person(X1) ) ).
+fof(c_0_41,axiom,! [X1] : ( after(X1,four) | ~ after(X1,two) ) ).
+fof(c_0_42,axiom,! [X1] : ( not_familiar(X1,five) | familiar(X1,five) | ~ after(X1,three) | ~ person(X1) ) ).
+fof(c_0_43,axiom,! [X1] : ( not_familiar(X1,six) | familiar(X1,six) | ~ after(X1,four) | ~ person(X1) ) ).
+fof(c_0_44,axiom,person(three) ).
+fof(c_0_45,axiom,! [X1] : ( after(X1,three) | ~ after(X1,two) ) ).
+fof(c_0_46,axiom,! [X1] : ( not_familiar(X1,five) | familiar(X1,five) | ~ after(X1,four) | ~ person(X1) ) ).
+fof(c_0_47,axiom,! [X1] : ( not_familiar(X1,four) | familiar(X1,four) | ~ after(X1,three) | ~ person(X1) ) ).
+fof(c_0_48,axiom,! [X1] : ( not_familiar(X1,six) | familiar(X1,six) | ~ after(X1,two) | ~ person(X1) ) ).
+fof(c_0_49,axiom,after(one,two) ).
+fof(c_0_50,axiom,person(one) ).
+fof(c_0_51,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ not_familiar(X1,X2) | ~ not_familiar(X2,X3) | ~ not_familiar(X3,X1) ) ).
+fof(c_0_52,axiom,not_familiar(five,six) | familiar(five,six) ).
+fof(c_0_53,axiom,! [X1] : ( not_familiar(X1,five) | familiar(X1,five) | ~ after(X1,two) | ~ person(X1) ) ).
+fof(c_0_54,axiom,not_familiar(two,six) | familiar(two,six) ).
+fof(c_0_55,axiom,not_familiar(four,six) | familiar(four,six) ).
+fof(c_0_56,axiom,! [X1] : ( not_familiar(X1,four) | familiar(X1,four) | ~ after(X1,two) | ~ person(X1) ) ).
+fof(c_0_57,axiom,not_familiar(four,five) | familiar(four,five) ).
+fof(c_0_58,axiom,not_familiar(two,five) | familiar(two,five) ).
+fof(c_0_59,axiom,not_familiar(three,six) | familiar(three,six) ).
+fof(c_0_60,axiom,! [X1] : ( not_familiar(X1,three) | familiar(X1,three) | ~ after(X1,two) | ~ person(X1) ) ).
+fof(c_0_61,axiom,not_familiar(three,five) | familiar(three,five) ).
+fof(c_0_62,axiom,not_familiar(three,four) | familiar(three,four) ).
+fof(c_0_63,axiom,not_familiar(two,four) | familiar(two,four) ).
+fof(c_0_64,axiom,not_familiar(two,three) | familiar(two,three) ).
+fof(c_0_65,axiom,not_familiar(one,six) | familiar(one,six) ).
+fof(c_0_66,axiom,! [X1] : ( familiar(five,six) | ~ not_familiar(X1,five) | ~ not_familiar(six,X1) ) ).
+fof(c_0_67,axiom,not_familiar(one,five) | familiar(one,five) ).
+fof(c_0_68,axiom,! [X1] : ( familiar(two,six) | ~ not_familiar(X1,two) | ~ not_familiar(six,X1) ) ).
+fof(c_0_69,axiom,not_familiar(one,two) | familiar(one,two) ).
+fof(c_0_70,axiom,! [X1] : ( familiar(four,six) | ~ not_familiar(X1,four) | ~ not_familiar(six,X1) ) ).
+fof(c_0_71,axiom,not_familiar(one,four) | familiar(one,four) ).
+fof(c_0_72,axiom,! [X1] : ( familiar(four,five) | ~ not_familiar(X1,four) | ~ not_familiar(five,X1) ) ).
+fof(c_0_73,axiom,! [X1] : ( familiar(two,five) | ~ not_familiar(X1,two) | ~ not_familiar(five,X1) ) ).
+fof(c_0_74,axiom,! [X1] : ( familiar(three,six) | ~ not_familiar(X1,three) | ~ not_familiar(six,X1) ) ).
+fof(c_0_75,axiom,not_familiar(one,three) | familiar(one,three) ).
+fof(c_0_76,axiom,! [X1] : ( familiar(three,five) | ~ not_familiar(X1,three) | ~ not_familiar(five,X1) ) ).
+fof(c_0_77,axiom,! [X1] : ( familiar(three,four) | ~ not_familiar(X1,three) | ~ not_familiar(four,X1) ) ).
+fof(c_0_78,axiom,! [X1] : ( familiar(two,four) | ~ not_familiar(X1,two) | ~ not_familiar(four,X1) ) ).
+fof(c_0_79,axiom,! [X1] : ! [X2] : ( after(X1,six) | ~ after(X2,two) | ~ after(X1,X2) ) ).
+fof(c_0_80,axiom,! [X1] : ( familiar(two,three) | ~ not_familiar(X1,two) | ~ not_familiar(three,X1) ) ).
+fof(c_0_81,axiom,! [X1] : ! [X2] : ( after(X1,five) | ~ after(X2,two) | ~ after(X1,X2) ) ).
+fof(c_0_82,axiom,! [X1] : ! [X2] : ( after(X1,four) | ~ after(X2,two) | ~ after(X1,X2) ) ).
+fof(c_0_83,axiom,! [X1] : ! [X2] : ( after(X1,three) | ~ after(X2,two) | ~ after(X1,X2) ) ).
+fof(c_0_84,axiom,! [X1] : ( familiar(one,six) | ~ not_familiar(X1,one) | ~ not_familiar(six,X1) ) ).
+fof(c_0_85,axiom,familiar(one,five) | familiar(five,six) | ~ not_familiar(six,one) ).
+fof(c_0_86,axiom,! [X1] : ( familiar(one,five) | ~ not_familiar(X1,one) | ~ not_familiar(five,X1) ) ).
+fof(c_0_87,axiom,familiar(one,two) | familiar(two,six) | ~ not_familiar(six,one) ).
+fof(c_0_88,axiom,familiar(one,four) | familiar(four,six) | ~ not_familiar(six,one) ).
+fof(c_0_89,axiom,familiar(one,four) | familiar(four,five) | ~ not_familiar(five,one) ).
+fof(c_0_90,axiom,! [X1] : ( familiar(one,four) | ~ not_familiar(X1,one) | ~ not_familiar(four,X1) ) ).
+fof(c_0_91,axiom,familiar(one,two) | familiar(two,five) | ~ not_familiar(five,one) ).
+fof(c_0_92,axiom,familiar(two,five) | familiar(five,six) | ~ not_familiar(six,two) ).
+fof(c_0_93,axiom,familiar(one,three) | familiar(three,six) | ~ not_familiar(six,one) ).
+fof(c_0_94,axiom,familiar(two,three) | familiar(three,six) | ~ not_familiar(six,two) ).
+fof(c_0_95,axiom,familiar(one,three) | familiar(three,five) | ~ not_familiar(five,one) ).
+fof(c_0_96,axiom,familiar(one,three) | familiar(three,four) | ~ not_familiar(four,one) ).
+fof(c_0_97,axiom,! [X1] : ( familiar(one,three) | ~ not_familiar(X1,one) | ~ not_familiar(three,X1) ) ).
+fof(c_0_98,axiom,familiar(one,two) | familiar(two,four) | ~ not_familiar(four,one) ).
+fof(c_0_99,axiom,familiar(two,four) | familiar(four,six) | ~ not_familiar(six,two) ).
+fof(c_0_100,axiom,familiar(two,four) | familiar(four,five) | ~ not_familiar(five,two) ).
+fof(c_0_101,axiom,familiar(two,three) | familiar(three,five) | ~ not_familiar(five,two) ).
+fof(c_0_102,axiom,familiar(three,five) | familiar(five,six) | ~ not_familiar(six,three) ).
+fof(c_0_103,axiom,familiar(three,four) | familiar(four,six) | ~ not_familiar(six,three) ).
+fof(c_0_104,axiom,! [X1] : ( after(X1,six) | ~ after(X1,one) ) ).
+fof(c_0_105,axiom,familiar(one,two) | familiar(two,three) | ~ not_familiar(three,one) ).
+fof(c_0_106,axiom,familiar(two,three) | familiar(three,four) | ~ not_familiar(four,two) ).
+fof(c_0_107,axiom,familiar(three,four) | familiar(four,five) | ~ not_familiar(five,three) ).
+fof(c_0_108,axiom,familiar(four,five) | familiar(five,six) | ~ not_familiar(six,four) ).
+fof(c_0_109,axiom,! [X1] : ( after(X1,five) | ~ after(X1,one) ) ).
+fof(c_0_110,axiom,! [X1] : ( after(X1,four) | ~ after(X1,one) ) ).
+fof(c_0_111,axiom,! [X1] : ( familiar(one,two) | ~ not_familiar(X1,one) | ~ not_familiar(two,X1) ) ).
+fof(c_0_112,axiom,! [X1] : ( after(X1,three) | ~ after(X1,one) ) ).
+fof(c_0_113,axiom,! [X1] : ( after(X1,two) | ~ after(X1,one) ) ).
+fof(c_0_114,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ familiar(X1,X2) | ~ familiar(X2,X3) | ~ familiar(X3,X1) ) ).

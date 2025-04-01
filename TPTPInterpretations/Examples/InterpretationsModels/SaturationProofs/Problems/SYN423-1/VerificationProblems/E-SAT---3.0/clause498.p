@@ -1,0 +1,2 @@
+include('Saturations/SYN423-1/Saturations/E-SAT---3.0.ax').
+fof(clause498,conjecture,! [U] : ( ~ c5_2(a543,U) | ~ ndr1_1(a543) | c8_2(a543,U) | c9_2(a543,U) | ssSkC18 ) ).

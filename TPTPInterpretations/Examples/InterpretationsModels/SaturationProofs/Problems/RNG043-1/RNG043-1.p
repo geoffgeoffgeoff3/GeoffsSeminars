@@ -1,0 +1,15 @@
+fof(left_additive_identity,conjecture,! [X] : add(additive_identity,X) = X ).
+fof(right_additive_identity,conjecture,! [X] : add(X,additive_identity) = X ).
+fof(left_multiplicative_zero,conjecture,! [X] : multiply(additive_identity,X) = additive_identity ).
+fof(right_multiplicative_zero,conjecture,! [X] : multiply(X,additive_identity) = additive_identity ).
+fof(left_additive_inverse,conjecture,! [X] : add(additive_inverse(X),X) = additive_identity ).
+fof(right_additive_inverse,conjecture,! [X] : add(X,additive_inverse(X)) = additive_identity ).
+fof(additive_inverse_additive_inverse,conjecture,! [X] : additive_inverse(additive_inverse(X)) = X ).
+fof(distribute1,conjecture,! [X] : ! [Y] : ! [Z] : multiply(X,add(Y,Z)) = add(multiply(X,Y),multiply(X,Z)) ).
+fof(distribute2,conjecture,! [X] : ! [Y] : ! [Z] : multiply(add(X,Y),Z) = add(multiply(X,Z),multiply(Y,Z)) ).
+fof(commutativity_for_addition,conjecture,! [X] : ! [Y] : add(X,Y) = add(Y,X) ).
+fof(associativity_for_addition,conjecture,! [X] : ! [Y] : ! [Z] : add(X,add(Y,Z)) = add(add(X,Y),Z) ).
+fof(right_alternative,conjecture,! [X] : ! [Y] : multiply(multiply(X,Y),Y) = multiply(X,multiply(Y,Y)) ).
+fof(left_alternative,conjecture,! [X] : ! [Y] : multiply(multiply(X,X),Y) = multiply(X,multiply(X,Y)) ).
+fof(associator,conjecture,! [X] : ! [Y] : ! [Z] : associator(X,Y,Z) = add(multiply(multiply(X,Y),Z),additive_inverse(multiply(X,multiply(Y,Z)))) ).
+fof(commutator,conjecture,! [X] : ! [Y] : commutator(X,Y) = add(multiply(Y,X),additive_inverse(multiply(X,Y))) ).

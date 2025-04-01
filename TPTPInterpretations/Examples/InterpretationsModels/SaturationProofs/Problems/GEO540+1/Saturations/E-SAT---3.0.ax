@@ -1,0 +1,303 @@
+fof(ruleX5,axiom,! [X1] : ! [X2] : ! [X9] : ! [X16] : ! [X18] : ? [X10] : ( ( eqangle(X1,X9,X2,X9,X1,X16,X2,X18) & ~ coll(X1,X2,X9) ) => ( eqangle(X1,X9,X2,X9,X1,X10,X2,X10) & cyclic(X16,X2,X9,X10) ) ) ).
+fof(ruleD58,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( ( eqangle(X1,X2,X2,X3,X9,X10,X10,X15) & eqangle(X1,X3,X2,X3,X9,X15,X10,X15) & ~ coll(X1,X2,X3) ) => simtri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleD71,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ( eqangle(X1,X2,X3,X4,X3,X4,X1,X2) & ~ para(X1,X2,X3,X4) ) => perp(X1,X2,X3,X4) ) ).
+fof(ruleD47,axiom,! [X1] : ! [X2] : ! [X8] : ( ( eqangle(X8,X1,X1,X2,X1,X2,X8,X2) & ~ coll(X8,X1,X2) ) => cong(X8,X1,X8,X2) ) ).
+fof(ruleD42a,axiom,! [X1] : ! [X2] : ! [X9] : ! [X10] : ( ( eqangle(X9,X1,X9,X2,X10,X1,X10,X2) & ~ coll(X9,X10,X1) ) => cyclic(X1,X2,X9,X10) ) ).
+fof(ruleX12,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ! [X17] : ? [X9] : ? [X10] : ( ( circle(X7,X1,X2,X3) & cong(X7,X1,X7,X4) & cong(X17,X1,X17,X2) & X7 != X17 ) => ( coll(X9,X1,X3) & cong(X9,X17,X17,X1) & coll(X10,X2,X4) & cong(X10,X17,X17,X1) ) ) ).
+fof(ruleD30,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X13] : ! [X14] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( ( eqratio(X1,X2,X3,X4,X9,X10,X11,X12) & eqratio(X9,X10,X11,X12,X5,X6,X13,X14) ) => eqratio(X1,X2,X3,X4,X5,X6,X13,X14) ) ).
+fof(ruleD22,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ! [X5] : ! [X6] : ! [X13] : ! [X14] : ( ( eqangle(X1,X2,X3,X4,X9,X10,X11,X12) & eqangle(X9,X10,X11,X12,X5,X6,X13,X14) ) => eqangle(X1,X2,X3,X4,X5,X6,X13,X14) ) ).
+fof(ruleX8,axiom,! [X1] : ! [X2] : ! [X7] : ! [X9] : ! [X10] : ! [X15] : ! [X7] : ? [X16] : ( ( midp(X7,X1,X2) & para(X1,X9,X15,X7) & para(X1,X9,X2,X10) & coll(X9,X10,X15) ) => ( coll(X16,X1,X10) & coll(X16,X7,X15) ) ) ).
+fof(ruleX18,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ? [X15] : ( ( para(X1,X2,X3,X4) & coll(X9,X1,X3) & coll(X9,X2,X4) & coll(X10,X1,X2) ) => ( coll(X9,X10,X15) & coll(X15,X3,X4) ) ) ).
+fof(ruleX3,axiom,! [X1] : ! [X2] : ! [X8] : ! [X16] : ? [X7] : ( ( perp(X8,X16,X1,X2) & eqangle(X1,X8,X8,X16,X8,X16,X8,X2) ) => ( coll(X2,X1,X7) & coll(X7,X8,X16) ) ) ).
+fof(ruleX2,axiom,! [X1] : ! [X2] : ! [X8] : ! [X16] : ? [X7] : ( ( cong(X8,X1,X8,X2) & eqangle(X1,X8,X8,X16,X8,X16,X8,X2) ) => ( coll(X2,X1,X7) & coll(X7,X8,X16) ) ) ).
+fof(ruleX1,axiom,! [X1] : ! [X7] : ! [X8] : ! [X16] : ? [X2] : ( ( perp(X8,X7,X7,X1) & eqangle(X16,X8,X7,X8,X7,X8,X1,X8) ) => ( coll(X2,X1,X7) & coll(X2,X8,X16) ) ) ).
+fof(ruleX13,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ? [X8] : ( ( cyclic(X1,X2,X3,X4) & para(X1,X2,X3,X4) & midp(X7,X1,X2) ) => circle(X8,X1,X2,X3) ) ).
+fof(ruleD38,axiom,! [X1] : ! [X2] : ! [X3] : ! [X5] : ! [X6] : ! [X13] : ! [X9] : ! [X10] : ! [X15] : ( ( contri(X1,X2,X3,X5,X6,X13) & contri(X5,X6,X13,X9,X10,X15) ) => contri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleD34,axiom,! [X1] : ! [X2] : ! [X3] : ! [X5] : ! [X6] : ! [X13] : ! [X9] : ! [X10] : ! [X15] : ( ( simtri(X1,X2,X3,X5,X6,X13) & simtri(X5,X6,X13,X9,X10,X15) ) => simtri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleD48,axiom,! [X1] : ! [X2] : ! [X3] : ! [X8] : ! [X16] : ( ( circle(X8,X1,X2,X3) & perp(X8,X1,X1,X16) ) => eqangle(X1,X16,X1,X2,X3,X1,X3,X2) ) ).
+fof(ruleX9,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X8] : ? [X9] : ( ( cong(X8,X3,X8,X4) & perp(X1,X2,X2,X8) ) => ( cong(X8,X3,X8,X9) & para(X9,X3,X1,X2) & cong(X2,X3,X2,X9) ) ) ).
+fof(ruleX15,axiom,! [X1] : ! [X2] : ! [X3] : ! [X5] : ! [X6] : ? [X9] : ( ( perp(X1,X3,X3,X2) & coll(X2,X5,X6) ) => ( coll(X9,X5,X6) & perp(X9,X1,X5,X6) ) ) ).
+fof(ruleD29,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( eqratio(X1,X2,X3,X4,X9,X10,X11,X12) => eqratio(X1,X2,X9,X10,X3,X4,X11,X12) ) ).
+fof(ruleD26,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( eqratio(X1,X2,X3,X4,X9,X10,X11,X12) => eqratio(X2,X1,X3,X4,X9,X10,X11,X12) ) ).
+fof(ruleD65,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X8] : ( ( para(X1,X2,X3,X4) & coll(X8,X1,X3) & coll(X8,X2,X4) ) => eqratio(X8,X1,X1,X3,X8,X2,X2,X4) ) ).
+fof(ruleX10,axiom,! [X1] : ! [X2] : ! [X3] : ! [X14] : ? [X9] : ? [X10] : ( ( perp(X1,X14,X2,X3) & perp(X2,X14,X1,X3) ) => ( coll(X9,X3,X2) & perp(X1,X9,X3,X2) & coll(X10,X3,X1) & perp(X2,X10,X3,X1) ) ) ).
+fof(ruleD27,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( eqratio(X1,X2,X3,X4,X9,X10,X11,X12) => eqratio(X3,X4,X1,X2,X11,X12,X9,X10) ) ).
+fof(ruleX16,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ? [X9] : ( ( perp(X1,X2,X1,X3) & perp(X3,X1,X3,X4) & midp(X7,X2,X4) ) => midp(X9,X1,X3) ) ).
+fof(ruleD28,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( eqratio(X1,X2,X3,X4,X9,X10,X11,X12) => eqratio(X9,X10,X11,X12,X1,X2,X3,X4) ) ).
+fof(ruleD21,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( eqangle(X1,X2,X3,X4,X9,X10,X11,X12) => eqangle(X1,X2,X9,X10,X3,X4,X11,X12) ) ).
+fof(ruleD18,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( eqangle(X1,X2,X3,X4,X9,X10,X11,X12) => eqangle(X2,X1,X3,X4,X9,X10,X11,X12) ) ).
+fof(ruleD19,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( eqangle(X1,X2,X3,X4,X9,X10,X11,X12) => eqangle(X3,X4,X1,X2,X11,X12,X9,X10) ) ).
+fof(ruleD20,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( eqangle(X1,X2,X3,X4,X9,X10,X11,X12) => eqangle(X9,X10,X11,X12,X1,X2,X3,X4) ) ).
+fof(ruleD43,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( ( cyclic(X1,X2,X3,X9) & cyclic(X1,X2,X3,X10) & cyclic(X1,X2,X3,X15) & eqangle(X3,X1,X3,X2,X15,X9,X15,X10) ) => cong(X1,X2,X9,X10) ) ).
+fof(ruleD13,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X8] : ( ( cong(X8,X1,X8,X2) & cong(X8,X1,X8,X3) & cong(X8,X1,X8,X4) ) => cyclic(X1,X2,X3,X4) ) ).
+fof(ruleD57,axiom,! [X1] : ! [X2] : ! [X9] : ! [X10] : ( ( cong(X1,X9,X2,X9) & cong(X1,X10,X2,X10) & cyclic(X1,X2,X9,X10) ) => perp(X9,X1,X1,X10) ) ).
+fof(ruleX6,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ! [X17] : ? [X9] : ( ( midp(X7,X1,X2) & midp(X17,X3,X4) ) => ( midp(X9,X1,X4) & para(X9,X7,X2,X4) & para(X9,X17,X1,X3) ) ) ).
+fof(ruleD50,axiom,! [X1] : ! [X2] : ! [X3] : ! [X8] : ! [X7] : ( ( circle(X8,X1,X2,X3) & midp(X7,X2,X3) ) => eqangle(X1,X2,X1,X3,X8,X2,X8,X7) ) ).
+fof(ruleX4,axiom,! [X1] : ! [X2] : ! [X8] : ! [X16] : ? [X7] : ( ( perp(X8,X16,X1,X2) & cong(X8,X1,X8,X2) ) => ( coll(X2,X1,X7) & coll(X7,X8,X16) ) ) ).
+fof(ruleX14,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ? [X8] : ( ( perp(X1,X3,X3,X2) & cyclic(X1,X2,X3,X4) ) => circle(X8,X1,X2,X3) ) ).
+fof(ruleD60,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( simtri(X1,X2,X3,X9,X10,X15) => eqangle(X1,X2,X2,X3,X9,X10,X10,X15) ) ).
+fof(ruleD49,axiom,! [X1] : ! [X2] : ! [X3] : ! [X8] : ! [X16] : ( ( circle(X8,X1,X2,X3) & eqangle(X1,X16,X1,X2,X3,X1,X3,X2) ) => perp(X8,X1,X1,X16) ) ).
+fof(ruleD51,axiom,! [X1] : ! [X2] : ! [X3] : ! [X8] : ! [X7] : ( ( circle(X8,X1,X2,X3) & coll(X7,X2,X3) & eqangle(X1,X2,X1,X3,X8,X2,X8,X7) ) => midp(X7,X2,X3) ) ).
+fof(ruleD64,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ( ( midp(X7,X1,X2) & para(X1,X3,X2,X4) & para(X1,X4,X2,X3) ) => midp(X7,X3,X4) ) ).
+fof(ruleD54,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ( cyclic(X1,X2,X3,X4) & para(X1,X2,X3,X4) ) => eqangle(X1,X4,X3,X4,X3,X4,X3,X2) ) ).
+fof(ruleD61,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( ( simtri(X1,X2,X3,X9,X10,X15) & cong(X1,X2,X9,X10) ) => contri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleX17,axiom,! [X1] : ! [X2] : ! [X8] : ? [X3] : ( ( cong(X8,X1,X8,X2) & perp(X1,X8,X8,X2) ) => ( coll(X1,X8,X3) & cong(X8,X1,X8,X3) ) ) ).
+fof(ruleD17,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ( cyclic(X1,X2,X3,X4) & cyclic(X1,X2,X3,X5) ) => cyclic(X2,X3,X4,X5) ) ).
+fof(ruleD12,axiom,! [X1] : ! [X2] : ! [X3] : ! [X8] : ( ( cong(X8,X1,X8,X2) & cong(X8,X1,X8,X3) ) => circle(X8,X1,X2,X3) ) ).
+fof(ruleD70,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ! [X17] : ( ( midp(X7,X1,X2) & midp(X17,X3,X4) ) => eqratio(X7,X1,X1,X2,X17,X3,X3,X4) ) ).
+fof(ruleD25,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ( cong(X1,X2,X3,X4) & cong(X3,X4,X5,X6) ) => cong(X1,X2,X5,X6) ) ).
+fof(ruleD10,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ( para(X1,X2,X3,X4) & perp(X3,X4,X5,X6) ) => perp(X1,X2,X5,X6) ) ).
+fof(ruleD35,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( contri(X1,X3,X2,X9,X15,X10) => contri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleD36,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( contri(X2,X1,X3,X10,X9,X15) => contri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleD37,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( contri(X9,X10,X15,X1,X2,X3) => contri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleD31,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( simtri(X1,X3,X2,X9,X15,X10) => simtri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleD56,axiom,! [X1] : ! [X2] : ! [X9] : ! [X10] : ( ( cong(X1,X9,X2,X9) & cong(X1,X10,X2,X10) ) => perp(X1,X2,X9,X10) ) ).
+fof(ruleD9,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ( perp(X1,X2,X3,X4) & perp(X3,X4,X5,X6) ) => para(X1,X2,X5,X6) ) ).
+fof(ruleD6,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ( para(X1,X2,X3,X4) & para(X3,X4,X5,X6) ) => para(X1,X2,X5,X6) ) ).
+fof(ruleD45,axiom,! [X1] : ! [X2] : ! [X3] : ! [X5] : ! [X6] : ( ( midp(X5,X1,X2) & para(X5,X6,X2,X3) & coll(X6,X1,X3) ) => midp(X6,X1,X3) ) ).
+fof(ruleD32,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( simtri(X2,X1,X3,X10,X9,X15) => simtri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleX7,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ! [X17] : ! [X10] : ? [X9] : ( ( midp(X7,X1,X2) & midp(X17,X3,X4) & coll(X3,X1,X2) & coll(X4,X1,X2) ) => midp(X9,X1,X10) ) ).
+fof(ruleD33,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( simtri(X9,X10,X15,X1,X2,X3) => simtri(X1,X2,X3,X9,X10,X15) ) ).
+fof(ruleD75,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( ( eqratio(X1,X2,X3,X4,X9,X10,X11,X12) & cong(X9,X10,X11,X12) ) => cong(X1,X2,X3,X4) ) ).
+fof(ruleD74,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( ( eqangle(X1,X2,X3,X4,X9,X10,X11,X12) & perp(X9,X10,X11,X12) ) => perp(X1,X2,X3,X4) ) ).
+fof(ruleD59,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( simtri(X1,X2,X3,X9,X10,X15) => eqratio(X1,X2,X1,X3,X9,X10,X9,X15) ) ).
+fof(ruleD73,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ( ( eqangle(X1,X2,X3,X4,X9,X10,X11,X12) & para(X9,X10,X11,X12) ) => para(X1,X2,X3,X4) ) ).
+fof(ruleD52,axiom,! [X1] : ! [X2] : ! [X3] : ! [X7] : ( ( perp(X1,X2,X2,X3) & midp(X7,X1,X3) ) => cong(X1,X7,X2,X7) ) ).
+fof(ruleD55,axiom,! [X1] : ! [X2] : ! [X7] : ! [X8] : ( ( midp(X7,X1,X2) & perp(X8,X7,X1,X2) ) => cong(X8,X1,X8,X2) ) ).
+fof(ruleD42b,axiom,! [X1] : ! [X2] : ! [X9] : ! [X10] : ( ( eqangle(X9,X1,X9,X2,X10,X1,X10,X2) & coll(X9,X10,X2) ) => cyclic(X1,X2,X9,X10) ) ).
+fof(ruleD46,axiom,! [X1] : ! [X2] : ! [X8] : ( cong(X8,X1,X8,X2) => eqangle(X8,X1,X1,X2,X1,X2,X8,X2) ) ).
+fof(ruleD40,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ( para(X1,X2,X3,X4) => eqangle(X1,X2,X9,X10,X3,X4,X9,X10) ) ).
+fof(ruleD41,axiom,! [X1] : ! [X2] : ! [X9] : ! [X10] : ( cyclic(X1,X2,X9,X10) => eqangle(X9,X1,X9,X2,X10,X1,X10,X2) ) ).
+fof(ruleD44,axiom,! [X1] : ! [X2] : ! [X3] : ! [X5] : ! [X6] : ( ( midp(X5,X1,X2) & midp(X6,X1,X3) ) => para(X5,X6,X2,X3) ) ).
+fof(ruleD63,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ( ( midp(X7,X1,X2) & midp(X7,X3,X4) ) => para(X1,X3,X2,X4) ) ).
+fof(ruleD53,axiom,! [X1] : ! [X2] : ! [X3] : ! [X8] : ( ( circle(X8,X1,X2,X3) & coll(X8,X1,X3) ) => perp(X1,X2,X2,X3) ) ).
+fof(ruleX11,axiom,! [X1] : ! [X2] : ! [X3] : ! [X8] : ? [X9] : ( circle(X8,X1,X2,X3) => perp(X9,X1,X1,X8) ) ).
+fof(ruleD39,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ( eqangle(X1,X2,X9,X10,X3,X4,X9,X10) => para(X1,X2,X3,X4) ) ).
+fof(ruleD67,axiom,! [X1] : ! [X2] : ! [X3] : ( ( cong(X1,X2,X1,X3) & coll(X1,X2,X3) ) => midp(X1,X2,X3) ) ).
+fof(ruleD14,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( cyclic(X1,X2,X3,X4) => cyclic(X1,X2,X4,X3) ) ).
+fof(ruleD15,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( cyclic(X1,X2,X3,X4) => cyclic(X1,X3,X2,X4) ) ).
+fof(ruleD16,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( cyclic(X1,X2,X3,X4) => cyclic(X2,X1,X3,X4) ) ).
+fof(ruleD3,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ( coll(X1,X2,X3) & coll(X1,X2,X4) ) => coll(X3,X4,X1) ) ).
+fof(ruleD23,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( cong(X1,X2,X3,X4) => cong(X1,X2,X4,X3) ) ).
+fof(ruleD24,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( cong(X1,X2,X3,X4) => cong(X3,X4,X1,X2) ) ).
+fof(ruleD7,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( perp(X1,X2,X3,X4) => perp(X1,X2,X4,X3) ) ).
+fof(ruleD8,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( perp(X1,X2,X3,X4) => perp(X3,X4,X1,X2) ) ).
+fof(ruleD4,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( para(X1,X2,X3,X4) => para(X1,X2,X4,X3) ) ).
+fof(ruleD5,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( para(X1,X2,X3,X4) => para(X3,X4,X1,X2) ) ).
+fof(ruleD68,axiom,! [X1] : ! [X2] : ! [X3] : ( midp(X1,X2,X3) => cong(X1,X2,X1,X3) ) ).
+fof(ruleD62,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( contri(X1,X2,X3,X9,X10,X15) => cong(X1,X2,X9,X10) ) ).
+fof(ruleD11,axiom,! [X1] : ! [X2] : ! [X7] : ( midp(X7,X2,X1) => midp(X7,X1,X2) ) ).
+fof(ruleD1,axiom,! [X1] : ! [X2] : ! [X3] : ( coll(X1,X2,X3) => coll(X1,X3,X2) ) ).
+fof(ruleD2,axiom,! [X1] : ! [X2] : ! [X3] : ( coll(X1,X2,X3) => coll(X2,X1,X3) ) ).
+fof(ruleD66,axiom,! [X1] : ! [X2] : ! [X3] : ( para(X1,X2,X1,X3) => coll(X1,X2,X3) ) ).
+fof(ruleD69,axiom,! [X1] : ! [X2] : ! [X3] : ( midp(X1,X2,X3) => coll(X1,X2,X3) ) ).
+fof(c_0_93,axiom,! [X1] : ! [X2] : ! [X9] : ! [X16] : ! [X18] : ? [X10] : ( ( eqangle(X1,X9,X2,X9,X1,X16,X2,X18) & ~ coll(X1,X2,X9) ) => ( eqangle(X1,X9,X2,X9,X1,X10,X2,X10) & cyclic(X16,X2,X9,X10) ) ) ).
+fof(c_0_94,axiom,! [X1] : ! [X2] : ! [X3] : ! [X9] : ! [X10] : ! [X15] : ( ( eqangle(X1,X2,X2,X3,X9,X10,X10,X15) & eqangle(X1,X3,X2,X3,X9,X15,X10,X15) & ~ coll(X1,X2,X3) ) => simtri(X1,X2,X3,X9,X10,X15) ) ).
+fof(c_0_95,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ( eqangle(X1,X2,X3,X4,X3,X4,X1,X2) & ~ para(X1,X2,X3,X4) ) => perp(X1,X2,X3,X4) ) ).
+fof(c_0_96,axiom,! [X1] : ! [X2] : ! [X8] : ( ( eqangle(X8,X1,X1,X2,X1,X2,X8,X2) & ~ coll(X8,X1,X2) ) => cong(X8,X1,X8,X2) ) ).
+fof(c_0_97,axiom,! [X1] : ! [X2] : ! [X9] : ! [X10] : ( ( eqangle(X9,X1,X9,X2,X10,X1,X10,X2) & ~ coll(X9,X10,X1) ) => cyclic(X1,X2,X9,X10) ) ).
+fof(c_0_98,axiom,! [X453] : ! [X454] : ! [X455] : ! [X456] : ! [X457] : ( ( eqangle(X453,X455,X454,X455,X453,esk5_4(X453,X454,X455,X456),X454,esk5_4(X453,X454,X455,X456)) | ~ eqangle(X453,X455,X454,X455,X453,X456,X454,X457) | coll(X453,X454,X455) ) & ( cyclic(X456,X454,X455,esk5_4(X453,X454,X455,X456)) | ~ eqangle(X453,X455,X454,X455,X453,X456,X454,X457) | coll(X453,X454,X455) ) ) ).
+fof(c_0_99,axiom,! [X338] : ! [X339] : ! [X340] : ! [X341] : ! [X342] : ! [X343] : ( ~ eqangle(X338,X339,X339,X340,X341,X342,X342,X343) | ~ eqangle(X338,X340,X339,X340,X341,X343,X342,X343) | coll(X338,X339,X340) | simtri(X338,X339,X340,X341,X342,X343) ) ).
+fof(c_0_100,axiom,! [X498] : ! [X499] : ! [X500] : ! [X501] : ! [X502] : ! [X503] : ( ( coll(esk13_6(X498,X499,X500,X501,X502,X503),X498,X500) | ~ circle(X502,X498,X499,X500) | ~ cong(X502,X498,X502,X501) | ~ cong(X503,X498,X503,X499) | X502 = X503 ) & ( cong(esk13_6(X498,X499,X500,X501,X502,X503),X503,X503,X498) | ~ circle(X502,X498,X499,X500) | ~ cong(X502,X498,X502,X501) | ~ cong(X503,X498,X503,X499) | X502 = X503 ) & ( coll(esk14_6(X498,X499,X500,X501,X502,X503),X499,X501) | ~ circle(X502,X498,X499,X500) | ~ cong(X502,X498,X502,X501) | ~ cong(X503,X498,X503,X499) | X502 = X503 ) & ( cong(esk14_6(X498,X499,X500,X501,X502,X503),X503,X503,X498) | ~ circle(X502,X498,X499,X500) | ~ cong(X502,X498,X502,X501) | ~ cong(X503,X498,X503,X499) | X502 = X503 ) ) ).
+fof(c_0_101,axiom,! [X182] : ! [X183] : ! [X184] : ! [X185] : ! [X186] : ! [X187] : ! [X188] : ! [X189] : ! [X190] : ! [X191] : ! [X192] : ! [X193] : ( ~ eqratio(X182,X183,X184,X185,X190,X191,X192,X193) | ~ eqratio(X190,X191,X192,X193,X186,X187,X188,X189) | eqratio(X182,X183,X184,X185,X186,X187,X188,X189) ) ).
+fof(c_0_102,axiom,! [X124] : ! [X125] : ! [X126] : ! [X127] : ! [X128] : ! [X129] : ! [X130] : ! [X131] : ! [X132] : ! [X133] : ! [X134] : ! [X135] : ( ~ eqangle(X124,X125,X126,X127,X128,X129,X130,X131) | ~ eqangle(X128,X129,X130,X131,X132,X133,X134,X135) | eqangle(X124,X125,X126,X127,X132,X133,X134,X135) ) ).
+fof(c_0_103,axiom,! [X474] : ! [X475] : ! [X476] : ! [X477] : ! [X478] : ! [X479] : ( ( coll(esk8_6(X474,X475,X476,X477,X478,X479),X474,X477) | ~ midp(X479,X474,X475) | ~ para(X474,X476,X478,X479) | ~ para(X474,X476,X475,X477) | ~ coll(X476,X477,X478) ) & ( coll(esk8_6(X474,X475,X476,X477,X478,X479),X479,X478) | ~ midp(X479,X474,X475) | ~ para(X474,X476,X478,X479) | ~ para(X474,X476,X475,X477) | ~ coll(X476,X477,X478) ) ) ).
+fof(c_0_104,axiom,! [X533] : ! [X534] : ! [X535] : ! [X536] : ! [X537] : ! [X538] : ( ( coll(X537,X538,esk20_6(X533,X534,X535,X536,X537,X538)) | ~ para(X533,X534,X535,X536) | ~ coll(X537,X533,X535) | ~ coll(X537,X534,X536) | ~ coll(X538,X533,X534) ) & ( coll(esk20_6(X533,X534,X535,X536,X537,X538),X535,X536) | ~ para(X533,X534,X535,X536) | ~ coll(X537,X533,X535) | ~ coll(X537,X534,X536) | ~ coll(X538,X533,X534) ) ) ).
+fof(c_0_105,axiom,! [X443] : ! [X444] : ! [X445] : ! [X446] : ( ( coll(X444,X443,esk3_4(X443,X444,X445,X446)) | ~ perp(X445,X446,X443,X444) | ~ eqangle(X443,X445,X445,X446,X445,X446,X445,X444) ) & ( coll(esk3_4(X443,X444,X445,X446),X445,X446) | ~ perp(X445,X446,X443,X444) | ~ eqangle(X443,X445,X445,X446,X445,X446,X445,X444) ) ) ).
+fof(c_0_106,axiom,! [X438] : ! [X439] : ! [X440] : ! [X441] : ( ( coll(X439,X438,esk2_4(X438,X439,X440,X441)) | ~ cong(X440,X438,X440,X439) | ~ eqangle(X438,X440,X440,X441,X440,X441,X440,X439) ) & ( coll(esk2_4(X438,X439,X440,X441),X440,X441) | ~ cong(X440,X438,X440,X439) | ~ eqangle(X438,X440,X440,X441,X440,X441,X440,X439) ) ) ).
+fof(c_0_107,axiom,! [X433] : ! [X434] : ! [X435] : ! [X436] : ( ( coll(esk1_4(X433,X434,X435,X436),X433,X434) | ~ perp(X435,X434,X434,X433) | ~ eqangle(X436,X435,X434,X435,X434,X435,X433,X435) ) & ( coll(esk1_4(X433,X434,X435,X436),X435,X436) | ~ perp(X435,X434,X434,X433) | ~ eqangle(X436,X435,X434,X435,X434,X435,X433,X435) ) ) ).
+fof(c_0_108,axiom,! [X506] : ! [X507] : ! [X508] : ! [X509] : ! [X510] : ( ~ cyclic(X506,X507,X508,X509) | ~ para(X506,X507,X508,X509) | ~ midp(X510,X506,X507) | circle(esk15_3(X506,X507,X508),X506,X507,X508) ) ).
+fof(c_0_109,axiom,! [X239] : ! [X240] : ! [X241] : ! [X242] : ! [X243] : ! [X244] : ! [X245] : ! [X246] : ! [X247] : ( ~ contri(X239,X240,X241,X242,X243,X244) | ~ contri(X242,X243,X244,X245,X246,X247) | contri(X239,X240,X241,X245,X246,X247) ) ).
+fof(c_0_110,axiom,! [X212] : ! [X213] : ! [X214] : ! [X215] : ! [X216] : ! [X217] : ! [X218] : ! [X219] : ! [X220] : ( ~ simtri(X212,X213,X214,X215,X216,X217) | ~ simtri(X215,X216,X217,X218,X219,X220) | simtri(X212,X213,X214,X218,X219,X220) ) ).
+fof(c_0_111,axiom,! [X294] : ! [X295] : ! [X296] : ! [X297] : ! [X298] : ( ~ circle(X297,X294,X295,X296) | ~ perp(X297,X294,X294,X298) | eqangle(X294,X298,X294,X295,X296,X294,X296,X295) ) ).
+fof(c_0_112,axiom,! [X481] : ! [X482] : ! [X483] : ! [X484] : ! [X485] : ( ( cong(X485,X483,X485,esk9_5(X481,X482,X483,X484,X485)) | ~ cong(X485,X483,X485,X484) | ~ perp(X481,X482,X482,X485) ) & ( para(esk9_5(X481,X482,X483,X484,X485),X483,X481,X482) | ~ cong(X485,X483,X485,X484) | ~ perp(X481,X482,X482,X485) ) & ( cong(X482,X483,X482,esk9_5(X481,X482,X483,X484,X485)) | ~ cong(X485,X483,X485,X484) | ~ perp(X481,X482,X482,X485) ) ) ).
+fof(c_0_113,axiom,! [X517] : ! [X518] : ! [X519] : ! [X520] : ! [X521] : ( ( coll(esk17_5(X517,X518,X519,X520,X521),X520,X521) | ~ perp(X517,X519,X519,X518) | ~ coll(X518,X520,X521) ) & ( perp(esk17_5(X517,X518,X519,X520,X521),X517,X520,X521) | ~ perp(X517,X519,X519,X518) | ~ coll(X518,X520,X521) ) ) ).
+fof(c_0_114,axiom,! [X174] : ! [X175] : ! [X176] : ! [X177] : ! [X178] : ! [X179] : ! [X180] : ! [X181] : ( ~ eqratio(X174,X175,X176,X177,X178,X179,X180,X181) | eqratio(X174,X175,X178,X179,X176,X177,X180,X181) ) ).
+fof(c_0_115,axiom,! [X150] : ! [X151] : ! [X152] : ! [X153] : ! [X154] : ! [X155] : ! [X156] : ! [X157] : ( ~ eqratio(X150,X151,X152,X153,X154,X155,X156,X157) | eqratio(X151,X150,X152,X153,X154,X155,X156,X157) ) ).
+fof(c_0_116,axiom,! [X378] : ! [X379] : ! [X380] : ! [X381] : ! [X382] : ( ~ para(X378,X379,X380,X381) | ~ coll(X382,X378,X380) | ~ coll(X382,X379,X381) | eqratio(X382,X378,X378,X380,X382,X379,X379,X381) ) ).
+fof(c_0_117,axiom,! [X487] : ! [X488] : ! [X489] : ! [X490] : ( ( coll(esk10_3(X487,X488,X489),X489,X488) | ~ perp(X487,X490,X488,X489) | ~ perp(X488,X490,X487,X489) ) & ( perp(X487,esk10_3(X487,X488,X489),X489,X488) | ~ perp(X487,X490,X488,X489) | ~ perp(X488,X490,X487,X489) ) & ( coll(esk11_3(X487,X488,X489),X489,X487) | ~ perp(X487,X490,X488,X489) | ~ perp(X488,X490,X487,X489) ) & ( perp(X488,esk11_3(X487,X488,X489),X489,X487) | ~ perp(X487,X490,X488,X489) | ~ perp(X488,X490,X487,X489) ) ) ).
+fof(c_0_118,axiom,! [X158] : ! [X159] : ! [X160] : ! [X161] : ! [X162] : ! [X163] : ! [X164] : ! [X165] : ( ~ eqratio(X158,X159,X160,X161,X162,X163,X164,X165) | eqratio(X160,X161,X158,X159,X164,X165,X162,X163) ) ).
+fof(c_0_119,axiom,! [X523] : ! [X524] : ! [X525] : ! [X526] : ! [X527] : ( ~ perp(X523,X524,X523,X525) | ~ perp(X525,X523,X525,X526) | ~ midp(X527,X524,X526) | midp(esk18_3(X523,X524,X525),X523,X525) ) ).
+fof(c_0_120,axiom,! [X166] : ! [X167] : ! [X168] : ! [X169] : ! [X170] : ! [X171] : ! [X172] : ! [X173] : ( ~ eqratio(X166,X167,X168,X169,X170,X171,X172,X173) | eqratio(X170,X171,X172,X173,X166,X167,X168,X169) ) ).
+fof(c_0_121,axiom,! [X116] : ! [X117] : ! [X118] : ! [X119] : ! [X120] : ! [X121] : ! [X122] : ! [X123] : ( ~ eqangle(X116,X117,X118,X119,X120,X121,X122,X123) | eqangle(X116,X117,X120,X121,X118,X119,X122,X123) ) ).
+fof(c_0_122,axiom,! [X92] : ! [X93] : ! [X94] : ! [X95] : ! [X96] : ! [X97] : ! [X98] : ! [X99] : ( ~ eqangle(X92,X93,X94,X95,X96,X97,X98,X99) | eqangle(X93,X92,X94,X95,X96,X97,X98,X99) ) ).
+fof(c_0_123,axiom,! [X100] : ! [X101] : ! [X102] : ! [X103] : ! [X104] : ! [X105] : ! [X106] : ! [X107] : ( ~ eqangle(X100,X101,X102,X103,X104,X105,X106,X107) | eqangle(X102,X103,X100,X101,X106,X107,X104,X105) ) ).
+fof(c_0_124,axiom,! [X108] : ! [X109] : ! [X110] : ! [X111] : ! [X112] : ! [X113] : ! [X114] : ! [X115] : ( ~ eqangle(X108,X109,X110,X111,X112,X113,X114,X115) | eqangle(X112,X113,X114,X115,X108,X109,X110,X111) ) ).
+fof(c_0_125,axiom,! [X272] : ! [X273] : ! [X274] : ! [X275] : ! [X276] : ! [X277] : ( ~ cyclic(X272,X273,X274,X275) | ~ cyclic(X272,X273,X274,X276) | ~ cyclic(X272,X273,X274,X277) | ~ eqangle(X274,X272,X274,X273,X277,X275,X277,X276) | cong(X272,X273,X275,X276) ) ).
+fof(c_0_126,axiom,! [X70] : ! [X71] : ! [X72] : ! [X73] : ! [X74] : ( ~ cong(X74,X70,X74,X71) | ~ cong(X74,X70,X74,X72) | ~ cong(X74,X70,X74,X73) | cyclic(X70,X71,X72,X73) ) ).
+fof(c_0_127,axiom,! [X334] : ! [X335] : ! [X336] : ! [X337] : ( ~ cong(X334,X336,X335,X336) | ~ cong(X334,X337,X335,X337) | ~ cyclic(X334,X335,X336,X337) | perp(X336,X334,X334,X337) ) ).
+fof(c_0_128,axiom,! [X459] : ! [X460] : ! [X461] : ! [X462] : ! [X463] : ! [X464] : ( ( midp(esk6_6(X459,X460,X461,X462,X463,X464),X459,X462) | ~ midp(X463,X459,X460) | ~ midp(X464,X461,X462) ) & ( para(esk6_6(X459,X460,X461,X462,X463,X464),X463,X460,X462) | ~ midp(X463,X459,X460) | ~ midp(X464,X461,X462) ) & ( para(esk6_6(X459,X460,X461,X462,X463,X464),X464,X459,X461) | ~ midp(X463,X459,X460) | ~ midp(X464,X461,X462) ) ) ).
+fof(c_0_129,axiom,! [X304] : ! [X305] : ! [X306] : ! [X307] : ! [X308] : ( ~ circle(X307,X304,X305,X306) | ~ midp(X308,X305,X306) | eqangle(X304,X305,X304,X306,X307,X305,X307,X308) ) ).
+fof(c_0_130,axiom,! [X448] : ! [X449] : ! [X450] : ! [X451] : ( ( coll(X449,X448,esk4_4(X448,X449,X450,X451)) | ~ perp(X450,X451,X448,X449) | ~ cong(X450,X448,X450,X449) ) & ( coll(esk4_4(X448,X449,X450,X451),X450,X451) | ~ perp(X450,X451,X448,X449) | ~ cong(X450,X448,X450,X449) ) ) ).
+fof(c_0_131,axiom,! [X512] : ! [X513] : ! [X514] : ! [X515] : ( ~ perp(X512,X514,X514,X513) | ~ cyclic(X512,X513,X514,X515) | circle(esk16_3(X512,X513,X514),X512,X513,X514) ) ).
+fof(c_0_132,axiom,! [X350] : ! [X351] : ! [X352] : ! [X353] : ! [X354] : ! [X355] : ( ~ simtri(X350,X351,X352,X353,X354,X355) | eqangle(X350,X351,X351,X352,X353,X354,X354,X355) ) ).
+fof(c_0_133,axiom,! [X299] : ! [X300] : ! [X301] : ! [X302] : ! [X303] : ( ~ circle(X302,X299,X300,X301) | ~ eqangle(X299,X303,X299,X300,X301,X299,X301,X300) | perp(X302,X299,X299,X303) ) ).
+fof(c_0_134,axiom,! [X309] : ! [X310] : ! [X311] : ! [X312] : ! [X313] : ( ~ circle(X312,X309,X310,X311) | ~ coll(X313,X310,X311) | ~ eqangle(X309,X310,X309,X311,X312,X310,X312,X313) | midp(X313,X310,X311) ) ).
+fof(c_0_135,axiom,! [X373] : ! [X374] : ! [X375] : ! [X376] : ! [X377] : ( ~ midp(X377,X373,X374) | ~ para(X373,X375,X374,X376) | ~ para(X373,X376,X374,X375) | midp(X377,X375,X376) ) ).
+fof(c_0_136,axiom,! [X322] : ! [X323] : ! [X324] : ! [X325] : ( ~ cyclic(X322,X323,X324,X325) | ~ para(X322,X323,X324,X325) | eqangle(X322,X325,X324,X325,X324,X325,X324,X323) ) ).
+fof(c_0_137,axiom,! [X401] : ! [X402] : ! [X403] : ! [X404] : ( ~ eqangle(X401,X402,X403,X404,X403,X404,X401,X402) | para(X401,X402,X403,X404) | perp(X401,X402,X403,X404) ) ).
+fof(c_0_138,axiom,! [X356] : ! [X357] : ! [X358] : ! [X359] : ! [X360] : ! [X361] : ( ~ simtri(X356,X357,X358,X359,X360,X361) | ~ cong(X356,X357,X359,X360) | contri(X356,X357,X358,X359,X360,X361) ) ).
+fof(c_0_139,axiom,! [X529] : ! [X530] : ! [X531] : ( ( coll(X529,X531,esk19_3(X529,X530,X531)) | ~ cong(X531,X529,X531,X530) | ~ perp(X529,X531,X531,X530) ) & ( cong(X531,X529,X531,esk19_3(X529,X530,X531)) | ~ cong(X531,X529,X531,X530) | ~ perp(X529,X531,X531,X530) ) ) ).
+fof(c_0_140,axiom,! [X291] : ! [X292] : ! [X293] : ( ~ eqangle(X293,X291,X291,X292,X291,X292,X293,X292) | coll(X293,X291,X292) | cong(X293,X291,X293,X292) ) ).
+fof(c_0_141,axiom,! [X264] : ! [X265] : ! [X266] : ! [X267] : ( ~ eqangle(X266,X264,X266,X265,X267,X264,X267,X265) | coll(X266,X267,X264) | cyclic(X264,X265,X266,X267) ) ).
+fof(c_0_142,axiom,! [X87] : ! [X88] : ! [X89] : ! [X90] : ! [X91] : ( ~ cyclic(X87,X88,X89,X90) | ~ cyclic(X87,X88,X89,X91) | cyclic(X88,X89,X90,X91) ) ).
+fof(c_0_143,axiom,! [X66] : ! [X67] : ! [X68] : ! [X69] : ( ~ cong(X69,X66,X69,X67) | ~ cong(X69,X66,X69,X68) | circle(X69,X66,X67,X68) ) ).
+fof(c_0_144,axiom,! [X395] : ! [X396] : ! [X397] : ! [X398] : ! [X399] : ! [X400] : ( ~ midp(X399,X395,X396) | ~ midp(X400,X397,X398) | eqratio(X399,X395,X395,X396,X400,X397,X397,X398) ) ).
+fof(c_0_145,axiom,! [X144] : ! [X145] : ! [X146] : ! [X147] : ! [X148] : ! [X149] : ( ~ cong(X144,X145,X146,X147) | ~ cong(X146,X147,X148,X149) | cong(X144,X145,X148,X149) ) ).
+fof(c_0_146,axiom,! [X57] : ! [X58] : ! [X59] : ! [X60] : ! [X61] : ! [X62] : ( ~ para(X57,X58,X59,X60) | ~ perp(X59,X60,X61,X62) | perp(X57,X58,X61,X62) ) ).
+fof(c_0_147,axiom,! [X221] : ! [X222] : ! [X223] : ! [X224] : ! [X225] : ! [X226] : ( ~ contri(X221,X223,X222,X224,X226,X225) | contri(X221,X222,X223,X224,X225,X226) ) ).
+fof(c_0_148,axiom,! [X227] : ! [X228] : ! [X229] : ! [X230] : ! [X231] : ! [X232] : ( ~ contri(X228,X227,X229,X231,X230,X232) | contri(X227,X228,X229,X230,X231,X232) ) ).
+fof(c_0_149,axiom,! [X233] : ! [X234] : ! [X235] : ! [X236] : ! [X237] : ! [X238] : ( ~ contri(X236,X237,X238,X233,X234,X235) | contri(X233,X234,X235,X236,X237,X238) ) ).
+fof(c_0_150,axiom,! [X194] : ! [X195] : ! [X196] : ! [X197] : ! [X198] : ! [X199] : ( ~ simtri(X194,X196,X195,X197,X199,X198) | simtri(X194,X195,X196,X197,X198,X199) ) ).
+fof(c_0_151,axiom,! [X330] : ! [X331] : ! [X332] : ! [X333] : ( ~ cong(X330,X332,X331,X332) | ~ cong(X330,X333,X331,X333) | perp(X330,X331,X332,X333) ) ).
+fof(c_0_152,axiom,! [X51] : ! [X52] : ! [X53] : ! [X54] : ! [X55] : ! [X56] : ( ~ perp(X51,X52,X53,X54) | ~ perp(X53,X54,X55,X56) | para(X51,X52,X55,X56) ) ).
+fof(c_0_153,axiom,! [X37] : ! [X38] : ! [X39] : ! [X40] : ! [X41] : ! [X42] : ( ~ para(X37,X38,X39,X40) | ~ para(X39,X40,X41,X42) | para(X37,X38,X41,X42) ) ).
+fof(c_0_154,axiom,! [X283] : ! [X284] : ! [X285] : ! [X286] : ! [X287] : ( ~ midp(X286,X283,X284) | ~ para(X286,X287,X284,X285) | ~ coll(X287,X283,X285) | midp(X287,X283,X285) ) ).
+fof(c_0_155,axiom,! [X200] : ! [X201] : ! [X202] : ! [X203] : ! [X204] : ! [X205] : ( ~ simtri(X201,X200,X202,X204,X203,X205) | simtri(X200,X201,X202,X203,X204,X205) ) ).
+fof(c_0_156,axiom,! [X466] : ! [X467] : ! [X468] : ! [X469] : ! [X470] : ! [X471] : ! [X472] : ( ~ midp(X470,X466,X467) | ~ midp(X471,X468,X469) | ~ coll(X468,X466,X467) | ~ coll(X469,X466,X467) | midp(esk7_2(X466,X472),X466,X472) ) ).
+fof(c_0_157,axiom,! [X206] : ! [X207] : ! [X208] : ! [X209] : ! [X210] : ! [X211] : ( ~ simtri(X209,X210,X211,X206,X207,X208) | simtri(X206,X207,X208,X209,X210,X211) ) ).
+fof(c_0_158,axiom,! [X425] : ! [X426] : ! [X427] : ! [X428] : ! [X429] : ! [X430] : ! [X431] : ! [X432] : ( ~ eqratio(X425,X426,X427,X428,X429,X430,X431,X432) | ~ cong(X429,X430,X431,X432) | cong(X425,X426,X427,X428) ) ).
+fof(c_0_159,axiom,! [X417] : ! [X418] : ! [X419] : ! [X420] : ! [X421] : ! [X422] : ! [X423] : ! [X424] : ( ~ eqangle(X417,X418,X419,X420,X421,X422,X423,X424) | ~ perp(X421,X422,X423,X424) | perp(X417,X418,X419,X420) ) ).
+fof(c_0_160,axiom,! [X344] : ! [X345] : ! [X346] : ! [X347] : ! [X348] : ! [X349] : ( ~ simtri(X344,X345,X346,X347,X348,X349) | eqratio(X344,X345,X344,X346,X347,X348,X347,X349) ) ).
+fof(c_0_161,axiom,! [X409] : ! [X410] : ! [X411] : ! [X412] : ! [X413] : ! [X414] : ! [X415] : ! [X416] : ( ~ eqangle(X409,X410,X411,X412,X413,X414,X415,X416) | ~ para(X413,X414,X415,X416) | para(X409,X410,X411,X412) ) ).
+fof(c_0_162,axiom,! [X314] : ! [X315] : ! [X316] : ! [X317] : ( ~ perp(X314,X315,X315,X316) | ~ midp(X317,X314,X316) | cong(X314,X317,X315,X317) ) ).
+fof(c_0_163,axiom,! [X326] : ! [X327] : ! [X328] : ! [X329] : ( ~ midp(X328,X326,X327) | ~ perp(X329,X328,X326,X327) | cong(X329,X326,X329,X327) ) ).
+fof(c_0_164,axiom,! [X268] : ! [X269] : ! [X270] : ! [X271] : ( ~ eqangle(X270,X268,X270,X269,X271,X268,X271,X269) | ~ coll(X270,X271,X269) | cyclic(X268,X269,X270,X271) ) ).
+fof(c_0_165,axiom,! [X288] : ! [X289] : ! [X290] : ( ~ cong(X290,X288,X290,X289) | eqangle(X290,X288,X288,X289,X288,X289,X290,X289) ) ).
+fof(c_0_166,axiom,! [X254] : ! [X255] : ! [X256] : ! [X257] : ! [X258] : ! [X259] : ( ~ para(X254,X255,X256,X257) | eqangle(X254,X255,X258,X259,X256,X257,X258,X259) ) ).
+fof(c_0_167,axiom,! [X260] : ! [X261] : ! [X262] : ! [X263] : ( ~ cyclic(X260,X261,X262,X263) | eqangle(X262,X260,X262,X261,X263,X260,X263,X261) ) ).
+fof(c_0_168,axiom,! [X278] : ! [X279] : ! [X280] : ! [X281] : ! [X282] : ( ~ midp(X281,X278,X279) | ~ midp(X282,X278,X280) | para(X281,X282,X279,X280) ) ).
+fof(c_0_169,axiom,! [X368] : ! [X369] : ! [X370] : ! [X371] : ! [X372] : ( ~ midp(X372,X368,X369) | ~ midp(X372,X370,X371) | para(X368,X370,X369,X371) ) ).
+fof(c_0_170,axiom,! [X318] : ! [X319] : ! [X320] : ! [X321] : ( ~ circle(X321,X318,X319,X320) | ~ coll(X321,X318,X320) | perp(X318,X319,X319,X320) ) ).
+fof(c_0_171,axiom,! [X493] : ! [X494] : ! [X495] : ! [X496] : ( ~ circle(X496,X493,X494,X495) | perp(esk12_4(X493,X494,X495,X496),X493,X493,X496) ) ).
+fof(c_0_172,axiom,! [X248] : ! [X249] : ! [X250] : ! [X251] : ! [X252] : ! [X253] : ( ~ eqangle(X248,X249,X252,X253,X250,X251,X252,X253) | para(X248,X249,X250,X251) ) ).
+fof(c_0_173,axiom,! [X386] : ! [X387] : ! [X388] : ( ~ cong(X386,X387,X386,X388) | ~ coll(X386,X387,X388) | midp(X386,X387,X388) ) ).
+fof(c_0_174,axiom,! [X75] : ! [X76] : ! [X77] : ! [X78] : ( ~ cyclic(X75,X76,X77,X78) | cyclic(X75,X76,X78,X77) ) ).
+fof(c_0_175,axiom,! [X79] : ! [X80] : ! [X81] : ! [X82] : ( ~ cyclic(X79,X80,X81,X82) | cyclic(X79,X81,X80,X82) ) ).
+fof(c_0_176,axiom,! [X83] : ! [X84] : ! [X85] : ! [X86] : ( ~ cyclic(X83,X84,X85,X86) | cyclic(X84,X83,X85,X86) ) ).
+fof(c_0_177,axiom,! [X25] : ! [X26] : ! [X27] : ! [X28] : ( ~ coll(X25,X26,X27) | ~ coll(X25,X26,X28) | coll(X27,X28,X25) ) ).
+fof(c_0_178,axiom,! [X136] : ! [X137] : ! [X138] : ! [X139] : ( ~ cong(X136,X137,X138,X139) | cong(X136,X137,X139,X138) ) ).
+fof(c_0_179,axiom,! [X140] : ! [X141] : ! [X142] : ! [X143] : ( ~ cong(X140,X141,X142,X143) | cong(X142,X143,X140,X141) ) ).
+fof(c_0_180,axiom,! [X43] : ! [X44] : ! [X45] : ! [X46] : ( ~ perp(X43,X44,X45,X46) | perp(X43,X44,X46,X45) ) ).
+fof(c_0_181,axiom,! [X47] : ! [X48] : ! [X49] : ! [X50] : ( ~ perp(X47,X48,X49,X50) | perp(X49,X50,X47,X48) ) ).
+fof(c_0_182,axiom,! [X29] : ! [X30] : ! [X31] : ! [X32] : ( ~ para(X29,X30,X31,X32) | para(X29,X30,X32,X31) ) ).
+fof(c_0_183,axiom,! [X33] : ! [X34] : ! [X35] : ! [X36] : ( ~ para(X33,X34,X35,X36) | para(X35,X36,X33,X34) ) ).
+fof(c_0_184,axiom,! [X389] : ! [X390] : ! [X391] : ( ~ midp(X389,X390,X391) | cong(X389,X390,X389,X391) ) ).
+fof(c_0_185,axiom,! [X362] : ! [X363] : ! [X364] : ! [X365] : ! [X366] : ! [X367] : ( ~ contri(X362,X363,X364,X365,X366,X367) | cong(X362,X363,X365,X366) ) ).
+fof(c_0_186,axiom,! [X63] : ! [X64] : ! [X65] : ( ~ midp(X65,X64,X63) | midp(X65,X63,X64) ) ).
+fof(c_0_187,axiom,! [X19] : ! [X20] : ! [X21] : ( ~ coll(X19,X20,X21) | coll(X19,X21,X20) ) ).
+fof(c_0_188,axiom,! [X22] : ! [X23] : ! [X24] : ( ~ coll(X22,X23,X24) | coll(X23,X22,X24) ) ).
+fof(c_0_189,axiom,! [X383] : ! [X384] : ! [X385] : ( ~ para(X383,X384,X383,X385) | coll(X383,X384,X385) ) ).
+fof(c_0_190,axiom,! [X392] : ! [X393] : ! [X394] : ( ~ midp(X392,X393,X394) | coll(X392,X393,X394) ) ).
+fof(c_0_191,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( eqangle(X1,X2,X3,X2,X1,esk5_4(X1,X3,X2,X4),X3,esk5_4(X1,X3,X2,X4)) | coll(X1,X3,X2) | ~ eqangle(X1,X2,X3,X2,X1,X4,X3,X5) ) ).
+fof(c_0_192,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( coll(X1,X2,X3) | simtri(X1,X2,X3,X4,X5,X6) | ~ eqangle(X1,X2,X2,X3,X4,X5,X5,X6) | ~ eqangle(X1,X3,X2,X3,X4,X6,X5,X6) ) ).
+fof(c_0_193,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( coll(esk14_6(X1,X2,X3,X4,X5,X6),X2,X4) | X5 = X6 | ~ circle(X5,X1,X2,X3) | ~ cong(X5,X1,X5,X4) | ~ cong(X6,X1,X6,X2) ) ).
+fof(c_0_194,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( cong(esk14_6(X1,X2,X3,X4,X5,X6),X6,X6,X1) | X5 = X6 | ~ circle(X5,X1,X2,X3) | ~ cong(X5,X1,X5,X4) | ~ cong(X6,X1,X6,X2) ) ).
+fof(c_0_195,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( cong(esk13_6(X1,X2,X3,X4,X5,X6),X6,X6,X1) | X5 = X6 | ~ circle(X5,X1,X2,X3) | ~ cong(X5,X1,X5,X4) | ~ cong(X6,X1,X6,X2) ) ).
+fof(c_0_196,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( coll(esk13_6(X1,X2,X3,X4,X5,X6),X1,X3) | X5 = X6 | ~ circle(X5,X1,X2,X3) | ~ cong(X5,X1,X5,X4) | ~ cong(X6,X1,X6,X2) ) ).
+fof(c_0_197,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( eqratio(X1,X2,X3,X4,X9,X10,X11,X12) | ~ eqratio(X1,X2,X3,X4,X5,X6,X7,X8) | ~ eqratio(X5,X6,X7,X8,X9,X10,X11,X12) ) ).
+fof(c_0_198,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( eqangle(X1,X2,X3,X4,X9,X10,X11,X12) | ~ eqangle(X1,X2,X3,X4,X5,X6,X7,X8) | ~ eqangle(X5,X6,X7,X8,X9,X10,X11,X12) ) ).
+fof(c_0_199,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( coll(esk8_6(X1,X2,X3,X4,X5,X6),X1,X4) | ~ midp(X6,X1,X2) | ~ para(X1,X3,X5,X6) | ~ para(X1,X3,X2,X4) | ~ coll(X3,X4,X5) ) ).
+fof(c_0_200,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( coll(esk8_6(X1,X2,X3,X4,X5,X6),X6,X5) | ~ midp(X6,X1,X2) | ~ para(X1,X3,X5,X6) | ~ para(X1,X3,X2,X4) | ~ coll(X3,X4,X5) ) ).
+fof(c_0_201,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( coll(esk20_6(X1,X2,X3,X4,X5,X6),X3,X4) | ~ para(X1,X2,X3,X4) | ~ coll(X5,X1,X3) | ~ coll(X5,X2,X4) | ~ coll(X6,X1,X2) ) ).
+fof(c_0_202,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( coll(X1,X2,esk20_6(X3,X4,X5,X6,X1,X2)) | ~ para(X3,X4,X5,X6) | ~ coll(X1,X3,X5) | ~ coll(X1,X4,X6) | ~ coll(X2,X3,X4) ) ).
+fof(c_0_203,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( cyclic(X1,X2,X3,esk5_4(X4,X2,X3,X1)) | coll(X4,X2,X3) | ~ eqangle(X4,X3,X2,X3,X4,X1,X2,X5) ) ).
+fof(c_0_204,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(esk3_4(X1,X2,X3,X4),X3,X4) | ~ perp(X3,X4,X1,X2) | ~ eqangle(X1,X3,X3,X4,X3,X4,X3,X2) ) ).
+fof(c_0_205,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(esk2_4(X1,X2,X3,X4),X3,X4) | ~ cong(X3,X1,X3,X2) | ~ eqangle(X1,X3,X3,X4,X3,X4,X3,X2) ) ).
+fof(c_0_206,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(esk1_4(X1,X2,X3,X4),X1,X2) | ~ perp(X3,X2,X2,X1) | ~ eqangle(X4,X3,X2,X3,X2,X3,X1,X3) ) ).
+fof(c_0_207,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(esk1_4(X1,X2,X3,X4),X3,X4) | ~ perp(X3,X2,X2,X1) | ~ eqangle(X4,X3,X2,X3,X2,X3,X1,X3) ) ).
+fof(c_0_208,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(X1,X2,esk3_4(X2,X1,X3,X4)) | ~ perp(X3,X4,X2,X1) | ~ eqangle(X2,X3,X3,X4,X3,X4,X3,X1) ) ).
+fof(c_0_209,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( circle(esk15_3(X1,X2,X3),X1,X2,X3) | ~ cyclic(X1,X2,X3,X4) | ~ para(X1,X2,X3,X4) | ~ midp(X5,X1,X2) ) ).
+fof(c_0_210,axiom,! [X1] : ! [X2] : ! [X3] : ! [X7] : ! [X8] : ! [X9] : ! [X4] : ! [X5] : ! [X6] : ( contri(X1,X2,X3,X7,X8,X9) | ~ contri(X1,X2,X3,X4,X5,X6) | ~ contri(X4,X5,X6,X7,X8,X9) ) ).
+fof(c_0_211,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(X1,X2,esk2_4(X2,X1,X3,X4)) | ~ cong(X3,X2,X3,X1) | ~ eqangle(X2,X3,X3,X4,X3,X4,X3,X1) ) ).
+fof(c_0_212,axiom,! [X1] : ! [X2] : ! [X3] : ! [X7] : ! [X8] : ! [X9] : ! [X4] : ! [X5] : ! [X6] : ( simtri(X1,X2,X3,X7,X8,X9) | ~ simtri(X1,X2,X3,X4,X5,X6) | ~ simtri(X4,X5,X6,X7,X8,X9) ) ).
+fof(c_0_213,axiom,! [X2] : ! [X5] : ! [X3] : ! [X4] : ! [X1] : ( eqangle(X2,X5,X2,X3,X4,X2,X4,X3) | ~ circle(X1,X2,X3,X4) | ~ perp(X1,X2,X2,X5) ) ).
+fof(c_0_214,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( para(esk9_5(X1,X2,X3,X4,X5),X3,X1,X2) | ~ cong(X5,X3,X5,X4) | ~ perp(X1,X2,X2,X5) ) ).
+fof(c_0_215,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( cong(X1,X2,X1,esk9_5(X3,X1,X2,X4,X5)) | ~ cong(X5,X2,X5,X4) | ~ perp(X3,X1,X1,X5) ) ).
+fof(c_0_216,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( cong(X1,X2,X1,esk9_5(X3,X4,X2,X5,X1)) | ~ cong(X1,X2,X1,X5) | ~ perp(X3,X4,X4,X1) ) ).
+fof(c_0_217,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( perp(esk17_5(X1,X2,X3,X4,X5),X1,X4,X5) | ~ perp(X1,X3,X3,X2) | ~ coll(X2,X4,X5) ) ).
+fof(c_0_218,axiom,! [X1] : ! [X2] : ! [X5] : ! [X6] : ! [X3] : ! [X4] : ! [X7] : ! [X8] : ( eqratio(X1,X2,X5,X6,X3,X4,X7,X8) | ~ eqratio(X1,X2,X3,X4,X5,X6,X7,X8) ) ).
+fof(c_0_219,axiom,! [X2] : ! [X1] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( eqratio(X2,X1,X3,X4,X5,X6,X7,X8) | ~ eqratio(X1,X2,X3,X4,X5,X6,X7,X8) ) ).
+fof(c_0_220,axiom,! [X5] : ! [X1] : ! [X3] : ! [X2] : ! [X4] : ( eqratio(X5,X1,X1,X3,X5,X2,X2,X4) | ~ para(X1,X2,X3,X4) | ~ coll(X5,X1,X3) | ~ coll(X5,X2,X4) ) ).
+fof(c_0_221,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( perp(X1,esk11_3(X2,X1,X3),X3,X2) | ~ perp(X2,X4,X1,X3) | ~ perp(X1,X4,X2,X3) ) ).
+fof(c_0_222,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ! [X7] : ! [X8] : ! [X5] : ! [X6] : ( eqratio(X3,X4,X1,X2,X7,X8,X5,X6) | ~ eqratio(X1,X2,X3,X4,X5,X6,X7,X8) ) ).
+fof(c_0_223,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( midp(esk18_3(X1,X2,X3),X1,X3) | ~ perp(X1,X2,X1,X3) | ~ perp(X3,X1,X3,X4) | ~ midp(X5,X2,X4) ) ).
+fof(c_0_224,axiom,! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( eqratio(X5,X6,X7,X8,X1,X2,X3,X4) | ~ eqratio(X1,X2,X3,X4,X5,X6,X7,X8) ) ).
+fof(c_0_225,axiom,! [X1] : ! [X2] : ! [X5] : ! [X6] : ! [X3] : ! [X4] : ! [X7] : ! [X8] : ( eqangle(X1,X2,X5,X6,X3,X4,X7,X8) | ~ eqangle(X1,X2,X3,X4,X5,X6,X7,X8) ) ).
+fof(c_0_226,axiom,! [X2] : ! [X1] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( eqangle(X2,X1,X3,X4,X5,X6,X7,X8) | ~ eqangle(X1,X2,X3,X4,X5,X6,X7,X8) ) ).
+fof(c_0_227,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ! [X7] : ! [X8] : ! [X5] : ! [X6] : ( eqangle(X3,X4,X1,X2,X7,X8,X5,X6) | ~ eqangle(X1,X2,X3,X4,X5,X6,X7,X8) ) ).
+fof(c_0_228,axiom,! [X5] : ! [X6] : ! [X7] : ! [X8] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( eqangle(X5,X6,X7,X8,X1,X2,X3,X4) | ~ eqangle(X1,X2,X3,X4,X5,X6,X7,X8) ) ).
+fof(c_0_229,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( perp(X1,esk10_3(X1,X2,X3),X3,X2) | ~ perp(X1,X4,X2,X3) | ~ perp(X2,X4,X1,X3) ) ).
+fof(c_0_230,axiom,! [X1] : ! [X2] : ! [X4] : ! [X5] : ! [X3] : ! [X6] : ( cong(X1,X2,X4,X5) | ~ cyclic(X1,X2,X3,X4) | ~ cyclic(X1,X2,X3,X5) | ~ cyclic(X1,X2,X3,X6) | ~ eqangle(X3,X1,X3,X2,X6,X4,X6,X5) ) ).
+fof(c_0_231,axiom,! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X1] : ( cyclic(X2,X3,X4,X5) | ~ cong(X1,X2,X1,X3) | ~ cong(X1,X2,X1,X4) | ~ cong(X1,X2,X1,X5) ) ).
+fof(c_0_232,axiom,! [X2] : ! [X1] : ! [X4] : ! [X3] : ( perp(X2,X1,X1,X4) | ~ cong(X1,X2,X3,X2) | ~ cong(X1,X4,X3,X4) | ~ cyclic(X1,X3,X2,X4) ) ).
+fof(c_0_233,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( para(esk6_6(X1,X2,X3,X4,X5,X6),X5,X2,X4) | ~ midp(X5,X1,X2) | ~ midp(X6,X3,X4) ) ).
+fof(c_0_234,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( para(esk6_6(X1,X2,X3,X4,X5,X6),X6,X1,X3) | ~ midp(X5,X1,X2) | ~ midp(X6,X3,X4) ) ).
+fof(c_0_235,axiom,! [X2] : ! [X3] : ! [X4] : ! [X1] : ! [X5] : ( eqangle(X2,X3,X2,X4,X1,X3,X1,X5) | ~ circle(X1,X2,X3,X4) | ~ midp(X5,X3,X4) ) ).
+fof(c_0_236,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( coll(esk17_5(X1,X2,X3,X4,X5),X4,X5) | ~ perp(X1,X3,X3,X2) | ~ coll(X2,X4,X5) ) ).
+fof(c_0_237,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(X1,X2,esk4_4(X2,X1,X3,X4)) | ~ perp(X3,X4,X2,X1) | ~ cong(X3,X2,X3,X1) ) ).
+fof(c_0_238,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( circle(esk16_3(X1,X3,X2),X1,X3,X2) | ~ perp(X1,X2,X2,X3) | ~ cyclic(X1,X3,X2,X4) ) ).
+fof(c_0_239,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( eqangle(X1,X2,X2,X3,X4,X5,X5,X6) | ~ simtri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_240,axiom,! [X1] : ! [X2] : ! [X5] : ! [X3] : ! [X4] : ( perp(X1,X2,X2,X5) | ~ circle(X1,X2,X3,X4) | ~ eqangle(X2,X5,X2,X3,X4,X2,X4,X3) ) ).
+fof(c_0_241,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(esk11_3(X1,X2,X3),X3,X1) | ~ perp(X1,X4,X2,X3) | ~ perp(X2,X4,X1,X3) ) ).
+fof(c_0_242,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(esk10_3(X1,X2,X3),X3,X2) | ~ perp(X1,X4,X2,X3) | ~ perp(X2,X4,X1,X3) ) ).
+fof(c_0_243,axiom,! [X5] : ! [X3] : ! [X4] : ! [X1] : ! [X2] : ( midp(X5,X3,X4) | ~ circle(X1,X2,X3,X4) | ~ coll(X5,X3,X4) | ~ eqangle(X2,X3,X2,X4,X1,X3,X1,X5) ) ).
+fof(c_0_244,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( midp(esk6_6(X1,X2,X3,X4,X5,X6),X1,X4) | ~ midp(X5,X1,X2) | ~ midp(X6,X3,X4) ) ).
+fof(c_0_245,axiom,! [X1] : ! [X4] : ! [X5] : ! [X2] : ! [X3] : ( midp(X1,X4,X5) | ~ midp(X1,X2,X3) | ~ para(X2,X4,X3,X5) | ~ para(X2,X5,X3,X4) ) ).
+fof(c_0_246,axiom,! [X1] : ! [X4] : ! [X3] : ! [X2] : ( eqangle(X1,X4,X3,X4,X3,X4,X3,X2) | ~ cyclic(X1,X2,X3,X4) | ~ para(X1,X2,X3,X4) ) ).
+fof(c_0_247,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( para(X1,X2,X3,X4) | perp(X1,X2,X3,X4) | ~ eqangle(X1,X2,X3,X4,X3,X4,X1,X2) ) ).
+fof(c_0_248,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( coll(esk4_4(X1,X2,X3,X4),X3,X4) | ~ perp(X3,X4,X1,X2) | ~ cong(X3,X1,X3,X2) ) ).
+fof(c_0_249,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( contri(X1,X2,X3,X4,X5,X6) | ~ simtri(X1,X2,X3,X4,X5,X6) | ~ cong(X1,X2,X4,X5) ) ).
+fof(c_0_250,axiom,! [X1] : ! [X2] : ! [X3] : ( cong(X1,X2,X1,esk19_3(X2,X3,X1)) | ~ cong(X1,X2,X1,X3) | ~ perp(X2,X1,X1,X3) ) ).
+fof(c_0_251,axiom,! [X1] : ! [X2] : ! [X3] : ( coll(X1,X2,X3) | cong(X1,X2,X1,X3) | ~ eqangle(X1,X2,X2,X3,X2,X3,X1,X3) ) ).
+fof(c_0_252,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( coll(X1,X4,X2) | cyclic(X2,X3,X1,X4) | ~ eqangle(X1,X2,X1,X3,X4,X2,X4,X3) ) ).
+fof(c_0_253,axiom,! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X1] : ( cyclic(X2,X3,X4,X5) | ~ cyclic(X1,X2,X3,X4) | ~ cyclic(X1,X2,X3,X5) ) ).
+fof(c_0_254,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( circle(X1,X2,X3,X4) | ~ cong(X1,X2,X1,X3) | ~ cong(X1,X2,X1,X4) ) ).
+fof(c_0_255,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( eqratio(X1,X2,X2,X3,X4,X5,X5,X6) | ~ midp(X1,X2,X3) | ~ midp(X4,X5,X6) ) ).
+fof(c_0_256,axiom,! [X1] : ! [X2] : ! [X5] : ! [X6] : ! [X3] : ! [X4] : ( cong(X1,X2,X5,X6) | ~ cong(X1,X2,X3,X4) | ~ cong(X3,X4,X5,X6) ) ).
+fof(c_0_257,axiom,! [X1] : ! [X2] : ! [X5] : ! [X6] : ! [X3] : ! [X4] : ( perp(X1,X2,X5,X6) | ~ para(X1,X2,X3,X4) | ~ perp(X3,X4,X5,X6) ) ).
+fof(c_0_258,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ! [X6] : ! [X5] : ( contri(X1,X3,X2,X4,X6,X5) | ~ contri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_259,axiom,! [X2] : ! [X1] : ! [X3] : ! [X5] : ! [X4] : ! [X6] : ( contri(X2,X1,X3,X5,X4,X6) | ~ contri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_260,axiom,! [X4] : ! [X5] : ! [X6] : ! [X1] : ! [X2] : ! [X3] : ( contri(X4,X5,X6,X1,X2,X3) | ~ contri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_261,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ! [X6] : ! [X5] : ( simtri(X1,X3,X2,X4,X6,X5) | ~ simtri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_262,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( perp(X1,X3,X2,X4) | ~ cong(X1,X2,X3,X2) | ~ cong(X1,X4,X3,X4) ) ).
+fof(c_0_263,axiom,! [X1] : ! [X2] : ! [X5] : ! [X6] : ! [X3] : ! [X4] : ( para(X1,X2,X5,X6) | ~ perp(X1,X2,X3,X4) | ~ perp(X3,X4,X5,X6) ) ).
+fof(c_0_264,axiom,! [X1] : ! [X2] : ! [X5] : ! [X6] : ! [X3] : ! [X4] : ( para(X1,X2,X5,X6) | ~ para(X1,X2,X3,X4) | ~ para(X3,X4,X5,X6) ) ).
+fof(c_0_265,axiom,! [X4] : ! [X2] : ! [X5] : ! [X1] : ! [X3] : ( midp(X4,X2,X5) | ~ midp(X1,X2,X3) | ~ para(X1,X4,X3,X5) | ~ coll(X4,X2,X5) ) ).
+fof(c_0_266,axiom,! [X2] : ! [X1] : ! [X3] : ! [X5] : ! [X4] : ! [X6] : ( simtri(X2,X1,X3,X5,X4,X6) | ~ simtri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_267,axiom,! [X2] : ! [X7] : ! [X1] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( midp(esk7_2(X2,X7),X2,X7) | ~ midp(X1,X2,X3) | ~ midp(X4,X5,X6) | ~ coll(X5,X2,X3) | ~ coll(X6,X2,X3) ) ).
+fof(c_0_268,axiom,! [X4] : ! [X5] : ! [X6] : ! [X1] : ! [X2] : ! [X3] : ( simtri(X4,X5,X6,X1,X2,X3) | ~ simtri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_269,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( cong(X1,X2,X3,X4) | ~ eqratio(X1,X2,X3,X4,X5,X6,X7,X8) | ~ cong(X5,X6,X7,X8) ) ).
+fof(c_0_270,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( perp(X1,X2,X3,X4) | ~ eqangle(X1,X2,X3,X4,X5,X6,X7,X8) | ~ perp(X5,X6,X7,X8) ) ).
+fof(c_0_271,axiom,! [X1] : ! [X2] : ! [X3] : ( coll(X1,X2,esk19_3(X1,X3,X2)) | ~ cong(X2,X1,X2,X3) | ~ perp(X1,X2,X2,X3) ) ).
+fof(c_0_272,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( eqratio(X1,X2,X1,X3,X4,X5,X4,X6) | ~ simtri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_273,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( para(X1,X2,X3,X4) | ~ eqangle(X1,X2,X3,X4,X5,X6,X7,X8) | ~ para(X5,X6,X7,X8) ) ).
+fof(c_0_274,axiom,! [X1] : ! [X4] : ! [X2] : ! [X3] : ( cong(X1,X4,X2,X4) | ~ perp(X1,X2,X2,X3) | ~ midp(X4,X1,X3) ) ).
+fof(c_0_275,axiom,! [X4] : ! [X2] : ! [X3] : ! [X1] : ( cong(X4,X2,X4,X3) | ~ midp(X1,X2,X3) | ~ perp(X4,X1,X2,X3) ) ).
+fof(c_0_276,axiom,! [X2] : ! [X3] : ! [X1] : ! [X4] : ( cyclic(X2,X3,X1,X4) | ~ eqangle(X1,X2,X1,X3,X4,X2,X4,X3) | ~ coll(X1,X4,X3) ) ).
+fof(c_0_277,axiom,! [X1] : ! [X2] : ! [X3] : ( eqangle(X1,X2,X2,X3,X2,X3,X1,X3) | ~ cong(X1,X2,X1,X3) ) ).
+fof(c_0_278,axiom,! [X1] : ! [X2] : ! [X5] : ! [X6] : ! [X3] : ! [X4] : ( eqangle(X1,X2,X5,X6,X3,X4,X5,X6) | ~ para(X1,X2,X3,X4) ) ).
+fof(c_0_279,axiom,! [X3] : ! [X1] : ! [X2] : ! [X4] : ( eqangle(X3,X1,X3,X2,X4,X1,X4,X2) | ~ cyclic(X1,X2,X3,X4) ) ).
+fof(c_0_280,axiom,! [X1] : ! [X4] : ! [X3] : ! [X5] : ! [X2] : ( para(X1,X4,X3,X5) | ~ midp(X1,X2,X3) | ~ midp(X4,X2,X5) ) ).
+fof(c_0_281,axiom,! [X2] : ! [X4] : ! [X3] : ! [X5] : ! [X1] : ( para(X2,X4,X3,X5) | ~ midp(X1,X2,X3) | ~ midp(X1,X4,X5) ) ).
+fof(c_0_282,axiom,! [X2] : ! [X3] : ! [X4] : ! [X1] : ( perp(X2,X3,X3,X4) | ~ circle(X1,X2,X3,X4) | ~ coll(X1,X2,X4) ) ).
+fof(c_0_283,axiom,! [X2] : ! [X3] : ! [X4] : ! [X1] : ( perp(esk12_4(X2,X3,X4,X1),X2,X2,X1) | ~ circle(X1,X2,X3,X4) ) ).
+fof(c_0_284,axiom,! [X1] : ! [X2] : ! [X5] : ! [X6] : ! [X3] : ! [X4] : ( para(X1,X2,X5,X6) | ~ eqangle(X1,X2,X3,X4,X5,X6,X3,X4) ) ).
+fof(c_0_285,axiom,! [X1] : ! [X2] : ! [X3] : ( midp(X1,X2,X3) | ~ cong(X1,X2,X1,X3) | ~ coll(X1,X2,X3) ) ).
+fof(c_0_286,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( cyclic(X1,X2,X4,X3) | ~ cyclic(X1,X2,X3,X4) ) ).
+fof(c_0_287,axiom,! [X1] : ! [X3] : ! [X2] : ! [X4] : ( cyclic(X1,X3,X2,X4) | ~ cyclic(X1,X2,X3,X4) ) ).
+fof(c_0_288,axiom,! [X2] : ! [X1] : ! [X3] : ! [X4] : ( cyclic(X2,X1,X3,X4) | ~ cyclic(X1,X2,X3,X4) ) ).
+fof(c_0_289,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( coll(X3,X4,X1) | ~ coll(X1,X2,X3) | ~ coll(X1,X2,X4) ) ).
+fof(c_0_290,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( cong(X1,X2,X4,X3) | ~ cong(X1,X2,X3,X4) ) ).
+fof(c_0_291,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( cong(X3,X4,X1,X2) | ~ cong(X1,X2,X3,X4) ) ).
+fof(c_0_292,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( perp(X1,X2,X4,X3) | ~ perp(X1,X2,X3,X4) ) ).
+fof(c_0_293,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( perp(X3,X4,X1,X2) | ~ perp(X1,X2,X3,X4) ) ).
+fof(c_0_294,axiom,! [X1] : ! [X2] : ! [X4] : ! [X3] : ( para(X1,X2,X4,X3) | ~ para(X1,X2,X3,X4) ) ).
+fof(c_0_295,axiom,! [X3] : ! [X4] : ! [X1] : ! [X2] : ( para(X3,X4,X1,X2) | ~ para(X1,X2,X3,X4) ) ).
+fof(c_0_296,axiom,! [X1] : ! [X2] : ! [X3] : ( cong(X1,X2,X1,X3) | ~ midp(X1,X2,X3) ) ).
+fof(c_0_297,axiom,! [X1] : ! [X2] : ! [X4] : ! [X5] : ! [X3] : ! [X6] : ( cong(X1,X2,X4,X5) | ~ contri(X1,X2,X3,X4,X5,X6) ) ).
+fof(c_0_298,axiom,! [X1] : ! [X3] : ! [X2] : ( midp(X1,X3,X2) | ~ midp(X1,X2,X3) ) ).
+fof(c_0_299,axiom,! [X1] : ! [X3] : ! [X2] : ( coll(X1,X3,X2) | ~ coll(X1,X2,X3) ) ).
+fof(c_0_300,axiom,! [X2] : ! [X1] : ! [X3] : ( coll(X2,X1,X3) | ~ coll(X1,X2,X3) ) ).
+fof(c_0_301,axiom,! [X1] : ! [X2] : ! [X3] : ( coll(X1,X2,X3) | ~ para(X1,X2,X1,X3) ) ).
+fof(c_0_302,axiom,! [X1] : ! [X2] : ! [X3] : ( coll(X1,X2,X3) | ~ midp(X1,X2,X3) ) ).

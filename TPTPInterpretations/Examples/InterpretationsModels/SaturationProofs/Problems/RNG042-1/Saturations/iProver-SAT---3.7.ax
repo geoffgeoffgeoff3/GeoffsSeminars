@@ -1,0 +1,25 @@
+fof(c_49,axiom,! [X0] : sum(additive_identity,X0,X0) ).
+fof(c_50,axiom,! [X0] : sum(X0,additive_identity,X0) ).
+fof(c_54,axiom,! [X0] : sum(X0,additive_inverse(X0),additive_identity) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ sum(X0,X1,X2) | ~ sum(X0,X3,X4) | ~ sum(X1,X5,X3) | sum(X2,X5,X4) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ sum(X0,X1,X2) | sum(X1,X0,X2) ) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ product(X0,X1,X2) | ~ product(X0,X3,X4) | ~ product(X1,X5,X3) | product(X2,X5,X4) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ sum(X0,X1,X2) | ~ sum(X3,X4,X5) | ~ product(X6,X0,X3) | ~ product(X6,X1,X4) | product(X6,X2,X5) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ sum(X0,X1,X2) | ~ sum(X3,X4,X5) | ~ product(X0,X6,X3) | ~ product(X1,X6,X4) | product(X2,X6,X5) ) ).
+fof(c_73,axiom,! [X0] : add(additive_identity,X0) = X0 ).
+fof(c_74,axiom,! [X0] : add(X0,additive_identity) = X0 ).
+fof(c_78,axiom,! [X0] : add(X0,additive_inverse(X0)) = additive_identity ).
+fof(c_81,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( add(X0,X1) != X2 | add(X0,X3) != X4 | add(X1,X5) != X3 | add(X2,X5) = X4 ) ).
+fof(c_83,axiom,! [X0] : ! [X1] : ! [X2] : ( add(X0,X1) != X2 | add(X1,X0) = X2 ) ).
+fof(c_87,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( multiply(X0,X1) != X2 | multiply(X0,X3) != X4 | multiply(X1,X5) != X3 | multiply(X2,X5) = X4 ) ).
+fof(c_91,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( multiply(X0,X1) != X2 | multiply(X0,X3) != X4 | add(X1,X3) != X5 | add(X2,X4) != X6 | multiply(X0,X5) = X6 ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( multiply(X0,X1) != X2 | multiply(X3,X1) != X4 | add(X0,X3) != X5 | add(X2,X4) != X6 | multiply(X5,X1) = X6 ) ).
+fof(c_208,axiom,! [X0] : ! [X1] : add(X0,X1) = add(X1,X0) ).
+fof(c_212,axiom,! [X0] : ! [X1] : ! [X2] : multiply(multiply(X0,X1),X2) = multiply(X0,multiply(X1,X2)) ).
+fof(c_214,axiom,! [X0] : ! [X1] : ! [X2] : add(add(X0,X1),X2) = add(X0,add(X1,X2)) ).
+fof(c_216,axiom,! [X0] : ! [X1] : ! [X2] : add(multiply(X0,X1),multiply(X2,X1)) = multiply(add(X0,X2),X1) ).
+fof(c_218,axiom,! [X0] : ! [X1] : ! [X2] : add(multiply(X0,X1),multiply(X0,X2)) = multiply(X0,add(X1,X2)) ).
+fof(c_220,axiom,! [X0] : X0 = X0 ).
+fof(c_221,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_222,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | multiply(X0,X2) = multiply(X1,X3) ) ).
+fof(c_223,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | add(X0,X2) = add(X1,X3) ) ).

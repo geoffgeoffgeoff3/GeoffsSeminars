@@ -1,0 +1,12 @@
+fof(ifeq_axiom,conjecture,! [A] : ! [B] : ! [C] : ifeq2(A,A,B,C) = B ).
+fof(ifeq_axiom_001,conjecture,! [A] : ! [B] : ! [C] : ifeq(A,A,B,C) = B ).
+fof(n0_and_n1_reflexive_1,conjecture,equalish(n0,n0) = true ).
+fof(n0_and_n1_reflexive,conjecture,equalish(n1,n1) = true ).
+fof(exists_f,conjecture,! [X4] : ! [X3] : ! [X2] : ! [X1] : ifeq2(equalish(X4,X4),true,ifeq2(equalish(X3,X3),true,ifeq2(equalish(X2,X2),true,ifeq2(equalish(X1,X1),true,f(X1,X2,X3,X4,sK1_exists_f_Z(X1,X2,X3,X4)),true),true),true),true) = true ).
+fof(inject_f_3,conjecture,! [Y1] : ! [Y2] : ! [Y3] : ! [Y4] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ifeq2(f(Y1,Y2,Y3,Y4,Z),true,ifeq2(f(X1,X2,X3,X4,Z),true,equalish(X4,Y4),true),true) = true ).
+fof(inject_f_2,conjecture,! [Y1] : ! [Y2] : ! [Y3] : ! [Y4] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ifeq2(f(Y1,Y2,Y3,Y4,Z),true,ifeq2(f(X1,X2,X3,X4,Z),true,equalish(X3,Y3),true),true) = true ).
+fof(inject_f_1,conjecture,! [Y1] : ! [Y2] : ! [Y3] : ! [Y4] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ifeq2(f(Y1,Y2,Y3,Y4,Z),true,ifeq2(f(X1,X2,X3,X4,Z),true,equalish(X2,Y2),true),true) = true ).
+fof(inject_f,conjecture,! [Y1] : ! [Y2] : ! [Y3] : ! [Y4] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ifeq2(f(Y1,Y2,Y3,Y4,Z),true,ifeq2(f(X1,X2,X3,X4,Z),true,equalish(X1,Y1),true),true) = true ).
+fof(n0_not_n1_1,conjecture,ifeq(equalish(n0,n1),true,a,b) = b ).
+fof(n0_not_n1,conjecture,ifeq(equalish(n1,n0),true,a,b) = b ).
+fof(goal,conjecture,a != b ).

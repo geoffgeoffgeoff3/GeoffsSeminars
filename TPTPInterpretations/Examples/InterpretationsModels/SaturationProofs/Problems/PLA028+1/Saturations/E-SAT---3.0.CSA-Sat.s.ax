@@ -1,0 +1,616 @@
+fof(source_is_not_destination,axiom,! [X1] : ! [X4] : ( a_block(X4) => ~ ( source(X4,X1) & destination(X4,X1) ) ) ).
+fof(some_source,axiom,! [X1] : ( time(X1) => ( source(block_1,X1) | source(block_2,X1) | source(table,X1) ) ) ).
+fof(table,axiom,a_block(table) ).
+fof(some_destination,axiom,! [X1] : ( time(X1) => ( destination(block_1,X1) | destination(block_2,X1) | destination(table,X1) ) ) ).
+fof(object_is_not_source,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ~ ( object(X2,X1) & source(X2,X1) ) ) ).
+fof(nonfixed_block_1,axiom,nonfixed(block_1) ).
+fof(some_object,axiom,! [X1] : ( time(X1) => ( object(block_1,X1) | object(block_2,X1) ) ) ).
+fof(object_block_on_source,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ! [X4] : ( ( a_block(X4) & neq(X2,X4) ) => ( ( object(X2,X1) & source(X4,X1) ) => on(X2,X4,X1) ) ) ) ).
+fof(different_not_equal,axiom,! [X4] : ! [X2] : ( ( different(X2,X4) | different(X4,X2) ) => neq(X2,X4) ) ).
+fof(block_1_not_table,axiom,different(block_1,table) ).
+fof(block_2,axiom,a_block(block_2) ).
+fof(block_1_not_block_2,axiom,different(block_1,block_2) ).
+fof(object_is_not_destination,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ~ ( object(X2,X1) & destination(X2,X1) ) ) ).
+fof(destination_block_is_clear,axiom,! [X1] : ! [X3] : ( nonfixed(X3) => ( destination(X3,X1) => clear(X3,X1) ) ) ).
+fof(not_clear_destination_after_placement,axiom,! [X1] : ! [X3] : ( nonfixed(X3) => ( ( time(X1) & destination(X3,X1) ) => ~ clear(X3,s(X1)) ) ) ).
+fof(object_block_is_clear,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ( object(X2,X1) => clear(X2,X1) ) ) ).
+fof(nonfixed_block_2,axiom,nonfixed(block_2) ).
+fof(block_2_not_table,axiom,different(block_2,table) ).
+fof(block_1,axiom,a_block(block_1) ).
+fof(only_on_one_thing,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ! [X4] : ( ( a_block(X4) & neq(X2,X4) ) => ! [X3] : ( ( a_block(X3) & neq(X2,X3) & neq(X4,X3) ) => ~ ( on(X2,X4,X1) & on(X2,X3,X1) ) ) ) ) ).
+fof(place_object_block_on_destination,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ! [X3] : ( ( a_block(X3) & neq(X2,X3) ) => ( ( time(X1) & object(X2,X1) & destination(X3,X1) ) => on(X2,X3,s(X1)) ) ) ) ).
+fof(non_destination_remains_clear,axiom,! [X1] : ! [X5] : ( nonfixed(X5) => ( ( time(X1) & ~ destination(X5,X1) & clear(X5,X1) ) => clear(X5,s(X1)) ) ) ).
+fof(initial_1_on_table,axiom,on(block_1,table,time_0) ).
+fof(non_object_remains_on,axiom,! [X1] : ! [X6] : ( nonfixed(X6) => ! [X5] : ( ( a_block(X5) & neq(X6,X5) ) => ( ( time(X1) & ~ object(X6,X1) & on(X6,X5,X1) ) => on(X6,X5,s(X1)) ) ) ) ).
+fof(not_clear_if_something_on,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ! [X4] : ( nonfixed(X4) => ~ ( on(X2,X4,X1) & clear(X4,X1) ) ) ) ).
+fof(initial_clear_2,axiom,clear(block_2,time_0) ).
+fof(time_0,axiom,time(time_0) ).
+fof(time_1,axiom,time(s(time_0)) ).
+fof(initial_2_on_table,axiom,on(block_2,table,time_0) ).
+fof(clear_source_after_removal,axiom,! [X1] : ! [X4] : ( nonfixed(X4) => ( ( time(X1) & source(X4,X1) ) => clear(X4,s(X1)) ) ) ).
+fof(not_on_each_other,axiom,! [X1] : ! [X2] : ( a_block(X2) => ! [X4] : ( ( a_block(X4) & neq(X2,X4) ) => ~ ( on(X2,X4,X1) & on(X4,X2,X1) ) ) ) ).
+fof(non_object_remains_not_on,axiom,! [X1] : ! [X6] : ( nonfixed(X6) => ! [X5] : ( ( a_block(X5) & neq(X6,X5) ) => ( ( time(X1) & ~ object(X6,X1) & ~ on(X6,X5,X1) ) => ~ on(X6,X5,s(X1)) ) ) ) ).
+fof(remove_object_block_from_source,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ! [X4] : ( ( a_block(X4) & neq(X2,X4) ) => ( ( time(X1) & object(X2,X1) & source(X4,X1) ) => ~ on(X2,X4,s(X1)) ) ) ) ).
+fof(only_one_destination_block,axiom,! [X1] : ! [X11] : ( a_block(X11) => ! [X12] : ( ( a_block(X12) & neq(X11,X12) ) => ~ ( destination(X11,X1) & destination(X12,X1) ) ) ) ).
+fof(initial_clear_1,axiom,clear(block_1,time_0) ).
+fof(non_destination_remains_not_on,axiom,! [X1] : ! [X6] : ( nonfixed(X6) => ! [X5] : ( ( a_block(X5) & neq(X6,X5) ) => ( ( time(X1) & ~ destination(X5,X1) & ~ on(X6,X5,X1) ) => ~ on(X6,X5,s(X1)) ) ) ) ).
+fof(only_one_on,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ! [X4] : ( ( nonfixed(X4) & neq(X2,X4) ) => ! [X3] : ( ( nonfixed(X3) & neq(X2,X3) & neq(X4,X3) ) => ~ ( on(X2,X4,X1) & on(X3,X4,X1) ) ) ) ) ).
+fof(only_one_source_block,axiom,! [X1] : ! [X9] : ( a_block(X9) => ! [X10] : ( ( a_block(X10) & neq(X9,X10) ) => ~ ( source(X9,X1) & source(X10,X1) ) ) ) ).
+fof(only_one_object_block,axiom,! [X1] : ! [X7] : ( nonfixed(X7) => ! [X8] : ( ( a_block(X8) & neq(X7,X8) ) => ~ ( object(X7,X1) & object(X8,X1) ) ) ) ).
+fof(non_source_remains_not_clear,axiom,! [X1] : ! [X5] : ( nonfixed(X5) => ( ( time(X1) & ~ source(X5,X1) & ~ clear(X5,X1) ) => ~ clear(X5,s(X1)) ) ) ).
+fof(goal_state,axiom,! [X13] : ( goal_time(X13) => ( clear(block_1,X13) & on(block_1,block_2,X13) & on(block_2,table,X13) ) ) ).
+fof(fixed_not_on_anything,axiom,! [X1] : ! [X2] : ( a_block(X2) => ! [X4] : ( fixed(X4) => ~ on(X4,X2,X1) ) ) ).
+fof(not_on_self,axiom,! [X1] : ! [X2] : ( a_block(X2) => ~ on(X2,X2,X1) ) ).
+fof(goal_time_1,axiom,goal_time(s(time_0)) ).
+fof(fixed_table,axiom,fixed(table) ).
+fof(c_0_45,axiom,! [X57] : ! [X58] : ( ~ a_block(X58) | ~ source(X58,X57) | ~ destination(X58,X57) ) ).
+fof(c_0_46,axiom,! [X80] : ( ~ time(X80) | source(block_1,X80) | source(block_2,X80) | source(table,X80) ) ).
+fof(c_0_47,axiom,! [X1] : ! [X2] : ( ~ a_block(X1) | ~ source(X1,X2) | ~ destination(X1,X2) ) ).
+fof(c_0_48,axiom,! [X1] : ( source(block_1,X1) | source(block_2,X1) | source(table,X1) | ~ time(X1) ) ).
+fof(c_0_49,axiom,a_block(table) ).
+fof(c_0_50,axiom,! [X81] : ( ~ time(X81) | destination(block_1,X81) | destination(block_2,X81) | destination(table,X81) ) ).
+fof(c_0_51,axiom,! [X53] : ! [X54] : ( ~ nonfixed(X54) | ~ object(X54,X53) | ~ source(X54,X53) ) ).
+fof(c_0_52,axiom,! [X1] : ( source(block_2,X1) | source(block_1,X1) | ~ destination(table,X1) | ~ time(X1) ) ).
+fof(c_0_53,axiom,! [X1] : ( destination(block_1,X1) | destination(block_2,X1) | destination(table,X1) | ~ time(X1) ) ).
+fof(c_0_54,axiom,! [X1] : ! [X2] : ( ~ nonfixed(X1) | ~ object(X1,X2) | ~ source(X1,X2) ) ).
+fof(c_0_55,axiom,! [X1] : ( source(block_1,X1) | source(block_2,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_56,axiom,nonfixed(block_1) ).
+fof(c_0_57,axiom,! [X82] : ( ~ time(X82) | object(block_1,X82) | object(block_2,X82) ) ).
+fof(c_0_58,axiom,! [X24] : ! [X25] : ! [X26] : ( ~ nonfixed(X25) | ~ a_block(X26) | ~ neq(X25,X26) | ~ object(X25,X24) | ~ source(X26,X24) | on(X25,X26,X24) ) ).
+fof(c_0_59,axiom,! [X78] : ! [X79] : ( ( ~ different(X79,X78) | neq(X79,X78) ) & ( ~ different(X78,X79) | neq(X79,X78) ) ) ).
+fof(c_0_60,axiom,! [X1] : ( source(block_2,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ object(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_61,axiom,! [X1] : ( object(block_1,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_62,axiom,! [X1] : ! [X2] : ! [X3] : ( on(X1,X2,X3) | ~ nonfixed(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ object(X1,X3) | ~ source(X2,X3) ) ).
+fof(c_0_63,axiom,! [X1] : ! [X2] : ( neq(X1,X2) | ~ different(X1,X2) ) ).
+fof(c_0_64,axiom,different(block_1,table) ).
+fof(c_0_65,axiom,! [X1] : ( source(block_2,X1) | destination(block_2,X1) | destination(block_1,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_66,axiom,a_block(block_2) ).
+fof(c_0_67,axiom,different(block_1,block_2) ).
+fof(c_0_68,axiom,! [X1] : ! [X2] : ( source(block_2,X1) | source(block_1,X1) | on(X2,table,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,table) | ~ nonfixed(X2) ) ).
+fof(c_0_69,axiom,neq(block_1,table) ).
+fof(c_0_70,axiom,! [X55] : ! [X56] : ( ~ nonfixed(X56) | ~ object(X56,X55) | ~ destination(X56,X55) ) ).
+fof(c_0_71,axiom,! [X1] : ! [X2] : ( on(X1,block_2,X2) | destination(block_1,X2) | destination(block_2,X2) | object(block_2,X2) | ~ object(X1,X2) | ~ time(X2) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_72,axiom,neq(block_1,block_2) ).
+fof(c_0_73,axiom,! [X1] : ( source(block_1,X1) | source(block_2,X1) | on(block_1,table,X1) | ~ object(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_74,axiom,! [X29] : ! [X30] : ( ~ nonfixed(X30) | ~ destination(X30,X29) | clear(X30,X29) ) ).
+fof(c_0_75,axiom,! [X1] : ! [X2] : ( ~ nonfixed(X1) | ~ object(X1,X2) | ~ destination(X1,X2) ) ).
+fof(c_0_76,axiom,! [X1] : ( on(block_1,block_2,X1) | destination(block_2,X1) | destination(block_1,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_77,axiom,! [X1] : ( source(block_2,X1) | source(block_1,X1) | on(block_1,table,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_78,axiom,! [X1] : ! [X3] : ( nonfixed(X3) => ( ( time(X1) & destination(X3,X1) ) => ~ clear(X3,s(X1)) ) ) ).
+fof(c_0_79,axiom,! [X27] : ! [X28] : ( ~ nonfixed(X28) | ~ object(X28,X27) | clear(X28,X27) ) ).
+fof(c_0_80,axiom,! [X1] : ! [X2] : ( clear(X1,X2) | ~ nonfixed(X1) | ~ destination(X1,X2) ) ).
+fof(c_0_81,axiom,! [X1] : ( on(block_1,block_2,X1) | destination(block_2,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_82,axiom,nonfixed(block_2) ).
+fof(c_0_83,axiom,different(block_2,table) ).
+fof(c_0_84,axiom,! [X1] : ( source(block_2,X1) | on(block_1,table,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_85,axiom,a_block(block_1) ).
+fof(c_0_86,axiom,! [X2] : ! [X1] : ( neq(X2,X1) | ~ different(X1,X2) ) ).
+fof(c_0_87,axiom,! [X22] : ! [X23] : ( ~ nonfixed(X23) | ~ time(X22) | ~ destination(X23,X22) | ~ clear(X23,s(X22)) ) ).
+fof(c_0_88,axiom,! [X1] : ! [X2] : ( clear(X1,X2) | ~ nonfixed(X1) | ~ object(X1,X2) ) ).
+fof(c_0_89,axiom,! [X1] : ( clear(block_2,X1) | on(block_1,block_2,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_90,axiom,! [X68] : ! [X69] : ! [X70] : ! [X71] : ( ~ nonfixed(X69) | ~ a_block(X70) | ~ neq(X69,X70) | ~ a_block(X71) | ~ neq(X69,X71) | ~ neq(X70,X71) | ~ on(X69,X70,X68) | ~ on(X69,X71,X68) ) ).
+fof(c_0_91,axiom,! [X14] : ! [X15] : ! [X16] : ( ~ nonfixed(X15) | ~ a_block(X16) | ~ neq(X15,X16) | ~ time(X14) | ~ object(X15,X14) | ~ destination(X16,X14) | on(X15,X16,s(X14)) ) ).
+fof(c_0_92,axiom,! [X1] : ! [X5] : ( nonfixed(X5) => ( ( time(X1) & ~ destination(X5,X1) & clear(X5,X1) ) => clear(X5,s(X1)) ) ) ).
+fof(c_0_93,axiom,neq(block_2,table) ).
+fof(c_0_94,axiom,! [X1] : ( on(block_1,table,X1) | object(block_2,X1) | ~ destination(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_95,axiom,! [X1] : ! [X2] : ( source(block_2,X1) | on(X2,block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,block_1) | ~ nonfixed(X2) ) ).
+fof(c_0_96,axiom,neq(block_2,block_1) ).
+fof(c_0_97,axiom,! [X1] : ! [X2] : ( ~ nonfixed(X1) | ~ time(X2) | ~ destination(X1,X2) | ~ clear(X1,s(X2)) ) ).
+fof(c_0_98,axiom,! [X1] : ( clear(block_2,X1) | on(block_1,block_2,X1) | ~ time(X1) ) ).
+fof(c_0_99,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ nonfixed(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ a_block(X3) | ~ neq(X1,X3) | ~ neq(X2,X3) | ~ on(X1,X2,X4) | ~ on(X1,X3,X4) ) ).
+fof(c_0_100,axiom,on(block_1,table,time_0) ).
+fof(c_0_101,axiom,! [X1] : ! [X6] : ( nonfixed(X6) => ! [X5] : ( ( a_block(X5) & neq(X6,X5) ) => ( ( time(X1) & ~ object(X6,X1) & on(X6,X5,X1) ) => on(X6,X5,s(X1)) ) ) ) ).
+fof(c_0_102,axiom,! [X1] : ! [X2] : ! [X3] : ( on(X1,X2,s(X3)) | ~ nonfixed(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ time(X3) | ~ object(X1,X3) | ~ destination(X2,X3) ) ).
+fof(c_0_103,axiom,! [X31] : ! [X32] : ( ~ nonfixed(X32) | ~ time(X31) | destination(X32,X31) | ~ clear(X32,X31) | clear(X32,s(X31)) ) ).
+fof(c_0_104,axiom,! [X1] : ( source(block_1,X1) | source(block_2,X1) | on(block_2,table,X1) | ~ object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_105,axiom,! [X1] : ( on(block_1,block_2,X1) | on(block_1,table,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_106,axiom,! [X1] : ( source(block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_107,axiom,! [X1] : ( on(block_1,block_2,s(X1)) | ~ destination(block_2,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_108,axiom,! [X1] : ( ~ on(block_1,X1,time_0) | ~ neq(X1,table) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_109,axiom,! [X33] : ! [X34] : ! [X35] : ( ~ nonfixed(X34) | ~ a_block(X35) | ~ neq(X34,X35) | ~ time(X33) | object(X34,X33) | ~ on(X34,X35,X33) | on(X34,X35,s(X33)) ) ).
+fof(c_0_110,axiom,! [X72] : ! [X73] : ! [X74] : ( ~ nonfixed(X73) | ~ nonfixed(X74) | ~ on(X73,X74,X72) | ~ clear(X74,X72) ) ).
+fof(c_0_111,axiom,! [X1] : ! [X2] : ( on(X1,block_2,s(X2)) | on(block_1,block_2,X2) | object(block_2,X2) | ~ object(X1,X2) | ~ time(X2) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_112,axiom,! [X1] : ! [X2] : ( destination(X1,X2) | clear(X1,s(X2)) | ~ nonfixed(X1) | ~ time(X2) | ~ clear(X1,X2) ) ).
+fof(c_0_113,axiom,clear(block_2,time_0) ).
+fof(c_0_114,axiom,time(time_0) ).
+fof(c_0_115,axiom,! [X1] : ( source(block_2,X1) | source(block_1,X1) | on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,table,X1) | ~ time(X1) ) ).
+fof(c_0_116,axiom,! [X1] : ( on(block_2,block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_117,axiom,! [X1] : ( on(block_1,block_2,s(X1)) | on(block_1,block_2,X1) | object(block_2,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_118,axiom,time(s(time_0)) ).
+fof(c_0_119,axiom,~ on(block_1,block_2,time_0) ).
+fof(c_0_120,axiom,! [X1] : ! [X3] : ! [X2] : ( object(X1,X3) | on(X1,X2,s(X3)) | ~ nonfixed(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ time(X3) | ~ on(X1,X2,X3) ) ).
+fof(c_0_121,axiom,on(block_2,table,time_0) ).
+fof(c_0_122,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ nonfixed(X1) | ~ nonfixed(X2) | ~ on(X1,X2,X3) | ~ clear(X2,X3) ) ).
+fof(c_0_123,axiom,! [X1] : ( on(block_1,block_2,s(X1)) | on(block_1,block_2,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_124,axiom,clear(block_2,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_125,axiom,! [X1] : ( source(block_2,X1) | on(block_2,table,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | ~ destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_126,axiom,! [X1] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_127,axiom,on(block_1,block_2,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_128,axiom,! [X20] : ! [X21] : ( ~ nonfixed(X21) | ~ time(X20) | ~ source(X21,X20) | clear(X21,s(X20)) ) ).
+fof(c_0_129,axiom,on(block_2,table,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_130,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ clear(block_2,s(X1)) | ~ time(X1) ) ).
+fof(c_0_131,axiom,clear(block_2,s(s(time_0))) | destination(block_2,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_132,axiom,! [X1] : ( source(block_2,X1) | on(block_2,block_1,X1) | on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,table,X1) | destination(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_133,axiom,on(block_1,table,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_134,axiom,on(block_1,block_2,s(s(time_0))) | object(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_135,axiom,! [X1] : ! [X2] : ( clear(X1,s(X2)) | ~ nonfixed(X1) | ~ time(X2) | ~ source(X1,X2) ) ).
+fof(c_0_136,axiom,! [X1] : ( object(block_2,time_0) | ~ on(block_2,X1,s(time_0)) | ~ neq(X1,table) | ~ neq(block_2,X1) | ~ a_block(X1) ) ).
+fof(c_0_137,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) ).
+fof(c_0_138,axiom,! [X1] : ( on(block_2,table,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_139,axiom,on(block_1,table,s(s(time_0))) | object(block_1,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_140,axiom,object(block_1,s(time_0)) | object(block_2,time_0) | ~ clear(block_2,s(s(time_0))) ).
+fof(c_0_141,axiom,! [X1] : ( clear(block_2,s(X1)) | on(block_2,block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_142,axiom,object(block_2,time_0) | ~ on(block_2,block_1,s(time_0)) ).
+fof(c_0_143,axiom,! [X1] : ( object(block_2,time_0) | ~ on(block_1,X1,s(time_0)) | ~ neq(X1,block_2) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_144,axiom,neq(table,block_2) ).
+fof(c_0_145,axiom,! [X59] : ! [X60] : ! [X61] : ( ~ a_block(X60) | ~ a_block(X61) | ~ neq(X60,X61) | ~ on(X60,X61,X59) | ~ on(X61,X60,X59) ) ).
+fof(c_0_146,axiom,! [X1] : ! [X6] : ( nonfixed(X6) => ! [X5] : ( ( a_block(X5) & neq(X6,X5) ) => ( ( time(X1) & ~ object(X6,X1) & ~ on(X6,X5,X1) ) => ~ on(X6,X5,s(X1)) ) ) ) ).
+fof(c_0_147,axiom,! [X1] : ( on(X1,block_2,s(s(time_0))) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ object(X1,s(time_0)) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_148,axiom,! [X1] : ( on(block_2,block_1,X1) | on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,table,X1) | ~ time(X1) ) ).
+fof(c_0_149,axiom,! [X1] : ! [X2] : ( nonfixed(X2) => ! [X4] : ( ( a_block(X4) & neq(X2,X4) ) => ( ( time(X1) & object(X2,X1) & source(X4,X1) ) => ~ on(X2,X4,s(X1)) ) ) ) ).
+fof(c_0_150,axiom,! [X1] : ( object(block_1,s(time_0)) | object(block_1,time_0) | ~ on(block_1,X1,s(s(time_0))) | ~ neq(X1,table) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_151,axiom,! [X1] : ( object(block_1,time_0) | ~ on(block_1,X1,s(time_0)) | ~ neq(X1,table) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_152,axiom,destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_153,axiom,! [X1] : ( clear(block_2,s(X1)) | on(block_1,table,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_154,axiom,object(block_2,time_0) | ~ on(block_1,table,s(time_0)) ).
+fof(c_0_155,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ a_block(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ on(X1,X2,X3) | ~ on(X2,X1,X3) ) ).
+fof(c_0_156,axiom,! [X38] : ! [X39] : ! [X40] : ( ~ nonfixed(X39) | ~ a_block(X40) | ~ neq(X39,X40) | ~ time(X38) | object(X39,X38) | on(X39,X40,X38) | ~ on(X39,X40,s(X38)) ) ).
+fof(c_0_157,axiom,on(block_1,block_2,s(s(time_0))) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ object(block_1,s(time_0)) ).
+fof(c_0_158,axiom,! [X50] : ! [X51] : ! [X52] : ( ~ a_block(X51) | ~ a_block(X52) | ~ neq(X51,X52) | ~ destination(X51,X50) | ~ destination(X52,X50) ) ).
+fof(c_0_159,axiom,! [X1] : ! [X2] : ( on(X1,block_1,s(X2)) | on(block_2,block_1,X2) | on(block_1,block_2,X2) | on(block_1,table,X2) | destination(block_2,X2) | ~ object(X1,X2) | ~ time(X2) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_160,axiom,clear(block_1,time_0) ).
+fof(c_0_161,axiom,! [X1] : ! [X2] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ on(block_1,X2,s(X1)) | ~ time(X1) | ~ neq(X2,block_2) | ~ neq(block_1,X2) | ~ a_block(X2) ) ).
+fof(c_0_162,axiom,on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | on(block_2,block_1,s(time_0)) ).
+fof(c_0_163,axiom,! [X17] : ! [X18] : ! [X19] : ( ~ nonfixed(X18) | ~ a_block(X19) | ~ neq(X18,X19) | ~ time(X17) | ~ object(X18,X17) | ~ source(X19,X17) | ~ on(X18,X19,s(X17)) ) ).
+fof(c_0_164,axiom,object(block_1,s(time_0)) | object(block_1,time_0) | ~ on(block_1,block_2,s(s(time_0))) ).
+fof(c_0_165,axiom,object(block_1,time_0) | ~ on(block_1,block_2,s(time_0)) ).
+fof(c_0_166,axiom,! [X1] : ( on(X1,block_1,s(s(time_0))) | destination(block_2,s(time_0)) | object(block_1,s(time_0)) | object(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_167,axiom,object(block_2,s(time_0)) | object(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_168,axiom,object(block_1,s(time_0)) | object(block_2,time_0) | ~ on(block_2,block_1,s(s(time_0))) ).
+fof(c_0_169,axiom,! [X1] : ! [X3] : ! [X2] : ( object(X1,X3) | on(X1,X2,X3) | ~ nonfixed(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ time(X3) | ~ on(X1,X2,s(X3)) ) ).
+fof(c_0_170,axiom,on(block_1,block_2,s(s(time_0))) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) ).
+fof(c_0_171,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ a_block(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ destination(X1,X3) | ~ destination(X2,X3) ) ).
+fof(c_0_172,axiom,! [X1] : ( on(block_2,block_1,s(X1)) | on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_173,axiom,clear(block_1,s(time_0)) | destination(block_1,time_0) ).
+fof(c_0_174,axiom,! [X1] : ! [X2] : ( on(block_2,block_1,X1) | on(X2,block_2,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,block_2) | ~ nonfixed(X2) ) ).
+fof(c_0_175,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ on(block_1,table,s(X1)) | ~ time(X1) ) ).
+fof(c_0_176,axiom,on(block_1,table,s(s(time_0))) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | object(block_1,s(time_0)) ).
+fof(c_0_177,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ nonfixed(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ time(X3) | ~ object(X1,X3) | ~ source(X2,X3) | ~ on(X1,X2,s(X3)) ) ).
+fof(c_0_178,axiom,object(block_2,s(time_0)) | object(block_1,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_179,axiom,destination(block_2,s(time_0)) | object(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_180,axiom,! [X1] : ! [X2] : ( on(X1,table,s(X2)) | destination(block_2,X2) | destination(block_1,X2) | ~ object(X1,X2) | ~ time(X2) | ~ neq(X1,table) | ~ nonfixed(X1) ) ).
+fof(c_0_181,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | object(block_1,s(time_0)) ).
+fof(c_0_182,axiom,! [X1] : ! [X2] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ destination(X2,X1) | ~ time(X1) | ~ neq(X2,block_2) | ~ a_block(X2) ) ).
+fof(c_0_183,axiom,! [X1] : ( on(block_2,block_1,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_2,X1) | ~ clear(block_1,s(X1)) | ~ time(X1) ) ).
+fof(c_0_184,axiom,clear(block_1,s(s(time_0))) | destination(block_1,s(time_0)) | destination(block_1,time_0) ).
+fof(c_0_185,axiom,! [X1] : ( on(block_1,block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ object(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_186,axiom,on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_1,s(time_0)) | object(block_2,s(time_0)) ).
+fof(c_0_187,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ source(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_188,axiom,source(block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_189,axiom,object(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_190,axiom,! [X1] : ( on(block_2,table,s(X1)) | destination(block_1,X1) | destination(block_2,X1) | ~ object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_191,axiom,on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) ).
+fof(c_0_192,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) ).
+fof(c_0_193,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_194,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) ).
+fof(c_0_195,axiom,on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_2,s(time_0)) ).
+fof(c_0_196,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | object(block_2,s(time_0)) ).
+fof(c_0_197,axiom,clear(block_1,s(time_0)) | object(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_198,axiom,destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_199,axiom,source(block_2,s(time_0)) | source(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_200,axiom,! [X1] : ( clear(block_1,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_201,axiom,! [X1] : ! [X6] : ( nonfixed(X6) => ! [X5] : ( ( a_block(X5) & neq(X6,X5) ) => ( ( time(X1) & ~ destination(X5,X1) & ~ on(X6,X5,X1) ) => ~ on(X6,X5,s(X1)) ) ) ) ).
+fof(c_0_202,axiom,on(block_2,table,s(s(time_0))) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_203,axiom,clear(block_1,s(time_0)) | on(block_2,table,s(s(time_0))) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_204,axiom,on(block_2,block_1,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | object(block_2,s(time_0)) ).
+fof(c_0_205,axiom,on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | object(block_2,s(time_0)) ).
+fof(c_0_206,axiom,clear(block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) ).
+fof(c_0_207,axiom,clear(block_1,s(time_0)) | on(block_2,table,s(s(time_0))) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_208,axiom,destination(block_2,s(time_0)) | object(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_209,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_210,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_211,axiom,source(block_2,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_212,axiom,clear(block_1,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_213,axiom,! [X1] : ( clear(block_1,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_214,axiom,! [X41] : ! [X42] : ! [X43] : ( ~ nonfixed(X42) | ~ a_block(X43) | ~ neq(X42,X43) | ~ time(X41) | destination(X43,X41) | on(X42,X43,X41) | ~ on(X42,X43,s(X41)) ) ).
+fof(c_0_215,axiom,on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ source(table,s(time_0)) ).
+fof(c_0_216,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ source(table,s(time_0)) ).
+fof(c_0_217,axiom,on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,time_0) | object(block_2,s(time_0)) ).
+fof(c_0_218,axiom,clear(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_2,s(time_0)) ).
+fof(c_0_219,axiom,clear(block_1,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_2,s(time_0)) ).
+fof(c_0_220,axiom,clear(block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) | ~ source(table,s(time_0)) ).
+fof(c_0_221,axiom,! [X1] : ( on(X1,block_1,s(s(time_0))) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_222,axiom,! [X64] : ! [X65] : ! [X66] : ! [X67] : ( ~ nonfixed(X65) | ~ nonfixed(X66) | ~ neq(X65,X66) | ~ nonfixed(X67) | ~ neq(X65,X67) | ~ neq(X66,X67) | ~ on(X65,X66,X64) | ~ on(X67,X66,X64) ) ).
+fof(c_0_223,axiom,clear(block_1,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_224,axiom,! [X1] : ( on(X1,block_2,s(s(time_0))) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_2,s(time_0)) | ~ object(X1,s(time_0)) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_225,axiom,! [X1] : ( on(X1,block_1,s(s(time_0))) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_226,axiom,! [X47] : ! [X48] : ! [X49] : ( ~ a_block(X48) | ~ a_block(X49) | ~ neq(X48,X49) | ~ source(X48,X47) | ~ source(X49,X47) ) ).
+fof(c_0_227,axiom,! [X44] : ! [X45] : ! [X46] : ( ~ nonfixed(X45) | ~ a_block(X46) | ~ neq(X45,X46) | ~ object(X45,X44) | ~ object(X46,X44) ) ).
+fof(c_0_228,axiom,! [X1] : ( on(block_1,table,s(X1)) | destination(block_1,X1) | destination(block_2,X1) | ~ object(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_229,axiom,object(block_2,time_0) | ~ destination(block_2,s(time_0)) ).
+fof(c_0_230,axiom,clear(block_1,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_231,axiom,clear(block_2,s(time_0)) | object(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_232,axiom,! [X1] : ( on(X1,block_2,s(s(time_0))) | object(block_2,s(time_0)) | object(block_1,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_233,axiom,clear(block_1,s(time_0)) | object(block_2,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_234,axiom,object(block_2,time_0) | ~ clear(block_2,s(time_0)) ).
+fof(c_0_235,axiom,! [X1] : ( clear(block_1,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_236,axiom,! [X2] : ! [X3] : ! [X1] : ( destination(X2,X3) | on(X1,X2,X3) | ~ nonfixed(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ time(X3) | ~ on(X1,X2,s(X3)) ) ).
+fof(c_0_237,axiom,! [X1] : ! [X5] : ( nonfixed(X5) => ( ( time(X1) & ~ source(X5,X1) & ~ clear(X5,X1) ) => ~ clear(X5,s(X1)) ) ) ).
+fof(c_0_238,axiom,~ ( ! [X13] : ( goal_time(X13) => ( clear(block_1,X13) & on(block_1,block_2,X13) & on(block_2,table,X13) ) ) ) ).
+fof(c_0_239,axiom,! [X1] : ! [X2] : ( a_block(X2) => ! [X4] : ( fixed(X4) => ~ on(X4,X2,X1) ) ) ).
+fof(c_0_240,axiom,source(block_2,s(time_0)) | source(block_1,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_241,axiom,clear(block_1,s(time_0)) | source(block_2,s(time_0)) | source(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_242,axiom,clear(block_2,s(time_0)) | on(block_1,table,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,time_0) ).
+fof(c_0_243,axiom,source(block_2,s(time_0)) | source(block_1,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_244,axiom,clear(block_1,s(time_0)) | source(block_2,s(time_0)) | source(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_245,axiom,clear(block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) ).
+fof(c_0_246,axiom,clear(block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) ).
+fof(c_0_247,axiom,clear(block_1,s(time_0)) | source(block_2,s(time_0)) | source(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_248,axiom,on(block_2,block_1,s(s(time_0))) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) ).
+fof(c_0_249,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ nonfixed(X1) | ~ nonfixed(X2) | ~ neq(X1,X2) | ~ nonfixed(X3) | ~ neq(X1,X3) | ~ neq(X2,X3) | ~ on(X1,X2,X4) | ~ on(X3,X2,X4) ) ).
+fof(c_0_250,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_251,axiom,on(block_1,block_2,s(s(time_0))) | on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_2,s(time_0)) ).
+fof(c_0_252,axiom,clear(block_1,s(time_0)) | source(block_2,s(time_0)) | source(block_1,s(time_0)) | on(block_2,table,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_253,axiom,on(block_2,block_1,s(s(time_0))) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_254,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ a_block(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ source(X1,X3) | ~ source(X2,X3) ) ).
+fof(c_0_255,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ nonfixed(X1) | ~ a_block(X2) | ~ neq(X1,X2) | ~ object(X1,X3) | ~ object(X2,X3) ) ).
+fof(c_0_256,axiom,on(block_1,table,s(s(time_0))) | destination(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_257,axiom,clear(block_1,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_258,axiom,clear(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_259,axiom,on(block_1,block_2,s(s(time_0))) | object(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_260,axiom,! [X1] : ( on(block_2,table,s(X1)) | on(block_1,table,X1) | on(block_1,block_2,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_261,axiom,clear(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_262,axiom,! [X1] : ( clear(block_1,X1) | on(block_2,block_1,X1) | ~ time(X1) ) ).
+fof(c_0_263,axiom,! [X1] : ( on(block_1,table,s(X1)) | destination(block_2,X1) | destination(block_1,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_264,axiom,! [X1] : ( clear(block_1,X1) | on(block_2,table,s(X1)) | destination(block_2,X1) | destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_265,axiom,! [X1] : ( clear(block_1,X1) | source(block_2,X1) | source(block_1,X1) | on(block_2,table,X1) | ~ time(X1) ) ).
+fof(c_0_266,axiom,destination(block_2,time_0) | object(block_2,time_0) ).
+fof(c_0_267,axiom,object(block_2,time_0) | object(block_1,time_0) ).
+fof(c_0_268,axiom,! [X36] : ! [X37] : ( ~ nonfixed(X37) | ~ time(X36) | source(X37,X36) | clear(X37,X36) | ~ clear(X37,s(X36)) ) ).
+fof(c_0_269,axiom,goal_time(esk1_0) & ( ~ clear(block_1,esk1_0) | ~ on(block_1,block_2,esk1_0) | ~ on(block_2,table,esk1_0) ) ).
+fof(c_0_270,axiom,on(block_2,table,s(s(time_0))) | object(block_2,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_271,axiom,! [X1] : ( clear(block_1,X1) | clear(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_272,axiom,! [X1] : ! [X2] : ( a_block(X2) => ~ on(X2,X2,X1) ) ).
+fof(c_0_273,axiom,! [X75] : ! [X76] : ! [X77] : ( ~ a_block(X76) | ~ fixed(X77) | ~ on(X77,X76,X75) ) ).
+fof(c_0_274,axiom,clear(block_1,s(s(time_0))) | source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_275,axiom,clear(block_1,s(s(time_0))) | clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_276,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(table,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_277,axiom,on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(table,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_278,axiom,clear(block_2,s(s(time_0))) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) ).
+fof(c_0_279,axiom,clear(block_1,s(s(time_0))) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_280,axiom,clear(block_1,s(s(time_0))) | clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_281,axiom,clear(block_2,s(s(time_0))) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) ).
+fof(c_0_282,axiom,clear(block_1,s(s(time_0))) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_1,s(time_0)) ).
+fof(c_0_283,axiom,clear(block_1,s(s(time_0))) | clear(block_1,s(time_0)) | source(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_284,axiom,clear(block_1,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(table,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_285,axiom,! [X1] : ( on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ on(block_2,X1,s(s(time_0))) | ~ neq(X1,block_1) | ~ neq(block_2,X1) | ~ a_block(X1) ) ).
+fof(c_0_286,axiom,neq(table,block_1) ).
+fof(c_0_287,axiom,! [X1] : ( on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ on(X1,block_1,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_288,axiom,clear(block_1,s(s(time_0))) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) ).
+fof(c_0_289,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_2,s(time_0)) | ~ on(block_1,X1,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_290,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_2,s(time_0)) | ~ on(X1,block_2,s(s(time_0))) | ~ neq(X1,block_1) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_291,axiom,clear(block_1,s(s(time_0))) | clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_292,axiom,! [X1] : ( on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,X1,s(s(time_0))) | ~ neq(X1,block_1) | ~ neq(block_2,X1) | ~ a_block(X1) ) ).
+fof(c_0_293,axiom,! [X1] : ( on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(X1,block_1,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_294,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,X1,s(s(time_0))) | ~ neq(X1,table) | ~ neq(block_2,X1) | ~ a_block(X1) ) ).
+fof(c_0_295,axiom,! [X1] : ( clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,X1,s(s(time_0))) | ~ neq(X1,table) | ~ neq(block_2,X1) | ~ a_block(X1) ) ).
+fof(c_0_296,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_2,s(time_0)) | ~ destination(X1,s(time_0)) | ~ neq(X1,block_2) | ~ a_block(X1) ) ).
+fof(c_0_297,axiom,! [X1] : ( on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ destination(X1,s(time_0)) | ~ neq(X1,block_1) | ~ a_block(X1) ) ).
+fof(c_0_298,axiom,! [X1] : ( on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ destination(X1,s(time_0)) | ~ neq(X1,block_1) | ~ a_block(X1) ) ).
+fof(c_0_299,axiom,! [X1] : ( source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,time_0) | ~ source(X1,s(time_0)) | ~ neq(X1,block_1) | ~ a_block(X1) ) ).
+fof(c_0_300,axiom,! [X1] : ( on(block_1,table,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_301,axiom,! [X1] : ( on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_1,s(time_0)) | ~ on(block_1,X1,s(s(time_0))) | ~ neq(X1,table) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_302,axiom,! [X1] : ( clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | ~ source(X1,s(time_0)) | ~ neq(X1,block_1) | ~ a_block(X1) ) ).
+fof(c_0_303,axiom,object(block_1,time_0) | ~ clear(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_304,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | object(block_2,s(time_0)) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_305,axiom,! [X1] : ( clear(block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) | ~ on(block_2,X1,s(s(time_0))) | ~ neq(X1,table) | ~ neq(block_2,X1) | ~ a_block(X1) ) ).
+fof(c_0_306,axiom,destination(block_1,s(time_0)) | destination(table,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_307,axiom,object(block_2,time_0) | ~ clear(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_308,axiom,! [X1] : ( destination(block_1,s(time_0)) | object(block_2,time_0) | ~ on(block_1,X1,s(s(time_0))) | ~ neq(X1,table) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_309,axiom,clear(block_2,s(s(time_0))) | object(block_2,time_0) ).
+fof(c_0_310,axiom,clear(block_1,s(s(time_0))) | on(block_2,block_1,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_311,axiom,! [X1] : ( object(block_2,time_0) | ~ source(X1,s(time_0)) | ~ neq(X1,block_2) | ~ a_block(X1) ) ).
+fof(c_0_312,axiom,! [X1] : ( object(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_313,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ on(block_1,X1,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_314,axiom,! [X1] : ( clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | object(block_1,time_0) | ~ source(X1,s(time_0)) | ~ neq(X1,block_1) | ~ a_block(X1) ) ).
+fof(c_0_315,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ on(X1,block_2,s(s(time_0))) | ~ neq(X1,block_1) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_316,axiom,! [X1] : ( clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_317,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_318,axiom,clear(block_2,s(s(time_0))) | destination(block_2,s(time_0)) | object(block_1,time_0) ).
+fof(c_0_319,axiom,! [X1] : ( object(block_2,s(time_0)) | object(block_1,time_0) | ~ on(block_1,X1,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_320,axiom,! [X1] : ( object(block_2,s(time_0)) | object(block_1,time_0) | ~ on(X1,block_2,s(s(time_0))) | ~ neq(X1,block_1) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_321,axiom,! [X1] : ( object(block_2,s(time_0)) | object(block_1,time_0) | ~ destination(X1,s(time_0)) | ~ neq(X1,block_2) | ~ a_block(X1) ) ).
+fof(c_0_322,axiom,! [X1] : ! [X2] : ( on(block_2,block_1,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_2,X1) | ~ on(block_2,X2,s(X1)) | ~ time(X1) | ~ neq(X2,block_1) | ~ neq(block_2,X2) | ~ a_block(X2) ) ).
+fof(c_0_323,axiom,! [X1] : ! [X2] : ( on(block_2,block_1,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_2,X1) | ~ on(X2,block_1,s(X1)) | ~ time(X1) | ~ neq(X2,block_2) | ~ neq(X2,block_1) | ~ nonfixed(X2) ) ).
+fof(c_0_324,axiom,! [X1] : ! [X2] : ( on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ on(block_2,X2,s(X1)) | ~ time(X1) | ~ neq(X2,table) | ~ neq(block_2,X2) | ~ a_block(X2) ) ).
+fof(c_0_325,axiom,! [X1] : ( clear(block_1,s(X1)) | source(block_2,X1) | on(block_2,table,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | ~ time(X1) ) ).
+fof(c_0_326,axiom,clear(block_1,s(s(time_0))) | destination(block_1,s(time_0)) | object(block_2,time_0) ).
+fof(c_0_327,axiom,! [X1] : ( on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | ~ on(block_1,X1,s(time_0)) | ~ neq(X1,table) | ~ neq(block_1,X1) | ~ a_block(X1) ) ).
+fof(c_0_328,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | ~ source(table,time_0) | ~ object(block_1,time_0) ).
+fof(c_0_329,axiom,! [X1] : ! [X2] : ( on(block_2,block_1,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_2,X1) | ~ destination(X2,X1) | ~ time(X1) | ~ neq(X2,block_1) | ~ a_block(X2) ) ).
+fof(c_0_330,axiom,! [X1] : ! [X2] : ( source(block_2,X1) | on(block_2,table,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | ~ source(X2,X1) | ~ time(X1) | ~ neq(X2,block_1) | ~ a_block(X2) ) ).
+fof(c_0_331,axiom,! [X1] : ( clear(block_2,s(X1)) | on(block_1,block_2,X1) | destination(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_332,axiom,! [X1] : ( clear(block_1,s(X1)) | on(block_2,block_1,X1) | destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_333,axiom,! [X1] : ( on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_334,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ destination(X1,s(time_0)) | ~ neq(X1,block_2) | ~ a_block(X1) ) ).
+fof(c_0_335,axiom,! [X1] : ( clear(block_1,s(time_0)) | object(block_1,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_336,axiom,! [X1] : ( object(block_2,s(time_0)) | object(block_1,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_337,axiom,! [X1] : ( clear(block_2,s(X1)) | destination(block_1,X1) | destination(block_2,X1) | object(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_338,axiom,! [X1] : ! [X2] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ on(X2,block_2,s(X1)) | ~ time(X1) | ~ neq(X2,block_1) | ~ neq(X2,block_2) | ~ nonfixed(X2) ) ).
+fof(c_0_339,axiom,! [X1] : ! [X2] : ( destination(block_1,X1) | destination(block_2,X1) | object(block_2,X1) | ~ on(block_1,X2,s(X1)) | ~ time(X1) | ~ neq(X2,table) | ~ neq(block_1,X2) | ~ a_block(X2) ) ).
+fof(c_0_340,axiom,! [X1] : ! [X2] : ( clear(block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ on(block_2,X2,s(X1)) | ~ time(X1) | ~ neq(X2,table) | ~ neq(block_2,X2) | ~ a_block(X2) ) ).
+fof(c_0_341,axiom,! [X1] : ( clear(block_1,s(X1)) | clear(block_1,X1) | source(block_2,X1) | on(block_2,table,X1) | ~ time(X1) ) ).
+fof(c_0_342,axiom,! [X1] : ! [X2] : ( on(block_2,block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ source(X2,X1) | ~ time(X1) | ~ neq(X2,block_2) | ~ a_block(X2) ) ).
+fof(c_0_343,axiom,! [X1] : ( clear(block_1,s(X1)) | source(block_2,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ time(X1) ) ).
+fof(c_0_344,axiom,! [X1] : ! [X2] : ( clear(block_1,X1) | source(block_2,X1) | on(block_2,table,X1) | ~ source(X2,X1) | ~ time(X1) | ~ neq(X2,block_1) | ~ a_block(X2) ) ).
+fof(c_0_345,axiom,! [X1] : ( object(block_2,time_0) | ~ destination(X1,time_0) | ~ neq(X1,block_2) | ~ a_block(X1) ) ).
+fof(c_0_346,axiom,! [X1] : ( object(block_2,time_0) | ~ object(X1,time_0) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_347,axiom,! [X1] : ! [X2] : ( source(X1,X2) | clear(X1,X2) | ~ nonfixed(X1) | ~ time(X2) | ~ clear(X1,s(X2)) ) ).
+fof(c_0_348,axiom,! [X1] : ! [X2] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,block_2) | ~ nonfixed(X2) ) ).
+fof(c_0_349,axiom,~ clear(block_1,esk1_0) | ~ on(block_1,block_2,esk1_0) | ~ on(block_2,table,esk1_0) ).
+fof(c_0_350,axiom,! [X1] : ( object(block_2,s(time_0)) | object(block_2,time_0) | ~ on(block_2,X1,s(s(time_0))) | ~ neq(X1,table) | ~ neq(block_2,X1) | ~ a_block(X1) ) ).
+fof(c_0_351,axiom,! [X1] : ! [X2] : ( destination(block_1,X1) | destination(block_2,X1) | object(block_2,X1) | ~ source(X2,X1) | ~ time(X1) | ~ neq(X2,block_2) | ~ a_block(X2) ) ).
+fof(c_0_352,axiom,! [X1] : ! [X2] : ( on(block_1,table,X1) | object(block_2,X1) | ~ source(X2,X1) | ~ time(X1) | ~ neq(X2,block_2) | ~ a_block(X2) ) ).
+fof(c_0_353,axiom,! [X1] : ( clear(block_1,s(X1)) | clear(block_2,X1) | destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_354,axiom,! [X1] : ! [X2] : ( source(block_2,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ source(X2,X1) | ~ time(X1) | ~ neq(X2,block_1) | ~ a_block(X2) ) ).
+fof(c_0_355,axiom,! [X1] : ! [X2] : ( clear(block_1,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,block_2) | ~ nonfixed(X2) ) ).
+fof(c_0_356,axiom,! [X1] : ! [X2] : ( object(block_2,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,block_1) | ~ nonfixed(X2) ) ).
+fof(c_0_357,axiom,! [X1] : ( ~ on(block_2,X1,time_0) | ~ neq(X1,table) | ~ neq(block_2,X1) | ~ a_block(X1) ) ).
+fof(c_0_358,axiom,! [X62] : ! [X63] : ( ~ a_block(X63) | ~ on(X63,X63,X62) ) ).
+fof(c_0_359,axiom,! [X1] : ! [X2] : ! [X3] : ( ~ a_block(X1) | ~ fixed(X2) | ~ on(X2,X1,X3) ) ).
+fof(c_0_360,axiom,clear(block_1,s(s(s(time_0)))) | source(block_2,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(s(time_0))) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_361,axiom,clear(block_1,s(s(s(time_0)))) | clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(s(time_0))) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_362,axiom,on(block_2,block_1,s(s(s(time_0)))) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | object(block_2,s(s(time_0))) | ~ time(s(s(time_0))) ).
+fof(c_0_363,axiom,on(block_2,block_1,s(s(s(time_0)))) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(s(time_0))) | ~ time(s(s(time_0))) ).
+fof(c_0_364,axiom,! [X1] : ( clear(block_1,s(time_0)) | on(X1,table,s(s(time_0))) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,table) | ~ nonfixed(X1) ) ).
+fof(c_0_365,axiom,! [X1] : ( on(X1,table,s(s(time_0))) | on(block_2,table,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,table) | ~ nonfixed(X1) ) ).
+fof(c_0_366,axiom,clear(block_2,s(s(s(time_0)))) | on(block_1,table,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(s(time_0))) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_367,axiom,clear(block_1,s(s(s(time_0)))) | source(block_2,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_1,s(s(time_0))) | destination(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_368,axiom,! [X1] : ( source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | on(X1,block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_369,axiom,clear(block_1,s(time_0)) | on(block_2,table,s(s(s(time_0)))) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(s(time_0))) | ~ time(s(s(time_0))) ).
+fof(c_0_370,axiom,clear(block_1,s(s(s(time_0)))) | clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_1,s(s(time_0))) | destination(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_371,axiom,! [X1] : ( clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | on(X1,block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_372,axiom,on(block_1,block_2,s(s(s(time_0)))) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_1,s(s(time_0))) | object(block_2,s(time_0)) | ~ time(s(s(time_0))) ).
+fof(c_0_373,axiom,clear(block_2,s(s(s(time_0)))) | on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(s(time_0))) | destination(block_2,s(time_0)) | ~ time(s(s(time_0))) ).
+fof(c_0_374,axiom,clear(block_1,s(s(s(time_0)))) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_1,s(s(time_0))) | destination(block_1,s(time_0)) | ~ time(s(s(time_0))) ).
+fof(c_0_375,axiom,clear(block_1,s(s(s(time_0)))) | clear(block_1,s(time_0)) | source(block_2,s(time_0)) | destination(block_1,s(s(time_0))) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_376,axiom,! [X1] : ( on(block_2,table,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ destination(X1,s(time_0)) | ~ neq(X1,table) | ~ a_block(X1) ) ).
+fof(c_0_377,axiom,! [X1] : ( clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(X1,block_1,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_378,axiom,! [X1] : ( clear(block_1,s(time_0)) | on(X1,table,s(s(time_0))) | on(block_2,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,table) | ~ nonfixed(X1) ) ).
+fof(c_0_379,axiom,! [X1] : ( clear(block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ destination(X1,s(time_0)) | ~ neq(X1,table) | ~ a_block(X1) ) ).
+fof(c_0_380,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ on(block_2,block_2,s(s(time_0))) | ~ neq(block_2,block_2) ).
+fof(c_0_381,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ on(block_2,table,s(s(time_0))) ).
+fof(c_0_382,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ on(block_1,block_1,s(s(time_0))) | ~ neq(block_1,block_1) ).
+fof(c_0_383,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ on(table,block_1,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_384,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ source(block_1,s(time_0)) ).
+fof(c_0_385,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ on(block_1,block_2,s(s(time_0))) ).
+fof(c_0_386,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ clear(block_1,s(s(time_0))) ).
+fof(c_0_387,axiom,clear(block_1,s(time_0)) | clear(table,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ nonfixed(table) ).
+fof(c_0_388,axiom,! [X1] : ( source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ source(X1,s(time_0)) | ~ neq(X1,block_1) | ~ a_block(X1) ) ).
+fof(c_0_389,axiom,clear(block_1,s(s(s(time_0)))) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_1,s(s(time_0))) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_390,axiom,on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_2,s(time_0)) | ~ on(block_1,block_1,s(s(time_0))) | ~ neq(block_1,block_1) ).
+fof(c_0_391,axiom,on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_2,s(time_0)) | ~ on(block_1,table,s(s(time_0))) ).
+fof(c_0_392,axiom,on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_2,s(time_0)) | ~ on(block_2,block_2,s(s(time_0))) | ~ neq(block_2,block_2) ).
+fof(c_0_393,axiom,on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_2,s(time_0)) | ~ on(table,block_2,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_394,axiom,on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_2,s(time_0)) | ~ source(block_2,s(time_0)) ).
+fof(c_0_395,axiom,on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_2,s(time_0)) | ~ on(block_2,block_1,s(s(time_0))) ).
+fof(c_0_396,axiom,on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_2,s(time_0)) | ~ clear(block_2,s(s(time_0))) ).
+fof(c_0_397,axiom,on(block_1,table,s(s(s(time_0)))) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_1,s(s(time_0))) | object(block_1,s(time_0)) | ~ time(s(s(time_0))) ).
+fof(c_0_398,axiom,! [X1] : ( clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ source(X1,s(time_0)) | ~ neq(X1,block_1) | ~ a_block(X1) ) ).
+fof(c_0_399,axiom,clear(block_1,s(s(s(time_0)))) | clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_1,s(s(time_0))) | object(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_400,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,block_2,s(s(time_0))) | ~ neq(block_2,block_2) ).
+fof(c_0_401,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,table,s(s(time_0))) ).
+fof(c_0_402,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(block_1,block_1,s(s(time_0))) | ~ neq(block_1,block_1) ).
+fof(c_0_403,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(table,block_1,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_404,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ source(block_1,s(time_0)) ).
+fof(c_0_405,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(block_1,block_2,s(s(time_0))) ).
+fof(c_0_406,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ clear(block_1,s(s(time_0))) ).
+fof(c_0_407,axiom,! [X1] : ( clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(X1,block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_408,axiom,clear(table,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ nonfixed(table) ).
+fof(c_0_409,axiom,! [X1] : ( clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(X1,table,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_410,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,block_2,s(s(time_0))) | ~ neq(block_2,block_2) ).
+fof(c_0_411,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,block_1,s(s(time_0))) ).
+fof(c_0_412,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,block_2,s(s(time_0))) | ~ neq(block_2,block_2) ).
+fof(c_0_413,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,time_0) | ~ on(block_2,block_1,s(s(time_0))) ).
+fof(c_0_414,axiom,on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_2,s(time_0)) | ~ destination(block_1,s(time_0)) ).
+fof(c_0_415,axiom,! [X1] : ( on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(X1,table,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_416,axiom,on(block_2,block_1,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_2,s(time_0)) | ~ destination(table,s(time_0)) ).
+fof(c_0_417,axiom,on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | ~ destination(block_2,time_0) ).
+fof(c_0_418,axiom,on(block_2,table,s(s(s(time_0)))) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(s(time_0))) | ~ time(s(s(time_0))) ).
+fof(c_0_419,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(table,block_2,s(s(time_0))) ).
+fof(c_0_420,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ clear(table,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_421,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | ~ destination(block_1,time_0) ).
+fof(c_0_422,axiom,! [X1] : ( on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_1,s(time_0)) | ~ on(X1,table,s(s(time_0))) | ~ neq(X1,block_1) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_423,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,time_0) | ~ destination(table,s(time_0)) ).
+fof(c_0_424,axiom,on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ destination(table,s(time_0)) ).
+fof(c_0_425,axiom,on(block_1,block_2,s(s(s(time_0)))) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_1,s(s(time_0))) | object(block_2,s(time_0)) | ~ time(s(s(time_0))) ).
+fof(c_0_426,axiom,source(block_2,s(time_0)) | on(block_1,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_2,time_0) | ~ source(table,s(time_0)) ).
+fof(c_0_427,axiom,on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,time_0) | ~ destination(block_2,time_0) ).
+fof(c_0_428,axiom,on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,time_0) | ~ object(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_429,axiom,on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,time_0) | ~ object(block_1,s(time_0)) ).
+fof(c_0_430,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | object(block_1,s(time_0)) | ~ on(block_1,block_1,s(s(time_0))) | ~ neq(block_1,block_1) ).
+fof(c_0_431,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | object(block_1,s(time_0)) | ~ on(block_1,block_2,s(s(time_0))) ).
+fof(c_0_432,axiom,clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_2,time_0) | ~ source(table,s(time_0)) ).
+fof(c_0_433,axiom,! [X1] : ( source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | on(X1,block_1,s(time_0)) | destination(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_434,axiom,! [X1] : ( clear(block_1,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) | ~ destination(X1,s(time_0)) | ~ neq(X1,table) | ~ a_block(X1) ) ).
+fof(c_0_435,axiom,on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ on(table,block_2,s(s(time_0))) ).
+fof(c_0_436,axiom,clear(block_1,s(time_0)) | on(block_2,table,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) | ~ nonfixed(table) ).
+fof(c_0_437,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | ~ destination(block_1,time_0) ).
+fof(c_0_438,axiom,clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | ~ destination(block_1,s(time_0)) ).
+fof(c_0_439,axiom,! [X1] : ( clear(block_1,s(time_0)) | source(block_2,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) | ~ source(X1,s(time_0)) | ~ neq(X1,block_1) | ~ a_block(X1) ) ).
+fof(c_0_440,axiom,clear(block_1,s(time_0)) | on(block_2,table,s(s(s(time_0)))) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_2,s(s(time_0))) | object(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_441,axiom,on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ clear(table,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_442,axiom,on(block_2,table,s(time_0)) | on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | object(block_2,s(time_0)) | ~ object(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_443,axiom,! [X1] : ( clear(block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) | ~ on(X1,table,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_444,axiom,source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,time_0) | ~ destination(block_1,s(time_0)) ).
+fof(c_0_445,axiom,clear(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) | ~ on(block_2,block_2,s(s(time_0))) | ~ neq(block_2,block_2) ).
+fof(c_0_446,axiom,clear(block_1,s(time_0)) | destination(block_2,s(time_0)) | destination(block_1,s(time_0)) | object(block_1,time_0) | ~ on(block_2,block_1,s(s(time_0))) ).
+fof(c_0_447,axiom,on(block_1,table,s(s(s(time_0)))) | destination(block_1,s(time_0)) | object(block_1,s(s(time_0))) | object(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_448,axiom,! [X1] : ( on(X1,table,s(s(time_0))) | destination(block_1,s(time_0)) | object(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,table) | ~ nonfixed(X1) ) ).
+fof(c_0_449,axiom,! [X1] : ( destination(block_1,s(time_0)) | object(block_2,time_0) | ~ destination(X1,s(time_0)) | ~ neq(X1,table) | ~ a_block(X1) ) ).
+fof(c_0_450,axiom,destination(block_1,s(time_0)) | object(block_2,time_0) | ~ nonfixed(table) ).
+fof(c_0_451,axiom,destination(block_1,s(time_0)) | object(block_2,time_0) | ~ on(block_1,block_1,s(s(time_0))) | ~ neq(block_1,block_1) ).
+fof(c_0_452,axiom,destination(block_1,s(time_0)) | object(block_2,time_0) | ~ on(block_1,block_2,s(s(time_0))) ).
+fof(c_0_453,axiom,destination(block_1,s(time_0)) | object(block_2,time_0) | ~ on(table,block_1,s(s(time_0))) ).
+fof(c_0_454,axiom,clear(block_2,s(s(s(time_0)))) | destination(block_2,s(s(time_0))) | object(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_455,axiom,! [X1] : ( on(block_2,block_1,s(s(X1))) | on(block_2,block_1,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_2,X1) | object(block_2,s(X1)) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_456,axiom,! [X1] : ( on(X1,block_2,s(time_0)) | object(block_2,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_457,axiom,clear(block_1,s(s(s(time_0)))) | on(block_2,block_1,s(time_0)) | destination(block_1,s(s(time_0))) | destination(block_1,s(time_0)) | object(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_458,axiom,object(block_2,time_0) | ~ source(block_1,s(time_0)) ).
+fof(c_0_459,axiom,object(block_2,time_0) | ~ source(table,s(time_0)) ).
+fof(c_0_460,axiom,object(block_2,time_0) | ~ object(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_461,axiom,object(block_2,time_0) | ~ object(block_2,s(time_0)) ).
+fof(c_0_462,axiom,on(block_1,block_2,s(s(s(time_0)))) | object(block_1,s(s(time_0))) | object(block_2,s(time_0)) | object(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_463,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ on(block_1,block_1,s(s(time_0))) | ~ neq(block_1,block_1) ).
+fof(c_0_464,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ on(block_1,table,s(s(time_0))) ).
+fof(c_0_465,axiom,clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | object(block_1,time_0) | ~ source(table,s(time_0)) ).
+fof(c_0_466,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ on(block_2,block_2,s(s(time_0))) | ~ neq(block_2,block_2) ).
+fof(c_0_467,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ on(table,block_2,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_468,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | ~ object(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_469,axiom,clear(block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | ~ object(block_1,s(time_0)) ).
+fof(c_0_470,axiom,! [X1] : ( clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | on(X1,block_1,s(time_0)) | object(block_1,time_0) | ~ object(X1,s(time_0)) | ~ neq(X1,block_1) | ~ nonfixed(X1) ) ).
+fof(c_0_471,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ object(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_472,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ source(block_2,s(time_0)) ).
+fof(c_0_473,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ on(block_2,block_1,s(s(time_0))) ).
+fof(c_0_474,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ clear(block_2,s(s(time_0))) ).
+fof(c_0_475,axiom,clear(block_2,s(s(s(time_0)))) | destination(block_2,s(s(time_0))) | destination(block_2,s(time_0)) | object(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_476,axiom,on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_1,s(time_0)) | ~ on(table,block_1,s(s(time_0))) ).
+fof(c_0_477,axiom,on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | object(block_1,s(time_0)) | ~ clear(table,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_478,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ on(block_1,block_1,s(s(time_0))) | ~ neq(block_1,block_1) ).
+fof(c_0_479,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ on(block_1,table,s(s(time_0))) ).
+fof(c_0_480,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ on(block_2,block_2,s(s(time_0))) | ~ neq(block_2,block_2) ).
+fof(c_0_481,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ on(table,block_2,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_482,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ source(block_2,s(time_0)) ).
+fof(c_0_483,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ on(block_2,block_1,s(s(time_0))) ).
+fof(c_0_484,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ clear(block_2,s(s(time_0))) ).
+fof(c_0_485,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ destination(block_1,s(time_0)) ).
+fof(c_0_486,axiom,object(block_1,time_0) | ~ destination(block_2,time_0) ).
+fof(c_0_487,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ destination(table,s(time_0)) ).
+fof(c_0_488,axiom,! [X1] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | ~ on(block_2,block_2,s(X1)) | ~ time(X1) | ~ neq(block_2,block_2) ) ).
+fof(c_0_489,axiom,! [X1] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | ~ on(block_2,table,s(X1)) | ~ time(X1) ) ).
+fof(c_0_490,axiom,clear(block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) | ~ on(table,block_2,s(s(time_0))) ).
+fof(c_0_491,axiom,clear(block_1,s(time_0)) | destination(block_1,s(time_0)) | destination(block_2,s(time_0)) | object(block_1,time_0) | ~ clear(table,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_492,axiom,! [X1] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | ~ on(block_1,block_1,s(X1)) | ~ time(X1) | ~ neq(block_1,block_1) ) ).
+fof(c_0_493,axiom,! [X1] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | ~ on(table,block_1,s(X1)) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_494,axiom,! [X1] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ on(block_2,block_2,s(X1)) | ~ time(X1) | ~ neq(block_2,block_2) ) ).
+fof(c_0_495,axiom,! [X1] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ on(block_2,block_1,s(X1)) | ~ time(X1) ) ).
+fof(c_0_496,axiom,! [X1] : ! [X2] : ( on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ on(X2,table,s(X1)) | ~ time(X1) | ~ neq(X2,block_2) | ~ neq(X2,table) | ~ nonfixed(table) | ~ nonfixed(X2) ) ).
+fof(c_0_497,axiom,! [X1] : ( on(block_2,table,s(s(X1))) | on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_1,X1) | destination(block_2,X1) | object(block_2,s(X1)) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_498,axiom,! [X1] : ( on(block_2,block_1,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_2,X1) | ~ source(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_499,axiom,! [X1] : ( clear(block_1,s(s(X1))) | source(block_2,X1) | on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,table,X1) | destination(block_1,s(X1)) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_500,axiom,! [X1] : ( on(block_2,block_1,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_2,X1) | ~ on(block_1,block_2,s(X1)) | ~ time(X1) ) ).
+fof(c_0_501,axiom,! [X1] : ( on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | ~ on(X1,table,s(time_0)) | ~ neq(X1,block_1) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_502,axiom,clear(block_1,s(s(s(time_0)))) | destination(block_1,s(s(time_0))) | destination(block_1,s(time_0)) | object(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_503,axiom,! [X1] : ! [X2] : ( source(block_2,X1) | on(block_2,table,X1) | on(block_1,block_2,X1) | on(block_1,table,X1) | on(X2,block_1,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,block_1) | ~ nonfixed(X2) ) ).
+fof(c_0_504,axiom,on(block_2,block_1,s(time_0)) | object(block_1,time_0) | ~ destination(block_1,time_0) ).
+fof(c_0_505,axiom,on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | ~ on(block_1,block_1,s(time_0)) | ~ neq(block_1,block_1) ).
+fof(c_0_506,axiom,clear(block_1,s(time_0)) | source(block_2,s(time_0)) | on(block_2,table,s(time_0)) | object(block_1,time_0) | ~ destination(block_1,s(time_0)) ).
+fof(c_0_507,axiom,source(block_2,time_0) | source(block_1,time_0) | on(block_2,table,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,block_1,s(time_0)) | ~ object(block_1,time_0) ).
+fof(c_0_508,axiom,! [X1] : ( on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,block_1,X1) | destination(block_2,X1) | ~ destination(table,X1) | ~ time(X1) ) ).
+fof(c_0_509,axiom,! [X1] : ( source(block_2,X1) | on(block_1,table,X1) | on(block_1,block_2,X1) | on(block_2,table,X1) | ~ source(table,X1) | ~ time(X1) ) ).
+fof(c_0_510,axiom,! [X1] : ( on(block_1,block_2,s(s(X1))) | on(block_1,block_2,X1) | object(block_1,s(X1)) | object(block_2,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_511,axiom,! [X1] : ( clear(block_2,s(s(X1))) | on(block_2,block_1,X1) | destination(block_2,s(X1)) | destination(block_2,X1) | destination(block_1,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_512,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | ~ on(table,block_1,s(time_0)) ).
+fof(c_0_513,axiom,on(block_2,block_1,s(time_0)) | on(block_1,block_2,s(time_0)) | on(block_2,table,s(time_0)) | ~ clear(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_514,axiom,! [X1] : ( clear(block_2,s(s(X1))) | on(block_1,block_2,X1) | destination(block_2,s(X1)) | destination(block_2,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_515,axiom,! [X1] : ( clear(block_1,s(s(X1))) | on(block_2,block_1,X1) | destination(block_1,s(X1)) | destination(block_1,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_516,axiom,! [X1] : ( on(block_1,table,s(s(X1))) | destination(block_1,X1) | destination(block_2,X1) | object(block_1,s(X1)) | object(block_2,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_517,axiom,on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,time_0) | ~ object(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_518,axiom,on(block_1,block_2,s(time_0)) | on(block_1,table,s(time_0)) | destination(block_2,time_0) | ~ object(block_1,s(time_0)) ).
+fof(c_0_519,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ destination(block_1,s(time_0)) ).
+fof(c_0_520,axiom,on(block_1,block_2,s(time_0)) | destination(block_2,time_0) | object(block_2,s(time_0)) | ~ destination(table,s(time_0)) ).
+fof(c_0_521,axiom,! [X1] : ! [X2] : ( destination(block_1,X1) | destination(block_2,X1) | object(block_2,X1) | ~ on(X2,table,s(X1)) | ~ time(X1) | ~ neq(X2,block_1) | ~ neq(X2,table) | ~ nonfixed(table) | ~ nonfixed(X2) ) ).
+fof(c_0_522,axiom,! [X1] : ! [X2] : ( clear(block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ on(X2,table,s(X1)) | ~ time(X1) | ~ neq(X2,block_2) | ~ neq(X2,table) | ~ nonfixed(table) | ~ nonfixed(X2) ) ).
+fof(c_0_523,axiom,clear(block_1,s(time_0)) | object(block_1,time_0) | ~ object(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_524,axiom,clear(block_1,s(time_0)) | object(block_1,time_0) | ~ object(block_1,s(time_0)) ).
+fof(c_0_525,axiom,object(block_2,s(time_0)) | object(block_1,time_0) | ~ object(table,s(time_0)) | ~ nonfixed(table) ).
+fof(c_0_526,axiom,! [X1] : ( clear(block_1,X1) | on(block_2,table,s(s(X1))) | destination(block_1,X1) | destination(block_2,X1) | object(block_2,s(X1)) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_527,axiom,! [X1] : ( on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ source(table,X1) | ~ time(X1) ) ).
+fof(c_0_528,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ on(block_1,block_1,s(X1)) | ~ time(X1) | ~ neq(block_1,block_1) ) ).
+fof(c_0_529,axiom,! [X1] : ( clear(block_2,s(s(X1))) | destination(block_2,s(X1)) | destination(block_2,X1) | destination(block_1,X1) | object(block_2,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_530,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ on(block_2,block_2,s(X1)) | ~ time(X1) | ~ neq(block_2,block_2) ) ).
+fof(c_0_531,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ on(table,block_2,s(X1)) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_532,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ on(block_2,block_1,s(X1)) | ~ time(X1) ) ).
+fof(c_0_533,axiom,! [X1] : ( on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ clear(table,s(X1)) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_534,axiom,! [X1] : ( on(block_1,block_2,X1) | on(block_1,table,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ on(table,block_2,s(X1)) | ~ time(X1) ) ).
+fof(c_0_535,axiom,! [X1] : ( destination(block_2,X1) | destination(block_1,X1) | object(block_2,X1) | ~ on(block_1,block_1,s(X1)) | ~ time(X1) | ~ neq(block_1,block_1) ) ).
+fof(c_0_536,axiom,! [X1] : ( destination(block_2,X1) | destination(block_1,X1) | object(block_2,X1) | ~ on(block_1,block_2,s(X1)) | ~ time(X1) ) ).
+fof(c_0_537,axiom,! [X1] : ( clear(block_2,s(s(X1))) | on(block_1,table,X1) | destination(block_2,s(X1)) | object(block_2,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_538,axiom,! [X1] : ( clear(block_1,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ on(block_2,block_2,s(X1)) | ~ time(X1) | ~ neq(block_2,block_2) ) ).
+fof(c_0_539,axiom,! [X1] : ( clear(block_1,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ on(block_2,block_1,s(X1)) | ~ time(X1) ) ).
+fof(c_0_540,axiom,! [X1] : ! [X2] : ( on(block_1,table,X1) | on(X2,block_2,X1) | object(block_2,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,block_2) | ~ nonfixed(X2) ) ).
+fof(c_0_541,axiom,! [X1] : ( clear(block_1,s(s(X1))) | clear(block_1,X1) | source(block_2,X1) | on(block_2,table,X1) | destination(block_1,s(X1)) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_542,axiom,object(block_2,time_0) | ~ destination(block_1,time_0) ).
+fof(c_0_543,axiom,! [X1] : ( on(block_2,block_1,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ source(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_544,axiom,! [X1] : ( on(block_2,block_1,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ source(table,X1) | ~ time(X1) ) ).
+fof(c_0_545,axiom,! [X1] : ( clear(block_1,s(s(X1))) | source(block_2,X1) | destination(block_1,s(X1)) | destination(block_2,X1) | destination(block_1,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_546,axiom,on(block_1,table,s(s(s(time_0)))) | object(block_1,s(s(time_0))) | object(block_1,s(time_0)) | object(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_547,axiom,! [X1] : ( object(block_1,s(time_0)) | object(block_1,time_0) | ~ on(X1,table,s(s(time_0))) | ~ neq(X1,block_1) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_548,axiom,! [X1] : ( on(X1,block_2,s(time_0)) | object(block_2,time_0) | ~ object(X1,time_0) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_549,axiom,! [X1] : ( clear(block_1,X1) | source(block_2,X1) | on(block_2,table,X1) | ~ source(table,X1) | ~ time(X1) ) ).
+fof(c_0_550,axiom,object(block_2,time_0) | ~ on(block_1,block_1,s(time_0)) | ~ neq(block_1,block_1) ).
+fof(c_0_551,axiom,! [X1] : ( object(block_2,time_0) | ~ on(X1,block_2,s(time_0)) | ~ neq(X1,block_1) | ~ neq(X1,block_2) | ~ nonfixed(X1) ) ).
+fof(c_0_552,axiom,object(block_2,time_0) | ~ neq(block_2,block_2) ).
+fof(c_0_553,axiom,object(block_2,time_0) | ~ object(table,time_0) | ~ nonfixed(table) ).
+fof(c_0_554,axiom,! [X1] : ! [X2] : ( clear(block_1,X1) | source(block_2,X1) | on(block_2,table,X1) | on(X2,block_1,X1) | ~ object(X2,X1) | ~ time(X1) | ~ neq(X2,block_1) | ~ nonfixed(X2) ) ).
+fof(c_0_555,axiom,object(block_2,time_0) | ~ source(block_2,time_0) ).
+fof(c_0_556,axiom,! [X1] : ( object(block_2,s(time_0)) | object(block_2,time_0) | ~ on(X1,table,s(s(time_0))) | ~ neq(X1,block_2) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_557,axiom,! [X1] : ( clear(block_2,X1) | source(block_2,X1) | on(block_1,block_2,s(X1)) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_558,axiom,! [X1] : ( on(block_1,block_2,X1) | on(block_1,table,X1) | ~ object(table,X1) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_559,axiom,! [X1] : ( on(block_1,block_2,X1) | on(block_1,table,X1) | ~ object(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_560,axiom,on(block_2,table,s(s(s(time_0)))) | object(block_2,s(s(time_0))) | object(block_2,s(time_0)) | object(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_561,axiom,! [X1] : ( on(block_1,block_2,X1) | object(block_2,X1) | ~ destination(table,X1) | ~ time(X1) ) ).
+fof(c_0_562,axiom,clear(block_1,s(s(s(time_0)))) | destination(block_1,s(s(time_0))) | destination(block_1,s(time_0)) | destination(block_1,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_563,axiom,! [X1] : ( clear(block_1,X1) | source(block_1,X1) | on(block_2,block_1,s(X1)) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_564,axiom,! [X1] : ( on(block_2,block_1,s(X1)) | ~ destination(block_1,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_565,axiom,on(block_2,block_1,esk1_0) | ~ on(block_1,block_2,esk1_0) | ~ on(block_2,table,esk1_0) | ~ time(esk1_0) ).
+fof(c_0_566,axiom,object(block_1,s(time_0)) | object(block_1,time_0) | ~ on(block_1,block_1,s(s(time_0))) | ~ neq(block_1,block_1) ).
+fof(c_0_567,axiom,! [X1] : ( destination(block_1,X1) | destination(block_2,X1) | object(block_2,X1) | ~ clear(table,s(X1)) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_568,axiom,! [X1] : ( destination(block_1,X1) | destination(block_2,X1) | object(block_2,X1) | ~ on(table,block_1,s(X1)) | ~ time(X1) ) ).
+fof(c_0_569,axiom,object(block_2,s(time_0)) | object(block_2,time_0) | ~ on(block_2,block_1,s(s(time_0))) ).
+fof(c_0_570,axiom,! [X1] : ( clear(block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ source(table,X1) | ~ time(X1) ) ).
+fof(c_0_571,axiom,! [X1] : ( clear(block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ clear(table,s(X1)) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_572,axiom,! [X1] : ( clear(block_1,X1) | destination(block_1,X1) | destination(block_2,X1) | ~ on(table,block_2,s(X1)) | ~ time(X1) ) ).
+fof(c_0_573,axiom,! [X1] : ( destination(block_2,X1) | destination(block_1,X1) | object(block_2,X1) | ~ source(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_574,axiom,! [X1] : ( destination(block_2,X1) | destination(block_1,X1) | object(block_2,X1) | ~ source(table,X1) | ~ time(X1) ) ).
+fof(c_0_575,axiom,clear(block_2,s(s(s(time_0)))) | destination(block_2,s(s(time_0))) | destination(block_2,s(time_0)) | destination(block_2,time_0) | ~ time(s(s(time_0))) ).
+fof(c_0_576,axiom,! [X1] : ( on(block_1,table,X1) | object(block_2,X1) | ~ source(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_577,axiom,! [X1] : ( on(block_1,table,X1) | object(block_2,X1) | ~ source(table,X1) | ~ time(X1) ) ).
+fof(c_0_578,axiom,! [X1] : ( clear(block_1,s(s(X1))) | clear(block_2,X1) | destination(block_1,s(X1)) | destination(block_1,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_579,axiom,! [X1] : ( clear(block_1,X1) | source(block_2,X1) | on(block_2,table,X1) | ~ destination(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_580,axiom,object(block_1,s(time_0)) | object(block_1,time_0) | ~ on(table,block_1,s(s(time_0))) ).
+fof(c_0_581,axiom,object(block_1,s(time_0)) | object(block_1,time_0) | ~ clear(table,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_582,axiom,! [X1] : ( source(block_2,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ source(table,X1) | ~ time(X1) ) ).
+fof(c_0_583,axiom,object(block_2,s(time_0)) | object(block_2,time_0) | ~ on(table,block_2,s(s(time_0))) ).
+fof(c_0_584,axiom,object(block_2,s(time_0)) | object(block_2,time_0) | ~ clear(table,s(s(time_0))) | ~ nonfixed(table) ).
+fof(c_0_585,axiom,! [X1] : ( clear(block_2,s(X1)) | clear(block_1,X1) | source(block_1,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_586,axiom,! [X1] : ! [X2] : ( source(block_2,X1) | source(block_1,X1) | ~ source(X2,X1) | ~ time(X1) | ~ neq(X2,table) | ~ a_block(X2) ) ).
+fof(c_0_587,axiom,! [X1] : ( object(block_1,time_0) | ~ on(X1,table,s(time_0)) | ~ neq(X1,block_1) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_588,axiom,! [X1] : ( object(block_2,time_0) | ~ on(X1,table,s(time_0)) | ~ neq(X1,block_2) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_589,axiom,object(block_1,time_0) | ~ on(block_1,block_1,s(time_0)) | ~ neq(block_1,block_1) ).
+fof(c_0_590,axiom,! [X1] : ! [X2] : ( destination(block_2,X1) | destination(block_1,X1) | ~ destination(X2,X1) | ~ time(X1) | ~ neq(X2,table) | ~ a_block(X2) ) ).
+fof(c_0_591,axiom,! [X1] : ( clear(table,s(X1)) | source(block_2,X1) | source(block_1,X1) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_592,axiom,! [X1] : ( source(block_2,X1) | source(block_1,X1) | ~ object(table,X1) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_593,axiom,! [X1] : ( clear(table,X1) | destination(block_2,X1) | destination(block_1,X1) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_594,axiom,! [X1] : ( clear(block_2,s(X1)) | ~ destination(block_1,X1) | ~ time(s(X1)) | ~ time(X1) ) ).
+fof(c_0_595,axiom,! [X1] : ( ~ on(X1,table,time_0) | ~ neq(X1,block_1) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_596,axiom,! [X1] : ( ~ on(X1,table,time_0) | ~ neq(X1,block_2) | ~ neq(X1,table) | ~ nonfixed(table) | ~ nonfixed(X1) ) ).
+fof(c_0_597,axiom,! [X1] : ( clear(block_1,X1) | ~ object(table,X1) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_598,axiom,! [X1] : ( clear(block_1,X1) | ~ object(block_1,X1) | ~ time(X1) ) ).
+fof(c_0_599,axiom,! [X1] : ( object(block_2,X1) | ~ object(table,X1) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_600,axiom,! [X1] : ( destination(block_2,X1) | destination(block_1,X1) | ~ object(table,X1) | ~ time(X1) | ~ nonfixed(table) ) ).
+fof(c_0_601,axiom,object(block_1,time_0) | ~ on(table,block_1,s(time_0)) ).
+fof(c_0_602,axiom,clear(block_2,esk1_0) | ~ on(block_1,block_2,esk1_0) | ~ on(block_2,table,esk1_0) | ~ time(esk1_0) ).
+fof(c_0_603,axiom,~ on(block_1,block_1,time_0) | ~ neq(block_1,block_1) ).
+fof(c_0_604,axiom,object(block_2,time_0) | ~ on(table,block_2,s(time_0)) ).
+fof(c_0_605,axiom,~ on(block_2,block_2,time_0) | ~ neq(block_2,block_2) ).
+fof(c_0_606,axiom,~ clear(table,time_0) | ~ nonfixed(table) ).
+fof(c_0_607,axiom,! [X1] : ! [X2] : ( ~ a_block(X1) | ~ on(X1,X1,X2) ) ).
+fof(c_0_608,axiom,~ on(block_2,block_1,time_0) ).
+fof(c_0_609,axiom,~ on(table,block_1,time_0) ).
+fof(c_0_610,axiom,~ on(table,block_2,time_0) ).
+fof(c_0_611,axiom,~ fixed(block_1) ).
+fof(c_0_612,axiom,~ fixed(block_2) ).
+fof(c_0_613,axiom,goal_time(s(time_0)) ).
+fof(c_0_614,axiom,fixed(table) ).
+fof(c_0_615,axiom,goal_time(esk1_0) ).

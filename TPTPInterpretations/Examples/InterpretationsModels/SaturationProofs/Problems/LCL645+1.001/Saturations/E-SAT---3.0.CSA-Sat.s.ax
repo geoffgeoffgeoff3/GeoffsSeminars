@@ -1,0 +1,6 @@
+fof(main,axiom,~ ( ? [X1] : ~ ( ! [X2] : ( ~ r1(X1,X2) | p1(X2) | ~ ( ! [X1] : ( ~ r1(X2,X1) | p1(X1) ) ) ) | ! [X2] : ( ~ r1(X1,X2) | p1(X2) | ~ ( ! [X1] : ( ~ r1(X2,X1) | p1(X1) ) ) ) ) ) ).
+fof(c_0_1,axiom,~ ( ~ ( ? [X1] : ~ ( ! [X2] : ( ~ r1(X1,X2) | p1(X2) | ~ ( ! [X1] : ( ~ r1(X2,X1) | p1(X1) ) ) ) ) ) ) ).
+fof(c_0_2,axiom,! [X5] : ( r1(esk1_0,esk2_0) & ~ p1(esk2_0) & ( ~ r1(esk2_0,X5) | p1(X5) ) ) ).
+fof(c_0_3,axiom,! [X1] : ( p1(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_4,axiom,~ p1(esk2_0) ).
+fof(c_0_5,axiom,r1(esk1_0,esk2_0) ).

@@ -1,0 +1,41 @@
+fof(a7_48,axiom,! [X0] : ! [X1] : ( ~ constant(resources(X0,X1)) | ~ in_environment(X0,X1) | ~ environment(X0) | constant(number_of_organizations(X0,X1)) ) ).
+fof(mp_constant_not_decrease_41,axiom,! [X0] : ( ~ constant(X0) | ~ decreases(X0) ) ).
+fof(mp_non_decreasing_33,axiom,! [X1] : ! [X0] : ( subpopulation(sk2(X1,X0),X0,X1) | ~ in_environment(X0,X1) | decreases(number_of_organizations(X0,X1)) | ~ environment(X0) ) ).
+fof(mp_subpopulations_38,axiom,! [X0] : ! [X1] : ( subpopulation(efficient_producers,X0,X1) | ~ in_environment(X0,X1) | ~ environment(X0) ) ).
+fof(mp_subpopulations_37,axiom,! [X0] : ! [X1] : ( subpopulation(first_movers,X0,X1) | ~ in_environment(X0,X1) | ~ environment(X0) ) ).
+fof(u34,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ subpopulation(sk2(X0,X1),X2,X0) | efficient_producers = sk2(X0,X1) | first_movers = sk2(X0,X1) | ~ environment(X2) | ~ in_environment(X1,X0) | decreases(number_of_organizations(X1,X0)) | ~ environment(X1) ) ).
+fof(u58,axiom,! [X1] : ! [X0] : ( decreases(number_of_organizations(X1,X0)) | first_movers = sk2(X0,X1) | ~ environment(X1) | ~ in_environment(X1,X0) | efficient_producers = sk2(X0,X1) ) ).
+fof(a7_47,axiom,! [X0] : ! [X1] : ( ~ decreases(resources(X0,X1)) | ~ in_environment(X0,X1) | ~ environment(X0) | ~ decreases(number_of_organizations(X0,X1)) ) ).
+fof(u39,axiom,in_environment(sk3,sk1(sk4,sk3)) ).
+fof(prove_t6_52,axiom,in_environment(sk3,sk4) ).
+fof(u52,axiom,! [X0] : ! [X1] : ( ~ in_environment(X0,sk1(sk4,X1)) | ~ environment(X0) | greater(zero,growth_rate(first_movers,sk1(sk4,X1))) | ~ greater_or_equal(sk4,appear(efficient_producers,X1)) | ~ environment(X1) ) ).
+fof(mp_efficient_producers_exist_40,axiom,! [X0] : ! [X1] : ( ~ in_environment(X0,X1) | ~ environment(X0) | cardinality_at_time(efficient_producers,X1) = zero | greater(cardinality_at_time(efficient_producers,X1),zero) ) ).
+fof(u45,axiom,greater(sk4,sk1(sk4,sk3)) ).
+fof(a2_44,axiom,greater(resilience(efficient_producers),resilience(first_movers)) ).
+fof(u48,axiom,! [X0] : ( greater(sk1(sk4,X0),appear(efficient_producers,X0)) | ~ greater_or_equal(sk4,appear(efficient_producers,X0)) | ~ environment(X0) ) ).
+fof(u56,axiom,greater(zero,growth_rate(first_movers,sk1(sk4,sk3))) ).
+fof(u50,axiom,! [X0] : ( greater(zero,growth_rate(efficient_producers,sk1(sk4,X0))) | ~ greater_or_equal(sk4,appear(efficient_producers,X0)) | ~ environment(X0) ) ).
+fof(u41,axiom,greater(cardinality_at_time(efficient_producers,sk1(sk4,sk3)),zero) | zero = cardinality_at_time(efficient_producers,sk1(sk4,sk3)) ).
+fof(mp_non_decreasing_34,axiom,! [X1] : ! [X0] : ( greater(cardinality_at_time(sk2(X1,X0),X1),zero) | ~ in_environment(X0,X1) | decreases(number_of_organizations(X0,X1)) | ~ environment(X0) ) ).
+fof(a13_50,axiom,! [X3] : ! [X2] : ! [X0] : ! [X1] : ( ~ greater(resilience(X3),resilience(X2)) | ~ in_environment(X0,X1) | ~ greater(zero,growth_rate(X3,X1)) | ~ environment(X0) | greater(zero,growth_rate(X2,X1)) ) ).
+fof(a4_45,axiom,! [X0] : ! [X1] : ( ~ greater(number_of_organizations(X0,X1),zero) | ~ in_environment(X0,X1) | ~ greater(equilibrium(X0),X1) | decreases(resources(X0,X1)) | ~ environment(X0) ) ).
+fof(a4_46,axiom,! [X0] : ! [X1] : ( ~ greater(number_of_organizations(X0,X1),zero) | ~ in_environment(X0,X1) | constant(resources(X0,X1)) | greater(equilibrium(X0),X1) | ~ environment(X0) ) ).
+fof(mp_non_decreasing_35,axiom,! [X1] : ! [X0] : ( ~ greater(zero,growth_rate(sk2(X1,X0),X1)) | ~ in_environment(X0,X1) | decreases(number_of_organizations(X0,X1)) | ~ environment(X0) ) ).
+fof(u51,axiom,! [X1] : ! [X0] : ( ~ greater(zero,growth_rate(efficient_producers,X1)) | ~ in_environment(X0,X1) | ~ environment(X0) | greater(zero,growth_rate(first_movers,X1)) ) ).
+fof(u33,axiom,~ greater(zero,growth_rate(efficient_producers,sk4)) ).
+fof(u31,axiom,~ greater(zero,zero) ).
+fof(a11_49,axiom,! [X1] : ! [X2] : ! [X0] : ( ~ greater(cardinality_at_time(X1,X2),zero) | first_movers = X1 | efficient_producers = X1 | ~ subpopulation(X1,X0,X2) | ~ environment(X0) ) ).
+fof(mp_start_of_organizations_32,axiom,! [X0] : ! [X1] : ( ~ greater(appear(an_organisation,X0),X1) | ~ in_environment(X0,X1) | ~ environment(X0) | zero = number_of_organizations(X0,X1) ) ).
+fof(prove_t6_53,axiom,greater_or_equal(sk4,appear(efficient_producers,sk3)) ).
+fof(u37,axiom,! [X0] : ( ~ greater_or_equal(sk4,appear(efficient_producers,X0)) | ~ environment(X0) | in_environment(X0,sk1(sk4,X0)) ) ).
+fof(u43,axiom,! [X0] : ( ~ greater_or_equal(sk4,appear(efficient_producers,X0)) | ~ environment(X0) | greater(sk4,sk1(sk4,X0)) ) ).
+fof(a1_43,axiom,! [X1] : ! [X0] : ( ~ greater_or_equal(X1,appear(an_organisation,X0)) | ~ in_environment(X0,X1) | ~ environment(X0) | greater(number_of_organizations(X0,X1),zero) ) ).
+fof(mp_environment_inequality_42,axiom,! [X1] : ! [X0] : ( ~ greater_or_equal(X1,appear(an_organisation,X0)) | ~ in_environment(X0,X1) | ~ environment(X0) | greater(appear(an_organisation,X0),X1) ) ).
+fof(prove_t6_51,axiom,environment(sk3) ).
+fof(u30,axiom,zero = cardinality_at_time(efficient_producers,sk4) ).
+fof(mp_no_members_36,axiom,! [X0] : ! [X1] : ! [X2] : ( zero != number_of_organizations(X0,X1) | ~ in_environment(X0,X1) | ~ subpopulation(X2,X0,X1) | ~ environment(X0) | zero = cardinality_at_time(X2,X1) ) ).
+fof(mp_previous_negative_growth_29,axiom,! [X1] : ! [X0] : ( cardinality_at_time(efficient_producers,X1) != zero | ~ environment(X0) | ~ greater_or_equal(X1,appear(efficient_producers,X0)) | in_environment(X0,sk1(X1,X0)) ) ).
+fof(mp_previous_negative_growth_30,axiom,! [X1] : ! [X0] : ( cardinality_at_time(efficient_producers,X1) != zero | ~ environment(X0) | ~ greater_or_equal(X1,appear(efficient_producers,X0)) | greater(X1,sk1(X1,X0)) ) ).
+fof(mp_previous_negative_growth_28,axiom,! [X1] : ! [X0] : ( cardinality_at_time(efficient_producers,X1) != zero | ~ environment(X0) | ~ greater_or_equal(X1,appear(efficient_producers,X0)) | greater(sk1(X1,X0),appear(efficient_producers,X0)) ) ).
+fof(mp_previous_negative_growth_31,axiom,! [X1] : ! [X0] : ( cardinality_at_time(efficient_producers,X1) != zero | ~ environment(X0) | ~ greater_or_equal(X1,appear(efficient_producers,X0)) | greater(zero,growth_rate(efficient_producers,sk1(X1,X0))) ) ).
+fof(mp_empty_not_decreasing_39,axiom,! [X0] : ! [X1] : ( zero != cardinality_at_time(X0,X1) | ~ greater(zero,growth_rate(X0,X1)) ) ).

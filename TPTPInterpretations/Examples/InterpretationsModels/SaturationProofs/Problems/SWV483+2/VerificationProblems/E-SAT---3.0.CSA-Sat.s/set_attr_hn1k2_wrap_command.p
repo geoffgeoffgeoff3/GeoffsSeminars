@@ -1,0 +1,2 @@
+include('Saturations/SWV483+2/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
+fof(set_attr_hn1k2_wrap_command,conjecture,! [A] : ! [B] : ! [C] : ! [D] : ! [E] : ! [F] : ! [G] : ! [H] : ! [I] : ! [J] : ! [K] : ! [L] : ! [M] : ! [N] : ! [O] : ! [P] : ! [Q] : ! [R] : ! [S] : ! [X6] : ! [X5] : ! [X3] : ! [T] : ! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ( p(Z,Y,X,W,V,U,T,n1,n0,n0,X3,n0,X5,X6,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,D,C,B,A) => p(Z,Y,X,W,V,U,T,n1,n1,n0,X3,n0,X5,X6,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,D,C,B,A) ) ).

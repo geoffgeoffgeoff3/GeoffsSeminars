@@ -1,0 +1,677 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ( ~ smoke(X0,X1) | event(X0,X1) ) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | eventuality(X0,X1) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | thing(X0,X1) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | singleton(X0,X1) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | specific(X0,X1) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | nonexistent(X0,X1) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ( ~ proposition(X0,X1) | relation(X0,X1) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ( ~ relation(X0,X1) | abstraction(X0,X1) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | thing(X0,X1) ) ).
+fof(c_59,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | nonhuman(X0,X1) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | general(X0,X1) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | unisex(X0,X1) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ state(X0,X1) | eventuality(X0,X1) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( ~ state(X0,X1) | event(X0,X1) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ( ~ man(X0,X1) | human_person(X0,X1) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | organism(X0,X1) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | entity(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | thing(X0,X1) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | specific(X0,X1) ) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | existent(X0,X1) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | impartial(X0,X1) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | living(X0,X1) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | human(X0,X1) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | animate(X0,X1) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ( ~ man(X0,X1) | male(X0,X1) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ( ~ forename(X0,X1) | relname(X0,X1) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ( ~ relname(X0,X1) | relation(X0,X1) ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ( ~ vincent_forename(X0,X1) | forename(X0,X1) ) ).
+fof(c_78,axiom,! [X0] : ! [X1] : ( ~ jules_forename(X0,X1) | forename(X0,X1) ) ).
+fof(c_79,axiom,! [X0] : ! [X1] : ( ~ unisex(X0,X1) | ~ male(X0,X1) ) ).
+fof(c_80,axiom,! [X0] : ! [X1] : ( ~ specific(X0,X1) | ~ general(X0,X1) ) ).
+fof(c_81,axiom,! [X0] : ! [X1] : ( ~ nonhuman(X0,X1) | ~ human(X0,X1) ) ).
+fof(c_82,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(c_83,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ be(X0,X1,X2,X3) | X2 = X3 ) ).
+fof(c_84,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ smoke(X0,X1) | ~ accessible_world(X0,X2) | smoke(X2,X1) ) ).
+fof(c_85,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ event(X0,X1) | ~ accessible_world(X0,X2) | event(X2,X1) ) ).
+fof(c_86,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ eventuality(X0,X1) | ~ accessible_world(X0,X2) | eventuality(X2,X1) ) ).
+fof(c_87,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ thing(X0,X1) | ~ accessible_world(X0,X2) | thing(X2,X1) ) ).
+fof(c_88,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ singleton(X0,X1) | ~ accessible_world(X0,X2) | singleton(X2,X1) ) ).
+fof(c_89,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ specific(X0,X1) | ~ accessible_world(X0,X2) | specific(X2,X1) ) ).
+fof(c_90,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ nonexistent(X0,X1) | ~ accessible_world(X0,X2) | nonexistent(X2,X1) ) ).
+fof(c_91,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ unisex(X0,X1) | ~ accessible_world(X0,X2) | unisex(X2,X1) ) ).
+fof(c_92,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ accessible_world(X0,X1) | ~ present(X0,X2) | present(X1,X2) ) ).
+fof(c_93,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ accessible_world(X0,X1) | ~ think_believe_consider(X0,X2) | think_believe_consider(X1,X2) ) ).
+fof(c_94,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ proposition(X0,X1) | ~ accessible_world(X0,X2) | proposition(X2,X1) ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ relation(X0,X1) | ~ accessible_world(X0,X2) | relation(X2,X1) ) ).
+fof(c_96,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ abstraction(X0,X1) | ~ accessible_world(X0,X2) | abstraction(X2,X1) ) ).
+fof(c_97,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ nonhuman(X0,X1) | ~ accessible_world(X0,X2) | nonhuman(X2,X1) ) ).
+fof(c_98,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ general(X0,X1) | ~ accessible_world(X0,X2) | general(X2,X1) ) ).
+fof(c_99,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ state(X0,X1) | ~ accessible_world(X0,X2) | state(X2,X1) ) ).
+fof(c_100,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ man(X0,X1) | ~ accessible_world(X0,X2) | man(X2,X1) ) ).
+fof(c_101,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ human_person(X0,X1) | ~ accessible_world(X0,X2) | human_person(X2,X1) ) ).
+fof(c_102,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ organism(X0,X1) | ~ accessible_world(X0,X2) | organism(X2,X1) ) ).
+fof(c_103,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ entity(X0,X1) | ~ accessible_world(X0,X2) | entity(X2,X1) ) ).
+fof(c_104,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ existent(X0,X1) | ~ accessible_world(X0,X2) | existent(X2,X1) ) ).
+fof(c_105,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ impartial(X0,X1) | ~ accessible_world(X0,X2) | impartial(X2,X1) ) ).
+fof(c_106,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ living(X0,X1) | ~ accessible_world(X0,X2) | living(X2,X1) ) ).
+fof(c_107,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ human(X0,X1) | ~ accessible_world(X0,X2) | human(X2,X1) ) ).
+fof(c_108,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ animate(X0,X1) | ~ accessible_world(X0,X2) | animate(X2,X1) ) ).
+fof(c_109,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ male(X0,X1) | ~ accessible_world(X0,X2) | male(X2,X1) ) ).
+fof(c_110,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ forename(X0,X1) | ~ accessible_world(X0,X2) | forename(X2,X1) ) ).
+fof(c_111,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ relname(X0,X1) | ~ accessible_world(X0,X2) | relname(X2,X1) ) ).
+fof(c_112,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ vincent_forename(X0,X1) | ~ accessible_world(X0,X2) | vincent_forename(X2,X1) ) ).
+fof(c_113,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ jules_forename(X0,X1) | ~ accessible_world(X0,X2) | jules_forename(X2,X1) ) ).
+fof(c_114,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ agent(X0,X1,X2) | ~ accessible_world(X0,X3) | agent(X3,X1,X2) ) ).
+fof(c_115,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ theme(X0,X1,X2) | ~ accessible_world(X0,X3) | theme(X3,X1,X2) ) ).
+fof(c_116,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ of(X0,X1,X2) | ~ accessible_world(X0,X3) | of(X3,X1,X2) ) ).
+fof(c_117,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ be(X0,X1,X2,X3) | ~ accessible_world(X0,X4) | be(X4,X1,X2,X3) ) ).
+fof(c_118,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ of(X0,X1,X2) | ~ of(X0,X3,X2) | ~ entity(X0,X2) | ~ forename(X0,X1) | ~ forename(X0,X3) | X1 = X3 ) ).
+fof(c_119,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ agent(X0,X1,X2) | ~ agent(X0,X3,X2) | ~ theme(X0,X1,X4) | ~ theme(X0,X3,X5) | ~ proposition(X0,X4) | ~ proposition(X0,X5) | ~ think_believe_consider(X0,X1) | ~ think_believe_consider(X0,X3) | X4 = X5 ) ).
+fof(c_120,axiom,actual_world(skc15) ).
+fof(c_121,axiom,man(skc15,skc29) ).
+fof(c_122,axiom,forename(skc15,skc28) ).
+fof(c_123,axiom,vincent_forename(skc15,skc28) ).
+fof(c_124,axiom,event(skc15,skc27) ).
+fof(c_125,axiom,present(skc15,skc27) ).
+fof(c_126,axiom,think_believe_consider(skc15,skc27) ).
+fof(c_127,axiom,jules_forename(skc15,skc25) ).
+fof(c_128,axiom,forename(skc15,skc25) ).
+fof(c_129,axiom,man(skc15,skc24) ).
+fof(c_130,axiom,event(skc16,skc22) ).
+fof(c_131,axiom,man(skc15,skc21) ).
+fof(c_132,axiom,present(skc16,skc22) ).
+fof(c_133,axiom,smoke(skc16,skc22) ).
+fof(c_134,axiom,man(skc15,skc19) ).
+fof(c_135,axiom,think_believe_consider(skc15,skc17) ).
+fof(c_136,axiom,present(skc15,skc17) ).
+fof(c_137,axiom,event(skc15,skc17) ).
+fof(c_138,axiom,forename(skc15,skc18) ).
+fof(c_139,axiom,vincent_forename(skc15,skc18) ).
+fof(c_140,axiom,forename(skc15,skc20) ).
+fof(c_141,axiom,jules_forename(skc15,skc20) ).
+fof(c_142,axiom,proposition(skc15,skc16) ).
+fof(c_143,axiom,accessible_world(skc15,skc16) ).
+fof(c_144,axiom,state(skc15,skc23) ).
+fof(c_145,axiom,accessible_world(skc15,skc26) ).
+fof(c_146,axiom,proposition(skc15,skc26) ).
+fof(c_147,axiom,of(skc15,skc28,skc29) ).
+fof(c_148,axiom,agent(skc15,skc27,skc29) ).
+fof(c_149,axiom,theme(skc15,skc27,skc26) ).
+fof(c_150,axiom,of(skc15,skc25,skc24) ).
+fof(c_151,axiom,of(skc15,skc20,skc21) ).
+fof(c_152,axiom,agent(skc16,skc22,skc21) ).
+fof(c_153,axiom,of(skc15,skc18,skc19) ).
+fof(c_154,axiom,agent(skc15,skc17,skc19) ).
+fof(c_155,axiom,theme(skc15,skc17,skc16) ).
+fof(c_156,axiom,be(skc15,skc23,skc24,skc24) ).
+fof(c_157,axiom,! [X0] : ! [X1] : ( ~ man(skc26,X0) | smoke(skc26,skf1(X1)) ) ).
+fof(c_158,axiom,! [X0] : ! [X1] : ( ~ man(skc26,X0) | present(skc26,skf1(X1)) ) ).
+fof(c_159,axiom,! [X0] : ! [X1] : ( ~ man(skc26,X0) | event(skc26,skf1(X1)) ) ).
+fof(c_160,axiom,! [X0] : ( ~ man(skc26,X0) | agent(skc26,skf1(X0),X0) ) ).
+fof(c_1067,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ present(X1,X3) | present(X0,X2) ) ).
+fof(c_1072,axiom,! [X0] : ! [X1] : ( X0 != X1 | ~ actual_world(X1) | actual_world(X0) ) ).
+fof(c_1073,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ think_believe_consider(X0,X2) | think_believe_consider(X1,X2) ) ).
+fof(c_1074,axiom,! [X0] : ( ~ think_believe_consider(skc15,X0) | think_believe_consider(skc16,X0) ) ).
+fof(c_1082,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ think_believe_consider(X0,X2) | think_believe_consider(X1,X2) ) ).
+fof(c_1083,axiom,! [X0] : ( ~ think_believe_consider(skc15,X0) | think_believe_consider(skc26,X0) ) ).
+fof(c_1091,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ jules_forename(X0,X2) | jules_forename(X1,X2) ) ).
+fof(c_1092,axiom,! [X0] : ( ~ jules_forename(skc15,X0) | jules_forename(skc16,X0) ) ).
+fof(c_1100,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ vincent_forename(X0,X2) | vincent_forename(X1,X2) ) ).
+fof(c_1101,axiom,! [X0] : ( ~ vincent_forename(skc15,X0) | vincent_forename(skc16,X0) ) ).
+fof(c_1109,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ relname(X0,X2) | relname(X1,X2) ) ).
+fof(c_1110,axiom,! [X0] : ( ~ relname(skc15,X0) | relname(skc16,X0) ) ).
+fof(c_1118,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ forename(X0,X2) | forename(X1,X2) ) ).
+fof(c_1119,axiom,! [X0] : ( ~ forename(skc15,X0) | forename(skc16,X0) ) ).
+fof(c_1127,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ male(X0,X2) | male(X1,X2) ) ).
+fof(c_1128,axiom,! [X0] : ( ~ male(skc15,X0) | male(skc16,X0) ) ).
+fof(c_1136,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ human(X0,X2) | human(X1,X2) ) ).
+fof(c_1137,axiom,! [X0] : ( ~ human(skc15,X0) | human(skc16,X0) ) ).
+fof(c_1145,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ existent(X0,X2) | existent(X1,X2) ) ).
+fof(c_1146,axiom,! [X0] : ( ~ existent(skc15,X0) | existent(skc16,X0) ) ).
+fof(c_1154,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ entity(X0,X2) | entity(X1,X2) ) ).
+fof(c_1155,axiom,! [X0] : ( ~ entity(skc15,X0) | entity(skc16,X0) ) ).
+fof(c_1163,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ organism(X0,X2) | organism(X1,X2) ) ).
+fof(c_1164,axiom,! [X0] : ( ~ organism(skc15,X0) | organism(skc16,X0) ) ).
+fof(c_1172,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ human_person(X0,X2) | human_person(X1,X2) ) ).
+fof(c_1173,axiom,! [X0] : ( ~ human_person(skc15,X0) | human_person(skc16,X0) ) ).
+fof(c_1181,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ man(X0,X2) | man(X1,X2) ) ).
+fof(c_1182,axiom,! [X0] : ( ~ man(skc15,X0) | man(skc16,X0) ) ).
+fof(c_1190,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ state(X0,X2) | state(X1,X2) ) ).
+fof(c_1191,axiom,! [X0] : ( ~ state(skc15,X0) | state(skc16,X0) ) ).
+fof(c_1199,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ general(X0,X2) | general(X1,X2) ) ).
+fof(c_1200,axiom,! [X0] : ( ~ general(skc15,X0) | general(skc16,X0) ) ).
+fof(c_1208,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ nonhuman(X0,X2) | nonhuman(X1,X2) ) ).
+fof(c_1209,axiom,! [X0] : ( ~ nonhuman(skc15,X0) | nonhuman(skc16,X0) ) ).
+fof(c_1217,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ abstraction(X0,X2) | abstraction(X1,X2) ) ).
+fof(c_1218,axiom,! [X0] : ( ~ abstraction(skc15,X0) | abstraction(skc16,X0) ) ).
+fof(c_1226,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ relation(X0,X2) | relation(X1,X2) ) ).
+fof(c_1227,axiom,! [X0] : ( ~ relation(skc15,X0) | relation(skc16,X0) ) ).
+fof(c_1235,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ proposition(X0,X2) | proposition(X1,X2) ) ).
+fof(c_1236,axiom,! [X0] : ( ~ proposition(skc15,X0) | proposition(skc16,X0) ) ).
+fof(c_1244,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ unisex(X0,X2) | unisex(X1,X2) ) ).
+fof(c_1245,axiom,! [X0] : ( ~ unisex(skc15,X0) | unisex(skc16,X0) ) ).
+fof(c_1253,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ nonexistent(X0,X2) | nonexistent(X1,X2) ) ).
+fof(c_1254,axiom,! [X0] : ( ~ nonexistent(skc15,X0) | nonexistent(skc16,X0) ) ).
+fof(c_1262,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ specific(X0,X2) | specific(X1,X2) ) ).
+fof(c_1263,axiom,! [X0] : ( ~ specific(skc15,X0) | specific(skc16,X0) ) ).
+fof(c_1271,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ eventuality(X0,X2) | eventuality(X1,X2) ) ).
+fof(c_1272,axiom,! [X0] : ( ~ eventuality(skc15,X0) | eventuality(skc16,X0) ) ).
+fof(c_1280,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ event(X0,X2) | event(X1,X2) ) ).
+fof(c_1281,axiom,! [X0] : ( ~ event(skc15,X0) | event(skc16,X0) ) ).
+fof(c_1289,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc16 | ~ smoke(X0,X2) | smoke(X1,X2) ) ).
+fof(c_1290,axiom,! [X0] : ( ~ smoke(skc15,X0) | smoke(skc16,X0) ) ).
+fof(c_1298,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ jules_forename(X0,X2) | jules_forename(X1,X2) ) ).
+fof(c_1299,axiom,! [X0] : ( ~ jules_forename(skc15,X0) | jules_forename(skc26,X0) ) ).
+fof(c_1307,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ vincent_forename(X0,X2) | vincent_forename(X1,X2) ) ).
+fof(c_1308,axiom,! [X0] : ( ~ vincent_forename(skc15,X0) | vincent_forename(skc26,X0) ) ).
+fof(c_1316,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ relname(X0,X2) | relname(X1,X2) ) ).
+fof(c_1317,axiom,! [X0] : ( ~ relname(skc15,X0) | relname(skc26,X0) ) ).
+fof(c_1325,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ forename(X0,X2) | forename(X1,X2) ) ).
+fof(c_1326,axiom,! [X0] : ( ~ forename(skc15,X0) | forename(skc26,X0) ) ).
+fof(c_1334,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ male(X0,X2) | male(X1,X2) ) ).
+fof(c_1335,axiom,! [X0] : ( ~ male(skc15,X0) | male(skc26,X0) ) ).
+fof(c_1343,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ human(X0,X2) | human(X1,X2) ) ).
+fof(c_1344,axiom,! [X0] : ( ~ human(skc15,X0) | human(skc26,X0) ) ).
+fof(c_1352,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ existent(X0,X2) | existent(X1,X2) ) ).
+fof(c_1353,axiom,! [X0] : ( ~ existent(skc15,X0) | existent(skc26,X0) ) ).
+fof(c_1361,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ entity(X0,X2) | entity(X1,X2) ) ).
+fof(c_1362,axiom,! [X0] : ( ~ entity(skc15,X0) | entity(skc26,X0) ) ).
+fof(c_1370,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ organism(X0,X2) | organism(X1,X2) ) ).
+fof(c_1371,axiom,! [X0] : ( ~ organism(skc15,X0) | organism(skc26,X0) ) ).
+fof(c_1379,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ human_person(X0,X2) | human_person(X1,X2) ) ).
+fof(c_1380,axiom,! [X0] : ( ~ human_person(skc15,X0) | human_person(skc26,X0) ) ).
+fof(c_1388,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ man(X0,X2) | man(X1,X2) ) ).
+fof(c_1389,axiom,! [X0] : ( ~ man(skc15,X0) | man(skc26,X0) ) ).
+fof(c_1397,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ state(X0,X2) | state(X1,X2) ) ).
+fof(c_1398,axiom,! [X0] : ( ~ state(skc15,X0) | state(skc26,X0) ) ).
+fof(c_1406,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ general(X0,X2) | general(X1,X2) ) ).
+fof(c_1407,axiom,! [X0] : ( ~ general(skc15,X0) | general(skc26,X0) ) ).
+fof(c_1415,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ nonhuman(X0,X2) | nonhuman(X1,X2) ) ).
+fof(c_1416,axiom,! [X0] : ( ~ nonhuman(skc15,X0) | nonhuman(skc26,X0) ) ).
+fof(c_1424,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ abstraction(X0,X2) | abstraction(X1,X2) ) ).
+fof(c_1425,axiom,! [X0] : ( ~ abstraction(skc15,X0) | abstraction(skc26,X0) ) ).
+fof(c_1433,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ relation(X0,X2) | relation(X1,X2) ) ).
+fof(c_1434,axiom,! [X0] : ( ~ relation(skc15,X0) | relation(skc26,X0) ) ).
+fof(c_1442,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ proposition(X0,X2) | proposition(X1,X2) ) ).
+fof(c_1443,axiom,! [X0] : ( ~ proposition(skc15,X0) | proposition(skc26,X0) ) ).
+fof(c_1451,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ unisex(X0,X2) | unisex(X1,X2) ) ).
+fof(c_1452,axiom,! [X0] : ( ~ unisex(skc15,X0) | unisex(skc26,X0) ) ).
+fof(c_1460,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ nonexistent(X0,X2) | nonexistent(X1,X2) ) ).
+fof(c_1461,axiom,! [X0] : ( ~ nonexistent(skc15,X0) | nonexistent(skc26,X0) ) ).
+fof(c_1469,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ specific(X0,X2) | specific(X1,X2) ) ).
+fof(c_1470,axiom,! [X0] : ( ~ specific(skc15,X0) | specific(skc26,X0) ) ).
+fof(c_1478,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ eventuality(X0,X2) | eventuality(X1,X2) ) ).
+fof(c_1479,axiom,! [X0] : ( ~ eventuality(skc15,X0) | eventuality(skc26,X0) ) ).
+fof(c_1487,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ event(X0,X2) | event(X1,X2) ) ).
+fof(c_1488,axiom,! [X0] : ( ~ event(skc15,X0) | event(skc26,X0) ) ).
+fof(c_1496,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != skc15 | X1 != skc26 | ~ smoke(X0,X2) | smoke(X1,X2) ) ).
+fof(c_1497,axiom,! [X0] : ( ~ smoke(skc15,X0) | smoke(skc26,X0) ) ).
+fof(c_1505,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != skc15 | X1 != skc16 | ~ of(X0,X2,X3) | of(X1,X2,X3) ) ).
+fof(c_1506,axiom,! [X0] : ! [X1] : ( ~ of(skc15,X0,X1) | of(skc16,X0,X1) ) ).
+fof(c_1514,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != skc15 | X1 != skc16 | ~ theme(X0,X2,X3) | theme(X1,X2,X3) ) ).
+fof(c_1515,axiom,! [X0] : ! [X1] : ( ~ theme(skc15,X0,X1) | theme(skc16,X0,X1) ) ).
+fof(c_1523,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != skc15 | X1 != skc16 | ~ agent(X0,X2,X3) | agent(X1,X2,X3) ) ).
+fof(c_1524,axiom,! [X0] : ! [X1] : ( ~ agent(skc15,X0,X1) | agent(skc16,X0,X1) ) ).
+fof(c_1532,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != skc15 | X1 != skc26 | ~ of(X0,X2,X3) | of(X1,X2,X3) ) ).
+fof(c_1533,axiom,! [X0] : ! [X1] : ( ~ of(skc15,X0,X1) | of(skc26,X0,X1) ) ).
+fof(c_1541,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != skc15 | X1 != skc26 | ~ theme(X0,X2,X3) | theme(X1,X2,X3) ) ).
+fof(c_1542,axiom,! [X0] : ! [X1] : ( ~ theme(skc15,X0,X1) | theme(skc26,X0,X1) ) ).
+fof(c_1550,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != skc15 | X1 != skc26 | ~ agent(X0,X2,X3) | agent(X1,X2,X3) ) ).
+fof(c_1551,axiom,! [X0] : ! [X1] : ( ~ agent(skc15,X0,X1) | agent(skc26,X0,X1) ) ).
+fof(c_1559,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != skc15 | X1 != skc16 | ~ be(X0,X2,X3,X4) | be(X1,X2,X3,X4) ) ).
+fof(c_1560,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ be(skc15,X0,X1,X2) | be(skc16,X0,X1,X2) ) ).
+fof(c_1568,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != skc15 | X1 != skc26 | ~ be(X0,X2,X3,X4) | be(X1,X2,X3,X4) ) ).
+fof(c_1569,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ be(skc15,X0,X1,X2) | be(skc26,X0,X1,X2) ) ).
+fof(c_1689,axiom,! [X0] : ( event(skc26,skf1(X0)) | ~ sP0_iProver_split ) ).
+fof(c_1690,axiom,! [X0] : ( ~ man(skc26,X0) | ~ sP1_iProver_split ) ).
+fof(c_1691,axiom,sP0_iProver_split | sP1_iProver_split ).
+fof(c_1692,axiom,! [X0] : ( smoke(skc26,skf1(X0)) | ~ sP2_iProver_split ) ).
+fof(c_1693,axiom,sP1_iProver_split | sP2_iProver_split ).
+fof(c_1695,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_3094,axiom,think_believe_consider(skc16,skc27) ).
+fof(c_3095,axiom,think_believe_consider(skc16,skc17) ).
+fof(c_3100,axiom,event(skc16,skc27) ).
+fof(c_3101,axiom,event(skc16,skc17) ).
+fof(c_3107,axiom,! [X0] : ( ~ sP2_iProver_split | event(skc26,skf1(X0)) ) ).
+fof(c_3115,axiom,eventuality(skc15,skc27) ).
+fof(c_3116,axiom,eventuality(skc16,skc22) ).
+fof(c_3117,axiom,eventuality(skc15,skc17) ).
+fof(c_3118,axiom,! [X0] : ( ~ sP0_iProver_split | eventuality(skc26,skf1(X0)) ) ).
+fof(c_3130,axiom,eventuality(skc16,skc27) ).
+fof(c_3131,axiom,eventuality(skc16,skc17) ).
+fof(c_3132,axiom,nonexistent(skc15,skc27) ).
+fof(c_3133,axiom,specific(skc15,skc27) ).
+fof(c_3134,axiom,nonexistent(skc16,skc22) ).
+fof(c_3135,axiom,specific(skc16,skc22) ).
+fof(c_3136,axiom,nonexistent(skc15,skc17) ).
+fof(c_3137,axiom,specific(skc15,skc17) ).
+fof(c_3162,axiom,think_believe_consider(skc26,skc27) ).
+fof(c_3163,axiom,think_believe_consider(skc26,skc17) ).
+fof(c_3168,axiom,jules_forename(skc16,skc25) ).
+fof(c_3169,axiom,jules_forename(skc16,skc20) ).
+fof(c_3174,axiom,event(skc26,skc27) ).
+fof(c_3175,axiom,event(skc26,skc17) ).
+fof(c_3180,axiom,unisex(skc15,skc27) ).
+fof(c_3181,axiom,unisex(skc16,skc22) ).
+fof(c_3182,axiom,unisex(skc15,skc17) ).
+fof(c_3191,axiom,relation(skc15,skc16) ).
+fof(c_3192,axiom,relation(skc15,skc26) ).
+fof(c_3201,axiom,unisex(skc16,skc27) ).
+fof(c_3202,axiom,nonexistent(skc16,skc27) ).
+fof(c_3203,axiom,specific(skc16,skc27) ).
+fof(c_3204,axiom,unisex(skc16,skc17) ).
+fof(c_3205,axiom,nonexistent(skc16,skc17) ).
+fof(c_3206,axiom,specific(skc16,skc17) ).
+fof(c_3207,axiom,eventuality(skc26,skc27) ).
+fof(c_3208,axiom,eventuality(skc26,skc17) ).
+fof(c_3209,axiom,abstraction(skc15,skc16) ).
+fof(c_3210,axiom,abstraction(skc15,skc26) ).
+fof(c_3215,axiom,vincent_forename(skc16,skc28) ).
+fof(c_3216,axiom,vincent_forename(skc16,skc18) ).
+fof(c_3221,axiom,proposition(skc16,skc16) ).
+fof(c_3222,axiom,proposition(skc16,skc26) ).
+fof(c_3235,axiom,eventuality(skc15,skc23) ).
+fof(c_3240,axiom,event(skc15,skc23) ).
+fof(c_3241,axiom,relation(skc16,skc16) ).
+fof(c_3242,axiom,relation(skc16,skc26) ).
+fof(c_3243,axiom,unisex(skc15,skc23) ).
+fof(c_3244,axiom,nonexistent(skc15,skc23) ).
+fof(c_3245,axiom,specific(skc15,skc23) ).
+fof(c_3247,axiom,event(skc26,skc23) ).
+fof(c_3248,axiom,event(skc16,skc23) ).
+fof(c_3257,axiom,forename(skc16,skc28) ).
+fof(c_3258,axiom,forename(skc16,skc25) ).
+fof(c_3259,axiom,forename(skc16,skc18) ).
+fof(c_3260,axiom,forename(skc16,skc20) ).
+fof(c_3261,axiom,eventuality(skc26,skc23) ).
+fof(c_3266,axiom,human_person(skc15,skc29) ).
+fof(c_3267,axiom,human_person(skc15,skc24) ).
+fof(c_3268,axiom,human_person(skc15,skc21) ).
+fof(c_3269,axiom,human_person(skc15,skc19) ).
+fof(c_3282,axiom,organism(skc15,skc29) ).
+fof(c_3283,axiom,organism(skc15,skc24) ).
+fof(c_3284,axiom,organism(skc15,skc21) ).
+fof(c_3285,axiom,organism(skc15,skc19) ).
+fof(c_3294,axiom,eventuality(skc16,skc23) ).
+fof(c_3303,axiom,human(skc15,skc29) ).
+fof(c_3304,axiom,human(skc15,skc24) ).
+fof(c_3305,axiom,human(skc15,skc21) ).
+fof(c_3306,axiom,human(skc15,skc19) ).
+fof(c_3311,axiom,male(skc15,skc29) ).
+fof(c_3312,axiom,male(skc15,skc24) ).
+fof(c_3313,axiom,male(skc15,skc21) ).
+fof(c_3314,axiom,male(skc15,skc19) ).
+fof(c_3319,axiom,relname(skc15,skc28) ).
+fof(c_3320,axiom,relname(skc15,skc25) ).
+fof(c_3321,axiom,relname(skc15,skc18) ).
+fof(c_3322,axiom,relname(skc15,skc20) ).
+fof(c_3323,axiom,relname(skc16,skc28) ).
+fof(c_3324,axiom,relname(skc16,skc25) ).
+fof(c_3325,axiom,relname(skc16,skc18) ).
+fof(c_3326,axiom,relname(skc16,skc20) ).
+fof(c_3327,axiom,male(skc16,skc29) ).
+fof(c_3328,axiom,male(skc16,skc24) ).
+fof(c_3329,axiom,male(skc16,skc21) ).
+fof(c_3330,axiom,male(skc16,skc19) ).
+fof(c_3339,axiom,proposition(skc26,skc16) ).
+fof(c_3340,axiom,proposition(skc26,skc26) ).
+fof(c_3345,axiom,relation(skc15,skc28) ).
+fof(c_3346,axiom,relation(skc15,skc25) ).
+fof(c_3347,axiom,relation(skc15,skc18) ).
+fof(c_3348,axiom,relation(skc15,skc20) ).
+fof(c_3369,axiom,~ unisex(skc15,skc29) ).
+fof(c_3370,axiom,~ unisex(skc15,skc24) ).
+fof(c_3371,axiom,~ unisex(skc15,skc21) ).
+fof(c_3372,axiom,~ unisex(skc15,skc19) ).
+fof(c_3373,axiom,unisex(skc26,skc27) ).
+fof(c_3374,axiom,nonexistent(skc26,skc27) ).
+fof(c_3375,axiom,specific(skc26,skc27) ).
+fof(c_3376,axiom,unisex(skc26,skc17) ).
+fof(c_3377,axiom,nonexistent(skc26,skc17) ).
+fof(c_3378,axiom,specific(skc26,skc17) ).
+fof(c_3379,axiom,unisex(skc15,skc16) ).
+fof(c_3380,axiom,general(skc15,skc16) ).
+fof(c_3381,axiom,nonhuman(skc15,skc16) ).
+fof(c_3382,axiom,relation(skc26,skc16) ).
+fof(c_3383,axiom,relation(skc26,skc26) ).
+fof(c_3400,axiom,human_person(skc16,skc29) ).
+fof(c_3401,axiom,human_person(skc16,skc24) ).
+fof(c_3402,axiom,human_person(skc16,skc21) ).
+fof(c_3403,axiom,human_person(skc16,skc19) ).
+fof(c_3408,axiom,man(skc16,skc29) ).
+fof(c_3409,axiom,man(skc16,skc24) ).
+fof(c_3410,axiom,man(skc16,skc21) ).
+fof(c_3411,axiom,man(skc16,skc19) ).
+fof(c_3418,axiom,state(skc16,skc23) ).
+fof(c_3431,axiom,~ existent(skc15,skc27) ).
+fof(c_3432,axiom,~ existent(skc16,skc22) ).
+fof(c_3433,axiom,~ existent(skc15,skc17) ).
+fof(c_3434,axiom,~ existent(skc16,skc27) ).
+fof(c_3435,axiom,~ existent(skc16,skc17) ).
+fof(c_3441,axiom,unisex(skc15,skc26) ).
+fof(c_3442,axiom,general(skc15,skc26) ).
+fof(c_3443,axiom,nonhuman(skc15,skc26) ).
+fof(c_3444,axiom,abstraction(skc16,skc16) ).
+fof(c_3445,axiom,abstraction(skc16,skc26) ).
+fof(c_3478,axiom,state(skc26,skc23) ).
+fof(c_3491,axiom,! [X0] : ( ~ of(skc15,X0,skc29) | ~ forename(skc15,X0) | ~ entity(skc15,skc29) | ~ forename(skc15,skc28) | X0 = skc28 ) ).
+fof(c_3492,axiom,! [X0] : ( ~ of(skc15,X0,skc24) | ~ forename(skc15,X0) | ~ entity(skc15,skc24) | ~ forename(skc15,skc25) | X0 = skc25 ) ).
+fof(c_3493,axiom,! [X0] : ( ~ of(skc15,X0,skc21) | ~ forename(skc15,X0) | ~ entity(skc15,skc21) | ~ forename(skc15,skc20) | X0 = skc20 ) ).
+fof(c_3494,axiom,! [X0] : ( ~ of(skc15,X0,skc19) | ~ forename(skc15,X0) | ~ entity(skc15,skc19) | ~ forename(skc15,skc18) | X0 = skc18 ) ).
+fof(c_3495,axiom,! [X0] : ( ~ of(skc15,X0,skc19) | ~ forename(skc15,X0) | ~ entity(skc15,skc19) | X0 = skc18 ) ).
+fof(c_3500,axiom,! [X0] : ( ~ of(skc15,X0,skc21) | ~ forename(skc15,X0) | ~ entity(skc15,skc21) | X0 = skc20 ) ).
+fof(c_3505,axiom,! [X0] : ( ~ of(skc15,X0,skc24) | ~ forename(skc15,X0) | ~ entity(skc15,skc24) | X0 = skc25 ) ).
+fof(c_3510,axiom,! [X0] : ( ~ of(skc15,X0,skc29) | ~ forename(skc15,X0) | ~ entity(skc15,skc29) | X0 = skc28 ) ).
+fof(c_3537,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc15,X0,X1) | ~ agent(skc15,X0,skc29) | ~ theme(skc15,skc27,X2) | ~ proposition(skc15,X1) | ~ proposition(skc15,X2) | ~ think_believe_consider(skc15,X0) | ~ think_believe_consider(skc15,skc27) | X1 = X2 ) ).
+fof(c_3538,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc16,X0,X1) | ~ agent(skc16,X0,skc21) | ~ theme(skc16,skc22,X2) | ~ proposition(skc16,X1) | ~ proposition(skc16,X2) | ~ think_believe_consider(skc16,X0) | ~ think_believe_consider(skc16,skc22) | X1 = X2 ) ).
+fof(c_3539,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc15,X0,X1) | ~ agent(skc15,X0,skc19) | ~ theme(skc15,skc17,X2) | ~ proposition(skc15,X1) | ~ proposition(skc15,X2) | ~ think_believe_consider(skc15,X0) | ~ think_believe_consider(skc15,skc17) | X1 = X2 ) ).
+fof(c_3540,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ theme(skc26,skf1(X0),X1) | ~ agent(skc26,X2,X0) | ~ theme(skc26,X2,X3) | ~ think_believe_consider(skc26,skf1(X0)) | ~ proposition(skc26,X1) | ~ proposition(skc26,X3) | ~ man(skc26,X0) | ~ think_believe_consider(skc26,X2) | X1 = X3 ) ).
+fof(c_3541,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc15,X0,X1) | ~ agent(skc15,X0,skc19) | ~ theme(skc15,skc17,X2) | ~ proposition(skc15,X1) | ~ proposition(skc15,X2) | ~ think_believe_consider(skc15,X0) | X1 = X2 ) ).
+fof(c_3557,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc15,X0,X1) | ~ agent(skc15,X0,skc29) | ~ theme(skc15,skc27,X2) | ~ proposition(skc15,X1) | ~ proposition(skc15,X2) | ~ think_believe_consider(skc15,X0) | X1 = X2 ) ).
+fof(c_3576,axiom,~ existent(skc15,skc23) ).
+fof(c_3577,axiom,unisex(skc26,skc23) ).
+fof(c_3578,axiom,nonexistent(skc26,skc23) ).
+fof(c_3579,axiom,specific(skc26,skc23) ).
+fof(c_3582,axiom,entity(skc15,skc29) ).
+fof(c_3583,axiom,organism(skc16,skc29) ).
+fof(c_3586,axiom,entity(skc15,skc24) ).
+fof(c_3587,axiom,organism(skc16,skc24) ).
+fof(c_3588,axiom,entity(skc15,skc21) ).
+fof(c_3589,axiom,organism(skc16,skc21) ).
+fof(c_3600,axiom,unisex(skc16,skc23) ).
+fof(c_3607,axiom,nonexistent(skc16,skc23) ).
+fof(c_3614,axiom,specific(skc16,skc23) ).
+fof(c_3630,axiom,jules_forename(skc26,skc25) ).
+fof(c_3631,axiom,jules_forename(skc26,skc20) ).
+fof(c_3632,axiom,forename(skc26,skc25) ).
+fof(c_3633,axiom,forename(skc26,skc20) ).
+fof(c_3638,axiom,man(skc26,skc29) ).
+fof(c_3639,axiom,man(skc26,skc24) ).
+fof(c_3640,axiom,man(skc26,skc21) ).
+fof(c_3641,axiom,man(skc26,skc19) ).
+fof(c_3646,axiom,entity(skc15,skc19) ).
+fof(c_3647,axiom,organism(skc16,skc19) ).
+fof(c_3652,axiom,~ nonhuman(skc15,skc29) ).
+fof(c_3653,axiom,human(skc16,skc29) ).
+fof(c_3657,axiom,~ nonhuman(skc15,skc24) ).
+fof(c_3658,axiom,human(skc16,skc24) ).
+fof(c_3659,axiom,~ nonhuman(skc15,skc21) ).
+fof(c_3660,axiom,human(skc16,skc21) ).
+fof(c_3663,axiom,~ nonhuman(skc15,skc19) ).
+fof(c_3664,axiom,human(skc16,skc19) ).
+fof(c_3665,axiom,relation(skc16,skc28) ).
+fof(c_3668,axiom,relation(skc16,skc25) ).
+fof(c_3669,axiom,male(skc26,skc29) ).
+fof(c_3670,axiom,human_person(skc26,skc29) ).
+fof(c_3671,axiom,~ sP1_iProver_split ).
+fof(c_3672,axiom,sP2_iProver_split ).
+fof(c_3673,axiom,sP0_iProver_split ).
+fof(c_3674,axiom,! [X0] : event(skc26,skf1(X0)) ).
+fof(c_3675,axiom,! [X0] : smoke(skc26,skf1(X0)) ).
+fof(c_3676,axiom,! [X0] : eventuality(skc26,skf1(X0)) ).
+fof(c_3682,axiom,male(skc26,skc24) ).
+fof(c_3683,axiom,human_person(skc26,skc24) ).
+fof(c_3684,axiom,male(skc26,skc21) ).
+fof(c_3685,axiom,human_person(skc26,skc21) ).
+fof(c_3690,axiom,male(skc26,skc19) ).
+fof(c_3691,axiom,human_person(skc26,skc19) ).
+fof(c_3694,axiom,relation(skc16,skc18) ).
+fof(c_3695,axiom,relation(skc16,skc20) ).
+fof(c_3696,axiom,abstraction(skc15,skc28) ).
+fof(c_3702,axiom,abstraction(skc15,skc25) ).
+fof(c_3704,axiom,~ unisex(skc16,skc29) ).
+fof(c_3705,axiom,~ unisex(skc16,skc24) ).
+fof(c_3706,axiom,~ unisex(skc16,skc21) ).
+fof(c_3707,axiom,~ unisex(skc16,skc19) ).
+fof(c_3712,axiom,vincent_forename(skc26,skc28) ).
+fof(c_3713,axiom,vincent_forename(skc26,skc18) ).
+fof(c_3715,axiom,forename(skc26,skc28) ).
+fof(c_3719,axiom,forename(skc26,skc18) ).
+fof(c_3724,axiom,relname(skc26,skc28) ).
+fof(c_3725,axiom,relname(skc26,skc25) ).
+fof(c_3726,axiom,relname(skc26,skc18) ).
+fof(c_3727,axiom,relname(skc26,skc20) ).
+fof(c_3750,axiom,human(skc26,skc29) ).
+fof(c_3751,axiom,human(skc26,skc24) ).
+fof(c_3752,axiom,human(skc26,skc21) ).
+fof(c_3753,axiom,human(skc26,skc19) ).
+fof(c_3761,axiom,abstraction(skc15,skc18) ).
+fof(c_3767,axiom,abstraction(skc15,skc20) ).
+fof(c_3769,axiom,~ existent(skc26,skc27) ).
+fof(c_3770,axiom,~ existent(skc26,skc17) ).
+fof(c_3779,axiom,organism(skc26,skc29) ).
+fof(c_3780,axiom,organism(skc26,skc24) ).
+fof(c_3781,axiom,organism(skc26,skc21) ).
+fof(c_3782,axiom,organism(skc26,skc19) ).
+fof(c_3805,axiom,abstraction(skc26,skc16) ).
+fof(c_3806,axiom,abstraction(skc26,skc26) ).
+fof(c_3815,axiom,relation(skc26,skc28) ).
+fof(c_3816,axiom,relation(skc26,skc25) ).
+fof(c_3817,axiom,relation(skc26,skc18) ).
+fof(c_3818,axiom,relation(skc26,skc20) ).
+fof(c_3831,axiom,unisex(skc26,skc16) ).
+fof(c_3832,axiom,unisex(skc16,skc16) ).
+fof(c_3833,axiom,~ specific(skc15,skc16) ).
+fof(c_3834,axiom,general(skc26,skc16) ).
+fof(c_3835,axiom,general(skc16,skc16) ).
+fof(c_3838,axiom,nonhuman(skc26,skc16) ).
+fof(c_3839,axiom,nonhuman(skc16,skc16) ).
+fof(c_3875,axiom,of(skc16,skc28,skc29) ).
+fof(c_3876,axiom,of(skc16,skc25,skc24) ).
+fof(c_3877,axiom,of(skc16,skc20,skc21) ).
+fof(c_3878,axiom,of(skc16,skc18,skc19) ).
+fof(c_3879,axiom,! [X0] : ( ~ of(skc16,X0,skc29) | ~ forename(skc16,X0) | ~ entity(skc16,skc29) | ~ forename(skc16,skc28) | X0 = skc28 ) ).
+fof(c_3880,axiom,! [X0] : ( ~ of(skc16,X0,skc29) | ~ forename(skc16,X0) | ~ entity(skc16,skc29) | X0 = skc28 ) ).
+fof(c_3887,axiom,! [X0] : ( ~ of(skc16,X0,skc24) | ~ forename(skc16,X0) | ~ entity(skc16,skc24) | ~ forename(skc16,skc25) | X0 = skc25 ) ).
+fof(c_3888,axiom,! [X0] : ( ~ of(skc16,X0,skc24) | ~ forename(skc16,X0) | ~ entity(skc16,skc24) | X0 = skc25 ) ).
+fof(c_3895,axiom,! [X0] : ( ~ of(skc16,X0,skc21) | ~ forename(skc16,X0) | ~ entity(skc16,skc21) | ~ forename(skc16,skc20) | X0 = skc20 ) ).
+fof(c_3896,axiom,! [X0] : ( ~ of(skc16,X0,skc21) | ~ forename(skc16,X0) | ~ entity(skc16,skc21) | X0 = skc20 ) ).
+fof(c_3904,axiom,! [X0] : ( ~ of(skc16,X0,skc19) | ~ forename(skc16,X0) | ~ entity(skc16,skc19) | ~ forename(skc16,skc18) | X0 = skc18 ) ).
+fof(c_3905,axiom,! [X0] : ( ~ of(skc16,X0,skc19) | ~ forename(skc16,X0) | ~ entity(skc16,skc19) | X0 = skc18 ) ).
+fof(c_3912,axiom,unisex(skc26,skc26) ).
+fof(c_3913,axiom,unisex(skc16,skc26) ).
+fof(c_3914,axiom,~ specific(skc15,skc26) ).
+fof(c_3915,axiom,general(skc26,skc26) ).
+fof(c_3916,axiom,general(skc16,skc26) ).
+fof(c_3919,axiom,nonhuman(skc26,skc26) ).
+fof(c_3920,axiom,nonhuman(skc16,skc26) ).
+fof(c_3933,axiom,~ existent(skc26,skc23) ).
+fof(c_3938,axiom,theme(skc16,skc27,skc26) ).
+fof(c_3939,axiom,theme(skc16,skc17,skc16) ).
+fof(c_3948,axiom,agent(skc16,skc27,skc29) ).
+fof(c_3949,axiom,agent(skc16,skc17,skc19) ).
+fof(c_3950,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc16,X0,X1) | ~ agent(skc16,X0,skc29) | ~ theme(skc16,skc27,X2) | ~ proposition(skc16,X1) | ~ proposition(skc16,X2) | ~ think_believe_consider(skc16,X0) | ~ think_believe_consider(skc16,skc27) | X1 = X2 ) ).
+fof(c_3951,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc16,X0,X1) | ~ agent(skc16,X0,skc29) | ~ theme(skc16,skc27,X2) | ~ proposition(skc16,X1) | ~ proposition(skc16,X2) | ~ think_believe_consider(skc16,X0) | X1 = X2 ) ).
+fof(c_3959,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc16,X0,X1) | ~ agent(skc16,X0,skc19) | ~ theme(skc16,skc17,X2) | ~ proposition(skc16,X1) | ~ proposition(skc16,X2) | ~ think_believe_consider(skc16,X0) | ~ think_believe_consider(skc16,skc17) | X1 = X2 ) ).
+fof(c_3960,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc16,X0,X1) | ~ agent(skc16,X0,skc19) | ~ theme(skc16,skc17,X2) | ~ proposition(skc16,X1) | ~ proposition(skc16,X2) | ~ think_believe_consider(skc16,X0) | X1 = X2 ) ).
+fof(c_3972,axiom,of(skc26,skc28,skc29) ).
+fof(c_3973,axiom,of(skc26,skc25,skc24) ).
+fof(c_3974,axiom,of(skc26,skc20,skc21) ).
+fof(c_3975,axiom,of(skc26,skc18,skc19) ).
+fof(c_3980,axiom,! [X0] : ( ~ of(skc26,X0,skc29) | ~ forename(skc26,X0) | ~ entity(skc26,skc29) | ~ forename(skc26,skc28) | X0 = skc28 ) ).
+fof(c_3981,axiom,! [X0] : ( ~ of(skc26,X0,skc29) | ~ forename(skc26,X0) | ~ entity(skc26,skc29) | X0 = skc28 ) ).
+fof(c_3988,axiom,existent(skc15,skc29) ).
+fof(c_3989,axiom,specific(skc15,skc29) ).
+fof(c_3990,axiom,entity(skc26,skc29) ).
+fof(c_3991,axiom,entity(skc16,skc29) ).
+fof(c_3992,axiom,existent(skc15,skc24) ).
+fof(c_3993,axiom,specific(skc15,skc24) ).
+fof(c_3994,axiom,entity(skc26,skc24) ).
+fof(c_3995,axiom,entity(skc16,skc24) ).
+fof(c_4008,axiom,existent(skc15,skc21) ).
+fof(c_4009,axiom,specific(skc15,skc21) ).
+fof(c_4010,axiom,entity(skc26,skc21) ).
+fof(c_4011,axiom,entity(skc16,skc21) ).
+fof(c_4021,axiom,! [X0] : ( ~ of(skc26,X0,skc24) | ~ forename(skc26,X0) | ~ entity(skc26,skc24) | ~ forename(skc26,skc25) | X0 = skc25 ) ).
+fof(c_4022,axiom,! [X0] : ( ~ of(skc26,X0,skc24) | ~ forename(skc26,X0) | ~ entity(skc26,skc24) | X0 = skc25 ) ).
+fof(c_4028,axiom,! [X0] : ( ~ of(skc26,X0,skc21) | ~ forename(skc26,X0) | ~ entity(skc26,skc21) | ~ forename(skc26,skc20) | X0 = skc20 ) ).
+fof(c_4029,axiom,! [X0] : ( ~ of(skc26,X0,skc21) | ~ forename(skc26,X0) | ~ entity(skc26,skc21) | X0 = skc20 ) ).
+fof(c_4035,axiom,! [X0] : ( ~ of(skc26,X0,skc19) | ~ forename(skc26,X0) | ~ entity(skc26,skc19) | ~ forename(skc26,skc18) | X0 = skc18 ) ).
+fof(c_4036,axiom,! [X0] : ( ~ of(skc26,X0,skc19) | ~ forename(skc26,X0) | ~ entity(skc26,skc19) | X0 = skc18 ) ).
+fof(c_4054,axiom,theme(skc26,skc27,skc26) ).
+fof(c_4055,axiom,theme(skc26,skc17,skc16) ).
+fof(c_4060,axiom,agent(skc26,skc27,skc29) ).
+fof(c_4061,axiom,agent(skc26,skc17,skc19) ).
+fof(c_4062,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc26,X0,X1) | ~ agent(skc26,X0,skc29) | ~ theme(skc26,skc27,X2) | ~ proposition(skc26,X1) | ~ proposition(skc26,X2) | ~ think_believe_consider(skc26,X0) | ~ think_believe_consider(skc26,skc27) | X1 = X2 ) ).
+fof(c_4063,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc26,X0,X1) | ~ agent(skc26,X0,skc29) | ~ theme(skc26,skc27,X2) | ~ proposition(skc26,X1) | ~ proposition(skc26,X2) | ~ think_believe_consider(skc26,X0) | X1 = X2 ) ).
+fof(c_4075,axiom,be(skc16,skc23,skc24,skc24) ).
+fof(c_4084,axiom,existent(skc15,skc19) ).
+fof(c_4085,axiom,specific(skc15,skc19) ).
+fof(c_4086,axiom,entity(skc26,skc19) ).
+fof(c_4087,axiom,entity(skc16,skc19) ).
+fof(c_4088,axiom,abstraction(skc16,skc28) ).
+fof(c_4089,axiom,abstraction(skc16,skc25) ).
+fof(c_4094,axiom,~ unisex(skc26,skc29) ).
+fof(c_4095,axiom,~ existent(skc16,skc23) ).
+fof(c_4101,axiom,~ nonhuman(skc16,skc29) ).
+fof(c_4102,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc26,X0,X1) | ~ agent(skc26,X0,skc19) | ~ theme(skc26,skc17,X2) | ~ proposition(skc26,X1) | ~ proposition(skc26,X2) | ~ think_believe_consider(skc26,X0) | ~ think_believe_consider(skc26,skc17) | X1 = X2 ) ).
+fof(c_4103,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ theme(skc26,X0,X1) | ~ agent(skc26,X0,skc19) | ~ theme(skc26,skc17,X2) | ~ proposition(skc26,X1) | ~ proposition(skc26,X2) | ~ think_believe_consider(skc26,X0) | X1 = X2 ) ).
+fof(c_4116,axiom,be(skc26,skc23,skc24,skc24) ).
+fof(c_4122,axiom,! [X0] : ( ~ forename(skc15,X0) | ~ of(skc15,X0,skc19) | X0 = skc18 ) ).
+fof(c_4123,axiom,! [X0] : ( ~ of(skc15,X0,skc19) | ~ forename(skc15,X0) | X0 = skc18 ) ).
+fof(c_4132,axiom,! [X0] : ( ~ forename(skc15,X0) | ~ of(skc15,X0,skc21) | X0 = skc20 ) ).
+fof(c_4133,axiom,! [X0] : ( ~ of(skc15,X0,skc21) | ~ forename(skc15,X0) | X0 = skc20 ) ).
+fof(c_4142,axiom,! [X0] : ( ~ forename(skc15,X0) | ~ of(skc15,X0,skc24) | X0 = skc25 ) ).
+fof(c_4143,axiom,! [X0] : ( ~ of(skc15,X0,skc24) | ~ forename(skc15,X0) | X0 = skc25 ) ).
+fof(c_4152,axiom,! [X0] : ( ~ forename(skc15,X0) | ~ of(skc15,X0,skc29) | X0 = skc28 ) ).
+fof(c_4153,axiom,! [X0] : ( ~ of(skc15,X0,skc29) | ~ forename(skc15,X0) | X0 = skc28 ) ).
+fof(c_4172,axiom,~ unisex(skc26,skc24) ).
+fof(c_4175,axiom,~ unisex(skc26,skc21) ).
+fof(c_4176,axiom,~ nonhuman(skc16,skc24) ).
+fof(c_4177,axiom,~ nonhuman(skc16,skc21) ).
+fof(c_4182,axiom,~ nonhuman(skc16,skc19) ).
+fof(c_4199,axiom,! [X0] : ( ~ theme(skc15,skc17,X0) | ~ agent(skc15,skc27,skc19) | ~ proposition(skc15,X0) | ~ proposition(skc15,skc26) | ~ think_believe_consider(skc15,skc27) | X0 = skc26 ) ).
+fof(c_4200,axiom,! [X0] : ( ~ theme(skc15,skc17,X0) | ~ agent(skc15,skc17,skc19) | ~ proposition(skc15,X0) | ~ proposition(skc15,skc16) | ~ think_believe_consider(skc15,skc17) | X0 = skc16 ) ).
+fof(c_4201,axiom,! [X0] : ( ~ theme(skc15,skc17,X0) | ~ proposition(skc15,X0) | X0 = skc16 ) ).
+fof(c_4205,axiom,! [X0] : ( ~ theme(skc15,skc17,X0) | ~ agent(skc15,skc27,skc19) | ~ proposition(skc15,X0) | X0 = skc26 ) ).
+fof(c_4249,axiom,! [X0] : ( ~ theme(skc15,skc27,X0) | ~ agent(skc15,skc27,skc29) | ~ proposition(skc15,X0) | ~ proposition(skc15,skc26) | ~ think_believe_consider(skc15,skc27) | X0 = skc26 ) ).
+fof(c_4250,axiom,! [X0] : ( ~ theme(skc15,skc27,X0) | ~ agent(skc15,skc17,skc29) | ~ proposition(skc15,X0) | ~ proposition(skc15,skc16) | ~ think_believe_consider(skc15,skc17) | X0 = skc16 ) ).
+fof(c_4251,axiom,! [X0] : ( ~ theme(skc15,skc27,X0) | ~ agent(skc15,skc17,skc29) | ~ proposition(skc15,X0) | X0 = skc16 ) ).
+fof(c_4256,axiom,! [X0] : ( ~ theme(skc15,skc27,X0) | ~ proposition(skc15,X0) | X0 = skc26 ) ).
+fof(c_4277,axiom,~ agent(skc15,skc17,skc29) | ~ proposition(skc15,skc26) | skc16 = skc26 ).
+fof(c_4278,axiom,~ agent(skc15,skc17,skc29) | skc16 = skc26 ).
+fof(c_4301,axiom,! [X0] : ( ~ theme(skc16,skc22,X0) | ~ agent(skc16,skc27,skc21) | ~ proposition(skc16,X0) | ~ proposition(skc16,skc26) | ~ think_believe_consider(skc16,skc27) | ~ think_believe_consider(skc16,skc22) | X0 = skc26 ) ).
+fof(c_4302,axiom,! [X0] : ( ~ theme(skc16,skc22,X0) | ~ agent(skc16,skc17,skc21) | ~ proposition(skc16,X0) | ~ proposition(skc16,skc16) | ~ think_believe_consider(skc16,skc22) | ~ think_believe_consider(skc16,skc17) | X0 = skc16 ) ).
+fof(c_4303,axiom,! [X0] : ( ~ theme(skc16,skc22,X0) | ~ agent(skc16,skc17,skc21) | ~ proposition(skc16,X0) | ~ think_believe_consider(skc16,skc22) | X0 = skc16 ) ).
+fof(c_4309,axiom,! [X0] : ( ~ theme(skc16,skc22,X0) | ~ agent(skc16,skc27,skc21) | ~ proposition(skc16,X0) | ~ think_believe_consider(skc16,skc22) | X0 = skc26 ) ).
+fof(c_4317,axiom,! [X0] : unisex(skc26,skf1(X0)) ).
+fof(c_4318,axiom,! [X0] : nonexistent(skc26,skf1(X0)) ).
+fof(c_4319,axiom,! [X0] : specific(skc26,skf1(X0)) ).
+fof(c_4327,axiom,~ unisex(skc26,skc19) ).
+fof(c_4332,axiom,abstraction(skc16,skc18) ).
+fof(c_4333,axiom,abstraction(skc16,skc20) ).
+fof(c_4336,axiom,unisex(skc15,skc28) ).
+fof(c_4337,axiom,general(skc15,skc28) ).
+fof(c_4338,axiom,nonhuman(skc15,skc28) ).
+fof(c_4339,axiom,abstraction(skc26,skc28) ).
+fof(c_4346,axiom,unisex(skc15,skc25) ).
+fof(c_4347,axiom,general(skc15,skc25) ).
+fof(c_4348,axiom,nonhuman(skc15,skc25) ).
+fof(c_4349,axiom,abstraction(skc26,skc25) ).
+fof(c_4379,axiom,~ nonhuman(skc26,skc29) ).
+fof(c_4380,axiom,~ nonhuman(skc26,skc24) ).
+fof(c_4381,axiom,~ nonhuman(skc26,skc21) ).
+fof(c_4382,axiom,~ nonhuman(skc26,skc19) ).
+fof(c_4392,axiom,unisex(skc15,skc18) ).
+fof(c_4393,axiom,general(skc15,skc18) ).
+fof(c_4394,axiom,nonhuman(skc15,skc18) ).
+fof(c_4395,axiom,abstraction(skc26,skc18) ).
+fof(c_4397,axiom,unisex(skc15,skc20) ).
+fof(c_4398,axiom,general(skc15,skc20) ).
+fof(c_4399,axiom,nonhuman(skc15,skc20) ).
+fof(c_4400,axiom,abstraction(skc26,skc20) ).
+fof(c_4402,axiom,existent(skc26,skc29) ).
+fof(c_4403,axiom,existent(skc16,skc29) ).
+fof(c_4409,axiom,specific(skc26,skc29) ).
+fof(c_4410,axiom,specific(skc16,skc29) ).
+fof(c_4424,axiom,~ specific(skc26,skc16) ).
+fof(c_4425,axiom,existent(skc26,skc24) ).
+fof(c_4426,axiom,existent(skc16,skc24) ).
+fof(c_4430,axiom,specific(skc26,skc24) ).
+fof(c_4431,axiom,specific(skc16,skc24) ).
+fof(c_4432,axiom,existent(skc26,skc21) ).
+fof(c_4433,axiom,existent(skc16,skc21) ).
+fof(c_4437,axiom,specific(skc26,skc21) ).
+fof(c_4438,axiom,specific(skc16,skc21) ).
+fof(c_4442,axiom,~ specific(skc16,skc16) ).
+fof(c_4443,axiom,~ specific(skc26,skc26) ).
+fof(c_4444,axiom,~ specific(skc16,skc26) ).
+fof(c_4454,axiom,existent(skc26,skc19) ).
+fof(c_4455,axiom,existent(skc16,skc19) ).
+fof(c_4456,axiom,specific(skc26,skc19) ).
+fof(c_4457,axiom,specific(skc16,skc19) ).
+fof(c_4461,axiom,unisex(skc16,skc28) ).
+fof(c_4462,axiom,general(skc16,skc28) ).
+fof(c_4463,axiom,nonhuman(skc16,skc28) ).
+fof(c_4468,axiom,unisex(skc16,skc25) ).
+fof(c_4469,axiom,general(skc16,skc25) ).
+fof(c_4470,axiom,nonhuman(skc16,skc25) ).
+fof(c_4485,axiom,unisex(skc26,skc28) ).
+fof(c_4486,axiom,general(skc26,skc28) ).
+fof(c_4487,axiom,nonhuman(skc26,skc28) ).
+fof(c_4488,axiom,unisex(skc26,skc25) ).
+fof(c_4489,axiom,general(skc26,skc25) ).
+fof(c_4490,axiom,nonhuman(skc26,skc25) ).
+fof(c_4495,axiom,unisex(skc26,skc18) ).
+fof(c_4496,axiom,general(skc26,skc18) ).
+fof(c_4497,axiom,nonhuman(skc26,skc18) ).
+fof(c_4498,axiom,unisex(skc26,skc20) ).
+fof(c_4499,axiom,general(skc26,skc20) ).
+fof(c_4500,axiom,nonhuman(skc26,skc20) ).
+fof(c_4505,axiom,unisex(skc16,skc18) ).
+fof(c_4506,axiom,general(skc16,skc18) ).
+fof(c_4507,axiom,nonhuman(skc16,skc18) ).
+fof(c_4512,axiom,unisex(skc16,skc20) ).
+fof(c_4513,axiom,general(skc16,skc20) ).
+fof(c_4514,axiom,nonhuman(skc16,skc20) ).
+fof(c_4520,axiom,~ specific(skc15,skc28) ).
+fof(c_4527,axiom,~ specific(skc15,skc25) ).
+fof(c_4537,axiom,~ specific(skc15,skc18) ).
+fof(c_4544,axiom,~ specific(skc15,skc20) ).
+fof(c_4551,axiom,~ specific(skc16,skc28) ).
+fof(c_4556,axiom,~ specific(skc16,skc25) ).
+fof(c_4560,axiom,~ specific(skc26,skc28) ).
+fof(c_4563,axiom,! [X0] : ( ~ forename(skc16,X0) | ~ of(skc16,X0,skc29) | X0 = skc28 ) ).
+fof(c_4564,axiom,! [X0] : ( ~ of(skc16,X0,skc29) | ~ forename(skc16,X0) | X0 = skc28 ) ).
+fof(c_4573,axiom,! [X0] : ( ~ forename(skc16,X0) | ~ of(skc16,X0,skc24) | X0 = skc25 ) ).
+fof(c_4574,axiom,! [X0] : ( ~ of(skc16,X0,skc24) | ~ forename(skc16,X0) | X0 = skc25 ) ).
+fof(c_4583,axiom,! [X0] : ( ~ forename(skc16,X0) | ~ of(skc16,X0,skc21) | X0 = skc20 ) ).
+fof(c_4584,axiom,! [X0] : ( ~ of(skc16,X0,skc21) | ~ forename(skc16,X0) | X0 = skc20 ) ).
+fof(c_4596,axiom,! [X0] : ( ~ forename(skc16,X0) | ~ of(skc16,X0,skc19) | X0 = skc18 ) ).
+fof(c_4597,axiom,! [X0] : ( ~ of(skc16,X0,skc19) | ~ forename(skc16,X0) | X0 = skc18 ) ).
+fof(c_4640,axiom,! [X0] : ( ~ theme(skc16,skc27,X0) | ~ agent(skc16,skc27,skc29) | ~ proposition(skc16,X0) | ~ proposition(skc16,skc26) | ~ think_believe_consider(skc16,skc27) | X0 = skc26 ) ).
+fof(c_4641,axiom,! [X0] : ( ~ theme(skc16,skc27,X0) | ~ agent(skc16,skc17,skc29) | ~ proposition(skc16,X0) | ~ proposition(skc16,skc16) | ~ think_believe_consider(skc16,skc17) | X0 = skc16 ) ).
+fof(c_4642,axiom,! [X0] : ( ~ theme(skc16,skc27,X0) | ~ agent(skc16,skc17,skc29) | ~ proposition(skc16,X0) | X0 = skc16 ) ).
+fof(c_4647,axiom,! [X0] : ( ~ theme(skc16,skc27,X0) | ~ proposition(skc16,X0) | X0 = skc26 ) ).
+fof(c_4678,axiom,~ specific(skc26,skc25) ).
+fof(c_4679,axiom,~ specific(skc26,skc18) ).
+fof(c_4698,axiom,~ agent(skc16,skc17,skc29) | ~ proposition(skc16,skc26) | skc16 = skc26 ).
+fof(c_4699,axiom,~ agent(skc16,skc17,skc29) | skc16 = skc26 ).
+fof(c_4720,axiom,! [X0] : ( ~ theme(skc16,skc17,X0) | ~ agent(skc16,skc27,skc19) | ~ proposition(skc16,X0) | ~ proposition(skc16,skc26) | ~ think_believe_consider(skc16,skc27) | X0 = skc26 ) ).
+fof(c_4721,axiom,! [X0] : ( ~ theme(skc16,skc17,X0) | ~ agent(skc16,skc17,skc19) | ~ proposition(skc16,X0) | ~ proposition(skc16,skc16) | ~ think_believe_consider(skc16,skc17) | X0 = skc16 ) ).
+fof(c_4722,axiom,! [X0] : ( ~ theme(skc16,skc17,X0) | ~ proposition(skc16,X0) | X0 = skc16 ) ).
+fof(c_4726,axiom,! [X0] : ( ~ theme(skc16,skc17,X0) | ~ agent(skc16,skc27,skc19) | ~ proposition(skc16,X0) | X0 = skc26 ) ).
+fof(c_4765,axiom,! [X0] : ( ~ theme(skc26,skc27,X0) | ~ agent(skc26,skc27,skc29) | ~ proposition(skc26,X0) | ~ proposition(skc26,skc26) | ~ think_believe_consider(skc26,skc27) | X0 = skc26 ) ).
+fof(c_4766,axiom,! [X0] : ( ~ theme(skc26,skc27,X0) | ~ agent(skc26,skc17,skc29) | ~ proposition(skc26,X0) | ~ proposition(skc26,skc16) | ~ think_believe_consider(skc26,skc17) | X0 = skc16 ) ).
+fof(c_4767,axiom,! [X0] : ( ~ theme(skc26,skc27,X0) | ~ agent(skc26,skc17,skc29) | ~ proposition(skc26,X0) | X0 = skc16 ) ).
+fof(c_4772,axiom,! [X0] : ( ~ theme(skc26,skc27,X0) | ~ proposition(skc26,X0) | X0 = skc26 ) ).
+fof(c_4785,axiom,~ specific(skc26,skc20) ).
+fof(c_4792,axiom,~ specific(skc16,skc18) ).
+fof(c_4796,axiom,~ specific(skc16,skc20) ).
+fof(c_4805,axiom,~ agent(skc26,skc17,skc29) | ~ proposition(skc26,skc26) | skc16 = skc26 ).
+fof(c_4806,axiom,~ agent(skc26,skc17,skc29) | skc16 = skc26 ).
+fof(c_4827,axiom,! [X0] : ( ~ theme(skc26,skc17,X0) | ~ agent(skc26,skc27,skc19) | ~ proposition(skc26,X0) | ~ proposition(skc26,skc26) | ~ think_believe_consider(skc26,skc27) | X0 = skc26 ) ).
+fof(c_4828,axiom,! [X0] : ( ~ theme(skc26,skc17,X0) | ~ agent(skc26,skc17,skc19) | ~ proposition(skc26,X0) | ~ proposition(skc26,skc16) | ~ think_believe_consider(skc26,skc17) | X0 = skc16 ) ).
+fof(c_4829,axiom,! [X0] : ( ~ theme(skc26,skc17,X0) | ~ proposition(skc26,X0) | X0 = skc16 ) ).
+fof(c_4833,axiom,! [X0] : ( ~ theme(skc26,skc17,X0) | ~ agent(skc26,skc27,skc19) | ~ proposition(skc26,X0) | X0 = skc26 ) ).
+fof(c_4858,axiom,! [X0] : ~ existent(skc26,skf1(X0)) ).
+fof(c_4860,axiom,! [X0] : ( ~ forename(skc26,X0) | ~ of(skc26,X0,skc29) | X0 = skc28 ) ).
+fof(c_4861,axiom,! [X0] : ( ~ of(skc26,X0,skc29) | ~ forename(skc26,X0) | X0 = skc28 ) ).
+fof(c_4870,axiom,! [X0] : ( ~ forename(skc26,X0) | ~ of(skc26,X0,skc24) | X0 = skc25 ) ).
+fof(c_4871,axiom,! [X0] : ( ~ of(skc26,X0,skc24) | ~ forename(skc26,X0) | X0 = skc25 ) ).
+fof(c_4889,axiom,! [X0] : ( ~ forename(skc26,X0) | ~ of(skc26,X0,skc21) | X0 = skc20 ) ).
+fof(c_4890,axiom,! [X0] : ( ~ of(skc26,X0,skc21) | ~ forename(skc26,X0) | X0 = skc20 ) ).
+fof(c_4907,axiom,! [X0] : ( ~ forename(skc26,X0) | ~ of(skc26,X0,skc19) | X0 = skc18 ) ).
+fof(c_4908,axiom,! [X0] : ( ~ of(skc26,X0,skc19) | ~ forename(skc26,X0) | X0 = skc18 ) ).

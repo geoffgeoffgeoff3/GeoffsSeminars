@@ -1,0 +1,2 @@
+include('Saturations/NLP056+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(ax49,conjecture,! [U] : ! [V] : ( present(U,V) => ~ past(U,V) ) ).

@@ -1,0 +1,2 @@
+include('Saturations/SYN903-1/Saturations/iProver-SAT---3.7.ax').
+fof(clause24,conjecture,! [U] : ( ~ ssSkP301(U) | ssPv23(U) ) ).

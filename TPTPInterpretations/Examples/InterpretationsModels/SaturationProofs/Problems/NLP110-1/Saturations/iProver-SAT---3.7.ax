@@ -1,0 +1,23 @@
+fof(c_49,axiom,! [X0] : ! [X1] : ( ~ see(X0,X1) | event(X0,X1) ) ).
+fof(c_51,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | thing(X0,X1) ) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | singleton(X0,X1) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | specific(X0,X1) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | thing(X0,X1) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | specific(X0,X1) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | impartial(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | unisex(X0,X1) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | impartial(X0,X1) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | human(X0,X1) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ( ~ customer(X0,X1) | human_person(X0,X1) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ( ~ restaurant(X0,X1) | building(X0,X1) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ( ~ building(X0,X1) | artifact(X0,X1) ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ( ~ artifact(X0,X1) | object(X0,X1) ) ).
+fof(c_83,axiom,actual_world(skc4) ).
+fof(c_87,axiom,past(skc4,skc5) ).
+fof(c_92,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ in(skc4,X0,X1) | ~ customer(skc4,X0) | ~ restaurant(skc4,X1) | event(skc4,skf1(X2)) ) ).
+fof(c_93,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ in(skc4,X0,X1) | ~ customer(skc4,X0) | ~ restaurant(skc4,X1) | past(skc4,skf1(X2)) ) ).
+fof(c_94,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ in(skc4,X0,X1) | ~ customer(skc4,X0) | ~ restaurant(skc4,X1) | nonreflexive(skc4,skf1(X2)) ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ in(skc4,X0,X1) | ~ customer(skc4,X0) | ~ restaurant(skc4,X1) | see(skc4,skf1(X2)) ) ).
+fof(c_96,axiom,! [X0] : ! [X1] : ( ~ in(skc4,X0,X1) | ~ customer(skc4,X0) | ~ restaurant(skc4,X1) | agent(skc4,skf1(X0),X0) ) ).
+fof(c_97,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ in(skc4,X0,X1) | ~ customer(skc4,X0) | ~ restaurant(skc4,X1) | patient(skc4,skf1(X2),skc6) ) ).

@@ -1,0 +1,19 @@
+fof(c_50,axiom,! [X0] : add(n0,X0) = X0 ).
+fof(c_51,axiom,! [X0] : ~ less_than(X0,X0) ).
+fof(c_52,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ less_than(X0,X1) | ~ less_than(X1,X2) | less_than(X0,X2) ) ).
+fof(c_53,axiom,! [X0] : ! [X1] : ( ~ less_than(n0,X0) | ~ less_than(n0,X1) | less_than(n0,minimum(X0,X1)) ) ).
+fof(c_54,axiom,! [X0] : ! [X1] : ( ~ less_than(n0,X0) | ~ less_than(n0,X1) | less_than(minimum(X0,X1),X0) ) ).
+fof(c_55,axiom,! [X0] : ! [X1] : ( ~ less_than(n0,X0) | ~ less_than(n0,X1) | less_than(minimum(X0,X1),X1) ) ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ less_than(X0,half(X1)) | ~ less_than(X2,half(X1)) | less_than(add(X0,X2),X1) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ less_than(add(absolute(X0),absolute(X1)),X2) | less_than(absolute(add(X0,X1)),X2) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ! [X2] : add(add(X0,X1),X2) = add(X0,add(X1,X2)) ).
+fof(c_59,axiom,! [X0] : ! [X1] : add(X0,X1) = add(X1,X0) ).
+fof(c_60,axiom,! [X0] : ( ~ less_than(n0,X0) | less_than(n0,half(X0)) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : add(minus(X0),minus(X1)) = minus(add(X0,X1)) ).
+fof(c_156,axiom,! [X0] : X0 = X0 ).
+fof(c_157,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_158,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_159,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | add(X0,X2) = add(X1,X3) ) ).
+fof(c_160,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ less_than(X1,X3) | less_than(X0,X2) ) ).
+fof(c_161,axiom,! [X0] : ! [X1] : ( X0 != X1 | absolute(X0) = absolute(X1) ) ).
+fof(c_162,axiom,! [X0] : ! [X1] : ( X0 != X1 | minus(X0) = minus(X1) ) ).

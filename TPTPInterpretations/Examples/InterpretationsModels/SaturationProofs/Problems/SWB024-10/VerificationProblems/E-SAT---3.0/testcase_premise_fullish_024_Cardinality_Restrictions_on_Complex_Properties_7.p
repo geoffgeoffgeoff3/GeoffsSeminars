@@ -1,0 +1,2 @@
+include('Saturations/SWB024-10/Saturations/E-SAT---3.0.ax').
+fof(testcase_premise_fullish_024_Cardinality_Restrictions_on_Complex_Properties_7,conjecture,iext(uri_owl_minCardinality,sK1_testcase_premise_fullish_024_Cardinality_Restrictions_on_Complex_Properties_BNODE_z,literal_typed(dat_str_1,uri_xsd_nonNegativeInteger)) = true ).

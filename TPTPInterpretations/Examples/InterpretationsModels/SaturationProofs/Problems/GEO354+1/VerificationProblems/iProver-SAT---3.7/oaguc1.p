@@ -1,0 +1,2 @@
+include('Saturations/GEO354+1/Saturations/iProver-SAT---3.7.ax').
+fof(oaguc1,conjecture,! [A] : ! [B] : ! [L] : ! [M] : ( ( distinct_points(A,B) & distinct_lines(L,M) ) => ( left_apart_point(A,L) | left_apart_point(B,L) | left_apart_point(A,M) | left_apart_point(B,M) | left_apart_point(A,reverse_line(L)) | left_apart_point(B,reverse_line(L)) | left_apart_point(A,reverse_line(M)) | left_apart_point(B,reverse_line(M)) ) ) ).

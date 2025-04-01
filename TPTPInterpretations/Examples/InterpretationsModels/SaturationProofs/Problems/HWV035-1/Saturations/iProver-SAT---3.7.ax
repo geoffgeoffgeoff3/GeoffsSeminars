@@ -1,0 +1,34 @@
+fof(c_49,axiom,! [X0] : ( ~ type(X0,halfadder) | type(and1(X0),and) ) ).
+fof(c_50,axiom,! [X0] : ( ~ type(X0,halfadder) | type(and2(X0),and) ) ).
+fof(c_51,axiom,! [X0] : ( ~ type(X0,halfadder) | type(not1(X0),not) ) ).
+fof(c_52,axiom,! [X0] : ( ~ type(X0,halfadder) | type(or1(X0),or) ) ).
+fof(c_53,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(in(n1,X0),in(n1,or1(X0))) ) ).
+fof(c_54,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(in(n2,X0),in(n2,or1(X0))) ) ).
+fof(c_55,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(in(n1,X0),in(n1,and2(X0))) ) ).
+fof(c_56,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(in(n2,X0),in(n2,and2(X0))) ) ).
+fof(c_57,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(out(s,X0),out(n1,and1(X0))) ) ).
+fof(c_58,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(out(c,X0),out(n1,and2(X0))) ) ).
+fof(c_59,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(out(n1,or1(X0)),in(n1,and1(X0))) ) ).
+fof(c_60,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(out(n1,and2(X0)),in(n1,not1(X0))) ) ).
+fof(c_61,axiom,! [X0] : ( ~ type(X0,halfadder) | connection(out(n1,not1(X0)),in(n2,and1(X0))) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ connection(X0,X1) | ~ value(X0,X2) | value(X1,X2) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ connection(X0,X1) | ~ value(X1,X2) | value(X0,X2) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ value(X0,X1) | ~ value(X0,X2) | equal_value(X1,X2) ) ).
+fof(c_65,axiom,~ equal_value(n0,n1) ).
+fof(c_66,axiom,~ equal_value(n1,n0) ).
+fof(c_67,axiom,! [X0] : ( ~ mode(X0,ok) | ~ mode(X0,abnormal) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ( ~ type(X0,X1) | mode(X0,ok) | mode(X0,abnormal) ) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ( ~ value(in(X0,X1),n0) | ~ type(X1,and) | ~ mode(X1,ok) | value(out(n1,X1),n0) ) ).
+fof(c_70,axiom,! [X0] : ( ~ value(in(n1,X0),n1) | ~ value(in(n2,X0),n1) | ~ type(X0,and) | ~ mode(X0,ok) | value(out(n1,X0),n1) ) ).
+fof(c_71,axiom,! [X0] : ( ~ value(out(n1,X0),n0) | ~ type(X0,and) | ~ mode(X0,ok) | value(in(n1,X0),n0) | value(in(n2,X0),n0) ) ).
+fof(c_72,axiom,! [X0] : ( ~ value(out(n1,X0),n1) | ~ type(X0,and) | ~ mode(X0,ok) | value(in(n1,X0),n1) ) ).
+fof(c_73,axiom,! [X0] : ( ~ value(out(n1,X0),n1) | ~ type(X0,and) | ~ mode(X0,ok) | value(in(n2,X0),n1) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ( ~ value(in(X0,X1),n1) | ~ type(X1,or) | ~ mode(X1,ok) | value(out(n1,X1),n1) ) ).
+fof(c_75,axiom,! [X0] : ( ~ value(in(n1,X0),n0) | ~ value(in(n2,X0),n0) | ~ type(X0,or) | ~ mode(X0,ok) | value(out(n1,X0),n0) ) ).
+fof(c_76,axiom,! [X0] : ( ~ value(out(n1,X0),n1) | ~ type(X0,or) | ~ mode(X0,ok) | value(in(n1,X0),n1) | value(in(n2,X0),n1) ) ).
+fof(c_77,axiom,! [X0] : ( ~ value(out(n1,X0),n0) | ~ type(X0,or) | ~ mode(X0,ok) | value(in(n1,X0),n0) ) ).
+fof(c_78,axiom,! [X0] : ( ~ value(out(n1,X0),n0) | ~ type(X0,or) | ~ mode(X0,ok) | value(in(n2,X0),n0) ) ).
+fof(c_79,axiom,! [X0] : ( ~ value(in(n1,X0),n0) | ~ type(X0,not) | ~ mode(X0,ok) | value(out(n1,X0),n1) ) ).
+fof(c_80,axiom,! [X0] : ( ~ value(in(n1,X0),n1) | ~ type(X0,not) | ~ mode(X0,ok) | value(out(n1,X0),n0) ) ).
+fof(c_81,axiom,! [X0] : ( ~ value(out(n1,X0),n0) | ~ type(X0,not) | ~ mode(X0,ok) | value(in(n1,X0),n1) ) ).
+fof(c_82,axiom,! [X0] : ( ~ value(out(n1,X0),n1) | ~ type(X0,not) | ~ mode(X0,ok) | value(in(n1,X0),n0) ) ).

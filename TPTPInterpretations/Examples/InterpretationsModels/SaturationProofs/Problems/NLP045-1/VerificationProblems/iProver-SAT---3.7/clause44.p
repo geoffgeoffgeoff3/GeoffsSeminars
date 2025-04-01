@@ -1,0 +1,2 @@
+include('Saturations/NLP045-1/Saturations/iProver-SAT---3.7.ax').
+fof(clause44,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ( ~ dollar(U,skf10(U,V)) | ~ group(U,W) | ~ five(U,W) | ~ mia_forename(U,X) | ~ forename(U,X) | ~ agent(U,Y,Z) | ~ woman(U,Z) | ~ of(U,X,Z) | ~ event(U,Y) | ~ past(U,Y) | ~ nonreflexive(U,Y) | ~ order(U,Y) | ~ ssSkP0(X1,W,U) | ~ patient(U,Y,X1) | ~ shake_beverage(U,X1) | ~ nonhuman(U,X1) | ~ actual_world(U) | ssSkC0 ) ).

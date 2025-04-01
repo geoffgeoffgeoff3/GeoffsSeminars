@@ -1,0 +1,1443 @@
+fof(main,axiom,~ ( ? [X1] : ~ ( ~ ( ! [X2] : ( ~ r1(X1,X2) | ~ ( ( p605(X2) & p505(X2) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( p604(X2) & p504(X2) ) | ( p604(X2) & ~ p404(X2) ) | ( p504(X2) & ~ p404(X2) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( p603(X2) & p503(X2) ) | ( p603(X2) & p403(X2) ) | ( p503(X2) & p403(X2) ) | ( p603(X2) & p303(X2) ) | ( p503(X2) & p303(X2) ) | ( p403(X2) & p303(X2) ) | ( p603(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p503(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p403(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p303(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p603(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p503(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p403(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p303(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p602(X2) & p502(X2) ) | ( p602(X2) & p402(X2) ) | ( p502(X2) & p402(X2) ) | ( p602(X2) & p302(X2) ) | ( p502(X2) & p302(X2) ) | ( p402(X2) & p302(X2) ) | ( p602(X2) & p202(X2) ) | ( p502(X2) & p202(X2) ) | ( p402(X2) & p202(X2) ) | ( p302(X2) & p202(X2) ) | ( p602(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p502(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p402(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p302(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p202(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p601(X2) & p501(X2) ) | ( p601(X2) & p401(X2) ) | ( p501(X2) & p401(X2) ) | ( p601(X2) & p301(X2) ) | ( p501(X2) & p301(X2) ) | ( p401(X2) & p301(X2) ) | ( p601(X2) & p201(X2) ) | ( p501(X2) & p201(X2) ) | ( p401(X2) & p201(X2) ) | ( p301(X2) & p201(X2) ) | ( p601(X2) & p101(X2) ) | ( p501(X2) & p101(X2) ) | ( p401(X2) & p101(X2) ) | ( p301(X2) & p101(X2) ) | ( p201(X2) & p101(X2) ) ) ) ) | ! [X2] : ( ~ r1(X1,X2) | ~ ( ( p605(X2) | p604(X2) | p603(X2) | p602(X2) | p601(X2) ) & ( p505(X2) | p504(X2) | p503(X2) | p502(X2) | p501(X2) ) & ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) | p404(X2) | p403(X2) | p402(X2) | p401(X2) ) & ( ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) | p303(X2) | p302(X2) | p301(X2) ) & ( ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) | p202(X2) | p201(X2) ) & ( ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) | p101(X2) ) ) ) ) ) ).
+fof(c_0_1,axiom,! [X2] : ( epred1_1(X2) <=> ~ ( ( p605(X2) & p505(X2) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( p604(X2) & p504(X2) ) | ( p604(X2) & ~ p404(X2) ) | ( p504(X2) & ~ p404(X2) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( p603(X2) & p503(X2) ) | ( p603(X2) & p403(X2) ) | ( p503(X2) & p403(X2) ) | ( p603(X2) & p303(X2) ) | ( p503(X2) & p303(X2) ) | ( p403(X2) & p303(X2) ) | ( p603(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p503(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p403(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p303(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p603(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p503(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p403(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p303(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p602(X2) & p502(X2) ) | ( p602(X2) & p402(X2) ) | ( p502(X2) & p402(X2) ) | ( p602(X2) & p302(X2) ) | ( p502(X2) & p302(X2) ) | ( p402(X2) & p302(X2) ) | ( p602(X2) & p202(X2) ) | ( p502(X2) & p202(X2) ) | ( p402(X2) & p202(X2) ) | ( p302(X2) & p202(X2) ) | ( p602(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p502(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p402(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p302(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p202(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p601(X2) & p501(X2) ) | ( p601(X2) & p401(X2) ) | ( p501(X2) & p401(X2) ) | ( p601(X2) & p301(X2) ) | ( p501(X2) & p301(X2) ) | ( p401(X2) & p301(X2) ) | ( p601(X2) & p201(X2) ) | ( p501(X2) & p201(X2) ) | ( p401(X2) & p201(X2) ) | ( p301(X2) & p201(X2) ) | ( p601(X2) & p101(X2) ) | ( p501(X2) & p101(X2) ) | ( p401(X2) & p101(X2) ) | ( p301(X2) & p101(X2) ) | ( p201(X2) & p101(X2) ) ) ) ).
+fof(c_0_2,axiom,~ ( ~ ( ? [X1] : ~ ( ~ ( ! [X2] : ( ~ r1(X1,X2) | epred1_1(X2) ) ) | ! [X2] : ( ~ r1(X1,X2) | ~ ( ( p605(X2) | p604(X2) | p603(X2) | p602(X2) | p601(X2) ) & ( p505(X2) | p504(X2) | p503(X2) | p502(X2) | p501(X2) ) & ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) | p404(X2) | p403(X2) | p402(X2) | p401(X2) ) & ( ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) | p303(X2) | p302(X2) | p301(X2) ) & ( ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) | p202(X2) | p201(X2) ) & ( ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) | ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) | p101(X2) ) ) ) ) ) ) ).
+fof(c_0_3,axiom,! [X2] : ( epred1_1(X2) => ~ ( ( p605(X2) & p505(X2) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) ) | ( p605(X2) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( p505(X2) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p405(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p305(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p205(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p105(X1) ) ) | ( p604(X2) & p504(X2) ) | ( p604(X2) & ~ p404(X2) ) | ( p504(X2) & ~ p404(X2) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) ) | ( p604(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( p504(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ~ p404(X2) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p304(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p204(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p104(X1) ) ) | ( p603(X2) & p503(X2) ) | ( p603(X2) & p403(X2) ) | ( p503(X2) & p403(X2) ) | ( p603(X2) & p303(X2) ) | ( p503(X2) & p303(X2) ) | ( p403(X2) & p303(X2) ) | ( p603(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p503(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p403(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p303(X2) & ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) ) | ( p603(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p503(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p403(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p303(X2) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( ! [X1] : ( ~ r1(X2,X1) | p203(X1) ) & ! [X1] : ( ~ r1(X2,X1) | p103(X1) ) ) | ( p602(X2) & p502(X2) ) | ( p602(X2) & p402(X2) ) | ( p502(X2) & p402(X2) ) | ( p602(X2) & p302(X2) ) | ( p502(X2) & p302(X2) ) | ( p402(X2) & p302(X2) ) | ( p602(X2) & p202(X2) ) | ( p502(X2) & p202(X2) ) | ( p402(X2) & p202(X2) ) | ( p302(X2) & p202(X2) ) | ( p602(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p502(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p402(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p302(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p202(X2) & ! [X1] : ( ~ r1(X2,X1) | p102(X1) ) ) | ( p601(X2) & p501(X2) ) | ( p601(X2) & p401(X2) ) | ( p501(X2) & p401(X2) ) | ( p601(X2) & p301(X2) ) | ( p501(X2) & p301(X2) ) | ( p401(X2) & p301(X2) ) | ( p601(X2) & p201(X2) ) | ( p501(X2) & p201(X2) ) | ( p401(X2) & p201(X2) ) | ( p301(X2) & p201(X2) ) | ( p601(X2) & p101(X2) ) | ( p501(X2) & p101(X2) ) | ( p401(X2) & p101(X2) ) | ( p301(X2) & p101(X2) ) | ( p201(X2) & p101(X2) ) ) ) ).
+fof(c_0_4,axiom,! [X4] : ! [X6] : ! [X7] : ! [X8] : ! [X9] : ! [X10] : ! [X11] : ! [X12] : ! [X13] : ! [X14] : ! [X15] : ( ( ~ r1(esk1_0,X4) | epred1_1(X4) ) & r1(esk1_0,esk2_0) & ( p605(esk2_0) | p604(esk2_0) | p603(esk2_0) | p602(esk2_0) | p601(esk2_0) ) & ( p505(esk2_0) | p504(esk2_0) | p503(esk2_0) | p502(esk2_0) | p501(esk2_0) ) & ( ~ r1(esk2_0,X6) | p405(X6) | p404(esk2_0) | p403(esk2_0) | p402(esk2_0) | p401(esk2_0) ) & ( ~ r1(esk2_0,X7) | p305(X7) | ~ r1(esk2_0,X8) | p304(X8) | p303(esk2_0) | p302(esk2_0) | p301(esk2_0) ) & ( ~ r1(esk2_0,X9) | p205(X9) | ~ r1(esk2_0,X10) | p204(X10) | ~ r1(esk2_0,X11) | p203(X11) | p202(esk2_0) | p201(esk2_0) ) & ( ~ r1(esk2_0,X12) | p105(X12) | ~ r1(esk2_0,X13) | p104(X13) | ~ r1(esk2_0,X14) | p103(X14) | ~ r1(esk2_0,X15) | p102(X15) | p101(esk2_0) ) ) ).
+fof(c_0_5,axiom,! [X16] : ( ( ~ p605(X16) | ~ p505(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk3_1(X16)) | ~ p605(X16) | ~ epred1_1(X16) ) & ( ~ p405(esk3_1(X16)) | ~ p605(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk4_1(X16)) | ~ p505(X16) | ~ epred1_1(X16) ) & ( ~ p405(esk4_1(X16)) | ~ p505(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk5_1(X16)) | ~ p605(X16) | ~ epred1_1(X16) ) & ( ~ p305(esk5_1(X16)) | ~ p605(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk6_1(X16)) | ~ p505(X16) | ~ epred1_1(X16) ) & ( ~ p305(esk6_1(X16)) | ~ p505(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk8_1(X16)) | r1(X16,esk7_1(X16)) | ~ epred1_1(X16) ) & ( ~ p305(esk8_1(X16)) | r1(X16,esk7_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk8_1(X16)) | ~ p405(esk7_1(X16)) | ~ epred1_1(X16) ) & ( ~ p305(esk8_1(X16)) | ~ p405(esk7_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk9_1(X16)) | ~ p605(X16) | ~ epred1_1(X16) ) & ( ~ p205(esk9_1(X16)) | ~ p605(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk10_1(X16)) | ~ p505(X16) | ~ epred1_1(X16) ) & ( ~ p205(esk10_1(X16)) | ~ p505(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk12_1(X16)) | r1(X16,esk11_1(X16)) | ~ epred1_1(X16) ) & ( ~ p205(esk12_1(X16)) | r1(X16,esk11_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk12_1(X16)) | ~ p405(esk11_1(X16)) | ~ epred1_1(X16) ) & ( ~ p205(esk12_1(X16)) | ~ p405(esk11_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk14_1(X16)) | r1(X16,esk13_1(X16)) | ~ epred1_1(X16) ) & ( ~ p205(esk14_1(X16)) | r1(X16,esk13_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk14_1(X16)) | ~ p305(esk13_1(X16)) | ~ epred1_1(X16) ) & ( ~ p205(esk14_1(X16)) | ~ p305(esk13_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk15_1(X16)) | ~ p605(X16) | ~ epred1_1(X16) ) & ( ~ p105(esk15_1(X16)) | ~ p605(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk16_1(X16)) | ~ p505(X16) | ~ epred1_1(X16) ) & ( ~ p105(esk16_1(X16)) | ~ p505(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk18_1(X16)) | r1(X16,esk17_1(X16)) | ~ epred1_1(X16) ) & ( ~ p105(esk18_1(X16)) | r1(X16,esk17_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk18_1(X16)) | ~ p405(esk17_1(X16)) | ~ epred1_1(X16) ) & ( ~ p105(esk18_1(X16)) | ~ p405(esk17_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk20_1(X16)) | r1(X16,esk19_1(X16)) | ~ epred1_1(X16) ) & ( ~ p105(esk20_1(X16)) | r1(X16,esk19_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk20_1(X16)) | ~ p305(esk19_1(X16)) | ~ epred1_1(X16) ) & ( ~ p105(esk20_1(X16)) | ~ p305(esk19_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk22_1(X16)) | r1(X16,esk21_1(X16)) | ~ epred1_1(X16) ) & ( ~ p105(esk22_1(X16)) | r1(X16,esk21_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk22_1(X16)) | ~ p205(esk21_1(X16)) | ~ epred1_1(X16) ) & ( ~ p105(esk22_1(X16)) | ~ p205(esk21_1(X16)) | ~ epred1_1(X16) ) & ( ~ p604(X16) | ~ p504(X16) | ~ epred1_1(X16) ) & ( ~ p604(X16) | p404(X16) | ~ epred1_1(X16) ) & ( ~ p504(X16) | p404(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk23_1(X16)) | ~ p604(X16) | ~ epred1_1(X16) ) & ( ~ p304(esk23_1(X16)) | ~ p604(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk24_1(X16)) | ~ p504(X16) | ~ epred1_1(X16) ) & ( ~ p304(esk24_1(X16)) | ~ p504(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk25_1(X16)) | p404(X16) | ~ epred1_1(X16) ) & ( ~ p304(esk25_1(X16)) | p404(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk26_1(X16)) | ~ p604(X16) | ~ epred1_1(X16) ) & ( ~ p204(esk26_1(X16)) | ~ p604(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk27_1(X16)) | ~ p504(X16) | ~ epred1_1(X16) ) & ( ~ p204(esk27_1(X16)) | ~ p504(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk28_1(X16)) | p404(X16) | ~ epred1_1(X16) ) & ( ~ p204(esk28_1(X16)) | p404(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk30_1(X16)) | r1(X16,esk29_1(X16)) | ~ epred1_1(X16) ) & ( ~ p204(esk30_1(X16)) | r1(X16,esk29_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk30_1(X16)) | ~ p304(esk29_1(X16)) | ~ epred1_1(X16) ) & ( ~ p204(esk30_1(X16)) | ~ p304(esk29_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk31_1(X16)) | ~ p604(X16) | ~ epred1_1(X16) ) & ( ~ p104(esk31_1(X16)) | ~ p604(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk32_1(X16)) | ~ p504(X16) | ~ epred1_1(X16) ) & ( ~ p104(esk32_1(X16)) | ~ p504(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk33_1(X16)) | p404(X16) | ~ epred1_1(X16) ) & ( ~ p104(esk33_1(X16)) | p404(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk35_1(X16)) | r1(X16,esk34_1(X16)) | ~ epred1_1(X16) ) & ( ~ p104(esk35_1(X16)) | r1(X16,esk34_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk35_1(X16)) | ~ p304(esk34_1(X16)) | ~ epred1_1(X16) ) & ( ~ p104(esk35_1(X16)) | ~ p304(esk34_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk37_1(X16)) | r1(X16,esk36_1(X16)) | ~ epred1_1(X16) ) & ( ~ p104(esk37_1(X16)) | r1(X16,esk36_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk37_1(X16)) | ~ p204(esk36_1(X16)) | ~ epred1_1(X16) ) & ( ~ p104(esk37_1(X16)) | ~ p204(esk36_1(X16)) | ~ epred1_1(X16) ) & ( ~ p603(X16) | ~ p503(X16) | ~ epred1_1(X16) ) & ( ~ p603(X16) | ~ p403(X16) | ~ epred1_1(X16) ) & ( ~ p503(X16) | ~ p403(X16) | ~ epred1_1(X16) ) & ( ~ p603(X16) | ~ p303(X16) | ~ epred1_1(X16) ) & ( ~ p503(X16) | ~ p303(X16) | ~ epred1_1(X16) ) & ( ~ p403(X16) | ~ p303(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk38_1(X16)) | ~ p603(X16) | ~ epred1_1(X16) ) & ( ~ p203(esk38_1(X16)) | ~ p603(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk39_1(X16)) | ~ p503(X16) | ~ epred1_1(X16) ) & ( ~ p203(esk39_1(X16)) | ~ p503(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk40_1(X16)) | ~ p403(X16) | ~ epred1_1(X16) ) & ( ~ p203(esk40_1(X16)) | ~ p403(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk41_1(X16)) | ~ p303(X16) | ~ epred1_1(X16) ) & ( ~ p203(esk41_1(X16)) | ~ p303(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk42_1(X16)) | ~ p603(X16) | ~ epred1_1(X16) ) & ( ~ p103(esk42_1(X16)) | ~ p603(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk43_1(X16)) | ~ p503(X16) | ~ epred1_1(X16) ) & ( ~ p103(esk43_1(X16)) | ~ p503(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk44_1(X16)) | ~ p403(X16) | ~ epred1_1(X16) ) & ( ~ p103(esk44_1(X16)) | ~ p403(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk45_1(X16)) | ~ p303(X16) | ~ epred1_1(X16) ) & ( ~ p103(esk45_1(X16)) | ~ p303(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk47_1(X16)) | r1(X16,esk46_1(X16)) | ~ epred1_1(X16) ) & ( ~ p103(esk47_1(X16)) | r1(X16,esk46_1(X16)) | ~ epred1_1(X16) ) & ( r1(X16,esk47_1(X16)) | ~ p203(esk46_1(X16)) | ~ epred1_1(X16) ) & ( ~ p103(esk47_1(X16)) | ~ p203(esk46_1(X16)) | ~ epred1_1(X16) ) & ( ~ p602(X16) | ~ p502(X16) | ~ epred1_1(X16) ) & ( ~ p602(X16) | ~ p402(X16) | ~ epred1_1(X16) ) & ( ~ p502(X16) | ~ p402(X16) | ~ epred1_1(X16) ) & ( ~ p602(X16) | ~ p302(X16) | ~ epred1_1(X16) ) & ( ~ p502(X16) | ~ p302(X16) | ~ epred1_1(X16) ) & ( ~ p402(X16) | ~ p302(X16) | ~ epred1_1(X16) ) & ( ~ p602(X16) | ~ p202(X16) | ~ epred1_1(X16) ) & ( ~ p502(X16) | ~ p202(X16) | ~ epred1_1(X16) ) & ( ~ p402(X16) | ~ p202(X16) | ~ epred1_1(X16) ) & ( ~ p302(X16) | ~ p202(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk48_1(X16)) | ~ p602(X16) | ~ epred1_1(X16) ) & ( ~ p102(esk48_1(X16)) | ~ p602(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk49_1(X16)) | ~ p502(X16) | ~ epred1_1(X16) ) & ( ~ p102(esk49_1(X16)) | ~ p502(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk50_1(X16)) | ~ p402(X16) | ~ epred1_1(X16) ) & ( ~ p102(esk50_1(X16)) | ~ p402(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk51_1(X16)) | ~ p302(X16) | ~ epred1_1(X16) ) & ( ~ p102(esk51_1(X16)) | ~ p302(X16) | ~ epred1_1(X16) ) & ( r1(X16,esk52_1(X16)) | ~ p202(X16) | ~ epred1_1(X16) ) & ( ~ p102(esk52_1(X16)) | ~ p202(X16) | ~ epred1_1(X16) ) & ( ~ p601(X16) | ~ p501(X16) | ~ epred1_1(X16) ) & ( ~ p601(X16) | ~ p401(X16) | ~ epred1_1(X16) ) & ( ~ p501(X16) | ~ p401(X16) | ~ epred1_1(X16) ) & ( ~ p601(X16) | ~ p301(X16) | ~ epred1_1(X16) ) & ( ~ p501(X16) | ~ p301(X16) | ~ epred1_1(X16) ) & ( ~ p401(X16) | ~ p301(X16) | ~ epred1_1(X16) ) & ( ~ p601(X16) | ~ p201(X16) | ~ epred1_1(X16) ) & ( ~ p501(X16) | ~ p201(X16) | ~ epred1_1(X16) ) & ( ~ p401(X16) | ~ p201(X16) | ~ epred1_1(X16) ) & ( ~ p301(X16) | ~ p201(X16) | ~ epred1_1(X16) ) & ( ~ p601(X16) | ~ p101(X16) | ~ epred1_1(X16) ) & ( ~ p501(X16) | ~ p101(X16) | ~ epred1_1(X16) ) & ( ~ p401(X16) | ~ p101(X16) | ~ epred1_1(X16) ) & ( ~ p301(X16) | ~ p101(X16) | ~ epred1_1(X16) ) & ( ~ p201(X16) | ~ p101(X16) | ~ epred1_1(X16) ) ) ).
+fof(c_0_6,axiom,~ epred8_0 <=> ! [X3] : ( p103(X3) | ~ r1(esk2_0,X3) ) ).
+fof(c_0_7,axiom,~ epred7_0 <=> ! [X4] : ( p102(X4) | p101(esk2_0) | ~ r1(esk2_0,X4) ) ).
+fof(c_0_8,axiom,! [X1] : ( epred1_1(X1) | ~ r1(esk1_0,X1) ) ).
+fof(c_0_9,axiom,r1(esk1_0,esk2_0) ).
+fof(c_0_10,axiom,~ epred9_0 <=> ! [X2] : ( p104(X2) | ~ r1(esk2_0,X2) ) ).
+fof(c_0_11,axiom,! [X1] : ( r1(X1,esk46_1(X1)) | ~ p103(esk47_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_12,axiom,! [X1] : ( epred8_0 | p103(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_13,axiom,~ epred2_0 <=> ! [X2] : ( p304(X2) | p303(esk2_0) | p302(esk2_0) | p301(esk2_0) | ~ r1(esk2_0,X2) ) ).
+fof(c_0_14,axiom,! [X1] : ( epred7_0 | p101(esk2_0) | p102(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_15,axiom,! [X1] : ( r1(X1,esk49_1(X1)) | ~ p502(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_16,axiom,epred1_1(esk2_0) ).
+fof(c_0_17,axiom,! [X1] : ( r1(X1,esk34_1(X1)) | ~ p104(esk35_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_18,axiom,! [X1] : ( epred9_0 | p104(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_19,axiom,~ epred5_0 <=> ! [X2] : ( p204(X2) | ~ r1(esk2_0,X2) ) ).
+fof(c_0_20,axiom,~ epred4_0 <=> ! [X3] : ( p203(X3) | p202(esk2_0) | p201(esk2_0) | ~ r1(esk2_0,X3) ) ).
+fof(c_0_21,axiom,! [X1] : ( epred8_0 | r1(X1,esk46_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk47_1(X1)) ) ).
+fof(c_0_22,axiom,! [X1] : ( r1(X1,esk47_1(X1)) | r1(X1,esk46_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_23,axiom,! [X1] : ( r1(X1,esk48_1(X1)) | ~ p602(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_24,axiom,! [X1] : ( r1(X1,esk51_1(X1)) | ~ p302(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_25,axiom,! [X1] : ( epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_26,axiom,! [X1] : ( r1(X1,esk23_1(X1)) | ~ p604(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_27,axiom,! [X1] : ( ~ p102(esk49_1(X1)) | ~ p502(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_28,axiom,epred7_0 | p101(esk2_0) | p102(esk49_1(esk2_0)) | ~ p502(esk2_0) ).
+fof(c_0_29,axiom,! [X1] : ( epred9_0 | r1(X1,esk34_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk35_1(X1)) ) ).
+fof(c_0_30,axiom,! [X1] : ( r1(X1,esk35_1(X1)) | r1(X1,esk34_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_31,axiom,! [X1] : ( r1(X1,esk29_1(X1)) | ~ p204(esk30_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_32,axiom,! [X1] : ( epred5_0 | p204(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_33,axiom,! [X1] : ( epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_34,axiom,epred8_0 | r1(esk2_0,esk46_1(esk2_0)) ).
+fof(c_0_35,axiom,! [X1] : ( r1(X1,esk24_1(X1)) | ~ p504(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_36,axiom,! [X1] : ( ~ p102(esk48_1(X1)) | ~ p602(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_37,axiom,epred7_0 | p101(esk2_0) | p102(esk48_1(esk2_0)) | ~ p602(esk2_0) ).
+fof(c_0_38,axiom,! [X1] : ( ~ p102(esk51_1(X1)) | ~ p302(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_39,axiom,epred7_0 | p101(esk2_0) | p102(esk51_1(esk2_0)) | ~ p302(esk2_0) ).
+fof(c_0_40,axiom,! [X1] : ( ~ p304(esk23_1(X1)) | ~ p604(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_41,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk23_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_42,axiom,! [X1] : ( ~ p301(X1) | ~ p101(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_43,axiom,epred7_0 | p101(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_44,axiom,~ epred10_0 <=> ! [X1] : ( p105(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_45,axiom,~ epred6_0 <=> ! [X1] : ( p205(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_46,axiom,~ epred3_0 <=> ! [X1] : ( p305(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_47,axiom,! [X1] : ( r1(X1,esk38_1(X1)) | ~ p603(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_48,axiom,epred9_0 | r1(esk2_0,esk34_1(esk2_0)) ).
+fof(c_0_49,axiom,! [X1] : ( epred5_0 | r1(X1,esk29_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk30_1(X1)) ) ).
+fof(c_0_50,axiom,! [X1] : ( r1(X1,esk30_1(X1)) | r1(X1,esk29_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_51,axiom,! [X1] : ( r1(X1,esk52_1(X1)) | ~ p202(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_52,axiom,! [X1] : ( ~ p103(esk47_1(X1)) | ~ p203(esk46_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_53,axiom,epred8_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk46_1(esk2_0)) ).
+fof(c_0_54,axiom,! [X1] : ( r1(X1,esk47_1(X1)) | ~ p203(esk46_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_55,axiom,! [X1] : ( ~ p304(esk24_1(X1)) | ~ p504(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_56,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk24_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_57,axiom,epred7_0 | p101(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_58,axiom,! [X1] : ( ~ p501(X1) | ~ p101(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_59,axiom,epred7_0 | p101(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_60,axiom,! [X1] : ( ~ p501(X1) | ~ p301(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_61,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_62,axiom,epred7_0 | ~ p301(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_63,axiom,! [X1] : ( r1(X1,esk17_1(X1)) | ~ p105(esk18_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_64,axiom,! [X1] : ( epred10_0 | p105(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_65,axiom,! [X1] : ( r1(X1,esk11_1(X1)) | ~ p205(esk12_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_66,axiom,! [X1] : ( epred6_0 | p205(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_67,axiom,! [X1] : ( r1(X1,esk7_1(X1)) | ~ p305(esk8_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_68,axiom,! [X1] : ( epred3_0 | p305(X1) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_69,axiom,! [X1] : ( ~ p203(esk38_1(X1)) | ~ p603(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_70,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk38_1(esk2_0)) | ~ p603(esk2_0) ).
+fof(c_0_71,axiom,! [X1] : ( ~ p104(esk35_1(X1)) | ~ p304(esk34_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_72,axiom,! [X1] : ( r1(X1,esk35_1(X1)) | ~ p304(esk34_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_73,axiom,epred9_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk34_1(esk2_0)) ).
+fof(c_0_74,axiom,epred5_0 | r1(esk2_0,esk29_1(esk2_0)) ).
+fof(c_0_75,axiom,! [X1] : ( r1(X1,esk39_1(X1)) | ~ p503(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_76,axiom,! [X1] : ( ~ p102(esk52_1(X1)) | ~ p202(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_77,axiom,epred7_0 | p101(esk2_0) | p102(esk52_1(esk2_0)) | ~ p202(esk2_0) ).
+fof(c_0_78,axiom,! [X1] : ( ~ p201(X1) | ~ p101(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_79,axiom,epred8_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | ~ p103(esk47_1(esk2_0)) ).
+fof(c_0_80,axiom,epred8_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | r1(esk2_0,esk47_1(esk2_0)) ).
+fof(c_0_81,axiom,! [X1] : ( ~ p103(esk43_1(X1)) | ~ p503(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_82,axiom,! [X1] : ( ~ p601(X1) | ~ p101(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_83,axiom,! [X1] : ( ~ p601(X1) | ~ p301(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_84,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_85,axiom,epred7_0 | ~ p301(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_86,axiom,! [X1] : ( ~ p601(X1) | ~ p501(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_87,axiom,p505(esk2_0) | p504(esk2_0) | p503(esk2_0) | p502(esk2_0) | p501(esk2_0) ).
+fof(c_0_88,axiom,epred7_0 | ~ p501(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_89,axiom,! [X1] : ( ~ p103(esk45_1(X1)) | ~ p303(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_90,axiom,epred7_0 | ~ p501(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_91,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p501(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_92,axiom,! [X1] : ( ~ p502(X1) | ~ p302(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_93,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_94,axiom,! [X1] : ( epred10_0 | r1(X1,esk17_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk18_1(X1)) ) ).
+fof(c_0_95,axiom,! [X1] : ( r1(X1,esk18_1(X1)) | r1(X1,esk17_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_96,axiom,! [X1] : ( epred6_0 | r1(X1,esk11_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk12_1(X1)) ) ).
+fof(c_0_97,axiom,! [X1] : ( r1(X1,esk12_1(X1)) | r1(X1,esk11_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_98,axiom,! [X1] : ( epred3_0 | r1(X1,esk7_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk8_1(X1)) ) ).
+fof(c_0_99,axiom,! [X1] : ( r1(X1,esk8_1(X1)) | r1(X1,esk7_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_100,axiom,! [X1] : ( r1(X1,esk25_1(X1)) | p404(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_101,axiom,! [X1] : ( r1(X1,esk41_1(X1)) | ~ p303(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_102,axiom,! [X1] : ( ~ p301(X1) | ~ p201(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_103,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_104,axiom,! [X1] : ( epred9_0 | ~ epred1_1(X1) | ~ p304(esk34_1(X1)) | ~ r1(esk2_0,esk35_1(X1)) ) ).
+fof(c_0_105,axiom,epred9_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | r1(esk2_0,esk35_1(esk2_0)) ).
+fof(c_0_106,axiom,! [X1] : ( ~ p204(esk30_1(X1)) | ~ p304(esk29_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_107,axiom,! [X1] : ( r1(X1,esk30_1(X1)) | ~ p304(esk29_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_108,axiom,epred5_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk29_1(esk2_0)) ).
+fof(c_0_109,axiom,! [X1] : ( ~ p203(esk39_1(X1)) | ~ p503(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_110,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk39_1(esk2_0)) | ~ p503(esk2_0) ).
+fof(c_0_111,axiom,epred7_0 | p101(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_112,axiom,! [X1] : ( ~ p501(X1) | ~ p201(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_113,axiom,epred7_0 | ~ p201(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_114,axiom,! [X1] : ( ~ p103(esk42_1(X1)) | ~ p603(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_115,axiom,epred8_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) ).
+fof(c_0_116,axiom,! [X1] : ( epred8_0 | ~ epred1_1(X1) | ~ p503(X1) | ~ r1(esk2_0,esk43_1(X1)) ) ).
+fof(c_0_117,axiom,! [X1] : ( r1(X1,esk43_1(X1)) | ~ p503(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_118,axiom,epred7_0 | ~ p601(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_119,axiom,p605(esk2_0) | p604(esk2_0) | p603(esk2_0) | p602(esk2_0) | p601(esk2_0) ).
+fof(c_0_120,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p601(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_121,axiom,! [X1] : ( ~ p602(X1) | ~ p302(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_122,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_123,axiom,epred7_0 | ~ p601(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_124,axiom,p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p601(esk2_0) ).
+fof(c_0_125,axiom,! [X1] : ( ~ p602(X1) | ~ p502(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_126,axiom,epred7_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_127,axiom,! [X1] : ( epred8_0 | ~ epred1_1(X1) | ~ p303(X1) | ~ r1(esk2_0,esk45_1(X1)) ) ).
+fof(c_0_128,axiom,! [X1] : ( r1(X1,esk45_1(X1)) | ~ p303(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_129,axiom,epred7_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_130,axiom,epred2_0 | p302(esk2_0) | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_131,axiom,epred7_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_132,axiom,! [X1] : ( p405(X1) | p404(esk2_0) | p403(esk2_0) | p402(esk2_0) | p401(esk2_0) | ~ r1(esk2_0,X1) ) ).
+fof(c_0_133,axiom,epred10_0 | r1(esk2_0,esk17_1(esk2_0)) ).
+fof(c_0_134,axiom,epred6_0 | r1(esk2_0,esk11_1(esk2_0)) ).
+fof(c_0_135,axiom,epred3_0 | r1(esk2_0,esk7_1(esk2_0)) ).
+fof(c_0_136,axiom,! [X1] : ( r1(X1,esk4_1(X1)) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_137,axiom,! [X1] : ( p404(X1) | ~ p304(esk25_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_138,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk25_1(esk2_0)) | p404(esk2_0) ).
+fof(c_0_139,axiom,! [X1] : ( ~ p203(esk41_1(X1)) | ~ p303(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_140,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk41_1(esk2_0)) | ~ p303(esk2_0) ).
+fof(c_0_141,axiom,! [X1] : ( ~ p104(esk32_1(X1)) | ~ p504(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_142,axiom,epred4_0 | p202(esk2_0) | ~ p301(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_143,axiom,epred9_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) ).
+fof(c_0_144,axiom,! [X1] : ( epred5_0 | ~ epred1_1(X1) | ~ p304(esk29_1(X1)) | ~ r1(esk2_0,esk30_1(X1)) ) ).
+fof(c_0_145,axiom,epred5_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | r1(esk2_0,esk30_1(esk2_0)) ).
+fof(c_0_146,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_147,axiom,epred7_0 | ~ p201(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_148,axiom,! [X1] : ( ~ p104(esk31_1(X1)) | ~ p604(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_149,axiom,! [X1] : ( ~ p601(X1) | ~ p201(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_150,axiom,epred7_0 | ~ p201(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_151,axiom,epred7_0 | ~ p501(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_152,axiom,epred4_0 | p202(esk2_0) | ~ p501(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_153,axiom,! [X1] : ( ~ p502(X1) | ~ p202(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_154,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_155,axiom,! [X1] : ( epred8_0 | ~ epred1_1(X1) | ~ p603(X1) | ~ r1(esk2_0,esk42_1(X1)) ) ).
+fof(c_0_156,axiom,! [X1] : ( r1(X1,esk42_1(X1)) | ~ p603(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_157,axiom,epred8_0 | epred4_0 | p202(esk2_0) | ~ p501(esk2_0) ).
+fof(c_0_158,axiom,epred8_0 | ~ p503(esk2_0) ).
+fof(c_0_159,axiom,epred8_0 | epred7_0 | epred4_0 | p202(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_160,axiom,epred7_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_161,axiom,epred2_0 | p302(esk2_0) | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_162,axiom,epred7_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_163,axiom,epred7_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_164,axiom,p502(esk2_0) | p602(esk2_0) | p503(esk2_0) | p603(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_165,axiom,epred7_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_166,axiom,epred8_0 | ~ p303(esk2_0) ).
+fof(c_0_167,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_168,axiom,! [X1] : ( ~ p105(esk18_1(X1)) | ~ p405(esk17_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_169,axiom,! [X1] : ( r1(X1,esk18_1(X1)) | ~ p405(esk17_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_170,axiom,epred10_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk17_1(esk2_0)) ).
+fof(c_0_171,axiom,! [X1] : ( ~ p205(esk12_1(X1)) | ~ p405(esk11_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_172,axiom,! [X1] : ( r1(X1,esk12_1(X1)) | ~ p405(esk11_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_173,axiom,epred6_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk11_1(esk2_0)) ).
+fof(c_0_174,axiom,! [X1] : ( ~ p305(esk8_1(X1)) | ~ p405(esk7_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_175,axiom,! [X1] : ( r1(X1,esk8_1(X1)) | ~ p405(esk7_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_176,axiom,epred3_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk7_1(esk2_0)) ).
+fof(c_0_177,axiom,! [X1] : ( r1(X1,esk40_1(X1)) | ~ p403(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_178,axiom,! [X1] : ( r1(X1,esk3_1(X1)) | ~ p605(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_179,axiom,! [X1] : ( ~ p401(X1) | ~ p201(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_180,axiom,! [X1] : ( ~ p405(esk4_1(X1)) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_181,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk4_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_182,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) ).
+fof(c_0_183,axiom,! [X1] : ( r1(X1,esk50_1(X1)) | ~ p402(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_184,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_185,axiom,! [X1] : ( epred9_0 | ~ epred1_1(X1) | ~ p504(X1) | ~ r1(esk2_0,esk32_1(X1)) ) ).
+fof(c_0_186,axiom,! [X1] : ( r1(X1,esk32_1(X1)) | ~ p504(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_187,axiom,epred9_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_188,axiom,! [X1] : ( ~ p204(esk27_1(X1)) | ~ p504(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_189,axiom,epred5_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) ).
+fof(c_0_190,axiom,epred7_0 | ~ p301(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_191,axiom,epred4_0 | p202(esk2_0) | ~ p301(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_192,axiom,! [X1] : ( ~ p302(X1) | ~ p202(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_193,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p302(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_194,axiom,! [X1] : ( epred9_0 | ~ epred1_1(X1) | ~ p604(X1) | ~ r1(esk2_0,esk31_1(X1)) ) ).
+fof(c_0_195,axiom,! [X1] : ( r1(X1,esk31_1(X1)) | ~ p604(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_196,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p302(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_197,axiom,epred7_0 | ~ p601(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_198,axiom,epred4_0 | p202(esk2_0) | ~ p601(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_199,axiom,! [X1] : ( ~ p602(X1) | ~ p202(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_200,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_201,axiom,epred7_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_202,axiom,epred4_0 | p202(esk2_0) | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_203,axiom,epred7_0 | epred4_0 | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_204,axiom,epred8_0 | epred4_0 | p202(esk2_0) | ~ p301(esk2_0) ).
+fof(c_0_205,axiom,epred8_0 | epred7_0 | epred4_0 | p202(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_206,axiom,epred8_0 | epred4_0 | p202(esk2_0) | ~ p601(esk2_0) ).
+fof(c_0_207,axiom,epred8_0 | ~ p603(esk2_0) ).
+fof(c_0_208,axiom,epred8_0 | epred7_0 | epred4_0 | p202(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_209,axiom,epred8_0 | epred4_0 | p202(esk2_0) | p502(esk2_0) | p504(esk2_0) | p505(esk2_0) ).
+fof(c_0_210,axiom,epred8_0 | epred7_0 | epred4_0 | ~ p502(esk2_0) ).
+fof(c_0_211,axiom,! [X1] : ( ~ p305(esk5_1(X1)) | ~ p605(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_212,axiom,! [X1] : ( ~ p205(esk10_1(X1)) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_213,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_214,axiom,epred7_0 | p503(esk2_0) | p603(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_215,axiom,! [X1] : ( ~ p604(X1) | ~ p504(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_216,axiom,epred8_0 | epred7_0 | epred2_0 | p504(esk2_0) | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_217,axiom,! [X1] : ( ~ p205(esk9_1(X1)) | ~ p605(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_218,axiom,! [X1] : ( r1(X1,esk13_1(X1)) | ~ p205(esk14_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_219,axiom,! [X1] : ( ~ p401(X1) | ~ p301(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_220,axiom,! [X1] : ( epred10_0 | ~ epred1_1(X1) | ~ p405(esk17_1(X1)) | ~ r1(esk2_0,esk18_1(X1)) ) ).
+fof(c_0_221,axiom,epred10_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | r1(esk2_0,esk18_1(esk2_0)) ).
+fof(c_0_222,axiom,! [X1] : ( epred6_0 | ~ epred1_1(X1) | ~ p405(esk11_1(X1)) | ~ r1(esk2_0,esk12_1(X1)) ) ).
+fof(c_0_223,axiom,epred6_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | r1(esk2_0,esk12_1(esk2_0)) ).
+fof(c_0_224,axiom,! [X1] : ( epred3_0 | ~ epred1_1(X1) | ~ p405(esk7_1(X1)) | ~ r1(esk2_0,esk8_1(X1)) ) ).
+fof(c_0_225,axiom,epred3_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | r1(esk2_0,esk8_1(esk2_0)) ).
+fof(c_0_226,axiom,! [X1] : ( ~ p203(esk40_1(X1)) | ~ p403(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_227,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk40_1(esk2_0)) | ~ p403(esk2_0) ).
+fof(c_0_228,axiom,! [X1] : ( ~ p405(esk3_1(X1)) | ~ p605(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_229,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk3_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_230,axiom,epred4_0 | p202(esk2_0) | ~ p401(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_231,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_232,axiom,! [X1] : ( ~ p402(X1) | ~ p202(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_233,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_234,axiom,! [X1] : ( ~ p102(esk50_1(X1)) | ~ p402(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_235,axiom,epred7_0 | p101(esk2_0) | p102(esk50_1(esk2_0)) | ~ p402(esk2_0) ).
+fof(c_0_236,axiom,epred4_0 | p202(esk2_0) | ~ p501(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_237,axiom,epred9_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p501(esk2_0) ).
+fof(c_0_238,axiom,epred9_0 | ~ p504(esk2_0) ).
+fof(c_0_239,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_240,axiom,! [X1] : ( ~ p204(esk26_1(X1)) | ~ p604(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_241,axiom,! [X1] : ( epred5_0 | ~ epred1_1(X1) | ~ p504(X1) | ~ r1(esk2_0,esk27_1(X1)) ) ).
+fof(c_0_242,axiom,! [X1] : ( r1(X1,esk27_1(X1)) | ~ p504(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_243,axiom,epred5_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_244,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_245,axiom,epred9_0 | epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_246,axiom,epred9_0 | epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_247,axiom,epred9_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_248,axiom,epred7_0 | epred4_0 | ~ p302(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_249,axiom,epred4_0 | p202(esk2_0) | ~ p601(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_250,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_251,axiom,epred9_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p601(esk2_0) ).
+fof(c_0_252,axiom,epred9_0 | ~ p604(esk2_0) ).
+fof(c_0_253,axiom,epred9_0 | epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_254,axiom,epred7_0 | epred4_0 | ~ p302(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_255,axiom,epred7_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_256,axiom,epred4_0 | p202(esk2_0) | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_257,axiom,epred7_0 | epred4_0 | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_258,axiom,! [X1] : ( ~ p603(X1) | ~ p503(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_259,axiom,epred7_0 | epred4_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_260,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p202(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_261,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_262,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p202(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_263,axiom,epred8_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_264,axiom,epred8_0 | epred7_0 | epred4_0 | ~ p302(esk2_0) ).
+fof(c_0_265,axiom,epred8_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_266,axiom,epred8_0 | epred4_0 | p202(esk2_0) | p602(esk2_0) | p604(esk2_0) | p605(esk2_0) ).
+fof(c_0_267,axiom,epred8_0 | epred7_0 | epred4_0 | ~ p602(esk2_0) ).
+fof(c_0_268,axiom,! [X1] : ( ~ p305(esk6_1(X1)) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_269,axiom,epred8_0 | epred7_0 | epred4_0 | p504(esk2_0) | p505(esk2_0) ).
+fof(c_0_270,axiom,! [X1] : ( epred3_0 | ~ epred1_1(X1) | ~ p605(X1) | ~ r1(esk2_0,esk5_1(X1)) ) ).
+fof(c_0_271,axiom,! [X1] : ( r1(X1,esk5_1(X1)) | ~ p605(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_272,axiom,! [X1] : ( epred6_0 | ~ epred1_1(X1) | ~ p505(X1) | ~ r1(esk2_0,esk10_1(X1)) ) ).
+fof(c_0_273,axiom,! [X1] : ( r1(X1,esk10_1(X1)) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_274,axiom,epred8_0 | epred7_0 | epred2_0 | p604(esk2_0) | p605(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_275,axiom,epred8_0 | epred7_0 | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_276,axiom,epred8_0 | epred7_0 | epred2_0 | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_277,axiom,! [X1] : ( epred6_0 | ~ epred1_1(X1) | ~ p605(X1) | ~ r1(esk2_0,esk9_1(X1)) ) ).
+fof(c_0_278,axiom,! [X1] : ( r1(X1,esk9_1(X1)) | ~ p605(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_279,axiom,! [X1] : ( ~ p205(esk14_1(X1)) | ~ p305(esk13_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_280,axiom,! [X1] : ( r1(X1,esk14_1(X1)) | ~ p305(esk13_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_281,axiom,! [X1] : ( epred6_0 | r1(X1,esk13_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk14_1(X1)) ) ).
+fof(c_0_282,axiom,! [X1] : ( r1(X1,esk14_1(X1)) | r1(X1,esk13_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_283,axiom,! [X1] : ( ~ p105(esk16_1(X1)) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_284,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p401(esk2_0) ).
+fof(c_0_285,axiom,epred10_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) ).
+fof(c_0_286,axiom,epred6_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) ).
+fof(c_0_287,axiom,epred3_0 | p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) ).
+fof(c_0_288,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_289,axiom,epred4_0 | p202(esk2_0) | ~ p401(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_290,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_291,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_292,axiom,epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_293,axiom,! [X1] : ( ~ p402(X1) | ~ p302(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_294,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_295,axiom,epred7_0 | p101(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_296,axiom,epred4_0 | p202(esk2_0) | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_297,axiom,epred9_0 | epred2_0 | p302(esk2_0) | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) ).
+fof(c_0_298,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p302(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_299,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_300,axiom,! [X1] : ( epred5_0 | ~ epred1_1(X1) | ~ p604(X1) | ~ r1(esk2_0,esk26_1(X1)) ) ).
+fof(c_0_301,axiom,! [X1] : ( r1(X1,esk26_1(X1)) | ~ p604(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_302,axiom,epred5_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p501(esk2_0) ).
+fof(c_0_303,axiom,epred5_0 | ~ p504(esk2_0) ).
+fof(c_0_304,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_305,axiom,epred7_0 | epred4_0 | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_306,axiom,epred9_0 | epred7_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_307,axiom,! [X1] : ( ~ p503(X1) | ~ p303(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_308,axiom,epred9_0 | epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_309,axiom,epred4_0 | p202(esk2_0) | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_310,axiom,epred7_0 | epred4_0 | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_311,axiom,epred9_0 | epred2_0 | p302(esk2_0) | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) ).
+fof(c_0_312,axiom,epred9_0 | epred7_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_313,axiom,! [X1] : ( ~ p603(X1) | ~ p303(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_314,axiom,epred9_0 | epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_315,axiom,epred7_0 | epred4_0 | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_316,axiom,epred7_0 | epred4_0 | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_317,axiom,! [X1] : ( r1(X1,esk36_1(X1)) | ~ p104(esk37_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_318,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_319,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_320,axiom,epred7_0 | epred5_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_321,axiom,epred8_0 | epred7_0 | epred4_0 | epred2_0 | ~ p504(esk2_0) ).
+fof(c_0_322,axiom,epred8_0 | epred7_0 | epred4_0 | epred2_0 | ~ p604(esk2_0) ).
+fof(c_0_323,axiom,epred8_0 | epred7_0 | epred4_0 | p604(esk2_0) | p605(esk2_0) ).
+fof(c_0_324,axiom,! [X1] : ( epred3_0 | ~ epred1_1(X1) | ~ p505(X1) | ~ r1(esk2_0,esk6_1(X1)) ) ).
+fof(c_0_325,axiom,! [X1] : ( r1(X1,esk6_1(X1)) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_326,axiom,epred8_0 | epred7_0 | epred4_0 | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_327,axiom,epred3_0 | ~ epred1_1(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_328,axiom,! [X1] : ! [X2] : ( p305(X1) | p304(X2) | p303(esk2_0) | p302(esk2_0) | p301(esk2_0) | ~ r1(esk2_0,X1) | ~ r1(esk2_0,X2) ) ).
+fof(c_0_329,axiom,epred6_0 | ~ p505(esk2_0) ).
+fof(c_0_330,axiom,epred8_0 | epred7_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_331,axiom,epred6_0 | ~ p605(esk2_0) ).
+fof(c_0_332,axiom,! [X1] : ( epred6_0 | ~ epred1_1(X1) | ~ p305(esk13_1(X1)) | ~ r1(esk2_0,esk14_1(X1)) ) ).
+fof(c_0_333,axiom,! [X1] : ( epred3_0 | r1(X1,esk14_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk13_1(X1)) ) ).
+fof(c_0_334,axiom,epred6_0 | r1(esk2_0,esk13_1(esk2_0)) ).
+fof(c_0_335,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p501(esk2_0) ).
+fof(c_0_336,axiom,! [X1] : ( ~ p501(X1) | ~ p401(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_337,axiom,! [X1] : ( epred10_0 | ~ epred1_1(X1) | ~ p505(X1) | ~ r1(esk2_0,esk16_1(X1)) ) ).
+fof(c_0_338,axiom,! [X1] : ( r1(X1,esk16_1(X1)) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_339,axiom,epred10_0 | epred2_0 | p302(esk2_0) | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) ).
+fof(c_0_340,axiom,epred6_0 | epred2_0 | p302(esk2_0) | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) ).
+fof(c_0_341,axiom,epred3_0 | epred2_0 | p302(esk2_0) | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) ).
+fof(c_0_342,axiom,epred4_0 | p202(esk2_0) | ~ p301(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_343,axiom,epred4_0 | p202(esk2_0) | ~ p401(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_344,axiom,epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_345,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_346,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_347,axiom,epred2_0 | p302(esk2_0) | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_348,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_349,axiom,! [X1] : ( ~ p401(X1) | ~ p101(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_350,axiom,epred7_0 | ~ p301(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_351,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_352,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_353,axiom,epred9_0 | epred2_0 | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_354,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_355,axiom,epred5_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_356,axiom,epred5_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p601(esk2_0) ).
+fof(c_0_357,axiom,epred5_0 | ~ p604(esk2_0) ).
+fof(c_0_358,axiom,epred5_0 | epred2_0 | p302(esk2_0) | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) ).
+fof(c_0_359,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_360,axiom,epred7_0 | epred4_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_361,axiom,epred9_0 | epred7_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) ).
+fof(c_0_362,axiom,epred9_0 | epred7_0 | epred4_0 | epred2_0 | ~ p503(esk2_0) ).
+fof(c_0_363,axiom,epred7_0 | epred4_0 | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_364,axiom,epred9_0 | epred7_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) ).
+fof(c_0_365,axiom,epred9_0 | epred7_0 | epred4_0 | epred2_0 | ~ p603(esk2_0) ).
+fof(c_0_366,axiom,epred7_0 | epred4_0 | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_367,axiom,! [X1] : ( ~ p104(esk37_1(X1)) | ~ p204(esk36_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_368,axiom,! [X1] : ( r1(X1,esk37_1(X1)) | ~ p204(esk36_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_369,axiom,! [X1] : ( epred9_0 | r1(X1,esk36_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk37_1(X1)) ) ).
+fof(c_0_370,axiom,! [X1] : ( r1(X1,esk37_1(X1)) | r1(X1,esk36_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_371,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_372,axiom,epred7_0 | epred4_0 | epred2_0 | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_373,axiom,! [X1] : ( r1(X1,esk19_1(X1)) | ~ p105(esk20_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_374,axiom,epred7_0 | epred5_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_375,axiom,epred7_0 | epred5_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_376,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p502(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_377,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p602(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_378,axiom,epred8_0 | epred4_0 | p502(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_379,axiom,! [X1] : ( ~ p105(esk15_1(X1)) | ~ p605(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_380,axiom,! [X1] : ( ~ p605(X1) | ~ p505(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_381,axiom,epred8_0 | epred7_0 | epred4_0 | epred2_0 | p505(esk2_0) ).
+fof(c_0_382,axiom,epred8_0 | epred7_0 | epred4_0 | epred2_0 | p605(esk2_0) ).
+fof(c_0_383,axiom,epred3_0 | ~ p505(esk2_0) ).
+fof(c_0_384,axiom,epred8_0 | epred7_0 | epred4_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_385,axiom,epred3_0 | ~ p605(esk2_0) ).
+fof(c_0_386,axiom,~ epred3_0 | ~ epred2_0 ).
+fof(c_0_387,axiom,epred8_0 | epred7_0 | epred6_0 | epred2_0 ).
+fof(c_0_388,axiom,! [X1] : ( epred6_0 | epred3_0 | ~ epred1_1(X1) | ~ r1(esk2_0,esk14_1(X1)) | ~ r1(esk2_0,esk13_1(X1)) ) ).
+fof(c_0_389,axiom,epred6_0 | epred3_0 | r1(esk2_0,esk14_1(esk2_0)) ).
+fof(c_0_390,axiom,epred10_0 | epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_391,axiom,epred2_0 | p302(esk2_0) | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) ).
+fof(c_0_392,axiom,epred10_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p501(esk2_0) ).
+fof(c_0_393,axiom,epred10_0 | ~ p505(esk2_0) ).
+fof(c_0_394,axiom,! [X1] : ( ~ p502(X1) | ~ p402(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_395,axiom,epred10_0 | epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_396,axiom,epred6_0 | epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_397,axiom,epred6_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p501(esk2_0) ).
+fof(c_0_398,axiom,epred6_0 | epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_399,axiom,epred4_0 | epred3_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_400,axiom,epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p501(esk2_0) ).
+fof(c_0_401,axiom,epred3_0 | epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_402,axiom,epred4_0 | p202(esk2_0) | ~ p501(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_403,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_404,axiom,epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p303(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_405,axiom,epred2_0 | p302(esk2_0) | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_406,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_407,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_408,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_409,axiom,epred7_0 | ~ p401(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_410,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_411,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p302(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_412,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_413,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_414,axiom,epred4_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_415,axiom,epred9_0 | epred2_0 | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_416,axiom,epred9_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_417,axiom,epred9_0 | epred4_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_418,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_419,axiom,epred5_0 | epred2_0 | p302(esk2_0) | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) ).
+fof(c_0_420,axiom,epred5_0 | epred2_0 | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_421,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_422,axiom,epred9_0 | epred8_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) ).
+fof(c_0_423,axiom,! [X1] : ( ~ p103(esk44_1(X1)) | ~ p403(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_424,axiom,epred9_0 | epred7_0 | epred4_0 | epred2_0 | p505(esk2_0) ).
+fof(c_0_425,axiom,epred9_0 | epred7_0 | epred4_0 | epred2_0 | p605(esk2_0) ).
+fof(c_0_426,axiom,epred9_0 | epred7_0 | epred4_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_427,axiom,! [X1] : ( epred9_0 | ~ epred1_1(X1) | ~ p204(esk36_1(X1)) | ~ r1(esk2_0,esk37_1(X1)) ) ).
+fof(c_0_428,axiom,! [X1] : ( epred5_0 | r1(X1,esk37_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk36_1(X1)) ) ).
+fof(c_0_429,axiom,epred9_0 | r1(esk2_0,esk36_1(esk2_0)) ).
+fof(c_0_430,axiom,epred7_0 | epred4_0 | epred2_0 | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_431,axiom,epred7_0 | epred4_0 | epred2_0 | p504(esk2_0) | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_432,axiom,! [X1] : ( ~ p105(esk20_1(X1)) | ~ p305(esk19_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_433,axiom,! [X1] : ( r1(X1,esk20_1(X1)) | ~ p305(esk19_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_434,axiom,! [X1] : ( epred10_0 | r1(X1,esk19_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk20_1(X1)) ) ).
+fof(c_0_435,axiom,! [X1] : ( r1(X1,esk20_1(X1)) | r1(X1,esk19_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_436,axiom,epred7_0 | epred5_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_437,axiom,epred7_0 | epred5_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) ).
+fof(c_0_438,axiom,epred8_0 | epred4_0 | p502(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_439,axiom,epred8_0 | epred4_0 | epred2_0 | ~ p502(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_440,axiom,epred8_0 | epred4_0 | p602(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_441,axiom,epred8_0 | epred4_0 | epred2_0 | ~ p602(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_442,axiom,epred8_0 | epred4_0 | p602(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_443,axiom,epred8_0 | epred4_0 | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_444,axiom,epred10_0 | epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_445,axiom,epred4_0 | p202(esk2_0) | ~ p601(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_446,axiom,! [X1] : ( ~ p601(X1) | ~ p401(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_447,axiom,! [X1] : ( epred10_0 | ~ epred1_1(X1) | ~ p605(X1) | ~ r1(esk2_0,esk15_1(X1)) ) ).
+fof(c_0_448,axiom,! [X1] : ( r1(X1,esk15_1(X1)) | ~ p605(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_449,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p601(esk2_0) ).
+fof(c_0_450,axiom,! [X1] : ! [X2] : ! [X3] : ( p205(X1) | p204(X2) | p203(X3) | p202(esk2_0) | p201(esk2_0) | ~ r1(esk2_0,X1) | ~ r1(esk2_0,X2) | ~ r1(esk2_0,X3) ) ).
+fof(c_0_451,axiom,epred8_0 | epred7_0 | epred4_0 | epred2_0 ).
+fof(c_0_452,axiom,epred8_0 | epred7_0 | epred4_0 | epred3_0 ).
+fof(c_0_453,axiom,epred8_0 | epred7_0 | epred6_0 | ~ epred3_0 ).
+fof(c_0_454,axiom,epred6_0 | epred3_0 ).
+fof(c_0_455,axiom,epred6_0 | epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_456,axiom,epred4_0 | epred3_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_457,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_458,axiom,epred2_0 | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_459,axiom,epred10_0 | p402(esk2_0) | p502(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_460,axiom,epred10_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_461,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_462,axiom,epred6_0 | p402(esk2_0) | p502(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_463,axiom,epred6_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_464,axiom,epred7_0 | ~ p401(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_465,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_466,axiom,epred3_0 | p402(esk2_0) | p502(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_467,axiom,epred3_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_468,axiom,epred4_0 | p202(esk2_0) | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_469,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_470,axiom,p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p501(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_471,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_472,axiom,epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_473,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_474,axiom,! [X1] : ( ~ p603(X1) | ~ p403(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_475,axiom,epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_476,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_477,axiom,epred7_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_478,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_479,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_480,axiom,epred4_0 | p503(esk2_0) | p603(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_481,axiom,epred9_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p603(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_482,axiom,epred9_0 | epred4_0 | epred2_0 | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_483,axiom,! [X1] : ( r1(X1,esk21_1(X1)) | ~ p105(esk22_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_484,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_485,axiom,epred5_0 | epred2_0 | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_486,axiom,epred5_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_487,axiom,epred5_0 | epred4_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_488,axiom,epred9_0 | epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_489,axiom,epred9_0 | epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_490,axiom,epred8_0 | epred5_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) ).
+fof(c_0_491,axiom,! [X1] : ( epred8_0 | ~ epred1_1(X1) | ~ p403(X1) | ~ r1(esk2_0,esk44_1(X1)) ) ).
+fof(c_0_492,axiom,! [X1] : ( r1(X1,esk44_1(X1)) | ~ p403(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_493,axiom,epred9_0 | epred7_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_494,axiom,epred9_0 | epred7_0 | epred4_0 | epred2_0 ).
+fof(c_0_495,axiom,epred9_0 | epred7_0 | epred4_0 | epred3_0 ).
+fof(c_0_496,axiom,! [X1] : ( epred9_0 | epred5_0 | ~ epred1_1(X1) | ~ r1(esk2_0,esk37_1(X1)) | ~ r1(esk2_0,esk36_1(X1)) ) ).
+fof(c_0_497,axiom,epred9_0 | epred5_0 | r1(esk2_0,esk37_1(esk2_0)) ).
+fof(c_0_498,axiom,epred7_0 | epred4_0 | epred2_0 | p604(esk2_0) | p605(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_499,axiom,epred7_0 | epred4_0 | epred2_0 | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_500,axiom,! [X1] : ( epred10_0 | ~ epred1_1(X1) | ~ p305(esk19_1(X1)) | ~ r1(esk2_0,esk20_1(X1)) ) ).
+fof(c_0_501,axiom,! [X1] : ( epred3_0 | r1(X1,esk20_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk19_1(X1)) ) ).
+fof(c_0_502,axiom,epred10_0 | r1(esk2_0,esk19_1(esk2_0)) ).
+fof(c_0_503,axiom,epred7_0 | epred5_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) ).
+fof(c_0_504,axiom,epred7_0 | epred5_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_505,axiom,epred8_0 | epred4_0 | epred2_0 | p504(esk2_0) | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_506,axiom,epred8_0 | epred4_0 | epred2_0 | p604(esk2_0) | p605(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_507,axiom,epred8_0 | epred4_0 | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_508,axiom,epred10_0 | epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_509,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_510,axiom,epred4_0 | p202(esk2_0) | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_511,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_512,axiom,epred10_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p601(esk2_0) ).
+fof(c_0_513,axiom,epred10_0 | ~ p605(esk2_0) ).
+fof(c_0_514,axiom,! [X1] : ( ~ p602(X1) | ~ p402(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_515,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_516,axiom,epred2_0 | p302(esk2_0) | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) ).
+fof(c_0_517,axiom,epred10_0 | epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_518,axiom,epred7_0 | epred5_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_519,axiom,~ epred6_0 | ~ epred5_0 | ~ epred4_0 ).
+fof(c_0_520,axiom,epred8_0 | epred7_0 | epred4_0 ).
+fof(c_0_521,axiom,epred8_0 | epred7_0 | epred6_0 ).
+fof(c_0_522,axiom,epred6_0 | epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_523,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_524,axiom,epred6_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p601(esk2_0) ).
+fof(c_0_525,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_526,axiom,epred6_0 | epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_527,axiom,epred4_0 | epred3_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_528,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_529,axiom,epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p601(esk2_0) ).
+fof(c_0_530,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_531,axiom,epred3_0 | epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_532,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_533,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_534,axiom,epred2_0 | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_535,axiom,epred10_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_536,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_537,axiom,epred6_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_538,axiom,epred7_0 | ~ p401(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_539,axiom,epred7_0 | ~ p501(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_540,axiom,epred7_0 | epred6_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_541,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_542,axiom,epred3_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_543,axiom,epred7_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_544,axiom,epred7_0 | ~ p201(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_545,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p302(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_546,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_547,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_548,axiom,p402(esk2_0) | p502(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_549,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_550,axiom,epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_551,axiom,! [X1] : ( ~ p503(X1) | ~ p403(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_552,axiom,epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_553,axiom,epred4_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_554,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_555,axiom,epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p303(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_556,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_557,axiom,epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_558,axiom,epred7_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_559,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_560,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_561,axiom,epred9_0 | epred4_0 | epred2_0 | p603(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_562,axiom,epred9_0 | epred4_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_563,axiom,! [X1] : ( ~ p105(esk22_1(X1)) | ~ p205(esk21_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_564,axiom,! [X1] : ( r1(X1,esk22_1(X1)) | ~ p205(esk21_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_565,axiom,! [X1] : ( epred10_0 | r1(X1,esk21_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk22_1(X1)) ) ).
+fof(c_0_566,axiom,! [X1] : ( r1(X1,esk22_1(X1)) | r1(X1,esk21_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_567,axiom,epred9_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_568,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_569,axiom,epred5_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p603(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_570,axiom,epred5_0 | epred4_0 | epred2_0 | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_571,axiom,epred5_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_572,axiom,epred9_0 | epred8_0 | epred4_0 | epred2_0 | ~ p502(esk2_0) ).
+fof(c_0_573,axiom,epred9_0 | epred8_0 | epred4_0 | epred2_0 | ~ p602(esk2_0) ).
+fof(c_0_574,axiom,epred8_0 | epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_575,axiom,epred8_0 | epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_576,axiom,epred8_0 | epred4_0 | p202(esk2_0) | ~ p401(esk2_0) ).
+fof(c_0_577,axiom,epred8_0 | ~ p403(esk2_0) ).
+fof(c_0_578,axiom,epred9_0 | epred7_0 | epred2_0 | p603(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_579,axiom,epred9_0 | epred7_0 | epred2_0 | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_580,axiom,epred9_0 | epred7_0 | epred4_0 ).
+fof(c_0_581,axiom,epred9_0 | epred5_0 ).
+fof(c_0_582,axiom,epred7_0 | epred4_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_583,axiom,! [X1] : ( epred10_0 | epred3_0 | ~ epred1_1(X1) | ~ r1(esk2_0,esk20_1(X1)) | ~ r1(esk2_0,esk19_1(X1)) ) ).
+fof(c_0_584,axiom,epred10_0 | epred3_0 | r1(esk2_0,esk20_1(esk2_0)) ).
+fof(c_0_585,axiom,epred7_0 | epred5_0 | epred2_0 | p603(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_586,axiom,epred7_0 | epred5_0 | epred2_0 | p505(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_587,axiom,epred8_0 | epred4_0 | epred2_0 | p505(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_588,axiom,epred8_0 | epred4_0 | epred2_0 | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_589,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_590,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_591,axiom,epred8_0 | epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p404(esk2_0) ).
+fof(c_0_592,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_593,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p302(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_594,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_595,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_596,axiom,epred10_0 | p402(esk2_0) | p602(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_597,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_598,axiom,epred2_0 | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_599,axiom,epred10_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_600,axiom,epred7_0 | epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_601,axiom,epred7_0 | epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_602,axiom,epred8_0 | epred7_0 | ~ epred5_0 ).
+fof(c_0_603,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_604,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_605,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_606,axiom,epred6_0 | p402(esk2_0) | p602(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_607,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_608,axiom,epred6_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_609,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_610,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_611,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_612,axiom,epred3_0 | p402(esk2_0) | p602(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_613,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_614,axiom,epred3_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_615,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_616,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_617,axiom,epred10_0 | p502(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_618,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_619,axiom,epred2_0 | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_620,axiom,epred2_0 | p303(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_621,axiom,epred10_0 | epred2_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_622,axiom,epred7_0 | epred6_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_623,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_624,axiom,epred6_0 | p502(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_625,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_626,axiom,epred6_0 | epred2_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_627,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_628,axiom,epred7_0 | ~ p601(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_629,axiom,epred7_0 | epred6_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_630,axiom,epred7_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_631,axiom,epred7_0 | epred6_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_632,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_633,axiom,epred3_0 | p502(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_634,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_635,axiom,epred3_0 | epred2_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_636,axiom,epred7_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_637,axiom,epred7_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_638,axiom,epred7_0 | ~ p401(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_639,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_640,axiom,epred7_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_641,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_642,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_643,axiom,! [X1] : ( ~ p403(X1) | ~ p303(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_644,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_645,axiom,epred4_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p303(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_646,axiom,epred2_0 | p303(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_647,axiom,epred4_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_648,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_649,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_650,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_651,axiom,p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p601(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_652,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_653,axiom,epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_654,axiom,epred4_0 | epred2_0 | p202(esk2_0) | p302(esk2_0) | p303(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_655,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_656,axiom,epred4_0 | p202(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_657,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p302(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_658,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_659,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_660,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_661,axiom,epred7_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_662,axiom,epred7_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_663,axiom,epred9_0 | epred4_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_664,axiom,! [X1] : ( epred10_0 | ~ epred1_1(X1) | ~ p205(esk21_1(X1)) | ~ r1(esk2_0,esk22_1(X1)) ) ).
+fof(c_0_665,axiom,! [X1] : ( epred6_0 | r1(X1,esk22_1(X1)) | ~ epred1_1(X1) | ~ r1(esk2_0,esk21_1(X1)) ) ).
+fof(c_0_666,axiom,epred10_0 | r1(esk2_0,esk21_1(esk2_0)) ).
+fof(c_0_667,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_668,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_669,axiom,epred5_0 | epred4_0 | epred2_0 | p603(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_670,axiom,epred5_0 | epred4_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_671,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_672,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_673,axiom,epred9_0 | epred8_0 | epred4_0 | epred2_0 | p505(esk2_0) ).
+fof(c_0_674,axiom,epred9_0 | epred8_0 | epred4_0 | epred2_0 | p605(esk2_0) ).
+fof(c_0_675,axiom,epred9_0 | epred8_0 | epred4_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_676,axiom,epred9_0 | epred8_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_677,axiom,epred8_0 | epred5_0 | epred4_0 | epred2_0 | ~ p502(esk2_0) ).
+fof(c_0_678,axiom,epred8_0 | epred5_0 | epred4_0 | epred2_0 | ~ p602(esk2_0) ).
+fof(c_0_679,axiom,epred8_0 | epred4_0 | epred3_0 | p202(esk2_0) | p402(esk2_0) | p404(esk2_0) ).
+fof(c_0_680,axiom,epred9_0 | epred7_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_681,axiom,epred9_0 | epred7_0 | ~ epred6_0 ).
+fof(c_0_682,axiom,epred10_0 | epred7_0 | epred4_0 | epred2_0 ).
+fof(c_0_683,axiom,epred10_0 | epred3_0 ).
+fof(c_0_684,axiom,epred7_0 | epred5_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_685,axiom,epred8_0 | epred4_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_686,axiom,epred8_0 | epred5_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_687,axiom,epred10_0 | epred4_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_688,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_689,axiom,epred8_0 | epred4_0 | p202(esk2_0) | p402(esk2_0) | p404(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_690,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_691,axiom,epred10_0 | epred4_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_692,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_693,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_694,axiom,epred10_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_695,axiom,epred7_0 | epred5_0 | epred4_0 | epred2_0 | ~ p503(esk2_0) ).
+fof(c_0_696,axiom,epred7_0 | epred5_0 | epred4_0 | epred2_0 | ~ p603(esk2_0) ).
+fof(c_0_697,axiom,epred8_0 | epred7_0 | epred2_0 | p505(esk2_0) ).
+fof(c_0_698,axiom,epred8_0 | epred7_0 | epred2_0 | p605(esk2_0) ).
+fof(c_0_699,axiom,epred6_0 | epred4_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_700,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_701,axiom,epred6_0 | epred4_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_702,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_703,axiom,epred6_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_704,axiom,epred8_0 | epred4_0 | p202(esk2_0) | p402(esk2_0) | p404(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_705,axiom,epred4_0 | epred3_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_706,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_707,axiom,epred4_0 | epred3_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_708,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_709,axiom,epred3_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_710,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_711,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_712,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_713,axiom,epred4_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_714,axiom,epred10_0 | p602(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_715,axiom,epred10_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_716,axiom,epred10_0 | epred4_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_717,axiom,epred2_0 | p303(esk2_0) | p503(esk2_0) | p603(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_718,axiom,epred10_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_719,axiom,epred7_0 | epred6_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) ).
+fof(c_0_720,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_721,axiom,epred6_0 | p602(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_722,axiom,epred6_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_723,axiom,epred6_0 | epred4_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_724,axiom,epred6_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_725,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_726,axiom,epred7_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_727,axiom,epred7_0 | epred6_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_728,axiom,epred7_0 | epred6_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_729,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_730,axiom,epred3_0 | p602(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_731,axiom,epred3_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_732,axiom,epred4_0 | epred3_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_733,axiom,epred3_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_734,axiom,epred7_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_735,axiom,epred7_0 | epred3_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_736,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_737,axiom,epred7_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_738,axiom,epred7_0 | epred4_0 | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_739,axiom,epred7_0 | epred3_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) ).
+fof(c_0_740,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_741,axiom,epred7_0 | epred4_0 | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_742,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_743,axiom,epred4_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_744,axiom,epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_745,axiom,epred4_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_746,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_747,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_748,axiom,p402(esk2_0) | p602(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_749,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_750,axiom,epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_751,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_752,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_753,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_754,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_755,axiom,epred7_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p202(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_756,axiom,epred7_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_757,axiom,epred7_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p202(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_758,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p402(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_759,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_760,axiom,epred7_0 | epred4_0 | ~ p302(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_761,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_762,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_763,axiom,epred7_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_764,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) ).
+fof(c_0_765,axiom,epred7_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_766,axiom,epred7_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_767,axiom,epred10_0 | epred9_0 | epred4_0 | epred2_0 ).
+fof(c_0_768,axiom,! [X1] : ( epred10_0 | epred6_0 | ~ epred1_1(X1) | ~ r1(esk2_0,esk22_1(X1)) | ~ r1(esk2_0,esk21_1(X1)) ) ).
+fof(c_0_769,axiom,epred10_0 | epred6_0 | r1(esk2_0,esk22_1(esk2_0)) ).
+fof(c_0_770,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_771,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_772,axiom,epred5_0 | epred4_0 | epred2_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_773,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_774,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_775,axiom,epred9_0 | epred8_0 | epred4_0 | epred2_0 ).
+fof(c_0_776,axiom,epred9_0 | epred8_0 | epred4_0 | epred3_0 ).
+fof(c_0_777,axiom,epred9_0 | epred8_0 | epred6_0 | epred2_0 ).
+fof(c_0_778,axiom,epred8_0 | epred5_0 | epred4_0 | epred2_0 | p505(esk2_0) ).
+fof(c_0_779,axiom,epred8_0 | epred5_0 | epred4_0 | epred2_0 | p605(esk2_0) ).
+fof(c_0_780,axiom,epred8_0 | epred5_0 | epred4_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_781,axiom,epred8_0 | epred4_0 | epred3_0 | p402(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_782,axiom,epred8_0 | epred4_0 | epred3_0 | p402(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_783,axiom,epred9_0 | epred7_0 | epred2_0 ).
+fof(c_0_784,axiom,epred10_0 | epred7_0 | epred4_0 ).
+fof(c_0_785,axiom,epred10_0 | epred7_0 | epred5_0 | epred2_0 ).
+fof(c_0_786,axiom,epred10_0 | epred8_0 | epred4_0 | epred2_0 ).
+fof(c_0_787,axiom,epred10_0 | epred8_0 | epred5_0 | epred2_0 ).
+fof(c_0_788,axiom,epred10_0 | epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_789,axiom,epred10_0 | epred4_0 | epred2_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_790,axiom,epred8_0 | epred4_0 | p402(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_791,axiom,epred8_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_792,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_793,axiom,epred10_0 | epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_794,axiom,epred4_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_795,axiom,epred10_0 | epred4_0 | epred2_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_796,axiom,epred7_0 | epred5_0 | epred4_0 | epred2_0 | p505(esk2_0) ).
+fof(c_0_797,axiom,epred7_0 | epred5_0 | epred4_0 | epred2_0 | p605(esk2_0) ).
+fof(c_0_798,axiom,epred7_0 | epred5_0 | epred4_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_799,axiom,epred8_0 | epred7_0 | epred2_0 ).
+fof(c_0_800,axiom,epred8_0 | epred7_0 | epred5_0 | p505(esk2_0) | p605(esk2_0) ).
+fof(c_0_801,axiom,epred6_0 | epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_802,axiom,epred6_0 | epred4_0 | epred2_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_803,axiom,epred6_0 | epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_804,axiom,epred6_0 | epred4_0 | epred2_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_805,axiom,epred8_0 | epred4_0 | p402(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_806,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_807,axiom,epred4_0 | epred3_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_808,axiom,epred4_0 | epred3_0 | epred2_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_809,axiom,epred4_0 | epred3_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_810,axiom,epred4_0 | epred3_0 | epred2_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_811,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_812,axiom,epred4_0 | p503(esk2_0) | p603(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_813,axiom,epred10_0 | p403(esk2_0) | p503(esk2_0) | p603(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_814,axiom,epred10_0 | epred4_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_815,axiom,epred10_0 | epred2_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_816,axiom,epred2_0 | p503(esk2_0) | p603(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_817,axiom,epred10_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_818,axiom,epred7_0 | epred6_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_819,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_820,axiom,epred6_0 | p403(esk2_0) | p503(esk2_0) | p603(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_821,axiom,epred6_0 | epred4_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_822,axiom,epred6_0 | epred2_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_823,axiom,epred6_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_824,axiom,epred7_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) ).
+fof(c_0_825,axiom,epred7_0 | epred6_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_826,axiom,epred7_0 | epred6_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_827,axiom,epred7_0 | epred6_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_828,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_829,axiom,epred3_0 | p403(esk2_0) | p503(esk2_0) | p603(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_830,axiom,epred4_0 | epred3_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_831,axiom,epred3_0 | epred2_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_832,axiom,epred3_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_833,axiom,epred7_0 | epred3_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_834,axiom,epred7_0 | epred3_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_835,axiom,epred7_0 | epred4_0 | ~ p502(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_836,axiom,epred7_0 | epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_837,axiom,epred7_0 | epred3_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_838,axiom,epred7_0 | epred4_0 | ~ p602(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_839,axiom,epred7_0 | epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_840,axiom,epred7_0 | epred3_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_841,axiom,epred8_0 | epred4_0 | p402(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_842,axiom,epred8_0 | epred4_0 | p402(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_843,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_844,axiom,epred4_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_845,axiom,epred4_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_846,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_847,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_848,axiom,epred4_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p303(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_849,axiom,epred2_0 | p303(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_850,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_851,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_852,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_853,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_854,axiom,epred7_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_855,axiom,epred7_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_856,axiom,epred7_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_857,axiom,epred7_0 | epred4_0 | ~ p402(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_858,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_859,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_860,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_861,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_862,axiom,epred4_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_863,axiom,epred7_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_864,axiom,epred7_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_865,axiom,epred7_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_866,axiom,epred7_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_867,axiom,epred2_0 | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_868,axiom,! [X1] : ( p404(X1) | ~ p104(esk33_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_869,axiom,! [X1] : ( p404(X1) | ~ p204(esk28_1(X1)) | ~ epred1_1(X1) ) ).
+fof(c_0_870,axiom,epred10_0 | epred9_0 | epred4_0 ).
+fof(c_0_871,axiom,epred10_0 | epred6_0 ).
+fof(c_0_872,axiom,epred9_0 | epred6_0 | epred4_0 | epred2_0 ).
+fof(c_0_873,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_874,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_875,axiom,epred10_0 | epred5_0 | epred4_0 | epred2_0 ).
+fof(c_0_876,axiom,epred6_0 | epred5_0 | epred4_0 | epred2_0 ).
+fof(c_0_877,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_878,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_879,axiom,epred9_0 | epred8_0 | epred4_0 ).
+fof(c_0_880,axiom,epred9_0 | epred8_0 | epred6_0 ).
+fof(c_0_881,axiom,epred8_0 | epred5_0 | epred4_0 | epred2_0 ).
+fof(c_0_882,axiom,epred8_0 | epred5_0 | epred4_0 | epred3_0 ).
+fof(c_0_883,axiom,epred8_0 | epred4_0 | p502(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_884,axiom,epred8_0 | epred4_0 | epred3_0 | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_885,axiom,epred8_0 | epred4_0 | p602(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_886,axiom,epred8_0 | epred4_0 | epred3_0 | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_887,axiom,epred9_0 | epred7_0 | ~ epred3_0 ).
+fof(c_0_888,axiom,epred10_0 | epred7_0 | ~ epred6_0 | ~ epred5_0 ).
+fof(c_0_889,axiom,epred10_0 | epred7_0 | epred5_0 ).
+fof(c_0_890,axiom,epred7_0 | epred6_0 | epred5_0 | epred2_0 ).
+fof(c_0_891,axiom,epred10_0 | epred8_0 | epred4_0 ).
+fof(c_0_892,axiom,epred10_0 | epred8_0 | epred5_0 ).
+fof(c_0_893,axiom,epred8_0 | epred6_0 | epred4_0 | epred2_0 ).
+fof(c_0_894,axiom,epred10_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_895,axiom,epred10_0 | epred4_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_896,axiom,epred8_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_897,axiom,epred8_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_898,axiom,epred10_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_899,axiom,epred10_0 | epred4_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_900,axiom,epred7_0 | epred5_0 | epred4_0 | epred2_0 ).
+fof(c_0_901,axiom,epred7_0 | epred5_0 | epred4_0 | epred3_0 ).
+fof(c_0_902,axiom,epred8_0 | epred7_0 | ~ epred3_0 ).
+fof(c_0_903,axiom,epred8_0 | epred7_0 | epred5_0 | epred3_0 ).
+fof(c_0_904,axiom,epred6_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_905,axiom,epred6_0 | epred4_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_906,axiom,epred6_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_907,axiom,epred6_0 | epred4_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_908,axiom,epred8_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_909,axiom,epred8_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_910,axiom,epred4_0 | epred3_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_911,axiom,epred4_0 | epred3_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_912,axiom,epred4_0 | epred3_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_913,axiom,epred4_0 | epred3_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_914,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_915,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_916,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_917,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_918,axiom,epred9_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_919,axiom,epred10_0 | epred4_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_920,axiom,epred10_0 | epred4_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_921,axiom,epred10_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_922,axiom,epred10_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_923,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_924,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_925,axiom,epred8_0 | epred6_0 | epred5_0 | epred2_0 ).
+fof(c_0_926,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_927,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_928,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_929,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_930,axiom,epred5_0 | epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_931,axiom,epred7_0 | epred6_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_932,axiom,epred6_0 | epred4_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_933,axiom,epred6_0 | epred4_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_934,axiom,epred6_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_935,axiom,epred6_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_936,axiom,epred7_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_937,axiom,epred7_0 | epred6_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_938,axiom,epred7_0 | epred6_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_939,axiom,epred7_0 | epred6_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_940,axiom,epred7_0 | epred5_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_941,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_942,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_943,axiom,epred4_0 | epred3_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_944,axiom,epred4_0 | epred3_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_945,axiom,epred3_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_946,axiom,epred3_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_947,axiom,epred7_0 | epred3_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_948,axiom,epred7_0 | epred3_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_949,axiom,epred7_0 | epred4_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_950,axiom,epred7_0 | epred4_0 | epred3_0 | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_951,axiom,epred7_0 | epred3_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_952,axiom,epred7_0 | epred4_0 | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_953,axiom,epred7_0 | epred4_0 | epred3_0 | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_954,axiom,epred7_0 | epred3_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_955,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_956,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_957,axiom,epred8_0 | epred4_0 | p404(esk2_0) | ~ p502(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_958,axiom,epred8_0 | epred4_0 | p404(esk2_0) | ~ p602(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_959,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p402(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_960,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p502(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_961,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p402(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_962,axiom,epred8_0 | epred4_0 | epred2_0 | p302(esk2_0) | ~ p602(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_963,axiom,epred8_0 | epred4_0 | p402(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_964,axiom,epred8_0 | epred4_0 | p402(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_965,axiom,epred4_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_966,axiom,epred4_0 | epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) ).
+fof(c_0_967,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_968,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_969,axiom,epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_970,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_971,axiom,epred4_0 | epred2_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_972,axiom,epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_973,axiom,epred4_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_974,axiom,epred7_0 | epred6_0 | epred4_0 | epred2_0 ).
+fof(c_0_975,axiom,epred7_0 | epred4_0 | p404(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_976,axiom,epred7_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_977,axiom,epred7_0 | epred4_0 | p404(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_978,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_979,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_980,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_981,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_982,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_983,axiom,epred7_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p303(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_984,axiom,epred7_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_985,axiom,epred7_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p303(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_986,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_987,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_988,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_989,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_990,axiom,epred7_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_991,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_992,axiom,epred7_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_993,axiom,epred4_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_994,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_995,axiom,epred4_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_996,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_997,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_998,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_999,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1000,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1001,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1002,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1003,axiom,epred4_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1004,axiom,epred7_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1005,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1006,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1007,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1008,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1009,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1010,axiom,epred7_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1011,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1012,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1013,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1014,axiom,epred7_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1015,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p302(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1016,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1017,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1018,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1019,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1020,axiom,epred7_0 | epred4_0 | p202(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1021,axiom,epred7_0 | epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1022,axiom,epred7_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1023,axiom,epred7_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1024,axiom,epred7_0 | epred2_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1025,axiom,epred7_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1026,axiom,epred2_0 | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1027,axiom,epred7_0 | epred2_0 | p403(esk2_0) | p404(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1028,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1029,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p502(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1030,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p402(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1031,axiom,epred7_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1032,axiom,epred7_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p602(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1033,axiom,epred7_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1034,axiom,epred7_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1035,axiom,epred1_1(esk47_1(esk1_0)) | r1(esk1_0,esk46_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1036,axiom,epred1_1(esk37_1(esk1_0)) | r1(esk1_0,esk36_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1037,axiom,epred1_1(esk35_1(esk1_0)) | r1(esk1_0,esk34_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1038,axiom,epred1_1(esk30_1(esk1_0)) | r1(esk1_0,esk29_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1039,axiom,epred1_1(esk22_1(esk1_0)) | r1(esk1_0,esk21_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1040,axiom,epred1_1(esk20_1(esk1_0)) | r1(esk1_0,esk19_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1041,axiom,epred1_1(esk18_1(esk1_0)) | r1(esk1_0,esk17_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1042,axiom,epred8_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1043,axiom,epred2_0 | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1044,axiom,epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1045,axiom,epred1_1(esk14_1(esk1_0)) | r1(esk1_0,esk13_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1046,axiom,epred1_1(esk12_1(esk1_0)) | r1(esk1_0,esk11_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1047,axiom,epred2_0 | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1048,axiom,! [X1] : ( r1(X1,esk33_1(X1)) | p404(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_1049,axiom,epred2_0 | p402(esk2_0) | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1050,axiom,epred1_1(esk8_1(esk1_0)) | r1(esk1_0,esk7_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1051,axiom,p502(esk2_0) | p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1052,axiom,! [X1] : ( r1(X1,esk28_1(X1)) | p404(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_1053,axiom,! [X1] : ( epred9_0 | p404(X1) | ~ epred1_1(X1) | ~ r1(esk2_0,esk33_1(X1)) ) ).
+fof(c_0_1054,axiom,! [X1] : ( epred5_0 | p404(X1) | ~ epred1_1(X1) | ~ r1(esk2_0,esk28_1(X1)) ) ).
+fof(c_0_1055,axiom,! [X1] : ! [X2] : ! [X3] : ! [X4] : ( p105(X1) | p104(X2) | p103(X3) | p102(X4) | p101(esk2_0) | ~ r1(esk2_0,X1) | ~ r1(esk2_0,X2) | ~ r1(esk2_0,X3) | ~ r1(esk2_0,X4) ) ).
+fof(c_0_1056,axiom,epred10_0 | epred9_0 ).
+fof(c_0_1057,axiom,epred9_0 | epred6_0 | epred4_0 ).
+fof(c_0_1058,axiom,epred9_0 | epred4_0 | epred3_0 | epred2_0 ).
+fof(c_0_1059,axiom,epred9_0 | epred4_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1060,axiom,epred9_0 | epred4_0 | epred2_0 | p603(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1061,axiom,epred10_0 | epred5_0 | epred4_0 ).
+fof(c_0_1062,axiom,epred6_0 | epred5_0 | epred4_0 ).
+fof(c_0_1063,axiom,epred5_0 | epred4_0 | epred3_0 | epred2_0 ).
+fof(c_0_1064,axiom,epred5_0 | epred4_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1065,axiom,epred5_0 | epred4_0 | epred2_0 | p603(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1066,axiom,epred9_0 | epred8_0 ).
+fof(c_0_1067,axiom,epred8_0 | epred5_0 | epred4_0 ).
+fof(c_0_1068,axiom,epred8_0 | epred4_0 | epred3_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1069,axiom,epred8_0 | epred4_0 | epred3_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1070,axiom,epred9_0 | epred7_0 ).
+fof(c_0_1071,axiom,epred10_0 | epred7_0 ).
+fof(c_0_1072,axiom,epred7_0 | epred6_0 | epred5_0 ).
+fof(c_0_1073,axiom,epred7_0 | epred5_0 | epred3_0 | epred2_0 ).
+fof(c_0_1074,axiom,epred10_0 | epred8_0 ).
+fof(c_0_1075,axiom,epred8_0 | epred6_0 | epred4_0 ).
+fof(c_0_1076,axiom,epred8_0 | epred4_0 | epred3_0 | epred2_0 ).
+fof(c_0_1077,axiom,epred10_0 | epred4_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1078,axiom,epred8_0 | epred4_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1079,axiom,epred10_0 | epred4_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1080,axiom,epred7_0 | epred5_0 | epred4_0 ).
+fof(c_0_1081,axiom,epred7_0 | epred5_0 | epred2_0 | p503(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1082,axiom,epred8_0 | epred7_0 ).
+fof(c_0_1083,axiom,epred7_0 | epred5_0 | epred2_0 | p603(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1084,axiom,epred6_0 | epred4_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1085,axiom,epred6_0 | epred4_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1086,axiom,epred8_0 | epred4_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1087,axiom,epred4_0 | epred3_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1088,axiom,epred4_0 | epred3_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1089,axiom,epred9_0 | epred2_0 | p503(esk2_0) | p603(esk2_0) | p505(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1090,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1091,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1092,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1093,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1094,axiom,epred9_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1095,axiom,epred9_0 | epred2_0 | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_1096,axiom,epred9_0 | epred2_0 | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_1097,axiom,epred9_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p401(esk2_0) ).
+fof(c_0_1098,axiom,epred10_0 | epred4_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1099,axiom,epred10_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1100,axiom,epred10_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1101,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1102,axiom,epred10_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1103,axiom,epred8_0 | epred6_0 | epred5_0 ).
+fof(c_0_1104,axiom,epred8_0 | epred5_0 | epred3_0 | epred2_0 ).
+fof(c_0_1105,axiom,epred5_0 | epred2_0 | p503(esk2_0) | p603(esk2_0) | p505(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1106,axiom,epred8_0 | epred6_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1107,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1108,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1109,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1110,axiom,epred8_0 | epred6_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1111,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1112,axiom,epred5_0 | epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1113,axiom,epred7_0 | epred6_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1114,axiom,epred6_0 | epred4_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1115,axiom,epred6_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1116,axiom,epred7_0 | epred6_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1117,axiom,epred7_0 | epred6_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1118,axiom,epred5_0 | epred2_0 | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_1119,axiom,epred5_0 | epred2_0 | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_1120,axiom,epred7_0 | epred5_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_1121,axiom,epred5_0 | epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p401(esk2_0) ).
+fof(c_0_1122,axiom,epred8_0 | epred6_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1123,axiom,epred6_0 | epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1124,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1125,axiom,epred6_0 | epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1126,axiom,epred8_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p304(esk46_1(esk2_0)) ).
+fof(c_0_1127,axiom,epred7_0 | epred6_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_1128,axiom,epred8_0 | epred3_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1129,axiom,epred4_0 | epred3_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1130,axiom,epred3_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1131,axiom,epred8_0 | epred3_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1132,axiom,epred7_0 | epred3_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1133,axiom,epred7_0 | epred4_0 | epred3_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1134,axiom,epred7_0 | epred3_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) ).
+fof(c_0_1135,axiom,epred7_0 | epred4_0 | epred3_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1136,axiom,epred7_0 | epred3_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) ).
+fof(c_0_1137,axiom,epred10_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk21_1(esk2_0)) ).
+fof(c_0_1138,axiom,epred8_0 | epred3_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) ).
+fof(c_0_1139,axiom,epred10_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk19_1(esk2_0)) ).
+fof(c_0_1140,axiom,epred4_0 | epred3_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1141,axiom,epred10_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk17_1(esk2_0)) ).
+fof(c_0_1142,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1143,axiom,epred7_0 | epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1144,axiom,epred4_0 | epred3_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1145,axiom,epred6_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk13_1(esk2_0)) ).
+fof(c_0_1146,axiom,epred8_0 | epred4_0 | epred3_0 | p402(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_1147,axiom,epred6_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk11_1(esk2_0)) ).
+fof(c_0_1148,axiom,epred3_0 | epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk7_1(esk2_0)) ).
+fof(c_0_1149,axiom,epred8_0 | epred4_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1150,axiom,epred8_0 | epred4_0 | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1151,axiom,epred8_0 | epred4_0 | epred2_0 | ~ p402(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1152,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk47_1(esk2_0)) | r1(esk2_0,esk46_1(esk2_0)) ).
+fof(c_0_1153,axiom,epred8_0 | epred4_0 | epred2_0 | ~ p502(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1154,axiom,epred8_0 | epred4_0 | epred2_0 | ~ p402(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1155,axiom,epred7_0 | p101(esk2_0) | p102(esk47_1(esk2_0)) | r1(esk2_0,esk46_1(esk2_0)) ).
+fof(c_0_1156,axiom,epred8_0 | epred4_0 | epred2_0 | ~ p602(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1157,axiom,epred8_0 | epred4_0 | p404(esk2_0) | ~ p502(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1158,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk47_1(esk2_0)) | r1(esk2_0,esk46_1(esk2_0)) ).
+fof(c_0_1159,axiom,epred8_0 | epred4_0 | p404(esk2_0) | ~ p602(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1160,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk47_1(esk2_0)) | r1(esk2_0,esk46_1(esk2_0)) ).
+fof(c_0_1161,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk37_1(esk2_0)) | r1(esk2_0,esk36_1(esk2_0)) ).
+fof(c_0_1162,axiom,epred7_0 | p101(esk2_0) | p102(esk37_1(esk2_0)) | r1(esk2_0,esk36_1(esk2_0)) ).
+fof(c_0_1163,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk37_1(esk2_0)) | r1(esk2_0,esk36_1(esk2_0)) ).
+fof(c_0_1164,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk37_1(esk2_0)) | r1(esk2_0,esk36_1(esk2_0)) ).
+fof(c_0_1165,axiom,epred4_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) ).
+fof(c_0_1166,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk35_1(esk2_0)) | r1(esk2_0,esk34_1(esk2_0)) ).
+fof(c_0_1167,axiom,epred4_0 | epred2_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1168,axiom,epred7_0 | p101(esk2_0) | p102(esk35_1(esk2_0)) | r1(esk2_0,esk34_1(esk2_0)) ).
+fof(c_0_1169,axiom,epred8_0 | p401(esk2_0) | p402(esk2_0) | p404(esk2_0) | p405(esk46_1(esk2_0)) ).
+fof(c_0_1170,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk35_1(esk2_0)) | r1(esk2_0,esk34_1(esk2_0)) ).
+fof(c_0_1171,axiom,epred4_0 | epred2_0 | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1172,axiom,epred4_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1173,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk35_1(esk2_0)) | r1(esk2_0,esk34_1(esk2_0)) ).
+fof(c_0_1174,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk30_1(esk2_0)) | r1(esk2_0,esk29_1(esk2_0)) ).
+fof(c_0_1175,axiom,epred4_0 | epred2_0 | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1176,axiom,epred7_0 | p101(esk2_0) | p102(esk30_1(esk2_0)) | r1(esk2_0,esk29_1(esk2_0)) ).
+fof(c_0_1177,axiom,epred9_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk36_1(esk2_0)) ).
+fof(c_0_1178,axiom,epred4_0 | epred2_0 | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1179,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk30_1(esk2_0)) | r1(esk2_0,esk29_1(esk2_0)) ).
+fof(c_0_1180,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk30_1(esk2_0)) | r1(esk2_0,esk29_1(esk2_0)) ).
+fof(c_0_1181,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk22_1(esk2_0)) | r1(esk2_0,esk21_1(esk2_0)) ).
+fof(c_0_1182,axiom,epred9_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk34_1(esk2_0)) ).
+fof(c_0_1183,axiom,epred7_0 | p101(esk2_0) | p102(esk22_1(esk2_0)) | r1(esk2_0,esk21_1(esk2_0)) ).
+fof(c_0_1184,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk22_1(esk2_0)) | r1(esk2_0,esk21_1(esk2_0)) ).
+fof(c_0_1185,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk22_1(esk2_0)) | r1(esk2_0,esk21_1(esk2_0)) ).
+fof(c_0_1186,axiom,epred5_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk29_1(esk2_0)) ).
+fof(c_0_1187,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk20_1(esk2_0)) | r1(esk2_0,esk19_1(esk2_0)) ).
+fof(c_0_1188,axiom,epred7_0 | epred5_0 | p101(esk2_0) | p102(esk29_1(esk2_0)) ).
+fof(c_0_1189,axiom,epred7_0 | p101(esk2_0) | p102(esk20_1(esk2_0)) | r1(esk2_0,esk19_1(esk2_0)) ).
+fof(c_0_1190,axiom,epred4_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1191,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk20_1(esk2_0)) | r1(esk2_0,esk19_1(esk2_0)) ).
+fof(c_0_1192,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk20_1(esk2_0)) | r1(esk2_0,esk19_1(esk2_0)) ).
+fof(c_0_1193,axiom,epred4_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1194,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk18_1(esk2_0)) | r1(esk2_0,esk17_1(esk2_0)) ).
+fof(c_0_1195,axiom,epred7_0 | epred6_0 | epred4_0 ).
+fof(c_0_1196,axiom,epred7_0 | p101(esk2_0) | p102(esk18_1(esk2_0)) | r1(esk2_0,esk17_1(esk2_0)) ).
+fof(c_0_1197,axiom,epred7_0 | epred4_0 | epred3_0 | epred2_0 ).
+fof(c_0_1198,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk18_1(esk2_0)) | r1(esk2_0,esk17_1(esk2_0)) ).
+fof(c_0_1199,axiom,epred7_0 | epred4_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1200,axiom,epred7_0 | epred4_0 | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1201,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk18_1(esk2_0)) | r1(esk2_0,esk17_1(esk2_0)) ).
+fof(c_0_1202,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1203,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1204,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk14_1(esk2_0)) | r1(esk2_0,esk13_1(esk2_0)) ).
+fof(c_0_1205,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1206,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1207,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1208,axiom,epred7_0 | p101(esk2_0) | p102(esk14_1(esk2_0)) | r1(esk2_0,esk13_1(esk2_0)) ).
+fof(c_0_1209,axiom,epred7_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1210,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk14_1(esk2_0)) | r1(esk2_0,esk13_1(esk2_0)) ).
+fof(c_0_1211,axiom,epred7_0 | epred4_0 | epred2_0 | p404(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1212,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1213,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1214,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk14_1(esk2_0)) | r1(esk2_0,esk13_1(esk2_0)) ).
+fof(c_0_1215,axiom,epred10_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk21_1(esk2_0)) ).
+fof(c_0_1216,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1217,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1218,axiom,epred7_0 | epred4_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) ).
+fof(c_0_1219,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk12_1(esk2_0)) | r1(esk2_0,esk11_1(esk2_0)) ).
+fof(c_0_1220,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1221,axiom,epred7_0 | epred4_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) ).
+fof(c_0_1222,axiom,epred7_0 | p101(esk2_0) | p102(esk12_1(esk2_0)) | r1(esk2_0,esk11_1(esk2_0)) ).
+fof(c_0_1223,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk12_1(esk2_0)) | r1(esk2_0,esk11_1(esk2_0)) ).
+fof(c_0_1224,axiom,epred4_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1225,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1226,axiom,epred4_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1227,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk12_1(esk2_0)) | r1(esk2_0,esk11_1(esk2_0)) ).
+fof(c_0_1228,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p303(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1229,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p303(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1230,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk8_1(esk2_0)) | r1(esk2_0,esk7_1(esk2_0)) ).
+fof(c_0_1231,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1232,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1233,axiom,epred7_0 | p101(esk2_0) | p102(esk8_1(esk2_0)) | r1(esk2_0,esk7_1(esk2_0)) ).
+fof(c_0_1234,axiom,epred10_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk19_1(esk2_0)) ).
+fof(c_0_1235,axiom,epred4_0 | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p302(esk2_0) | ~ p303(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1236,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1237,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p303(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1238,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1239,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk8_1(esk2_0)) | r1(esk2_0,esk7_1(esk2_0)) ).
+fof(c_0_1240,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p302(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1241,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk8_1(esk2_0)) | r1(esk2_0,esk7_1(esk2_0)) ).
+fof(c_0_1242,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p302(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1243,axiom,epred4_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1244,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk52_1(esk2_0)) | ~ p202(esk2_0) ).
+fof(c_0_1245,axiom,epred4_0 | p502(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1246,axiom,epred4_0 | epred2_0 | p303(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1247,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk51_1(esk2_0)) | ~ p302(esk2_0) ).
+fof(c_0_1248,axiom,epred7_0 | epred4_0 | p404(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1249,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk50_1(esk2_0)) | ~ p402(esk2_0) ).
+fof(c_0_1250,axiom,epred10_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk17_1(esk2_0)) ).
+fof(c_0_1251,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1252,axiom,epred7_0 | epred4_0 | epred2_0 | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1253,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1254,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk50_1(esk2_0)) | ~ p402(esk2_0) ).
+fof(c_0_1255,axiom,epred7_0 | epred4_0 | epred2_0 | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1256,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk49_1(esk2_0)) | ~ p502(esk2_0) ).
+fof(c_0_1257,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1258,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p503(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1259,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk49_1(esk2_0)) | ~ p502(esk2_0) ).
+fof(c_0_1260,axiom,epred7_0 | epred4_0 | p404(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1261,axiom,epred7_0 | epred4_0 | epred2_0 | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1262,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk48_1(esk2_0)) | ~ p602(esk2_0) ).
+fof(c_0_1263,axiom,epred4_0 | p602(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1264,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk48_1(esk2_0)) | ~ p602(esk2_0) ).
+fof(c_0_1265,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1266,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1267,axiom,epred7_0 | epred4_0 | epred2_0 | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1268,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk44_1(esk2_0)) | ~ p403(esk2_0) ).
+fof(c_0_1269,axiom,epred7_0 | epred4_0 | ~ p302(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1270,axiom,epred4_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1271,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk43_1(esk2_0)) | ~ p503(esk2_0) ).
+fof(c_0_1272,axiom,epred7_0 | epred4_0 | ~ p402(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1273,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk42_1(esk2_0)) | ~ p603(esk2_0) ).
+fof(c_0_1274,axiom,epred4_0 | p202(esk2_0) | ~ p301(esk2_0) | ~ p303(esk2_0) ).
+fof(c_0_1275,axiom,epred7_0 | epred4_0 | ~ p502(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1276,axiom,epred4_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1277,axiom,epred4_0 | p202(esk2_0) | ~ p401(esk2_0) | ~ p403(esk2_0) ).
+fof(c_0_1278,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk40_1(esk2_0)) | ~ p403(esk2_0) ).
+fof(c_0_1279,axiom,epred4_0 | p202(esk2_0) | ~ p501(esk2_0) | ~ p503(esk2_0) ).
+fof(c_0_1280,axiom,epred7_0 | epred4_0 | ~ p602(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1281,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk39_1(esk2_0)) | ~ p503(esk2_0) ).
+fof(c_0_1282,axiom,epred4_0 | p202(esk2_0) | ~ p601(esk2_0) | ~ p603(esk2_0) ).
+fof(c_0_1283,axiom,epred7_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) ).
+fof(c_0_1284,axiom,epred7_0 | epred2_0 | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p403(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1285,axiom,epred7_0 | epred2_0 | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1286,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk38_1(esk2_0)) | ~ p603(esk2_0) ).
+fof(c_0_1287,axiom,epred6_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk13_1(esk2_0)) ).
+fof(c_0_1288,axiom,epred7_0 | epred2_0 | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p403(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1289,axiom,epred7_0 | epred2_0 | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1290,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk32_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1291,axiom,epred7_0 | epred6_0 | p101(esk2_0) | p102(esk13_1(esk2_0)) ).
+fof(c_0_1292,axiom,epred7_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1293,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk31_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1294,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk52_1(esk2_0)) | ~ p202(esk2_0) ).
+fof(c_0_1295,axiom,epred6_0 | epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk11_1(esk2_0)) ).
+fof(c_0_1296,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk51_1(esk2_0)) | ~ p302(esk2_0) ).
+fof(c_0_1297,axiom,epred7_0 | epred2_0 | p404(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1298,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk27_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1299,axiom,epred7_0 | epred6_0 | p101(esk2_0) | p102(esk11_1(esk2_0)) ).
+fof(c_0_1300,axiom,epred2_0 | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p402(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1301,axiom,epred2_0 | p602(esk2_0) | p303(esk2_0) | p603(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1302,axiom,epred2_0 | p502(esk2_0) | p303(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p402(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1303,axiom,epred2_0 | p303(esk2_0) | p503(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1304,axiom,epred7_0 | epred2_0 | p404(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1305,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk26_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1306,axiom,epred7_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1307,axiom,epred7_0 | epred2_0 | p303(esk2_0) | ~ p502(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1308,axiom,epred7_0 | epred2_0 | p303(esk2_0) | ~ p402(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1309,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk24_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1310,axiom,epred4_0 | epred3_0 | p201(esk2_0) | p202(esk2_0) | p203(esk7_1(esk2_0)) ).
+fof(c_0_1311,axiom,epred7_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1312,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p401(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1313,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p501(esk2_0) | ~ p504(esk2_0) ).
+fof(c_0_1314,axiom,epred7_0 | epred3_0 | p101(esk2_0) | p102(esk7_1(esk2_0)) ).
+fof(c_0_1315,axiom,epred7_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1316,axiom,epred7_0 | epred2_0 | p303(esk2_0) | ~ p602(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1317,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk23_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1318,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p401(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1319,axiom,epred2_0 | p302(esk2_0) | p303(esk2_0) | ~ p601(esk2_0) | ~ p604(esk2_0) ).
+fof(c_0_1320,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk16_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1321,axiom,epred7_0 | ~ p201(esk2_0) | ~ p202(esk2_0) ).
+fof(c_0_1322,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk16_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1323,axiom,epred7_0 | ~ p301(esk2_0) | ~ p302(esk2_0) ).
+fof(c_0_1324,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk15_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1325,axiom,epred7_0 | ~ p401(esk2_0) | ~ p402(esk2_0) ).
+fof(c_0_1326,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk15_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1327,axiom,epred7_0 | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1328,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk10_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1329,axiom,epred7_0 | ~ p501(esk2_0) | ~ p502(esk2_0) ).
+fof(c_0_1330,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk10_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1331,axiom,epred7_0 | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1332,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk9_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1333,axiom,epred7_0 | ~ p601(esk2_0) | ~ p602(esk2_0) ).
+fof(c_0_1334,axiom,epred7_0 | p101(esk2_0) | p102(esk45_1(esk2_0)) | ~ p303(esk2_0) ).
+fof(c_0_1335,axiom,epred7_0 | p101(esk2_0) | p102(esk44_1(esk2_0)) | ~ p403(esk2_0) ).
+fof(c_0_1336,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk9_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1337,axiom,epred7_0 | p101(esk2_0) | p102(esk43_1(esk2_0)) | ~ p503(esk2_0) ).
+fof(c_0_1338,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk49_1(esk2_0)) | ~ p502(esk2_0) ).
+fof(c_0_1339,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk48_1(esk2_0)) | ~ p602(esk2_0) ).
+fof(c_0_1340,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk45_1(esk2_0)) | ~ p303(esk2_0) ).
+fof(c_0_1341,axiom,epred7_0 | p101(esk2_0) | p102(esk42_1(esk2_0)) | ~ p603(esk2_0) ).
+fof(c_0_1342,axiom,epred7_0 | p101(esk2_0) | p102(esk41_1(esk2_0)) | ~ p303(esk2_0) ).
+fof(c_0_1343,axiom,epred7_0 | p101(esk2_0) | p102(esk40_1(esk2_0)) | ~ p403(esk2_0) ).
+fof(c_0_1344,axiom,epred1_1(esk47_1(esk1_0)) | epred1_1(esk46_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1345,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk6_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1346,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk43_1(esk2_0)) | ~ p503(esk2_0) ).
+fof(c_0_1347,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk42_1(esk2_0)) | ~ p603(esk2_0) ).
+fof(c_0_1348,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk41_1(esk2_0)) | ~ p303(esk2_0) ).
+fof(c_0_1349,axiom,epred7_0 | p101(esk2_0) | p102(esk39_1(esk2_0)) | ~ p503(esk2_0) ).
+fof(c_0_1350,axiom,epred7_0 | p101(esk2_0) | p102(esk38_1(esk2_0)) | ~ p603(esk2_0) ).
+fof(c_0_1351,axiom,epred7_0 | p101(esk2_0) | p102(esk32_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1352,axiom,epred1_1(esk37_1(esk1_0)) | epred1_1(esk36_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1353,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk6_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1354,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk39_1(esk2_0)) | ~ p503(esk2_0) ).
+fof(c_0_1355,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk38_1(esk2_0)) | ~ p603(esk2_0) ).
+fof(c_0_1356,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk32_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1357,axiom,epred7_0 | p101(esk2_0) | p102(esk31_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1358,axiom,epred7_0 | p101(esk2_0) | p102(esk27_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1359,axiom,epred7_0 | p101(esk2_0) | p102(esk26_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1360,axiom,epred1_1(esk35_1(esk1_0)) | epred1_1(esk34_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1361,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk5_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1362,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk31_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1363,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk27_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1364,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk26_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1365,axiom,epred7_0 | p101(esk2_0) | p102(esk24_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1366,axiom,epred7_0 | p101(esk2_0) | p102(esk23_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1367,axiom,epred7_0 | p101(esk2_0) | p102(esk16_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1368,axiom,epred1_1(esk30_1(esk1_0)) | epred1_1(esk29_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1369,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk5_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1370,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk24_1(esk2_0)) | ~ p504(esk2_0) ).
+fof(c_0_1371,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk23_1(esk2_0)) | ~ p604(esk2_0) ).
+fof(c_0_1372,axiom,epred7_0 | p101(esk2_0) | p102(esk15_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1373,axiom,epred7_0 | p101(esk2_0) | p102(esk10_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1374,axiom,epred7_0 | p101(esk2_0) | p102(esk9_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1375,axiom,epred1_1(esk22_1(esk1_0)) | epred1_1(esk21_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1376,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk4_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1377,axiom,epred7_0 | p101(esk2_0) | p102(esk6_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1378,axiom,epred7_0 | p101(esk2_0) | p102(esk5_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1379,axiom,epred7_0 | p101(esk2_0) | p102(esk4_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1380,axiom,epred1_1(esk20_1(esk1_0)) | epred1_1(esk19_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1381,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk4_1(esk2_0)) | ~ p505(esk2_0) ).
+fof(c_0_1382,axiom,epred1_1(esk18_1(esk1_0)) | epred1_1(esk17_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1383,axiom,epred8_0 | epred2_0 | p404(esk2_0) | p504(esk2_0) | p604(esk2_0) | p505(esk2_0) ).
+fof(c_0_1384,axiom,epred8_0 | epred2_0 | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1385,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk3_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1386,axiom,epred2_0 | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p503(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1387,axiom,epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p502(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1388,axiom,epred7_0 | p101(esk2_0) | p102(esk3_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1389,axiom,epred1_1(esk14_1(esk1_0)) | epred1_1(esk13_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1390,axiom,p602(esk2_0) | p403(esk2_0) | p603(esk2_0) | p404(esk2_0) | p604(esk2_0) | p605(esk2_0) | ~ p502(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1391,axiom,p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p501(esk2_0) | ~ p505(esk2_0) ).
+fof(c_0_1392,axiom,epred2_0 | p301(esk2_0) | p302(esk2_0) | p303(esk2_0) | p304(esk3_1(esk2_0)) | ~ p605(esk2_0) ).
+fof(c_0_1393,axiom,epred1_1(esk12_1(esk1_0)) | epred1_1(esk11_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1394,axiom,epred2_0 | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p603(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1395,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk33_1(esk2_0)) | p404(esk2_0) ).
+fof(c_0_1396,axiom,epred2_0 | p303(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p602(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1397,axiom,epred7_0 | p101(esk2_0) | p102(esk33_1(esk2_0)) | p404(esk2_0) ).
+fof(c_0_1398,axiom,epred1_1(esk8_1(esk1_0)) | epred1_1(esk7_1(esk1_0)) | ~ epred1_1(esk1_0) ).
+fof(c_0_1399,axiom,p403(esk2_0) | p503(esk2_0) | p404(esk2_0) | p504(esk2_0) | p505(esk2_0) | ~ p602(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1400,axiom,p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | ~ p601(esk2_0) | ~ p605(esk2_0) ).
+fof(c_0_1401,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk33_1(esk2_0)) ).
+fof(c_0_1402,axiom,epred1_1(esk52_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p202(esk1_0) ).
+fof(c_0_1403,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk28_1(esk2_0)) | p404(esk2_0) ).
+fof(c_0_1404,axiom,epred1_1(esk51_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p302(esk1_0) ).
+fof(c_0_1405,axiom,epred1_1(esk50_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p402(esk1_0) ).
+fof(c_0_1406,axiom,epred1_1(esk49_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p502(esk1_0) ).
+fof(c_0_1407,axiom,epred1_1(esk48_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p602(esk1_0) ).
+fof(c_0_1408,axiom,epred7_0 | p101(esk2_0) | p102(esk28_1(esk2_0)) | p404(esk2_0) ).
+fof(c_0_1409,axiom,epred1_1(esk45_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p303(esk1_0) ).
+fof(c_0_1410,axiom,epred1_1(esk44_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p403(esk1_0) ).
+fof(c_0_1411,axiom,epred1_1(esk43_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p503(esk1_0) ).
+fof(c_0_1412,axiom,epred1_1(esk42_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p603(esk1_0) ).
+fof(c_0_1413,axiom,epred1_1(esk41_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p303(esk1_0) ).
+fof(c_0_1414,axiom,epred1_1(esk40_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p403(esk1_0) ).
+fof(c_0_1415,axiom,epred1_1(esk39_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p503(esk1_0) ).
+fof(c_0_1416,axiom,epred1_1(esk38_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p603(esk1_0) ).
+fof(c_0_1417,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk28_1(esk2_0)) ).
+fof(c_0_1418,axiom,epred1_1(esk32_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p504(esk1_0) ).
+fof(c_0_1419,axiom,epred1_1(esk31_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p604(esk1_0) ).
+fof(c_0_1420,axiom,epred1_1(esk27_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p504(esk1_0) ).
+fof(c_0_1421,axiom,epred1_1(esk26_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p604(esk1_0) ).
+fof(c_0_1422,axiom,epred4_0 | p201(esk2_0) | p202(esk2_0) | p203(esk25_1(esk2_0)) | p404(esk2_0) ).
+fof(c_0_1423,axiom,epred1_1(esk24_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p504(esk1_0) ).
+fof(c_0_1424,axiom,epred1_1(esk23_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p604(esk1_0) ).
+fof(c_0_1425,axiom,epred1_1(esk16_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p505(esk1_0) ).
+fof(c_0_1426,axiom,epred7_0 | p101(esk2_0) | p102(esk25_1(esk2_0)) | p404(esk2_0) ).
+fof(c_0_1427,axiom,epred1_1(esk15_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p605(esk1_0) ).
+fof(c_0_1428,axiom,epred1_1(esk10_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p505(esk1_0) ).
+fof(c_0_1429,axiom,epred1_1(esk9_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p605(esk1_0) ).
+fof(c_0_1430,axiom,epred1_1(esk6_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p505(esk1_0) ).
+fof(c_0_1431,axiom,epred1_1(esk5_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p605(esk1_0) ).
+fof(c_0_1432,axiom,p401(esk2_0) | p402(esk2_0) | p403(esk2_0) | p404(esk2_0) | p405(esk25_1(esk2_0)) ).
+fof(c_0_1433,axiom,epred1_1(esk4_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p505(esk1_0) ).
+fof(c_0_1434,axiom,epred1_1(esk3_1(esk1_0)) | ~ epred1_1(esk1_0) | ~ p605(esk1_0) ).
+fof(c_0_1435,axiom,epred1_1(esk33_1(esk1_0)) | p404(esk1_0) | ~ epred1_1(esk1_0) ).
+fof(c_0_1436,axiom,epred9_0 | p404(esk2_0) ).
+fof(c_0_1437,axiom,epred1_1(esk28_1(esk1_0)) | p404(esk1_0) | ~ epred1_1(esk1_0) ).
+fof(c_0_1438,axiom,epred5_0 | p404(esk2_0) ).
+fof(c_0_1439,axiom,epred1_1(esk25_1(esk1_0)) | p404(esk1_0) | ~ epred1_1(esk1_0) ).
+fof(c_0_1440,axiom,! [X1] : ( p404(X1) | ~ p504(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_1441,axiom,! [X1] : ( p404(X1) | ~ p604(X1) | ~ epred1_1(X1) ) ).
+fof(c_0_1442,axiom,~ epred10_0 | ~ epred9_0 | ~ epred8_0 | ~ epred7_0 ).

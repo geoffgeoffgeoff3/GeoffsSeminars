@@ -1,0 +1,103 @@
+fof(u69,axiom,! [X1] : group(skc2,skf9(X1)) ).
+fof(u90,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skf9(X1)) | hamburger(skc2,X0) ) ).
+fof(u97,axiom,! [X0] : ! [X1] : ( ~ member(skc2,X0,skf9(X1)) | ~ member(skc2,X1,skc3) ) ).
+fof(clause35,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) | ~ instrumentality(X0,X1) ) ).
+fof(clause36,axiom,! [X0] : ! [X1] : ( ~ artifact(X0,X1) | object(X0,X1) ) ).
+fof(clause34,axiom,! [X0] : ! [X1] : ( instrumentality(X0,X1) | ~ furniture(X0,X1) ) ).
+fof(u78,axiom,! [X0] : ! [X1] : ( ~ instrumentality(X0,X1) | object(X0,X1) ) ).
+fof(clause33,axiom,! [X0] : ! [X1] : ( furniture(X0,X1) | ~ table(X0,X1) ) ).
+fof(u106,axiom,! [X0] : ! [X1] : ( ~ furniture(X0,X1) | object(X0,X1) ) ).
+fof(u113,axiom,! [X0] : ! [X1] : ( ~ table(X0,X1) | object(X0,X1) ) ).
+fof(clause31,axiom,! [X0] : ! [X1] : ( nonexistent(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(clause40,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(clause28,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) | ~ event(X0,X1) ) ).
+fof(clause29,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | thing(X0,X1) ) ).
+fof(clause32,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(u82,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | ~ existent(X0,X1) ) ).
+fof(clause27,axiom,! [X0] : ! [X1] : ( event(X0,X1) | ~ sit(X0,X1) ) ).
+fof(u76,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | thing(X0,X1) ) ).
+fof(u77,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | unisex(X0,X1) ) ).
+fof(u110,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | ~ existent(X0,X1) ) ).
+fof(u100,axiom,! [X0] : ! [X1] : ( ~ sit(X0,X1) | thing(X0,X1) ) ).
+fof(u103,axiom,! [X0] : ! [X1] : ( ~ sit(X0,X1) | unisex(X0,X1) ) ).
+fof(u121,axiom,! [X0] : ! [X1] : ( ~ sit(X0,X1) | ~ existent(X0,X1) ) ).
+fof(clause26,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ object(X0,X1) ) ).
+fof(clause37,axiom,! [X0] : ! [X1] : ( ~ unisex(X0,X1) | ~ male(X0,X1) ) ).
+fof(clause24,axiom,! [X0] : ! [X1] : ( nonliving(X0,X1) | ~ object(X0,X1) ) ).
+fof(clause39,axiom,! [X0] : ! [X1] : ( ~ nonliving(X0,X1) | ~ living(X0,X1) ) ).
+fof(clause41,axiom,! [X0] : ! [X1] : ( ~ nonliving(X0,X1) | ~ animate(X0,X1) ) ).
+fof(clause22,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ substance_matter(X0,X1) ) ).
+fof(clause23,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | entity(X0,X1) ) ).
+fof(u79,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | ~ male(X0,X1) ) ).
+fof(u81,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | ~ living(X0,X1) ) ).
+fof(u83,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | ~ animate(X0,X1) ) ).
+fof(clause21,axiom,! [X0] : ! [X1] : ( substance_matter(X0,X1) | ~ food(X0,X1) ) ).
+fof(u75,axiom,! [X0] : ! [X1] : ( ~ substance_matter(X0,X1) | entity(X0,X1) ) ).
+fof(u107,axiom,! [X0] : ! [X1] : ( ~ substance_matter(X0,X1) | ~ male(X0,X1) ) ).
+fof(u109,axiom,! [X0] : ! [X1] : ( ~ substance_matter(X0,X1) | ~ living(X0,X1) ) ).
+fof(u111,axiom,! [X0] : ! [X1] : ( ~ substance_matter(X0,X1) | ~ animate(X0,X1) ) ).
+fof(clause20,axiom,! [X0] : ! [X1] : ( food(X0,X1) | ~ meat(X0,X1) ) ).
+fof(u99,axiom,! [X0] : ! [X1] : ( ~ food(X0,X1) | entity(X0,X1) ) ).
+fof(u118,axiom,! [X0] : ! [X1] : ( ~ food(X0,X1) | ~ male(X0,X1) ) ).
+fof(u120,axiom,! [X0] : ! [X1] : ( ~ food(X0,X1) | ~ living(X0,X1) ) ).
+fof(u122,axiom,! [X0] : ! [X1] : ( ~ food(X0,X1) | ~ animate(X0,X1) ) ).
+fof(clause19,axiom,! [X0] : ! [X1] : ( meat(X0,X1) | ~ burger(X0,X1) ) ).
+fof(u112,axiom,! [X0] : ! [X1] : ( ~ meat(X0,X1) | entity(X0,X1) ) ).
+fof(u124,axiom,! [X0] : ! [X1] : ( ~ meat(X0,X1) | ~ male(X0,X1) ) ).
+fof(u126,axiom,! [X0] : ! [X1] : ( ~ meat(X0,X1) | ~ living(X0,X1) ) ).
+fof(u130,axiom,! [X0] : ! [X1] : ( ~ meat(X0,X1) | ~ animate(X0,X1) ) ).
+fof(clause18,axiom,! [X0] : ! [X1] : ( burger(X0,X1) | ~ hamburger(X0,X1) ) ).
+fof(u123,axiom,! [X0] : ! [X1] : ( ~ burger(X0,X1) | entity(X0,X1) ) ).
+fof(u132,axiom,! [X0] : ! [X1] : ( ~ burger(X0,X1) | ~ male(X0,X1) ) ).
+fof(u134,axiom,! [X0] : ! [X1] : ( ~ burger(X0,X1) | ~ living(X0,X1) ) ).
+fof(u135,axiom,! [X0] : ! [X1] : ( ~ burger(X0,X1) | ~ animate(X0,X1) ) ).
+fof(u131,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | entity(X0,X1) ) ).
+fof(u136,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | ~ male(X0,X1) ) ).
+fof(u138,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | ~ living(X0,X1) ) ).
+fof(u139,axiom,! [X0] : ! [X1] : ( ~ hamburger(X0,X1) | ~ animate(X0,X1) ) ).
+fof(clause54,axiom,three(skc2,skc3) ).
+fof(clause17,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | group(X0,X1) ) ).
+fof(clause42,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | member(X0,skf17(X1,X0),X1) ) ).
+fof(clause43,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | member(X0,skf15(X1,X0),X1) ) ).
+fof(clause44,axiom,! [X0] : ! [X1] : ( ~ three(X0,X1) | member(X0,skf13(X1,X0),X1) ) ).
+fof(clause48,axiom,! [X0] : ! [X2] : ! [X1] : ( ~ three(X0,X2) | ~ member(X0,X1,X2) | skf17(X2,X0) = X1 | skf15(X2,X0) = X1 | skf13(X2,X0) = X1 ) ).
+fof(clause16,axiom,! [X0] : ! [X1] : ( multiple(X0,X1) | ~ set(X0,X1) ) ).
+fof(clause38,axiom,! [X0] : ! [X1] : ( ~ multiple(X0,X1) | ~ singleton(X0,X1) ) ).
+fof(clause15,axiom,! [X0] : ! [X1] : ( set(X0,X1) | ~ group(X0,X1) ) ).
+fof(u80,axiom,! [X0] : ! [X1] : ( ~ set(X0,X1) | ~ singleton(X0,X1) ) ).
+fof(clause55,axiom,group(skc2,skc3) ).
+fof(u141,axiom,! [X0] : ! [X1] : ( ~ group(X0,X1) | ~ guy(X0,X1) ) ).
+fof(clause14,axiom,! [X0] : ! [X1] : ( male(X0,X1) | ~ man(X0,X1) ) ).
+fof(clause13,axiom,! [X0] : ! [X1] : ( animate(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(clause11,axiom,! [X0] : ! [X1] : ( living(X0,X1) | ~ organism(X0,X1) ) ).
+fof(clause9,axiom,! [X0] : ! [X1] : ( existent(X0,X1) | ~ entity(X0,X1) ) ).
+fof(clause7,axiom,! [X0] : ! [X1] : ( singleton(X0,X1) | ~ thing(X0,X1) ) ).
+fof(u108,axiom,! [X0] : ! [X1] : ( ~ singleton(X0,X1) | ~ group(X0,X1) ) ).
+fof(clause6,axiom,! [X0] : ! [X1] : ( thing(X0,X1) | ~ entity(X0,X1) ) ).
+fof(u119,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | ~ group(X0,X1) ) ).
+fof(clause5,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ organism(X0,X1) ) ).
+fof(u125,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | ~ group(X0,X1) ) ).
+fof(clause4,axiom,! [X0] : ! [X1] : ( organism(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(u133,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | ~ group(X0,X1) ) ).
+fof(clause3,axiom,! [X0] : ! [X1] : ( human_person(X0,X1) | ~ man(X0,X1) ) ).
+fof(u137,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | ~ group(X0,X1) ) ).
+fof(clause2,axiom,! [X0] : ! [X1] : ( man(X0,X1) | ~ guy(X0,X1) ) ).
+fof(u140,axiom,! [X0] : ! [X1] : ( ~ man(X0,X1) | ~ group(X0,X1) ) ).
+fof(u105,axiom,guy(skc2,skf13(skc3,skc2)) ).
+fof(u102,axiom,guy(skc2,skf15(skc3,skc2)) ).
+fof(u86,axiom,guy(skc2,skf17(skc3,skc2)) ).
+fof(u143,axiom,! [X0] : ~ guy(skc2,skf9(X0)) ).
+fof(u142,axiom,~ guy(skc2,skc3) ).
+fof(u104,axiom,member(skc2,skf13(skc3,skc2),skc3) ).
+fof(u101,axiom,member(skc2,skf15(skc3,skc2),skc3) ).
+fof(u84,axiom,member(skc2,skf17(skc3,skc2),skc3) ).
+fof(clause52,axiom,! [X0] : ! [X3] : ! [X2] : ! [X1] : ! [X4] : ( ~ member(X0,X3,X2) | X1 = X3 | X1 = X4 | three(X0,X2) | ~ member(X0,X1,X2) | ~ member(X0,X4,X2) | X3 = X4 | member(X0,skf18(X1,X3,X4,X2,X0),X2) ) ).
+fof(clause1,axiom,! [X0] : ! [X1] : ~ member(X0,X1,X1) ).
+fof(clause57,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | guy(skc2,X0) ) ).
+fof(u114,axiom,! [X0] : ( ~ member(skc2,X0,skc3) | skf17(skc3,skc2) = X0 | skf15(skc3,skc2) = X0 | skf13(skc3,skc2) = X0 ) ).
+fof(clause51,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( skf18(X0,X1,X2,X3,X4) != X2 | X0 = X1 | X0 = X2 | three(X5,X6) | ~ member(X5,X2,X6) | ~ member(X5,X1,X6) | ~ member(X5,X0,X6) | X1 = X2 ) ).
+fof(clause50,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ! [X5] : ! [X6] : ( skf18(X0,X1,X2,X3,X4) != X1 | X0 = X1 | X0 = X7 | three(X5,X6) | ~ member(X5,X7,X6) | ~ member(X5,X1,X6) | ~ member(X5,X0,X6) | X1 = X7 ) ).
+fof(clause49,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X7] : ! [X8] : ! [X5] : ! [X6] : ( skf18(X0,X1,X2,X3,X4) != X0 | X0 = X7 | X0 = X8 | three(X5,X6) | ~ member(X5,X8,X6) | ~ member(X5,X7,X6) | ~ member(X5,X0,X6) | X7 = X8 ) ).
+fof(clause47,axiom,! [X0] : ! [X1] : ( skf13(X0,X1) != skf15(X0,X1) | ~ three(X1,X0) ) ).
+fof(clause46,axiom,! [X0] : ! [X1] : ( skf17(X0,X1) != skf15(X0,X1) | ~ three(X1,X0) ) ).
+fof(clause45,axiom,! [X0] : ! [X1] : ( skf17(X0,X1) != skf13(X0,X1) | ~ three(X1,X0) ) ).

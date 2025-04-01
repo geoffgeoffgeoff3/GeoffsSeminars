@@ -1,0 +1,94 @@
+fof(f1,axiom,! [X0] : ! [X1] : addition(X0,X1) = addition(X1,X0) ).
+fof(f2,axiom,! [X2] : ! [X1] : ! [X0] : addition(X0,addition(X1,X2)) = addition(addition(X0,X1),X2) ).
+fof(f3,axiom,! [X0] : addition(X0,zero) = X0 ).
+fof(f4,axiom,! [X0] : addition(X0,X0) = X0 ).
+fof(f5,axiom,! [X0] : ! [X1] : ! [X2] : multiplication(X0,multiplication(X1,X2)) = multiplication(multiplication(X0,X1),X2) ).
+fof(f6,axiom,! [X0] : multiplication(X0,one) = X0 ).
+fof(f7,axiom,! [X0] : multiplication(one,X0) = X0 ).
+fof(f8,axiom,! [X0] : ! [X1] : ! [X2] : multiplication(X0,addition(X1,X2)) = addition(multiplication(X0,X1),multiplication(X0,X2)) ).
+fof(f9,axiom,! [X0] : ! [X1] : ! [X2] : multiplication(addition(X0,X1),X2) = addition(multiplication(X0,X2),multiplication(X1,X2)) ).
+fof(f10,axiom,! [X0] : zero = multiplication(X0,zero) ).
+fof(f11,axiom,! [X0] : zero = multiplication(zero,X0) ).
+fof(f12,axiom,! [X0] : ! [X1] : ( leq(X0,X1) <=> addition(X0,X1) = X1 ) ).
+fof(f13,axiom,! [X0] : leq(addition(one,multiplication(X0,star(X0))),star(X0)) ).
+fof(f14,axiom,! [X0] : leq(addition(one,multiplication(star(X0),X0)),star(X0)) ).
+fof(f15,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(addition(multiplication(X0,X1),X2),X1) => leq(multiplication(star(X0),X2),X1) ) ).
+fof(f16,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(addition(multiplication(X0,X1),X2),X0) => leq(multiplication(X2,star(X1)),X0) ) ).
+fof(f17,axiom,! [X0] : omega(X0) = multiplication(X0,omega(X0)) ).
+fof(f18,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(X0,addition(multiplication(X1,X0),X2)) => leq(X0,addition(omega(X1),multiplication(star(X1),X2))) ) ).
+fof(f19,axiom,! [X3] : multiplication(domain(X3),X3) = addition(X3,multiplication(domain(X3),X3)) ).
+fof(f20,axiom,! [X3] : ! [X4] : domain(multiplication(X3,X4)) = domain(multiplication(X3,domain(X4))) ).
+fof(f21,axiom,! [X3] : one = addition(domain(X3),one) ).
+fof(f22,axiom,zero = domain(zero) ).
+fof(f23,axiom,! [X3] : ! [X4] : domain(addition(X3,X4)) = addition(domain(X3),domain(X4)) ).
+fof(f24,axiom,! [X0] : ! [X1] : ! [X2] : addition(X2,addition(X1,X0)) = addition(addition(X2,X1),X0) ).
+fof(f25,axiom,! [X0] : multiplication(domain(X0),X0) = addition(X0,multiplication(domain(X0),X0)) ).
+fof(f26,axiom,! [X0] : ! [X1] : domain(multiplication(X0,X1)) = domain(multiplication(X0,domain(X1))) ).
+fof(f27,axiom,! [X0] : one = addition(domain(X0),one) ).
+fof(f28,axiom,! [X0] : ! [X1] : domain(addition(X0,X1)) = addition(domain(X0),domain(X1)) ).
+fof(f29,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(multiplication(star(X0),X2),X1) | ~ leq(addition(multiplication(X0,X1),X2),X1) ) ).
+fof(f30,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(multiplication(X2,star(X1)),X0) | ~ leq(addition(multiplication(X0,X1),X2),X0) ) ).
+fof(f31,axiom,! [X0] : ! [X1] : ! [X2] : ( leq(X0,addition(omega(X1),multiplication(star(X1),X2))) | ~ leq(X0,addition(multiplication(X1,X0),X2)) ) ).
+fof(f32,axiom,! [X0] : ! [X1] : ( ( leq(X0,X1) | addition(X0,X1) != X1 ) & ( addition(X0,X1) = X1 | ~ leq(X0,X1) ) ) ).
+fof(f33,axiom,! [X0] : ! [X1] : addition(X0,X1) = addition(X1,X0) ).
+fof(f34,axiom,! [X2] : ! [X0] : ! [X1] : addition(X2,addition(X1,X0)) = addition(addition(X2,X1),X0) ).
+fof(f35,axiom,! [X0] : addition(X0,zero) = X0 ).
+fof(f36,axiom,! [X0] : addition(X0,X0) = X0 ).
+fof(f37,axiom,! [X2] : ! [X0] : ! [X1] : multiplication(X0,multiplication(X1,X2)) = multiplication(multiplication(X0,X1),X2) ).
+fof(f38,axiom,! [X0] : multiplication(X0,one) = X0 ).
+fof(f39,axiom,! [X0] : multiplication(one,X0) = X0 ).
+fof(f40,axiom,! [X2] : ! [X0] : ! [X1] : multiplication(X0,addition(X1,X2)) = addition(multiplication(X0,X1),multiplication(X0,X2)) ).
+fof(f41,axiom,! [X2] : ! [X0] : ! [X1] : multiplication(addition(X0,X1),X2) = addition(multiplication(X0,X2),multiplication(X1,X2)) ).
+fof(f42,axiom,! [X0] : zero = multiplication(X0,zero) ).
+fof(f43,axiom,! [X0] : zero = multiplication(zero,X0) ).
+fof(f44,axiom,! [X0] : ! [X1] : ( addition(X0,X1) = X1 | ~ leq(X0,X1) ) ).
+fof(f45,axiom,! [X0] : ! [X1] : ( leq(X0,X1) | addition(X0,X1) != X1 ) ).
+fof(f46,axiom,! [X0] : leq(addition(one,multiplication(X0,star(X0))),star(X0)) ).
+fof(f47,axiom,! [X0] : leq(addition(one,multiplication(star(X0),X0)),star(X0)) ).
+fof(f48,axiom,! [X2] : ! [X0] : ! [X1] : ( leq(multiplication(star(X0),X2),X1) | ~ leq(addition(multiplication(X0,X1),X2),X1) ) ).
+fof(f49,axiom,! [X2] : ! [X0] : ! [X1] : ( leq(multiplication(X2,star(X1)),X0) | ~ leq(addition(multiplication(X0,X1),X2),X0) ) ).
+fof(f50,axiom,! [X0] : omega(X0) = multiplication(X0,omega(X0)) ).
+fof(f51,axiom,! [X2] : ! [X0] : ! [X1] : ( leq(X0,addition(omega(X1),multiplication(star(X1),X2))) | ~ leq(X0,addition(multiplication(X1,X0),X2)) ) ).
+fof(f52,axiom,! [X0] : multiplication(domain(X0),X0) = addition(X0,multiplication(domain(X0),X0)) ).
+fof(f53,axiom,! [X0] : ! [X1] : domain(multiplication(X0,X1)) = domain(multiplication(X0,domain(X1))) ).
+fof(f54,axiom,! [X0] : one = addition(domain(X0),one) ).
+fof(f55,axiom,zero = domain(zero) ).
+fof(f56,axiom,! [X0] : ! [X1] : domain(addition(X0,X1)) = addition(domain(X0),domain(X1)) ).
+fof(c_49,axiom,! [X0] : ! [X1] : addition(X0,X1) = addition(X1,X0) ).
+fof(c_50,axiom,! [X0] : ! [X1] : ! [X2] : addition(addition(X0,X1),X2) = addition(X0,addition(X1,X2)) ).
+fof(c_51,axiom,! [X0] : addition(X0,zero) = X0 ).
+fof(c_52,axiom,! [X0] : addition(X0,X0) = X0 ).
+fof(c_53,axiom,! [X0] : ! [X1] : ! [X2] : multiplication(multiplication(X0,X1),X2) = multiplication(X0,multiplication(X1,X2)) ).
+fof(c_54,axiom,! [X0] : multiplication(X0,one) = X0 ).
+fof(c_55,axiom,! [X0] : multiplication(one,X0) = X0 ).
+fof(c_56,axiom,! [X0] : ! [X1] : ! [X2] : addition(multiplication(X0,X1),multiplication(X0,X2)) = multiplication(X0,addition(X1,X2)) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ! [X2] : addition(multiplication(X0,X1),multiplication(X2,X1)) = multiplication(addition(X0,X2),X1) ).
+fof(c_58,axiom,! [X0] : multiplication(X0,zero) = zero ).
+fof(c_59,axiom,! [X0] : multiplication(zero,X0) = zero ).
+fof(c_60,axiom,! [X0] : ! [X1] : ( addition(X0,X1) != X1 | leq(X0,X1) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ leq(X0,X1) | addition(X0,X1) = X1 ) ).
+fof(c_62,axiom,! [X0] : leq(addition(one,multiplication(X0,star(X0))),star(X0)) ).
+fof(c_63,axiom,! [X0] : leq(addition(one,multiplication(star(X0),X0)),star(X0)) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(addition(multiplication(X0,X1),X2),X1) | leq(multiplication(star(X0),X2),X1) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(addition(multiplication(X0,X1),X2),X0) | leq(multiplication(X2,star(X1)),X0) ) ).
+fof(c_66,axiom,! [X0] : multiplication(X0,omega(X0)) = omega(X0) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(X0,addition(multiplication(X1,X0),X2)) | leq(X0,addition(omega(X1),multiplication(star(X1),X2))) ) ).
+fof(c_68,axiom,! [X0] : addition(X0,multiplication(domain(X0),X0)) = multiplication(domain(X0),X0) ).
+fof(c_69,axiom,! [X0] : ! [X1] : domain(multiplication(X0,domain(X1))) = domain(multiplication(X0,X1)) ).
+fof(c_70,axiom,! [X0] : addition(domain(X0),one) = one ).
+fof(c_71,axiom,domain(zero) = zero ).
+fof(c_72,axiom,! [X0] : ! [X1] : addition(domain(X0),domain(X1)) = domain(addition(X0,X1)) ).
+fof(c_93,axiom,! [X0] : addition(one,domain(X0)) = one ).
+fof(c_94,axiom,! [X0] : ! [X1] : ( leq(X0,X1) | addition(X0,X1) != X1 ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ( addition(X0,X1) != X1 | leq(X0,X1) ) ).
+fof(c_96,axiom,! [X0] : ! [X1] : ( ~ leq(X0,X1) | addition(X0,X1) = X1 ) ).
+fof(c_98,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(addition(multiplication(X0,X1),X2),X1) | leq(multiplication(star(X0),X2),X1) ) ).
+fof(c_100,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(addition(multiplication(X0,X1),X2),X0) | leq(multiplication(X2,star(X1)),X0) ) ).
+fof(c_102,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ leq(X0,addition(multiplication(X1,X0),X2)) | leq(X0,addition(omega(X1),multiplication(star(X1),X2))) ) ).
+fof(c_218,axiom,! [X0] : X0 = X0 ).
+fof(c_219,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_220,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | X2 != X1 | X2 = X0 ) ).
+fof(c_221,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | addition(X0,X2) = addition(X1,X3) ) ).
+fof(c_222,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | multiplication(X0,X2) = multiplication(X1,X3) ) ).
+fof(c_223,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ leq(X1,X3) | leq(X0,X2) ) ).
+fof(c_224,axiom,! [X0] : ! [X1] : ( X0 != X1 | domain(X0) = domain(X1) ) ).

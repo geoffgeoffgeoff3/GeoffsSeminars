@@ -1,0 +1,2 @@
+include('Saturations/MGT038+2/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
+fof(mp_first_movers_negative_growth,conjecture,! [E] : ( ( environment(E) & stable(E) & ? [T1] : ( in_environment(E,T1) & ! [T] : ( ( subpopulations(first_movers,efficient_producers,E,T) & greater_or_equal(T,T1) ) => greater(zero,growth_rate(first_movers,T)) ) ) ) => ? [T2] : ( greater(T2,appear(efficient_producers,E)) & ! [T] : ( ( subpopulations(first_movers,efficient_producers,E,T) & greater_or_equal(T,T2) ) => greater(zero,growth_rate(first_movers,T)) ) ) ) ).

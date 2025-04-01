@@ -1,0 +1,15 @@
+fof(u42,axiom,message(sent(b,t,triple(b,generate_b_nonce(an_a_nonce),encrypt(triple(a,an_a_nonce,generate_expiration_time(an_a_nonce)),bt)))) ).
+fof(u45,axiom,fresh_to_b(an_a_nonce) ).
+fof(u53,axiom,t_holds(key(bt,b)) ).
+fof(u57,axiom,! [X0] : ( message(sent(t,a,triple(encrypt(quadruple(b,an_a_nonce,generate_key(an_a_nonce),generate_expiration_time(an_a_nonce)),X0),encrypt(triple(a,generate_key(an_a_nonce),generate_expiration_time(an_a_nonce)),bt),generate_b_nonce(an_a_nonce)))) | ~ t_holds(key(X0,a)) ) ).
+fof(u65,axiom,message(sent(a,b,pair(encrypt(triple(a,generate_key(an_a_nonce),generate_expiration_time(an_a_nonce)),bt),encrypt(generate_b_nonce(an_a_nonce),generate_key(an_a_nonce))))) ).
+fof(u68,axiom,a_stored(pair(b,an_a_nonce)) ).
+fof(u72,axiom,t_holds(key(at,a)) ).
+fof(u33,axiom,t_holds(key(bt,b)) ).
+fof(u32,axiom,t_holds(key(at,a)) ).
+fof(u30,axiom,fresh_to_b(an_a_nonce) ).
+fof(u31,axiom,a_stored(pair(b,an_a_nonce)) ).
+fof(u34,axiom,message(sent(a,b,pair(a,an_a_nonce))) ).
+fof(u36,axiom,! [X4] : ! [X5] : ! [X2] : ! [X1] : ! [X3] : ! [X0] : ( ~ message(sent(t,a,triple(encrypt(quadruple(X4,X5,X2,X1),at),X3,X0))) | ~ a_stored(pair(X4,X5)) | message(sent(a,X4,pair(X3,encrypt(X0,X2)))) ) ).
+fof(u37,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ message(sent(X0,t,triple(X0,X1,encrypt(triple(X2,X3,X4),X5)))) | ~ t_holds(key(X6,X2)) | ~ t_holds(key(X5,X0)) | message(sent(t,X2,triple(encrypt(quadruple(X0,X3,generate_key(X3),X4),X6),encrypt(triple(X2,generate_key(X3),X4),X5),X1))) ) ).
+fof(u35,axiom,! [X0] : ! [X1] : ( ~ message(sent(X0,b,pair(X0,X1))) | ~ fresh_to_b(X1) | message(sent(b,t,triple(b,generate_b_nonce(X1),encrypt(triple(X0,X1,generate_expiration_time(X1)),bt)))) ) ).

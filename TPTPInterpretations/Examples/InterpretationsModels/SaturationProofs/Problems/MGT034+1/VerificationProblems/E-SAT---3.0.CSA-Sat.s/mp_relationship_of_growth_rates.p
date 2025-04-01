@@ -1,0 +1,2 @@
+include('Saturations/MGT034+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
+fof(mp_relationship_of_growth_rates,conjecture,! [E] : ! [T] : ( ( environment(E) & subpopulations(first_movers,efficient_producers,E,T) & ~ greater(zero,difference(growth_rate(first_movers,T),growth_rate(efficient_producers,T))) ) => greater_or_equal(difference(growth_rate(first_movers,T),growth_rate(efficient_producers,T)),zero) ) ).

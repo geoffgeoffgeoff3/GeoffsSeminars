@@ -1,0 +1,456 @@
+fof(axiom_11,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iF | X3 = iT ) ) ).
+fof(axiom_4,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iplus4 | X3 = iminus4 ) ) ).
+fof(axiom_6,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iplus6 | X3 = iminus6 ) ) ).
+fof(axiom_77,axiom,iF != iT ).
+fof(axiom_3,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iminus1 | X3 = iplus1 ) ) ).
+fof(axiom_10,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iplus9 | X3 = iminus9 ) ) ).
+fof(axiom_8,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iplus2 | X3 = iminus2 ) ) ).
+fof(axiom_7,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iminus5 | X3 = iplus5 ) ) ).
+fof(axiom_9,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iplus8 | X3 = iminus8 ) ) ).
+fof(axiom_49,axiom,iT = iplus2 | iT = iminus8 | iT = iminus9 ).
+fof(axiom_50,axiom,iT = iminus8 | iT = iminus2 | iT = iminus9 ).
+fof(axiom_33,axiom,iT = iminus8 | iT = iplus9 | iT = iminus1 ).
+fof(axiom_2,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iminus3 | X3 = iplus3 ) ) ).
+fof(axiom_25,axiom,iT = iminus2 | iT = iplus9 | iT = iminus1 ).
+fof(axiom_5,axiom,! [X3] : ( cTorF(X3) <=> ( X3 = iplus7 | X3 = iminus7 ) ) ).
+fof(axiom_43,axiom,iT = iplus2 | iT = iminus8 | iT = iplus1 ).
+fof(axiom_41,axiom,iT = iplus8 | iT = iminus6 | iT = iplus3 ).
+fof(axiom_58,axiom,iT = iplus8 | iT = iplus3 | iT = iminus7 ).
+fof(axiom_46,axiom,iT = iminus5 | iT = iplus4 | iT = iplus7 ).
+fof(axiom_26,axiom,iT = iminus2 | iT = iminus3 | iT = iminus7 ).
+fof(axiom_44,axiom,iT = iplus9 | iT = iminus3 | iT = iplus1 ).
+fof(axiom_17,axiom,iT = iplus6 | iT = iplus7 | iT = iplus3 ).
+fof(axiom_31,axiom,iT = iminus8 | iT = iminus3 | iT = iplus7 ).
+fof(axiom_53,axiom,iT = iplus2 | iT = iminus1 | iT = iplus3 ).
+fof(axiom_16,axiom,iT = iminus2 | iT = iminus9 | iT = iplus1 ).
+fof(axiom_14,axiom,iT = iplus2 | iT = iminus3 | iT = iplus7 ).
+fof(axiom_22,axiom,iT = iminus9 | iT = iminus1 | iT = iplus7 ).
+fof(axiom_35,axiom,iT = iminus2 | iT = iplus7 | iT = iplus3 ).
+fof(axiom_51,axiom,iT = iminus5 | iT = iminus2 | iT = iplus3 ).
+fof(axiom_32,axiom,iT = iminus5 | iT = iplus1 | iT = iminus7 ).
+fof(axiom_21,axiom,iT = iplus2 | iT = iplus5 | iT = iminus7 ).
+fof(axiom_28,axiom,iT = iminus9 | iT = iplus5 | iT = iminus7 ).
+fof(axiom_48,axiom,iT = iplus2 | iT = iminus6 | iT = iminus3 ).
+fof(axiom_15,axiom,iT = iplus6 | iT = iplus5 | iT = iminus7 ).
+fof(axiom_40,axiom,iT = iplus8 | iT = iplus6 | iT = iminus3 ).
+fof(axiom_1,axiom,! [X3] : ( xsd_string(X3) <=> ~ xsd_integer(X3) ) ).
+fof(axiom_0,axiom,! [X3] : ( cowlThing(X3) & ~ cowlNothing(X3) ) ).
+fof(c_0_37,axiom,! [X25] : ( ( ~ cTorF(X25) | X25 = iF | X25 = iT ) & ( X25 != iF | cTorF(X25) ) & ( X25 != iT | cTorF(X25) ) ) ).
+fof(c_0_38,axiom,! [X18] : ( ( ~ cTorF(X18) | X18 = iplus4 | X18 = iminus4 ) & ( X18 != iplus4 | cTorF(X18) ) & ( X18 != iminus4 | cTorF(X18) ) ) ).
+fof(c_0_39,axiom,! [X20] : ( ( ~ cTorF(X20) | X20 = iplus6 | X20 = iminus6 ) & ( X20 != iplus6 | cTorF(X20) ) & ( X20 != iminus6 | cTorF(X20) ) ) ).
+fof(c_0_40,axiom,! [X1] : ( cTorF(X1) | X1 != iF ) ).
+fof(c_0_41,axiom,! [X1] : ( cTorF(X1) | X1 != iminus4 ) ).
+fof(c_0_42,axiom,! [X1] : ( X1 = iplus6 | X1 = iminus6 | ~ cTorF(X1) ) ).
+fof(c_0_43,axiom,cTorF(iF) ).
+fof(c_0_44,axiom,! [X1] : ( X1 = iplus4 | X1 = iminus4 | ~ cTorF(X1) ) ).
+fof(c_0_45,axiom,! [X1] : ( cTorF(X1) | X1 != iT ) ).
+fof(c_0_46,axiom,cTorF(iminus4) ).
+fof(c_0_47,axiom,iF = iminus6 | iF = iplus6 ).
+fof(c_0_48,axiom,iF = iminus4 | iF = iplus4 ).
+fof(c_0_49,axiom,cTorF(iT) ).
+fof(c_0_50,axiom,iminus4 = iminus6 | iminus4 = iplus6 ).
+fof(c_0_51,axiom,iF != iT ).
+fof(c_0_52,axiom,iF = iplus6 | iminus6 != iplus6 ).
+fof(c_0_53,axiom,! [X17] : ( ( ~ cTorF(X17) | X17 = iminus1 | X17 = iplus1 ) & ( X17 != iminus1 | cTorF(X17) ) & ( X17 != iplus1 | cTorF(X17) ) ) ).
+fof(c_0_54,axiom,! [X1] : ( cTorF(X1) | X1 != iminus6 ) ).
+fof(c_0_55,axiom,iF = iplus4 | iminus4 != iplus4 ).
+fof(c_0_56,axiom,iminus4 = iT | iplus4 = iT ).
+fof(c_0_57,axiom,iminus4 = iplus6 | iminus6 != iplus6 ).
+fof(c_0_58,axiom,iplus6 != iT | iminus6 != iplus6 ).
+fof(c_0_59,axiom,! [X1] : ( X1 = iminus1 | X1 = iplus1 | ~ cTorF(X1) ) ).
+fof(c_0_60,axiom,cTorF(iminus6) ).
+fof(c_0_61,axiom,! [X1] : ( cTorF(X1) | X1 != iplus4 ) ).
+fof(c_0_62,axiom,! [X24] : ( ( ~ cTorF(X24) | X24 = iplus9 | X24 = iminus9 ) & ( X24 != iplus9 | cTorF(X24) ) & ( X24 != iminus9 | cTorF(X24) ) ) ).
+fof(c_0_63,axiom,! [X22] : ( ( ~ cTorF(X22) | X22 = iplus2 | X22 = iminus2 ) & ( X22 != iplus2 | cTorF(X22) ) & ( X22 != iminus2 | cTorF(X22) ) ) ).
+fof(c_0_64,axiom,iplus4 != iT | iminus4 != iplus4 ).
+fof(c_0_65,axiom,iplus4 = iT | iminus6 != iplus6 ).
+fof(c_0_66,axiom,iminus6 = iplus1 | iminus6 = iminus1 ).
+fof(c_0_67,axiom,cTorF(iplus4) ).
+fof(c_0_68,axiom,! [X21] : ( ( ~ cTorF(X21) | X21 = iminus5 | X21 = iplus5 ) & ( X21 != iminus5 | cTorF(X21) ) & ( X21 != iplus5 | cTorF(X21) ) ) ).
+fof(c_0_69,axiom,! [X1] : ( cTorF(X1) | X1 != iplus9 ) ).
+fof(c_0_70,axiom,! [X1] : ( X1 = iplus2 | X1 = iminus2 | ~ cTorF(X1) ) ).
+fof(c_0_71,axiom,iplus4 != iT | iplus4 != iplus6 | iminus6 != iplus6 ).
+fof(c_0_72,axiom,iminus6 = iminus1 | iplus4 = iT | iplus1 != iplus6 ).
+fof(c_0_73,axiom,iminus4 = iplus1 | iminus4 = iminus1 ).
+fof(c_0_74,axiom,iplus4 = iplus1 | iplus4 = iminus1 ).
+fof(c_0_75,axiom,iF = iplus1 | iF = iminus1 ).
+fof(c_0_76,axiom,! [X1] : ( X1 = iplus9 | X1 = iminus9 | ~ cTorF(X1) ) ).
+fof(c_0_77,axiom,! [X1] : ( cTorF(X1) | X1 != iminus9 ) ).
+fof(c_0_78,axiom,! [X1] : ( X1 = iminus5 | X1 = iplus5 | ~ cTorF(X1) ) ).
+fof(c_0_79,axiom,cTorF(iplus9) ).
+fof(c_0_80,axiom,! [X23] : ( ( ~ cTorF(X23) | X23 = iplus8 | X23 = iminus8 ) & ( X23 != iplus8 | cTorF(X23) ) & ( X23 != iminus8 | cTorF(X23) ) ) ).
+fof(c_0_81,axiom,iF = iminus2 | iF = iplus2 ).
+fof(c_0_82,axiom,iminus6 = iminus1 | iplus4 != iplus6 | iplus1 != iplus6 ).
+fof(c_0_83,axiom,iplus4 = iT | iminus1 != iplus6 | iplus1 != iplus6 ).
+fof(c_0_84,axiom,iminus4 = iminus1 | iplus1 != iminus1 ).
+fof(c_0_85,axiom,iplus4 = iminus1 | iplus1 != iminus1 ).
+fof(c_0_86,axiom,iF = iminus1 | iplus1 != iminus1 ).
+fof(c_0_87,axiom,! [X1] : ( cTorF(X1) | X1 != iplus1 ) ).
+fof(c_0_88,axiom,iF = iminus9 | iF = iplus9 ).
+fof(c_0_89,axiom,cTorF(iminus9) ).
+fof(c_0_90,axiom,iminus6 = iplus5 | iminus6 = iminus5 ).
+fof(c_0_91,axiom,iF = iplus5 | iF = iminus5 ).
+fof(c_0_92,axiom,iplus9 = iplus5 | iplus9 = iminus5 ).
+fof(c_0_93,axiom,! [X1] : ( X1 = iplus8 | X1 = iminus8 | ~ cTorF(X1) ) ).
+fof(c_0_94,axiom,iF = iminus2 | iplus2 != iT ).
+fof(c_0_95,axiom,iplus4 != iplus6 | iminus1 != iplus6 | iplus1 != iplus6 ).
+fof(c_0_96,axiom,iplus4 != iT | iplus1 != iminus1 ).
+fof(c_0_97,axiom,iminus1 != iT | iplus1 != iminus1 ).
+fof(c_0_98,axiom,cTorF(iplus1) ).
+fof(c_0_99,axiom,! [X1] : ( cTorF(X1) | X1 != iminus1 ) ).
+fof(c_0_100,axiom,iminus4 = iminus9 | iminus4 = iplus9 ).
+fof(c_0_101,axiom,iF = iplus6 | iminus6 != iT ).
+fof(c_0_102,axiom,iF = iminus9 | iplus9 != iminus9 ).
+fof(c_0_103,axiom,iminus6 = iminus9 | iplus6 = iminus9 ).
+fof(c_0_104,axiom,iminus6 = iplus5 | iminus5 != iplus5 ).
+fof(c_0_105,axiom,iF = iplus5 | iminus5 != iplus5 ).
+fof(c_0_106,axiom,iF = iminus9 | iplus9 != iT ).
+fof(c_0_107,axiom,iminus4 = iplus5 | iminus4 = iminus5 ).
+fof(c_0_108,axiom,iplus9 = iplus5 | iminus5 != iplus5 ).
+fof(c_0_109,axiom,iplus4 = iminus9 | iplus9 = iplus4 ).
+fof(c_0_110,axiom,iF = iminus1 | iplus1 != iT ).
+fof(c_0_111,axiom,iF = iminus8 | iF = iplus8 ).
+fof(c_0_112,axiom,iminus2 != iT | iplus2 != iT ).
+fof(c_0_113,axiom,iT = iplus2 | iT = iminus8 | iT = iminus9 ).
+fof(c_0_114,axiom,iT = iminus8 | iT = iminus2 | iT = iminus9 ).
+fof(c_0_115,axiom,iplus4 = iminus1 | iplus1 != iplus6 | iminus1 != iplus6 ).
+fof(c_0_116,axiom,iplus1 != iminus1 ).
+fof(c_0_117,axiom,iplus1 = iminus2 | iplus1 = iplus2 ).
+fof(c_0_118,axiom,iplus9 = iplus1 | iplus9 = iminus1 ).
+fof(c_0_119,axiom,cTorF(iminus1) ).
+fof(c_0_120,axiom,! [X1] : ( cTorF(X1) | X1 != iplus2 ) ).
+fof(c_0_121,axiom,iminus4 = iminus9 | iplus9 != iminus9 ).
+fof(c_0_122,axiom,iplus9 = iminus6 | iplus9 = iplus6 ).
+fof(c_0_123,axiom,iplus6 = iminus9 | iminus6 != iT | iplus9 != iminus9 ).
+fof(c_0_124,axiom,iplus6 = iminus9 | iplus5 = iminus9 | iminus5 != iplus5 ).
+fof(c_0_125,axiom,iminus9 = iT | iplus9 = iT ).
+fof(c_0_126,axiom,iplus5 != iT | iminus5 != iplus5 ).
+fof(c_0_127,axiom,iplus4 = iminus9 | iminus4 != iplus4 | iplus9 != iT ).
+fof(c_0_128,axiom,iminus4 = iplus5 | iminus5 != iplus5 ).
+fof(c_0_129,axiom,iplus4 = iminus9 | iplus4 = iplus5 | iminus5 != iplus5 ).
+fof(c_0_130,axiom,iF = iminus8 | iminus1 = iplus8 | iplus1 != iT ).
+fof(c_0_131,axiom,iminus9 != iT | iplus9 != iT ).
+fof(c_0_132,axiom,iT = iminus8 | iT = iplus9 | iT = iminus1 ).
+fof(c_0_133,axiom,iminus9 = iT | iminus8 = iT ).
+fof(c_0_134,axiom,iminus1 != iplus6 | iplus1 != iplus6 ).
+fof(c_0_135,axiom,iplus1 = iminus2 | iminus1 != iplus2 ).
+fof(c_0_136,axiom,! [X16] : ( ( ~ cTorF(X16) | X16 = iminus3 | X16 = iplus3 ) & ( X16 != iminus3 | cTorF(X16) ) & ( X16 != iplus3 | cTorF(X16) ) ) ).
+fof(c_0_137,axiom,iT = iminus2 | iT = iplus9 | iT = iminus1 ).
+fof(c_0_138,axiom,iplus9 = iminus1 | iplus1 != iminus1 ).
+fof(c_0_139,axiom,iminus1 = iminus2 | iminus1 = iplus2 ).
+fof(c_0_140,axiom,iF = iminus2 | iplus2 != iminus2 ).
+fof(c_0_141,axiom,cTorF(iplus2) ).
+fof(c_0_142,axiom,! [X19] : ( ( ~ cTorF(X19) | X19 = iplus7 | X19 = iminus7 ) & ( X19 != iplus7 | cTorF(X19) ) & ( X19 != iminus7 | cTorF(X19) ) ) ).
+fof(c_0_143,axiom,iplus4 != iT | iplus4 != iminus9 | iplus9 != iminus9 ).
+fof(c_0_144,axiom,iplus9 = iplus6 | iminus6 != iplus6 ).
+fof(c_0_145,axiom,iplus6 = iminus9 | iminus6 != iT | iminus5 != iplus5 ).
+fof(c_0_146,axiom,iminus9 = iT | iminus5 != iplus5 ).
+fof(c_0_147,axiom,iplus4 = iminus9 | iplus9 != iT | iminus5 != iplus5 ).
+fof(c_0_148,axiom,iplus4 = iT | iminus5 != iplus5 ).
+fof(c_0_149,axiom,iminus1 = iplus8 | iminus8 != iT | iplus1 != iT ).
+fof(c_0_150,axiom,iplus1 = iT | iminus1 = iT ).
+fof(c_0_151,axiom,iminus8 = iT | iminus1 = iT ).
+fof(c_0_152,axiom,iplus1 = iminus2 | iminus1 != iplus6 | iplus6 != iplus2 ).
+fof(c_0_153,axiom,iminus1 != iplus6 | iplus6 != iminus2 | iminus1 != iplus2 ).
+fof(c_0_154,axiom,! [X1] : ( cTorF(X1) | X1 != iplus6 ) ).
+fof(c_0_155,axiom,! [X1] : ( X1 = iminus3 | X1 = iplus3 | ~ cTorF(X1) ) ).
+fof(c_0_156,axiom,iminus2 = iT | iplus1 != iminus1 ).
+fof(c_0_157,axiom,iplus1 = iminus2 | iplus2 != iminus2 ).
+fof(c_0_158,axiom,iminus1 = iminus2 | iplus2 != iminus2 ).
+fof(c_0_159,axiom,iminus2 != iT | iplus2 != iminus2 ).
+fof(c_0_160,axiom,iT = iplus2 | iT = iminus8 | iT = iplus1 ).
+fof(c_0_161,axiom,iplus1 = iplus2 | iminus1 = iplus2 ).
+fof(c_0_162,axiom,! [X1] : ( X1 = iplus7 | X1 = iminus7 | ~ cTorF(X1) ) ).
+fof(c_0_163,axiom,! [X1] : ( cTorF(X1) | X1 != iminus5 ) ).
+fof(c_0_164,axiom,iplus4 != iT | iplus4 != iminus9 | iplus6 != iminus9 | iminus6 != iplus6 ).
+fof(c_0_165,axiom,iplus6 = iminus9 | iminus5 != iplus5 ).
+fof(c_0_166,axiom,iplus4 = iminus9 | iminus5 != iplus5 ).
+fof(c_0_167,axiom,iminus1 != iT | iplus1 != iT ).
+fof(c_0_168,axiom,iplus1 = iminus8 | iplus1 = iplus8 ).
+fof(c_0_169,axiom,iminus1 = iT | iminus1 = iplus8 ).
+fof(c_0_170,axiom,iminus1 != iminus2 | iminus1 != iplus6 | iplus6 != iplus2 ).
+fof(c_0_171,axiom,iminus1 = iminus2 | iplus6 != iplus2 | iplus6 != iminus2 ).
+fof(c_0_172,axiom,cTorF(iplus6) ).
+fof(c_0_173,axiom,iF = iplus3 | iF = iminus3 ).
+fof(c_0_174,axiom,! [X1] : ( X1 = iF | X1 = iT | ~ cTorF(X1) ) ).
+fof(c_0_175,axiom,iplus2 != iminus2 ).
+fof(c_0_176,axiom,iplus2 = iminus8 | iplus2 = iplus8 ).
+fof(c_0_177,axiom,iminus1 = iplus2 | iminus8 = iT | iplus2 = iT ).
+fof(c_0_178,axiom,iF = iminus7 | iF = iplus7 ).
+fof(c_0_179,axiom,cTorF(iminus5) ).
+fof(c_0_180,axiom,iminus4 = iplus6 | iplus4 != iT | iminus6 != iplus4 ).
+fof(c_0_181,axiom,iplus5 != iplus6 | iminus5 != iplus5 ).
+fof(c_0_182,axiom,iplus1 = iminus8 | iminus1 != iT | iplus8 != iT ).
+fof(c_0_183,axiom,iminus1 = iT | iplus8 != iT ).
+fof(c_0_184,axiom,iminus1 != iminus2 | iminus1 != iplus2 ).
+fof(c_0_185,axiom,iminus1 = iminus8 | iminus1 = iplus8 ).
+fof(c_0_186,axiom,iplus6 != iminus2 | iplus6 != iplus2 ).
+fof(c_0_187,axiom,iplus6 = iminus8 | iplus6 = iplus8 ).
+fof(c_0_188,axiom,iF = iplus3 | iminus3 != iT ).
+fof(c_0_189,axiom,iplus2 = iT | iF = iplus2 ).
+fof(c_0_190,axiom,iplus2 = iminus8 | iplus8 != iminus2 ).
+fof(c_0_191,axiom,iminus8 = iT | iplus2 = iT ).
+fof(c_0_192,axiom,iF = iplus7 | iminus7 != iplus7 ).
+fof(c_0_193,axiom,iminus5 = iplus1 | iminus5 = iminus1 ).
+fof(c_0_194,axiom,iplus1 = iplus3 | iplus1 = iminus3 ).
+fof(c_0_195,axiom,iminus1 = iplus3 | iminus1 = iminus3 ).
+fof(c_0_196,axiom,! [X1] : ( cTorF(X1) | X1 != iminus2 ) ).
+fof(c_0_197,axiom,iminus5 != iplus5 | iminus6 != iplus4 ).
+fof(c_0_198,axiom,iminus1 != iplus6 | iplus6 != iminus8 | iplus8 != iT ).
+fof(c_0_199,axiom,iminus1 = iminus8 | iplus8 != iminus2 | iplus2 != iplus8 ).
+fof(c_0_200,axiom,iplus6 = iminus8 | iplus8 != iminus2 | iplus2 != iplus8 ).
+fof(c_0_201,axiom,iplus2 = iT | iplus2 = iplus3 | iminus3 != iT ).
+fof(c_0_202,axiom,iminus2 = iplus3 | iminus3 != iT | iplus2 != iT ).
+fof(c_0_203,axiom,iminus8 = iT | iplus8 != iminus2 ).
+fof(c_0_204,axiom,iplus6 != iT | iminus6 != iT ).
+fof(c_0_205,axiom,iT = iplus8 | iT = iminus6 | iT = iplus3 ).
+fof(c_0_206,axiom,iplus7 != iT | iminus7 != iplus7 ).
+fof(c_0_207,axiom,iT = iplus8 | iT = iplus3 | iT = iminus7 ).
+fof(c_0_208,axiom,iT = iminus5 | iT = iplus4 | iT = iplus7 ).
+fof(c_0_209,axiom,iminus5 = iminus1 | iplus1 != iminus1 ).
+fof(c_0_210,axiom,iplus1 = iminus7 | iplus1 = iplus7 ).
+fof(c_0_211,axiom,iminus1 = iminus7 | iminus1 = iplus7 ).
+fof(c_0_212,axiom,! [X1] : ( cTorF(X1) | X1 != iminus7 ) ).
+fof(c_0_213,axiom,iT = iminus2 | iT = iminus3 | iT = iminus7 ).
+fof(c_0_214,axiom,iF = iplus3 | iminus3 != iplus3 ).
+fof(c_0_215,axiom,iplus1 = iplus3 | iminus3 != iplus3 ).
+fof(c_0_216,axiom,iminus1 = iplus3 | iminus3 != iplus3 ).
+fof(c_0_217,axiom,iplus1 = iT | iF = iplus1 ).
+fof(c_0_218,axiom,iminus9 != iT | iplus9 != iminus9 ).
+fof(c_0_219,axiom,iplus9 = iminus1 | iminus9 != iT | iplus1 != iT ).
+fof(c_0_220,axiom,iT = iplus9 | iT = iminus3 | iT = iplus1 ).
+fof(c_0_221,axiom,cTorF(iminus2) ).
+fof(c_0_222,axiom,iminus5 != iplus5 | iplus4 != iplus5 ).
+fof(c_0_223,axiom,iminus5 = iplus3 | iminus5 = iminus3 ).
+fof(c_0_224,axiom,iplus8 != iT | iplus8 != iminus2 | iplus2 != iplus8 ).
+fof(c_0_225,axiom,iplus2 = iT | iminus2 != iplus3 | iminus3 != iT ).
+fof(c_0_226,axiom,iminus2 = iplus3 | iminus3 != iT | iplus8 != iminus2 ).
+fof(c_0_227,axiom,iplus8 = iT | iplus3 = iT | iplus6 != iT ).
+fof(c_0_228,axiom,iT = iplus6 | iT = iplus7 | iT = iplus3 ).
+fof(c_0_229,axiom,iplus8 = iT | iplus3 = iT | iplus7 != iT ).
+fof(c_0_230,axiom,iplus7 = iT | iplus1 != iminus1 ).
+fof(c_0_231,axiom,iplus1 = iplus7 | iminus7 != iplus7 ).
+fof(c_0_232,axiom,iminus1 = iplus7 | iminus7 != iplus7 ).
+fof(c_0_233,axiom,cTorF(iminus7) ).
+fof(c_0_234,axiom,iplus3 != iT | iminus3 != iT ).
+fof(c_0_235,axiom,iminus2 = iT | iminus3 = iT | iplus7 != iT ).
+fof(c_0_236,axiom,iplus3 != iT | iminus3 != iplus3 ).
+fof(c_0_237,axiom,iT = iminus8 | iT = iminus3 | iT = iplus7 ).
+fof(c_0_238,axiom,iplus2 = iplus3 | iplus2 = iminus3 ).
+fof(c_0_239,axiom,iminus1 != iT | iminus3 != iplus3 ).
+fof(c_0_240,axiom,iT = iplus2 | iT = iminus1 | iT = iplus3 ).
+fof(c_0_241,axiom,! [X1] : ( cTorF(X1) | X1 != iminus3 ) ).
+fof(c_0_242,axiom,! [X1] : ( cTorF(X1) | X1 != iminus8 ) ).
+fof(c_0_243,axiom,iplus1 = iT | iplus1 = iplus3 | iminus3 != iT ).
+fof(c_0_244,axiom,iminus9 != iT | iminus1 != iminus9 | iplus1 != iT ).
+fof(c_0_245,axiom,iplus1 = iT | iminus3 = iT | iminus9 != iT ).
+fof(c_0_246,axiom,iminus2 = iplus3 | iminus3 = iminus2 ).
+fof(c_0_247,axiom,iplus3 = iT | iminus3 = iT ).
+fof(c_0_248,axiom,iminus5 = iplus3 | iplus5 != iminus3 | iplus4 != iplus5 ).
+fof(c_0_249,axiom,iplus8 != iT | iplus8 != iminus2 | iminus3 != iT ).
+fof(c_0_250,axiom,iplus3 = iT | iplus8 = iT ).
+fof(c_0_251,axiom,iF = iminus8 | iplus8 != iT ).
+fof(c_0_252,axiom,! [X1] : ( cTorF(X1) | X1 != iplus3 ) ).
+fof(c_0_253,axiom,iminus7 != iplus7 ).
+fof(c_0_254,axiom,iminus7 = iminus2 | iminus7 = iplus2 ).
+fof(c_0_255,axiom,iminus8 = iT | iminus2 != iT ).
+fof(c_0_256,axiom,iminus2 = iT | iplus3 != iT | iplus7 != iT ).
+fof(c_0_257,axiom,iminus8 = iT | iplus7 = iT | iplus3 != iT ).
+fof(c_0_258,axiom,iplus2 = iplus3 | iminus3 != iplus3 ).
+fof(c_0_259,axiom,iplus2 = iT | iminus3 != iplus3 ).
+fof(c_0_260,axiom,cTorF(iminus3) ).
+fof(c_0_261,axiom,cTorF(iminus8) ).
+fof(c_0_262,axiom,iplus1 = iT | iminus1 != iplus3 | iminus3 != iT ).
+fof(c_0_263,axiom,iminus3 = iT | iminus9 != iT | iminus1 != iminus9 ).
+fof(c_0_264,axiom,iT = iminus2 | iT = iminus9 | iT = iplus1 ).
+fof(c_0_265,axiom,iminus2 = iplus3 | iminus2 != iT | iplus8 != iminus2 ).
+fof(c_0_266,axiom,iminus2 = iplus3 | iminus2 = iT | iplus3 = iT ).
+fof(c_0_267,axiom,iplus5 != iplus3 | iplus4 != iplus5 | iplus5 != iminus3 ).
+fof(c_0_268,axiom,iplus4 = iplus3 | iplus4 = iminus3 ).
+fof(c_0_269,axiom,iplus3 = iT | iplus8 != iminus2 ).
+fof(c_0_270,axiom,iminus8 != iT | iplus8 != iT ).
+fof(c_0_271,axiom,cTorF(iplus3) ).
+fof(c_0_272,axiom,iminus7 = iminus2 | iplus2 != iplus7 ).
+fof(c_0_273,axiom,iplus2 = iplus3 | iminus3 != iminus2 ).
+fof(c_0_274,axiom,iminus8 = iT | iplus3 != iT ).
+fof(c_0_275,axiom,iminus3 != iplus3 ).
+fof(c_0_276,axiom,iminus3 = iminus8 | iminus3 = iplus8 ).
+fof(c_0_277,axiom,iminus2 = iminus8 | iplus2 = iminus8 ).
+fof(c_0_278,axiom,iT = iplus2 | iT = iminus3 | iT = iplus7 ).
+fof(c_0_279,axiom,iminus9 != iT | iminus1 != iminus9 | iminus1 != iplus3 ).
+fof(c_0_280,axiom,iminus2 = iT | iminus1 = iT | iminus9 != iT ).
+fof(c_0_281,axiom,iminus9 = iT | iminus2 = iT | iminus1 != iT ).
+fof(c_0_282,axiom,iT = iminus9 | iT = iminus1 | iT = iplus7 ).
+fof(c_0_283,axiom,iT = iminus2 | iT = iplus7 | iT = iplus3 ).
+fof(c_0_284,axiom,iplus3 = iT | iminus2 = iplus3 ).
+fof(c_0_285,axiom,iplus4 = iplus3 | iplus5 != iplus3 | iplus5 != iminus3 ).
+fof(c_0_286,axiom,iT = iminus5 | iT = iminus2 | iT = iplus3 ).
+fof(c_0_287,axiom,iplus5 = iminus8 | iminus5 = iminus8 ).
+fof(c_0_288,axiom,iplus3 = iT | iminus2 != iT ).
+fof(c_0_289,axiom,iplus3 = iT | iminus8 != iT ).
+fof(c_0_290,axiom,iminus8 = iplus3 | iplus8 = iplus3 ).
+fof(c_0_291,axiom,iminus2 != iplus7 | iplus2 != iplus7 ).
+fof(c_0_292,axiom,iplus2 = iplus3 | iminus2 != iT | iminus3 != iT ).
+fof(c_0_293,axiom,iminus8 = iT | iminus3 != iminus2 ).
+fof(c_0_294,axiom,iminus3 = iminus8 | iplus8 != iplus3 ).
+fof(c_0_295,axiom,iminus8 = iT | iminus2 = iminus8 ).
+fof(c_0_296,axiom,iplus7 = iT | iminus3 = iT | iminus2 != iT ).
+fof(c_0_297,axiom,iminus2 = iT | iminus9 != iT | iplus3 != iT ).
+fof(c_0_298,axiom,iplus7 = iT | iminus2 = iT | iminus9 = iT ).
+fof(c_0_299,axiom,iplus7 = iT | iplus3 = iT ).
+fof(c_0_300,axiom,iplus5 != iplus3 | iplus5 != iminus3 ).
+fof(c_0_301,axiom,iplus5 = iminus8 | iplus3 = iT ).
+fof(c_0_302,axiom,iplus3 = iT | iminus8 = iplus3 ).
+fof(c_0_303,axiom,iminus7 = iplus3 | iminus7 = iminus3 ).
+fof(c_0_304,axiom,iminus3 = iT | iF = iminus3 ).
+fof(c_0_305,axiom,iminus2 != iplus7 | iplus3 != iplus7 | iminus2 != iT | iminus3 != iT ).
+fof(c_0_306,axiom,iminus8 = iT | iplus8 != iplus3 ).
+fof(c_0_307,axiom,iplus7 = iT | iplus3 != iT | iminus2 != iT ).
+fof(c_0_308,axiom,iplus7 = iT | iminus2 = iT ).
+fof(c_0_309,axiom,iplus3 = iT | iminus3 != iminus8 ).
+fof(c_0_310,axiom,iminus7 = iplus3 | iminus2 = iT | iminus3 = iT ).
+fof(c_0_311,axiom,iminus3 = iT | iminus3 = iminus8 | iplus8 != iT ).
+fof(c_0_312,axiom,iminus2 != iplus7 | iplus3 != iplus7 | iminus2 != iT | iplus8 != iplus3 ).
+fof(c_0_313,axiom,iplus7 = iT ).
+fof(c_0_314,axiom,iplus3 = iT | iplus8 != iplus3 ).
+fof(c_0_315,axiom,iminus3 = iT | iminus2 = iT | iplus3 != iplus7 ).
+fof(c_0_316,axiom,iminus5 = iminus1 | iplus1 != iplus5 | iplus4 != iplus5 ).
+fof(c_0_317,axiom,iminus3 = iT | iminus8 != iplus3 | iplus8 != iT ).
+fof(c_0_318,axiom,iminus2 != iT | iplus8 != iplus3 ).
+fof(c_0_319,axiom,iminus2 = iT | iplus3 != iT | iplus3 != iplus7 ).
+fof(c_0_320,axiom,iF = iminus8 | iplus8 != iminus8 ).
+fof(c_0_321,axiom,iplus5 != iminus1 | iplus4 != iplus5 | iplus1 != iplus5 ).
+fof(c_0_322,axiom,iF = iplus7 | iminus1 = iminus7 | iplus1 != iT ).
+fof(c_0_323,axiom,iT = iminus5 | iT = iplus1 | iT = iminus7 ).
+fof(c_0_324,axiom,! [X1] : ( cTorF(X1) | X1 != iplus8 ) ).
+fof(c_0_325,axiom,iplus8 != iT | iplus8 != iminus2 | iminus8 != iplus3 ).
+fof(c_0_326,axiom,iminus2 = iminus8 | iplus8 = iminus2 ).
+fof(c_0_327,axiom,iminus8 = iplus3 | iminus2 != iT ).
+fof(c_0_328,axiom,iminus2 = iT | iplus3 != iT ).
+fof(c_0_329,axiom,iminus2 = iT | iminus2 = iplus3 | iplus7 != iT ).
+fof(c_0_330,axiom,iminus8 = iT | iplus1 != iminus1 ).
+fof(c_0_331,axiom,iplus1 = iminus8 | iplus8 != iminus8 ).
+fof(c_0_332,axiom,iminus1 = iminus8 | iplus8 != iminus8 ).
+fof(c_0_333,axiom,iminus8 != iT | iplus8 != iminus8 ).
+fof(c_0_334,axiom,iplus4 = iminus1 | iplus5 != iminus1 | iplus1 != iplus5 ).
+fof(c_0_335,axiom,iminus1 = iminus7 | iplus7 != iT | iplus1 != iT ).
+fof(c_0_336,axiom,iminus7 = iT | iplus1 = iT | iplus5 != iT ).
+fof(c_0_337,axiom,cTorF(iplus8) ).
+fof(c_0_338,axiom,iminus2 = iminus8 | iminus2 != iT | iminus8 != iplus3 ).
+fof(c_0_339,axiom,iminus8 = iplus3 ).
+fof(c_0_340,axiom,iminus2 = iplus3 | iminus2 = iT ).
+fof(c_0_341,axiom,iplus8 != iminus8 ).
+fof(c_0_342,axiom,iplus5 != iminus1 | iplus1 != iplus5 ).
+fof(c_0_343,axiom,iplus1 = iplus7 | iminus1 != iminus7 ).
+fof(c_0_344,axiom,iminus1 = iminus7 | iplus1 != iT ).
+fof(c_0_345,axiom,iminus7 != iT ).
+fof(c_0_346,axiom,iminus7 = iT | iminus1 != iT | iplus5 != iT ).
+fof(c_0_347,axiom,iT = iplus2 | iT = iplus5 | iT = iminus7 ).
+fof(c_0_348,axiom,iplus8 = iminus2 | iplus2 = iplus8 ).
+fof(c_0_349,axiom,iminus2 = iplus3 ).
+fof(c_0_350,axiom,iplus8 != iplus3 ).
+fof(c_0_351,axiom,iF = iplus5 | iminus5 != iT ).
+fof(c_0_352,axiom,iminus5 = iminus8 | iminus5 = iplus8 ).
+fof(c_0_353,axiom,! [X1] : ( cTorF(X1) | X1 != iplus5 ) ).
+fof(c_0_354,axiom,iplus5 != iminus1 | iplus5 != iplus7 | iminus1 != iminus7 ).
+fof(c_0_355,axiom,iminus1 = iminus7 | iplus5 != iT ).
+fof(c_0_356,axiom,iT = iminus9 | iT = iplus5 | iT = iminus7 ).
+fof(c_0_357,axiom,iT = iplus2 | iT = iminus6 | iT = iminus3 ).
+fof(c_0_358,axiom,iplus2 = iT | iminus7 = iT | iminus1 != iT ).
+fof(c_0_359,axiom,iplus2 = iplus8 ).
+fof(c_0_360,axiom,iminus1 = iT | iminus1 = iminus7 | iplus7 != iT ).
+fof(c_0_361,axiom,iplus5 != iT | iminus5 != iT ).
+fof(c_0_362,axiom,iminus5 = iminus8 | iplus5 != iT | iplus5 != iplus8 ).
+fof(c_0_363,axiom,iminus2 = iT | iplus3 = iT | iplus5 != iT ).
+fof(c_0_364,axiom,cTorF(iplus5) ).
+fof(c_0_365,axiom,iT = iplus6 | iT = iplus5 | iT = iminus7 ).
+fof(c_0_366,axiom,iplus5 != iminus1 | iplus5 != iT ).
+fof(c_0_367,axiom,iminus9 = iT | iplus5 = iT ).
+fof(c_0_368,axiom,iplus2 = iT | iminus3 = iT | iplus6 != iT ).
+fof(c_0_369,axiom,iT = iplus8 | iT = iplus6 | iT = iminus3 ).
+fof(c_0_370,axiom,iF = iplus4 | iminus4 != iT ).
+fof(c_0_371,axiom,iminus1 != iT | iminus1 != iminus8 | iplus8 != iT ).
+fof(c_0_372,axiom,iplus8 = iT | iminus1 != iT ).
+fof(c_0_373,axiom,iminus1 = iminus7 | iminus1 = iT ).
+fof(c_0_374,axiom,iplus5 != iT | iminus8 != iT | iplus5 != iplus8 ).
+fof(c_0_375,axiom,iplus3 = iT | iplus5 != iT ).
+fof(c_0_376,axiom,iplus5 = iminus8 | iplus5 = iplus8 ).
+fof(c_0_377,axiom,iplus5 = iT | iplus6 = iT ).
+fof(c_0_378,axiom,iminus9 = iT | iminus1 != iT ).
+fof(c_0_379,axiom,iplus8 = iT | iminus3 = iT | iplus2 = iT ).
+fof(c_0_380,axiom,iminus3 = iplus8 ).
+fof(c_0_381,axiom,iminus7 = iminus8 | iminus7 = iplus8 ).
+fof(c_0_382,axiom,iplus4 != iT | iminus4 != iT ).
+fof(c_0_383,axiom,iminus4 = iminus8 | iminus4 = iplus8 ).
+fof(c_0_384,axiom,iminus1 != iT | iminus1 != iplus3 ).
+fof(c_0_385,axiom,iminus1 = iT | iminus7 = iplus8 ).
+fof(c_0_386,axiom,iminus4 = iminus9 | iplus4 = iminus9 ).
+fof(c_0_387,axiom,iminus4 = iminus5 | iminus5 = iplus4 ).
+fof(c_0_388,axiom,iplus5 != iT | iplus5 != iplus8 ).
+fof(c_0_389,axiom,iplus5 = iplus8 | iplus5 = iplus3 ).
+fof(c_0_390,axiom,iplus6 = iT | iminus1 != iT ).
+fof(c_0_391,axiom,iF = iminus7 ).
+fof(c_0_392,axiom,iminus9 = iT | iplus8 != iT ).
+fof(c_0_393,axiom,iplus8 = iT ).
+fof(c_0_394,axiom,iminus7 = iplus8 | iminus7 = iplus3 ).
+fof(c_0_395,axiom,iminus4 = iminus8 | iplus4 != iT | iplus8 != iT ).
+fof(c_0_396,axiom,iplus3 = iT | iF = iplus3 ).
+fof(c_0_397,axiom,iminus7 = iplus8 | iplus3 != iT ).
+fof(c_0_398,axiom,iminus5 = iplus4 | iplus4 = iminus9 | iminus5 = iminus9 ).
+fof(c_0_399,axiom,iplus5 = iplus3 | iplus8 != iT ).
+fof(c_0_400,axiom,iplus6 = iT | iplus8 != iT ).
+fof(c_0_401,axiom,iF = iminus9 | iplus9 = iplus4 | iminus4 != iplus4 ).
+fof(c_0_402,axiom,iF = iplus9 | iminus7 = iminus9 ).
+fof(c_0_403,axiom,iminus9 = iT ).
+fof(c_0_404,axiom,iminus7 = iplus3 ).
+fof(c_0_405,axiom,iF = iminus9 | iplus9 = iplus4 | iminus4 != iT ).
+fof(c_0_406,axiom,iplus4 != iT | iplus4 != iminus8 | iplus8 != iT ).
+fof(c_0_407,axiom,! [X3] : ( xsd_string(X3) <=> ~ xsd_integer(X3) ) ).
+fof(c_0_408,axiom,! [X3] : ( cowlThing(X3) & ~ cowlNothing(X3) ) ).
+fof(c_0_409,axiom,iplus3 = iT | iminus1 = iplus3 | iplus1 != iT ).
+fof(c_0_410,axiom,iminus1 = iT ).
+fof(c_0_411,axiom,iplus3 != iT ).
+fof(c_0_412,axiom,iminus5 = iminus9 | iplus4 = iminus9 | iplus4 != iplus5 ).
+fof(c_0_413,axiom,iplus5 = iplus3 ).
+fof(c_0_414,axiom,iplus4 = iT | iplus4 = iplus3 ).
+fof(c_0_415,axiom,iF = iminus8 | iplus4 = iplus8 | iminus4 != iT ).
+fof(c_0_416,axiom,iminus4 = iminus8 | iplus4 != iT | iplus4 != iplus8 ).
+fof(c_0_417,axiom,iplus4 = iminus7 | iF = iminus4 ).
+fof(c_0_418,axiom,iminus6 = iplus4 | iplus4 = iplus6 ).
+fof(c_0_419,axiom,iplus6 = iT ).
+fof(c_0_420,axiom,iplus4 = iplus5 | iminus5 = iplus4 ).
+fof(c_0_421,axiom,iplus9 = iplus4 | iminus9 != iT | iminus4 != iplus4 ).
+fof(c_0_422,axiom,iplus9 = iplus3 ).
+fof(c_0_423,axiom,iplus9 = iplus4 | iminus9 != iT | iminus4 != iT ).
+fof(c_0_424,axiom,iminus4 = iplus3 | iminus4 = iminus3 ).
+fof(c_0_425,axiom,iplus4 != iT | iplus4 != iplus3 | iplus8 != iT ).
+fof(c_0_426,axiom,! [X15] : ( ( ~ xsd_string(X15) | ~ xsd_integer(X15) ) & ( xsd_integer(X15) | xsd_string(X15) ) ) ).
+fof(c_0_427,axiom,! [X14] : ( cowlThing(X14) & ~ cowlNothing(X14) ) ).
+fof(c_0_428,axiom,iminus5 = iT | iplus1 = iT ).
+fof(c_0_429,axiom,iplus1 != iT ).
+fof(c_0_430,axiom,iplus1 = iplus3 | iminus1 = iplus3 ).
+fof(c_0_431,axiom,iplus6 = iminus7 | iF = iminus6 ).
+fof(c_0_432,axiom,iplus4 = iT | iminus5 = iT ).
+fof(c_0_433,axiom,iplus4 = iT | iF = iplus3 ).
+fof(c_0_434,axiom,! [X1] : ( X1 = iplus3 | X1 = iT | ~ cTorF(X1) ) ).
+fof(c_0_435,axiom,iminus4 = iplus3 | iplus4 != iT ).
+fof(c_0_436,axiom,iF = iminus4 | iplus4 = iplus3 ).
+fof(c_0_437,axiom,iplus4 = iT | iminus6 = iplus4 ).
+fof(c_0_438,axiom,iplus9 = iplus4 | iplus4 = iT ).
+fof(c_0_439,axiom,iminus5 = iplus4 | iplus4 = iplus3 ).
+fof(c_0_440,axiom,iplus4 = iplus3 | iminus4 != iplus4 ).
+fof(c_0_441,axiom,iplus4 = iplus3 | iminus4 != iT ).
+fof(c_0_442,axiom,iminus4 = iT | iminus4 = iplus3 ).
+fof(c_0_443,axiom,iplus4 != iT | iplus4 != iplus3 ).
+fof(c_0_444,axiom,iplus4 = iT | iF = iplus4 ).
+fof(c_0_445,axiom,iminus4 = iT | iF = iminus4 ).
+fof(c_0_446,axiom,iminus4 = iplus3 | iplus4 = iplus3 ).
+fof(c_0_447,axiom,! [X1] : ( xsd_integer(X1) | xsd_string(X1) ) ).
+fof(c_0_448,axiom,! [X1] : ( ~ xsd_string(X1) | ~ xsd_integer(X1) ) ).
+fof(c_0_449,axiom,! [X1] : ~ cowlNothing(X1) ).
+fof(c_0_450,axiom,iminus5 = iT ).
+fof(c_0_451,axiom,iplus1 = iplus3 ).
+fof(c_0_452,axiom,iF = iplus3 ).
+fof(c_0_453,axiom,iminus6 = iplus3 ).
+fof(c_0_454,axiom,iminus3 = iT ).
+fof(c_0_455,axiom,iplus2 = iT ).

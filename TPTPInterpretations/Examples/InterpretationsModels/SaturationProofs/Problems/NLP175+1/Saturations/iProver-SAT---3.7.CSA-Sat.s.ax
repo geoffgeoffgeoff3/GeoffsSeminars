@@ -1,0 +1,497 @@
+fof(f9,axiom,! [X0] : ! [X1] : ( location(X0,X1) => object(X0,X1) ) ).
+fof(f10,axiom,! [X0] : ! [X1] : ( city(X0,X1) => location(X0,X1) ) ).
+fof(f12,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) => unisex(X0,X1) ) ).
+fof(f13,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) => general(X0,X1) ) ).
+fof(f15,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) => thing(X0,X1) ) ).
+fof(f16,axiom,! [X0] : ! [X1] : ( relation(X0,X1) => abstraction(X0,X1) ) ).
+fof(f17,axiom,! [X0] : ! [X1] : ( relname(X0,X1) => relation(X0,X1) ) ).
+fof(f18,axiom,! [X0] : ! [X1] : ( placename(X0,X1) => relname(X0,X1) ) ).
+fof(f19,axiom,! [X0] : ! [X1] : ( way(X0,X1) => artifact(X0,X1) ) ).
+fof(f20,axiom,! [X0] : ! [X1] : ( street(X0,X1) => way(X0,X1) ) ).
+fof(f23,axiom,! [X0] : ! [X1] : ( state(X0,X1) => eventuality(X0,X1) ) ).
+fof(f24,axiom,! [X0] : ! [X1] : ( two(X0,X1) => group(X0,X1) ) ).
+fof(f25,axiom,! [X0] : ! [X1] : ( man(X0,X1) => male(X0,X1) ) ).
+fof(f30,axiom,! [X0] : ! [X1] : ( organism(X0,X1) => entity(X0,X1) ) ).
+fof(f31,axiom,! [X0] : ! [X1] : ( human_person(X0,X1) => organism(X0,X1) ) ).
+fof(f32,axiom,! [X0] : ! [X1] : ( man(X0,X1) => human_person(X0,X1) ) ).
+fof(f33,axiom,! [X0] : ! [X1] : ( fellow(X0,X1) => man(X0,X1) ) ).
+fof(f34,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) => unisex(X0,X1) ) ).
+fof(f35,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) => nonexistent(X0,X1) ) ).
+fof(f36,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) => specific(X0,X1) ) ).
+fof(f37,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) => thing(X0,X1) ) ).
+fof(f38,axiom,! [X0] : ! [X1] : ( event(X0,X1) => eventuality(X0,X1) ) ).
+fof(f40,axiom,! [X0] : ! [X1] : ( set(X0,X1) => multiple(X0,X1) ) ).
+fof(f41,axiom,! [X0] : ! [X1] : ( group(X0,X1) => set(X0,X1) ) ).
+fof(f42,axiom,! [X0] : ! [X1] : ( object(X0,X1) => unisex(X0,X1) ) ).
+fof(f45,axiom,! [X0] : ! [X1] : ( entity(X0,X1) => existent(X0,X1) ) ).
+fof(f46,axiom,! [X0] : ! [X1] : ( entity(X0,X1) => specific(X0,X1) ) ).
+fof(f47,axiom,! [X0] : ! [X1] : ( thing(X0,X1) => singleton(X0,X1) ) ).
+fof(f48,axiom,! [X0] : ! [X1] : ( entity(X0,X1) => thing(X0,X1) ) ).
+fof(f49,axiom,! [X0] : ! [X1] : ( object(X0,X1) => entity(X0,X1) ) ).
+fof(f50,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) => object(X0,X1) ) ).
+fof(f51,axiom,! [X0] : ! [X1] : ( clothes(X0,X1) => artifact(X0,X1) ) ).
+fof(f52,axiom,! [X0] : ! [X1] : ( coat(X0,X1) => clothes(X0,X1) ) ).
+fof(f54,axiom,! [X0] : ! [X1] : ( existent(X0,X1) => ~ nonexistent(X0,X1) ) ).
+fof(f57,axiom,! [X0] : ! [X1] : ( singleton(X0,X1) => ~ multiple(X0,X1) ) ).
+fof(f58,axiom,! [X0] : ! [X1] : ( specific(X0,X1) => ~ general(X0,X1) ) ).
+fof(f59,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) => ~ male(X0,X1) ) ).
+fof(f60,axiom,! [X0] : ! [X1] : ( white(X0,X1) => ~ black(X0,X1) ) ).
+fof(f61,axiom,! [X0] : ! [X1] : ( young(X0,X1) => ~ old(X0,X1) ) ).
+fof(f62,axiom,! [X0] : ! [X1] : ! [X2] : ( ( of(X0,X2,X1) & placename(X0,X2) & entity(X0,X1) ) => ~ ( ? [X3] : ( of(X0,X3,X1) & X2 != X3 & placename(X0,X3) ) ) ) ).
+fof(f63,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( be(X0,X1,X2,X3) => X2 = X3 ) ).
+fof(f64,axiom,! [X0] : ! [X1] : ( two(X0,X1) <=> ? [X2] : ( ? [X3] : ( ! [X4] : ( member(X0,X4,X1) => ( X2 = X4 | X3 = X4 ) ) & X2 != X3 & member(X0,X3,X1) ) & member(X0,X2,X1) ) ) ).
+fof(f65,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ( patient(X0,X1,X3) & agent(X0,X1,X2) & nonreflexive(X0,X1) ) => X2 != X3 ) ).
+fof(f66,axiom,! [X0] : ~ ( ? [X1] : member(X0,X1,X1) ) ).
+fof(f67,axiom,~ ( ? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X15] : ( member(X0,X15,X7) => ( cheap(X0,X15) & black(X0,X15) & coat(X0,X15) ) ) & group(X0,X7) & ! [X12] : ( member(X0,X12,X7) => ! [X13] : ( member(X0,X13,X1) => ? [X14] : ( wear(X0,X14) & nonreflexive(X0,X14) & present(X0,X14) & patient(X0,X14,X12) & agent(X0,X14,X13) & event(X0,X14) ) ) ) & ! [X11] : ( member(X0,X11,X6) => ( young(X0,X11) & fellow(X0,X11) ) ) & group(X0,X6) & two(X0,X6) & ! [X8] : ( member(X0,X8,X6) => ? [X9] : ? [X10] : ( in(X0,X10,X4) & be(X0,X9,X8,X10) & state(X0,X9) ) ) & in(X0,X5,X3) & down(X0,X5,X4) & barrel(X0,X5) & present(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & lonely(X0,X4) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ) ).
+fof(f68,axiom,~ ( ~ ( ? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X15] : ( member(X0,X15,X7) => ( cheap(X0,X15) & black(X0,X15) & coat(X0,X15) ) ) & group(X0,X7) & ! [X12] : ( member(X0,X12,X7) => ! [X13] : ( member(X0,X13,X1) => ? [X14] : ( wear(X0,X14) & nonreflexive(X0,X14) & present(X0,X14) & patient(X0,X14,X12) & agent(X0,X14,X13) & event(X0,X14) ) ) ) & ! [X11] : ( member(X0,X11,X6) => ( young(X0,X11) & fellow(X0,X11) ) ) & group(X0,X6) & two(X0,X6) & ! [X8] : ( member(X0,X8,X6) => ? [X9] : ? [X10] : ( in(X0,X10,X4) & be(X0,X9,X8,X10) & state(X0,X9) ) ) & in(X0,X5,X3) & down(X0,X5,X4) & barrel(X0,X5) & present(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & lonely(X0,X4) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ) ) ).
+fof(f69,axiom,~ ( ~ ( ? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( cheap(X0,X8) & black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & present(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( in(X0,X15,X4) & be(X0,X14,X13,X15) & state(X0,X14) ) ) & in(X0,X5,X3) & down(X0,X5,X4) & barrel(X0,X5) & present(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & lonely(X0,X4) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ) ) ).
+fof(f70,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( cheap(X0,X8) & black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & present(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( in(X0,X15,X4) & be(X0,X14,X13,X15) & state(X0,X14) ) ) & in(X0,X5,X3) & down(X0,X5,X4) & barrel(X0,X5) & present(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & lonely(X0,X4) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ).
+fof(f71,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & present(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( in(X0,X15,X4) & be(X0,X14,X13,X15) & state(X0,X14) ) ) & in(X0,X5,X3) & down(X0,X5,X4) & barrel(X0,X5) & present(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & lonely(X0,X4) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ).
+fof(f72,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & present(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( be(X0,X14,X13,X15) & state(X0,X14) ) ) & down(X0,X5,X4) & barrel(X0,X5) & present(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & lonely(X0,X4) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ).
+fof(f73,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & present(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( be(X0,X14,X13,X15) & state(X0,X14) ) ) & barrel(X0,X5) & present(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & lonely(X0,X4) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ).
+fof(f74,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( be(X0,X14,X13,X15) & state(X0,X14) ) ) & barrel(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & lonely(X0,X4) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ).
+fof(f75,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( be(X0,X14,X13,X15) & state(X0,X14) ) ) & barrel(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & street(X0,X4) & old(X0,X3) & dirty(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ).
+fof(f76,axiom,? [X0] : ( ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( be(X0,X14,X13,X15) & state(X0,X14) ) ) & barrel(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & street(X0,X4) & old(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) & actual_world(X0) ) ).
+fof(f77,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( member(X0,X8,X7) => ( black(X0,X8) & coat(X0,X8) ) ) & group(X0,X7) & ! [X9] : ( member(X0,X9,X7) => ! [X10] : ( member(X0,X10,X1) => ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) ) ) & ! [X12] : ( member(X0,X12,X6) => ( young(X0,X12) & fellow(X0,X12) ) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( member(X0,X13,X6) => ? [X14] : ? [X15] : ( be(X0,X14,X13,X15) & state(X0,X14) ) ) & barrel(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & street(X0,X4) & old(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) ).
+fof(f88,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ location(X0,X1) ) ).
+fof(f89,axiom,! [X0] : ! [X1] : ( location(X0,X1) | ~ city(X0,X1) ) ).
+fof(f91,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(f92,axiom,! [X0] : ! [X1] : ( general(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(f94,axiom,! [X0] : ! [X1] : ( thing(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(f95,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) | ~ relation(X0,X1) ) ).
+fof(f96,axiom,! [X0] : ! [X1] : ( relation(X0,X1) | ~ relname(X0,X1) ) ).
+fof(f97,axiom,! [X0] : ! [X1] : ( relname(X0,X1) | ~ placename(X0,X1) ) ).
+fof(f98,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) | ~ way(X0,X1) ) ).
+fof(f99,axiom,! [X0] : ! [X1] : ( way(X0,X1) | ~ street(X0,X1) ) ).
+fof(f102,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) | ~ state(X0,X1) ) ).
+fof(f103,axiom,! [X0] : ! [X1] : ( group(X0,X1) | ~ two(X0,X1) ) ).
+fof(f104,axiom,! [X0] : ! [X1] : ( male(X0,X1) | ~ man(X0,X1) ) ).
+fof(f108,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ organism(X0,X1) ) ).
+fof(f109,axiom,! [X0] : ! [X1] : ( organism(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(f110,axiom,! [X0] : ! [X1] : ( human_person(X0,X1) | ~ man(X0,X1) ) ).
+fof(f111,axiom,! [X0] : ! [X1] : ( man(X0,X1) | ~ fellow(X0,X1) ) ).
+fof(f112,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f113,axiom,! [X0] : ! [X1] : ( nonexistent(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f114,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f115,axiom,! [X0] : ! [X1] : ( thing(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f116,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) | ~ event(X0,X1) ) ).
+fof(f118,axiom,! [X0] : ! [X1] : ( multiple(X0,X1) | ~ set(X0,X1) ) ).
+fof(f119,axiom,! [X0] : ! [X1] : ( set(X0,X1) | ~ group(X0,X1) ) ).
+fof(f120,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ object(X0,X1) ) ).
+fof(f122,axiom,! [X0] : ! [X1] : ( existent(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f123,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f124,axiom,! [X0] : ! [X1] : ( singleton(X0,X1) | ~ thing(X0,X1) ) ).
+fof(f125,axiom,! [X0] : ! [X1] : ( thing(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f126,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ object(X0,X1) ) ).
+fof(f127,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ artifact(X0,X1) ) ).
+fof(f128,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) | ~ clothes(X0,X1) ) ).
+fof(f129,axiom,! [X0] : ! [X1] : ( clothes(X0,X1) | ~ coat(X0,X1) ) ).
+fof(f131,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(f134,axiom,! [X0] : ! [X1] : ( ~ multiple(X0,X1) | ~ singleton(X0,X1) ) ).
+fof(f135,axiom,! [X0] : ! [X1] : ( ~ general(X0,X1) | ~ specific(X0,X1) ) ).
+fof(f136,axiom,! [X0] : ! [X1] : ( ~ male(X0,X1) | ~ unisex(X0,X1) ) ).
+fof(f137,axiom,! [X0] : ! [X1] : ( ~ black(X0,X1) | ~ white(X0,X1) ) ).
+fof(f138,axiom,! [X0] : ! [X1] : ( ~ old(X0,X1) | ~ young(X0,X1) ) ).
+fof(f139,axiom,! [X0] : ! [X1] : ! [X2] : ( ! [X3] : ( ~ of(X0,X3,X1) | X2 = X3 | ~ placename(X0,X3) ) | ~ of(X0,X2,X1) | ~ placename(X0,X2) | ~ entity(X0,X1) ) ).
+fof(f140,axiom,! [X0] : ! [X1] : ! [X2] : ( ! [X3] : ( ~ of(X0,X3,X1) | X2 = X3 | ~ placename(X0,X3) ) | ~ of(X0,X2,X1) | ~ placename(X0,X2) | ~ entity(X0,X1) ) ).
+fof(f141,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X2 = X3 | ~ be(X0,X1,X2,X3) ) ).
+fof(f142,axiom,! [X0] : ! [X1] : ( two(X0,X1) <=> ? [X2] : ( ? [X3] : ( ! [X4] : ( X2 = X4 | X3 = X4 | ~ member(X0,X4,X1) ) & X2 != X3 & member(X0,X3,X1) ) & member(X0,X2,X1) ) ) ).
+fof(f143,axiom,! [X0] : ! [X1] : ( two(X0,X1) <=> ? [X2] : ( ? [X3] : ( ! [X4] : ( X2 = X4 | X3 = X4 | ~ member(X0,X4,X1) ) & X2 != X3 & member(X0,X3,X1) ) & member(X0,X2,X1) ) ) ).
+fof(f144,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X2 != X3 | ~ patient(X0,X1,X3) | ~ agent(X0,X1,X2) | ~ nonreflexive(X0,X1) ) ).
+fof(f145,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X2 != X3 | ~ patient(X0,X1,X3) | ~ agent(X0,X1,X2) | ~ nonreflexive(X0,X1) ) ).
+fof(f146,axiom,! [X0] : ! [X1] : ~ member(X0,X1,X1) ).
+fof(f147,axiom,! [X0] : ! [X1] : ~ member(X0,X1,X1) ).
+fof(f148,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( ( black(X0,X8) & coat(X0,X8) ) | ~ member(X0,X8,X7) ) & group(X0,X7) & ! [X9] : ( ! [X10] : ( ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) | ~ member(X0,X10,X1) ) | ~ member(X0,X9,X7) ) & ! [X12] : ( ( young(X0,X12) & fellow(X0,X12) ) | ~ member(X0,X12,X6) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( ? [X14] : ? [X15] : ( be(X0,X14,X13,X15) & state(X0,X14) ) | ~ member(X0,X13,X6) ) & barrel(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & street(X0,X4) & old(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) ).
+fof(f149,axiom,! [X0] : ! [X1] : ( ( two(X0,X1) | ! [X2] : ( ! [X3] : ( ? [X4] : ( X2 != X4 & X3 != X4 & member(X0,X4,X1) ) | X2 = X3 | ~ member(X0,X3,X1) ) | ~ member(X0,X2,X1) ) ) & ( ? [X2] : ( ? [X3] : ( ! [X4] : ( X2 = X4 | X3 = X4 | ~ member(X0,X4,X1) ) & X2 != X3 & member(X0,X3,X1) ) & member(X0,X2,X1) ) | ~ two(X0,X1) ) ) ).
+fof(f150,axiom,! [X0] : ! [X1] : ( ( two(X0,X1) | ! [X2] : ( ! [X3] : ( ? [X4] : ( X2 != X4 & X3 != X4 & member(X0,X4,X1) ) | X2 = X3 | ~ member(X0,X3,X1) ) | ~ member(X0,X2,X1) ) ) & ( ? [X5] : ( ? [X6] : ( ! [X7] : ( X5 = X7 | X6 = X7 | ~ member(X0,X7,X1) ) & X5 != X6 & member(X0,X6,X1) ) & member(X0,X5,X1) ) | ~ two(X0,X1) ) ) ).
+fof(f151,axiom,! [X3] : ! [X2] : ! [X1] : ! [X0] : ( ? [X4] : ( X2 != X4 & X3 != X4 & member(X0,X4,X1) ) => ( sK0(X0,X1,X2,X3) != X2 & sK0(X0,X1,X2,X3) != X3 & member(X0,sK0(X0,X1,X2,X3),X1) ) ) ).
+fof(f152,axiom,! [X1] : ! [X0] : ( ? [X5] : ( ? [X6] : ( ! [X7] : ( X5 = X7 | X6 = X7 | ~ member(X0,X7,X1) ) & X5 != X6 & member(X0,X6,X1) ) & member(X0,X5,X1) ) => ( ? [X6] : ( ! [X7] : ( sK1(X0,X1) = X7 | X6 = X7 | ~ member(X0,X7,X1) ) & sK1(X0,X1) != X6 & member(X0,X6,X1) ) & member(X0,sK1(X0,X1),X1) ) ) ).
+fof(f153,axiom,! [X1] : ! [X0] : ( ? [X6] : ( ! [X7] : ( sK1(X0,X1) = X7 | X6 = X7 | ~ member(X0,X7,X1) ) & sK1(X0,X1) != X6 & member(X0,X6,X1) ) => ( ! [X7] : ( sK1(X0,X1) = X7 | sK2(X0,X1) = X7 | ~ member(X0,X7,X1) ) & sK1(X0,X1) != sK2(X0,X1) & member(X0,sK2(X0,X1),X1) ) ) ).
+fof(f154,axiom,! [X0] : ! [X1] : ( ( two(X0,X1) | ! [X2] : ( ! [X3] : ( ( sK0(X0,X1,X2,X3) != X2 & sK0(X0,X1,X2,X3) != X3 & member(X0,sK0(X0,X1,X2,X3),X1) ) | X2 = X3 | ~ member(X0,X3,X1) ) | ~ member(X0,X2,X1) ) ) & ( ( ! [X7] : ( sK1(X0,X1) = X7 | sK2(X0,X1) = X7 | ~ member(X0,X7,X1) ) & sK1(X0,X1) != sK2(X0,X1) & member(X0,sK2(X0,X1),X1) & member(X0,sK1(X0,X1),X1) ) | ~ two(X0,X1) ) ) ).
+fof(f155,axiom,? [X0] : ? [X1] : ? [X2] : ? [X3] : ? [X4] : ? [X5] : ? [X6] : ? [X7] : ( ! [X8] : ( ( black(X0,X8) & coat(X0,X8) ) | ~ member(X0,X8,X7) ) & group(X0,X7) & ! [X9] : ( ! [X10] : ( ? [X11] : ( wear(X0,X11) & nonreflexive(X0,X11) & patient(X0,X11,X9) & agent(X0,X11,X10) & event(X0,X11) ) | ~ member(X0,X10,X1) ) | ~ member(X0,X9,X7) ) & ! [X12] : ( ( young(X0,X12) & fellow(X0,X12) ) | ~ member(X0,X12,X6) ) & group(X0,X6) & two(X0,X6) & ! [X13] : ( ? [X14] : ? [X15] : ( be(X0,X14,X13,X15) & state(X0,X14) ) | ~ member(X0,X13,X6) ) & barrel(X0,X5) & agent(X0,X5,X3) & event(X0,X5) & street(X0,X4) & old(X0,X3) & white(X0,X3) & chevy(X0,X3) & placename(X0,X2) & hollywood_placename(X0,X2) & city(X0,X3) & of(X0,X2,X3) & frontseat(X0,X4) & group(X0,X1) ) => ( ! [X8] : ( ( black(sK3,X8) & coat(sK3,X8) ) | ~ member(sK3,X8,sK10) ) & group(sK3,sK10) & ! [X9] : ( ! [X10] : ( ? [X11] : ( wear(sK3,X11) & nonreflexive(sK3,X11) & patient(sK3,X11,X9) & agent(sK3,X11,X10) & event(sK3,X11) ) | ~ member(sK3,X10,sK4) ) | ~ member(sK3,X9,sK10) ) & ! [X12] : ( ( young(sK3,X12) & fellow(sK3,X12) ) | ~ member(sK3,X12,sK9) ) & group(sK3,sK9) & two(sK3,sK9) & ! [X13] : ( ? [X15] : ? [X14] : ( be(sK3,X14,X13,X15) & state(sK3,X14) ) | ~ member(sK3,X13,sK9) ) & barrel(sK3,sK8) & agent(sK3,sK8,sK6) & event(sK3,sK8) & street(sK3,sK7) & old(sK3,sK6) & white(sK3,sK6) & chevy(sK3,sK6) & placename(sK3,sK5) & hollywood_placename(sK3,sK5) & city(sK3,sK6) & of(sK3,sK5,sK6) & frontseat(sK3,sK7) & group(sK3,sK4) ) ).
+fof(f156,axiom,! [X10] : ! [X9] : ( ? [X11] : ( wear(sK3,X11) & nonreflexive(sK3,X11) & patient(sK3,X11,X9) & agent(sK3,X11,X10) & event(sK3,X11) ) => ( wear(sK3,sK11(X9,X10)) & nonreflexive(sK3,sK11(X9,X10)) & patient(sK3,sK11(X9,X10),X9) & agent(sK3,sK11(X9,X10),X10) & event(sK3,sK11(X9,X10)) ) ) ).
+fof(f157,axiom,! [X13] : ( ? [X15] : ? [X14] : ( be(sK3,X14,X13,X15) & state(sK3,X14) ) => ( be(sK3,sK12(X13),X13,sK13(X13)) & state(sK3,sK12(X13)) ) ) ).
+fof(f158,axiom,! [X8] : ( ( black(sK3,X8) & coat(sK3,X8) ) | ~ member(sK3,X8,sK10) ) & group(sK3,sK10) & ! [X9] : ( ! [X10] : ( ( wear(sK3,sK11(X9,X10)) & nonreflexive(sK3,sK11(X9,X10)) & patient(sK3,sK11(X9,X10),X9) & agent(sK3,sK11(X9,X10),X10) & event(sK3,sK11(X9,X10)) ) | ~ member(sK3,X10,sK4) ) | ~ member(sK3,X9,sK10) ) & ! [X12] : ( ( young(sK3,X12) & fellow(sK3,X12) ) | ~ member(sK3,X12,sK9) ) & group(sK3,sK9) & two(sK3,sK9) & ! [X13] : ( ( be(sK3,sK12(X13),X13,sK13(X13)) & state(sK3,sK12(X13)) ) | ~ member(sK3,X13,sK9) ) & barrel(sK3,sK8) & agent(sK3,sK8,sK6) & event(sK3,sK8) & street(sK3,sK7) & old(sK3,sK6) & white(sK3,sK6) & chevy(sK3,sK6) & placename(sK3,sK5) & hollywood_placename(sK3,sK5) & city(sK3,sK6) & of(sK3,sK5,sK6) & frontseat(sK3,sK7) & group(sK3,sK4) ).
+fof(f167,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ location(X0,X1) ) ).
+fof(f168,axiom,! [X0] : ! [X1] : ( location(X0,X1) | ~ city(X0,X1) ) ).
+fof(f170,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(f171,axiom,! [X0] : ! [X1] : ( general(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(f173,axiom,! [X0] : ! [X1] : ( thing(X0,X1) | ~ abstraction(X0,X1) ) ).
+fof(f174,axiom,! [X0] : ! [X1] : ( abstraction(X0,X1) | ~ relation(X0,X1) ) ).
+fof(f175,axiom,! [X0] : ! [X1] : ( relation(X0,X1) | ~ relname(X0,X1) ) ).
+fof(f176,axiom,! [X0] : ! [X1] : ( relname(X0,X1) | ~ placename(X0,X1) ) ).
+fof(f177,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) | ~ way(X0,X1) ) ).
+fof(f178,axiom,! [X0] : ! [X1] : ( way(X0,X1) | ~ street(X0,X1) ) ).
+fof(f181,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) | ~ state(X0,X1) ) ).
+fof(f182,axiom,! [X0] : ! [X1] : ( group(X0,X1) | ~ two(X0,X1) ) ).
+fof(f183,axiom,! [X0] : ! [X1] : ( male(X0,X1) | ~ man(X0,X1) ) ).
+fof(f187,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ organism(X0,X1) ) ).
+fof(f188,axiom,! [X0] : ! [X1] : ( organism(X0,X1) | ~ human_person(X0,X1) ) ).
+fof(f189,axiom,! [X0] : ! [X1] : ( human_person(X0,X1) | ~ man(X0,X1) ) ).
+fof(f190,axiom,! [X0] : ! [X1] : ( man(X0,X1) | ~ fellow(X0,X1) ) ).
+fof(f191,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f192,axiom,! [X0] : ! [X1] : ( nonexistent(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f193,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f194,axiom,! [X0] : ! [X1] : ( thing(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(f195,axiom,! [X0] : ! [X1] : ( eventuality(X0,X1) | ~ event(X0,X1) ) ).
+fof(f197,axiom,! [X0] : ! [X1] : ( multiple(X0,X1) | ~ set(X0,X1) ) ).
+fof(f198,axiom,! [X0] : ! [X1] : ( set(X0,X1) | ~ group(X0,X1) ) ).
+fof(f199,axiom,! [X0] : ! [X1] : ( unisex(X0,X1) | ~ object(X0,X1) ) ).
+fof(f201,axiom,! [X0] : ! [X1] : ( existent(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f202,axiom,! [X0] : ! [X1] : ( specific(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f203,axiom,! [X0] : ! [X1] : ( singleton(X0,X1) | ~ thing(X0,X1) ) ).
+fof(f204,axiom,! [X0] : ! [X1] : ( thing(X0,X1) | ~ entity(X0,X1) ) ).
+fof(f205,axiom,! [X0] : ! [X1] : ( entity(X0,X1) | ~ object(X0,X1) ) ).
+fof(f206,axiom,! [X0] : ! [X1] : ( object(X0,X1) | ~ artifact(X0,X1) ) ).
+fof(f207,axiom,! [X0] : ! [X1] : ( artifact(X0,X1) | ~ clothes(X0,X1) ) ).
+fof(f208,axiom,! [X0] : ! [X1] : ( clothes(X0,X1) | ~ coat(X0,X1) ) ).
+fof(f210,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(f213,axiom,! [X0] : ! [X1] : ( ~ multiple(X0,X1) | ~ singleton(X0,X1) ) ).
+fof(f214,axiom,! [X0] : ! [X1] : ( ~ general(X0,X1) | ~ specific(X0,X1) ) ).
+fof(f215,axiom,! [X0] : ! [X1] : ( ~ male(X0,X1) | ~ unisex(X0,X1) ) ).
+fof(f216,axiom,! [X0] : ! [X1] : ( ~ black(X0,X1) | ~ white(X0,X1) ) ).
+fof(f217,axiom,! [X0] : ! [X1] : ( ~ old(X0,X1) | ~ young(X0,X1) ) ).
+fof(f218,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( ~ of(X0,X3,X1) | X2 = X3 | ~ placename(X0,X3) | ~ of(X0,X2,X1) | ~ placename(X0,X2) | ~ entity(X0,X1) ) ).
+fof(f219,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( X2 = X3 | ~ be(X0,X1,X2,X3) ) ).
+fof(f220,axiom,! [X0] : ! [X1] : ( member(X0,sK1(X0,X1),X1) | ~ two(X0,X1) ) ).
+fof(f221,axiom,! [X0] : ! [X1] : ( member(X0,sK2(X0,X1),X1) | ~ two(X0,X1) ) ).
+fof(f222,axiom,! [X0] : ! [X1] : ( sK1(X0,X1) != sK2(X0,X1) | ~ two(X0,X1) ) ).
+fof(f223,axiom,! [X0] : ! [X7] : ! [X1] : ( sK1(X0,X1) = X7 | sK2(X0,X1) = X7 | ~ member(X0,X7,X1) | ~ two(X0,X1) ) ).
+fof(f224,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( two(X0,X1) | member(X0,sK0(X0,X1,X2,X3),X1) | X2 = X3 | ~ member(X0,X3,X1) | ~ member(X0,X2,X1) ) ).
+fof(f225,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( two(X0,X1) | sK0(X0,X1,X2,X3) != X3 | X2 = X3 | ~ member(X0,X3,X1) | ~ member(X0,X2,X1) ) ).
+fof(f226,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( two(X0,X1) | sK0(X0,X1,X2,X3) != X2 | X2 = X3 | ~ member(X0,X3,X1) | ~ member(X0,X2,X1) ) ).
+fof(f227,axiom,! [X2] : ! [X0] : ! [X3] : ! [X1] : ( X2 != X3 | ~ patient(X0,X1,X3) | ~ agent(X0,X1,X2) | ~ nonreflexive(X0,X1) ) ).
+fof(f228,axiom,! [X0] : ! [X1] : ~ member(X0,X1,X1) ).
+fof(f229,axiom,group(sK3,sK4) ).
+fof(f231,axiom,of(sK3,sK5,sK6) ).
+fof(f232,axiom,city(sK3,sK6) ).
+fof(f234,axiom,placename(sK3,sK5) ).
+fof(f236,axiom,white(sK3,sK6) ).
+fof(f237,axiom,old(sK3,sK6) ).
+fof(f238,axiom,street(sK3,sK7) ).
+fof(f239,axiom,event(sK3,sK8) ).
+fof(f240,axiom,agent(sK3,sK8,sK6) ).
+fof(f242,axiom,! [X13] : ( state(sK3,sK12(X13)) | ~ member(sK3,X13,sK9) ) ).
+fof(f243,axiom,! [X13] : ( be(sK3,sK12(X13),X13,sK13(X13)) | ~ member(sK3,X13,sK9) ) ).
+fof(f244,axiom,two(sK3,sK9) ).
+fof(f245,axiom,group(sK3,sK9) ).
+fof(f246,axiom,! [X12] : ( fellow(sK3,X12) | ~ member(sK3,X12,sK9) ) ).
+fof(f247,axiom,! [X12] : ( young(sK3,X12) | ~ member(sK3,X12,sK9) ) ).
+fof(f248,axiom,! [X10] : ! [X9] : ( event(sK3,sK11(X9,X10)) | ~ member(sK3,X10,sK4) | ~ member(sK3,X9,sK10) ) ).
+fof(f249,axiom,! [X10] : ! [X9] : ( agent(sK3,sK11(X9,X10),X10) | ~ member(sK3,X10,sK4) | ~ member(sK3,X9,sK10) ) ).
+fof(f250,axiom,! [X10] : ! [X9] : ( patient(sK3,sK11(X9,X10),X9) | ~ member(sK3,X10,sK4) | ~ member(sK3,X9,sK10) ) ).
+fof(f251,axiom,! [X10] : ! [X9] : ( nonreflexive(sK3,sK11(X9,X10)) | ~ member(sK3,X10,sK4) | ~ member(sK3,X9,sK10) ) ).
+fof(f253,axiom,group(sK3,sK10) ).
+fof(f254,axiom,! [X8] : ( coat(sK3,X8) | ~ member(sK3,X8,sK10) ) ).
+fof(f255,axiom,! [X8] : ( black(sK3,X8) | ~ member(sK3,X8,sK10) ) ).
+fof(f256,axiom,! [X0] : ! [X3] : ! [X1] : ( ~ patient(X0,X1,X3) | ~ agent(X0,X1,X3) | ~ nonreflexive(X0,X1) ) ).
+fof(c_57,axiom,! [X0] : ! [X1] : ( ~ location(X0,X1) | object(X0,X1) ) ).
+fof(c_58,axiom,! [X0] : ! [X1] : ( ~ city(X0,X1) | location(X0,X1) ) ).
+fof(c_60,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | unisex(X0,X1) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | general(X0,X1) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | thing(X0,X1) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ( ~ relation(X0,X1) | abstraction(X0,X1) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ( ~ relname(X0,X1) | relation(X0,X1) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | relname(X0,X1) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ( ~ way(X0,X1) | artifact(X0,X1) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ( ~ street(X0,X1) | way(X0,X1) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ( ~ state(X0,X1) | eventuality(X0,X1) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ( ~ two(X0,X1) | group(X0,X1) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ( ~ man(X0,X1) | male(X0,X1) ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ( ~ organism(X0,X1) | entity(X0,X1) ) ).
+fof(c_78,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | organism(X0,X1) ) ).
+fof(c_79,axiom,! [X0] : ! [X1] : ( ~ man(X0,X1) | human_person(X0,X1) ) ).
+fof(c_80,axiom,! [X0] : ! [X1] : ( ~ fellow(X0,X1) | man(X0,X1) ) ).
+fof(c_81,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | unisex(X0,X1) ) ).
+fof(c_82,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | nonexistent(X0,X1) ) ).
+fof(c_83,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | specific(X0,X1) ) ).
+fof(c_84,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | thing(X0,X1) ) ).
+fof(c_85,axiom,! [X0] : ! [X1] : ( ~ event(X0,X1) | eventuality(X0,X1) ) ).
+fof(c_87,axiom,! [X0] : ! [X1] : ( ~ set(X0,X1) | multiple(X0,X1) ) ).
+fof(c_88,axiom,! [X0] : ! [X1] : ( ~ group(X0,X1) | set(X0,X1) ) ).
+fof(c_89,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | unisex(X0,X1) ) ).
+fof(c_91,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | existent(X0,X1) ) ).
+fof(c_92,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | specific(X0,X1) ) ).
+fof(c_93,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | singleton(X0,X1) ) ).
+fof(c_94,axiom,! [X0] : ! [X1] : ( ~ entity(X0,X1) | thing(X0,X1) ) ).
+fof(c_95,axiom,! [X0] : ! [X1] : ( ~ object(X0,X1) | entity(X0,X1) ) ).
+fof(c_96,axiom,! [X0] : ! [X1] : ( ~ artifact(X0,X1) | object(X0,X1) ) ).
+fof(c_97,axiom,! [X0] : ! [X1] : ( ~ clothes(X0,X1) | artifact(X0,X1) ) ).
+fof(c_98,axiom,! [X0] : ! [X1] : ( ~ coat(X0,X1) | clothes(X0,X1) ) ).
+fof(c_100,axiom,! [X0] : ! [X1] : ( ~ nonexistent(X0,X1) | ~ existent(X0,X1) ) ).
+fof(c_103,axiom,! [X0] : ! [X1] : ( ~ multiple(X0,X1) | ~ singleton(X0,X1) ) ).
+fof(c_104,axiom,! [X0] : ! [X1] : ( ~ general(X0,X1) | ~ specific(X0,X1) ) ).
+fof(c_105,axiom,! [X0] : ! [X1] : ( ~ unisex(X0,X1) | ~ male(X0,X1) ) ).
+fof(c_106,axiom,! [X0] : ! [X1] : ( ~ black(X0,X1) | ~ white(X0,X1) ) ).
+fof(c_107,axiom,! [X0] : ! [X1] : ( ~ old(X0,X1) | ~ young(X0,X1) ) ).
+fof(c_108,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ of(X0,X1,X2) | ~ of(X0,X3,X2) | ~ placename(X0,X1) | ~ placename(X0,X3) | ~ entity(X0,X2) | X1 = X3 ) ).
+fof(c_109,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ be(X0,X1,X2,X3) | X2 = X3 ) ).
+fof(c_110,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( sK0(X0,X1,X2,X3) != X2 | ~ member(X0,X2,X1) | ~ member(X0,X3,X1) | X2 = X3 | two(X0,X1) ) ).
+fof(c_111,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( sK0(X0,X1,X2,X3) != X3 | ~ member(X0,X2,X1) | ~ member(X0,X3,X1) | X2 = X3 | two(X0,X1) ) ).
+fof(c_112,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ member(X0,X1,X2) | ~ member(X0,X3,X2) | X1 = X3 | member(X0,sK0(X0,X2,X3,X1),X2) | two(X0,X2) ) ).
+fof(c_113,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(X0,X1,X2) | ~ two(X0,X2) | sK1(X0,X2) = X1 | sK2(X0,X2) = X1 ) ).
+fof(c_114,axiom,! [X0] : ! [X1] : ( sK1(X0,X1) != sK2(X0,X1) | ~ two(X0,X1) ) ).
+fof(c_115,axiom,! [X0] : ! [X1] : ( ~ two(X0,X1) | member(X0,sK2(X0,X1),X1) ) ).
+fof(c_116,axiom,! [X0] : ! [X1] : ( ~ two(X0,X1) | member(X0,sK1(X0,X1),X1) ) ).
+fof(c_117,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ patient(X0,X1,X2) | ~ agent(X0,X1,X2) | ~ nonreflexive(X0,X1) ) ).
+fof(c_118,axiom,! [X0] : ! [X1] : ~ member(X0,X1,X1) ).
+fof(c_119,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | black(sK3,X0) ) ).
+fof(c_120,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | coat(sK3,X0) ) ).
+fof(c_121,axiom,group(sK3,sK10) ).
+fof(c_123,axiom,! [X0] : ! [X1] : ( ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK4) | nonreflexive(sK3,sK11(X0,X1)) ) ).
+fof(c_124,axiom,! [X0] : ! [X1] : ( ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK4) | patient(sK3,sK11(X0,X1),X0) ) ).
+fof(c_125,axiom,! [X0] : ! [X1] : ( ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK4) | agent(sK3,sK11(X0,X1),X1) ) ).
+fof(c_126,axiom,! [X0] : ! [X1] : ( ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK4) | event(sK3,sK11(X0,X1)) ) ).
+fof(c_127,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | young(sK3,X0) ) ).
+fof(c_128,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | fellow(sK3,X0) ) ).
+fof(c_129,axiom,group(sK3,sK9) ).
+fof(c_130,axiom,two(sK3,sK9) ).
+fof(c_131,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | be(sK3,sK12(X0),X0,sK13(X0)) ) ).
+fof(c_132,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | state(sK3,sK12(X0)) ) ).
+fof(c_134,axiom,agent(sK3,sK8,sK6) ).
+fof(c_135,axiom,event(sK3,sK8) ).
+fof(c_136,axiom,street(sK3,sK7) ).
+fof(c_137,axiom,old(sK3,sK6) ).
+fof(c_138,axiom,white(sK3,sK6) ).
+fof(c_140,axiom,placename(sK3,sK5) ).
+fof(c_142,axiom,city(sK3,sK6) ).
+fof(c_143,axiom,of(sK3,sK5,sK6) ).
+fof(c_145,axiom,group(sK3,sK4) ).
+fof(c_982,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ frontseat(X1,X3) | frontseat(X0,X2) ) ).
+fof(c_983,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ chevy(X1,X3) | chevy(X0,X2) ) ).
+fof(c_984,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ city(X1,X3) | city(X0,X2) ) ).
+fof(c_986,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ hollywood_placename(X1,X3) | hollywood_placename(X0,X2) ) ).
+fof(c_987,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ street(X1,X3) | street(X0,X2) ) ).
+fof(c_988,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ event(X1,X3) | event(X0,X2) ) ).
+fof(c_989,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ barrel(X1,X3) | barrel(X0,X2) ) ).
+fof(c_990,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ state(X1,X3) | state(X0,X2) ) ).
+fof(c_991,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ group(X1,X3) | group(X0,X2) ) ).
+fof(c_993,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ fellow(X1,X2) | fellow(X0,X2) ) ).
+fof(c_994,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ wear(X1,X3) | wear(X0,X2) ) ).
+fof(c_995,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ coat(X1,X2) | coat(X0,X2) ) ).
+fof(c_996,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ black(X1,X2) | black(X0,X2) ) ).
+fof(c_997,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ white(X1,X3) | white(X0,X2) ) ).
+fof(c_998,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ old(X1,X3) | old(X0,X2) ) ).
+fof(c_999,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != X1 | ~ young(X1,X2) | young(X0,X2) ) ).
+fof(c_1001,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( X0 != X1 | X2 != X3 | X4 != X5 | ~ be(X1,X3,X6,X5) | be(X0,X2,X6,X4) ) ).
+fof(c_1003,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != X1 | X2 != X3 | ~ patient(X1,X3,X4) | patient(X0,X2,X4) ) ).
+fof(c_1005,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ nonreflexive(X1,X3) | nonreflexive(X0,X2) ) ).
+fof(c_1048,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK6 | location(X0,X1) ) ).
+fof(c_1049,axiom,location(sK3,sK6) ).
+fof(c_1054,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK6 | object(X0,X1) ) ).
+fof(c_1055,axiom,object(sK3,sK6) ).
+fof(c_1062,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK7 | way(X0,X1) ) ).
+fof(c_1063,axiom,way(sK3,sK7) ).
+fof(c_1068,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK7 | artifact(X0,X1) ) ).
+fof(c_1069,axiom,artifact(sK3,sK7) ).
+fof(c_1076,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK6 | ~ black(X0,X1) ) ).
+fof(c_1077,axiom,~ black(sK3,sK6) ).
+fof(c_1082,axiom,! [X0] : ( X0 != sK6 | sK3 != sK3 | ~ member(sK3,X0,sK10) ) ).
+fof(c_1083,axiom,~ member(sK3,sK6,sK10) ).
+fof(c_1088,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK6 | ~ young(X0,X1) ) ).
+fof(c_1089,axiom,~ young(sK3,sK6) ).
+fof(c_1094,axiom,! [X0] : ( X0 != sK6 | sK3 != sK3 | ~ member(sK3,X0,sK9) ) ).
+fof(c_1095,axiom,~ member(sK3,sK6,sK9) ).
+fof(c_1108,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ abstraction(X0,X2) | ~ specific(X1,X3) ) ).
+fof(c_1109,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | ~ specific(X0,X1) ) ).
+fof(c_1130,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ relname(X0,X2) | abstraction(X1,X3) ) ).
+fof(c_1131,axiom,! [X0] : ! [X1] : ( ~ relname(X0,X1) | abstraction(X0,X1) ) ).
+fof(c_1141,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ placename(X0,X2) | abstraction(X1,X3) ) ).
+fof(c_1142,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | abstraction(X0,X1) ) ).
+fof(c_1152,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ unisex(X1,X3) | ~ man(X0,X2) ) ).
+fof(c_1153,axiom,! [X0] : ! [X1] : ( ~ unisex(X0,X1) | ~ man(X0,X1) ) ).
+fof(c_1196,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | man(X0,X1) ) ).
+fof(c_1197,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | man(sK3,X0) ) ).
+fof(c_1207,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ eventuality(X0,X2) | ~ existent(X1,X3) ) ).
+fof(c_1208,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | ~ existent(X0,X1) ) ).
+fof(c_1218,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ set(X0,X2) | ~ singleton(X1,X3) ) ).
+fof(c_1219,axiom,! [X0] : ! [X1] : ( ~ set(X0,X1) | ~ singleton(X0,X1) ) ).
+fof(c_1229,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ group(X0,X2) | ~ singleton(X1,X3) ) ).
+fof(c_1230,axiom,! [X0] : ! [X1] : ( ~ group(X0,X1) | ~ singleton(X0,X1) ) ).
+fof(c_1240,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ eventuality(X1,X3) | ~ entity(X0,X2) ) ).
+fof(c_1241,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | ~ entity(X0,X1) ) ).
+fof(c_1251,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ thing(X0,X2) | ~ group(X1,X3) ) ).
+fof(c_1252,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | ~ group(X0,X1) ) ).
+fof(c_1262,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ coat(X0,X2) | artifact(X1,X3) ) ).
+fof(c_1263,axiom,! [X0] : ! [X1] : ( ~ coat(X0,X1) | artifact(X0,X1) ) ).
+fof(c_1273,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK10) | artifact(X0,X1) ) ).
+fof(c_1274,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | artifact(sK3,X0) ) ).
+fof(c_1284,axiom,! [X1] : ! [X2] : ! [X4] : ! [X0] : ! [X3] : ( sK12(X1) != X2 | sK13(X1) != X4 | X0 != sK3 | X1 != X3 | ~ member(sK3,X1,sK9) | X3 = X4 ) ).
+fof(c_1285,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | X0 = sK13(X0) ) ).
+fof(c_1297,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK7 | object(X0,X1) ) ).
+fof(c_1298,axiom,object(sK3,sK7) ).
+fof(c_1304,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK10) | object(X0,X1) ) ).
+fof(c_1305,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | object(sK3,X0) ) ).
+fof(c_1316,axiom,! [X1] : ! [X2] : ! [X0] : ( sK12(X1) != X2 | X0 != sK3 | ~ member(sK3,X1,sK9) | eventuality(X0,X2) ) ).
+fof(c_1317,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | eventuality(sK3,sK12(X0)) ) ).
+fof(c_1338,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | ~ unisex(X0,X1) ) ).
+fof(c_1339,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | ~ unisex(sK3,X0) ) ).
+fof(c_1347,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | human_person(X0,X1) ) ).
+fof(c_1348,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | human_person(sK3,X0) ) ).
+fof(c_1362,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ human_person(X0,X2) | entity(X1,X3) ) ).
+fof(c_1363,axiom,! [X0] : ! [X1] : ( ~ human_person(X0,X1) | entity(X0,X1) ) ).
+fof(c_1384,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ abstraction(X1,X3) | ~ entity(X0,X2) ) ).
+fof(c_1385,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | ~ entity(X0,X1) ) ).
+fof(c_1393,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ abstraction(X1,X3) | ~ eventuality(X0,X2) ) ).
+fof(c_1394,axiom,! [X0] : ! [X1] : ( ~ abstraction(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(c_1406,axiom,! [X1] : ! [X2] : ! [X3] : ! [X0] : ! [X4] : ( sK11(X1,X2) != X3 | X0 != sK3 | X1 != X4 | ~ agent(X0,X3,X4) | ~ member(sK3,X1,sK10) | ~ member(sK3,X2,sK4) | ~ nonreflexive(X0,X3) ) ).
+fof(c_1407,axiom,! [X0] : ! [X1] : ( ~ agent(sK3,sK11(X0,X1),X0) | ~ nonreflexive(sK3,sK11(X0,X1)) | ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK4) ) ).
+fof(c_1409,axiom,! [X0] : ! [X1] : ( ~ agent(sK3,sK11(X0,X1),X0) | ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK4) ) ).
+fof(c_1424,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ thing(X1,X3) | ~ two(X0,X2) ) ).
+fof(c_1425,axiom,! [X0] : ! [X1] : ( ~ thing(X0,X1) | ~ two(X0,X1) ) ).
+fof(c_1433,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK10 | ~ thing(X0,X1) ) ).
+fof(c_1434,axiom,~ thing(sK3,sK10) ).
+fof(c_1438,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK9 | ~ thing(X0,X1) ) ).
+fof(c_1439,axiom,~ thing(sK3,sK9) ).
+fof(c_1443,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK4 | ~ thing(X0,X1) ) ).
+fof(c_1444,axiom,~ thing(sK3,sK4) ).
+fof(c_1453,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | ~ object(X0,X1) ) ).
+fof(c_1454,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | ~ object(sK3,X0) ) ).
+fof(c_1462,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | ~ eventuality(X0,X1) ) ).
+fof(c_1463,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | ~ eventuality(sK3,X0) ) ).
+fof(c_1471,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | ~ abstraction(X0,X1) ) ).
+fof(c_1472,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | ~ abstraction(sK3,X0) ) ).
+fof(c_1486,axiom,! [X1] : ! [X2] : ! [X3] : ! [X0] : ( sK11(X1,X2) != X3 | X0 != sK3 | ~ member(sK3,X1,sK10) | ~ member(sK3,X2,sK4) | eventuality(X0,X3) ) ).
+fof(c_1487,axiom,! [X0] : ! [X1] : ( ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK4) | eventuality(sK3,sK11(X0,X1)) ) ).
+fof(c_1498,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK8 | eventuality(X0,X1) ) ).
+fof(c_1499,axiom,eventuality(sK3,sK8) ).
+fof(c_1511,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | entity(X0,X1) ) ).
+fof(c_1512,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | entity(sK3,X0) ) ).
+fof(c_1549,axiom,! [X0] : ! [X1] : ( X0 != X1 | sK3 != sK3 | ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK9) ) ).
+fof(c_1550,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | ~ member(sK3,X0,sK9) ) ).
+fof(c_1558,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK6 | entity(X0,X1) ) ).
+fof(c_1559,axiom,entity(sK3,sK6) ).
+fof(c_1563,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK7 | entity(X0,X1) ) ).
+fof(c_1564,axiom,entity(sK3,sK7) ).
+fof(c_1568,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK10) | entity(X0,X1) ) ).
+fof(c_1569,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | entity(sK3,X0) ) ).
+fof(c_1579,axiom,! [X0] : ( X0 != sK7 | sK3 != sK3 | ~ member(sK3,X0,sK9) ) ).
+fof(c_1580,axiom,~ member(sK3,sK7,sK9) ).
+fof(c_1591,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ placename(X0,X2) | ~ eventuality(X1,X3) ) ).
+fof(c_1592,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | ~ eventuality(X0,X1) ) ).
+fof(c_1600,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ placename(X0,X2) | ~ entity(X1,X3) ) ).
+fof(c_1601,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | ~ entity(X0,X1) ) ).
+fof(c_1609,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ placename(X0,X2) | thing(X1,X3) ) ).
+fof(c_1610,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | thing(X0,X1) ) ).
+fof(c_1618,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | ~ placename(X0,X1) ) ).
+fof(c_1619,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | ~ placename(sK3,X0) ) ).
+fof(c_1635,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ placename(X0,X2) | ~ two(X1,X3) ) ).
+fof(c_1636,axiom,! [X0] : ! [X1] : ( ~ placename(X0,X1) | ~ two(X0,X1) ) ).
+fof(c_1644,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ two(X1,X3) | ~ entity(X0,X2) ) ).
+fof(c_1645,axiom,! [X0] : ! [X1] : ( ~ two(X0,X1) | ~ entity(X0,X1) ) ).
+fof(c_1653,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != X1 | X2 != X3 | ~ eventuality(X0,X2) | ~ two(X1,X3) ) ).
+fof(c_1654,axiom,! [X0] : ! [X1] : ( ~ eventuality(X0,X1) | ~ two(X0,X1) ) ).
+fof(c_1662,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK10 | ~ placename(X0,X1) ) ).
+fof(c_1663,axiom,~ placename(sK3,sK10) ).
+fof(c_1667,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK10 | ~ entity(X0,X1) ) ).
+fof(c_1668,axiom,~ entity(sK3,sK10) ).
+fof(c_1672,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK10 | ~ eventuality(X0,X1) ) ).
+fof(c_1673,axiom,~ eventuality(sK3,sK10) ).
+fof(c_1677,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK9 | ~ placename(X0,X1) ) ).
+fof(c_1678,axiom,~ placename(sK3,sK9) ).
+fof(c_1682,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK9 | ~ entity(X0,X1) ) ).
+fof(c_1683,axiom,~ entity(sK3,sK9) ).
+fof(c_1687,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK9 | ~ eventuality(X0,X1) ) ).
+fof(c_1688,axiom,~ eventuality(sK3,sK9) ).
+fof(c_1692,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK4 | ~ placename(X0,X1) ) ).
+fof(c_1693,axiom,~ placename(sK3,sK4) ).
+fof(c_1697,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK4 | ~ entity(X0,X1) ) ).
+fof(c_1698,axiom,~ entity(sK3,sK4) ).
+fof(c_1702,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK4 | ~ eventuality(X0,X1) ) ).
+fof(c_1703,axiom,~ eventuality(sK3,sK4) ).
+fof(c_1973,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK10) | ~ two(X0,X1) ) ).
+fof(c_1974,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | ~ two(sK3,X0) ) ).
+fof(c_1982,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK9) | ~ two(X0,X1) ) ).
+fof(c_1983,axiom,! [X0] : ( ~ member(sK3,X0,sK9) | ~ two(sK3,X0) ) ).
+fof(c_1991,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK10) | ~ placename(X0,X1) ) ).
+fof(c_1992,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | ~ placename(sK3,X0) ) ).
+fof(c_2002,axiom,! [X0] : ! [X1] : ! [X2] : ( X0 != sK3 | X1 != X2 | ~ member(sK3,X2,sK10) | ~ eventuality(X0,X1) ) ).
+fof(c_2003,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | ~ eventuality(sK3,X0) ) ).
+fof(c_2013,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK6 | ~ two(X0,X1) ) ).
+fof(c_2014,axiom,~ two(sK3,sK6) ).
+fof(c_2018,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK6 | ~ placename(X0,X1) ) ).
+fof(c_2019,axiom,~ placename(sK3,sK6) ).
+fof(c_2023,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK6 | ~ eventuality(X0,X1) ) ).
+fof(c_2024,axiom,~ eventuality(sK3,sK6) ).
+fof(c_2028,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK7 | ~ two(X0,X1) ) ).
+fof(c_2029,axiom,~ two(sK3,sK7) ).
+fof(c_2033,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK7 | ~ placename(X0,X1) ) ).
+fof(c_2034,axiom,~ placename(sK3,sK7) ).
+fof(c_2038,axiom,! [X0] : ! [X1] : ( X0 != sK3 | X1 != sK7 | ~ eventuality(X0,X1) ) ).
+fof(c_2039,axiom,~ eventuality(sK3,sK7) ).
+fof(c_2043,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != sK3 | X1 != X2 | ~ of(X0,X3,X1) | ~ of(X0,X4,X1) | ~ member(sK3,X2,sK10) | ~ placename(X0,X3) | ~ placename(X0,X4) | X3 = X4 ) ).
+fof(c_2044,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ of(sK3,X0,X1) | ~ of(sK3,X2,X1) | ~ member(sK3,X1,sK10) | ~ placename(sK3,X0) | ~ placename(sK3,X2) | X0 = X2 ) ).
+fof(c_2063,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( X0 != sK3 | X1 != X2 | ~ of(X0,X3,X1) | ~ of(X0,X4,X1) | ~ member(sK3,X2,sK9) | ~ placename(X0,X3) | ~ placename(X0,X4) | X3 = X4 ) ).
+fof(c_2064,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ of(sK3,X0,X1) | ~ of(sK3,X2,X1) | ~ member(sK3,X1,sK9) | ~ placename(sK3,X0) | ~ placename(sK3,X2) | X0 = X2 ) ).
+fof(c_2083,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != sK3 | X1 != sK6 | ~ of(X0,X2,X1) | ~ of(X0,X3,X1) | ~ placename(X0,X2) | ~ placename(X0,X3) | X2 = X3 ) ).
+fof(c_2084,axiom,! [X0] : ! [X1] : ( ~ of(sK3,X0,sK6) | ~ of(sK3,X1,sK6) | ~ placename(sK3,X0) | ~ placename(sK3,X1) | X0 = X1 ) ).
+fof(c_2101,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( X0 != sK3 | X1 != sK7 | ~ of(X0,X2,X1) | ~ of(X0,X3,X1) | ~ placename(X0,X2) | ~ placename(X0,X3) | X2 = X3 ) ).
+fof(c_2102,axiom,! [X0] : ! [X1] : ( ~ of(sK3,X0,sK7) | ~ of(sK3,X1,sK7) | ~ placename(sK3,X0) | ~ placename(sK3,X1) | X0 = X1 ) ).
+fof(c_2121,axiom,! [X0] : ( X0 != sK10 | sK3 != sK3 | ~ member(sK3,X0,sK9) ) ).
+fof(c_2122,axiom,~ member(sK3,sK10,sK9) ).
+fof(c_2126,axiom,! [X0] : ( X0 != sK9 | sK3 != sK3 | ~ member(sK3,X0,sK10) ) ).
+fof(c_2127,axiom,~ member(sK3,sK9,sK10) ).
+fof(c_2133,axiom,! [X0] : ( X0 != sK4 | sK3 != sK3 | ~ member(sK3,X0,sK10) ) ).
+fof(c_2134,axiom,~ member(sK3,sK4,sK10) ).
+fof(c_2138,axiom,! [X0] : ( X0 != sK4 | sK3 != sK3 | ~ member(sK3,X0,sK9) ) ).
+fof(c_2139,axiom,~ member(sK3,sK4,sK9) ).
+fof(c_2143,axiom,sK3 != sK3 | sK10 != sK6 ).
+fof(c_2150,axiom,sK3 != sK3 | sK9 != sK6 ).
+fof(c_2157,axiom,sK3 != sK3 | sK4 != sK6 ).
+fof(c_2164,axiom,sK3 != sK3 | sK10 != sK7 ).
+fof(c_2171,axiom,sK3 != sK3 | sK9 != sK7 ).
+fof(c_2178,axiom,sK3 != sK3 | sK4 != sK7 ).
+fof(c_3265,axiom,sK4 != sK7 ).
+fof(c_3266,axiom,sK9 != sK7 ).
+fof(c_3267,axiom,sK10 != sK7 ).
+fof(c_3268,axiom,sK4 != sK6 ).
+fof(c_3269,axiom,sK9 != sK6 ).
+fof(c_3270,axiom,sK10 != sK6 ).
+fof(c_4702,axiom,! [X0_1] : X0_1 = X0_1 ).
+fof(c_5301,axiom,~ two(sK3,sK9) | eventuality(sK3,sK12(sK2(sK3,sK9))) ).
+fof(c_5302,axiom,~ two(sK3,sK9) | eventuality(sK3,sK12(sK1(sK3,sK9))) ).
+fof(c_5303,axiom,eventuality(sK3,sK12(sK1(sK3,sK9))) ).
+fof(c_5304,axiom,eventuality(sK3,sK12(sK2(sK3,sK9))) ).
+fof(c_5309,axiom,~ two(sK3,sK9) | sK13(sK2(sK3,sK9)) = sK2(sK3,sK9) ).
+fof(c_5310,axiom,~ two(sK3,sK9) | sK13(sK1(sK3,sK9)) = sK1(sK3,sK9) ).
+fof(c_5311,axiom,sK13(sK1(sK3,sK9)) = sK1(sK3,sK9) ).
+fof(c_5312,axiom,sK13(sK2(sK3,sK9)) = sK2(sK3,sK9) ).
+fof(c_5325,axiom,! [X0] : ( ~ member(sK3,X0,sK10) | ~ member(sK3,X0,sK4) ) ).
+fof(c_5376,axiom,! [X0] : ! [X1] : ( ~ member(sK3,sK0(sK3,sK10,X0,X1),sK4) | ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK10) | X0 = X1 | two(sK3,sK10) ) ).
+fof(c_5377,axiom,~ member(sK3,sK2(sK3,sK10),sK4) | ~ two(sK3,sK10) ).
+fof(c_5378,axiom,~ member(sK3,sK1(sK3,sK10),sK4) | ~ two(sK3,sK10) ).
+fof(c_5416,axiom,~ eventuality(sK3,sK2(sK3,sK9)) | ~ two(sK3,sK9) ).
+fof(c_5417,axiom,~ eventuality(sK3,sK1(sK3,sK9)) | ~ two(sK3,sK9) ).
+fof(c_5418,axiom,~ eventuality(sK3,sK1(sK3,sK9)) ).
+fof(c_5419,axiom,~ eventuality(sK3,sK2(sK3,sK9)) ).
+fof(c_5424,axiom,! [X0] : ! [X1] : ( ~ member(sK3,sK0(sK3,sK10,X0,X1),sK9) | ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK10) | X0 = X1 | two(sK3,sK10) ) ).
+fof(c_5425,axiom,~ member(sK3,sK2(sK3,sK10),sK9) | ~ two(sK3,sK10) ).
+fof(c_5426,axiom,~ member(sK3,sK1(sK3,sK10),sK9) | ~ two(sK3,sK10) ).
+fof(c_5441,axiom,~ placename(sK3,sK2(sK3,sK9)) | ~ two(sK3,sK9) ).
+fof(c_5442,axiom,~ placename(sK3,sK1(sK3,sK9)) | ~ two(sK3,sK9) ).
+fof(c_5443,axiom,~ placename(sK3,sK1(sK3,sK9)) ).
+fof(c_5444,axiom,~ placename(sK3,sK2(sK3,sK9)) ).
+fof(c_5449,axiom,~ two(sK3,sK5) ).
+fof(c_5468,axiom,! [X0] : ( ~ of(sK3,X0,sK6) | ~ placename(sK3,X0) | ~ placename(sK3,sK5) | X0 = sK5 ) ).
+fof(c_5469,axiom,! [X0] : ( ~ of(sK3,X0,sK6) | ~ placename(sK3,X0) | X0 = sK5 ) ).
+fof(c_5478,axiom,~ eventuality(sK3,sK5) ).
+fof(c_5483,axiom,! [X0] : ! [X1] : ( ~ two(sK3,sK0(sK3,sK10,X0,X1)) | ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK10) | X0 = X1 | two(sK3,sK10) ) ).
+fof(c_5484,axiom,~ two(sK3,sK2(sK3,sK10)) | ~ two(sK3,sK10) ).
+fof(c_5485,axiom,~ two(sK3,sK1(sK3,sK10)) | ~ two(sK3,sK10) ).
+fof(c_5500,axiom,~ two(sK3,sK2(sK3,sK9)) | ~ two(sK3,sK9) ).
+fof(c_5501,axiom,~ two(sK3,sK1(sK3,sK9)) | ~ two(sK3,sK9) ).
+fof(c_5502,axiom,~ two(sK3,sK1(sK3,sK9)) ).
+fof(c_5503,axiom,~ two(sK3,sK2(sK3,sK9)) ).
+fof(c_5515,axiom,! [X0] : ! [X1] : ( ~ placename(sK3,sK0(sK3,sK10,X0,X1)) | ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK10) | X0 = X1 | two(sK3,sK10) ) ).
+fof(c_5516,axiom,~ placename(sK3,sK2(sK3,sK10)) | ~ two(sK3,sK10) ).
+fof(c_5517,axiom,~ placename(sK3,sK1(sK3,sK10)) | ~ two(sK3,sK10) ).
+fof(c_5531,axiom,! [X0] : ! [X1] : ( ~ eventuality(sK3,sK0(sK3,sK10,X0,X1)) | ~ member(sK3,X0,sK10) | ~ member(sK3,X1,sK10) | X0 = X1 | two(sK3,sK10) ) ).
+fof(c_5532,axiom,~ eventuality(sK3,sK2(sK3,sK10)) | ~ two(sK3,sK10) ).
+fof(c_5533,axiom,~ eventuality(sK3,sK1(sK3,sK10)) | ~ two(sK3,sK10) ).
+fof(c_5565,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ of(sK3,X0,sK0(sK3,sK10,X1,X2)) | ~ of(sK3,X3,sK0(sK3,sK10,X1,X2)) | ~ member(sK3,X1,sK10) | ~ member(sK3,X2,sK10) | ~ placename(sK3,X0) | ~ placename(sK3,X3) | X0 = X3 | X1 = X2 | two(sK3,sK10) ) ).
+fof(c_5566,axiom,! [X0] : ! [X1] : ( ~ of(sK3,X0,sK2(sK3,sK10)) | ~ of(sK3,X1,sK2(sK3,sK10)) | ~ placename(sK3,X0) | ~ placename(sK3,X1) | ~ two(sK3,sK10) | X0 = X1 ) ).
+fof(c_5567,axiom,! [X0] : ! [X1] : ( ~ of(sK3,X0,sK1(sK3,sK10)) | ~ of(sK3,X1,sK1(sK3,sK10)) | ~ placename(sK3,X0) | ~ placename(sK3,X1) | ~ two(sK3,sK10) | X0 = X1 ) ).
+fof(c_5602,axiom,! [X0] : ! [X1] : ( ~ of(sK3,X0,sK2(sK3,sK9)) | ~ of(sK3,X1,sK2(sK3,sK9)) | ~ placename(sK3,X0) | ~ placename(sK3,X1) | ~ two(sK3,sK9) | X0 = X1 ) ).
+fof(c_5603,axiom,! [X0] : ! [X1] : ( ~ of(sK3,X0,sK1(sK3,sK9)) | ~ of(sK3,X1,sK1(sK3,sK9)) | ~ placename(sK3,X0) | ~ placename(sK3,X1) | ~ two(sK3,sK9) | X0 = X1 ) ).
+fof(c_5604,axiom,! [X0] : ! [X1] : ( ~ of(sK3,X0,sK1(sK3,sK9)) | ~ of(sK3,X1,sK1(sK3,sK9)) | ~ placename(sK3,X0) | ~ placename(sK3,X1) | X0 = X1 ) ).
+fof(c_5610,axiom,! [X0] : ! [X1] : ( ~ of(sK3,X0,sK2(sK3,sK9)) | ~ of(sK3,X1,sK2(sK3,sK9)) | ~ placename(sK3,X0) | ~ placename(sK3,X1) | X0 = X1 ) ).

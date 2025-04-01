@@ -1,0 +1,7 @@
+fof(thm39,axiom,! [X1] : ( r(X1) | ( s(X1) <=> ( r(X1) & s(X1) ) ) ) => ! [X1] : ( r(X1) => s(X1) ) ).
+fof(c_0_1,axiom,~ ( ( ! [X1] : ( r(X1) | ( s(X1) <=> ( r(X1) & s(X1) ) ) ) => ! [X1] : ( r(X1) => s(X1) ) ) ) ).
+fof(c_0_2,axiom,! [X2] : ( ( r(X2) | ~ s(X2) | r(X2) ) & ( s(X2) | ~ s(X2) | r(X2) ) & ( ~ r(X2) | ~ s(X2) | s(X2) | r(X2) ) & r(esk1_0) & ~ s(esk1_0) ) ).
+fof(c_0_3,axiom,! [X1] : ( r(X1) | r(X1) | ~ s(X1) ) ).
+fof(c_0_4,axiom,! [X1] : ( r(X1) | ~ s(X1) ) ).
+fof(c_0_5,axiom,~ s(esk1_0) ).
+fof(c_0_6,axiom,r(esk1_0) ).

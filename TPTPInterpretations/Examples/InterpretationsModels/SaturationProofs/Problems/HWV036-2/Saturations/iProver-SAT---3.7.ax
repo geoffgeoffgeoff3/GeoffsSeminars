@@ -1,0 +1,51 @@
+fof(c_49,axiom,! [X0] : ( ~ fulladder(X0) | halfadder(h1(X0)) ) ).
+fof(c_50,axiom,! [X0] : ( ~ fulladder(X0) | halfadder(h2(X0)) ) ).
+fof(c_51,axiom,! [X0] : ( ~ fulladder(X0) | logic_or(or1(X0)) ) ).
+fof(c_52,axiom,! [X0] : ( ~ fulladder(X0) | connection(outs(h1(X0)),in2(h2(X0))) ) ).
+fof(c_53,axiom,! [X0] : ( ~ fulladder(X0) | connection(outc(h1(X0)),in2(or1(X0))) ) ).
+fof(c_54,axiom,! [X0] : ( ~ fulladder(X0) | connection(outc(h2(X0)),in1(or1(X0))) ) ).
+fof(c_55,axiom,! [X0] : ( ~ fulladder(X0) | connection(in1(X0),in1(h2(X0))) ) ).
+fof(c_56,axiom,! [X0] : ( ~ fulladder(X0) | connection(in2(X0),in1(h1(X0))) ) ).
+fof(c_57,axiom,! [X0] : ( ~ fulladder(X0) | connection(inc(X0),in2(h1(X0))) ) ).
+fof(c_58,axiom,! [X0] : ( ~ fulladder(X0) | connection(outs(X0),outs(h2(X0))) ) ).
+fof(c_59,axiom,! [X0] : ( ~ fulladder(X0) | connection(outc(X0),out1(or1(X0))) ) ).
+fof(c_60,axiom,! [X0] : ( ~ halfadder(X0) | logic_and(and1(X0)) ) ).
+fof(c_61,axiom,! [X0] : ( ~ halfadder(X0) | logic_and(and2(X0)) ) ).
+fof(c_62,axiom,! [X0] : ( ~ halfadder(X0) | logic_not(not1(X0)) ) ).
+fof(c_63,axiom,! [X0] : ( ~ halfadder(X0) | logic_or(or1(X0)) ) ).
+fof(c_64,axiom,! [X0] : ( ~ halfadder(X0) | connection(in1(X0),in1(or1(X0))) ) ).
+fof(c_65,axiom,! [X0] : ( ~ halfadder(X0) | connection(in2(X0),in2(or1(X0))) ) ).
+fof(c_66,axiom,! [X0] : ( ~ halfadder(X0) | connection(in1(X0),in1(and2(X0))) ) ).
+fof(c_67,axiom,! [X0] : ( ~ halfadder(X0) | connection(in2(X0),in2(and2(X0))) ) ).
+fof(c_68,axiom,! [X0] : ( ~ halfadder(X0) | connection(outs(X0),out1(and1(X0))) ) ).
+fof(c_69,axiom,! [X0] : ( ~ halfadder(X0) | connection(outc(X0),out1(and2(X0))) ) ).
+fof(c_70,axiom,! [X0] : ( ~ halfadder(X0) | connection(out1(or1(X0)),in1(and1(X0))) ) ).
+fof(c_71,axiom,! [X0] : ( ~ halfadder(X0) | connection(out1(and2(X0)),in1(not1(X0))) ) ).
+fof(c_72,axiom,! [X0] : ( ~ halfadder(X0) | connection(out1(not1(X0)),in2(and1(X0))) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ( ~ connection(X0,X1) | ~ zero(X0) | zero(X1) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ( ~ connection(X0,X1) | ~ one(X0) | one(X1) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ( ~ connection(X0,X1) | ~ zero(X1) | zero(X0) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ( ~ connection(X0,X1) | ~ one(X1) | one(X0) ) ).
+fof(c_77,axiom,! [X0] : ( ~ zero(X0) | ~ one(X0) ) ).
+fof(c_78,axiom,! [X0] : ( ~ zero(in1(X0)) | ~ and_ok(X0) | zero(out1(X0)) ) ).
+fof(c_79,axiom,! [X0] : ( ~ zero(in2(X0)) | ~ and_ok(X0) | zero(out1(X0)) ) ).
+fof(c_80,axiom,! [X0] : ( ~ one(in2(X0)) | ~ one(in1(X0)) | ~ and_ok(X0) | one(out1(X0)) ) ).
+fof(c_81,axiom,! [X0] : ( ~ zero(out1(X0)) | ~ and_ok(X0) | zero(in2(X0)) | zero(in1(X0)) ) ).
+fof(c_82,axiom,! [X0] : ( ~ one(out1(X0)) | ~ and_ok(X0) | one(in1(X0)) ) ).
+fof(c_83,axiom,! [X0] : ( ~ one(out1(X0)) | ~ and_ok(X0) | one(in2(X0)) ) ).
+fof(c_84,axiom,! [X0] : ( ~ and_ok(X0) | ~ abnormal(X0) ) ).
+fof(c_85,axiom,! [X0] : ( ~ logic_and(X0) | and_ok(X0) | abnormal(X0) ) ).
+fof(c_86,axiom,! [X0] : ( ~ one(in1(X0)) | ~ or_ok(X0) | one(out1(X0)) ) ).
+fof(c_87,axiom,! [X0] : ( ~ one(in2(X0)) | ~ or_ok(X0) | one(out1(X0)) ) ).
+fof(c_88,axiom,! [X0] : ( ~ zero(in2(X0)) | ~ zero(in1(X0)) | ~ or_ok(X0) | zero(out1(X0)) ) ).
+fof(c_89,axiom,! [X0] : ( ~ one(out1(X0)) | ~ or_ok(X0) | one(in2(X0)) | one(in1(X0)) ) ).
+fof(c_90,axiom,! [X0] : ( ~ zero(out1(X0)) | ~ or_ok(X0) | zero(in1(X0)) ) ).
+fof(c_91,axiom,! [X0] : ( ~ zero(out1(X0)) | ~ or_ok(X0) | zero(in2(X0)) ) ).
+fof(c_92,axiom,! [X0] : ( ~ abnormal(X0) | ~ or_ok(X0) ) ).
+fof(c_93,axiom,! [X0] : ( ~ logic_or(X0) | abnormal(X0) | or_ok(X0) ) ).
+fof(c_94,axiom,! [X0] : ( ~ zero(in1(X0)) | ~ not_ok(X0) | one(out1(X0)) ) ).
+fof(c_95,axiom,! [X0] : ( ~ one(in1(X0)) | ~ not_ok(X0) | zero(out1(X0)) ) ).
+fof(c_96,axiom,! [X0] : ( ~ zero(out1(X0)) | ~ not_ok(X0) | one(in1(X0)) ) ).
+fof(c_97,axiom,! [X0] : ( ~ one(out1(X0)) | ~ not_ok(X0) | zero(in1(X0)) ) ).
+fof(c_98,axiom,! [X0] : ( ~ abnormal(X0) | ~ not_ok(X0) ) ).
+fof(c_99,axiom,! [X0] : ( ~ logic_not(X0) | abnormal(X0) | not_ok(X0) ) ).

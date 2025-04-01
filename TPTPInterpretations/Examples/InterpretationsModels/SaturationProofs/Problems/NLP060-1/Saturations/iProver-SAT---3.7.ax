@@ -1,0 +1,64 @@
+fof(c_49,axiom,actual_world(skc61) ).
+fof(c_50,axiom,actual_world(skc6) ).
+fof(c_51,axiom,six(skc61,skc62) | ssSkC0 ).
+fof(c_52,axiom,group(skc61,skc62) | ssSkC0 ).
+fof(c_53,axiom,male(skc61,skc63) | ssSkC0 ).
+fof(c_54,axiom,~ ssSkC0 | six(skc6,skc7) ).
+fof(c_55,axiom,~ ssSkC0 | group(skc6,skc7) ).
+fof(c_56,axiom,~ ssSkC0 | male(skc6,skc8) ).
+fof(c_57,axiom,ssSkP1(skc63,skc62,skc61) | ssSkC0 ).
+fof(c_58,axiom,~ ssSkC0 | ssSkP0(skc7,skc8,skc6) ).
+fof(c_59,axiom,! [X0] : ( ~ member(skc61,X0,skc62) | shot(skc61,X0) | ssSkC0 ) ).
+fof(c_60,axiom,! [X0] : ( ~ member(skc6,X0,skc7) | ~ ssSkC0 | shot(skc6,X0) ) ).
+fof(c_61,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( cannon(X0,skf16(X0,X1,X2)) | ssSkP0(X3,X4,X0) ) ).
+fof(c_62,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( man(X0,skf18(X0,X1,X2)) | ssSkP0(X3,X4,X0) ) ).
+fof(c_63,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( man(X0,skf26(X0,X1,X2)) | ssSkP1(X3,X4,X0) ) ).
+fof(c_64,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( member(X0,skf14(X1,X0,X2),X1) | ssSkP0(X1,X3,X0) ) ).
+fof(c_65,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( of(X0,skf16(X0,X1,X2),X1) | ssSkP0(X3,X1,X0) ) ).
+fof(c_66,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( member(X0,skf23(X1,X0,X2),X1) | ssSkP1(X3,X1,X0) ) ).
+fof(c_67,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | event(X2,skf19(X2,X5,X6,X7)) ) ).
+fof(c_68,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | present(X2,skf19(X2,X5,X6,X7)) ) ).
+fof(c_69,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | nonreflexive(X2,skf19(X2,X5,X6,X7)) ) ).
+fof(c_70,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | fire(X2,skf19(X2,X5,X6,X7)) ) ).
+fof(c_71,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | cannon(X2,skf20(X2,X5,X6,X7)) ) ).
+fof(c_72,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | of(X2,skf20(X2,X0,X5,X6),X0) ) ).
+fof(c_73,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | agent(X2,skf19(X2,X4,X5,X6),X4) ) ).
+fof(c_74,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | patient(X2,skf19(X2,X4,X3,X5),X3) ) ).
+fof(c_75,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ ssSkP1(X0,X1,X2) | ~ member(X2,X3,X1) | ~ man(X2,X4) | from_loc(X2,skf19(X2,X4,X3,X0),skf20(X2,X0,X3,X4)) ) ).
+fof(c_76,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ssSkP0(X0,X1,X2) | ~ six(X2,X0) | ~ group(X2,X0) | ~ male(X2,X1) | ~ actual_world(X2) | member(X2,skf28(X2,X0),X0) | ssSkC0 ) ).
+fof(c_77,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ shot(X0,skf28(X0,X1)) | ~ ssSkP0(X2,X3,X0) | ~ six(X0,X2) | ~ group(X0,X2) | ~ male(X0,X3) | ~ actual_world(X0) | ssSkC0 ) ).
+fof(c_78,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ ssSkP1(X0,X1,X2) | ~ six(X2,X1) | ~ group(X2,X1) | ~ male(X2,X0) | ~ actual_world(X2) | ~ ssSkC0 | member(X2,skf11(X2,X1),X1) ) ).
+fof(c_79,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ shot(X0,skf11(X0,X1)) | ~ ssSkP1(X2,X3,X0) | ~ six(X0,X3) | ~ group(X0,X3) | ~ male(X0,X2) | ~ actual_world(X0) | ~ ssSkC0 ) ).
+fof(c_80,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( ~ ssSkP0(X0,X1,X2) | ~ member(X2,X3,X0) | ~ of(X2,X4,X1) | ~ cannon(X2,X4) | ~ man(X2,X5) | nonreflexive(X2,skf12(X2,X6,X7,X8)) ) ).
+fof(c_81,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( ~ ssSkP0(X0,X1,X2) | ~ member(X2,X3,X0) | ~ of(X2,X4,X1) | ~ cannon(X2,X4) | ~ man(X2,X5) | present(X2,skf12(X2,X6,X7,X8)) ) ).
+fof(c_82,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( ~ ssSkP0(X0,X1,X2) | ~ member(X2,X3,X0) | ~ of(X2,X4,X1) | ~ cannon(X2,X4) | ~ man(X2,X5) | event(X2,skf12(X2,X6,X7,X8)) ) ).
+fof(c_83,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ! [X8] : ( ~ ssSkP0(X0,X1,X2) | ~ member(X2,X3,X0) | ~ of(X2,X4,X1) | ~ cannon(X2,X4) | ~ man(X2,X5) | fire(X2,skf12(X2,X6,X7,X8)) ) ).
+fof(c_84,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ! [X7] : ( ~ ssSkP0(X0,X1,X2) | ~ member(X2,X3,X0) | ~ of(X2,X4,X1) | ~ cannon(X2,X4) | ~ man(X2,X5) | agent(X2,skf12(X2,X5,X6,X7),X5) ) ).
+fof(c_85,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ! [X6] : ( ~ ssSkP0(X0,X1,X2) | ~ member(X2,X3,X0) | ~ of(X2,X4,X1) | ~ cannon(X2,X4) | ~ man(X2,X5) | from_loc(X2,skf12(X2,X5,X4,X6),X4) ) ).
+fof(c_86,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( ~ ssSkP0(X0,X1,X2) | ~ member(X2,X3,X0) | ~ of(X2,X4,X1) | ~ cannon(X2,X4) | ~ man(X2,X5) | patient(X2,skf12(X2,X5,X4,X3),X3) ) ).
+fof(c_87,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ~ agent(X0,X1,skf18(X0,X2,X3)) | ~ patient(X0,X1,skf14(X3,X0,X2)) | ~ from_loc(X0,X1,skf16(X0,X2,X3)) | ~ event(X0,X1) | ~ present(X0,X1) | ~ nonreflexive(X0,X1) | ~ fire(X0,X1) | ssSkP0(X3,X2,X0) ) ).
+fof(c_88,axiom,! [X0] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ( ~ agent(X0,X1,skf26(X0,X2,X3)) | ~ patient(X0,X1,skf23(X2,X0,X3)) | ~ of(X0,X4,X3) | ~ from_loc(X0,X1,X4) | ~ cannon(X0,X4) | ~ event(X0,X1) | ~ present(X0,X1) | ~ nonreflexive(X0,X1) | ~ fire(X0,X1) | ssSkP1(X3,X2,X0) ) ).
+fof(c_439,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(skc61,skf28(skc61,X0),skc62) | ~ ssSkP0(X1,X2,skc61) | ~ six(skc61,X1) | ~ group(skc61,X1) | ~ male(skc61,X2) | ~ actual_world(skc61) | ssSkC0 ) ).
+fof(c_441,axiom,! [X2] : ! [X1] : ! [X0] : ( ~ male(skc61,X2) | ~ group(skc61,X1) | ~ six(skc61,X1) | ~ ssSkP0(X1,X2,skc61) | ~ member(skc61,skf28(skc61,X0),skc62) | ssSkC0 ) ).
+fof(c_442,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(skc61,skf28(skc61,X0),skc62) | ~ ssSkP0(X1,X2,skc61) | ~ six(skc61,X1) | ~ group(skc61,X1) | ~ male(skc61,X2) | ssSkC0 ) ).
+fof(c_464,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(skc6,skf11(skc6,X0),skc7) | ~ ssSkP1(X1,X2,skc6) | ~ six(skc6,X2) | ~ group(skc6,X2) | ~ male(skc6,X1) | ~ actual_world(skc6) | ~ ssSkC0 ) ).
+fof(c_466,axiom,! [X1] : ! [X2] : ! [X0] : ( ~ male(skc6,X1) | ~ group(skc6,X2) | ~ six(skc6,X2) | ~ ssSkP1(X1,X2,skc6) | ~ member(skc6,skf11(skc6,X0),skc7) | ~ ssSkC0 ) ).
+fof(c_467,axiom,! [X0] : ! [X1] : ! [X2] : ( ~ member(skc6,skf11(skc6,X0),skc7) | ~ ssSkP1(X1,X2,skc6) | ~ six(skc6,X2) | ~ group(skc6,X2) | ~ male(skc6,X1) | ~ ssSkC0 ) ).
+fof(c_519,axiom,! [X0] : ! [X1] : ( ~ ssSkP0(X0,X1,skc61) | ~ six(skc61,X0) | ~ group(skc61,X0) | ~ male(skc61,X1) | member(skc61,skf28(skc61,X0),X0) | ssSkC0 ) ).
+fof(c_539,axiom,! [X0] : ! [X1] : ( ~ ssSkP1(X0,X1,skc6) | ~ six(skc6,X1) | ~ group(skc6,X1) | ~ male(skc6,X0) | ~ ssSkC0 | member(skc6,skf11(skc6,X1),X1) ) ).
+fof(c_1678,axiom,! [X0] : ! [X1] : ( ~ member(skc61,skf28(skc61,X0),skc62) | ~ ssSkP0(skc62,X1,skc61) | ~ male(skc61,X1) | ~ group(skc61,skc62) | ssSkC0 ) ).
+fof(c_1680,axiom,! [X1] : ! [X0] : ( ~ male(skc61,X1) | ~ ssSkP0(skc62,X1,skc61) | ~ member(skc61,skf28(skc61,X0),skc62) | ssSkC0 ) ).
+fof(c_1681,axiom,! [X0] : ! [X1] : ( ~ member(skc61,skf28(skc61,X0),skc62) | ~ ssSkP0(skc62,X1,skc61) | ~ male(skc61,X1) | ssSkC0 ) ).
+fof(c_1695,axiom,! [X0] : ( ~ ssSkP0(skc62,X0,skc61) | ~ male(skc61,X0) | ~ group(skc61,skc62) | member(skc61,skf28(skc61,skc62),skc62) | ssSkC0 ) ).
+fof(c_1697,axiom,! [X0] : ( ~ male(skc61,X0) | ~ ssSkP0(skc62,X0,skc61) | member(skc61,skf28(skc61,skc62),skc62) | ssSkC0 ) ).
+fof(c_1698,axiom,! [X0] : ( ~ ssSkP0(skc62,X0,skc61) | ~ male(skc61,X0) | member(skc61,skf28(skc61,skc62),skc62) | ssSkC0 ) ).
+fof(c_1704,axiom,! [X0] : ( ~ ssSkP0(skc62,X0,skc61) | ~ male(skc61,X0) | ssSkC0 ) ).
+fof(c_1712,axiom,! [X0] : ( ~ ssSkP1(X0,skc7,skc6) | ~ male(skc6,X0) | ~ group(skc6,skc7) | ~ ssSkC0 | member(skc6,skf11(skc6,skc7),skc7) ) ).
+fof(c_1714,axiom,! [X0] : ( ~ male(skc6,X0) | ~ ssSkP1(X0,skc7,skc6) | ~ ssSkC0 | member(skc6,skf11(skc6,skc7),skc7) ) ).
+fof(c_1715,axiom,! [X0] : ( ~ ssSkP1(X0,skc7,skc6) | ~ male(skc6,X0) | ~ ssSkC0 | member(skc6,skf11(skc6,skc7),skc7) ) ).
+fof(c_1729,axiom,! [X0] : ! [X1] : ( ~ member(skc6,skf11(skc6,X0),skc7) | ~ ssSkP1(X1,skc7,skc6) | ~ male(skc6,X1) | ~ group(skc6,skc7) | ~ ssSkC0 ) ).
+fof(c_1731,axiom,! [X1] : ! [X0] : ( ~ male(skc6,X1) | ~ ssSkP1(X1,skc7,skc6) | ~ member(skc6,skf11(skc6,X0),skc7) | ~ ssSkC0 ) ).
+fof(c_1732,axiom,! [X0] : ! [X1] : ( ~ member(skc6,skf11(skc6,X0),skc7) | ~ ssSkP1(X1,skc7,skc6) | ~ male(skc6,X1) | ~ ssSkC0 ) ).
+fof(c_1743,axiom,! [X0] : ( ~ ssSkP1(X0,skc7,skc6) | ~ male(skc6,X0) | ~ ssSkC0 ) ).
+fof(c_1759,axiom,~ ssSkP0(skc62,skc63,skc61) | ssSkC0 ).
+fof(c_1766,axiom,~ ssSkP1(skc8,skc7,skc6) | ~ ssSkC0 ).

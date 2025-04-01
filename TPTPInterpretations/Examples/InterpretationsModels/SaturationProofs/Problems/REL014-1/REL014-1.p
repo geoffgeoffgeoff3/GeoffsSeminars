@@ -1,0 +1,13 @@
+fof(maddux1_join_commutativity_1,conjecture,! [A] : ! [B] : join(A,B) = join(B,A) ).
+fof(maddux2_join_associativity_2,conjecture,! [A] : ! [B] : ! [C] : join(A,join(B,C)) = join(join(A,B),C) ).
+fof(maddux3_a_kind_of_de_Morgan_3,conjecture,! [A] : ! [B] : A = join(complement(join(complement(A),complement(B))),complement(join(complement(A),B))) ).
+fof(maddux4_definiton_of_meet_4,conjecture,! [A] : ! [B] : meet(A,B) = complement(join(complement(A),complement(B))) ).
+fof(composition_associativity_5,conjecture,! [A] : ! [B] : ! [C] : composition(A,composition(B,C)) = composition(composition(A,B),C) ).
+fof(composition_identity_6,conjecture,! [A] : composition(A,one) = A ).
+fof(composition_distributivity_7,conjecture,! [A] : ! [B] : ! [C] : composition(join(A,B),C) = join(composition(A,C),composition(B,C)) ).
+fof(converse_idempotence_8,conjecture,! [A] : converse(converse(A)) = A ).
+fof(converse_additivity_9,conjecture,! [A] : ! [B] : converse(join(A,B)) = join(converse(A),converse(B)) ).
+fof(converse_multiplicativity_10,conjecture,! [A] : ! [B] : converse(composition(A,B)) = composition(converse(B),converse(A)) ).
+fof(converse_cancellativity_11,conjecture,! [A] : ! [B] : join(composition(converse(A),complement(composition(A,B))),complement(B)) = complement(B) ).
+fof(def_top_12,conjecture,! [A] : top = join(A,complement(A)) ).
+fof(def_zero_13,conjecture,! [A] : zero = meet(A,complement(A)) ).

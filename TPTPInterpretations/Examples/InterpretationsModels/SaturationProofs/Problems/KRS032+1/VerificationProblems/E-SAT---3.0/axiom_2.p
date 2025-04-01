@@ -1,0 +1,2 @@
+include('Saturations/KRS032+1/Saturations/E-SAT---3.0.ax').
+fof(axiom_2,conjecture,! [X] : ( cSatisfiable(X) <=> ( ? [Y] : ( rr(X,Y) & cp3(Y) ) & ! [Y0] : ! [Y1] : ! [Y2] : ! [Y3] : ( ( rr(X,Y0) & rr(X,Y1) & rr(X,Y2) & rr(X,Y3) ) => ( Y0 = Y1 | Y0 = Y2 | Y0 = Y3 | Y1 = Y2 | Y1 = Y3 | Y2 = Y3 ) ) & ? [Y] : ( rr(X,Y) & cp3(Y) & cp(Y) ) & ? [Y] : ( rr(X,Y) & cp2(Y) ) & ? [Y] : ( rr(X,Y) & cp2(Y) & cp(Y) ) & ? [Y] : ( rr(X,Y) & cp(Y) & cp1(Y) ) & ? [Y] : ( rr(X,Y) & cp1(Y) ) ) ) ).

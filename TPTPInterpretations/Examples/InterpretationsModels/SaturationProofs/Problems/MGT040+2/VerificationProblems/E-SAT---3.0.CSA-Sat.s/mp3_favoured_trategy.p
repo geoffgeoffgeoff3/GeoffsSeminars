@@ -1,0 +1,2 @@
+include('Saturations/MGT040+2/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
+fof(mp3_favoured_trategy,conjecture,! [P] : ( ( observational_period(P) & propagation_strategy(first_movers) & propagation_strategy(efficient_producers) & ! [E] : ( ( environment(E) & in_environment(P,E) ) => selection_favors(efficient_producers,first_movers,end_time(E)) ) ) => selection_favors(efficient_producers,first_movers,P) ) ).
