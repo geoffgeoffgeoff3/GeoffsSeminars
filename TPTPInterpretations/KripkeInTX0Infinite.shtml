@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+<TITLE> Kripke Interpretations with Infinite Domains and Worlds </TITLE>
+<LINK REL="icon" HREF="I.png" type="image/png" />
+<!---------------------------------------------------------------------->
+<STYLE>
+  TABLE {
+    width: 100%;
+    table-layout: fixed; /* Prevents text from changing column widths */
+    border-collapse: collapse;
+  }
+
+  TH, TD {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;   /* CRUCIAL: Keeps the total width at exact width */
+  }
+</STYLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+<!---------------------------------------------------------------------->
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'MLK.jpg';
+  images[1]     = new Image();
+  images[1].src = 'SleepyChildren.png';
+  images[2]     = new Image();
+  images[2].src = 'RottenFruit.jpg';
+  images[3]     = new Image();
+  images[3].src = 'CoinToss.png';
+  images[4]     = new Image();
+  images[4].src = 'StayingAlive.png';
+  images[5]     = new Image();
+  images[5].src = 'PeopleLikePeople.jpg';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Kripke Interpretations with Infinite Domains and Worlds </H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME="image" SRC="MLK.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H2 ALIGN=CENTER> Complete Examples </H2>
+
+<H3>Sleepy Children
+<A HREF="" onClick="hideshow('exampleFiniteFiniteGlobal');putImage(1);return false;">
+Finite worlds, Finite domains</A> </H3>
+<SPAN ID="exampleFiniteFiniteGlobal" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=49%> Sleepy Children
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Finite-Finite Countermodel
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global.p"-->
+</PRE>
+     <TD>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>Rotten Fruit
+<A HREF="" onClick="hideshow('exampleFiniteFiniteLocal');putImage(2);return false;">
+Finite worlds, Finite domains, with Local Axioms</A> </H3>
+<SPAN ID="exampleFiniteFiniteLocal" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=49%> Rotten Fruit
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Finite-Finite Countermodel
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Local.p"-->
+</PRE>
+     <TD>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Local.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>Tossing Heads
+<A HREF="" onClick="hideshow('exampleFiniteInfinite');putImage(3);return false;">
+Finite worlds, Infinite domains</A> </H3>
+<SPAN ID="exampleFiniteInfinite" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=49%> Tossing Heads
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Finite-Infinite Countermodel
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Infinite.p"-->
+</PRE>
+     <TD>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Finite-Infinite.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>Staying Alive
+<A HREF="" onClick="hideshow('exampleInfiniteFinite');putImage(4);return false;">
+Infinite world, Finite domains</A> </H3>
+<SPAN ID="exampleInfiniteFinite" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=49%> Staying Alive
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Infinite-Finite Model
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Infinite-Finite.p"-->
+</PRE>
+     <TD>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Infinite-Finite.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3>People Like People
+<A HREF="" onClick="hideshow('exampleInfiniteInfinite');putImage(5);return false;">
+Infinite worlds, Infinite domains</A> </H3>
+<SPAN ID="exampleInfiniteInfinite" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=49%> People Like People
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Infinite-Infinite Model
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/NXF_Infinite-Infinite.p"-->
+</PRE>
+     <TD>
+     <TD>
+<PRE>
+<!--#include file="Examples/NXF_Infinite-Infinite.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

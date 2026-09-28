@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<TITLE> The CASC-30 Proofs </TITLE>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> The CASC-30 Proofs </H1>
+
+<IMG NAME="image" SRC="T-Shirt-30.png" ALIGN=RIGHT WIDTH=33%>
+
+<H3> The CASC-30 Requirements </H3>
+<UL>
+<LI> No verified track yet, <A HREF="Solutions.html">first steps</A>
+<LI> The <A HREF="https://tptp.org/CASC/30/WWWFiles/DivisionSummary1.html">sad results</A>
+<LI> The <A HREF="" onClick="hideshow('failures');return false;">482 failures</A>
+     <SPAN ID="failures" style="display:none">
+     <UL>
+     <LI> 12 refutations without <TT>$false</TT> roots
+     <LI> 30 with duplicate formula names
+     <LI> 91 incorrectly intriduced new symbols
+     <LI> 172 with steps using non-existent parents
+     <LI> 177 with syntax errors in formulae
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> The CASC-30 Inferences </H3>
+<UL>
+<LI> Using a SAT/SMT/ATP <A HREF="" onClick="hideshow('subsystem');return false;">
+     subsystem</A> to infer <TT>$false</TT>
+     <SPAN ID="subsystem" style="display:none">
+     <UL>
+     <LI> Drodi calls an internally implemented SAT solver
+     <LI> E calls PicoSAT
+     <LI> iProver calls MiniSAT and Z3 
+     <LI> Leo-III calls E
+     <LI> Vampire calls MiniSAT and CaDiCal and Z3
+     </UL>
+     </SPAN>
+<LI> Listing <A HREF="" onClick="hideshow('parents');return false;">all the formulae</A> 
+     sent as parents<BR>
+     <SPAN ID="parents" style="display:none">
+     <UL>
+     <LI> E on <TT>GEG019^1</TT>, PicoSAT step with 114 parents, 114 used
+     <LI> Leo-III on <TT>SWW474^3</TT>, E step with 950 parents, 14 used
+     <LI> Drodi on <TT>ALG104+1</TT>, SAT step with 1219 parents, 663 used
+     <LI> Vampire on <TT>SWW593_2</TT>, Z3 step with 5617 parents 194 used
+     <LI> iProver on <TT>NUM862+1</TT>, Z3 step with 72367, unknown used
+     </UL>
+     </SPAN>
+</UL>
+
+<H3> What is Acceptable?</H3>
+<UL>
+<LI> Is a <A HREF="" onClick="hideshow('steps');return false;">subsystem step an inference 
+     step</A>?
+     <SPAN ID="steps" style="display:none">
+     <UL>
+     <LI> "Inference rules" vs. "inference systems"?
+          <UL>
+          <LI> Inference rules: Polynomial in size (weight?) of parents?
+          <LI> Inference systems: More than polynomial in size (weight?) of problem?
+          </UL>
+     <LI> Verification
+          <UL>
+          <LI> Likely for inference rule steps
+          <LI> Less likely for inference system steps
+          </UL>
+     </UL>
+     </SPAN>
+<LI> What <A HREF="" onClick="hideshow('whichparents');return false;">parents</A>
+     should be listed for an inference step?
+     <SPAN ID="whichparents" style="display:none">
+     <UL>
+     <LI> Are irrelevant parents acceptable?
+     <LI> How many relevant parents are acceptable?
+     <LI> No parent packing!
+     </UL>
+     </SPAN>
+<LI> <A HREF="" onClick="hideshow('granularity');return false;">Granularity</A>
+     vs. Explainability vs. Verifiability
+     <SPAN ID="granularity" style="display:none">
+     <UL>
+     <LI> N-ary inferences
+     <LI> log<SUB>2</SUB>(max(N)) as a measure of granularity
+     <LI> Granularity can be related to Explainability
+     <LI> Fine grained proofs are often easier to verify
+     </UL>
+<P>
+<LI> I'd like to discuss this!
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

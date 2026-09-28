@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>ShZZaM: An LLM+ATP Natural Language to Logic Translator</TITLE>
+<LINK REL="icon" HREF="Z.png" type="image/png">
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Shazam.png';
+  images[1]     = new Image();
+  images[1].src = 'Melvin.png';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<CENTER>
+<H1> ShZZaM </H1>
+<H2> An LLM+ATP Natural Language to Logic Translator </H2>
+</CENTER>
+
+<A HREF="" onClick="nextImage();return false;">
+<IMG NAME='image' SRC="Shazam.png" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>Motivation</H3>
+<UL>
+<LI> <A HREF="https://tptp.org/Seminars/AChatWithBard/">A Chat with Bard</A>
+<LI> A List of <A HREF="UseCases.html">Use Cases</A>
+</UL>
+
+<H3>The <A HREF="ZigZagLoops.html">ZigZag</A> Loops</H3>
+
+<H3>The <A HREF="https://www.dc.com/characters/shazam" TARGET=_blank>Marvel</A> that is ShZZaM</H3>
+<UL>
+<LI> ShZZaM in <A HREF="https://tptp.org/cgi-bin/SystemB4TPTP" TARGET=_blank>Action</A>
+<LI> The <A HREF="Implementation.html">Implementation</A>
+<LI> Testing with various examples ... TPTP, SUMO, MATP, PWC, ...
+</UL>
+
+<H3>Observations and Questions</H3>
+<UL>
+<LI> LLMs know TPTP syntax!
+<LI> How can ShZZaM be trusted? Is it <A HREF="" onClick="nextImage();return false;">faking</A>?
+</UL>
+
+<CENTER>
+<H3>The End ... Questions?</H3>
+</CENTER>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

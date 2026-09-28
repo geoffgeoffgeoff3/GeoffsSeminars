@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<TITLE>LLM vs. ATP</TITLE>
+<LINK REL="icon" HREF="Z.png" type="image/png">
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  function hide(obj) {
+      var elem = document.getElementById(obj);
+      elem.style.display = 'none';
+  }
+
+  function show(obj) {
+      var elem = document.getElementById(obj);
+      elem.style.display = 'block';
+  }
+
+  var images = new Array();
+  images[0]     = new Image();
+  images[0].src = 'Help.png';
+  images[1]     = new Image();
+  images[1].src = 'LogicLLM.png';
+  images[2]     = new Image();
+  images[2].src = 'QAVerification.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<CENTER>
+<H1> LLM vs. ATP </H1>
+</CENTER>
+
+<A HREF="" onClick="putImage(0);show('logicllm');show('llmatp');hide('llmatptext');return false;">
+<IMG NAME='image' SRC="Help.png" ALIGN=RIGHT WIDTH=30%>
+</A>
+
+<H3><A HREF="" onClick="hide('llmatptext');hideshow('logicllm');return false;">LLM helping the ATP</A></H3>
+<SPAN ID="logicllm" style="display:block">
+<IMG SRC="LogicLLM.png" WIDTH=50%>
+</SPAN>
+
+<H3><A HREF="" onClick="putImage(1);hide('logicllm');show('llmatptext');show('llmatp');return false;">ATP checking the LLM</A></H3>
+<SPAN ID="llmatp" style="display:none">
+<SPAN ID="llmatptext" style="display:none">
+<UL>
+<LI> LLM-N answers the natural language question in natural language
+<LI> ShZZaM converts the natural language question to logic
+<LI> ATP answers the logic question in logic
+<LI> LLM-NL converts the ATP answer to natural language
+<LI> LLM-S compares the two answers
+</UL>
+</SPAN>
+<P>
+<CENTER>
+<IMG NAME='image' SRC="QAVerification.png" WIDTH=90%>
+</CENTER>
+</SPAN>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

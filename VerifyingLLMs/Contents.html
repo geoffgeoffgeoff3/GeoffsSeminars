@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>Verifying LLM Answers with ShZZaM and ATP</TITLE>
+<LINK REL="icon" HREF="Z.png" type="image/png">
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Liar.png';
+  images[1]     = new Image();
+  images[1].src = 'Shazam.png';
+  images[2]     = new Image();
+  images[2].src = 'Recursion.gif';
+  images[3]     = new Image();
+  images[3].src = 'Melvin.png';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % 2;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<CENTER>
+<H1> Verifying LLM Answers with ShZZaM and ATP </H1>
+</CENTER>
+
+<A HREF="" onClick="putImage(0);return false;">
+<IMG NAME='image' SRC="Liar.png" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>A <A HREF="https://tptp.org/Seminars/AChatWithBard/Contents.html">Chat with Bard</A></H3>
+
+<H3> <A HREF="LLMvsATP.html">LLM vs. ATP</A> </H3>
+
+<H3><A HREF="" onClick="putImage(1);return false;">ShZZaM</A></H3>
+<UL>
+<LI> The ShZZaM <A HREF="https://tptp.org/Seminars/ShZZaM/ZigZagLoops.html">ZigZag Loops</A>
+<LI> ShZZaM in <A HREF="https://tptp.org/cgi-bin/SystemB4TPTP" TARGET=_blank>Action</A>
+<LI> The <A HREF="https://tptp.org/Seminars/ShZZaM/Implementation.html">Implementation</A>
+<LI> Testing with various examples ... TPTP, SUMO, MATP, PWC, FOLIO, ...
+</UL>
+
+<H3>Observations and Questions</H3>
+<UL>
+<LI> Can <A HREF="" onClick="putImage(2);return false;">ShZZaM be trusted</A>? 
+     <A <A HREF="" onClick="putImage(3);return false;">Maybe not</A>!
+<LI> Can <A HREF="https://tptp.org/Seminars/GDVLambdaPiTrust/Contents.html">ATP be trusted</A>?
+<LI> The <A HREF="https://tptp.org/Seminars/TrustworthyAI/Summary.html">Cycle of Trust</A>
+<LI> <A HREF="UsefulProofs.html">Natural and Useful</A> Proofs
+</UL>
+
+<CENTER>
+<H3>The End ... Questions?</H3>
+</CENTER>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

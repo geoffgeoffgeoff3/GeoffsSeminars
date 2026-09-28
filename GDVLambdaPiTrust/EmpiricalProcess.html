@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE> The Empirical Process of Building Trust </TITLE>
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  var myIndex = 0;
+  images[0]     = new Image();
+  images[0].src = 'CycleOfTrustGeneric.png';
+  images[1]     = new Image();
+  images[1].src = 'CycleOfTrustATP.png';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> The Empirical Process of Building Trust </H1>
+
+<CENTER>
+<A HREF="" onClick="nextImage();return false;">
+<IMG NAME='image' SRC="CycleOfTrustGeneric.png" BORDER=0 WIDTH=80%>
+</A>
+</CENTER>
+
+<OL>
+<LI> Cycle of trust
+     <OL>
+     <LI> Untrusted system &rarr; Untrusted solution 
+     <LI> Check expectations
+     <LI> Check syntax and structure
+     <LI> Verification process
+     </OL>
+<LI> Accumulation of evidence (positive and negative)
+<LI> Trusted system &rarr; Trusted solution (&rarr; 1.2-1.4)
+<LI> Comprehensible trusted solution &rarr; Useful solution
+</OL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

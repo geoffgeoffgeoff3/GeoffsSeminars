@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE> The TPTP Format for Clausal Tableau Proofs </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var currentIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'UpsidedownBaobabTree.png';
+  images[1]     = new Image();
+  images[1].src = 'Tableau.png';
+
+  function nextImage () {
+      currentIndex = (currentIndex + 1) % 3;
+      document.images['image'].src = images[currentIndex].src;
+  }
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> The TPTP Format for Clausal Tableau Proofs </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="UpsidedownBaobabTree.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> History </H3>
+<UL>
+<LI> Hilbert proofs vs. Refutations<BR>
+     Saturation vs. Tableaux (and connection matrices and model elimination)
+<LI> The leanCoP format (~2008) was not not adopted elsewhere
+<LI> The Otten-Sutcliffe proposal (2010) never gained traction
+<LI> The Otten-Holden proposal (2023) provided inspiration
+<LI> <A HREF="https://tptp.org/Proposals/TableauxFormatProofs/index.shtml">Online proposal</A>
+</UL>
+
+<H3> Requirements </H3>
+<UL>
+<LI> Easy reconstruction of the tableau
+<LI> Information for structural verification 
+<LI> Information for semantic verification 
+<LI> Concise and simple
+<LI> Readable by humans as well as ATP tools
+</UL>
+
+<H3> The Format </H3>
+<UL>
+<LI> <TT>path</TT> terms to record tableau structure
+<LI> Six (so far) recognized inference rules for structural verification<BR>
+     <TT>start</TT>, <TT>extension</TT>, <TT>connection</TT>, <TT>reduction</TT>,
+     <TT>lemma</TT>, <TT>lemma_extension</TT>,
+<LI> SZS <TT>status</TT> values for semantic verification
+<LI> Concise and simple TPTP format is human readable
+</UL>
+
+<H3> Viewing 
+     <A HREF="PaperFOF.s">Connect++'s refutation</A>
+     of <A HREF="PaperFOF.p">a simple problem</A> in
+     <A HREF="https://tptp.org/cgi-bin/SystemOnTSTP" TARGET=_blank>SystemOnTSTP/ITV</A> </H3>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

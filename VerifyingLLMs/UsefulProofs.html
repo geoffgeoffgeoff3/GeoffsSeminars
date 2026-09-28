@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<TITLE>Natural and Useful Proofs</TITLE>
+<LINK REL="icon" HREF="Z.png" type="image/png">
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  function hide(obj) {
+      var elem = document.getElementById(obj);
+      elem.style.display = 'none';
+  }
+
+  function show(obj) {
+      var elem = document.getElementById(obj);
+      elem.style.display = 'block';
+  }
+
+  var images = new Array();
+  images[0]     = new Image();
+  images[0].src = 'ChatGPTOnPhone.png';
+  images[1]     = new Image();
+  images[1].src = 'Herbrand.png';
+  images[2]     = new Image();
+  images[2].src = 'Gentzen.png';
+  images[3]     = new Image();
+  images[3].src = 'Hilbert.png';
+  images[4]     = new Image();
+  images[4].src = 'Smullyan.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<CENTER>
+<H1>Natural and Useful Proofs</H1>
+</CENTER>
+
+<A HREF="" onClick="putImage(0);return false;">
+<IMG NAME='image' SRC="ChatGPTOnPhone.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3>Trustworthy and Useful</A></H3>
+<UL>
+<LI> We talk a lot about <A HREF="https://tptp.org/Seminars/TrustworthyAI/CycleOfTrustPNG.html">
+     verification and trust</A>
+<LI> If it is raining, I should take my umbrella.
+     It is raining.
+     Explain why I should take my umbrella.
+     <UL>
+     <LI> LLMs answer <A HREF="" onClick="hideshow('natural');return false;">naturally</A>
+          <SPAN ID="natural" style="display:none">
+          <P>
+          Whenever it is raining I should take my umbrella.<BR>
+          It is raining, so the current situation falls under that rule.<BR>
+          Therefore, I should take my umbrella.
+          </SPAN>
+     <LI> ATPs answer <A HREF="" onClick="hideshow('unnatural');return false;">unnaturally</A>
+          <SPAN ID="unnatural" style="display:none">
+          <P>
+          Assume that I do not take my umbrella.<BR>
+          From that assumption we are led to the conclusion that it is not raining.<BR>
+          But this contradicts the given fact that it is raining.<BR>
+          Therefore the assumption that I do not take my umbrella must be false.<BR>
+          So I should take my umbrella.
+          <P>
+          WTF?!!?
+          </SPAN>
+     </UL>
+</UL>
+
+<H3>A Call to Arms</H3>
+<UL>
+<LI> A <A HREF="" onClick="putImage(1);return false;">refutation</A> is a proof that there is 
+     a proof
+<LI> A <A HREF="" onClick="putImage(4);return false;">closed tableau</A> is a magical proof that 
+     there is a proof
+<LI> A <A HREF="" onClick="putImage(2);return false;">natural deduction</A> can be, 
+     sequent calculus cannot
+<LI> An <A HREF="" onClick="putImage(3);return false;">axiomatic proof</A> is a natural and 
+     useful proof ... all inferences are 
+     <A HREF="" onClick="hideshow('consequences');return false;">consequences</A>
+     <SPAN ID="consequences" style="display:none">
+     <UL>
+     <LI> logical consequences
+     <LI> mathematical consequences
+     <LI> legal consequences
+     <LI> chemical consequences
+     <LI> physical consequences
+     <LI> political consequences
+     <LI> etc.
+     </UL>
+     </SPAN>
+    
+<P>
+<LI> A "proof that there is a proof" is useful for finding an axiomatic proof
+</UL>
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

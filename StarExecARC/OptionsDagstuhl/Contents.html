@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<TITLE> Contents </TITLE>
+</HEAD>
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  images[0]     = new Image();
+  images[0].src = 'StarExecContainer.png';
+  images[1]     = new Image();
+  images[1].src = 'ArchitectureMiami.png';
+  images[2]     = new Image();
+  images[2].src = 'ArchitectureContainerisedTGZ.png';
+  images[3]     = new Image();
+  images[3].src = 'ArchitectureContainerisedAll.png';
+  images[4]     = new Image();
+  images[4].src = 'ArchitectureKubernetes.png';
+  images[5]     = new Image();
+  images[5].src = 'ArchitectureAWS.png';
+  images[6]     = new Image();
+  images[6].src = 'Smile.GIF';
+  images[7]     = new Image();
+  images[7].src = 'Sad.png';
+
+  function putImage(index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+</SCRIPT>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+StarExec in Containers
+</H1>
+
+<IMG NAME='image' SRC="StarExecContainer.png" ALIGN=RIGHT WIDTH=50%>
+
+<A HREF="" onClick="putImage(7);hideshow('motivation');return false;"><H2>StarExec Motivation</H2></A>
+<SPAN ID="motivation" style="display:none">
+<UL>
+<LI> StarExec Iowa decommissioned
+<LI> StarExec Miami supports only small Iowanians
+<LI> Lots of clusters available
+<LI> <FONT SIZE=-2><a href="https://www.flaticon.com/free-icons/sad" title="sad icons">Sad icons created by Vectors Market - Flaticon</a></FONT>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="putImage(1);hideshow('miami');return false;"><H2>StarExec Miami</H2></A>
+<SPAN ID="miami" style="display:none">
+<UL>
+<LI> Headnode and Compute nodes
+<LI> ATP systems in <TT>.tgz</TT> packages
+<LI> SGE for job pair distribution
+<LI> HW+OS+SW upgrades in progress
+</UL>
+</SPAN>
+
+<A HREF="" onClick="putImage(2);hideshow('containerise');return false;"><H2>StarExec Containerised</H2></A>
+<SPAN ID="containerise" style="display:none">
+<UL>
+<LI> Containerised headnode
+<LI> ATP systems in <TT>.tgz</TT> packages
+<LI> Local execution of job pairs
+<LI> <A HREF="" onClick="putImage(3);hideshow('ATPcontainers');return false;"><H3>ATP Containerised</H3></A>
+     <SPAN ID="ATPcontainers" style="display:none">
+     <UL>
+     <LI> ATP systems in container images
+     <LI> Resource control inside the ATP container
+     </UL>
+     </SPAN>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="putImage(4);hideshow('cloud');return false;"><H2>StarExec in the Cloud</H2></A>
+<SPAN ID="cloud" style="display:none">
+<UL>
+<LI> Built with Kubernetes
+<LI> Containerised headnode
+<LI> ATP systems in container images
+<LI> Kubenetes execution of job pairs
+<LI> <A HREF="" onClick="putImage(5);hideshow('aws');return false;"><H3>StarExec in AWS</H3></A>
+     <SPAN ID="aws" style="display:none">
+     <UL>
+     <LI> Implemented using AWS packages
+     <LI> Thanks to Amazon for the grant!
+     </UL>
+     </SPAN>
+</UL>
+</SPAN>
+
+<A HREF="" onClick="putImage(0);hideshow('conclusion');return false;"><H2>Conclusion</H2></A>
+<SPAN ID="conclusion" style="display:none">
+<UL>
+<LI> StarExec Miami can support "small" needs - please ask me
+<LI> There are new StarExec options
+<LI> Upgrading to <TT>benchexec</TT> (when <TT>runexec</TT> has timestamps :-)
+<LI> Everything is free
+<LI> Any guinea pigs this week?
+</UL>
+</SPAN>
+
+<H2> <A HREF="" onClick="putImage(6);return false">The End</A> - Any Questions?
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

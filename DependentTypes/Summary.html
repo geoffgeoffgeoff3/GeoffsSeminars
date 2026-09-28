@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE> Dependently Typed Higher-Order Logic </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var currentIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'Dependent.png';
+  images[1]     = new Image();
+  images[1].src = 'Dependant.png';
+
+  function nextImage () {
+      currentIndex = (currentIndex + 1) % 3;
+      document.images['image'].src = images[currentIndex].src;
+  }
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Dependently Typed Higher-Order Logic </H1>
+
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="Dependent.png" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> What? Why? </H3>
+<UL>
+<LI> HOL with types that take term arguments.
+<LI> Type checking undecidable
+<LI> Elegant definition of data structures
+<LI> Translation to HOL
+</UL>
+
+<H3> Syntax </H3>
+<UL>
+<LI> Use the <TT>!&gt;</TT> polymorphic binder for types
+<LI> Dependent types declared with terms and types
+<LI> Instantiations apply terms to dependent types
+<LI> <A HREF="Example.html">An example problem</A>
+</UL>
+
+<H3> Resources </H3>
+<UL>
+<LI> DTF to THF translator
+<LI> Two ATP systems
+<LI> Over 100 propblems
+<LI> <A HREF="https://tptp.org/Proposals/DependentTypes/index.shtml">Online proposal</A>
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

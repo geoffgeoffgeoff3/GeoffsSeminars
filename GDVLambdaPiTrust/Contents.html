@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<TITLE> Proof Verification with GDV and LambdaPi - It's a Matter of Trust </TITLE>
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  var images = new Array();
+  var myIndex = 0;
+  images[0]     = new Image();
+  images[0].src = 'ShavingTrust.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Acrobats.jpg';
+  images[2]     = new Image();
+  images[2].src = 'AppleShooter.jpg';
+  images[3]     = new Image();
+  images[3].src = 'CrocodileMouth.jpg';
+  images[4]     = new Image();
+  images[4].src = 'CycleOfTrustGeneric.png';
+  images[5]     = new Image();
+  images[5].src = 'GDV-LP.png';
+  images[6]     = new Image();
+  images[6].src = 'LogicLLM.png';
+  images[7]     = new Image();
+  images[7].src = 'SummerFrance.png';
+  images[8]     = new Image();
+  images[8].src = 'ClimbingTrust.jpg';
+  images[9]     = new Image();
+  images[9].src = 'LionTrust.jpg';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR> <!-- ------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Proof Verification with GDV and LambdaPi<BR>
+It's a Matter of Trust </H1>
+
+<A HREF="" onClick="putImage(0);return false;">
+<IMG NAME="image" SRC="ShavingTrust.jpg" ALIGN=RIGHT WIDTH=50%>
+</A>
+
+<H3> Why
+     <A HREF="" onClick="hideshow('trust');putImage(8);return false;">Trust</A> What?</H3>
+<SPAN ID="trust" style="display:none">
+<UL>
+<LI> Status vs. Artifact
+<LI> Trust a <A HREF="https://tptp.org/Seminars/ATP/Applications/NASA.html">tool(chain)</A>
+     to produce a correct status/artifact
+<LI> Trust 
+     <A HREF="https://tptp.org/Seminars/ATP/MotivatingPuzzle.html">a particular</A> status/artifact
+<LI> Add trust to an 
+     <A HREF="https://tptp.org/Seminars/AChatWithBard/SymbolicChecking.html">untrustworthy tool</A>
+</UL>
+</SPAN>
+
+<H3> The 
+     <A HREF="" onClick="hideshow('process');putImage(9);return false;">Process</A> of
+     Building Trust </H3>
+<SPAN ID="process" style="display:none">
+<UL>
+<LI> When? 
+     <UL>
+     <LI> During system development
+     <LI> During system use
+     <LI> When it's worth waiting
+     </UL>
+<LI> How? 
+     <UL>
+     <LI> Theoretical notions, Trustworthy cores
+     <LI> <A HREF="EmpiricalProcess.html">Empirical process</A>
+     </UL>
+</UL>
+</SPAN>
+
+<H3> The 
+     <A HREF="" onClick="hideshow('atp');putImage(1);return false;">ATP Context</A> </H3>
+<SPAN ID="atp" style="display:none">
+<UL>
+<LI> What is <A HREF="https://tptp.org/Seminars/ATP/WhatIsATP.html">Automated Reasoning</A>?
+<LI> <A HREF="https://www.tptp.org/">The TPTP World</A>
+<LI> Bugs are a <A HREF="https://tptp.org/Seminars/GDV/Motivation.html">Reality</A>
+<LI> <A HREF="EmpiricalProcess.html">Empirical process</A>
+</UL>
+</SPAN>
+
+<H3> Proof Representation 
+     <A HREF="" onClick="hideshow('proof');putImage(2);return false;">in the TPTP World</A> </H3>
+<SPAN ID="proof" style="display:none">
+<UL>
+<LI> A <A HREF="https://tptp.org/Seminars/TPTPLanguage/Summary.html">Language</A>
+<LI> A <A HREF="https://tptp.org/Seminars/TPTPProofsAndModels/Derivations.html">Proof format</A>
+<LI> The <A HREF="https://tptp.org/Seminars/SZSOntologies/Summary.html">SZS Ontologies</A>
+</UL>
+</SPAN>
+
+<H3> Proof Verification with 
+     <A HREF="https://tptp.org/Seminars/GDV/Summary.html">GDV and GDV-LP</A> </H3>
+
+<H3> <A HREF="" onClick="hideshow('conclusion');putImage(3);return false;">Conclusion</A> </H3>
+<SPAN ID="conclusion" style="display:none">
+<UL>
+<LI> Contributions
+     <UL>
+     <LI> Clarity of <A HREF="" onClick="putImage(4);return false;">Process</A>
+     <LI> Implementation of <A HREF="" onClick="putImage(5);return false;">GDV-LP</A>
+     </UL>
+<P>
+<LI> Current
+     <UL>
+     <LI> Proof format for clausal connection tableau, verification in GDV
+     <LI> Tarskian and Kripke model formats, verification in AGMV
+     <LI> ProoVer competition
+     </UL>
+<P>
+<LI> Future
+     <UL>
+     <LI> Verifying <A HREF="" onClick="putImage(6);return false;">subsymbolic systems</A>
+     <LI> Verification of interferences, e.g., 
+          <A HREF="https://tptp.org/Seminars/GDV/Skolemization.html">Skolemization</A>
+     <LI> Modalities of trust, Probabilities of trust
+     </UL>
+</UL
+</SPAN>
+
+<H3> The End - Any Questions? </H3>
+
+<P>
+<HR> <!-- ------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

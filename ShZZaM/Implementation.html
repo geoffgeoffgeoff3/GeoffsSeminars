@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>Implementation</TITLE>
+<LINK REL="icon" HREF="Z.png" type="image/png">
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  images[0]     = new Image();
+  images[0].src = 'PythonSucks.png';
+  images[1]     = new Image();
+  images[1].src = 'PythonLoops.png';
+  images[2]     = new Image();
+  images[2].src = 'PythonAPIs.png';
+  images[3]     = new Image();
+  images[3].src = 'PythonPrompts.png';
+  images[4]     = new Image();
+  images[4].src = 'PythonMain.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<CENTER>
+<H1> Implementation </H1>
+</CENTER>
+
+<A HREF="" onClick="putImage(0);return false;">
+<IMG NAME='image' SRC="PythonSucks.png" ALIGN=RIGHT WIDTH=50%>
+</A>
+
+<H3>Lots of Loops ... <A HREF="" onClick="putImage(1);return false;">So many loops</A></H3>
+
+<H3>LLMs ... <A HREF="" onClick="putImage(2);return false;">APIs and Dollars</A></H3>
+
+<H3>Prompts ... <A HREF="" onClick="putImage(3);return false;">Talking to Stochastic Parrots</A></H3>
+
+<H3>Seriously ... <A HREF="" onClick="putImage(4);return false;">Who designed this language?</A></H3>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE> StarExec </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var nextIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'StarExecMiami.png';
+  images[1]     = new Image();
+  images[1].src = 'ArchitectureS.png';
+  images[2]     = new Image();
+  images[2].src = 'StarExecUI.png';
+  images[3]     = new Image();
+  images[3].src = 'StarExecCloud.png';
+
+  function nextImage (whichImage) {
+      nextIndex = (nextIndex + 1) % images.length;
+      document.images[whichImage].src = images[nextIndex].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> 
+StarExec
+</H1>
+
+<A HREF="" onClick="nextImage('main_image');return false">
+<IMG NAME="main_image" SRC="StarExecMiami.png" ALIGN=RIGHT WIDTH=40%>
+</A>
+
+<H3> What it Is! </H3>
+<UL>
+<LI> Infrastructure for meaningful logic solver evaluation
+<LI> Communities: TPTP, SMT, SAT, Termination, ASP, QBF,...
+<LI> Thank you NSF, for Making ATP Great Again
+</UL>
+
+<H3> How it Works </H3>
+<UL>
+<LI> Head node, Compute nodes, MariaDB, and NFS
+<LI> Jobs &rarr; Job pairs &rarr; Local or SGE
+<LI> <TT>runsolver</TT>/<TT>BenchExec</TT> for resource monitoring
+<LI> Interesting UI
+</UL>
+
+<H3> What it Was? </H3>
+<UL>
+<LI> StarExec Iowa will be decommissioned
+<!--
+     <BLOCKQUOTE>
+     ... the plan is to operate StarExec as usual for competitions Summer 2024 and 
+     Summer 2025, and then put the system into a read-only mode for one year."
+     </BLOCKQUOTE>
+-->
+<LI> StarExec Miami can't cope - high load, small money
+<LI> Build a new StarExec in the cloud
+     <UL>
+     <LI> Containerise StarExec and ATP systems
+     <LI> Kubernetes to orchestrate distribution of job pairs
+     </UL>
+<LI> Exemplary example in the AWS cloud.
+     Thank you ARA, for Making ATP Great Again<BR>
+     <EM><FONT size="-2">Any opinions, findings, and conclusions or recommendations expressed in 
+     this material are those of the authors, and do not reflect the views of Amazon.</FONT></EM>
+</UL>
+
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

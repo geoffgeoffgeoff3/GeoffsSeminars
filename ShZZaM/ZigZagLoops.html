@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE>The ZigZag Loops</TITLE>
+<LINK REL="icon" HREF="Z.png" type="image/png">
+<SCRIPT type="text/javascript">
+  function hideshow(obj,style) {
+      var elem = document.getElementById(obj);
+      elem.style.display = style;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<CENTER>
+<H1> The ZigZag Loops</H1>
+</CENTER>
+
+<A HREF="" onClick="hideshow('zigzagsteps','block');hideshow('zigzagstepsandpicture','block');hideshow('zigstepsandpicture','none');return false;">
+<H3>The Convergence Loop</H3>
+</A>
+<SPAN ID="zigzagstepsandpicture" style="display:block">
+<SPAN ID="zigzagsteps" style="display:block">
+<UL>
+<LI> LLM-N normalises the natural language
+<LI> LLM-L+ATP encodes the natural language in logic
+<LI> LLM-NL says in natural language what is encoded in logic
+<LI> LLM-S judges if the  previous and new natural language mean the same thing
+<LI> Repeats until LLM-S says they mean the same thing
+<P>
+<LI> LLM-S judges if the final and original/normalised natural language mean the same thing
+<LI> Repeats until LLM-S says they mean the same thing
+<LI> Logic in between is accepted
+<P>
+<LI> Nice! LLMs know TPTP syntax
+<LI> Nice! LLM-L picks up background knowledge from the foundation model
+</UL>
+</SPAN>
+<CENTER>
+<IMG NAME='image' SRC="ZigZagLoop.png" WIDTH=90%>
+</CENTER>
+</SPAN>
+
+<A HREF="" onClick="hideshow('zigsteps','block');hideshow('zigstepsandpicture','block');hideshow('zigzagsteps','none');return false;">
+<H3>The Logic Loop</H3>
+</A>
+<SPAN ID="zigstepsandpicture" style="display:none">
+<SPAN ID="zigsteps" style="display:none">
+<UL>
+<LI> LLM-L+ATP encodes the natural language in logic 
+<LI> ATP checks the syntax and types, repeats until passed
+<LI> LLM-NL says in natural language what is encoded in logic
+<LI> LLM-S judges if the provisional and original/normalized natural language mean the same thing
+<LI> Repeats until LLM-S says they mean the same thing
+</UL>
+</SPAN>
+<CENTER>
+<IMG NAME='image' SRC="ZigLoop.png" WIDTH=90%>
+</CENTER>
+</SPAN>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

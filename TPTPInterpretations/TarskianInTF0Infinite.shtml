@@ -1,0 +1,181 @@
+<HTML>
+<HEAD>
+<TITLE> Tarskian Interpretations with Infinite Domains </TITLE>
+<LINK REL="icon" HREF="I.png" type="image/png" />
+<!---------------------------------------------------------------------->
+<STYLE>
+  TABLE {
+    width: 100%;
+    table-layout: fixed; /* Prevents text from changing column widths */
+    border-collapse: collapse;
+  }
+
+  TH, TD {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;   /* CRUCIAL: Keeps the total width at exact width */
+  }
+</STYLE>
+<!---------------------------------------------------------------------->
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+<!---------------------------------------------------------------------->
+  var images = new Array();
+  var myIndex = 0;
+
+  images[0]     = new Image();
+  images[0].src = 'GarfieldFunky.png';
+  images[1]     = new Image();
+  images[1].src = 'Nermal.png';
+  images[2]     = new Image();
+  images[2].src = 'GarfieldPiano.png';
+  images[3]     = new Image();
+  images[3].src = 'GarfieldNumbers.png';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Tarskian Interpretations with Infinite Domains </H1>
+
+<A HREF="" onClick="putImage(0);return false">
+<IMG NAME='image' SRC="GarfieldFunky.png" BORDER=0 ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3> In TFF </H3>
+<UL>
+<LI> The <A HREF="" onClick="putImage(1);hideshow('peano_problem');return false">
+     Descedants problem</A>
+     <SPAN ID="peano_problem" style="display:none">
+     <PRE>
+<!--#include file="Examples/TFF_Infinite.p"-->
+     </PRE>
+     </SPAN>
+</UL>
+
+<H3> Infinite term domains </H3>
+<UL>
+<LI> Use an <A HREF="" onClick="putImage(2);hideshow('peanoNumbers');return false;">
+     infinite term domain</A>
+     <SPAN ID="peanoNumbers" style="display:none">
+     <PRE>
+tff(peano_type,type,       peano: $tType).
+tff(zero_decl,type,        zero: peano ).
+tff(s_decl,type,           s: peano > peano ).
+tff(peano2person_decl,type,peano2person: peano > person ).
+tff(peano_less_decl,type,  
+    peano_less: ( peano * peano ) > $o ).
+
+tff(people,interpretation,
+    ( ! [I: peano] : ( I = zero | ? [P: peano] : I = s(P) )
+    & ! [I1: peano,I2: peano,I3: peano] :
+        ( peano_less(I1,s(I1))
+        & ( ( peano_less(I1,I2) & peano_less(I2,I3) )
+         => peano_less(I1,I3) )
+        & ( peano_less(I1,I2)
+         => I1 != I2 ) )
+    & ! [P: person] : ? [I: peano] : ( P = peano2person(I) )
+    & ! [I1: peano,I2: peano] :
+        ( peano2person(I1) = peano2person(I2) => I1 = I2 ) </PRE>
+     </SPAN>
+<LI> Interpret <A HREF="" onClick="hideshow('peanoMappings');return false;">
+     problem terms and atoms</A>
+     <SPAN ID="peanoMappings" style="display:none">
+     <PRE>
+    & bob = peano2person(zero)
+    & ! [I: peano] :
+        child_of(peano2person(I)) = peano2person(s(I))
+    & ( ! [A: peano,D: peano] :
+          ( is_descendant(peano2person(A),peano2person(D))
+        <=> peano_less(A,D) ) ) ) ). </PRE>
+     </SPAN>
+</UL>
+
+<H3> Integer domains </H3>
+<UL>
+<LI> Use a <A HREF="" onClick="putImage(3);hideshow('integers');return false;">
+     <TT>$int</TT> domain</A>
+     <SPAN ID="integers" style="display:none">
+     <PRE>
+tff(int2person_decl,type, int2person: $int > person ).
+
+tff(people,interpretation,
+    ( ! [P: person] : ? [I: $int] : P = int2person(I)
+    & ! [I1: $int,I2: $int] : ( int2person(I1) = int2person(I2) => I1 = I2 ) </PRE>
+     </SPAN>
+<LI> Interpret <A HREF="" onClick="hideshow('intMappings');return false;">
+     problem terms and atoms</A>
+     <SPAN ID="intMappings" style="display:none">
+     <PRE>
+    & bob = int2person(0)
+    & ! [I: $int] : child_of(int2person(I)) = int2person($sum(I,1))
+    & ! [A: $int,D: $int] : 
+        ( is_descendant(int2person(A),int2person(D)) <=> $less(A,D) ) ) ).
+     </SPAN>
+</UL>
+
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H2 ALIGN=CENTER> Complete Examples </H2>
+
+<H3>Descendants Play the
+<A HREF="" onClick="hideshow('examplePeano');putImage(2);return false;">
+Peano Terms </A> </H3>
+<SPAN ID="examplePeano" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=49%> Descendants Play the Peano
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Infinite Term Model
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/TFF_Infinite.p"-->
+</PRE>
+     <TD>
+     <TD>
+<PRE>
+<!--#include file="Examples/TFF_Peano.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3> Descendants Count
+<A HREF="" onClick="hideshow('exampleInt');putImage(3);return false;">
+Integer Terms </A> </H3>
+<SPAN ID="exampleInt" style="display:none">
+<TABLE BORDER=0>
+<TR> <TH WIDTH=49%> Descendants Count Forever
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Infinite Integer Model
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/TFF_Infinite.p"-->
+</PRE>
+     <TD>
+     <TD>
+<PRE>
+<!--#include file="Examples/TFF_Integer.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>

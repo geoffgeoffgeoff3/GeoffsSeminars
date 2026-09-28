@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE> Type Promotion </TITLE>
+<LINK REL="icon" HREF="I.png" type="image/png" />
+</HEAD>
+<BODY ALIGN=JUSTIFY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H1 ALIGN=CENTER> Type Promotion </H1>
+
+<IMG NAME='image' SRC="Promotion.png" BORDER=0 ALIGN=RIGHT WIDTH=40%>
+
+<H3> Conventional Approach </H3>
+
+<UL>
+<LI> For each symbol <TT>f</TT>
+<LI> with argument types <TT>T<SUB>i</SUB></TT> interpreted in <TT>D<SUB>i</SUB></TT>
+<LI> define <TT>f'</TT> with argument types <TT>D<SUB>i</SUB></TT>
+<LI> Interpret <TT>f</TT> using <TT>f'</TT>
+</UL>
+
+<H3> Avoiding <TT>f'</TT> </H3>
+
+<UL>
+<LI> For each symbol <TT>f</TT>
+<LI> Interpret <TT>f</TT> with argument types <TT>D<SUB>i</SUB></TT>
+<LI> <EM>Not well typed</EM>
+</UL>
+
+<H3> Type Promotion </H3>
+
+<UL>
+<LI> For each problem type <TT>T</TT> interpreted in the domain <TT>D</TT>
+<LI> define "type promotion" bijections <TT>D2T</TT>, <TT>D &rarr; T</TT>
+<LI> Interpret <TT>f</TT> with argument types <TT>D2T(D<SUB>i</SUB>)</TT>
+<LI> The <TT>D2T</TT> are never "evaluated"
+</UL>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>
