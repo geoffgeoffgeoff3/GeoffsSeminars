@@ -1,2 +1,0 @@
-include('Saturations/SWB028+4/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(testcase_premise_fullish_028_Inferred_Property_Characteristics_III,conjecture,? [BNODE_z] : ( iext(uri_owl_equivalentClass,uri_ex_InversesOfFunctionalProperties,BNODE_z) & iext(uri_rdf_type,BNODE_z,uri_owl_Restriction) & iext(uri_owl_onProperty,BNODE_z,uri_owl_inverseOf) & iext(uri_owl_someValuesFrom,BNODE_z,uri_owl_FunctionalProperty) ) ).

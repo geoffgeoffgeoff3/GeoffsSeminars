@@ -1,2 +1,0 @@
-include('Saturations/NLP220+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
-fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ? [W] : ? [X] : ? [Y] : ( of(U,W,V) & man(U,V) & vincent_forename(U,W) & forename(U,W) & proposition(U,Y) & agent(U,X,V) & theme(U,X,Y) & event(U,X) & present(U,X) & think_believe_consider(U,X) & accessible_world(U,Y) & ! [Z] : ( man(Y,Z) => ? [X1] : ( event(Y,X1) & agent(Y,X1,Z) & present(Y,X1) & smoke(Y,X1) ) ) ) ) ) )).

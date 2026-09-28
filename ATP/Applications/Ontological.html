@@ -2,26 +2,47 @@
 <HEAD>
 <TITLE> The Ontological Argument </TITLE>
 </HEAD>
+<SCRIPT type="text/javascript">
+  var images = new Array();
+  images[0]     = new Image();
+  images[0].src = 'GoedelGodQuestion.jpg';
+  images[1]     = new Image();
+  images[1].src = 'GoedelGodHandwritten.png';
+  images[2]     = new Image();
+  images[2].src = 'GoedelGodScott.png';
+  images[3]     = new Image();
+  images[3].src = 'GoedelGodIsabelle.png';
+
+  function putImage1 (index) {
+      document.images['image1'].src = images[index].src;
+  }
+</SCRIPT>
 <BODY>
 <HR><!------------------------------------------------------------------------>
 <H1 ALIGN=CENTER> The Ontological Argument </H1>
 
-<IMG SRC="GoedelGod.jpg" ALIGN=RIGHT WIDTH=40%>
+<A HREF="" onClick="putImage1(0);return false">
+<IMG NAME="image1" SRC="GoedelGodQuestion.jpg" ALIGN=RIGHT WIDTH=40%>
+</A>
 
 <H3> Proofs of the Existence of God </H3>
 <UL>
 <LI> Zalta's first-order proof based on Anselm's argument
 <LI> Rushby's higher-order proof based on Anselm's argument
-<LI> Benzm&uuml;ller and Woltzenlogel-Paleo's second-order modal proof<BR>
-     based on G&ouml;del's argument
+<LI> Benzm&uuml;ller and Woltzenlogel-Paleo's second-order modal proof based on<BR>
+     G&ouml;del's argument
      <UL>
-     <LI> Dana Scott typed up G&ouml;del's handwritten presentation.
-     <LI> G&ouml;del's axioms are contradictory, and Scott fixed that.
+     <LI> Dana Scott typed up <A HREF="" onClick="putImage1(1);return false">
+          G&ouml;del's handwritten presentation</A>.
+     <LI> G&ouml;del's axioms are contradictory, and 
+          <A HREF="" onClick="putImage1(2);return false">Scott fixed that</A>.
      <LI> G&ouml;del's and Scott's axioms have 
           <EM>P</EM>&nbsp;&rArr;&nbsp;&#9633;<EM>P</EM> (modal collapse) as 
           a theorem.
-     <LI> Benzm&uuml;ller produced a simplified version that avoids modal 
-          collapse.
+     <LI> Benzm&uuml;ller and Woltzenlogel-Paleo produced a simplified version 
+          that avoids modal collapse.
+     <LI> Proofs done in <A HREF="https://tptp.org/Seminars/TPI/Summary.html">TPI</A> and
+          also in <A HREF="" onClick="putImage1(3);return false">Isabelle</A>.
      </UL>
 </UL>
 

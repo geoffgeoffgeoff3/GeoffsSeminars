@@ -1,2 +1,0 @@
-include('Saturations/MGT034-1/Saturations/Vampire-SAT---4.7.ax').
-fof(mp_difference_between_founding_rates_36,conjecture,! [A] : ( ~ decreases(difference(founding_rate(first_movers,A),founding_rate(efficient_producers,A))) | decreases(difference(disbanding_rate(first_movers,A),disbanding_rate(efficient_producers,A))) | decreases(difference(growth_rate(first_movers,A),growth_rate(efficient_producers,A))) ) ).

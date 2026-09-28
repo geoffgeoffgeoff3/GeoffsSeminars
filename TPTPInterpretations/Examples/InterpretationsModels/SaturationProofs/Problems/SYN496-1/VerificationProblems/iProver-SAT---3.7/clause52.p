@@ -1,2 +1,0 @@
-include('Saturations/SYN496-1/Saturations/iProver-SAT---3.7.ax').
-fof(clause52,conjecture,! [U] : ! [V] : ! [W] : ( ~ c3_1(U) | ~ c0_1(U) | ~ ndr1_0 | ~ c1_1(V) | ~ c2_1(V) | c1_1(U) | c3_1(V) | c2_1(W) | c1_1(W) | c3_1(W) ) ).

@@ -1,2 +1,0 @@
-include('Saturations/SYN525-1/Saturations/E-SAT---3.0.ax').
-fof(clause78,conjecture,! [U] : ( ~ ssSkC4 | ~ c4_2(a203,U) | ~ ndr1_1(a203) | c4_0 ) ).

@@ -1,38 +1,41 @@
+<HTML>
+<HEAD>
 <TITLE> Solutions </TITLE>
-<HR><!------------------------------------------------------------------------>
+</HEAD>
+<BODY>
+<HR><!-------------------------------------------------------------------------------------------->
 <H1 ALIGN=CENTER> Solutions </H1>
 
 <IMG ALIGN=RIGHT SRC="T-Shirt-21.GIF" WIDTH=25%>
 
-<H3> Required Properties of Proofs </H3>
+<H3> Acceptable Proofs </H3>
 <UL>
-<LI> Derivations must be complete
-     <UL> 
-     <LI> Start at formulae from the problem
-     <LI> End at the conjecture or false 
-     </UL>
-<LI> Translations must be documented.
-<LI> Only relevant inference steps.
-<LI> Inference steps must document
-     <UL>
-     <LI> Parent formulae 
-     <LI> Inference rule used
-     <LI> Inferred formula.
-     </UL>
 <LI> Inference steps reasonably fine-grained.
-<LI> Unsatisfiable set of ground instances of clauses is acceptable
+<LI> Translations must be documented.
+<LI> Proofs must be in <A HREF="../TPTPProofsAndModels/Derivations.html">TPTP format</A>.
+<LI> Proofs must be structurally correct
+     <UL>
+     <LI> Show only relevant inference steps
+     <LI> Acyclic
+     <LI> Formulae from the problem as leaves 
+     <LI> End at the conjecture for axiomatic proofs
+     <LI> End at <TT>$false</TT> for refutations
+     <LI> Correct roles - <TT>axiom</TT>, <TT>plain</TT>, <TT>negated_conjecture</TT>, etc.
+     <LI> Correct <TT>status</TT> values - <TT>thm</TT>, <TT>cth</TT>, <TT>esa</TT>, etc.
+     <LI> New symbols in definitions must <TT>introduced()</TT>
+     <LI> Assumptions must be propagated and discharged
+     </UL>
 </UL>
 
-<H3> Required Properties of Models </H3>
+<H3> Acceptable Models </H3>
 <UL>
-<LI> Models must be complete
-     <UL> 
-     <LI> Domain
-     <LI> Function map
-     <LI> Predicate maps 
-     </UL>
-<LI> Explicit ground lists or clear, terminating algorithm
+<LI> Domain and mappings
+<LI> Explicit ground lists
+<LI> A clear, terminating algorithm
+<LI> Saturations whose models are a subset of the models of the input
 </UL
 
 <P>
-<HR><!------------------------------------------------------------------------>
+<HR><!-------------------------------------------------------------------------------------------->
+</BODY>
+</HTML>

@@ -1,7 +1,22 @@
 <HTML>
 <HEAD>
-<TITLE> TPTP format for Tarskian Interpretations </TITLE>
-</HEAD>
+<TITLE> Tarskian Interpretations </TITLE>
+<LINK REL="icon" HREF="I.png" type="image/png" />
+<!---------------------------------------------------------------------->
+<STYLE>
+  TABLE {
+    width: 100%;
+    table-layout: fixed; /* Prevents text from changing column widths */
+    border-collapse: collapse;
+  }
+
+  TH, TD {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;   /* CRUCIAL: Keeps the total width at exact width */
+  }
+</STYLE>
+<!---------------------------------------------------------------------->
 <SCRIPT type="text/javascript">
   function hideshow(obj) {
       var elem = document.getElementById(obj);
@@ -13,7 +28,7 @@
           elem.style.display = 'none';
       }
   }
-
+<!---------------------------------------------------------------------->
   var images = new Array();
   var myIndex = 0;
 
@@ -23,6 +38,8 @@
   images[1].src = 'GarfieldProblem.png';
   images[2]     = new Image();
   images[2].src = 'Garfield.png';
+  images[3]     = new Image();
+  images[3].src = 'AllIndividuals.png';
 
   function nextImage () {
       myIndex = (myIndex + 1) % images.length;
@@ -33,23 +50,89 @@
       document.images['image'].src = images[index].src;
   }
 </SCRIPT>
+<!---------------------------------------------------------------------->
+</HEAD>
 <BODY ALIGN=JUSTIFY>
 <HR><!-- -------------------------------------------------------------------------------------- -->
-<H1 ALIGN=CENTER> 
-TPTP format for Tarskian Interpretations
-</H1>
+<H1 ALIGN=CENTER> Tarskian Interpretations </H1>
 
 <A HREF="" onClick="putImage(0);return false">
 <IMG NAME='image' SRC="Tarski.jpg" BORDER=0 ALIGN=RIGHT WIDTH=33%>
 </A>
 
-<H3> The Format (replacing the 
-<A HREF="https://tptp.org/UserDocs/QuickGuide/FiniteInterpretations.html">old one</A>) </H3>
+<H3> In FOF </H3>
 <UL>
-<LI> The <A HREF="" onClick="putImage(1);return false">Garfield problem</A>
-<LI> Written in TF0
-<LI> Keep <A HREF="" onClick="hideshow('p6');return false;">problem types</A>
-     <SPAN ID="p6" style="display:none">
+<LI> The <A HREF="" onClick="putImage(3);hideshow('egalitarian_problem');return false">
+     Egalitarian student problem</A>
+     <SPAN ID="egalitarian_problem" style="display:none">
+     <PRE>
+<!--#include file="Examples/FOF_Finite.p"-->
+     </PRE>
+     </SPAN>
+<P>
+<LI> New role <A HREF="" onClick="hideshow('fof_interpretation');return false;">
+     <TT>interpretation</TT></A>
+     <SPAN ID="fof_interpretation" style="display:none">
+     <PRE>
+fof(equality_lost,interpretation, </PRE>
+     </SPAN>
+<LI> Specify <A HREF="" onClick="hideshow('fof_domain');return false;">the domain</A>
+     <SPAN ID="fof_domain" style="display:none">
+     <PRE>
+    ( ! [X] : ( X = "a" | X = "f" | X = "john" | X = "gotA") </PRE>
+     Note the use of <TT>"quoted terms"</TT> that are known to be distinct.
+     </SPAN>
+<LI> Interpret <A HREF="" onClick="hideshow('fof_functions');return false;">functions</A>
+     <SPAN ID="fof_functions" style="display:none"> 
+     <PRE>
+    & ( a = "a"
+      & f = "f"
+      & john = "john"
+      & grade_of("a") = "a"
+      & grade_of("f") = "a"
+      & grade_of("john") = "f"
+      & grade_of("gotA") = "a" )  </PRE>
+     Note the interpretation of meaningless terms.
+     </SPAN>
+<LI> Interpret <A HREF="" onClick="hideshow('fof_atoms');return false;">predicates</A>
+     <SPAN ID="fof_atoms" style="display:none">
+     <PRE>
+    & ( ~ human("a")
+      & ~ human("f")
+      & human("john")
+      & human("gotA")
+      & ~ created_equal("a","a")
+      & ~ created_equal("a","f")
+      & ~ created_equal("a","john")
+      & ~ created_equal("a","gotA")
+      & ~ created_equal("f","a")
+      & ~ created_equal("f","f")
+      & ~ created_equal("f","john")
+      & ~ created_equal("f","gotA")
+      & ~ created_equal("john","a")
+      & ~ created_equal("john","f")
+      & created_equal("john","john")
+      & created_equal("john","gotA")
+      & ~ created_equal("gotA","a")
+      & ~ created_equal("gotA","f")
+      & created_equal("gotA","john")
+      & created_equal("gotA","gotA") ) ) ). </PRE>
+     Note the interpretation of meaningless atoms.
+     </SPAN>
+</UL>
+
+<H3> In TFF (and beyond) </H3>
+<UL>
+<LI> The <A HREF="" onClick="putImage(1);hideshow('garfield_problem');return false">
+     Garfield problem</A>
+     <SPAN ID="garfield_problem" style="display:none">
+     <PRE>
+<!--#include file="Examples/TFF_Finite.p"-->
+     </PRE>
+     </SPAN>
+<P>
+<LI> Keep <A HREF="" onClick="hideshow('problem_types');return false;">problem types</A>
+     <SPAN ID="problem_types" style="display:none">
      <PRE>
 tff(human_type,type,      human: $tType ).
 tff(cat_type,type,        cat: $tType ).
@@ -60,14 +143,20 @@ tff(nermal_decl,type,     nermal: cat ).
 tff(loves_decl,type,      loves: cat > cat ).
 tff(owns_decl,type,       owns: ( human * cat ) > $o ). </PRE>
      </SPAN>
-<LI> Use problem types as domain types, or declare new domain types
-<LI> Declare <A HREF="" onClick="hideshow('p2');return false;">domain elements</A> 
-     <SPAN ID="p2" style="display:none">
+<LI> Declare <A HREF="" onClick="hideshow('new_domain_types');return false;">
+     new domain types to declare domain elements</A>
+     <SPAN ID="new_domain_types" style="display:none">
      <PRE>
-tff(d_jon_decl,type,      d_jon: human ).
-tff(d_garfield_decl,type, d_garfield: cat ).
-tff(d_arlene_decl,type,   d_arlene: cat ).
-tff(d_nermal_decl,type,   d_nermal: cat ). </PRE>
+tff(d_human_type,type,    d_human: $tType ).
+tff(d_cat_type,type,      d_cat: $tType ).
+tff(d_jon_decl,type,      d_jon: d_human ).
+tff(d_garfield_decl,type, d_garfield: d_cat ).
+tff(d_arlene_decl,type,   d_arlene: d_cat ).
+tff(d_nermal_decl,type,   d_nermal: d_cat ). </PRE>
+     ... and add <A HREF="TypePromotion.shtml">type promotion functions</A> ...
+     <PRE>
+tff(d2human_decl,type,    d2human: d_human > human ).
+tff(d2cat_decl,type,      d2cat: d_cat > cat ). </PRE>
      </SPAN>
 <LI> New role <A HREF="" onClick="hideshow('p_interpretation');return false;">
      <TT>interpretation</TT></A>
@@ -78,44 +167,80 @@ tff(garfield,interpretation, </PRE>
 <LI> Specify <A HREF="" onClick="hideshow('p_domains');return false;">domains</A>
      <SPAN ID="p_domains" style="display:none">
      <PRE>
-( ! [DH: human] : ( DH = d_jon )
-& ! [DC: cat]: ( DC = d_garfield | DC = d_arlene | DC = d_nermal )
-& $distinct(d_garfield,d_arlene,d_nermal) ) </PRE>
+    ( ! [DH: d_human] : ( DH = d_jon )
+    & ! [H: human] : ? [DH: d_human] : H = d2human(DH)
+    & ! [DH1: d_human,DH2: d_human] : ( d2human(DH1) = d2human(DH2) => DH1 = DH2 )
+    & ! [DC: d_cat]: ( DC = d_garfield | DC = d_arlene | DC = d_nermal )
+    & $distinct(d_garfield,d_arlene,d_nermal) 
+    & ! [C: cat] : ? [DC: d_cat] : C = d2cat(DC)
+    & ! [DC1: d_cat,DC2: d_cat] : ( d2cat(DC1) = d2cat(DC2) => DC1 = DC2 ) </PRE>
      </SPAN>
-<LI> Interpret <A HREF="" onClick="hideshow('p4');return false;">functions</A>
-     <SPAN ID="p4" style="display:none">
+<LI> Interpret <A HREF="" onClick="hideshow('functions');return false;">functions</A>
+     (using type promoted domain elements)
+     <SPAN ID="functions" style="display:none"> 
      <PRE>
-( jon = d_jon
-& garfield = d_garfield
-& arlene = d_arlene
-& nermal = d_nermal
-& loves(d_garfield) = d_garfield
-& loves(d_arlene) = d_garfield
-& loves(d_nermal) = d_garfield ) </PRE>
+    & jon = d2human(d_jon)
+    & garfield = d2cat(d_garfield)
+    & arlene = d2cat(d_arlene)
+    & nermal = d2cat(d_nermal)
+    & loves(d2cat(d_garfield)) = d2cat(d_garfield)
+    & loves(d2cat(d_arlene)) = d2cat(d_garfield)
+    & loves(d2cat(d_nermal)) = d2cat(d_garfield) </PRE>
      </SPAN>
-<LI> Interpret <A HREF="" onClick="hideshow('p5');return false;">predicates</A>
-     <SPAN ID="p5" style="display:none">
+<LI> Interpret <A HREF="" onClick="hideshow('atoms');return false;">predicates</A>
+     <SPAN ID="atoms" style="display:none">
      <PRE>
-( owns(d_jon,d_garfield)
-& ~ owns(d_jon,d_arlene)
-& ~ owns(d_jon,d_nermal) ) </PRE>
+    & owns(d2human(d_jon),d2cat(d_garfield))
+    & ~ owns(d2human(d_jon),d2cat(d_arlene))
+    & ~ owns(d2human(d_jon),d2cat(d_nermal)) ) ). </PRE>
+     </SPAN>
+<P>
+<LI> You can <A HREF="" onClick="hideshow('problem_domain_types');return false;">
+     reuse problem types and get confused</A> 
+     <SPAN ID="problem_domain_types" style="display:none">
+     <PRE>
+<!--#include file="Examples/TFF_Finite_ProblemTypes.s"-->
+     </PRE>
      </SPAN>
 </UL>
 
-<H3>Example - 
-<A HREF="" onClick="hideshow('exampleFinite');putImage(2);return false;">
-Jon Owns Garfield's Lovers - Finite Countermodel </A> </H3>
-<SPAN ID="exampleFinite" style="display:none">
-<TABLE BORDER=0>
-<TR> <TH WIDTH=50%> Jon Owns Garfield's Lovers
-     <TH WIDTH=50%> Finite Countermodel
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H2 ALIGN=CENTER> Complete Examples </H2>
+
+<H3> <A HREF="" onClick="hideshow('fof_exampleFinite');putImage(3);return false;">
+Egalitarian Students </A> </H3>
+<SPAN ID="fof_exampleFinite" style="display:none">
+<TABLE BORDER=0 WIDTH=90%>
+<TR> <TH WIDTH=49%> Egalitarian Students
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Finite Countermodel
+<TR VALIGN=TOP> <TD>
+<PRE>
+<!--#include file="Examples/FOF_Finite.p"-->
+</PRE>
+     <TD>
+     <TD>
+<PRE>
+<!--#include file="Examples/FOF_Finite_Coarse.s"-->
+</PRE>
+</TABLE>
+</SPAN>
+
+<H3> <A HREF="" onClick="hideshow('tff_exampleFinite');putImage(2);return false;">
+Jon Owns Garfield's Lovers </A> </H3>
+<SPAN ID="tff_exampleFinite" style="display:none">
+<TABLE BORDER=0 WIDTH=90%>
+<TR> <TH WIDTH=49%> Jon Owns Garfield's Lovers
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Finite Countermodel
 <TR VALIGN=TOP> <TD>
 <PRE>
 <!--#include file="Examples/TFF_Finite.p"-->
 </PRE>
      <TD>
+     <TD>
 <PRE>
-<!--#include file="Examples/TFF_Finite.s"-->
+<!--#include file="Examples/TFF_Finite_Coarse.s"-->
 </PRE>
 </TABLE>
 </SPAN>

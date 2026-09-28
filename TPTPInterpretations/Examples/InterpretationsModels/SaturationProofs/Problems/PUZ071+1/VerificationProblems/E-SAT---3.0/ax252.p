@@ -1,2 +1,0 @@
-include('Saturations/PUZ071+1/Saturations/E-SAT---3.0.ax').
-fof(ax252,conjecture,ssA(n7,n4) = n1 | ssA(n7,n5) = n1 | ssA(n7,n6) = n1 | ssA(n8,n4) = n1 | ssA(n8,n5) = n1 | ssA(n8,n6) = n1 | ssA(n9,n4) = n1 | ssA(n9,n5) = n1 | ssA(n9,n6) = n1 ).

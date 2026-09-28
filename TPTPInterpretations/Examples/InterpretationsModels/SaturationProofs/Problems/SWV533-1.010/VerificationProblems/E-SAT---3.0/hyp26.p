@@ -1,2 +1,0 @@
-include('Saturations/SWV533-1.010/Saturations/E-SAT---3.0.ax').
-fof(hyp26,conjecture,a_1294 = store(a_1292,i4,e_1293) ).

@@ -1,2 +1,0 @@
-include('Saturations/SWB026-10/Saturations/E-SAT---3.0.ax').
-fof(testcase_premise_fullish_026_Inferred_Property_Characteristics_I_7,conjecture,iext(uri_owl_oneOf,sK1_testcase_premise_fullish_026_Inferred_Property_Characteristics_I_BNODE_x2,sK2_testcase_premise_fullish_026_Inferred_Property_Characteristics_I_BNODE_l2) = true ).

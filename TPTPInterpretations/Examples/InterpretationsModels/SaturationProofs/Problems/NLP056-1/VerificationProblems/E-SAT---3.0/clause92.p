@@ -1,2 +1,0 @@
-include('Saturations/NLP056-1/Saturations/E-SAT---3.0.ax').
-fof(clause92,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ( ~ dollar(U,skf8(U,V)) | ~ group(U,W) | ~ five(U,W) | ~ mia_forename(U,X) | ~ forename(U,X) | ~ agent(U,Y,Z) | ~ woman(U,Z) | ~ of(U,X,Z) | ~ event(U,Y) | ~ past(U,Y) | ~ nonreflexive(U,Y) | ~ order(U,Y) | ~ ssSkP0(X1,W,U) | ~ patient(U,Y,X1) | ~ shake_beverage(U,X1) | ~ nonhuman(U,X1) | ~ actual_world(U) ) ).

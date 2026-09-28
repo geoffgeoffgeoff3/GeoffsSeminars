@@ -1,2 +1,0 @@
-include('Saturations/NLP055-1/Saturations/Vampire-SAT---4.7.ax').
-fof(clause72,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ! [X2] : ! [X3] : ! [X4] : ! [X5] : ( skf21(U,V,W,X,Y,Z,X1) != W | ~ member(X2,U,X3) | ~ member(X2,V,X3) | ~ member(X2,W,X3) | ~ member(X2,X4,X3) | ~ member(X2,X5,X3) | five(X2,X3) | U = X5 | U = X4 | U = W | U = V | V = X5 | V = X4 | V = W | W = X5 | W = X4 | X4 = X5 ) ).

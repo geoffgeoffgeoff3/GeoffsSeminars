@@ -1,2 +1,0 @@
-include('Saturations/NLP228-10/Saturations/E-SAT---3.0.ax').
-fof(clause71,conjecture,! [U] : ! [Y] : ! [W] : ! [X] : ! [V] : ! [Z] : ifeq4(theme(U,Y,W),true,ifeq4(theme(U,X,V),true,ifeq4(agent(U,Y,Z),true,ifeq4(agent(U,X,Z),true,ifeq4(think_believe_consider(U,Y),true,ifeq4(think_believe_consider(U,X),true,ifeq4(proposition(U,W),true,ifeq4(proposition(U,V),true,V,W),W),W),W),W),W),W),W) = W ).

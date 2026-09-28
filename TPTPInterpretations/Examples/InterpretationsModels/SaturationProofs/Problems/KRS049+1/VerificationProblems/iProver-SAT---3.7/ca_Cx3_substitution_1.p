@@ -1,2 +1,0 @@
-include('Saturations/KRS049+1/Saturations/iProver-SAT---3.7.ax').
-fof(ca_Cx3_substitution_1,conjecture,! [A] : ! [B] : ( ( A = B & ca_Cx3(A) ) => ca_Cx3(B) ) ).

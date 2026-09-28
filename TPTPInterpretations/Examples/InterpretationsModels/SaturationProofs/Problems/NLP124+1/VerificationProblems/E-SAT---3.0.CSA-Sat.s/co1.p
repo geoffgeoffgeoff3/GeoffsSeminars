@@ -1,2 +1,0 @@
-include('Saturations/NLP124+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ? [W] : ? [X] : ? [Y] : ? [Z] : ( of(U,W,V) & city(U,V) & hollywood_placename(U,W) & placename(U,W) & street(U,X) & lonely(U,X) & chevy(U,Y) & white(U,Y) & dirty(U,Y) & old(U,Y) & event(U,Z) & agent(U,Z,Y) & present(U,Z) & barrel(U,Z) & down(U,Z,X) & in(U,Z,V) ) ) ) )).

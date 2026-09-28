@@ -1,2 +1,0 @@
-include('Saturations/NLP113+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ( restaurant(U,V) & ! [W] : ( ( customer(U,W) & in(U,W,V) ) => ? [X] : ? [Y] : ? [Z] : ? [X1] : ( coffee(U,X) & human_person(U,Y) & event(U,Z) & agent(U,Z,Y) & patient(U,Z,X) & past(U,Z) & nonreflexive(U,Z) & drink(U,Z) & event(U,X1) & agent(U,X1,W) & patient(U,X1,Y) & past(U,X1) & nonreflexive(U,X1) & see(U,X1) ) ) ) ) ) )).

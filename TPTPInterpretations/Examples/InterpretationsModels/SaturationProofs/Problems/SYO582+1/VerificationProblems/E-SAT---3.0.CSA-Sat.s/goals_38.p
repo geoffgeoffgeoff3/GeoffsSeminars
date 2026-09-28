@@ -1,2 +1,0 @@
-include('Saturations/SYO582+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(goals_38,conjecture,~(! [X48] : ( k04_buttercup10225(X48) <=> b48_buttercup10519(X48) ) | ( ! [X49] : ( b48_buttercup10519(X49) => k04_buttercup10225(X49) ) & ? [X50] : ( k04_buttercup10225(X50) & ~ b48_buttercup10519(X50) ) ) | ? [X51] : ? [X52] : ? [X53] : ( k04_buttercup10225(X51) & b48_buttercup10519(X51) & k04_buttercup10225(X52) & ~ b48_buttercup10519(X52) & ~ k04_buttercup10225(X53) & b48_buttercup10519(X53) ) | ! [X54] : ( k04_buttercup10225(X54) => ~ b48_buttercup10519(X54) ) )).

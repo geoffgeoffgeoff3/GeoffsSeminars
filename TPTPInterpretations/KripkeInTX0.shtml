@@ -1,6 +1,22 @@
 <HTML>
 <HEAD>
-<TITLE> Kripke Interpretations in One TX0 Formula </TITLE>
+<TITLE> Kripke Interpretations </TITLE>
+<LINK REL="icon" HREF="I.png" type="image/png" />
+<!---------------------------------------------------------------------->
+<STYLE>
+  TABLE {
+    width: 100%;
+    table-layout: fixed; /* Prevents text from changing column widths */
+    border-collapse: collapse;
+  }
+
+  TH, TD {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;   /* CRUCIAL: Keeps the total width at exact width */
+  }
+</STYLE>
+<!---------------------------------------------------------------------->
 <SCRIPT type="text/javascript">
   function hideshow(obj) {
       var elem = document.getElementById(obj);
@@ -12,24 +28,18 @@
           elem.style.display = 'none';
       }
   }
-
+<!---------------------------------------------------------------------->
   var images = new Array();
   var myIndex = 0;
 
   images[0]     = new Image();
   images[0].src = 'Kripke.jpg';
   images[1]     = new Image();
-  images[1].src = 'AlexChrisProblem.png';
+  images[1].src = 'SleepyChildren.png';
   images[2]     = new Image();
-  images[2].src = 'AlexChris.png';
+  images[2].src = 'ManyChildren.png';
   images[3]     = new Image();
-  images[3].src = 'RottenFruit.jpg';
-  images[4]     = new Image();
-  images[4].src = 'CoinToss.png';
-  images[5]     = new Image();
-  images[5].src = 'StayingAlive.png';
-  images[6]     = new Image();
-  images[6].src = 'PeopleLikePeople.jpg';
+  images[3].src = 'OneChild.png';
 
   function putImage (index) {
       document.images['image'].src = images[index].src;
@@ -40,12 +50,11 @@
       document.images['image'].src = images[myIndex].src;
   }
 </SCRIPT>
+<!---------------------------------------------------------------------->
 </HEAD>
 <BODY ALIGN=JUSTIFY>
 <HR><!-- -------------------------------------------------------------------------------------- -->
-<H1 ALIGN=CENTER> 
-Kripke Interpretations in One TX0 Formula
-</H1>
+<H1 ALIGN=CENTER> Kripke Interpretations </H1>
 
 <A HREF="" onClick="putImage(0);return false">
 <IMG NAME='image' SRC="Kripke.jpg" BORDER=0 ALIGN=RIGHT WIDTH=40%>
@@ -62,9 +71,17 @@ Kripke Interpretations in One TX0 Formula
 </UL>
 </SPAN>
 
-<H3> The Format </H3>
+<H3> In TX0 </H3>
 <UL>
-<LI> The <A HREF="" onClick="putImage(1);return false">Alex & Chris Problem</A>
+<LI> The <A HREF="" onClick="putImage(1);hideshow('sleepy_children_problem');return false">
+     Sleepy Children problem</A>
+     <SPAN ID="sleepy_children_problem" style="display:none">
+     <PRE>
+<!--#include file="Examples/NXF_Finite-Finite-Global.p"-->
+     </PRE>
+     </SPAN>
+<P>
+<P>
 <LI> Keep <A HREF="" onClick="hideshow('p_logic_spec');return false;">logic specification</A>
      <SPAN ID="p_logic_spec" style="display:none">
      <PRE>
@@ -78,161 +95,187 @@ tff(semantics,logic,
 <LI> Keep <A HREF="" onClick="hideshow('p_problem_types');return false;">problem types</A>
      <SPAN ID="p_problem_types" style="display:none">
      <PRE>
-tff(person_decl,type,    person: $tType).
-tff(product_decl,type,   product: $tType).
-tff(alex_decl,type,      alex: person).
-tff(chris_decl,type,     chris: person).
-tff(leo_decl,type,       leo: product).
-tff(work_hard_type,type, work_hard: (person * product) > $o).
-tff(gets_rich_type,type, gets_rich: person > $o). </PRE>
+tff(child_type,type,    child: $tType ).
+tff(adult_type,type,    adult: $tType ).
+tff(agatha_decl,type,   agatha: adult ).
+tff(charly_decl,type,   charly: child ).
+tff(quiet_decl,type,    quiet: child > $o ).
+tff(sleepy_decl,type,   sleepy: adult > $o ).
+tff(peaceful_decl,type, peaceful: child > $o ).
+tff(serves_decl,type,   serves: adult > child ).
+tff(rains_decl,type,    rains: $o ). </PRE>
      </SPAN>
-<LI> Use problem types as domain types, or declare new domain types
-<LI> Declare <A HREF="" onClick="hideshow('p2');return false;">domain elements</A> 
-     <SPAN ID="p2" style="display:none">
+<LI> Declare <A HREF="" onClick="hideshow('new_domain_types');return false;">
+     new domain types to declare domain elements</A>
+     <SPAN ID="new_domain_types" style="display:none">
      <PRE>
-tff(d_alex_decl,type,    d_alex: person).
-tff(d_chris_decl,type,   d_chris: person).
-tff(d_leo_decl,type,     d_leo: product). </PRE>
+tff(child_d_decl,type,  child_d: $tType).
+tff(adult_d_decl,type,  adult_d: $tType).
+tff(child_1_decl,type,  child_1: child_d).
+tff(adult_1_decl,type,  adult_1: adult_d). </PRE>
+     ... and add <A HREF="TypePromotion.shtml">type promotion functions</A> ...
+     <PRE>
+tff(d2child_decl,type, d2child: child_d > child).
+tff(d2adult_decl,type, d2adult: adult_d > adult). </PRE>
      </SPAN>
 <LI> Declare 
      <A HREF="" onClick="hideshow('p_world_decls');return false;">worlds</A>
      <SPAN ID="p_world_decls" style="display:none">
      <PRE>
-tff(w1_decl,type,w1:     $world).
-tff(w2_decl,type,w2:     $world). </PRE>
+tff(w1_decl,type,       w1: $world ).
+tff(w2_decl,type,       w2: $world ).
+tff(w3_decl,type,       w3: $world ). </PRE>
      </SPAN>
 <LI> New role <A HREF="" onClick="hideshow('p_interpretation');return false;">
      <TT>interpretation</TT></A>
      <SPAN ID="p_interpretation" style="display:none">
      <PRE>
-tff(leo_workers,interpretation, </PRE>
+tff(people_worlds,interpretation-<EM>subrole</EM>, </PRE>
      </SPAN>
-<LI> Specify <A HREF="" onClick="hideshow('p_worlds');return false;">
-     worlds and accessibility</A>
+<LI> Specify <A HREF="" onClick="hideshow('p_worlds');return false;">worlds and accessibility</A>
      <SPAN ID="p_worlds" style="display:none">
      <PRE>
-( ! [W: $world] : ( W = w1 | W = w2 )
-& $distinct(w1,w2)
-& $local_world = w1
-& $accessible_world(w1,w1)     %----Logic is M
-& $accessible_world(w2,w2)
-& $accessible_world(w1,w2) 
-& $accessible_world(w2,w1) ) </PRE>
+
+tff(people_worlds,interpretation-worlds,
+    ( ! [W: $world] :
+        ( ( W = w1 ) | ( W = w2 ) | ( W = w3 ) )
+    & $distinct(w1,w2,w3)
+    & ( $local_world = w1 )
+    & $accessible_world(w1,w1) & $accessible_world(w2,w2)
+    & $accessible_world(w1,w2) & $accessible_world(w2,w3)
+    & $accessible_world(w3,w1)
+    & ~ $accessible_world(w1,w3) & ~ $accessible_world(w2,w1)
+    & ~ $accessible_world(w3,w2) & ~ $accessible_world(w3,w3) ) ). </PRE>
      </SPAN>
-<LI> For <A HREF="" onClick="hideshow('p_for_w1');return false;">each world, <TT>w1</TT></A>
-     <SPAN ID="p_for_w1" style="display:none">
+<LI> In each <A HREF="" onClick="hideshow('in_world');return false;">world</A>
+     <SPAN ID="in_world" style="display:none">
      <PRE>
-( $in_world(w1, </PRE>
+tff(people_domains,interpretation-domains,
+    ( $in_world(w1,
+    & $in_world(w2,
+    & $in_world(w3, </PRE>
      </SPAN>
      <UL>
      <LI> Specify <A HREF="" onClick="hideshow('p_domains');return false;">domains</A>
           <SPAN ID="p_domains" style="display:none">
           <PRE>
-( ! [DP: person] : ( DP = d_alex | DP = d_chris )
-& $distinct(d_alex,d_chris)
-& ? [DP: person] : DP = d_alex 
-& ? [DP: person] : DP = d_chris
-& ! [DP: d_product] : DP = d_leo
-& ? [DP: d_product] : DP = d_leo ) </PRE>
+tff(people_domains,interpretation-domains,
+    ( $in_world(w1,
+        ( ! [C: child] : ? [CD: child_d] : ( C = d2child(CD) )
+        & ! [CD: child_d] : ( CD = child_1 )
+        & ? [CD: child_d] : ( CD = child_1 )
+        & ! [CD1: child_d,CD2: child_d] :
+            ( ( d2child(CD1) = d2child(CD2) ) => ( CD1 = CD2 ) )
+        & ! [A: adult] : ? [AD: adult_d] : ( A = d2adult(AD) )
+        & ! [AD: adult_d] : ( AD = adult_1 )
+        & ? [AD: adult_d] : ( AD = adult_1 )
+        & ! [AD1: adult_d,AD2: adult_d] :
+            ( ( d2adult(AD1) = d2adult(AD2) ) => ( AD1 = AD2 ) ) )) </PRE>
           </SPAN>
-     <LI> <A HREF="" onClick="hideshow('p_non_booleans');return false;">Interpret functions</A>
+     <LI> Interpret <A HREF="" onClick="hideshow('p_non_booleans');return false;">functions</A>
           <SPAN ID="p_non_booleans" style="display:none">
           <PRE>
-( alex = d_alex
-& chris = d_chris
-& leo = d_leo ) </PRE>
+tff(people_mappings,interpretation-mappings,
+    ( $in_world(w1,
+        ( ( charly = d2child(child_1) )
+        & ( agatha = d2adult(adult_1) )
+        & ( serves(d2adult(adult_1)) = d2child(child_1) ) </PRE>
           </SPAN>
-     <LI> <A HREF="" onClick="hideshow('p_booleans');return false;">Interpret predicates</A>
+     <LI> Interpret <A HREF="" onClick="hideshow('p_booleans');return false;">predicates</A>
           <SPAN ID="p_booleans" style="display:none">
           <PRE>
-( work_hard(d_alex,d_leo)
-& work_hard(d_chris,d_leo)
-& ~ gets_rich(d_alex)
-& gets_rich(d_chris) ) </PRE>
-     </SPAN>
+        & ~ quiet(d2child(child_1))
+        & ~ sleepy(d2adult(adult_1))
+        & peaceful(d2child(child_1))
+        & rains )) </PRE>
+          </SPAN>
      </UL>
-<LI> For <A HREF="" onClick="hideshow('p_for_w2');return false;">each world, <TT>w2</TT></A>
-     <SPAN ID="p_for_w2" style="display:none">
+</UL>
+
+<H3> Quantification for Compaction </H3>
+<UL>
+<LI> Avoid <A HREF="" onClick="putImage(2);hideshow('uncompact');return false;">repetition</A>
+     <SPAN ID="uncompact" style="display:none">
      <PRE>
-$in_world(w2,
-        ( ( ! [DP: person] : ( DP = d_alex | DP = d_chris )
-          & $distinct(d_alex,d_chris)
-          & ? [DP: person] : DP = d_alex
-          & ? [DP: person] : DP = d_chris
-          & ! [DP: product] : DP = d_leo
-          & ? [DP: product] : DP = d_leo )
-        & ( alex = d_alex
-          & chris = d_chris
-          & leo = d_leo )
-        & ( work_hard(d_alex,d_leo)
-          & work_hard(d_chris,d_leo)
-          & gets_rich(d_alex)
-          & gets_rich(d_chris) ) ) ) </PRE>
-     </SPAN>
-<LI> Factoring <A HREF="" onClick="hideshow('p_factored');return false;">common things in worlds</A>
-     <SPAN ID="p_factored" style="display:none">
-     <PRE>
-tff(semantics,logic,
-    $alethic_modal ==
-      [ $domains == $constant,
-        $designation == $rigid,
-        $terms == $local,
-        $modalities == $modal_system_M ] ).
-
-tff(person_decl,type,    person: $tType).
-tff(product_decl,type,   product: $tType).
-tff(alex_decl,type,      alex: person).
-tff(chris_decl,type,     chris: person).
-tff(leo_decl,type,       leo: product).
-tff(work_hard_decl,type, work_hard: (person * product) > $o).
-tff(gets_rich_decl,type, gets_rich: person > $o).
-
-tff(d_alex_decl,type,    d_alex: person).
-tff(d_chris_decl,type,   d_chris: person).
-tff(d_leo_decl,type,     d_leo: product).
-
-tff(w1_decl,type,w1:     $world).
-tff(w2_decl,type,w2:     $world).
-
-tff(leo_workers,interpretation,
-    ( ( ! [W: $world] : ( W = w1 | W = w2 )
-      & $distinct(w1,w2)
-      & $local_world = w1
-      & $accessible_world(w1,w1)     %----Logic is M
-      & $accessible_world(w2,w2)
-      & $accessible_world(w1,w2) )
-    & ! [W: $world] :
-        ( ( ! [DP: person] : ( DP = d_alex | DP = d_chris )
-          & $distinct(d_alex,d_chris)
-          & ? [DP: person] : DP = d_alex
-          & ? [DP: person] : DP = d_chris
-          & ! [DP: product] : DP = d_leo
-          & ? [DP: product] : DP = d_leo )
-        & ( alex = d_alex
-          & chris = d_chris
-          & leo = d_leo )
-        & ( work_hard(d_alex,d_leo)
-          & work_hard(d_chris,d_leo) ) )
-    & $in_world(w1,
-       ( ~ gets_rich(d_alex)
-       & gets_rich(d_chris) ) )
+tff(people_domains,interpretation-domains,
+    ( $in_world(w1,
+<STRONG>
+        ( ! [C: child] : ? [CD: child_d] : ( C = d2child(CD) )
+        & ! [CD: child_d] : ( CD = child_1 )
+        & ? [CD: child_d] : ( CD = child_1 )
+        & ! [CD1: child_d,CD2: child_d] :
+            ( ( d2child(CD1) = d2child(CD2) ) => ( CD1 = CD2 ) )
+        & ! [A: adult] : ? [AD: adult_d] : ( A = d2adult(AD) )
+        & ! [AD: adult_d] : ( AD = adult_1 )
+        & ? [AD: adult_d] : ( AD = adult_1 )
+        & ! [AD1: adult_d,AD2: adult_d] :
+            ( ( d2adult(AD1) = d2adult(AD2) ) => ( AD1 = AD2 ) ) ))
+</STRONG>
     & $in_world(w2,
-        ( gets_rich(d_alex)
-        & ~ gets_rich(d_chris) ) ) ) ). </PRE>
+<P>
+tff(people_mappings,interpretation-mappings,
+    ( $in_world(w1,
+<STRONG>
+        ( ( charly = d2child(child_1) )
+        & ( agatha = d2adult(adult_1) )
+        & ( serves(d2adult(adult_1)) = d2child(child_1) )
+        & ~ quiet(d2child(child_1))
+        & ~ sleepy(d2adult(adult_1))
+        & peaceful(d2child(child_1))
+        & rains ))
+</STRONG>
+    & $in_world(w2, </PRE>
+     </SPAN>
+<LI> With <A HREF="" onClick="putImage(3);hideshow('compact');return false;">quantification</A>
+     <SPAN ID="compact" style="display:none">
+     <PRE>
+tff(people_domains,interpretation-domains,
+<STRONG>
+    ! [W: $world] :
+      $in_world(W,
+        ( ! [C: child] : ? [CD: child_d] : C = d2child(CD)
+        & ! [CD: child_d] : CD = child_1
+        & ? [CD: child_d] : CD = child_1
+        & ! [CD1: child_d,CD2: child_d] :
+            ( d2child(CD1) = d2child(CD2) => CD1 = CD2 )
+        & ! [A: adult] : ? [AD: adult_d] : A = d2adult(AD)
+        & ! [AD: adult_d] : AD = adult_1
+        & ? [AD: adult_d] : AD = adult_1
+        & ! [AD1: adult_d,AD2: adult_d] :
+            ( d2adult(AD1) = d2adult(AD2) => AD1 = AD2 ) )) ).
+</STRONG>
+
+tff(charly_mappings,interpretation-mappings,
+<STRONG>
+    ! [W: $world] :
+      $in_world(W,
+        ( charly = d2child(child_1) 
+        & agatha = d2adult(adult_1)
+        & serves(d2adult(adult_1)) = d2child(child_1)
+        & ~ quiet(d2child(child_1))
+        & ~ sleepy(d2adult(adult_1))
+        & peaceful(d2child(child_1))
+        & rains)) ).
+</STRONG>
      </SPAN>
 </UL>
 
-<H3>Example - 
-<A HREF="" onClick="hideshow('exampleFiniteFiniteGlobal');putImage(2);return false;">
-Alex and Chris Work Hard - Finite-Finite Countermodel </A> </H3>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H2 ALIGN=CENTER> Complete Examples </H2>
+
+<H3>Sleepy Children
+<A HREF="" onClick="hideshow('exampleFiniteFiniteGlobal');putImage(1);return false;">
+Finite worlds, Finite domains</A> </H3>
 <SPAN ID="exampleFiniteFiniteGlobal" style="display:none">
 <TABLE BORDER=0>
-<TR> <TH WIDTH=50%> Alex and Chris Work Hard
-     <TH WIDTH=50%> Finite-Finite Countermodel
+<TR> <TH WIDTH=49%> Sleepy Children
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Finite-Finite Countermodel
 <TR VALIGN=TOP> <TD>
 <PRE>
 <!--#include file="Examples/NXF_Finite-Finite-Global.p"-->
 </PRE>
+     <TD>
      <TD>
 <PRE>
 <!--#include file="Examples/NXF_Finite-Finite-Global.s"-->
@@ -240,74 +283,22 @@ Alex and Chris Work Hard - Finite-Finite Countermodel </A> </H3>
 </TABLE>
 </SPAN>
 
-<H3>Example - 
-<A HREF="" onClick="hideshow('exampleFiniteFiniteLocal');putImage(3);return false;">
-Rotten Fruit - Finite-Finite Countermodel</A> (local axioms) </H3>
-<SPAN ID="exampleFiniteFiniteLocal" style="display:none">
+<H3> Sleepy Children
+<A HREF="" onClick="hideshow('exampleCompact');putImage(3);return false;">
+Compact</A> </H3>
+<SPAN ID="exampleCompact" style="display:none">
 <TABLE BORDER=0>
-<TR> <TH WIDTH=50%> Rotten Fruit
-     <TH WIDTH=50%> Finite-Finite Countermodel
+<TR> <TH WIDTH=49%> Sleepy Children
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Compacted
 <TR VALIGN=TOP> <TD>
 <PRE>
-<!--#include file="Examples/NXF_Finite-Finite-Local.p"-->
+<!--#include file="Examples/NXF_Finite-Finite-Global.s"-->
 </PRE>
      <TD>
-<PRE>
-<!--#include file="Examples/NXF_Finite-Finite-Local.s"-->
-</PRE>
-</TABLE>
-</SPAN>
-
-<H3>Example - 
-<A HREF="" onClick="hideshow('exampleFiniteInfinite');putImage(4);return false;">
-Tossing Heads - Finite-Infinite Countermodel</A> </H3>
-<SPAN ID="exampleFiniteInfinite" style="display:none">
-<TABLE BORDER=0>
-<TR> <TH WIDTH=50%> Tossing Heads
-     <TH WIDTH=50%> Finite-Infinite Countermodel
-<TR VALIGN=TOP> <TD>
-<PRE>
-<!--#include file="Examples/NXF_Finite-Infinite.p"-->
-</PRE>
      <TD>
 <PRE>
-<!--#include file="Examples/NXF_Finite-Infinite.s"-->
-</PRE>
-</TABLE>
-</SPAN>
-
-<H3>Example - 
-<A HREF="" onClick="hideshow('exampleInfiniteFinite');putImage(5);return false;">
-Staying Alive - Infinite-Finite Model</A> </H3>
-<SPAN ID="exampleInfiniteFinite" style="display:none">
-<TABLE BORDER=0>
-<TR> <TH WIDTH=50%> Staying Alive
-     <TH WIDTH=50%> Infinite-Finite Model
-<TR VALIGN=TOP> <TD>
-<PRE>
-<!--#include file="Examples/NXF_Infinite-Finite.p"-->
-</PRE>
-     <TD>
-<PRE>
-<!--#include file="Examples/NXF_Infinite-Finite.s"-->
-</PRE>
-</TABLE>
-</SPAN>
-
-<H3>Example - 
-<A HREF="" onClick="hideshow('exampleInfiniteInfinite');putImage(6);return false;">
-People Like People - Infinite-Infinite Model</A> </H3>
-<SPAN ID="exampleInfiniteInfinite" style="display:none">
-<TABLE BORDER=0>
-<TR> <TH WIDTH=50%> People Like People
-     <TH WIDTH=50%> Infinite-Infinite Model
-<TR VALIGN=TOP> <TD>
-<PRE>
-<!--#include file="Examples/NXF_Infinite-Infinite.p"-->
-</PRE>
-     <TD>
-<PRE>
-<!--#include file="Examples/NXF_Infinite-Infinite.s"-->
+<!--#include file="Examples/NXF_Finite-Finite-Global_Compact.s"-->
 </PRE>
 </TABLE>
 </SPAN>

@@ -1,2 +1,0 @@
-include('Saturations/SWB027+4/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
-fof(testcase_premise_fullish_027_Inferred_Property_Characteristics_II,conjecture,? [BNODE_l1] : ? [BNODE_l2] : ? [BNODE_v] : ( iext(uri_owl_propertyChainAxiom,uri_owl_sameAs,BNODE_l1) & iext(uri_rdf_first,BNODE_l1,uri_ex_p) & iext(uri_rdf_rest,BNODE_l1,BNODE_l2) & iext(uri_rdf_first,BNODE_l2,BNODE_v) & iext(uri_rdf_rest,BNODE_l2,uri_rdf_nil) & iext(uri_owl_inverseOf,BNODE_v,uri_ex_p) ) ).

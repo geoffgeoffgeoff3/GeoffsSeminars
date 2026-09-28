@@ -1,2 +1,0 @@
-include('Saturations/NLP093-1/Saturations/E-SAT---3.0.ax').
-fof(clause94,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ( ~ revenge(U,V) | ~ of(U,W,V) | ~ event(U,W) | ~ present(U,W) | ~ nonreflexive(U,W) | ~ scream(U,W) | ~ group(U,X) | ~ six(U,X) | ~ cannon(U,Y) | ~ agent(U,W,Z) | ~ ssSkP0(Y,Z,X,U) | ~ of(U,Y,Z) | ~ man(U,Z) | ~ male(U,Z) | ~ patient(U,W,X1) | ~ cry(U,X1) | ~ actual_world(U) | member(U,skf10(U,X),X) ) ).

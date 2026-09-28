@@ -2,9 +2,19 @@
 <HEAD>
 <TITLE> The TSTP Solution Library </TITLE>
 <SCRIPT language="JavaScript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
   var images = new Array();
   var myIndex = 0;
-
   images[0]     = new Image();
   images[0].src = 'TAT.GIF';
   images[1]     = new Image();
@@ -26,35 +36,35 @@
 
 <H3> A Library of Solutions </H3>
 <UL>
-<LI> Aim
+<LI> <A HREF="" onClick="hideshow('aim');return false;">Aim</A>: 
+     A collection of ATP systems' results
+     <SPAN ID="aim" style="display:none">
      <UL>
      <LI> A simple, unambiguous, source and reference mechanism 
      <LI> Set standards for ATP system output
      <LI> Improve interpretation of ATP systems' output 
      </UL>
+     </SPAN>
      <P>
-<LI> Motivation
+<LI> <A HREF="" onClick="hideshow('motivation');return false;">Motivation</A>: 
+     Analyse ATP system performance
+     <SPAN ID="motivation" style="display:none">
      <UL>
      <LI> System development by solution analysis
      <LI> Solution processing by standard tools
      <LI> System certification by solution verification
      </UL>
+     </SPAN>
 </UL>
 
 <H3> Features </H3>
 <UL>
 <LI> 80+ systems' TPTP derivations and models 
 <LI> Resources beyond <A HREF="../Evaluate/PPP.html">systems' PPP</A>s
-<LI> <A HREF="EP.THM-CRf.s.txt">Documented</A>:
-     System,
-     Resources,
-     SZS result and output,
-     Statistics
-<LI> <A HREF="EP.THM-CRf.s.txt">Human and computer readable</A>:
-     Name, 
-     Role, 
-     Logic,
-     Source and user annotations
+<LI> <A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Solutions&Domain=PUZ&File=PUZ001+1">
+     Documented</A>: System, Resources, SZS result and output, Statistics
+<LI> <A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Solutions&Domain=PUZ&File=PUZ001+1">
+     Human and computer readable</A>: Name, Role, Logic, Source and user annotations
 <LI> A key - the <A HREF="../TPTPLanguage/Summary.html">TPTP language</A>
      <UL>
      <LI> Standards for writing 

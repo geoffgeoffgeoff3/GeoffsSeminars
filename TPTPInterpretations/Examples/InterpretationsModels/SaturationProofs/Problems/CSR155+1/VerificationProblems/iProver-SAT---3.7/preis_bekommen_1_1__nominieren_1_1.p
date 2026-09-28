@@ -1,2 +1,0 @@
-include('Saturations/CSR155+1/Saturations/iProver-SAT---3.7.ax').
-fof(preis_bekommen_1_1__nominieren_1_1,conjecture,! [X0] : ! [X1] : ! [X2] : ! [X3] : ( ( exp(X0,X2) & member(X1,cons(nobelpreis_1_1,cons(preis_1_1,nil))) & obj(X0,X3) & sub(X3,X1) & subs(X0,bekommen_1_1) ) => ? [X4] : ? [X5] : ( arg1(X4,X2) & arg2(X4,X3) & hsit(X0,X5) & obj(X5,X2) & rslt(X5,X4) & subr(X4,attch_0) & subs(X5,aufstellen_1_3) ) ) ).

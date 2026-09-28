@@ -1,2 +1,0 @@
-include('Saturations/SWV498-1.050/Saturations/iProver-SAT---3.7.ax').
-fof(hyp1,conjecture,a_1701 = store(a_1700,i2,e2) ).

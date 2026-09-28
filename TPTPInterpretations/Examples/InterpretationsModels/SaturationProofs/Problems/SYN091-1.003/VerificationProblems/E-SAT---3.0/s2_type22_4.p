@@ -1,2 +1,0 @@
-include('Saturations/SYN091-1.003/Saturations/E-SAT---3.0.ax').
-fof(s2_type22_4,conjecture,q_3_3 | ~ q_2_3 ).

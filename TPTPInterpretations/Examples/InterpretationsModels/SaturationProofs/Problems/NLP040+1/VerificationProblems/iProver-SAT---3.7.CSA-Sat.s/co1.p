@@ -1,2 +1,0 @@
-include('Saturations/NLP040+1/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
-fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ( ! [W] : ( member(U,W,V) => ? [X] : ? [Y] : ( table(U,X) & ! [Z] : ( member(U,Z,Y) => ? [X1] : ( event(U,X1) & agent(U,X1,Z) & present(U,X1) & sit(U,X1) & at(U,X1,X) & with(U,X1,W) ) ) & three(U,Y) & group(U,Y) & ! [X2] : ( member(U,X2,Y) => ( guy(U,X2) & young(U,X2) ) ) ) ) & group(U,V) & ! [X3] : ( member(U,X3,V) => hamburger(U,X3) ) ) ) ) )).

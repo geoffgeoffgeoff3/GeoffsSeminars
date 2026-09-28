@@ -1,2 +1,0 @@
-include('Saturations/CSR155+1/Saturations/iProver-SAT---3.7.ax').
-fof(fact_4035,conjecture,chea(fortgehen_1_1,abgang_1_2) ).

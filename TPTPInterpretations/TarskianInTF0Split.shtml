@@ -1,42 +1,63 @@
 <HTML>
 <HEAD>
-<TITLE> Tarskian Interpretations in One TF0 File </TITLE>
+<TITLE> Tarskian Interpretations in Parts </TITLE>
+<LINK REL="icon" HREF="I.png" type="image/png" />
+<!---------------------------------------------------------------------->
+<STYLE>
+  TABLE {
+    width: 100%;
+    table-layout: fixed; /* Prevents text from changing column widths */
+    border-collapse: collapse;
+  }
+
+  TH, TD {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;   /* CRUCIAL: Keeps the total width at exact width */
+  }
+</STYLE>
 <!---------------------------------------------------------------------->
 <SCRIPT type="text/javascript">
-function hideshow(obj) {
-    var elem = document.getElementById(obj);
-    if (elem.style.display == 'block') {
-        elem.style.display = 'none';
-    } else if (elem.style.display == 'none') {
-        elem.style.display = 'block';
-    } else {
-        elem.style.display = 'none';
-    }
-}
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
 <!---------------------------------------------------------------------->
-var images = new Array();
-var myIndex = 0;
-
-images[0]     = new Image();
-images[0].src = 'Mandela.png';
-images[1]     = new Image();
-images[1].src = 'GarfieldFriends.png';
-
-function putImage (index) {
-    document.images['image'].src = images[index].src;
-}
-
-function nextImage () {
-    myIndex = (myIndex + 1) % images.length;
-    document.images['image'].src = images[myIndex].src;
-}
+  var images = new Array();
+  var myIndex = 0;
+  
+  images[0]     = new Image();
+  images[0].src = 'Mandela.png';
+  images[1]     = new Image();
+  images[1].src = 'GarfieldOdie.png';
+  images[2]     = new Image();
+  images[2].src = 'GarfieldFriends.png';
+  images[3]     = new Image();
+  images[3].src = 'GarfieldProblem.png';
+  images[4]     = new Image();
+  images[4].src = 'Garfield.png';
+  
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+  
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
 </SCRIPT>
 <!---------------------------------------------------------------------->
 </HEAD>
 <BODY ALIGN=JUSTIFY>
 <HR><!-- -------------------------------------------------------------------------------------- -->
 <H1 ALIGN=CENTER> 
-Tarskian Interpretations in One TF0 File
+Tarskian Interpretations in Parts
 </H1>
 
 <A HREF="" onClick="putImage(0);return false">
@@ -51,96 +72,125 @@ Tarskian Interpretations in One TF0 File
 <LI> One file ... Same as for problems and proofs
 <LI> One file ... Multiple "<A HREF="TarskianInTF0.shtml">one formula</A>" interpretations
 <LI> Flexible granularity ... No apart hate
-</UL>
-
-<H3> Subroles for Parts</H3>
-<UL>
-<LI> Keep <A HREF="" onClick="hideshow('p0');return false;">problem types</A>
-     <SPAN ID="p0" style="display:none">
+<P>
+<LI> New subrole <A HREF="" onClick="hideshow('domains');return false;">
+     <TT>interpretation-domains</TT> </A>
+     <SPAN ID="domains" style="display:none">
      <PRE>
-tff(human_type,type,      human: $tType ).
-tff(cat_type,type,        cat: $tType ).
-tff(jon_decl,type,        jon: human ).
-tff(garfield_decl,type,   garfield: cat ).
-tff(arlene_decl,type,     arlene: cat ).
-tff(nermal_decl,type,     nermal: cat ).
-tff(loves_decl,type,      loves: cat > cat ).
-tff(owns_decl,type,       owns: ( human * cat ) > $o ). </PRE>
-<LI> <TT>interpretation</TT> 
-     - <A HREF="" onClick="hideshow('p1');return false;">the whole</A> interpretation
-     <SPAN ID="p1" style="display:none">
-     <PRE>
-tff(garfield,interpretation,
-    ( ( ! [DH: human] : ( DH = d_jon )
-      & ! [DC: cat]: 
-          ( DC = d_garfield | DC = d_arlene | DC = d_nermal )
-      & $distinct(d_garfield,d_arlene,d_nermal) )
-    & ( jon = d_jon
-      & garfield = d_garfield
-      & arlene = d_arlene
-      & nermal = d_nermal
-      & loves(d_garfield) = d_garfield
-      & loves(d_arlene) = d_garfield
-      & loves(d_nermal) = d_garfield )
-    & ( owns(d_jon,d_garfield)
-      & ~ owns(d_jon,d_arlene)
-      & ~ owns(d_jon,d_nermal) ) ) ). </PRE>
+tff(garfield_domain,interpretation-domains,
+    ( ! [H: human] : ? [DH: d_human] : H = d2human(DH)
+    & ! [DH: d_human] : ( DH = d_jon )
+    & ! [DH1: d_human,DH2: d_human] : ( d2human(DH1) = d2human(DH2) => DH1 = DH2 )
+    & ! [C: cat] : ? [DC: d_cat] : C = d2cat(DC)
+    & ! [DC: d_cat]: ( DC = d_garfield | DC = d_arlene | DC = d_nermal )
+    & $distinct(d_garfield,d_arlene,d_nermal)
+    & ! [DC1: d_cat,DC2: d_cat] : ( d2cat(DC1) = d2cat(DC2) => DC1 = DC2 ) ) ).</PRE>
      </SPAN>
-<LI> <TT>interpretation-domain</TT> 
-     - <A HREF="" onClick="hideshow('p2');return false;">all the domains</A> of the interpretation
-     <SPAN ID="p2" style="display:none">
+<LI> New subrole <A HREF="" onClick="hideshow('mappings');return false;">
+     <TT>interpretation-mappings</TT> </A>
+     <SPAN ID="mappings" style="display:none">
      <PRE>
-tff(garfield_domain,interpretation-domain,
-    ( ! [DH: human] : ( DH = d_jon )
-    & ! [DC: cat]:
-        ( DC = d_garfield | DC = d_arlene | DC = d_nermal )
-    & $distinct(d_garfield,d_arlene,d_nermal) ) ). </PRE>
-<LI> <TT>interpretation-domain(</TT><EM>term_type</EM><TT>,</TT><EM>domain_type</EM><TT>)</TT>
-     - <A HREF="" onClick="hideshow('p3');return false;">the domain</A> for <EM>term_type</EM>,
-     of <EM>domain_type</EM> 
-     <SPAN ID="p3" style="display:none">
+tff(garfield_mapping,interpretation-mappings,
+    ( jon = d2human(d_jon)
+    & garfield = d2cat(d_garfield)
+    & arlene = d2cat(d_arlene)
+    & nermal = d2cat(d_nermal)
+    & loves(d2cat(d_garfield)) = d2cat(d_garfield)
+    & loves(d2cat(d_arlene)) = d2cat(d_garfield)
+    & loves(d2cat(d_nermal)) = d2cat(d_garfield)
+    & ( owns(d2human(d_jon),d2cat(d_garfield))
+    & ~ owns(d2human(d_jon),d2cat(d_arlene))
+    & ~ owns(d2human(d_jon),d2cat(d_nermal)) ) ) ). </PRE>
+     </SPAN>
+<P>
+<LI> Fine grained <A HREF="" onClick="hideshow('symbols');return false;">
+     <TT>with symbol arguments</TT> </A>
+     <SPAN ID="symbols" style="display:none">
      <PRE>
-tff(garfield_domain_cat,interpretation-domain(cat,d_cat),
+tff(garfield_domain_human,interpretation-domains(human,d_human),
+    ! [DH: human] : ( DH = d_jon ) ).
+
+tff(garfield_domain_cat,interpretation-domains(cat,d_cat),
     ( ! [DC: cat]:
         ( DC = d_garfield | DC = d_arlene | DC = d_nermal )
-    & $distinct(d_garfield,d_arlene,d_nermal) ) ). </PRE>
-<LI> <TT>interpretation-mapping</TT> 
-     - <A HREF="" onClick="hideshow('p4');return false;">all the mappings</A> of the interpretation
-     <SPAN ID="p4" style="display:none">
-     <PRE>
-tff(garfield_mapping,interpretation-mapping,
-    ( ( jon = d_jon
-      & garfield = d_garfield
-      & arlene = d_arlene
-      & nermal = d_nermal
-      & loves(d_garfield) = d_garfield
-      & loves(d_arlene) = d_garfield
-      & loves(d_nermal) = d_garfield )
-    & ( owns(d_jon,d_garfield)
-      & ~ owns(d_jon,d_arlene)
-      & ~ owns(d_jon,d_nermal) ) ) ). </PRE>
-<LI> <TT>interpretation-mapping(</TT><EM>symbol</EM><TT>,</TT><EM>domain_type</EM><TT>)</TT>
-     - <A HREF="" onClick="hideshow('p5');return false;">the mappings for <EM>symbol</EM></A>
-     of <EM>domain_type</EM>
-     <SPAN ID="p5" style="display:none">
-     <PRE>
-tff(garfield_mapping_loves,interpretation-mapping(loves,d_cat),
+    & $distinct(d_garfield,d_arlene,d_nermal) ) ). 
+
+tff(garfield_mapping_jon,interpretation-mappings(jon,d_human),
+    jon = d_jon ).
+
+tff(garfield_mapping_garfield,interpretation-mappings(garfied,d_cat),
+    garfield = d_garfield ).
+
+tff(garfield_mapping_arlene,interpretation-mappings(arlene,d_cat),
+    arlene = d_arlene ).
+
+tff(garfield_mapping_nermal,interpretation-mappings(nermal,d_cat),
+    nermal = d_nermal ).
+
+tff(garfield_mapping_loves,interpretation-mappings(loves,d_cat),
     ( loves(d_garfield) = d_garfield
     & loves(d_arlene) = d_garfield
-    & loves(d_nermal) = d_garfield ) ). </PRE>
+    & loves(d_nermal) = d_garfield ) ). 
+
+tff(garfield_mapping_owns,interpretation-mappings(owns,$o),
+    ( owns(d_jon,d2cat(d_garfield))
+    & ~ owns(d_jon,d_arlene)
+    & ~ owns(d_jon,d_nermal) ) ). </PRE>
+     </SPAN>
 </UL>
 
-<H3>Example - 
+<H3> Quantification for Compaction </H3>
+<UL>
+<LI> Avoid <A HREF="" onClick="putImage(3);hideshow('uncompact');return false;">repetition</A>
+     <SPAN ID="uncompact" style="display:none">
+     <PRE>
+tff(garfield_mapping,interpretation-mappings,
+    ( jon = d2human(d_jon)
+    & garfield = d2cat(d_garfield)
+    & arlene = d2cat(d_arlene)
+    & nermal = d2cat(d_nermal)
+<STRONG>
+    & loves(d2cat(d_garfield)) = d2cat(d_garfield)
+    & loves(d2cat(d_arlene)) = d2cat(d_garfield)
+    & loves(d2cat(d_nermal)) = d2cat(d_garfield)
+</STRONG>
+    & ( owns(d2human(d_jon),d2cat(d_garfield))
+    & ~ owns(d2human(d_jon),d2cat(d_arlene))
+    & ~ owns(d2human(d_jon),d2cat(d_nermal)) ) ) ). </PRE>
+     </SPAN>
+<LI> With <A HREF="" onClick="putImage(4);hideshow('compact');return false;">quantification</A>
+     <SPAN ID="compact" style="display:none">
+     <PRE>
+tff(garfield_mapping_jon,interpretation-mappings,
+    ( jon = d2human(d_jon)
+    & garfield = d2cat(d_garfield)
+    & arlene = d2cat(d_arlene)
+    & nermal = d2cat(d_nermal)
+<STRONG>
+    & ! [DC: d_cat] : ( loves(d2cat(DC)) = d2cat(d_garfield) )
+</STRONG>
+    & owns(d2human(d_jon),d2cat(d_garfield))
+    & ~ owns(d2human(d_jon),d2cat(d_arlene))
+    & ~ owns(d2human(d_jon),d2cat(d_nermal)) ) ). </PRE>
+     </SPAN>
+</UL>
+
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<H2 ALIGN=CENTER> Complete Examples </H2>
+
+<H3> Jon Owns Garfield's Lovers 
 <A HREF="" onClick="hideshow('exampleFinite');putImage(1);return false;">
-Jon Owns Garfield's Lovers - Finite Countermodel - One Formula </A> </H3>
+Domains and Mappings</A> (the best I think) </H3>
 <SPAN ID="exampleFinite" style="display:none">
-<TABLE BORDER=0>
-<TR> <TH WIDTH=50%> Jon Owns Garfield's Lovers
-     <TH WIDTH=50%> Finite Countermodel
+<TABLE BORDER=0 WIDTH=90%>
+<TR> <TH WIDTH=49%> Jon Owns Garfield's Lovers
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Finite Countermodel
 <TR VALIGN=TOP> <TD>
 <PRE>
-<!--#include file="Examples/TFF_Finite.p"-->
+<!--#include file="Examples/TFF_Finite_Coarse.s"-->
 </PRE>
+     <TD>
      <TD>
 <PRE>
 <!--#include file="Examples/TFF_Finite.s"-->
@@ -148,38 +198,42 @@ Jon Owns Garfield's Lovers - Finite Countermodel - One Formula </A> </H3>
 </TABLE>
 </SPAN>
 
-<H3>Example - 
-<A HREF="" onClick="hideshow('exampleMedium');putImage(1);return false;">
-Jon Owns Garfield's Lovers - Finite Countermodel - Medium Grained </A> </H3>
-<SPAN ID="exampleMedium" style="display:none">
+<H3> Jon Owns Garfield's Lovers 
+<A HREF="" onClick="hideshow('exampleFine');putImage(2);return false;">
+Fine Grained </A> </H3>
+<SPAN ID="exampleFine" style="display:none">
 <TABLE BORDER=0>
-<TR> <TH WIDTH=50%> Jon Owns Garfield's Lovers
-     <TH WIDTH=50%> Finite Countermodel - Medium Grained
+<TR> <TH WIDTH=49%> Jon Owns Garfield's Lovers
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Finite Countermodel - Fine Grained
 <TR VALIGN=TOP> <TD>
 <PRE>
-<!--#include file="Examples/TFF_Finite.p"-->
+<!--#include file="Examples/TFF_Finite_Coarse.s"-->
 </PRE>
      <TD>
+     <TD>
 <PRE>
-<!--#include file="Examples/TFF_Finite_Medium.s"-->
+<!--#include file="Examples/TFF_Finite_Fine.s"-->
 </PRE>
 </TABLE>
 </SPAN>
 
-<H3>Example - 
-<A HREF="" onClick="hideshow('exampleFine');putImage(1);return false;">
-Jon Owns Garfield's Lovers - Finite Countermodel - Fine Grained </A> </H3>
-<SPAN ID="exampleFine" style="display:none">
+<H3> Jon Owns Garfield's Lovers 
+<A HREF="" onClick="hideshow('exampleCompact');putImage(4);return false;">
+Compact</A> </H3>
+<SPAN ID="exampleCompact" style="display:none">
 <TABLE BORDER=0>
-<TR> <TH WIDTH=50%> Jon Owns Garfield's Lovers
-     <TH WIDTH=50%> Finite Countermodel - Fine Grained
+<TR> <TH WIDTH=49%> Jon Owns Garfield's Lovers
+     <TH WIDTH=2%> &nbsp;
+     <TH WIDTH=49%> Compacted
 <TR VALIGN=TOP> <TD>
 <PRE>
-<!--#include file="Examples/TFF_Finite.p"-->
+<!--#include file="Examples/TFF_Finite.s"-->
 </PRE>
      <TD>
+     <TD>
 <PRE>
-<!--#include file="Examples/TFF_Finite_Fine.s"-->
+<!--#include file="Examples/TFF_Finite_Compact.s"-->
 </PRE>
 </TABLE>
 </SPAN>

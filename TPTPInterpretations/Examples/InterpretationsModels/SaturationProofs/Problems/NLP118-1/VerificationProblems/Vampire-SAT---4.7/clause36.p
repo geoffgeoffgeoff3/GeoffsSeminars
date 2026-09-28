@@ -1,2 +1,0 @@
-include('Saturations/NLP118-1/Saturations/Vampire-SAT---4.7.ax').
-fof(clause36,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ( ~ agent(U,V,W) | ~ old(U,W) | ~ dirty(U,W) | ~ white(U,W) | ~ chevy(U,W) | ~ barrel(U,V) | ~ present(U,V) | ~ event(U,V) | ~ hollywood_placename(U,X) | ~ placename(U,X) | ~ in(U,V,Y) | ~ city(U,Y) | ~ of(U,X,Y) | ~ street(U,Z) | ~ lonely(U,Z) | ~ down(U,V,Z) | ~ actual_world(U) | ~ ssSkC0 ) ).

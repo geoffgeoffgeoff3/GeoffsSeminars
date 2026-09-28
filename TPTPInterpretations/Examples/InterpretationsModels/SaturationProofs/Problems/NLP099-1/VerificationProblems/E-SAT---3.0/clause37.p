@@ -1,2 +1,0 @@
-include('Saturations/NLP099-1/Saturations/E-SAT---3.0.ax').
-fof(clause37,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ( ~ see(U,V) | ~ nonreflexive(U,V) | ~ past(U,V) | ~ agent(U,V,skf30(U,W)) | ~ event(U,V) | ~ event(U,X) | ~ patient(U,X,W) | ~ past(U,X) | ~ nonreflexive(U,X) | ~ drink(U,X) | ~ patient(U,V,Y) | ~ agent(U,X,Y) | ~ human_person(U,Y) | ~ coffee(U,W) | ~ actual_world(U) | ssSkC0 ) ).

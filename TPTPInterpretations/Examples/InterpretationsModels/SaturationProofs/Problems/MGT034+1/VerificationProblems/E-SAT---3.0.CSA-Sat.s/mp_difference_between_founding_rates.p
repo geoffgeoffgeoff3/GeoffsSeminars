@@ -1,2 +1,0 @@
-include('Saturations/MGT034+1/Saturations/E-SAT---3.0.CSA-Sat.s.ax').
-fof(mp_difference_between_founding_rates,conjecture,! [T] : ( ( decreases(difference(founding_rate(first_movers,T),founding_rate(efficient_producers,T))) & ~ decreases(difference(disbanding_rate(first_movers,T),disbanding_rate(efficient_producers,T))) ) => decreases(difference(growth_rate(first_movers,T),growth_rate(efficient_producers,T))) ) ).

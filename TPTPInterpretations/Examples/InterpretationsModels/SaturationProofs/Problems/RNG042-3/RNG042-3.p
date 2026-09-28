@@ -1,9 +1,0 @@
-fof(left_additive_identity,conjecture,! [X] : add(additive_identity,X) = X ).
-fof(right_additive_identity,conjecture,! [X] : add(X,additive_identity) = X ).
-fof(left_additive_inverse,conjecture,! [X] : add(additive_inverse(X),X) = additive_identity ).
-fof(right_additive_inverse,conjecture,! [X] : add(X,additive_inverse(X)) = additive_identity ).
-fof(associativity_for_addition,conjecture,! [X] : ! [Y] : ! [Z] : add(X,add(Y,Z)) = add(add(X,Y),Z) ).
-fof(commutativity_for_addition,conjecture,! [X] : ! [Y] : add(X,Y) = add(Y,X) ).
-fof(associativity_for_multiplication,conjecture,! [X] : ! [Y] : ! [Z] : multiply(X,multiply(Y,Z)) = multiply(multiply(X,Y),Z) ).
-fof(distribute1,conjecture,! [X] : ! [Y] : ! [Z] : multiply(X,add(Y,Z)) = add(multiply(X,Y),multiply(X,Z)) ).
-fof(distribute2,conjecture,! [X] : ! [Y] : ! [Z] : multiply(add(X,Y),Z) = add(multiply(X,Z),multiply(Y,Z)) ).

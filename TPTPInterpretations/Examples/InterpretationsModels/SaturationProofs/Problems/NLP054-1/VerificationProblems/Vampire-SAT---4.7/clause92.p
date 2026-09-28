@@ -1,2 +1,0 @@
-include('Saturations/NLP054-1/Saturations/Vampire-SAT---4.7.ax').
-fof(clause92,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ( ~ forename(U,V) | ~ mia_forename(U,V) | ~ of(U,V,W) | ~ woman(U,W) | ~ agent(U,X,W) | ~ order(U,X) | ~ nonreflexive(U,X) | ~ past(U,X) | ~ event(U,X) | ~ shake_beverage(U,Y) | ~ patient(U,X,Y) | ~ five(U,Z) | ~ group(U,Z) | ~ ssSkP0(X1,Z,U) | ~ nonhuman(U,X1) | ~ actual_world(U) | member(U,skf8(U,Z),Z) ) ).

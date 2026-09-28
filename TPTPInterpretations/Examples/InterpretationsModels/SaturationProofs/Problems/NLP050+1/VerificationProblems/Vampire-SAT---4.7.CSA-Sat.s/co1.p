@@ -1,2 +1,0 @@
-include('Saturations/NLP050+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
-fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ? [W] : ? [X] : ? [Y] : ? [Z] : ( nonhuman(U,Y) & of(U,W,V) & woman(U,V) & mia_forename(U,W) & forename(U,W) & shake_beverage(U,X) & event(U,Y) & agent(U,Y,V) & patient(U,Y,X) & past(U,Y) & nonreflexive(U,Y) & order(U,Y) & ! [X1] : ( member(U,X1,Z) => ? [X2] : ( event(U,X2) & agent(U,X2,Y) & patient(U,X2,X1) & present(U,X2) & nonreflexive(U,X2) & cost(U,X2) ) ) & five(U,Z) & group(U,Z) & ! [X3] : ( member(U,X3,Z) => dollar(U,X3) ) ) ) ) )).

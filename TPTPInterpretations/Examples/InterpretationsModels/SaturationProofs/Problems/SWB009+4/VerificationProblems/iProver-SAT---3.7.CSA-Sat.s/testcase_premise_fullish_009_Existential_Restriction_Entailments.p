@@ -1,2 +1,0 @@
-include('Saturations/SWB009+4/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
-fof(testcase_premise_fullish_009_Existential_Restriction_Entailments,conjecture,? [BNODE_z] : ( iext(uri_rdf_type,uri_ex_p,uri_owl_ObjectProperty) & iext(uri_rdf_type,uri_ex_c,uri_owl_Class) & iext(uri_rdf_type,uri_ex_s,BNODE_z) & iext(uri_rdf_type,BNODE_z,uri_owl_Restriction) & iext(uri_owl_onProperty,BNODE_z,uri_ex_p) & iext(uri_owl_someValuesFrom,BNODE_z,uri_ex_c) ) ).

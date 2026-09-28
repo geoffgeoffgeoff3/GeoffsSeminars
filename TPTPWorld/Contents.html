@@ -13,8 +13,8 @@
           elem.style.display = 'none';
       }
   }
-  var images = new Array();
 
+  var images = new Array();
   images[0]     = new Image();
   images[0].src = 'https://tptp.org/Logos/TPTPWorld.png';
   images[1]     = new Image();
@@ -58,6 +58,7 @@ Infrastructure for Automated Reasoning<BR>
 <LI> <A HREF="../TPTP/Summary.html">The TPTP Problem Library</A>
 <LI> <A HREF="../TPTPLanguage/Summary.html">The TPTP Language</A> (++)
 <LI> <A HREF="../SZSOntologies/Summary.html">The SZS Ontologies</A>
+<LI> <A HREF="..//SPCs/Summary.html">Specialist Problem Classes (SPCs)</A>
 <LI> <A HREF="../TSTP/Summary.html">The TSTP Solution Library</A>
 <LI> <A HREF="../Evaluate/Summary.html">Problem and System Ratings</A> (++)
 <LI> <A HREF="../TPI/Summary.html">The TPTP Process Instruction Language</A> (++)
@@ -68,7 +69,36 @@ Infrastructure for Automated Reasoning<BR>
 <LI> <A HREF="" onClick="hideshow('p3');return false;">System*T*TP</A>
      <SPAN ID="p3" style="display:none">
      <UL> 
-     <LI> <A HREF="../SystemOnTPTP/Online/Summary.html">Online - ATP in your Web Browser</A>
+     <LI> <A HREF="../SystemOnTPTP/Online/Summary.html">Online - ATP in your Web Browser</A><BR>
+          <A HREF="" onClick="hideshow('p2');return false;">SystemOnTPTP demonstration</A> using 
+          <A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">
+          <TT>PUZ001+1</TT></A>
+          <SPAN ID="p2" style="display:none">
+          <UL>
+          <LI> Start at the TPTP : <A HREF="https://tptp.org" TARGET="_blank"><TT>tptp.org</TT></A>
+          <LI> Browse TPTP problems to PUZ001+1
+          <LI> Note language, SPC, Rating
+          <LI> Browse TSTP solutions to E solution, note language
+          <LI> Could rush forward to "Solve problem", but first ...
+          <LI> Copy formulae, open SystemB4TPTP :
+               <A HREF="http://tptp.org/cgi-bin/SystemB4TPTP" TARGET="_blank">
+               <TT>http://tptp.org/cgi-bin/SystemB4TPTP</TT></A>, and explain interface. 
+               Then check syntax using default, and with BNFParserDrill.
+          <LI> Open SystemOnTPTP :
+               <A HREF="http://tptp.org/cgi-bin/SystemOnTPTP" TARGET="_blank">
+               <TT>http://tptp.org/cgi-bin/SystemOnTPTP</TT></A>, and explain interface. 
+               Then check axioms using Paradox.
+          <LI> Add conjecture and prove with E. Note yacko proof, then redo with "TPTP format". 
+               Note language.
+          <LI> Could shortcut using SoTSTP, but first ...
+               Copy formulae, open SystemOnTSTP :
+               <A HREF="http://tptp.org/cgi-bin/SystemOnTSTP" TARGET="_blank">
+               <TT>http://tptp.org/cgi-bin/SystemOnTSTP</TT></A>, and explain interface. 
+          <LI> Run IDV on solution. Explain IDV interface.
+               Show interestingness. Show "good/bad cat lemmas". Show verification.
+          <LI> Then check proof using GDV.
+          </UL>
+          </SPAN>
      <LI> <A HREF="../SystemOnTPTP/Utility/Summary.html">Desktop - ATP on your Computer</A> (++)
      <LI> <A HREF="../SystemOnTPTP/Online/RemoteSoT.html">Remote - ATP in your Software</A> (++)
      </UL>
@@ -77,7 +107,10 @@ Infrastructure for Automated Reasoning<BR>
      <SPAN ID="p4" style="display:none">
      <UL>
      <LI> <A HREF="../IDV/Summary.html">IDV</A> - Interactive Derivation Viewer
-     <LI> <A HREF="../AGInT/RaterSummary.html">AGInTRater</A> - Derivation Nodes' Interestingness
+          <UL>
+          <LI> <A HREF="../AGInT/RaterSummary.html">AGInTRater</A> - Derivation Nodes' 
+               Interestingness
+          </UL>
      <LI> <A HREF="../GDV/Summary.html">GDV</A> - Semantic Derivation Verification
      </UL>
      </SPAN>
@@ -93,35 +126,6 @@ Infrastructure for Automated Reasoning<BR>
 <H3> Using the TPTP World (--) </H3>
 <UL>
 <LI> <A HREF="https://tptp.org/UserDocs/QuickGuide/Problems.html">Writing TPTP Problems</A>
-<LI> <A HREF="" onClick="hideshow('p2');return false;">SystemOnTPTP demonstration</A> using 
-     <A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">
-     <TT>PUZ001+1</TT></A>
-     <SPAN ID="p2" style="display:none">
-     <UL>
-     <LI> Start at the TPTP : <A HREF="https://tptp.org" TARGET="_blank"><TT>tptp.org</TT></A>
-     <LI> Browse TPTP problems to PUZ001+1
-     <LI> Note language, SPC, Rating
-     <LI> Browse TSTP solutions to E solution, note language
-     <LI> Could rush forward to "Solve problem", but first ...
-     <LI> Copy formulae, open SystemB4TPTP :
-          <A HREF="http://tptp.org/cgi-bin/SystemB4TPTP" TARGET="_blank">
-          <TT>http://tptp.org/cgi-bin/SystemB4TPTP</TT></A>, and explain interface. 
-          Then check syntax using default, and with BNFParserDrill.
-     <LI> Open SystemOnTPTP :
-          <A HREF="http://tptp.org/cgi-bin/SystemOnTPTP" TARGET="_blank">
-          <TT>http://tptp.org/cgi-bin/SystemOnTPTP</TT></A>, and explain interface. 
-          Then check axioms using Paradox.
-     <LI> Add conjecture and prove with E. Note yacko proof, then redo with "TPTP format". 
-          Note language.
-     <LI> Could shortcut using SoTSTP, but first ...
-          Copy formulae, open SystemOnTSTP :
-          <A HREF="http://tptp.org/cgi-bin/SystemOnTSTP" TARGET="_blank">
-          <TT>http://tptp.org/cgi-bin/SystemOnTSTP</TT></A>, and explain interface. 
-     <LI> Run IDV on solution. Explain IDV interface.
-          Show interestingness. Show "good/bad cat lemmas". Show verification.
-     <LI> Then check proof using GDV.
-     </UL>
-     </SPAN>
 <LI> <A HREF="../../UserDocs/TPTPWorldTutorial/Contents.html">Tutorial on Logic and the TPTP World</A> (++)
 <LI> <A HREF="../../UserDocs/TPTPWorldTutorial/ATPProcess.html">The ATP Process</A>
 </UL>
@@ -132,7 +136,7 @@ Infrastructure for Automated Reasoning<BR>
 <H3> TPTP World Applications </H3>
 <UL>
 <LI> <A HREF="../MathsInTPTP/Contents.html">Mathematics in Many Forms</A>
-<LI> <A HREF="../ATP/Applications/NASA.html">Certifiable program sythesis at NASA</A>
+<LI> <A HREF="../ATP/Applications/NASA.html">Certifiable program synthesis at NASA</A>
 <LI> <A HREF="../ATP/Applications/Isabelle.html">The Sledgehammer in Isabelle</A>
 <LI> <A HREF="../ATP/Applications/Ontological.html">The Ontological Argument</A>
 <LI> <A HREF="" onClick="hideshow('p1');return false;">Some Internal Projects</A>
@@ -151,7 +155,9 @@ Infrastructure for Automated Reasoning<BR>
 <H3> Keeping AI Honest, Trustworthy, Ethical </H3>
 <UL>
 <LI> Recall <A HREF="../ATP/Applications/Summary.html#Neurosymbolic">Neurosymbolic AI</A>
-<LI> <A HREF="../AChatWithBard/Contents.html">A Chat with Bard</A>
+<LI> A <A HREF="../AChatWithBard/Contents.html">Chat with Bard</A>
+<LI> <A HREF="https://tptp.org/Seminars/VerifyingLLMs/Contents.html">Verifying LLM Answers</A>
+     with ShZZaM and ATP
 <LI> The <A HREF="../TrustworthyAI/Summary.html">Cycle of Trust</A>
 <LI> <A HREF="../EthicalAI/Summary.html">Ethical AI</A>
 </UL>
@@ -166,8 +172,6 @@ Infrastructure for Automated Reasoning<BR>
      <A HREF="" onClick="putImage2(1);return false">
      <IMG SRC="Hard.jpg" BORDER=0 HEIGHT=10></A>
 </H3>
-
-<H3>Advertisement: <A HREF="https://worldtour.tptp.org/">The TPTP World Tour</A></H3>
 
 <P>
 <HR> <!-- ------------------------------------------------------------------------------------- -->

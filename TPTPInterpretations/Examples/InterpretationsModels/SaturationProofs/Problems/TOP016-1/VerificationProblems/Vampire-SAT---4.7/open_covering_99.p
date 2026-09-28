@@ -1,2 +1,0 @@
-include('Saturations/TOP016-1/Saturations/Vampire-SAT---4.7.ax').
-fof(open_covering_99,conjecture,! [Vf] : ! [X] : ! [Vt] : ( open_covering(Vf,X,Vt) | ~ topological_space(X,Vt) | ~ subset_collections(Vf,Vt) | ~ equal_sets(union_of_members(Vf),X) ) ).

@@ -1,12 +1,37 @@
 <HTML>
 <HEAD>
 <TITLE> Automated Reasoning Systems </TITLE>
+<SCRIPT language="JavaScript">
+  var images = new Array();
+  var myIndex = 0;
+  images[0]     = new Image();
+  images[0].src = 'Machine1.jpg';
+  images[1]     = new Image();
+  images[1].src = 'Machine2.png';
+  images[2]     = new Image();
+  images[2].src = 'Machine3.jpg';
+  images[3]     = new Image();
+  images[3].src = 'Machine4.jpg';
+  images[4]     = new Image();
+  images[4].src = 'Machine5.jpg';
+  images[5]     = new Image();
+  images[5].src = 'Machine6.png';
+  images[6]     = new Image();
+  images[6].src = 'Machine7.jpg';
+
+  function nextImage () {
+      myIndex = (myIndex + 1) % images.length;
+      document.images['image'].src = images[myIndex].src;
+  }
+</SCRIPT>
 </HEAD>
 <BODY>
 <HR><!-------------------------------------------------------------------------------------------->
 <H1 ALIGN=CENTER> Automated Reasoning Systems </H1>
 
-<IMG SRC="Machine.jpg" ALIGN=RIGHT WIDTH=33%>
+<A HREF="" onClick="nextImage();return false">
+<IMG NAME="image" SRC="Machine1.jpg" ALIGN=RIGHT WIDTH=33%>
+</A>
 
 <H3> Classic FOF &rarr; CNF-Saturation Systems </H3>
 <UL>
@@ -22,8 +47,12 @@
      - wins <A HREF="http://tptp.org/CASC/">CASC</A>
 <LI> <A HREF="http://www.cs.man.ac.uk/~korovink/iprover/">iProver</A>
      - instantiation based 
+<LI> <A HREF="https://nick8325.github.io/twee/">Twee</A>
+     - developed by King Nicholas (of Twee)
+<!--
 <LI> <A HREF="http://www.waldmeister.org/">Waldmeister</A>
      - inside Wolfram Mathematica
+-->
 </UL>
 
 <H3> Systems with Arithmetic Capabilities </H3>

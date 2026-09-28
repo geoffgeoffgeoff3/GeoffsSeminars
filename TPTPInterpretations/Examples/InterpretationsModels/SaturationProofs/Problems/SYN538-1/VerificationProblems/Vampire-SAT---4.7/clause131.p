@@ -1,2 +1,0 @@
-include('Saturations/SYN538-1/Saturations/Vampire-SAT---4.7.ax').
-fof(clause131,conjecture,! [U] : ! [V] : ! [W] : ( ~ ndr1_0 | ~ c5_2(U,V) | ~ ndr1_1(U) | ~ c1_2(U,a586) | ~ c5_1(U) | ~ c3_0 | c4_1(W) | c1_1(W) | c5_1(W) | c3_2(U,V) ) ).

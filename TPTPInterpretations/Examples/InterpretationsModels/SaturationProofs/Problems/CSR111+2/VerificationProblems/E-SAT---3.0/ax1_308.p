@@ -1,2 +1,0 @@
-include('Saturations/CSR111+2/Saturations/E-SAT---3.0.ax').
-fof(ax1_308,conjecture,! [TERM] : ( ( mtvisible(c_currentworlddatacollectormt_nonhomocentric) & isa(TERM,f_subcollectionofwithrelationtofn(c_ship,c_objectfoundinlocation,c_cityofbostonma)) ) => tptp_9_51(f_relationexistsallfn(TERM,c_tptp_9_51,c_tptpcol_16_27189,f_subcollectionofwithrelationtofn(c_ship,c_objectfoundinlocation,c_cityofbostonma)),TERM) ) ).

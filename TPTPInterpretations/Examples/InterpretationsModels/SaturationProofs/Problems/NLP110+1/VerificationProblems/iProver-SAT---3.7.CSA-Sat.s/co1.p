@@ -1,2 +1,0 @@
-include('Saturations/NLP110+1/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
-fof(co1,conjecture,~(~ ( ? [U] : ( actual_world(U) & ? [V] : ? [W] : ? [X] : ( coffee(U,V) & human_person(U,W) & event(U,X) & agent(U,X,W) & patient(U,X,V) & past(U,X) & nonreflexive(U,X) & drink(U,X) & ! [Y] : ! [Z] : ( ( customer(U,Y) & restaurant(U,Z) & in(U,Y,Z) ) => ? [X1] : ( event(U,X1) & agent(U,X1,Y) & patient(U,X1,W) & past(U,X1) & nonreflexive(U,X1) & see(U,X1) ) ) ) ) ) )).

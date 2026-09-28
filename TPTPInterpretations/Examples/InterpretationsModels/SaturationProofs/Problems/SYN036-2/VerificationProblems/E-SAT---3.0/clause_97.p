@@ -1,2 +1,0 @@
-include('Saturations/SYN036-2/Saturations/E-SAT---3.0.ax').
-fof(clause_97,conjecture,! [X9] : ! [X10] : ! [X12] : ! [X13] : ! [X14] : ( big_p(X9) | big_p(f3(X9)) | big_q(c14) | big_q(X10) | ~ big_q(c16) | big_q(X12) | ~ big_p(X13) | big_q(X14) ) ).

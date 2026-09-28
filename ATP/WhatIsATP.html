@@ -2,9 +2,19 @@
 <HEAD>
 <TITLE> What is Automated Reasoning? </TITLE>
 <SCRIPT language="JavaScript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
   var images = new Array();
   var myIndex = 0;
-
   images[0]     = new Image();
   images[0].src = 'WhatIsATP.png';
   images[1]     = new Image();
@@ -23,7 +33,7 @@
 </SCRIPT>
 </HEAD>
 <BODY>
-<HR><!-------------------------------------------------------------------------------------------->
+<HR><!-- -------------------------------------------------------------------------------------- -->
 <H1 ALIGN=CENTER> What is Automated Reasoning? </H1>
 
 <A HREF="" onClick="nextImage();return false">
@@ -31,24 +41,35 @@
 </A>
 
 <H3> The World Has Problems </H3>
+
+<A HREF="" onClick="hideshow('details1');hideshow('details2');hideshow('details3');return false;">
+<H3>Automated Reasoning to the Rescue</H3></A>
 <UL>
 <LI> Translate world problem to logic
+     <SPAN ID="details1" style="display:none">
      <UL>
      <LI> <EM>Axioms</EM> describe what you know about the world
      <LI> <EM>Conjecture</EM> describes what need to be solved
      </UL>
+     </SPAN>
+<P>
 <LI> Use Automated Reasoning to get a logic solution
+     <SPAN ID="details2" style="display:none">
      <UL>
      <LI> Find a <EM>proof</EM> of the conjecture using the axioms
      <LI> Find a <EM>countermodel</EM> of the conjecture and the axioms
      <LI> Find a <EM>model</EM> of the axioms
      </UL>
+     </SPAN>
+<P>
 <LI> Translate logic solution to world solution
+     <SPAN ID="details3" style="display:none">
      <UL>
      <LI> A proof of the conjecture describes the solution
      <LI> A countermodel of the conjecture shows why there is no solution
      <LI> A model of the axioms shows they are consistent
      </UL>
+     </SPAN>
 </UL>
 
 <H3> Automated Reasoning Systems </H3>
@@ -56,25 +77,21 @@
 <LI> Automated <EM>Theorem Proving</EM> (ATP) systems are computer programs that (try to) 
      determine if
      <UL>
-     <LI> <FONT COLOR=GREEN>
-          A conjecture <TT>C</TT> is a <EM>logical consequence</EM> of a set of axioms <TT>Ax</TT>
-          </FONT>
+     <LI> A conjecture <TT>C</TT> is a <EM>logical consequence</EM> of a set of axioms <TT>Ax</TT>
      </UL>
-     The derivation of conclusions that follow inevitably from facts.
+     <STRONG>The derivation of conclusions that follow inevitably from facts</STRONG>
 <P>
 <LI> Automated <EM>Model Finding</EM> systems are computer programs that (try to) determine if
      <UL>
-     <LI> <FONT COLOR=GREEN>
-          A set of statements <TT>S</TT> is <EM>satisfiable</EM>
-          </FONT>
+     <LI> A set of statements <TT>S</TT> is <EM>satisfiable</EM>
      </UL>
-     Establishing non-logical consequence and consistency
+     <STRONG>Testing the consistency of proposed facts</STRONG>
 </UL>
 
 <H3> <A HREF="MotivatingPuzzle.html">A Illustrative Puzzle</A>,
      <A HREF="MotivatingExample.html">A Realistic Application</A> </H3>
 
 <P>
-<HR><!-------------------------------------------------------------------------------------------->
+<HR><!-- -------------------------------------------------------------------------------------- -->
 </BODY>
 </HTML>

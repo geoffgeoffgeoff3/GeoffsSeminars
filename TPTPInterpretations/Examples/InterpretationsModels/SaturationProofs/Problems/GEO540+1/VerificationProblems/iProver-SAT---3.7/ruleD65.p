@@ -1,2 +1,0 @@
-include('Saturations/GEO540+1/Saturations/iProver-SAT---3.7.ax').
-fof(ruleD65,conjecture,! [A] : ! [B] : ! [C] : ! [D] : ! [O] : ( ( para(A,B,C,D) & coll(O,A,C) & coll(O,B,D) ) => eqratio(O,A,A,C,O,B,B,D) ) ).

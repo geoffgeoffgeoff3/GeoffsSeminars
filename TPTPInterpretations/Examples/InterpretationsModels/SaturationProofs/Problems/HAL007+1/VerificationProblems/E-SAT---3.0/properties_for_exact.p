@@ -1,2 +1,0 @@
-include('Saturations/HAL007+1/Saturations/E-SAT---3.0.ax').
-fof(properties_for_exact,conjecture,! [Morphism1] : ! [Morphism2] : ! [Dom] : ! [CodDom] : ! [Cod] : ( ( morphism(Morphism1,Dom,CodDom) & morphism(Morphism2,CodDom,Cod) & ! [ElCodDom] : ( ( element(ElCodDom,CodDom) & apply(Morphism2,ElCodDom) = zero(Cod) ) <=> ? [ElDom] : ( element(ElDom,Dom) & apply(Morphism1,ElDom) = ElCodDom ) ) ) => exact(Morphism1,Morphism2) ) ).

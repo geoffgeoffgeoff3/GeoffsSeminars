@@ -1,2 +1,0 @@
-include('Saturations/MSC016+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
-fof(no_more_answers,conjecture,~(? [X] : ? [Y] : ? [Z] : ( p(X,Y,Z) & ( ld__(X,k) | ld__(Y,lkg) | ld__(Z,hill) ) & ( ld__(X,h(d)) | ld__(Y,g(e,e)) | ld__(Z,k) ) & ( ld__(X,a) | ld__(Y,b) | ld__(Z,c) ) & ( ld__(X,g(e,e)) | ld__(Y,w) | ld__(Z,b) ) & ( ld__(X,h(d)) | ld__(Y,g(a,c)) | ld__(Z,g(b,b)) ) & ( ld__(X,a) | ld__(Y,a) | ld__(Z,a) ) ) )).

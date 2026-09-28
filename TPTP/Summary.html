@@ -2,22 +2,38 @@
 <HEAD>
 <TITLE> The TPTP Problem Library </TITLE>
 <SCRIPT language="JavaScript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
   var images = new Array();
   var myIndex = 0;
-
   images[0]     = new Image();
   images[0].src = 'Teepee.GIF';
   images[1]     = new Image();
   images[1].src = 'TPTPPL.png';
+  images[2]     = new Image();
+  images[2].src = 'TPTPLogics.png';
 
   function nextImage () {
       myIndex = (myIndex + 1) % images.length;
       document.images['image'].src = images[myIndex].src;
   }
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
 </SCRIPT>
 </HEAD>
 <BODY>
-<HR><!------------------------------------------------------------------------>
+<HR><!-- -------------------------------------------------------------------------------------- -->
 <H1 ALIGN=CENTER> The TPTP Problem Library </H1>
 
 <A HREF="" onClick="nextImage();return false">
@@ -26,26 +42,33 @@
 
 <H3> A Library of Test Problems </H3>
 <UL>
-<LI> Aim
+<LI> <A HREF="" onClick="hideshow('aim');return false;">Aim</A>: 
+     Improve ATP system testing and evaluation
+     <SPAN ID="aim" style="display:none">
      <UL>
      <LI> A simple, unambiguous, source and reference mechanism 
      <LI> Centralize problem collection and maintenance
-     <LI> Improve ATP system testing and evaluation 
      </UL>
+     </SPAN>
      <P>
-<LI> Motivation
+<LI> <A HREF="" onClick="hideshow('motivation');return false;">Motivation</A>: 
+     Meaningful system evaluations and comparisons
+     <SPAN ID="motivation" style="display:none">
      <UL>
      <LI> Statistically significant results
      <LI> Repeatability of testing
-     <LI> Meaningful system evaluations and comparisons
      </UL>
+     </SPAN>
 </UL>
 
 <H3> Features </H3>
 <UL>
 <LI> First released <TT>Fri Nov 12 15:30:54 +1000 1993</TT>
-<LI> TPTP v9.0.0 - <A HREF="Synopsis.html">55 domains, 25779 problems</A>
-<LI> <A HREF="../TPTPLanguage/Summary.html">Six logics families</A>: PRP, FOF, TFF, TXF, THF, NTF
+<LI> TPTP v9.2.0 - 
+     <A HREF="https://tptp.org/cgi-bin/SeeTPTP?Category=Documents&File=OverallSynopsis">
+     57 domains, 26264 problems</A>
+<LI> <A HREF="" onClick="putImage(2);return false">Seven logics families</A>: 
+     PRP, FOF, TFF, TXF, THF, NTF, DHF
 <LI> <A HREF="http://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">
      Documented</A>: References, Status, Rating, Statistics,
 <LI> <A HREF="http://tptp.org/cgi-bin/SeeTPTP?Category=Problems&Domain=PUZ&File=PUZ001+1.p">
@@ -59,6 +82,6 @@
      <A TARGET="_blank" HREF="http://tptp.org">online</A> at <TT>tptp.org</TT> </H3>
 
 <P>
-<HR><!------------------------------------------------------------------------>
+<HR><!-- -------------------------------------------------------------------------------------- -->
 </BODY>
 </HTML>

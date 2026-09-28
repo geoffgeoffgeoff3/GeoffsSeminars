@@ -1,2 +1,0 @@
-include('Saturations/SYO581+1/Saturations/Vampire-SAT---4.7.CSA-Sat.s.ax').
-fof(sos_178,conjecture,! [X177] : ( b48_buttercup10370(X177) => b48_buttercup10367(X177) ) ).

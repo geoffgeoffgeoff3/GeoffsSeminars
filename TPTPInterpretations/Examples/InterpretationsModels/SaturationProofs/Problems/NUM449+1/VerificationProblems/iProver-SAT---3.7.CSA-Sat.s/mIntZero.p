@@ -1,2 +1,0 @@
-include('Saturations/NUM449+1/Saturations/iProver-SAT---3.7.CSA-Sat.s.ax').
-fof(mIntZero,conjecture,aInteger0(sz00) ).

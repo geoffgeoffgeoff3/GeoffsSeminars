@@ -1,2 +1,0 @@
-include('Saturations/NLP008-1/Saturations/E-SAT---3.0.ax').
-fof(clause56,conjecture,! [U] : ! [V] : ! [W] : ! [X] : ! [Y] : ! [Z] : ! [X1] : ( ~ old(U) | ~ dirty(U) | ~ white(U) | ~ car(U) | ~ chevy(U) | ~ street(V) | ~ way(V) | ~ lonely(V) | ~ down(W,V) | ~ barrel(W,U) | ~ event(W) | ~ hollywood(X) | ~ city(X) | ~ in(W,X) | ~ young(Y) | ~ man(Y) | ~ fellow(Y) | ~ fellow(Z) | ~ man(Z) | ~ young(Z) | ~ in(Y,X1) | ~ in(Z,X1) | ~ front(X1) | ~ furniture(X1) | ~ seat(X1) | ~ ssSkC0 | Z = Y ) ).
