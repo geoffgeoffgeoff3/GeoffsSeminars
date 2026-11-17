@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<TITLE>The Taelja Effect</TITLE>
+<LINK REL="icon" HREF="Z.png" type="image/png">
+<SCRIPT type="text/javascript">
+  function hideshow(obj) {
+      var elem = document.getElementById(obj);
+      if (elem.style.display == 'block') {
+          elem.style.display = 'none';
+      } else if (elem.style.display == 'none') {
+          elem.style.display = 'block';
+      } else {
+          elem.style.display = 'none';
+      }
+  }
+
+  function hide(obj) {
+      var elem = document.getElementById(obj);
+      elem.style.display = 'none';
+  }
+
+  function show(obj) {
+      var elem = document.getElementById(obj);
+      elem.style.display = 'block';
+  }
+
+  var images = new Array();
+  images[0]     = new Image();
+  images[0].src = 'Taelja.png';
+  images[1]     = new Image();
+  images[1].src = 'RefutationTree.png';
+  images[2]     = new Image();
+  images[2].src = 'ProofTree.png';
+
+  function putImage (index) {
+      document.images['image'].src = images[index].src;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+<CENTER>
+<H1> The Taelja Effect </H1>
+</CENTER>
+
+<A HREF="" onClick="putImage(0);return false;">
+<IMG NAME='image' SRC="Taelja.png" ALIGN=RIGHT WIDTH=33%>
+</A>
+
+<H3>The Problem</H3>
+<UL>
+<LI> Prove <TT>((((<EM>true</EM> &oplus; <EM>false</EM>) &oplus; <EM>false</EM>) &oplus; <EM>true</EM>) &oplus; <EM>false</EM>) = <EM>false</EM></TT>
+<LI> In the TPTP <A HREF="https://seetptp.tptp.org/file/TPTPWorld/TPTP/Problems/MSC/MSC005-1.p">
+     <TT>MSC005-1.p</TT></A>
+</UL>
+
+<H3>The Refutation</H3>
+<UL>
+<LI> By <A HREF="https://seetptp.tptp.org/file/TPTPWorld/TSTP/Solutions/MSC/MSC005-1/E---3.5.1.UNS-CRf.s">E</A> 
+     - <A HREF="" onClick="putImage(1);return false;">Proof DAG</A>
+<LI> In <A HREF="" onClick="hideshow('refutationenglish');return false;">LLM English</A>
+     <SPAN ID='refutationenglish' style="display:none">
+     <EM>The prover starts by assuming that 
+     ((((true&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;true)&nbsp;&oplus;&nbsp;false)
+     has no truth value. 
+     It then works backwards through the nested expression, establishing successively that
+     <TT>(((true&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;true)&nbsp;!=&nbsp;false</TT>,
+     then <TT>((true&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;false)&nbsp;!=&nbsp;true</TT>,
+     and finally <TT>(true&nbsp;&oplus;&nbsp;false)&nbsp;!=&nbsp;true</TT>.
+     However, the axioms specify that <TT>(true&nbsp;&oplus;&nbsp;false)&nbsp;=&nbsp;true</TT>.
+     This contradiction refutes the original assumption, proving that 
+     <TT>((((true&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;true)&nbsp;&oplus;&nbsp;false)&nbsp;=&nbsp;false</TT>.</EM>
+     </SPAN>
+</UL>
+
+<H3>The Proof</H3>
+<UL>
+<LI> After <A HREF="" onClick="hideshow('taelja');return false;">Taelja</A>
+     - <A HREF="" onClick="putImage(2);return false;">Proof DAG</A>
+     <SPAN ID='taelja' style="display:none">
+<PRE>
+cnf(false_xor_false,axiom,
+    ( ~ value(X2,falsity)
+    | ~ value(X1,falsity)
+    | value(xor(X1,X2),falsity) ),
+    file('/export/starexec/sandbox2/benchmark/theBenchmark.p',false_xor_false) ).
+
+cnf(false_is_false,axiom,
+    value(falsity,falsity),
+    file('/export/starexec/sandbox2/benchmark/theBenchmark.p',false_is_false) ).
+
+cnf(true_xor_true,axiom,
+    ( ~ value(X2,truth)
+    | ~ value(X1,truth)
+    | value(xor(X1,X2),falsity) ),
+    file('/export/starexec/sandbox2/benchmark/theBenchmark.p',true_xor_true) ).
+
+cnf(true_is_true,axiom,
+    value(truth,truth),
+    file('/export/starexec/sandbox2/benchmark/theBenchmark.p',true_is_true) ).
+
+cnf(true_xor_false,axiom,
+    ( ~ value(X2,falsity)
+    | ~ value(X1,truth)
+    | value(xor(X1,X2),truth) ),
+    file('/export/starexec/sandbox2/benchmark/theBenchmark.p',true_xor_false) ).
+
+fof(lemma_6,lemma,
+    value(xor(truth,falsity),truth),
+    inference(mp,[status(thm)],[true_xor_false,false_is_false,true_is_true]) ).
+
+fof(lemma_7,lemma,
+    value(xor(xor(truth,falsity),falsity),truth),
+    inference(mp,[status(thm)],[true_xor_false,false_is_false,lemma_6]) ).
+
+fof(lemma_8,lemma,
+    value(xor(xor(xor(truth,falsity),falsity),truth),falsity),
+    inference(mp,[status(thm)],[true_xor_true,true_is_true,lemma_7]) ).
+
+fof(goal_1,theorem,
+    value(xor(xor(xor(xor(truth,falsity),falsity),truth),falsity),falsity),
+    inference(mp,[status(thm)],[false_xor_false,false_is_false,lemma_8]) ).
+</PRE>
+    </SPAN>
+<LI> In <A HREF="" onClick="hideshow('proofenglish');return false;">LLM English</A>
+     <SPAN ID='proofenglish' style="display:none">
+     <EM>The proof first establishes that <TT>(true &oplus; false) = true</TT>, using the XOR 
+     axiom.
+     It then establishes that 
+     <TT>((true&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;false)&nbsp;=&nbsp;true</TT>, 
+     again applying the XOR axiom. 
+     Next, it establishes that 
+     <TT>(((true&nbsp;&oplus;&nbspfalse)&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;true)&nbsp;=&nbsp;false</TT>, 
+     since <TT>(true&nbsp;&oplus;&nbsp;true)&nbsp;=&nbsp;false</TT>. 
+     Finally, applying the <TT>false&nbsp;&oplus;&nbsp;false</TT> axiom proves that 
+     <TT>((((true&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;false)&nbsp;&oplus;&nbsp;true)&nbsp;&oplus;&nbsp;false)&nbsp;=&nbsp;false</TT>.</EM>
+     </SPAN>
+</UL>
+
+<H3>The Magic</H3>
+
+<P>
+<HR><!-- -------------------------------------------------------------------------------------- -->
+</BODY>
+</HTML>
