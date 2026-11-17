@@ -30,11 +30,13 @@
   images[1]     = new Image();
   images[1].src = 'Herbrand.png';
   images[2]     = new Image();
-  images[2].src = 'Gentzen.png';
+  images[2].src = 'GentzenCrazy.png';
   images[3]     = new Image();
   images[3].src = 'Hilbert.png';
   images[4]     = new Image();
   images[4].src = 'Smullyan.png';
+  images[5]     = new Image();
+  images[5].src = 'GentzenSane.png';
 
   function putImage (index) {
       document.images['image'].src = images[index].src;
@@ -53,8 +55,9 @@
 
 <H3>Trustworthy and Useful</A></H3>
 <UL>
-<LI> We talk a lot about <A HREF="https://tptp.org/Seminars/TrustworthyAI/CycleOfTrustPNG.html">
-     verification and trust</A>
+<LI> We talk a lot about <A HREF="https://tptp.org/Seminars/GDVLambdaPiTrust/"> proof 
+     verification</A> and <A HREF="https://tptp.org/Seminars/TrustworthyAI/Summary.html">trust</A>
+<LI> Have we done enough to make proofs understandable (in context)?
 <LI> If it is raining, I should take my umbrella.
      It is raining.
      Explain why I should take my umbrella.
@@ -82,13 +85,15 @@
 
 <H3>A Call to Arms</H3>
 <UL>
-<LI> A <A HREF="" onClick="putImage(1);return false;">refutation</A> is a proof that there is 
-     a proof
+<LI> A <A HREF="" onClick="putImage(1);return false;">refutation</A> is a proof that the
+     conjecture is a theorem (<EM>not a proof of the theorem</EM>)
 <LI> A <A HREF="" onClick="putImage(4);return false;">closed tableau</A> is a magical proof that 
-     there is a proof
-<LI> A <A HREF="" onClick="putImage(2);return false;">natural deduction</A> can be, 
-     sequent calculus cannot
-<LI> An <A HREF="" onClick="putImage(3);return false;">axiomatic proof</A> is a natural and 
+     conjecture is a theorem
+<LI> A <A HREF="" onClick="putImage(2);return false;">sequent calculus proof</A> is an unnatural
+     proof of the theorem
+<LI> A <A HREF="" onClick="putImage(5);return false;">natural deduction</A> can be a natural
+     proof of the theorem
+<LI> An <A HREF="" onClick="putImage(3);return false;">direct proof</A> is a natural and 
      useful proof ... all inferences are 
      <A HREF="" onClick="hideshow('consequences');return false;">consequences</A>
      <SPAN ID="consequences" style="display:none">
@@ -104,7 +109,7 @@
      </SPAN>
     
 <P>
-<LI> A "proof that there is a proof" is useful for finding an axiomatic proof
+<LI> A "proof that the conjecture is a theorem" is useful for finding a "proof of the theorem".
 </UL>
 <P>
 <HR><!-- -------------------------------------------------------------------------------------- -->

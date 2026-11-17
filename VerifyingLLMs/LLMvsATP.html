@@ -31,6 +31,8 @@
   images[1].src = 'LogicLLM.png';
   images[2]     = new Image();
   images[2].src = 'QAVerification.png';
+  images[3]     = new Image();
+  images[3].src = 'SleighQueen.png';
 
   function putImage (index) {
       document.images['image'].src = images[index].src;
@@ -43,24 +45,26 @@
 <H1> LLM vs. ATP </H1>
 </CENTER>
 
-<A HREF="" onClick="putImage(0);show('logicllm');show('llmatp');hide('llmatptext');return false;">
 <IMG NAME='image' SRC="Help.png" ALIGN=RIGHT WIDTH=30%>
-</A>
 
-<H3><A HREF="" onClick="hide('llmatptext');hideshow('logicllm');return false;">LLM helping the ATP</A></H3>
+<H3><A HREF="" onClick="putImage(0);hide('llmatptext');hideshow('logicllm');return false;">LLM helping the ATP</A></H3>
 <SPAN ID="logicllm" style="display:block">
 <IMG SRC="LogicLLM.png" WIDTH=50%>
 </SPAN>
 
-<H3><A HREF="" onClick="putImage(1);hide('logicllm');show('llmatptext');show('llmatp');return false;">ATP checking the LLM</A></H3>
+<H3><A HREF="" onClick="putImage(1);hide('logicllm');show('llmatptext');show('llmatp');return false;">ATP vs. LLM</A></H3>
 <SPAN ID="llmatp" style="display:none">
 <SPAN ID="llmatptext" style="display:none">
 <UL>
-<LI> LLM-N answers the natural language question in natural language
-<LI> ShZZaM converts the natural language question to logic
-<LI> ATP answers the logic question in logic
-<LI> LLM-NL converts the ATP answer to natural language
-<LI> LLM-S compares the two answers
+<LI> LLM-N guesses a natural language answer
+<LI> <A HREF="" onClick="putImage(3);return false;">SleighQueen</A> uses logic
+     <UL>
+     <LI> ShZZaM converts the natural language problem to a TFF logic problem
+     <LI> ATP proves that the problem's conjecture is a theorem (by refutation) in TFF logic
+     <LI> Taelja converts a TFF logic refutation to a TFF logic proof of the theorem
+     <LI> LLM-NL converts the TFF logic proof to natural language
+     </UL>
+<LI> LLM-S compares the two solutions
 </UL>
 </SPAN>
 <P>
